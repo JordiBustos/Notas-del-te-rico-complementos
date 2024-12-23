@@ -1,0 +1,186 @@
+\section{Conjuntos numerables}
+
+\begin{definition}
+    Un conjunto $X$ es numerable si $X \sim \mathbb{N}$. Cada biyección se llama una enumeración de los elementos de $X$. 
+\end{definition}
+
+\begin{definition}
+    Decimos que un conjunto es a lo sumo numerable (contable) si es finito numerable.
+\end{definition}
+
+\begin{eg}
+    Los números pares, $P = \{ 2n:n \in \mathbb{N} \}$.
+    \begin{proof}
+        $f(n) = 2n$, $f: \mathbb{N} \to P$ es biyectiva $\therefore$ es numerable.
+    \end{proof}
+\end{eg}
+
+\begin{eg}
+    $\mathbb{Z}$ es numerable. 
+    \begin{proof}
+        Definimos $f: \mathbb{Z} \to \mathbb{N}$ como $f(n) = \begin{cases}
+            2n & \text{si } n >0, \\
+            -2n+1 & \text{si } n \leq 0.
+        \end{cases}$ y $f^{-1}$ es una enumeración.
+    \end{proof}
+\end{eg}
+
+\begin{theorem}
+    Sea $X$ un conjunto y $P(X) = \{ A : A \subset X \} \Rightarrow card(X) \neq card(P)$
+    \begin{proof}
+        Supongamos que $\exists f:X \to P(X)$ biyectiva, en particular, $f$ es suryectiva. \\
+        Dado $x \in X$, puede pasar que $x \in f(X)$ o $x \notin f(X)$. Definimos $B = \{ x \in X: x \notin f(X) \} \subset X$.Como $f$ es suryectiva se tiene que $\exists y \in Y: f(y) = B$. \\
+        Si $y \notin B=f(y) \Rightarrow y \notin f(y) \Rightarrow y \in B$. \\
+        Si $y \in B = f(y) \Rightarrow y \in f(y) \Rightarrow y \notin B$. \\
+        Absurdo en ambos casos, luego $\Rightarrow \nexists f$ biyectiva $\therefore$ $card(X) \neq card(P)$.
+    \end{proof}
+\end{theorem}
+
+\begin{definition}
+    Decimos que $card(X) \leq card(Y)$ si $\exists f: X \to Y$ inyectiva. \\
+    $card(X) < card(Y)$ si $card(X) < card(Y)$, pero $\neg(X\sim Y)$.
+\end{definition}
+
+\begin{prop}
+    Es una relación de orden
+    \begin{proof}
+        i) $card(X) \leq card(X)$ porque la identidad es inyectiva. \\
+        ii) $card(X) \leq card(Y)$, $card(Y) \leq card(Z) \Rightarrow card(X) \leq card(Z)$ pues la composición de funciones es inyectiva. \\
+        iii) $card(X) = card(Y) \Rightarrow X \sim Y$.
+    \end{proof}
+\end{prop}
+
+\section{Cantor - Schröder - Bernstein}
+
+\begin{theorem}
+    Si $\exists f: X \to Y$ y $g: Y \to X$ inyectivas $\Rightarrow \exists h:X \to Y$ biyectiva.
+
+    \begin{proof}
+        Vamos a probar que existen dos particiones distintas de $X$ e $Y$. Sea $X = X_1 \cup X_2$ y $Y = Y_1 \cup Y_2 : f: X_1 \to Y_1$ y $g: X_2 \to Y_2$ son biyectivas. \\ 
+        
+        Podemos definir a $h: X \to Y$ como $h(x) = \begin{cases}
+            f(x) & \text{si } x \in X_1, \\
+            g^{-1}(x) & \text{si } x \in X_2.
+        \end{cases}$ y resulta biyectiva. \\
+        
+        Definimos $\phi(x):P(X) \to P(X)$, $\phi(A) = X-g(Y-f(A))$. Veamos primero que $\phi$ es creciente (i.e $A \subseteq B \Rightarrow \phi(A) \subseteq \phi(B)$.
+        \begin{proof}
+             $A \subseteq B \iff f(A) \subseteq f(B) \iff y - f(B) \subseteq y - f(A) \iff g(y-f(B)) \subseteq g(y-f(A)) \iff X - \phi(A) \subseteq X - \phi(B)$
+        \end{proof}
+        Sea $\mathscr{C} = \{ C \subset X: \phi(C) \subset C \} \neq \varnothing$ pues $X \in \mathscr{C}$ y $A = \bigcap_{C \in \mathscr{C}} C \neq \varnothing$, $A \subset C, \forall C \in \mathscr{C}$ y $\phi$ es creciente y tenemos que $\phi(C) \subset C \Rightarrow \phi(A) \subset \phi(C) \subset C \Rightarrow \phi(C) \in A$. Además, usando otra vez que $\phi$ es creciente, $\phi(\phi(A)) \subset \phi(A) \Rightarrow \phi(A) \in \mathscr{C} \Rightarrow A \subset \phi(A) \Rightarrow A = \phi(A)$. \\
+
+        Sean $X_1 = A$, $X-X_1=X_2=g_2(Y_2)$ \\
+        $Y_1 = f(A)$, $Y_2 = Y - f(A) \Rightarrow$ \\
+        $A = \phi(A) = X-g(Y-f(A)) \iff X-A = g(Y-f(A)) \iff X-X_1=g(Y_2) = X_2 \therefore f:X_1 \to Y_1$ y $g: X_2 \to Y_2$ son biyectivas.
+    \end{proof}
+\end{theorem}
+
+\begin{eg}
+    $\mathbb{N} \sim \mathbb{Z} \sim \mathbb{Q}$.
+    \begin{proof}
+        $f:\mathbb{Z} \to \mathbb{Q}, f(x) = x$ es inyectiva. \\
+        Sea $a \in \mathbb{Z}, b \in \mathbb{N}$, $f: \mathbb{Q} \to \mathbb{Z}, f(\dfrac{a}{b})=sign(a) \cdot 2^a \cdot 3^b$ es inyectiva por Teorema Fundamental de la Aritmética. Luego por el teorema anterior $\mathbb{Z} \sim \mathbb{Q}$.
+    \end{proof}
+\end{eg}
+
+\begin{eg}
+    $(\mathbb{N} \times \mathbb{N})$ es numerable. 
+    \begin{proof}
+        $f: \mathbb{N} \to \mathbb{N}\times \mathbb{N}, f(n)=(1, n)$ es inyectiva.
+        $f: \mathbb{N}\times \mathbb{N} \to \mathbb{N} , f((n, m))= 2^n \cdot 3^m$ es inyectiva por Teorema Fundamental de la Aritmética $\therefore$ es numerable. 
+    \end{proof}
+\end{eg}
+
+\section{Los Reales son no numerables}
+
+\begin{theorem}
+    $\mathbb{R}$  no es numerable.
+    \begin{proof}
+        Supongamos que es numerable. $\Rightarrow$ \\
+        $\exists f: \mathbb{N} \to \mathbb{R}$ biyectiva. A cada número real $x_n$ le asignamos un intervalo centrado en ese punto de longitud $2^{-n}$. La unión de todos esos intervalos tiene longitud menor o igual a la suma de las longitudes (se pueden superponer). \\
+        
+        $|\bigcup_{n\in\mathbb{N}} Ix_n| \leq \sum_{i=1}^{n} |Ix_n| = \sum_{n \in \mathbb{N}}\dfrac{1}{2^n} = 1 $. Se cubrió un intervalo de longitud $1$ de toda la recta real, por lo tanto quedan reales afuera y eso es un absurdo $\therefore$ $\mathbb{R}$ no es numerable.
+    \end{proof}
+\end{theorem}
+
+\begin{eg}
+    $A = \{ (a_n)_{n \geq 1} : a_n \in \{0, 1\}\} = \{0, 1\}^{\mathbb{N}}$. Es decir las sucesiones de ceros y unos no es un conjunto numerable.
+    \begin{proof}
+        Supongamos que si es numerable $\Rightarrow$ podemos escribir \\ $A = \{ (a_n^1)_{n\geq1}, \cdots, (a_n^j)_{n\geq1}, \cdots \}$, todas las sucesiones de ceros y unos están contenidas en $A$. La sucesión donde $a_i=1-a_n^n$ (en el i-ésimo lugar tiene lo contrario de lo que la n-ésima sucesión tiene en el lugar n) debería ser una de ellas, pero eso es absurdo $\therefore$ es no numerable.
+    \end{proof}
+\end{eg}
+
+La idea del último ejemplo (argumento diagonal), se puede adaptar para probar que $(0, 1]$ es no numerable.
+
+\subsection{Principio de encaje de Intervalos}
+
+\begin{theorem}
+    Sea $\mathbb{I}_1 \supset \mathbb{I}_2 \supset \mathbb{I}_3 \supset \cdots $ una sucesión de intervalos cerrados y acotados $\mathbb{I}_n = [a_n, b_n] \Rightarrow$ \\
+    La intersección de todos es no vacía. \\
+    $\bigcap_{n=1}^{\infty} \mathbb{I}_n = [a,b]$ con $a = sup(a_n), b=inf(b_n)$.
+    \begin{proof}
+        $\forall n \in \mathbb{N}$, $\exists \mathbb{I}_{n+1} \subset \mathbb{I}_n \Rightarrow a_n \leq a_{n+1} \leq b_{n+1} \leq b_n$ \\
+        $a_1 \leq a_2 \leq \cdots \leq b_n \leq \cdots \leq b_1$. El conjunto $A$ de los $a_i$ está acotado y $B$ el conjunto de los $b_i$ también. \\
+        Sea $\alpha = sup(A)$, $\beta = inf(B)$. Como $a_n \leq b_n, \forall n \in \mathbb{N} \Rightarrow \alpha \leq \beta \Rightarrow a_1 \leq \cdots \leq a_1 \leq \alpha \leq \beta \leq \cdots \leq b_1$. \\
+        Luego $[\alpha, \beta] \subset \mathbb{I}_n \forall n \in \mathbb{N} \Rightarrow \bigcap_{n\geq1} I_n$. \\
+        Además ningún $x \leq \alpha$ puede pertenecer a todos los $\mathbb{I}_n$. En efecto, si $x < \alpha = sup(A) \Rightarrow \exists a_1\in A: x<a_1 \Rightarrow x\notin \mathbb{I}_n$. \\
+        Análogamente con el ínfimo.
+    \end{proof}
+\end{theorem}
+
+\begin{theorem}
+    $\mathbb{R}$  no es numerable.
+    \begin{proof}
+        Supongamos que $\exists f:\mathbb{N} \to \mathbb{R} : f(n) = x_n$. \\
+        Definimos la sucesión de $\mathbb{I}_n$ de la siguiente forma: \\
+        Tomamos $[0, 1]$ y divido en $3$ cerrados iguales, luego, al menos uno no contiene a $x_1$, lo elijo como $\mathbb{I}_1$ (si hayh dos que no lo contienen elijo alguno). Inductivamente lo divido en $3$ intervalos iguales y al menos $1$ de ellos no contiene a $x_{n+1}$ y lo elijo como $\mathbb{I}_{n+1}$. Por el principio anterior la $\mathbb{I} = \bigcap_{n=1}^\infty \mathbb{I}_n \neq \varnothing$ (tiene un único elemento y la longitud de los intervalos tiende a cero). \\
+        Si $x \in \mathbb{I}$ no puede ser igual o mayor que $x_1$ (por construcción se los excluye en algún paso) $\Rightarrow \mathbb{R}$ es no numerable, pues ese $x$ queda afuera.
+    \end{proof}
+\end{theorem}
+
+\section{Propiedades}
+
+\begin{theorem}
+    Sea $X$ numerable, $Y \subset X \Rightarrow$ $Y$ es a lo sumo numerable.
+    \begin{proof}
+        Supongamos que $Y$ no es finito. Como $X \sim Y$ puedo pensar $X = (x_n)_{n\geq1}$ y defino $n_1=min\{ n \in \mathbb{N}: x_n \in Y \}$ e inductivamente elegimos $n_1, n_2, \cdots , n_k, \cdots$. Definimos $n_k = min\{ n \in \mathbb{N} : n > n_k, x_n \in Y \} \Rightarrow$ Tenemos la sucesión estrictamente creciente de naturales y podemos definir $g: \mathbb{N} \to Y, g(K) = x_{n_k}$. $g$ es inyectiva si $K\neq Y, n_k \neq n_j$ por ser estrictamente creciente y es suryectiva, si $y \in Y \Rightarrow y = x_j$. Para ningún $j \Rightarrow \exists k :n_k\leq j \leq n_k+1$. Como $j \leq n_{k+1}=\{ n>n_k:x_n \in Y \}$ debe ser $j = n_k$.
+    \end{proof}
+\end{theorem}
+
+\begin{corollary}
+    $f: X \to Y$ inyectiva e $Y$ numerable $\Rightarrow$ $X$ es a lo sumo numerable. 
+    \begin{proof}
+        $f$ es inyectiva $\Rightarrow X \sim f(X)$ y como $f(X) \subset Y \Rightarrow$ es a lo sumo numerable por el teorema anterior.
+    \end{proof}
+\end{corollary}
+
+\begin{theorem}
+    $f: X \to Y$ suryectiva, $X$ a lo sumo numerable $\Rightarrow Y$ es a lo sumo numerable.
+    \begin{proof}
+        $f: X \to Y$ es suryectiva $\exists g: Y \to X$ inversa a derecha tal que $f \circ g = id_Y \Rightarrow f$ es inversa a izquierda de $g \Rightarrow g$ es inyectiva $\therefore$ por el corolario anterior $Y$ es a lo sumo numerable.
+    \end{proof}
+\end{theorem}
+
+\begin{theorem}
+    Para cada $m \in \mathbb{N}$. Sea $x_n$ un conjunto numerable $\Rightarrow \bigcup_{n \in \mathbb{N}}x_n = X$ es numerable.
+    \begin{proof}
+        $x_n$ es numerable $\Rightarrow \exists f:\mathbb{N} \to x_n$ biyectiva. Sea $f:\mathbb{N} \times \mathbb{N} \to \bigcup_{n \in \mathbb{N}} x_n $ definida como $f(n, n) = f_n(n)$. Veamos que es suryectiva, dado $x \in X$, $\exists n \in \mathbb{N}:x \in x_n \Rightarrow \exists m:x=f_n(m)$ luego $X=f_n(m) = f(n, m)$. Como $\mathbb{N} \times \mathbb{N}$ es numerable y $f: \mathbb{N} \times \mathbb{N} \to \bigcup_{n \geq 1}{x_n}$ es suryectiva $\Rightarrow \bigcup_{n \geq 1}x_n$ es a lo sumo numerable $\therefore$ como es infinito, es numerable.
+    \end{proof}
+\end{theorem}
+
+\begin{eg}
+    $\mathbb{Q}(x) \sim \mathbb{N}$.
+    \begin{proof}
+        $\mathbb{Q}_k[x] = \{ p \in \mathbb{Q}(x) : gr(p) \leq k \}$ tenemos $f_n : \mathbb{Q}^{n+1} \to \mathbb{Q}_n[x]$, $f(a_0, \cdots, a_{n+1}) = a_0 + \cdots + a_nx^n$, cada $f_n$ es biyectiva $\Rightarrow \mathbb{Q}^{n+1}$ es numerable y como la unión numerable de conjuntos numerables es numerable $\therefore \mathbb{Q}(x)$ es numerable. 
+    \end{proof}
+\end{eg}
+
+\begin{definition}
+    Un número se dice algebraico si es raíz de algún polinomio con coeficientes enteros, por ejemplo $\sqrt{2}$ es raíz de $x² = 2$. 
+\end{definition}
+
+\begin{definition}
+    Si un número real no es algebraico se lo llama trascendente.
+\end{definition}
+
+Ejercicio: demostrar que el conjunto de números algebraicos es numerable.

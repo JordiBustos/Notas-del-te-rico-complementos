@@ -23,6 +23,6 @@
 \contentsline {section}{\numberline {3.4}Propiedades}{19}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Clase IV - 03/09}{22}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Operaciones con cardinales}{22}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Hipotesis del continuo}{23}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Construcción de los Reales}{23}{section.4.3}%
+\contentsline {section}{\numberline {4.2}Hipótesis del continuo}{24}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Construcción de los Reales}{24}{section.4.3}%
 \contentsfinish 

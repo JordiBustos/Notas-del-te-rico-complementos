@@ -1,20 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1734917947.21205 "main.aux" "main.bbl" "main" 1734917996.80977 0
+["bibtex main"] 1734926256.98624 "main.aux" "main.bbl" "main" 1734926288.65936 0
   "./references.bib" 1734926318 178 7427f4557c3a41074e9d16719819ad03 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "main.aux" 1734917996.5824 34020 dccb23cff7e6d1d475aab5800d259c59 "xelatex"
+  "main.aux" 1734926288.32803 37629 91e6cf834d8e9e3f786f45c54fb9414e "xelatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["xdvipdfmx"] 1734917996.71688 "main.xdv" "main.pdf" "main" 1734917996.81208 0
-  "main.xdv" 1734917996.5864 421888 7e3840661bf5f5359b2495a1abcce7d8 "xelatex"
+["xdvipdfmx"] 1734926288.55437 "main.xdv" "main.pdf" "main" 1734926288.66243 0
+  "main.xdv" 1734926288.33303 469464 38bb2789dd8f482dc4d8ea77928c9231 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1734917993.92896 "/home/jordi/Documentos/comple/Notas del teórico complementos/main.tex" "main.xdv" "main" 1734917996.80992 0
+["xelatex"] 1734926284.9655 "main.tex" "main.xdv" "main" 1734926288.6595 0
   "/etc/texmf/web2c/texmf.cnf" 1734915587.16846 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/jordi/Documentos/comple/Notas del teórico complementos/main.tex" 1734917846.20729 1173 75dbdfd0a8bff55f55e27ae12a75c0e8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm" 1136768653 3456 16dd534f88eb2bd21ebc7203786b436e ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -228,16 +227,16 @@
   "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1734917373 9215398 8d9bb1d10f113025846460a19d97aee1 ""
   "Chapters/1.tex" 1734926318 8918 a34107df99ee85fee55e86f553a0a37d ""
   "Chapters/2.tex" 1734926318 10717 0a10b362c9a8e67d4d584a1b7fb7d629 ""
-  "Chapters/3.tex" 1734926318 11242 937ae4f6cf763861ddd26ac72b5a3e27 ""
-  "Chapters/4.tex" 1734917993.69541 2303 ff7596602550148e5077e44d2e0d5709 ""
+  "Chapters/3.tex" 1734924437.04106 11275 7b5f79518a1529bd74426c41ca6f9ee7 ""
+  "Chapters/4.tex" 1734926284.13215 7373 1355508dafc431ee93cf76feaba2b9de ""
   "Configs/boxes.tex" 1734926318 1856 09536a9662c5e20e9a729656caf8adb1 ""
   "Configs/configs.tex" 1734926318 844 e725b29282d61cb4db2d4a87164663cb ""
   "Configs/formats.tex" 1734926318 3669 ac44fa1460936ded3acbe6bc30661871 ""
-  "main.aux" 1734917996.5824 34020 dccb23cff7e6d1d475aab5800d259c59 "xelatex"
-  "main.bbl" 1734917947.23169 186 67aff41db06bf6d5e0e7817a51f73357 "bibtex main"
-  "main.out" 1734917996.5854 4133 f383fa3eacfab2447670e477397ed297 "xelatex"
+  "main.aux" 1734926288.32803 37629 91e6cf834d8e9e3f786f45c54fb9414e "xelatex"
+  "main.bbl" 1734926257.01189 186 67aff41db06bf6d5e0e7817a51f73357 "bibtex main"
+  "main.out" 1734926288.33303 4136 6e057e927bb7ce15436fe32b7005aec2 "xelatex"
   "main.tex" 1734917846.20729 1173 75dbdfd0a8bff55f55e27ae12a75c0e8 ""
-  "main.toc" 1734917996.5864 2197 568eaada5fee61e0613b1ba652a45720 "xelatex"
+  "main.toc" 1734926288.33303 2198 5839cabf876951340f388973bcdc35b8 "xelatex"
   (generated)
   "main.aux"
   "main.log"

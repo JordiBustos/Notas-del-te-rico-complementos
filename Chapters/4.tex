@@ -1,28 +1,34 @@
 \section{Operaciones con cardinales}
 
-Dados dos cardinales $n,m$ (no necesariamente finitos) y $X, Y$ conjuntos disjuntos tales que $card(X) = n$, $card(Y) = m$ podemos definir: \\
+Dados dos cardinales $n,m$ (no necesariamente finitos) y $X, Y$ conjuntos
+disjuntos tales que $card(X) = n$, $card(Y) = m$, podemos definir: \\
 
-1) Suma: $n+m = card(X \cup Y)$.
-
-2) Producto: $n \cdot m = card(X \times Y$.
-
-3) Potencia: $n^m = card(\{ f: Y \to X \}) = card(X^Y)$. 
+1) \textbf{Suma:} $n+m = card(X \cup Y)$. \\
+2) \textbf{Producto:} $n \cdot m = card(X \times Y)$. \\
+3) \textbf{Potencia:} $n^m = card(\{ f: Y \to X \}) = card(X^Y)$.
 
 \begin{note}
-    Suponer que $X \cap Y = \varnothing$ no es restrictivo porque $X \sim (X \times \{1\})$ e $Y \sim (Y \times \{ 2\})$ y $(X \times \{1\}) \sim (Y \times \{ 2\})$ y son disjuntos.
+    Suponer que $X \cap Y = \varnothing$ no es restrictivo porque $X \sim (X \times \{1\})$ e $Y \sim (Y \times \{ 2\})$, y $(X \times \{1\}) \sim (Y \times \{ 2\})$ y son disjuntos.
 \end{note}
 
 \begin{note}
     Hay que probar que la definición es independiente de los conjuntos $X, Y$ que elegimos.
     Si $n = card(\tilde{X})$ y $m = card(\tilde{Y})$, $\tilde{X} \cap \tilde{Y} = \varnothing \Rightarrow n+m=card(\tilde{X} \cup \tilde{Y})$. Vale porque existen biyecciones entre $\tilde{X}$ y $X$ y entre $Y$ y $\tilde{Y}$.
-    Sea $f: X \to \tilde{X}$, $g:Y \to \tilde{Y}$ con lo cual $h: X \cup Y \to \tilde{X} \cup \tilde{Y}$ dada por $h(z) = \begin{cases}
-        f(z) & \text{si } z\in X, \\
-        g(z) & \text{si } z \in Y.
-    \end{cases}$ es biyectiva.
+    Sea $f: X \to \tilde{X}$, $g:Y \to \tilde{Y}$ con lo cual $h: X \cup Y \to \tilde{X} \cup \tilde{Y}$ dada por
+    \[
+        h(z) = \begin{cases}
+            f(z) & \text{si } z \in X,  \\
+            g(z) & \text{si } z \in Y.
+        \end{cases}
+    \]
+    es biyectiva.
     Similar para el producto y la potencia.
 \end{note}
 
-Supongamos $card(X) = n$, $card(Y) = m$, $card(Z) = p$, no necesariamente finitos con $X, Y,Z$ disjuntos dos a dos. La suma cumple las siguientes propiedades:
+Supongamos $card(X) = n$, $card(Y) = m$, $card(Z) = p$, no necesariamente
+finitos con $X, Y, Z$ disjuntos dos a dos. La suma cumple las siguientes
+propiedades:
+
 \begin{prop}
     1) Conmutatividad: $n+m=m+n$, pues $X \cup Y = Y \cup X$. \\
     2) Asociatividad: $(n+m)+p=n+(m+p)$. \\
@@ -30,10 +36,11 @@ Supongamos $card(X) = n$, $card(Y) = m$, $card(Z) = p$, no necesariamente finito
 \end{prop}
 
 El producto cumple las siguientes propiedades:
+
 \begin{prop}
-    1) Conmutativa: $n \cdot m = m \cdot n$, pues $X \times Y \sim Y \times X$. \\
-    2) $0 \cdot n = 0 $, pues $\varnothing \times X = \varnothing $. \\
-    3) $1 \cdot n = n$, pues $\{ 1 \} \times X \sim X$. Pues $f: \{ 1 \} \times X \to X$ saca el $1$ y $g: X \to \{ 1 \} \times X$ agrega el $1$. Ambas biyectivas.
+    1) Conmutatividad: $n \cdot m = m \cdot n$, pues $X \times Y \sim Y \times X$. \\
+    2) $0 \cdot n = 0$, pues $\varnothing \times X = \varnothing$. \\
+    3) $1 \cdot n = n$, pues $\{ 1 \} \times X \sim X$. Aquí, $f: \{ 1 \} \times X \to X$ saca el $1$ y $g: X \to \{ 1 \} \times X$ agrega el $1$. Ambas funciones son biyectivas.
 \end{prop}
 
 \begin{prop}
@@ -41,10 +48,85 @@ El producto cumple las siguientes propiedades:
 \end{prop}
 
 \begin{note}
-    No vale la ley de cancelación: $n+m=n+p$ $\cancel{\Rightarrow}$ $m=p$.
-    $n \cdot m = n \cdot p \cancel{\Rightarrow} m=p$.
+    No vale la ley de cancelación: $n+m=n+p \;\cancel{\Rightarrow}\; m=p$.
+    $n \cdot m = n \cdot p \;\cancel{\Rightarrow}\; m=p$.
 \end{note}
 
-\section{Hipotesis del continuo}
+\begin{eg}
+    Si $n = card(\mathbb{N}) = \aleph_0$ y $card(\mathbb{R}) = c$, tenemos que: \\
+    a) $n+n = \aleph_0 + \aleph_0 = \aleph_0$. \\
+    $n \cdot n = \aleph_0 \cdot \aleph_0 = \aleph_0$. \\
 
+    b) $c \cdot c = c$. \\ $c+c = c$. \\
+
+    \begin{proof}
+        a) Vimos que $card(\{ 2n : n \in \mathbb{N} \}) = \aleph_0$, $card(\{ 2n+1 : n \in \mathbb{N} \}) = \aleph_0$.
+        Y la unión de ambos conjuntos es $\mathbb{N}$. Además $\mathbb{N} \times \mathbb{N} = \aleph_0$, así $\aleph_0 \cdot \aleph_0 = \aleph_0$. \\
+
+        b) Si pruebo que el cardinal de cualquier intervalo no degenerado (sin extremos iguales) de la recta es $c$, puedo probar que $c+c=c$ observando que $(0,1) = (0, \dfrac{1}{2}) \cup (\dfrac{1}{2}, 1)$. \\
+        En efecto, $\arctan(x)$ es una biyección entre $\mathbb{R}$ y el intervalo $(-\dfrac{\pi}{2}, \dfrac{\pi}{2})$, y hay una biyección entre este intervalo y cualquier $(a, b)$ dada por $y = \dfrac{b}{\pi} \cdot (x + \dfrac{\pi}{2}) + a$. \\
+        Además, $(0, 1)$ y $[0, 1]$ son coordinables. Si $f: [0, 1] \to (0, 1)$ es inyectiva y por el Teorema de Cantor-Bernstein $[0, 1] \sim (0, 1)$. \\
+        Para probar $c \cdot c = c$, uso que $(0, 1] \times (0, 1] \sim (0, 1]$. \\
+        Sea $g: (0, 1] \to (0, 1] \times (0, 1]$, $g(x) = (x, 1)$ es inyectiva. \\
+        $f: (0, 1] \times (0, 1] \to (0, 1]$, $f(x, y) = 0.x_1y_1x_2y_2\cdots$ (primeros decimales). \\
+        Si $x, y \in (0, 1]$, los pensamos con desarrollo decimal infinito. Como $f$ es inyectiva, por el Teorema de Cantor-Bernstein, existe una biyección entre ellos, por lo que $c \cdot c = c$.
+    \end{proof}
+\end{eg}
+
+Sean $n = card(X)$, $m = card(Y)$, $p = card(Z)$, no necesariamente finitos, con $X, Y, Z$ disjuntos dos a dos.
+
+\begin{prop}
+    $n^m \cdot n^p = n^{m+p}$ \\ 
+    \begin{proof}
+        $X^Y \times X^Z \sim X^{Y \cup Z}$. \\
+        $X^Y \times X^Z = \{ (f, g) : f: Y \to X, g: Z \to X \}$. \\
+        $f \in X^{Y \cup Z}, f: Y \cup Z \to X \Rightarrow (f|_Y, f|_Z) \in X^Y \times X^Z$ inyectiva. \\
+        Dadas $f: Y \to X, g: Z \to X, h: Y \cup Z \to X$ tal que $h(x) = \begin{cases}
+          f(x) & \text{si } x \in X, \\
+          g(x) & \text{si } x \in Z
+        \end{cases}$ \\
+        Como $Y, Z$ son disjuntos por hipótesis h es inyectiva y vale por Teorema CSB. \\
+    \end{proof}
+\end{prop}
+
+\begin{prop}
+  $(n^m)^p = n^{mp}$
+  \begin{proof}
+    $f \in (X^Y)^Z, f: Z \to X^Y$, $Z \mapsto (f_Z: Y \to X)$. \\
+    $(\forall z \in Z)(\exists f_Z: Y \to X)$, si $y \in Y$, $f_Z(y)$ es $g(z, y) = f_Z(y)$ 
+  \end{proof}
+\end{prop}
+
+\begin{theorem}
+  Sea $n = \aleph_0$ o $c$ y sea $m$ otro cardinal tal que $2 \leq m \leq 2^n \Rightarrow m^n = 2^n$. $(2^{\aleph_0}) = (2^{\aleph_0})^{\aleph_0})$.
+  \begin{proof}
+  En general si $m \leq p \Rightarrow m^m \leq p^n$ con $card(X) = m$, $card(Y) = m$, $card(Z) = p$, $X,Y,Z$ disjuntos dos a dos. \\
+    $f: Y \to Z$ es inyectiva $\Rightarrow \forall g: X \to Y$ tenemos que $f \circ g: X \to Z$ de manera inyectiva (si $g_1 \neq g_2 \to f = g_1 \neq f \circ g_2$ porque $f$ es inyectiva).
+  \end{proof}
+\end{theorem}
+
+\begin{note}
+  $\{ 0, 1 \}^\mathbb{N} \sim P(\mathbb{N})$ pues a cada $f: \mathbb{N} \to \{0, 1\}$ le asigno el subconjunto $A \subset \mathbb{N}$ definido por $n \in A \iff f(n) = 1$
+\end{note}
+  
+\begin{theorem}
+  $\mathbb{R} \sim \{ 0, 1 \}^\mathbb{N}$ es decir $2^{\aleph_0} = c$.
+  \begin{proof}
+    $f: [0, 1] \to \{ 0, 1 \}^\mathbb{N}, f(x) = (x_n)_{n \in \mathbb{N}}$. Siendo $x_n$ las cifras del desarrollo en base dos de $x$. \\
+    Tenemos que $x = \sum_{n=1}^\infty \dfrac{x_n}{2^n} \Rightarrow f$ es inyectiva xq el desarrollo es único. \\
+    Ahora si $g: \{ 0, 1 \}^\mathbb{N} \to [0, 1], g((x_n)_{n \in \mathbb{N}}) = \sum_{n \geq 1} \dfrac{x_n}{2^n}$, $x_n \in \{0, 1\}$. No es inyectiva pues $0,11 = 0,10\overline{1}$.
+    Una forma simple es pensar el desarrollo en base $3$ de cada tira de $0$ y $1$ que no tiene ningún dos. Es decir $g((x_n)_{n \in \mathbb{N}}) = \sum_{n \geq 1} \dfrac{x_n}{3^n}$ y $(0,11)_3 \neq (0,10\overline{1})_3 \therefore$
+    es inyectiva y por Teorema CSB: $\mathbb{R} \sim \{0,1\}^{\aleph_0}$. \\
+    Otra forma es la siguiente:
+    $S = \{0, 1\}^\mathbb{N} - \bigcup_{i=1}^n S_i$ con $S_i = \{ (x_n)_{n \in \mathbb{N}} \in \{0, 1\}^\mathbb{N} : x_m = 0, \forall m > i \}$. O sea $0,11000\cdots$ se saca y queda solo $0,10\overline{1}$.
+    Cada $S_i$ es un conjunto finito (tiene $2^i$ elementos) luego $\bigcup_{i \geq 1} S_i$ es numerable $\therefore$ $S$ y $\{0,1\}^\mathbb{N}$ tienen el mismo cardinal. \\
+    $g((x_n)_{n \in \mathbb{N}}) = \sum_{n \geq 1} \dfrac{x_n}{2^n}$ si es inyectiva y $g: S \to [0, 1]$.
+  \end{proof}
+\end{theorem}
+
+\section{Hipótesis del continuo}
+
+$\nexists$ cardinal entre $\aleph_0$ y $c = 2^{\aleph_0}$. No se puede demostrar ni refutar. \\
+Es independiente de la teoría de conjuntos más el axioma de elección.
+Gödel 1940 probó que no se puede demostrar, Cohen en 1963 que no se puede refutar.
 \section{Construcción de los Reales}

@@ -1,5 +1,74 @@
 \section{Sucesiones}
 
+Una sucesión de números reales es una función $x: \mathbb{N} \to \mathbb{R}$. Notamos $x(n) = x_n$ y lo llamamos el n-ésimo término de la sucesión. Indicamos la sucesión como $(x_n)_{n \in \mathbb{N}}$ o $(x_1, x_2, \cdots)$.
+
+Una subsucesión de $x$ es la restricción de $x$ a un subconjunto infinito $A = \{ n_1 < n_2 < \cdots \} \subset \mathbb{N}$. Escribimos $(x_n)_{n \in A}$ para indicar la subsucesión.
+
+\begin{note}
+  Estrictamente la subsucesión no tiene dominio $\mathbb{N}$, pero es trivial considerarla como una función definida en $\mathbb{N}$ componiendo con $1 \mapsto x_1, 2 \mapsto x_2, \cdots$ \\
+  Por esto se usa la notación $(x_{n_i})_{i \in \mathbb{N}}$.
+\end{note}
+
+\begin{definition}
+  Decimos que $a = lim_{n \to \infty} x_n \iff (\forall \varepsilon > 0)(\exists n_0 \in \mathbb{N}) : |x_n - a| < \varepsilon, \forall n > n_0$. \\
+  Equivalentemente, si $\forall \varepsilon > 0$ el intervalo $(a-\varepsilon, a+\varepsilon)$ contiene a todos los términos de la sucesión salvo quizás un número finitos.
+\end{definition}
+
+\begin{theorem}[Unicidad del límite]
+  Si $lim_{n \to \infty} x_n = a$ y $lim_{n \to \infty} x_n = b \Rightarrow a=b$
+  \begin{proof}
+    Supongamos que $a \neq b$. Tomemos $\varepsilon = \dfrac{|b-a|}{2} > 0$. \\
+    $(a - \varepsilon, a+\varepsilon) \cap (b-\varepsilon, b+\varepsilon) = \varnothing$. En efecto si 
+    $x$ pertenece a la intersección entonces $|x-a| < \varepsilon$ y $|x-b| < \varepsilon \Rightarrow$ \\
+    $|b-a| \leq |a-x| + |x-b| < \varepsilon + \varepsilon = 2 \varepsilon = |b-a|$ Absurdo!
+    Como $lim_{n \to \infty} x_n = a \Rightarrow \exists n_0 : x_n \in (a - \varepsilon, a+ \varepsilon), \forall n > n_0 \Rightarrow$ \\
+    $x_n \notin (b-\varepsilon, b+\varepsilon), \forall n > n_0 \therefore lim_{n \to \infty} x_n \neq b$ pues vimos que son disjuntos. 
+  \end{proof}
+\end{theorem}
+
+\begin{theorem}
+  Si $lim_{n \to \infty} x_n = a \Rightarrow$ toda subsucesión de $(x_n)_{n \in \mathbb{N}}$ converge a $a$.
+
+  \begin{proof}
+    Dado $(x_{n_1}, x_{n_2}, \cdots)$ una subsucesión de $(x_n)_{n \in \mathbb{N}}$. Por hipotesis dado $\varepsilon > 0, \exists n_0 \in \mathbb{N} : |x_n - a| < \varepsilon, \forall n > n_0$. Como los índices de la subsucesión son infinitos, $\exists n_{i_0} > n_0 \Rightarrow$ si $n_i > n_{i_0} \Rightarrow |x_{n_i} - a| < \varepsilon, (n_i > n_{i_0} > n_0) \Rightarrow lim_{n \to \infty} x_{n_i} = a$.
+  \end{proof}
+\end{theorem}
+
+\begin{theorem}
+  Toda sucesión convergente es acotada.
+  \begin{proof}
+    Sea $a = lim_{n \to \infty} x_n$. Tomando $\varepsilon = 1, \exists n_{\varepsilon} : x_n \in (a - 1, a+1), \forall n > n_{\varepsilon}$. \\
+    $A = \{ x_1, x_2, \cdots, x_{n_{\varepsilon}}, a-1, a+1 \}$, $c = min(A)$, $d = max(A) \Rightarrow x_n \in [c, d], \forall n \in \mathbb{N} \therefore $ la sucesión es acotada.
+  \end{proof}
+\end{theorem}
+
+\begin{theorem}
+  Toda sucesión monótona y acotada es convergente.
+  \begin{proof}
+    Supongamos que $(x_n)_{n \in \mathbb{N}}$ es creciente y acotada y quiero ver que $lim_{n \to \infty} x_n = a = sup\{x_n\}_{n \in \mathbb{N}}$. \\
+    Dado $\varepsilon > 0$, como $a-\varepsilon < a, a-\varepsilon$ no puede ser cota superior de $\{x_n\} \Rightarrow \exists n_0 : x_{n_0} > a - \varepsilon$.
+    Como $(x_n)_{n \in \mathbb{N}}$ es monótona, si $n > n_0 \Rightarrow x_n > x_{n_0} > a - \varepsilon \Rightarrow$ \\
+    $a-\varepsilon < x_n \leq a < a+\varepsilon, \forall n > n_0 \therefore x_n \to a$. \\
+    Análogamente para $(x_n)_{n \in \mathbb{N}}$ es decreciente y acotada.
+  \end{proof}
+\end{theorem}
+
+\begin{corollary}
+  Si una sucesión monótona tiene una subsucesión convergente $\Rightarrow$ es convergente.
+  \begin{proof}
+    $(x_n)_{n \in \mathbb{N}}$ es acotada porque tiene una subsucesión acotada.
+  \end{proof}
+\end{corollary}
+
+\begin{eg}
+  $x_n = a^n, a \in \mathbb{R}$. Si $a=0$ o $a = 1$ la sucesión es constante. \\
+  Si $a = -1$, la sucesión diverge porque $x_{2n} \to 1$ y $x_{2n+1} \to -1$. \\
+  Si $a > 1$, la sucesión es creciente y no acotada $\Rightarrow$ diverge. \\
+  Si $a < -1$, la sucesión es decreciente y no acotada $\Rightarrow$ diverge. \\
+  Si $0 < a < 1$, la sucesión es convergente por ser subsucesión de $\dfrac{1}{n}$ y más aún $a^n \to 0$. \\
+  Si $-1 < a < 0$, la sucesión converge pues $|a^n| = |a|^n = a^n \to 0$.
+\end{eg}
+
 \section{Propiedades de límites}
 
 \section{Ejemplo subsucesiones}

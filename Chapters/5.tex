@@ -1,0 +1,177 @@
+\section{Construcción de los Reales}
+
+\begin{note}
+  Dado $q \in \mathbb{Q}$ definimos $\tilde{q}$ como la clase de equivalencia de la sucesión constante como $(q, q, q, \cdots) \Rightarrow \mathbb{Q} \subset \mathbb{R}$.
+\end{note}
+
+\begin{definition}
+  $\tilde{s}, \tilde{t} \in \mathbb{R}$, $s = [(a_n)], t = [(b_n)]$ definimos $s+t = [(a_n + b_n)]$ la clase de equivalencia de $(a_n + b_n)_{n \in \mathbb{N}}$. \\
+  $s \cdot t = [(a_n b_n)]$ la clase de equivalencia de $(a_n b_n)_{n \in \mathbb{N}}$. \\
+  Veamos que están bien definidas, si $[(a_n)] = [(c_n)]$ y $[(b_n)] = [(d_n)]$. \\
+  $a_n - c_n \to 0$ y $b_n - d_n \to 0$. \\
+  $([a_n] + [(b_n)]) - ([c_n] +[d_n])) = ([a_n] - [(c_n)]) + ([b_n] - [(d_n)]) = 0 \Rightarrow $ la suma está bien definida. \\
+  $a_n b_n - c_n d_n = a_n b_n - c_n b_n + c_n b_n - c_n d_n = b_n (a_n - c_n) + c_n (b_n - d_n) \Rightarrow |a_n \cdot b_n - c_n \cdot b_n| \leq |b_n| |a_n - c_n| + |c_n| |b_n - d_n|$. \\
+  Como $(b_n)_{n \in \mathbb{N}}$ y $(c_n)_{n \in \mathbb{N}}$ están acotadas $\exists M : |b_n| < M$, $|c_n| < M, \forall n \in \mathbb{N}$. \\
+  $|a_n b_n - c_n b_n| \leq M (|a_n c_n| + |b_n - d_n|) < \varepsilon, \forall n > n_0$. \\
+  Porque $a_n - c_n \to 0$, $b_n - d_n \to 0$.
+\end{definition}
+
+\begin{prop}
+  $\mathbb{R}$ es un cuerpo con esta definición.
+  \begin{proof}
+    Ejercicio.
+  \end{proof}
+\end{prop}
+
+\begin{theorem}
+  Dado $S \in \mathbb{R} - \{0\}, \exists t \in \mathbb{R} : s \cdot t = 1$.
+  \begin{proof}
+    $S = [(a_n)]$ sabemos que $S \notin \tilde{0}$, o sea $a_n \cancel{\to} 0$. Podría pasar que algunos de los terminos de $(a_n)_{n \in \mathbb{N}}$ si sean $0$, lo que pasa es que $a_n \neq 0.$ para $n$ lo suficiente grande. \\
+    Como $a_n \cancel{\to} 0$, $\exists \varepsilon_1 > 0, \exists$ infinitos valores de $M: |a_M - 0| > \varepsilon_1$, si $\varepsilon = \dfrac{\varepsilon_1}{2}$, como $(a_n)_{n \in \mathbb{N}}$ es de cauchy, $\exists n : |a_n - a_m| < \dfrac{\varepsilon}{2}, \forall n, m > n_0$. \\
+    Si $M > n_0$ (puedo porque son infinitos) $: |a_M| > \varepsilon_1 \Rightarrow |a_m - a_M| < \dfrac{\varepsilon_1}{2}, \forall m > n_0$. \\
+    $-\varepsilon_1/2 < a_n - a_m < \varepsilon_1 / 2$ o $-\varepsilon_1 / 2 < a_m - a_n < \varepsilon_1 / 2$. \\ 
+    Si $a_M > 0 \Rightarrow \dfrac{\varepsilon_1}{2} < a_M - \dfrac{\varepsilon_1}{2} < a_n < a_M + \dfrac{\varepsilon_1}{2}, \forall n > n_0$. \\
+    Si $a_M < 0$, $\dfrac{\varepsilon_1}{2} < -a_M - \dfrac{\varepsilon_1}{2} < -a_n<-a_m+ \dfrac{\varepsilon_1}{2} \Rightarrow a_n < -\dfrac{\varepsilon_1}{2}, \forall n > n_0$. \\
+    O sea que $\forall n > n_0, a_n$ tiene el mismo signo que $a_M$ en particular $a_n \neq 0, \forall n > n_0$. \\
+    Sabiendo esto veamos que $\exists$ el inverso: \\
+    $S = [(a_n)] \neq 0$ por lo anterior $\exists n_0 : a_n \neq 0, \forall n > n_0$. \\
+    Sea $(b_n)_{n \in \mathbb{N}} \subset \mathbb{Q}$ como \\
+    $b_n = \begin{cases}
+      0 & \text{si } n < n_0, \\ 
+      \dfrac{1}{a_n} & \text{si } n > n_0.
+    \end{cases} \Rightarrow$ \\
+
+    $a_n b_n = \begin{cases}
+      0 & \text{si } n < n_0, \\
+      1 & \text{si } n > n_0,
+    \end{cases} \Rightarrow$ \\
+
+    $(1, 1, \cdots) - (a_n \cdot b_n)_{n \in \mathbb{N}} \to 0 \therefore [(a_n b_n)] = [(1, 1, \cdots)]$, es decir $t = [(b_n)]$ cumple que $t \cdot s = 1$.
+  \end{proof}
+\end{theorem}
+
+\section{Cuerpo ordenado}
+
+Para probrar que $\mathbb{R}$ es un cuerpo ordenado bajo esta definición hay que definir qué es ser positivo. \\
+Sea $s \in \mathbb{R}$ decimos que $s$ es positivo si $s \neq 0$ y $s = [(a_n)]$ tal que $a_n > 0 \forall n > n_0$. O sea, todos los terminos son positivos a partir de un punto. 
+
+\begin{definition}
+  Decimos que $s > t$ si $s-t > 0$.
+  Ejercicio probrar que está bien definido.
+\end{definition}
+
+Veamos un ejemplo de como se prueban los axiomas de orden.
+
+\begin{theorem}
+  Sean $s, t \in \mathbb{R} : s > t, r \in \mathbb{R} \Rightarrow s+r > t+r$.
+  \begin{proof}
+    $s = [(a_n)], t = [(b_n)], r = [(c_n)]$. \\
+    Como $s > t, \exists n_0 : a_n - b_n > 0, \forall n > n_0, a_n - b_n \cancel{\to} 0 \Rightarrow (a_n + c_n) - (b_n + c_n) = a_n + b_n > 0$ y $(a_n + c_n) - (b_n + c_n) \cancel{\to} 0 \Rightarrow$ \\
+    $s + r - (t + r) > 0 \Rightarrow s+r > t+r$.
+  \end{proof}
+\end{theorem}
+
+\begin{theorem}
+  $\mathbb{R}$ con esta construcción es Arquimediano.
+  \begin{proof}
+    Sean $s, t > 0, s, t \in \mathbb{R}$ quiero ver que $\exists m \in \mathbb{N} : m \cdot s > t$. \\
+    Es decir si $s = [(a_n)]$, $t = [(b_n)]$ quiero ver que $[(m \cdot a_n)] > [(b_n)]$. O sea que $m \cdot a_n - b_n \cancel{\to} 0$ y que $\exists n_0 : m \cdot a_n - b_n > 0, \forall n> n_0$. \\
+
+    Supongamos que $\forall m, n_0, \exists n>n_0 : m \cdot a_n \leq b_n$.
+    Como $(b_n)_{n \in \mathbb{N}}$ es de Cauchy $\Rightarrow$ $\exists M \in \mathbb{Q} : b_n < M, \forall n \in \mathbb{N} \Rightarrow$. \\
+    $a_n \leq \dfrac{b_n}{m} \leq \dfrac{M}{m}$, para algún $n > n_0, \forall n_0$. \\
+    Como $\mathbb{Q}$ es arquimediano, dado $\varepsilon > 0, \exists m : \dfrac{M}{m} < \dfrac{\varepsilon}{2}$, elijo $m$ así y tengo que $a_n \leq \dfrac{b_n}{m} < \dfrac{M}{m} < \dfrac{\varepsilon}{2}, n > n_0, \forall n_0$. \\
+    Como $(a_n)_{n \in \mathbb{N}}$ es de Cauchy $\exists n_0 : \forall n,k > n_0, |a_n - a_k| < \varepsilon/2$. Para este $n_0, \exists$ algún $n > n_0$ tal que $a_n < \varepsilon / 2 \Rightarrow$ \\
+    $\forall k > n_0, a_k - a_n < \varepsilon / 2 \Rightarrow a_k < a_n + \varepsilon / 2 < \varepsilon / 2 + \varepsilon / 2 < \varepsilon \Rightarrow a_n \to 0$. Absurdo! $([a_n]) = S > 0$. \\
+
+    Luego $\exists m \in \mathbb{N} : m \cdot a_n - b_n > 0, \forall n > n_0$. Queda ver que $m \cdot a_n - b_n \cancel{\to} 0$, si $m \cdot a_n - b_n \cancel{\to} 0$ nada que probar. Caso contrario tomamos $m+1$ en vez de $m$. \\
+    $(m+1) \cdot a_n - b_n = m \cdot a_n + a_n - b_n > a_n > 0, \forall n > n_0 \Rightarrow m \cdot a_n - b_n \to 0$ y $a_n \cancel{\to} 0 \therefore$ \\
+    $\mathbb{R}$ es arquimediano.
+  \end{proof}
+\end{theorem}
+
+\begin{theorem}
+  $\mathbb{Q}$ es denso en $\mathbb{R}$. Es decir dado $r \in \mathbb{R}$ y $\varepsilon > 0, \exists q \in \mathbb{Q} : |r-q| < \varepsilon$. $r = [(a_n)]$, con $(a_n)_{n \in \mathbb{N}} \subset \mathbb{Q}$ es de Cauchy.
+
+  \begin{proof}
+    Dado $\varepsilon > 0, \exists n_0 : |a_n - a_m| < \varepsilon, \forall n, m > n_0$. \\
+    Elijo algún $l > n_0$ y defino $q = [(a_l, a_l, \cdots)] \Rightarrow r-q = [(a_n - a_l)]$ y $q-r = [(a_l - a_n)]$.
+    Como $l > n_0 \Rightarrow (\forall n > n_0)(a_n-a_l < \varepsilon)(a_l - a_n < \varepsilon) \Rightarrow |r-q| < \varepsilon$.
+  \end{proof}
+\end{theorem}
+
+\section{R tiene la propiedad del supremo}
+
+Sea $S \subset \mathbb{R}, S \neq \varnothing, M$ cota superior de $S$. Vamos a construir dos sucesiones $(u_n)_{n \in \mathbb{N}}, (l_n)_{n \in \mathbb{N}}$. \\
+Como $S \neq \varnothing, \exists s_0 \in S$. Defino $u_0 = M, l_0 = s_0$. \\
+Si ya están definidos $u_m, l_m$, llamo $m_n = \dfrac{l_n+u_n}{2}$ al punto medio. \\
+i) Si $m_n$ es cota superior de $S$ definimos $u_{m+1} = m_n, l_{n+1} = l_n$. \\
+ii) Si $m_n$ no es cota superior de S definimos $u_{n+1} = u_n$ y $l_{n+1} = m_n$. \\
+Como $s_0 < M$ es fácil ver que $(u_n)_{n \in \mathbb{N}}$ es decreciente y que $(l_n)_{n \in \mathbb{N}}$ es creciente. Queda como ejercicio demostrarlo.
+
+\begin{lemma}
+  $(u_n)_{n \in \mathbb{N}}$ y $(l_n)_{n \in \mathbb{N}}$ son sucesiones de Cauchy de números reales.
+  \begin{proof}
+    Por construcción se tiene que $l_n \leq M, \forall n \in \mathbb{N} \Rightarrow$ \\
+    $(l_n)_{n \in \mathbb{N}}$ es creciente y acotada *$\Rightarrow$ \\
+    Es de cauchy. \\
+
+    Como $u_n > s_0, \forall n \in \mathbb{N} \Rightarrow -u_n \leq s_0, (-u_n)_{n \in \mathbb{N}}$ es creciente $\Rightarrow$ \\
+    Es de cauchy. \\
+
+    * \begin{proof}
+      Supongamos que $(l_n)_{n \in \mathbb{N}}$ no es de Cauchy. Entonces existe $\varepsilon > 0 : \forall n_0, \exists n, m \geq n_0 : l_n - l_m \geq \varepsilon$. \\
+      Como $(l_n)_{n \in \mathbb{N}}$ es creciente, $l_n - l_{n_0} \geq \varepsilon$, inductivamente consigo: \\
+      $n_1 > n_0 : l_{n_1} - l_{n_0} \geq \varepsilon$ \\
+      $n_2 > n_1 : l_{n_2} - l_{n_1} \geq \varepsilon$ \\
+      \vdots \\
+
+      Por otro lado por la arquimedianidad $\exists k \in \mathbb{N} : k \cdot \varepsilon > M - l_{n_0} \Rightarrow$ \\
+      $l_{n_k} - l_{n_0} = (l_{n_k} - l_{n_{k-1}}) + (l_{n_{k-1}} - l_{n_{k-2}}) + \cdots + (l_{n_1} - l_{n_0}) > k \cdot \varepsilon > M - l_{n_0} \Rightarrow$ \\
+      $l_{n_k} > M$. Absurdo!
+    \end{proof}
+  \end{proof}
+\end{lemma}
+
+\begin{lemma}
+  $\exists u \in \mathbb{R} : u_n \to u$.
+  \begin{proof}
+    Sea $u_n$ un termino de $(u_n)_{n \in \mathbb{N}} \Rightarrow \exists q_n \in \mathbb{Q} : |u_n - q_n| < \dfrac{1}{n}$ \\
+    Consideremos $(q_1, q_2, \cdots) \subset \mathbb{Q}$. \\
+    Afirmo que $(q_n)_{n \in \mathbb{N}}$ es de Cauchy. Dado $\varepsilon > 0$, como $(u_n)_{n \in \mathbb{N}}$ es de Cauchy $\Rightarrow$ \\
+    $\exists n_0 : \forall n, m > n_0, |u_n - u_m| < \dfrac{\varepsilon}{3}$. \\
+    Por arquimedianidad $\exists n_1 : \dfrac{1}{m}, \forall n > n_1 \Rightarrow$ si $n > max(n_0, n_1) \Rightarrow$ \\
+    $|q_n - q_m| \leq |q_n - u_n| + |u_n - u_m| + |u_m - q_m| < \varepsilon \Rightarrow$ \\
+    $u = [(q_n)] \in \mathbb{R}$, falta ver que $u_n \to u$. \\
+    Si $\tilde{q}_n = [(q_n, q_n, \cdots)] \in \mathbb{R} \Rightarrow \tilde{q}_n - u \to 0$ pues $q_n$ es de Cauchy y por construcción $u_n - q_n < \dfrac{1}{n} \Rightarrow u_n - \tilde{q}_n \to 0$ y como $\tilde{q}_n - u \to 0 \Rightarrow$ \\
+    $u_n \to u$.
+  \end{proof}
+\end{lemma}
+
+\begin{lemma}
+  $l_n \to u$
+  \begin{proof}
+    Según las posibles definiciones de $l_n$ tenemos que: \\
+    $u_{n+1} - l_{n+1} = m_n - l_n = \dfrac{u_n+l_n}{2} - l_n = \dfrac{u_n-l_n}{2}$ o \\
+    $u_{n+1} - l_{n+1} = u_{n+1} - m_n = u_n - \dfrac{u_n - l_n}{2} = \dfrac{u_n - l_n}{2} \Rightarrow$ \\
+    $u_1 - l_1 = \dfrac{1}{2} (M-s)$ \\
+    $u_2 - l_2 = \dfrac{1}{2} (u_1 - l_1) = (\dfrac{1}{2})² (u - s)$ \\
+    \vdots \\
+    $u_n - l_n = (\dfrac{1}{2})^n (M - s)$ \\
+    
+    Por arquimedianidad de $\mathbb{R}, \forall \epsilon > 0, \dfrac{1}{2^n} (M - s) < \varepsilon, \forall n > n_0 \Rightarrow$ \\
+    $u_n - l_n \to 0 \therefore$ $l_n \to u$, pues $u_n \to u$.
+  \end{proof}
+\end{lemma}
+
+\begin{theorem}
+  $\mathbb{R}$ tiene la propiedad del supremo.
+  \begin{proof}
+    1) Veamos que $u$ es cota superior, si no $u < s, s \in S \Rightarrow \varepsilon = s - u > 0$, como $u_n \to u$ y es decreciente $\exists n : u_n - u < \varepsilon \Rightarrow u_n < u + \varepsilon = u + s - u = s$ Absurdo, por construcción $u_n$ era cota superior de $S, \forall n$. \\
+
+    2) Veamos que es la menor de las cotas superiores. \\
+    Sabemos que $l_n$ no es cota superior de $S$, así que $(\forall n \in \mathbb{N})(\exists s_n \in S) : l_n \leq s_n$. Como $l_n \to u$ y $l_n$ es creciente $\Rightarrow$ \\
+    $\forall \varepsilon > 0, \exists n_0 : l_n > u - \varepsilon, \forall n>n_0 \Rightarrow s_n \geq l_n > u - \varepsilon, \forall n > n_0$. Es decir que para todo $\varepsilon > 0$ tengo un $s_n$ más grande en $S \therefore u$ es la menor de las cotas superiores.   
+  \end{proof}
+\end{theorem}
+

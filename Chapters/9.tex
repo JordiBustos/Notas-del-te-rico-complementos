@@ -1,0 +1,20 @@
+\section{(Continuación) Reordenamientos}
+
+\begin{theorem}
+  Si $\sum_{n \geq 1} a_n$ converge condicionalmente. Dado $c \in \R, \exists$ reordenamiento $(b_n)_{n \in \N}$ de los términos de $\sum_{n \geq 1} a_n$ tal que $\sum_{n \geq 1} b_n = c$.
+  \begin{proof}
+    Como $a_n$ converge condicionalmente entonces $a_n \to 0 \Rightarrow p_n, q_n \to 0$, pero $\sum_{n \geq 1} p_n = \sum_{n \geq 1} q_n = +\infty$. \\
+    Reordenemos la serie tomando $p_1, p_2, \cdots, p_{n_1}$ donde $n_1$ es el menor índice tal que $p_1 + \cdots + p_{n_1} > c, (T_1)$. \\
+    Similarmente $-q_1, -q_2, \cdots, q_{n_2}$ donde $n_2$ es el menor índice tales que $\sum_{i = 1}^{n_1} p_i + \sum_{i = 1}^{n_2} q_i < c, (T_2)$. \\
+    Seguimos con el menor $n_3$ tal que $\sum_{i = 1}^{n_1} p_i + \sum_{i = 1}^{n_2} q_i + \sum_{i = 1}^{n_3} p_i > c, (T_3)$, etc. \\
+    Veamos que las sumas parciales $T_n$ de este reordenamiento tienden a 0. \\
+    $\forall i$ impar tenemos que $T_{n_i +1} < c < T_i \Rightarrow$ \\
+    $0 < T_{n_i} - c \leq p_{n_i} \Rightarrow 0 < c - T_{n_i} < q_{n_i}$ y como $lim_{i \to \infty} p_{n_i} = 0 = lim_{i \to \infty} q_{n_i} \Rightarrow lim_{i \to \infty} T_{n_i} = c$. \\
+    Además para $i$ impar si $n_i < n < n_{i+1} \Rightarrow T_{n_i+1} \leq T_n \leq T_{n_i}$ y para $i$ par, si $n_i < n < n_{i+1} \Rightarrow T_{n_i+1} \leq T_n \leq T_{n_i}$ \\
+    $\therefore lim_{n \to \infty} T_n = c$.
+  \end{proof}
+\end{theorem}
+
+\section{Topología Euclídea}
+
+\section{Entorno}

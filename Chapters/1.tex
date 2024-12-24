@@ -108,27 +108,27 @@ Dado un conjunto X, una familia de elementos de X con índices en $L$ es $X: L \
     $L = \{ 1, 2 \}$ los valores de $x: \{1, 2\} \to X$ se representan por $x_1, x_2$, es decir que los puedo identificar con pares ordenados $(x_1, x_2)$ de elementos de $X$.
 \end{eg}
 
-Una familia con elementos en $\mathbb{N}$ se llama sucesión. $(x_n)_{n \in \mathbb{N}}$ de elementos de $X$ es una función de $x: \mathbb{N} \to X$ donde $x_n = x(n)$. \\
+Una familia con elementos en $\N$ se llama sucesión. $(x_n)_{n \in \N}$ de elementos de $X$ es una función de $x: \N \to X$ donde $x_n = x(n)$. \\
 
 Las propiedades enunciadas previamente se pueden extender a cualquier familia de conjuntos.
 
 \section{Números naturales}
 
-Partimos de un conjunto $\mathbb{N}$ y una función $S: \mathbb{N} \to \mathbb{N}$ que cumple los siguientes axiomas (de Peano):
+Partimos de un conjunto $\N$ y una función $S: \N \to \N$ que cumple los siguientes axiomas (de Peano):
 
 1) Es inyectiva. \\
-2) $\mathbb{N} - S(\mathbb{N})$ tiene un solo elemento y lo llamamos 1. \\
-3) Principio de inducción, si $X \subset \mathbb{N}$ tal que $1 \in X$ y $\forall m \in X$ vale $S(m) \Rightarrow X = \mathbb{N}$. \\
+2) $\N - S(\N)$ tiene un solo elemento y lo llamamos 1. \\
+3) Principio de inducción, si $X \subset \N$ tal que $1 \in X$ y $\forall m \in X$ vale $S(m) \Rightarrow X = \N$. \\
 
 El principio de inducción permite definir operaciones
 
 La suma se define como $m+1 = S(m)$, $m+S(n) = S(m+n)$. 
 
 \begin{prop}
-    Asociatividad: sea $X = \{ p \in \mathbb{N} : m+(n+p) = (m+n) +p, \forall n,m \in \mathbb{N} \}$.
+    Asociatividad: sea $X = \{ p \in \N : m+(n+p) = (m+n) +p, \forall n,m \in \N \}$.
     \begin{proof}
         $1 \in X$, $p \in X \Rightarrow m + (n+S(p)) = m + S(n+p) = S(m +(n+p)) = S((n+m)+p) = (m+n) + S(p)$.
-        Por inducción $X = \mathbb{N}$.
+        Por inducción $X = \N$.
     \end{proof}
 \end{prop}
 
@@ -142,7 +142,7 @@ La suma se define como $m+1 = S(m)$, $m+S(n) = S(m+n)$.
 \end{prop}
 
 \begin{prop}
-    Tricotomía: $m,n \in \mathbb{N}$, si $m > n, \exists p:m+p=n$. Si $m < n$,  $\exists p \in \mathbb{N} :n+p=m$.
+    Tricotomía: $m,n \in \N$, si $m > n, \exists p:m+p=n$. Si $m < n$,  $\exists p \in \N :n+p=m$.
 \end{prop}
 
 \begin{definition}
@@ -152,12 +152,12 @@ La suma se define como $m+1 = S(m)$, $m+S(n) = S(m+n)$.
 
 \begin{theorem}
     Principio de buena ordenación \\
-    Todo subconjunto no vacío $A \subset \mathbb{N}$ tiene un elemento mínimo.
+    Todo subconjunto no vacío $A \subset \N$ tiene un elemento mínimo.
     \begin{proof}
-        Llamemos $\mathbb{I}_m = \{ p \in \mathbb{N} : 1 \leq p \leq n \} = [[ 1, m ]]$ y $X = \{ m \in \mathbb{N} : \mathbb{I}_m \subset \mathbb{N} - A \}$. \\
+        Llamemos $\mathbb{I}_m = \{ p \in \N : 1 \leq p \leq n \} = [[ 1, m ]]$ y $X = \{ m \in \N : \mathbb{I}_m \subset \N - A \}$. \\
         Si $1 \in A \Rightarrow 1$ es primer elemento.
-        Si $1 \notin A \Rightarrow 1 \in X$ como $X \neq \mathbb{N}$ pues $X \subseteq \mathbb{N} - A$ y $A \neq \varnothing$.
-        Por el principio de inducción $\exists m \in X$ tal que $m+1 \notin X$, si no tendríamos que $X = \mathbb{N}$. Luego todos los elementos entre $1$ y $m$ están en $\mathbb{N} - A$ y $m+1 \in A$, se sigue que $a = m+1$ es primer elemento de A. 
+        Si $1 \notin A \Rightarrow 1 \in X$ como $X \neq \N$ pues $X \subseteq \N - A$ y $A \neq \varnothing$.
+        Por el principio de inducción $\exists m \in X$ tal que $m+1 \notin X$, si no tendríamos que $X = \N$. Luego todos los elementos entre $1$ y $m$ están en $\N - A$ y $m+1 \in A$, se sigue que $a = m+1$ es primer elemento de A. 
     \end{proof}
 \end{theorem}
 
@@ -189,7 +189,7 @@ Un cuerpo es un conjunto dotado de dos operaciones, suma y producto y se denota 
 Axioma de distributividad: $\forall x,y,z \in \mathbb{K}, x(y+z)=xy+xz$.
 
 \begin{eg}
-    $\mathbb{Q}, \mathbb{Z}_2$.
+    $\Q, \Z_2$.
 \end{eg} 
 
 \subsection{Cuerpos Ordenados}
@@ -201,7 +201,7 @@ Un cuerpo ordenado es un cuerpo $\mathbb{K}$ que tiene un subconjunto $P \in \ma
 2) $x \in \mathbb{K} \Rightarrow x \in P$ o $-x \in P$ o $x=0$. \\
 
 \begin{eg}
-    $\mathbb{Q}$ con $P = \{ p/q:p,q\in \mathbb{N} \}$, $\mathbb{Z}_2$ no es ordenado.
+    $\Q$ con $P = \{ p/q:p,q\in \N \}$, $\Z_2$ no es ordenado.
 \end{eg}
 
 \begin{prop}

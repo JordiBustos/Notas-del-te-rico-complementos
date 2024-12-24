@@ -1,7 +1,7 @@
 \section{Conjuntos numerables}
 
 \begin{definition}
-    Un conjunto $X$ es numerable si $X \sim \mathbb{N}$. Cada biyección se llama una enumeración de los elementos de $X$. 
+    Un conjunto $X$ es numerable si $X \sim \N$. Cada biyección se llama una enumeración de los elementos de $X$. 
 \end{definition}
 
 \begin{definition}
@@ -9,16 +9,16 @@
 \end{definition}
 
 \begin{eg}
-    Los números pares, $P = \{ 2n:n \in \mathbb{N} \}$.
+    Los números pares, $P = \{ 2n:n \in \N \}$.
     \begin{proof}
-        $f(n) = 2n$, $f: \mathbb{N} \to P$ es biyectiva $\therefore$ es numerable.
+        $f(n) = 2n$, $f: \N \to P$ es biyectiva $\therefore$ es numerable.
     \end{proof}
 \end{eg}
 
 \begin{eg}
-    $\mathbb{Z}$ es numerable. 
+    $\Z$ es numerable. 
     \begin{proof}
-        Definimos $f: \mathbb{Z} \to \mathbb{N}$ como $f(n) = \begin{cases}
+        Definimos $f: \Z \to \N$ como $f(n) = \begin{cases}
             2n & \text{si } n >0, \\
             -2n+1 & \text{si } n \leq 0.
         \end{cases}$ y $f^{-1}$ es una enumeración.
@@ -76,35 +76,35 @@
 \end{theorem}
 
 \begin{eg}
-    $\mathbb{N} \sim \mathbb{Z} \sim \mathbb{Q}$.
+    $\N \sim \Z \sim \Q$.
     \begin{proof}
-        $f:\mathbb{Z} \to \mathbb{Q}, f(x) = x$ es inyectiva. \\
-        Sea $a \in \mathbb{Z}, b \in \mathbb{N}$, $f: \mathbb{Q} \to \mathbb{Z}, f(\dfrac{a}{b})=sign(a) \cdot 2^a \cdot 3^b$ es inyectiva por Teorema Fundamental de la Aritmética. Luego por el teorema anterior $\mathbb{Z} \sim \mathbb{Q}$.
+        $f:\Z \to \Q, f(x) = x$ es inyectiva. \\
+        Sea $a \in \Z, b \in \N$, $f: \Q \to \Z, f(\dfrac{a}{b})=sign(a) \cdot 2^a \cdot 3^b$ es inyectiva por Teorema Fundamental de la Aritmética. Luego por el teorema anterior $\Z \sim \Q$.
     \end{proof}
 \end{eg}
 
 \begin{eg}
-    $(\mathbb{N} \times \mathbb{N})$ es numerable. 
+    $(\N \times \N)$ es numerable. 
     \begin{proof}
-        $f: \mathbb{N} \to \mathbb{N}\times \mathbb{N}, f(n)=(1, n)$ es inyectiva.
-        $f: \mathbb{N}\times \mathbb{N} \to \mathbb{N} , f((n, m))= 2^n \cdot 3^m$ es inyectiva por Teorema Fundamental de la Aritmética $\therefore$ es numerable. 
+        $f: \N \to \N\times \N, f(n)=(1, n)$ es inyectiva.
+        $f: \N\times \N \to \N , f((n, m))= 2^n \cdot 3^m$ es inyectiva por Teorema Fundamental de la Aritmética $\therefore$ es numerable. 
     \end{proof}
 \end{eg}
 
 \section{Los Reales son no numerables}
 
 \begin{theorem}
-    $\mathbb{R}$  no es numerable.
+    $\R$  no es numerable.
     \begin{proof}
         Supongamos que es numerable. $\Rightarrow$ \\
-        $\exists f: \mathbb{N} \to \mathbb{R}$ biyectiva. A cada número real $x_n$ le asignamos un intervalo centrado en ese punto de longitud $2^{-n}$. La unión de todos esos intervalos tiene longitud menor o igual a la suma de las longitudes (se pueden superponer). \\
+        $\exists f: \N \to \R$ biyectiva. A cada número real $x_n$ le asignamos un intervalo centrado en ese punto de longitud $2^{-n}$. La unión de todos esos intervalos tiene longitud menor o igual a la suma de las longitudes (se pueden superponer). \\
         
-        $|\bigcup_{n\in\mathbb{N}} Ix_n| \leq \sum_{i=1}^{n} |Ix_n| = \sum_{n \in \mathbb{N}}\dfrac{1}{2^n} = 1 $. Se cubrió un intervalo de longitud $1$ de toda la recta real, por lo tanto quedan reales afuera y eso es un absurdo $\therefore$ $\mathbb{R}$ no es numerable.
+        $|\bigcup_{n\in\N} Ix_n| \leq \sum_{i=1}^{n} |Ix_n| = \sum_{n \in \N}\dfrac{1}{2^n} = 1 $. Se cubrió un intervalo de longitud $1$ de toda la recta real, por lo tanto quedan reales afuera y eso es un absurdo $\therefore$ $\R$ no es numerable.
     \end{proof}
 \end{theorem}
 
 \begin{eg}
-    $A = \{ (a_n)_{n \geq 1} : a_n \in \{0, 1\}\} = \{0, 1\}^{\mathbb{N}}$. Es decir las sucesiones de ceros y unos no es un conjunto numerable.
+    $A = \{ (a_n)_{n \geq 1} : a_n \in \{0, 1\}\} = \{0, 1\}^{\N}$. Es decir las sucesiones de ceros y unos no es un conjunto numerable.
     \begin{proof}
         Supongamos que si es numerable $\Rightarrow$ podemos escribir \\ $A = \{ (a_n^1)_{n\geq1}, \cdots, (a_n^j)_{n\geq1}, \cdots \}$, todas las sucesiones de ceros y unos están contenidas en $A$. La sucesión donde $a_i=1-a_n^n$ (en el i-ésimo lugar tiene lo contrario de lo que la n-ésima sucesión tiene en el lugar n) debería ser una de ellas, pero eso es absurdo $\therefore$ es no numerable.
     \end{proof}
@@ -119,22 +119,22 @@ La idea del último ejemplo (argumento diagonal), se puede adaptar para probar q
     La intersección de todos es no vacía. \\
     $\bigcap_{n=1}^{\infty} \mathbb{I}_n = [a,b]$ con $a = sup(a_n), b=inf(b_n)$.
     \begin{proof}
-        $\forall n \in \mathbb{N}$, $\exists \mathbb{I}_{n+1} \subset \mathbb{I}_n \Rightarrow a_n \leq a_{n+1} \leq b_{n+1} \leq b_n$ \\
+        $\forall n \in \N$, $\exists \mathbb{I}_{n+1} \subset \mathbb{I}_n \Rightarrow a_n \leq a_{n+1} \leq b_{n+1} \leq b_n$ \\
         $a_1 \leq a_2 \leq \cdots \leq b_n \leq \cdots \leq b_1$. El conjunto $A$ de los $a_i$ está acotado y $B$ el conjunto de los $b_i$ también. \\
-        Sea $\alpha = sup(A)$, $\beta = inf(B)$. Como $a_n \leq b_n, \forall n \in \mathbb{N} \Rightarrow \alpha \leq \beta \Rightarrow a_1 \leq \cdots \leq a_1 \leq \alpha \leq \beta \leq \cdots \leq b_1$. \\
-        Luego $[\alpha, \beta] \subset \mathbb{I}_n \forall n \in \mathbb{N} \Rightarrow \bigcap_{n\geq1} I_n$. \\
+        Sea $\alpha = sup(A)$, $\beta = inf(B)$. Como $a_n \leq b_n, \forall n \in \N \Rightarrow \alpha \leq \beta \Rightarrow a_1 \leq \cdots \leq a_1 \leq \alpha \leq \beta \leq \cdots \leq b_1$. \\
+        Luego $[\alpha, \beta] \subset \mathbb{I}_n \forall n \in \N \Rightarrow \bigcap_{n\geq1} I_n$. \\
         Además ningún $x \leq \alpha$ puede pertenecer a todos los $\mathbb{I}_n$. En efecto, si $x < \alpha = sup(A) \Rightarrow \exists a_1\in A: x<a_1 \Rightarrow x\notin \mathbb{I}_n$. \\
         Análogamente con el ínfimo.
     \end{proof}
 \end{theorem}
 
 \begin{theorem}
-    $\mathbb{R}$  no es numerable.
+    $\R$  no es numerable.
     \begin{proof}
-        Supongamos que $\exists f:\mathbb{N} \to \mathbb{R} : f(n) = x_n$. \\
+        Supongamos que $\exists f:\N \to \R : f(n) = x_n$. \\
         Definimos la sucesión de $\mathbb{I}_n$ de la siguiente forma: \\
         Tomamos $[0, 1]$ y divido en $3$ cerrados iguales, luego, al menos uno no contiene a $x_1$, lo elijo como $\mathbb{I}_1$ (si hayh dos que no lo contienen elijo alguno). Inductivamente lo divido en $3$ intervalos iguales y al menos $1$ de ellos no contiene a $x_{n+1}$ y lo elijo como $\mathbb{I}_{n+1}$. Por el principio anterior la $\mathbb{I} = \bigcap_{n=1}^\infty \mathbb{I}_n \neq \varnothing$ (tiene un único elemento y la longitud de los intervalos tiende a cero). \\
-        Si $x \in \mathbb{I}$ no puede ser igual o mayor que $x_1$ (por construcción se los excluye en algún paso) $\Rightarrow \mathbb{R}$ es no numerable, pues ese $x$ queda afuera.
+        Si $x \in \mathbb{I}$ no puede ser igual o mayor que $x_1$ (por construcción se los excluye en algún paso) $\Rightarrow \R$ es no numerable, pues ese $x$ queda afuera.
     \end{proof}
 \end{theorem}
 
@@ -143,7 +143,7 @@ La idea del último ejemplo (argumento diagonal), se puede adaptar para probar q
 \begin{theorem}
     Sea $X$ numerable, $Y \subset X \Rightarrow$ $Y$ es a lo sumo numerable.
     \begin{proof}
-        Supongamos que $Y$ no es finito. Como $X \sim Y$ puedo pensar $X = (x_n)_{n\geq1}$ y defino $n_1=min\{ n \in \mathbb{N}: x_n \in Y \}$ e inductivamente elegimos $n_1, n_2, \cdots , n_k, \cdots$. Definimos $n_k = min\{ n \in \mathbb{N} : n > n_k, x_n \in Y \} \Rightarrow$ Tenemos la sucesión estrictamente creciente de naturales y podemos definir $g: \mathbb{N} \to Y, g(K) = x_{n_k}$. $g$ es inyectiva si $K\neq Y, n_k \neq n_j$ por ser estrictamente creciente y es suryectiva, si $y \in Y \Rightarrow y = x_j$. Para ningún $j \Rightarrow \exists k :n_k\leq j \leq n_k+1$. Como $j \leq n_{k+1}=\{ n>n_k:x_n \in Y \}$ debe ser $j = n_k$.
+        Supongamos que $Y$ no es finito. Como $X \sim Y$ puedo pensar $X = (x_n)_{n\geq1}$ y defino $n_1=min\{ n \in \N: x_n \in Y \}$ e inductivamente elegimos $n_1, n_2, \cdots , n_k, \cdots$. Definimos $n_k = min\{ n \in \N : n > n_k, x_n \in Y \} \Rightarrow$ Tenemos la sucesión estrictamente creciente de naturales y podemos definir $g: \N \to Y, g(K) = x_{n_k}$. $g$ es inyectiva si $K\neq Y, n_k \neq n_j$ por ser estrictamente creciente y es suryectiva, si $y \in Y \Rightarrow y = x_j$. Para ningún $j \Rightarrow \exists k :n_k\leq j \leq n_k+1$. Como $j \leq n_{k+1}=\{ n>n_k:x_n \in Y \}$ debe ser $j = n_k$.
     \end{proof}
 \end{theorem}
 
@@ -162,16 +162,16 @@ La idea del último ejemplo (argumento diagonal), se puede adaptar para probar q
 \end{theorem}
 
 \begin{theorem}
-    Para cada $m \in \mathbb{N}$. Sea $x_n$ un conjunto numerable $\Rightarrow \bigcup_{n \in \mathbb{N}}x_n = X$ es numerable.
+    Para cada $m \in \N$. Sea $x_n$ un conjunto numerable $\Rightarrow \bigcup_{n \in \N}x_n = X$ es numerable.
     \begin{proof}
-        $x_n$ es numerable $\Rightarrow \exists f:\mathbb{N} \to x_n$ biyectiva. Sea $f:\mathbb{N} \times \mathbb{N} \to \bigcup_{n \in \mathbb{N}} x_n $ definida como $f(n, n) = f_n(n)$. Veamos que es suryectiva, dado $x \in X$, $\exists n \in \mathbb{N}:x \in x_n \Rightarrow \exists m:x=f_n(m)$ luego $X=f_n(m) = f(n, m)$. Como $\mathbb{N} \times \mathbb{N}$ es numerable y $f: \mathbb{N} \times \mathbb{N} \to \bigcup_{n \geq 1}{x_n}$ es suryectiva $\Rightarrow \bigcup_{n \geq 1}x_n$ es a lo sumo numerable $\therefore$ como es infinito, es numerable.
+        $x_n$ es numerable $\Rightarrow \exists f:\N \to x_n$ biyectiva. Sea $f:\N \times \N \to \bigcup_{n \in \N} x_n $ definida como $f(n, n) = f_n(n)$. Veamos que es suryectiva, dado $x \in X$, $\exists n \in \N:x \in x_n \Rightarrow \exists m:x=f_n(m)$ luego $X=f_n(m) = f(n, m)$. Como $\N \times \N$ es numerable y $f: \N \times \N \to \bigcup_{n \geq 1}{x_n}$ es suryectiva $\Rightarrow \bigcup_{n \geq 1}x_n$ es a lo sumo numerable $\therefore$ como es infinito, es numerable.
     \end{proof}
 \end{theorem}
 
 \begin{eg}
-    $\mathbb{Q}(x) \sim \mathbb{N}$.
+    $\Q(x) \sim \N$.
     \begin{proof}
-        $\mathbb{Q}_k[x] = \{ p \in \mathbb{Q}(x) : gr(p) \leq k \}$ tenemos $f_n : \mathbb{Q}^{n+1} \to \mathbb{Q}_n[x]$, $f(a_0, \cdots, a_{n+1}) = a_0 + \cdots + a_nx^n$, cada $f_n$ es biyectiva $\Rightarrow \mathbb{Q}^{n+1}$ es numerable y como la unión numerable de conjuntos numerables es numerable $\therefore \mathbb{Q}(x)$ es numerable. 
+        $\Q_k[x] = \{ p \in \Q(x) : gr(p) \leq k \}$ tenemos $f_n : \Q^{n+1} \to \Q_n[x]$, $f(a_0, \cdots, a_{n+1}) = a_0 + \cdots + a_nx^n$, cada $f_n$ es biyectiva $\Rightarrow \Q^{n+1}$ es numerable y como la unión numerable de conjuntos numerables es numerable $\therefore \Q(x)$ es numerable. 
     \end{proof}
 \end{eg}
 

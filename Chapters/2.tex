@@ -1,25 +1,25 @@
 \section{Cuerpo Arquimediano}
 
-Si $\mathbb{K}$ es un cuerpo ordenado, $\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{K}$, pero esto no necesariamente implica que $\mathbb{N}$ es no acotado. 
+Si $\mathbb{K}$ es un cuerpo ordenado, $\N \subset \Z \subset \Q \subset \mathbb{K}$, pero esto no necesariamente implica que $\N$ es no acotado. 
 
 \begin{eg}
-    $\mathbb{Q}(t):$ cuerpo de funciones racionales con coeficientes en $\mathbb{Q}$, $r(t) = p(t)/q(t)$, $p, q \in \mathbb{Q}, q \neq 0$. Este cuerpo puede ser ordenado diciendo que $r(t)$ es positivo si y sólo si el coeficiente de mayor grado del polinomio $pq$ es positivo.
-    En este cuerpo observemos que $p(t)=t=t/1$ cumple que $\forall n \in \mathbb{N}, p(t)=t-n \in P \Rightarrow t>n, \forall n \in \mathbb{N}$. Es decir que en $\mathbb{Q}(t)$, $\mathbb{N}$ es un conjunto acotado, por ejemplo por $t$.
+    $\Q(t):$ cuerpo de funciones racionales con coeficientes en $\Q$, $r(t) = p(t)/q(t)$, $p, q \in \Q, q \neq 0$. Este cuerpo puede ser ordenado diciendo que $r(t)$ es positivo si y sólo si el coeficiente de mayor grado del polinomio $pq$ es positivo.
+    En este cuerpo observemos que $p(t)=t=t/1$ cumple que $\forall n \in \N, p(t)=t-n \in P \Rightarrow t>n, \forall n \in \N$. Es decir que en $\Q(t)$, $\N$ es un conjunto acotado, por ejemplo por $t$.
 \end{eg}
 
 \begin{theorem}
     En un cuerpo ordenado $\mathbb{K}$ son equivalentes: \\
-    1) $\mathbb{N} \subset \mathbb{K}$ no es acotado superiormente. \\ 
-    2) Dados $a, b \in \mathbb{K}$ con $a>0, \exists n \in \mathbb{N}:m \cdot a>b$. \\
-    3) Dado cualquier $0<a \in \mathbb{K}, \exists n \in \mathbb{N} : 0 < \dfrac{1}a < a$. \\
+    1) $\N \subset \mathbb{K}$ no es acotado superiormente. \\ 
+    2) Dados $a, b \in \mathbb{K}$ con $a>0, \exists n \in \N:m \cdot a>b$. \\
+    3) Dado cualquier $0<a \in \mathbb{K}, \exists n \in \N : 0 < \dfrac{1}a < a$. \\
     Cuando vale cualquiera decimos que $\mathbb{K}$ es arquimediano.
     \begin{proof}
         1) $\Rightarrow$ 2) \\
-        Como $\mathbb{N}$ es no acotado, dados $a,b \in \mathbb{K}$, $a>0$, $\exists m \in \mathbb{N} : m > \dfrac ba$, caso contrario $\dfrac ba$ sería cota de $\mathbb{N} \Rightarrow ma>b$ \\
+        Como $\N$ es no acotado, dados $a,b \in \mathbb{K}$, $a>0$, $\exists m \in \N : m > \dfrac ba$, caso contrario $\dfrac ba$ sería cota de $\N \Rightarrow ma>b$ \\
         2) $\Rightarrow$ 3) \\
-        Dado $a>0, \exists n \in \mathbb{N} : ma>1$ (tomando $b=1$ en 2.) $\Rightarrow a>\dfrac 1m >0$ \\
+        Dado $a>0, \exists n \in \N : ma>1$ (tomando $b=1$ en 2.) $\Rightarrow a>\dfrac 1m >0$ \\
         3) $\Rightarrow$ 1) \\
-        Dado $0<a \in \mathbb{K} \Rightarrow \forall n \in \mathbb{N}, 0<\dfrac 1n<\dfrac 1a$, pues 3. vale para todo $\mathbb{K} \Rightarrow b<n \Rightarrow$ es no acotado (pues ningún $b>0$ puede ser cota superior).
+        Dado $0<a \in \mathbb{K} \Rightarrow \forall n \in \N, 0<\dfrac 1n<\dfrac 1a$, pues 3. vale para todo $\mathbb{K} \Rightarrow b<n \Rightarrow$ es no acotado (pues ningún $b>0$ puede ser cota superior).
     \end{proof}
 \end{theorem}
 
@@ -60,20 +60,20 @@ Es decir, se cumple:
 \end{eg}
 
 \begin{eg}
-    $Y = \{ y \in \mathbb{Q} : y=\dfrac{1}{2^n}, n\in \mathbb{N} \}$. Veamos que $inf(Y) =0, sup(Y) = \dfrac12$. \\
-    $\dfrac{1}{2} \in Y, \dfrac{1}{2^n}<\dfrac{1}{2} \forall n \in \mathbb{N} \Rightarrow \dfrac{1}{2} = sup(Y)$. \\
+    $Y = \{ y \in \Q : y=\dfrac{1}{2^n}, n\in \N \}$. Veamos que $inf(Y) =0, sup(Y) = \dfrac12$. \\
+    $\dfrac{1}{2} \in Y, \dfrac{1}{2^n}<\dfrac{1}{2} \forall n \in \N \Rightarrow \dfrac{1}{2} = sup(Y)$. \\
     
-    Como $0 < \dfrac{1}{2^n} \forall n \in \mathbb{N} \Rightarrow 0$ es cota inferior. Sea $0<c \in \mathbb{K}$, $2^n = (1+1)^n \leq 1+n \leq \dfrac{1}{c} \Rightarrow n \leq \dfrac{1}{c} -1 \Rightarrow \dfrac{1}{2^n} < c \Rightarrow c$ no puede ser cota inferior por la propiedad 3 de la arquimedianidad $\therefore 0$ es el ínfimo de $Y$. 
+    Como $0 < \dfrac{1}{2^n} \forall n \in \N \Rightarrow 0$ es cota inferior. Sea $0<c \in \mathbb{K}$, $2^n = (1+1)^n \leq 1+n \leq \dfrac{1}{c} \Rightarrow n \leq \dfrac{1}{c} -1 \Rightarrow \dfrac{1}{2^n} < c \Rightarrow c$ no puede ser cota inferior por la propiedad 3 de la arquimedianidad $\therefore 0$ es el ínfimo de $Y$. 
 \end{eg}
 
-El problema más serio de los racionales desde el punto de vista del análisis es que algunos conjuntos acotados de números racionales no tienen súpremo (o ínfimo) en $\mathbb{Q}$.
+El problema más serio de los racionales desde el punto de vista del análisis es que algunos conjuntos acotados de números racionales no tienen súpremo (o ínfimo) en $\Q$.
 
 \begin{eg}
-    Sean $X = \{ X \in \mathbb{Q} : x \geq 0, x² < 2 \}$,
-    $Y \{ y \in \mathbb{Q} : y>0, y² > 2 \}$. Notemos que si $z>2 \Rightarrow z² > 4 \Rightarrow z \notin X \Rightarrow X \subset [0, 2]$ y $X$ es un conjunto acotado. Además $Y \subset (0, +\infty)$ por lo que es un conjunto acotado inferiormente. Veamos que $\nexists$ supremo e ínfimo en $\mathbb{Q}$. \\
+    Sean $X = \{ X \in \Q : x \geq 0, x² < 2 \}$,
+    $Y \{ y \in \Q : y>0, y² > 2 \}$. Notemos que si $z>2 \Rightarrow z² > 4 \Rightarrow z \notin X \Rightarrow X \subset [0, 2]$ y $X$ es un conjunto acotado. Además $Y \subset (0, +\infty)$ por lo que es un conjunto acotado inferiormente. Veamos que $\nexists$ supremo e ínfimo en $\Q$. \\
     
-    1) Quiero ver que $X$ no tiene máximo. Dado $x \in X$ quiero encontrar $r \in \mathbb{Q}$ tal que $0<r<1$ y $x+r \in X \iff (x+r)² =x^2+2xr+r² < 2$. Como $r<1 \Rightarrow (x+r)²<x²+2xr+r=x²+r(2x+1)<2 \therefore x+r \in X$. \\
-    2) Quiero ver que $Y$ no tiene elemento mínimo, dado $y \in Y$ tomo $r \in \mathbb{Q} : 0 < r < \dfrac{y²-2}{2y}$
+    1) Quiero ver que $X$ no tiene máximo. Dado $x \in X$ quiero encontrar $r \in \Q$ tal que $0<r<1$ y $x+r \in X \iff (x+r)² =x^2+2xr+r² < 2$. Como $r<1 \Rightarrow (x+r)²<x²+2xr+r=x²+r(2x+1)<2 \therefore x+r \in X$. \\
+    2) Quiero ver que $Y$ no tiene elemento mínimo, dado $y \in Y$ tomo $r \in \Q : 0 < r < \dfrac{y²-2}{2y}$
     \begin{equation}
         (y-r)²=y²-2yr+r²>y²-2yr>2
     \end{equation}
@@ -89,17 +89,17 @@ El problema más serio de los racionales desde el punto de vista del análisis e
     $x² < 2 < y² \Rightarrow x² < y²$. \\
 
     Veamos que por 1, 2, 3 $\nexists sup(X), inf(Y)$. Supongamos $0< \alpha = sup(X)$, no puede ser $\alpha²<2$ porque si no $\alpha \in X$ y $X$ no tiene máximo. Tampoco puede ser $\alpha² > 2$ pues estaría en $Y$ e $Y$ no tiene mínimo, pues habría un $\beta \in Y$ con $\beta < \alpha$ y por 3) sería $x < \beta < \alpha, \forall x \in X$ lo que contradice que $sup(X) = \alpha$, pues sería $\beta$ el supremo.
-    En definitiva si existiese $sup(X) = \alpha$, debe ser $\alpha² = 2 \notin \mathbb{Q}$. Luego $X$ no tiene supremo en $\mathbb{Q}$.
+    En definitiva si existiese $sup(X) = \alpha$, debe ser $\alpha² = 2 \notin \Q$. Luego $X$ no tiene supremo en $\Q$.
     Ínfimo, ejercicio (análogo).
 \end{eg}
 
 \section{Cuerpo completo}
 
 \begin{definition}
-    Si $\mathbb{K}$ es un cuerpo ordenado no Arquimediano, $\mathbb{N} \subset \mathbb{K}$ es acotado superiormente.
+    Si $\mathbb{K}$ es un cuerpo ordenado no Arquimediano, $\N \subset \mathbb{K}$ es acotado superiormente.
 \end{definition}
 
-si $b \in \mathbb{K}$ es una cota superior de $\mathbb{N} \Rightarrow n+1 \in \mathbb{N}<b, \forall n \in \mathbb{N} \Rightarrow n < b-1$ o sea $b-1$ es cota superior de $\mathbb{N} \therefore \nexists sup(\mathbb{N})$ en $\mathbb{K}$.
+si $b \in \mathbb{K}$ es una cota superior de $\N \Rightarrow n+1 \in \N<b, \forall n \in \N \Rightarrow n < b-1$ o sea $b-1$ es cota superior de $\N \therefore \nexists sup(\N)$ en $\mathbb{K}$.
 
 \begin{definition}
     Un cuerpo ordenado $\mathbb{K}$ se dice completo cuando dado un subconjunto no vacío y acotado superiormente tiene supremo en $\mathbb{K}$.
@@ -113,20 +113,20 @@ si $b \in \mathbb{K}$ es una cota superior de $\mathbb{N} \Rightarrow n+1 \in \m
     \end{proof}
 \end{note}
 
-Axioma: Existe un cuerpo ordenado llamado $\mathbb{R}$.
+Axioma: Existe un cuerpo ordenado llamado $\R$.
 
 
-Ejercicio: Dados $0<a \in \mathbb{R}, m \in \mathbb{N} \Rightarrow \exists! 0<b\in \mathbb{R} : b^m =a$. Sugerencia Definir $X = \{ x \in \mathbb{R} : x\geq0, x^n<a \}$, $Y = \{ y \in \mathbb{R} : y>0, y^n >a \}$ e imitar la demostración anterior. Probar y usar que dado $x>0$ $\exists$ para cada $m \in \mathbb{N}$ un número real positivo que depende de $x$ tal que $(x+d)^m \leq A_nd+x^n, \forall 0<d<1.$.
+Ejercicio: Dados $0<a \in \R, m \in \N \Rightarrow \exists! 0<b\in \R : b^m =a$. Sugerencia Definir $X = \{ x \in \R : x\geq0, x^n<a \}$, $Y = \{ y \in \R : y>0, y^n >a \}$ e imitar la demostración anterior. Probar y usar que dado $x>0$ $\exists$ para cada $m \in \N$ un número real positivo que depende de $x$ tal que $(x+d)^m \leq A_nd+x^n, \forall 0<d<1.$.
 
 \begin{definition}
-    Un conjunto $X \subset \mathbb{R}$ se dice denso en $\mathbb{R}$ si todo intervalo abierto $(a, b)$ contiene algún punto de $X$.
+    Un conjunto $X \subset \R$ se dice denso en $\R$ si todo intervalo abierto $(a, b)$ contiene algún punto de $X$.
 \end{definition}
 
 \begin{eg}
-    $\mathbb{Q}$ es denso en $\mathbb{R}$.
+    $\Q$ es denso en $\R$.
     \begin{proof}
-        Como $b-a>0, \exists p\in \mathbb{N}: 0 < \dfrac{1}{p}<b-a$. \\
-        Sea $A = \{ m \in \mathbb{Z}: \dfrac{m}{p} \geq b \}$. Como $\mathbb{R}$ es Arquimediano, $A$ es un conjunto de números enteros no vacío y acotado por $bp$. Sea $m_0$ el menor elemento de A entonces $b\leq \dfrac{m_0}{p}$ y $\dfrac{m_0-1}{p} <b$. También $\dfrac{m_0-1}{p} > 0$, si no tendríamos que 
+        Como $b-a>0, \exists p\in \N: 0 < \dfrac{1}{p}<b-a$. \\
+        Sea $A = \{ m \in \Z: \dfrac{m}{p} \geq b \}$. Como $\R$ es Arquimediano, $A$ es un conjunto de números enteros no vacío y acotado por $bp$. Sea $m_0$ el menor elemento de A entonces $b\leq \dfrac{m_0}{p}$ y $\dfrac{m_0-1}{p} <b$. También $\dfrac{m_0-1}{p} > 0$, si no tendríamos que 
         \begin{equation}
             \dfrac{m_0-1}{p} \leq a \leq b \leq \dfrac{m_0}{p}
         \end{equation}
@@ -134,13 +134,13 @@ Ejercicio: Dados $0<a \in \mathbb{R}, m \in \mathbb{N} \Rightarrow \exists! 0<b\
         \begin{equation}
             b-a \leq \dfrac{m_0}{p} - \dfrac{m_0-1}{p} = \dfrac1p
         \end{equation}
-        Absurdo! $\therefore \mathbb{Q}$ es denso en $\mathbb{R}$.
+        Absurdo! $\therefore \Q$ es denso en $\R$.
     \end{proof}
 \end{eg}
 
 \begin{eg}
-    $\mathbb{R-Q}$ es denso en $\mathbb{R}$. \\
-    Para ver que $\mathbb{R-Q}$ es denso usamos la misma idea tomando $p \in \mathbb{N} :0<\dfrac1p<\dfrac{b-a}{\sqrt2}$ por Arquimedianidad y $\dfrac{\sqrt2}{p} < b-a$ por longitud del intervalo. 
+    $\mathbb{R-Q}$ es denso en $\R$. \\
+    Para ver que $\mathbb{R-Q}$ es denso usamos la misma idea tomando $p \in \N :0<\dfrac1p<\dfrac{b-a}{\sqrt2}$ por Arquimedianidad y $\dfrac{\sqrt2}{p} < b-a$ por longitud del intervalo. 
     Ejercicio terminar la demostración.
 \end{eg}
 
@@ -150,10 +150,10 @@ Ejercicio: Dados $0<a \in \mathbb{R}, m \in \mathbb{N} \Rightarrow \exists! 0<b\
     Decimos que dos conjuntos $X, Y$ tienen el mismo cardinal (coordinables o equipotentes) si $\exists f: X \to Y$ biyectiva. Notamos $X \sim Y$ o $card(X) = card(Y)$ o $\#X=\#Y$ y $\sim$ es una relación de equivalencia.
 \end{definition}
 
-Dado $n \in \mathbb{N}$ definimos $\mathbb{I}_n = \{1, 2, 3,\cdots, n\}$.
+Dado $n \in \N$ definimos $\mathbb{I}_n = \{1, 2, 3,\cdots, n\}$.
 
 \begin{theorem}
-    Sean $n, m \in \mathbb{N}$. Entonces, $\mathbb{I}_n \sim \mathbb{I}_m \iff n = m$.
+    Sean $n, m \in \N$. Entonces, $\mathbb{I}_n \sim \mathbb{I}_m \iff n = m$.
     \begin{proof}
         Sabemos que si $\mathbb{I}_n \sim \mathbb{I}_m$, entonces $\exists f: \mathbb{I}_n \to \mathbb{I}_m$ biyectiva. Supongamos que $n < m$. \\
         Esto implica que puedo definir $g: \mathbb{I}_m \to \mathbb{I}_{n+1}$ suryectiva como:

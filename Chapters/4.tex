@@ -53,18 +53,18 @@ El producto cumple las siguientes propiedades:
 \end{note}
 
 \begin{eg}
-    Si $n = card(\mathbb{N}) = \aleph_0$ y $card(\mathbb{R}) = c$, tenemos que: \\
+    Si $n = card(\N) = \aleph_0$ y $card(\R) = c$, tenemos que: \\
     a) $n+n = \aleph_0 + \aleph_0 = \aleph_0$. \\
     $n \cdot n = \aleph_0 \cdot \aleph_0 = \aleph_0$. \\
 
     b) $c \cdot c = c$. \\ $c+c = c$. \\
 
     \begin{proof}
-        a) Vimos que $card(\{ 2n : n \in \mathbb{N} \}) = \aleph_0$, $card(\{ 2n+1 : n \in \mathbb{N} \}) = \aleph_0$.
-        Y la unión de ambos conjuntos es $\mathbb{N}$. Además $\mathbb{N} \times \mathbb{N} = \aleph_0$, así $\aleph_0 \cdot \aleph_0 = \aleph_0$. \\
+        a) Vimos que $card(\{ 2n : n \in \N \}) = \aleph_0$, $card(\{ 2n+1 : n \in \N \}) = \aleph_0$.
+        Y la unión de ambos conjuntos es $\N$. Además $\N \times \N = \aleph_0$, así $\aleph_0 \cdot \aleph_0 = \aleph_0$. \\
 
         b) Si pruebo que el cardinal de cualquier intervalo no degenerado (sin extremos iguales) de la recta es $c$, puedo probar que $c+c=c$ observando que $(0,1) = (0, \dfrac{1}{2}) \cup (\dfrac{1}{2}, 1)$. \\
-        En efecto, $\arctan(x)$ es una biyección entre $\mathbb{R}$ y el intervalo $(-\dfrac{\pi}{2}, \dfrac{\pi}{2})$, y hay una biyección entre este intervalo y cualquier $(a, b)$ dada por $y = \dfrac{b}{\pi} \cdot (x + \dfrac{\pi}{2}) + a$. \\
+        En efecto, $\arctan(x)$ es una biyección entre $\R$ y el intervalo $(-\dfrac{\pi}{2}, \dfrac{\pi}{2})$, y hay una biyección entre este intervalo y cualquier $(a, b)$ dada por $y = \dfrac{b}{\pi} \cdot (x + \dfrac{\pi}{2}) + a$. \\
         Además, $(0, 1)$ y $[0, 1]$ son coordinables. Si $f: [0, 1] \to (0, 1)$ es inyectiva y por el Teorema de Cantor-Bernstein $[0, 1] \sim (0, 1)$. \\
         Para probar $c \cdot c = c$, uso que $(0, 1] \times (0, 1] \sim (0, 1]$. \\
         Sea $g: (0, 1] \to (0, 1] \times (0, 1]$, $g(x) = (x, 1)$ es inyectiva. \\
@@ -106,21 +106,21 @@ Sean $n = card(X)$, $m = card(Y)$, $p = card(Z)$, no necesariamente finitos, con
 \end{theorem}
 
 \begin{note}
-  $\{ 0, 1 \}^\mathbb{N} \sim P(\mathbb{N})$ pues a cada $f: \mathbb{N} \to \{0, 1\}$ le asigno el subconjunto $A \subset \mathbb{N}$ definido por $n \in A \iff f(n) = 1$
+  $\{ 0, 1 \}^\N \sim P(\N)$ pues a cada $f: \N \to \{0, 1\}$ le asigno el subconjunto $A \subset \N$ definido por $n \in A \iff f(n) = 1$
 \end{note}
   
 \begin{theorem}
-  $\mathbb{R} \sim \{ 0, 1 \}^\mathbb{N}$ es decir $2^{\aleph_0} = c$.
+  $\R \sim \{ 0, 1 \}^\N$ es decir $2^{\aleph_0} = c$.
   \begin{proof}
-    $f: [0, 1] \to \{ 0, 1 \}^\mathbb{N}, f(x) = (x_n)_{n \in \mathbb{N}}$. Siendo $x_n$ las cifras del desarrollo en base dos de $x$. \\
+    $f: [0, 1] \to \{ 0, 1 \}^\N, f(x) = (x_n)_{n \in \N}$. Siendo $x_n$ las cifras del desarrollo en base dos de $x$. \\
     Tenemos que $x = \sum_{n=1}^\infty \dfrac{x_n}{2^n} \Rightarrow f$ es inyectiva xq el desarrollo es único. \\
-    Ahora si $g: \{ 0, 1 \}^\mathbb{N} \to [0, 1], g((x_n)_{n \in \mathbb{N}}) = \sum_{n \geq 1} \dfrac{x_n}{2^n}$, $x_n \in \{0, 1\}$. No es inyectiva pues $0,11 = 0,10\overline{1}$.
-    Una forma simple es pensar el desarrollo en base $3$ de cada tira de $0$ y $1$ que no tiene ningún dos. Es decir $g((x_n)_{n \in \mathbb{N}}) = \sum_{n \geq 1} \dfrac{x_n}{3^n}$ y $(0,11)_3 \neq (0,10\overline{1})_3 \therefore$
-    es inyectiva y por Teorema CSB: $\mathbb{R} \sim \{0,1\}^{\aleph_0}$. \\
+    Ahora si $g: \{ 0, 1 \}^\N \to [0, 1], g((x_n)_{n \in \N}) = \sum_{n \geq 1} \dfrac{x_n}{2^n}$, $x_n \in \{0, 1\}$. No es inyectiva pues $0,11 = 0,10\overline{1}$.
+    Una forma simple es pensar el desarrollo en base $3$ de cada tira de $0$ y $1$ que no tiene ningún dos. Es decir $g((x_n)_{n \in \N}) = \sum_{n \geq 1} \dfrac{x_n}{3^n}$ y $(0,11)_3 \neq (0,10\overline{1})_3 \therefore$
+    es inyectiva y por Teorema CSB: $\R \sim \{0,1\}^{\aleph_0}$. \\
     Otra forma es la siguiente:
-    $S = \{0, 1\}^\mathbb{N} - \bigcup_{i=1}^n S_i$ con $S_i = \{ (x_n)_{n \in \mathbb{N}} \in \{0, 1\}^\mathbb{N} : x_m = 0, \forall m > i \}$. O sea $0,11000\cdots$ se saca y queda solo $0,10\overline{1}$.
-    Cada $S_i$ es un conjunto finito (tiene $2^i$ elementos) luego $\bigcup_{i \geq 1} S_i$ es numerable $\therefore$ $S$ y $\{0,1\}^\mathbb{N}$ tienen el mismo cardinal. \\
-    $g((x_n)_{n \in \mathbb{N}}) = \sum_{n \geq 1} \dfrac{x_n}{2^n}$ si es inyectiva y $g: S \to [0, 1]$.
+    $S = \{0, 1\}^\N - \bigcup_{i=1}^n S_i$ con $S_i = \{ (x_n)_{n \in \N} \in \{0, 1\}^\N : x_m = 0, \forall m > i \}$. O sea $0,11000\cdots$ se saca y queda solo $0,10\overline{1}$.
+    Cada $S_i$ es un conjunto finito (tiene $2^i$ elementos) luego $\bigcup_{i \geq 1} S_i$ es numerable $\therefore$ $S$ y $\{0,1\}^\N$ tienen el mismo cardinal. \\
+    $g((x_n)_{n \in \N}) = \sum_{n \geq 1} \dfrac{x_n}{2^n}$ si es inyectiva y $g: S \to [0, 1]$.
   \end{proof}
 \end{theorem}
 
@@ -132,19 +132,19 @@ Gödel 1940 probó que no se puede demostrar, Cohen en 1963 que no se puede refu
 
 \section{Construcción de los Reales}
 
-Sucesiones de números racionales $(a_n)_{n \in \mathbb{N}} \subset \mathbb{Q}$. \\
+Sucesiones de números racionales $(a_n)_{n \in \N} \subset \Q$. \\
 
-Sea $(a_n)_{n \in \mathbb{N}} \subset \mathbb{Q}$ decimos que tiende a 0 si dado $\varepsilon > 0, \exists n_0 \in \mathbb{N} : |a_n| < \varepsilon, \forall n > n_0$.
+Sea $(a_n)_{n \in \N} \subset \Q$ decimos que tiende a 0 si dado $\varepsilon > 0, \exists n_0 \in \N : |a_n| < \varepsilon, \forall n > n_0$.
 Notamos $a_n \to 0$.
 
 \begin{definition}
-  Sea $(a_n)_{n \in \mathbb{N}} \subset \mathbb{Q}$. Decimos que la sucesión es de Cauchy $\iff$ dado $\varepsilon > 0, \exists n_0 : \forall n,m > n_0, |a_n - a_m| < \varepsilon$.
+  Sea $(a_n)_{n \in \N} \subset \Q$. Decimos que la sucesión es de Cauchy $\iff$ dado $\varepsilon > 0, \exists n_0 : \forall n,m > n_0, |a_n - a_m| < \varepsilon$.
 \end{definition}
 
 \begin{theorem}
-  $(a_n)_{n \in \mathbb{N}} \subset \mathbb{Q}$ es convergente (es decir $a_n - q \to 0, q \in \mathbb{Q}$) $\Rightarrow$ es de Cauchy.
+  $(a_n)_{n \in \N} \subset \Q$ es convergente (es decir $a_n - q \to 0, q \in \Q$) $\Rightarrow$ es de Cauchy.
   \begin{proof}
-    Dado $\varepsilon > 0, \exists n_0 \in \mathbb{N} : |a_n - q| < \dfrac{\varepsilon}{2}, \forall n > n_0$. \\
+    Dado $\varepsilon > 0, \exists n_0 \in \N : |a_n - q| < \dfrac{\varepsilon}{2}, \forall n > n_0$. \\
     $|a_n - a_m| = |(a_n - q) + (q - a_n)| \leq |a_n - q| + |q - a_m| < \dfrac{\varepsilon}{2} + \dfrac{\varepsilon}{2} = \varepsilon$ \\
     $\forall n,m > n_0$.
   \end{proof}
@@ -154,16 +154,16 @@ Notamos $a_n \to 0$.
   Toda sucesión de Cauchy es acotada.
 
   \begin{proof}
-    Como $(a_n)_{n \in \mathbb{N}} \subset \mathbb{Q}$ es de Cauchy, eligiendo $\varepsilon = 1$ \\
-    $\exists n_0 \in \mathbb{N} : |a_n - a_m| < 1, \forall n,m > n_0$. \\
+    Como $(a_n)_{n \in \N} \subset \Q$ es de Cauchy, eligiendo $\varepsilon = 1$ \\
+    $\exists n_0 \in \N : |a_n - a_m| < 1, \forall n,m > n_0$. \\
     En particular $|a_n - a_{n_0+1}| < 1$ \\
     $a_{n_0+1} - 1 < a_n < 1 + a_{n_0+1}, \forall n > n_0 \Rightarrow |a_n| < max(|a_{n_0+1} + 1|, |a_{n_0+1} - 1|), \forall n > n_0$. \\
-    Tomo $M = max(|a_0|, \cdots, |a_{n_0}|, |a_{n_0+1} + 1|, |a_{n_0+1} - 1|)$ y vale $\forall n \in \mathbb{N}$.
+    Tomo $M = max(|a_0|, \cdots, |a_{n_0}|, |a_{n_0+1} + 1|, |a_{n_0+1} - 1|)$ y vale $\forall n \in \N$.
   \end{proof}
 \end{theorem}
 
 \begin{definition}
-  Sea $\mathscr{C}_{\mathbb{Q}}$ el conjunto de todas las sucesiones de Cauchy de números racionales. Dados $(a_n)_{n \in \mathbb{N}}$, $(b_n)_{n \in \mathbb{N}} \in \mathscr{C}_{\mathbb{Q}}$. Decimos que son equivalentes $\iff a_n - b_n \to 0$.
+  Sea $\mathscr{C}_{\Q}$ el conjunto de todas las sucesiones de Cauchy de números racionales. Dados $(a_n)_{n \in \N}$, $(b_n)_{n \in \N} \in \mathscr{C}_{\Q}$. Decimos que son equivalentes $\iff a_n - b_n \to 0$.
 \end{definition}
 
 \begin{prop}
@@ -175,5 +175,5 @@ Notamos $a_n \to 0$.
 \end{prop}
 
 \begin{definition}
-  Los números reales $\mathbb{R}$ son las clases de equivalencia $[(a_n)]$ de las sucesiones $\mathscr{C}_{\mathbb{Q}}$ por la relación anterior.
+  Los números reales $\R$ son las clases de equivalencia $[(a_n)]$ de las sucesiones $\mathscr{C}_{\Q}$ por la relación anterior.
 \end{definition}

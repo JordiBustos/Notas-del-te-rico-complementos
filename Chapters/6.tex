@@ -10,19 +10,19 @@ Una subsucesión de $x$ es la restricción de $x$ a un subconjunto infinito $A =
 \end{note}
 
 \begin{definition}
-  Decimos que $a = lim_{n \to \infty} x_n \iff (\forall \varepsilon > 0)(\exists n_0 \in \N) : |x_n - a| < \varepsilon, \forall n > n_0$. \\
-  Equivalentemente, si $\forall \varepsilon > 0$ el intervalo $(a-\varepsilon, a+\varepsilon)$ contiene a todos los términos de la sucesión salvo quizás un número finitos.
+  Decimos que $a = lim_{n \to \infty} x_n \iff (\forall \e > 0)(\exists n_0 \in \N) : |x_n - a| < \e, \forall n > n_0$. \\
+  Equivalentemente, si $\forall \e > 0$ el intervalo $(a-\e, a+\e)$ contiene a todos los términos de la sucesión salvo quizás un número finitos.
 \end{definition}
 
 \begin{theorem}[Unicidad del límite]
   Si $lim_{n \to \infty} x_n = a$ y $lim_{n \to \infty} x_n = b \Rightarrow a=b$
   \begin{proof}
-    Supongamos que $a \neq b$. Tomemos $\varepsilon = \dfrac{|b-a|}{2} > 0$. \\
-    $(a - \varepsilon, a+\varepsilon) \cap (b-\varepsilon, b+\varepsilon) = \varnothing$. En efecto si 
-    $x$ pertenece a la intersección entonces $|x-a| < \varepsilon$ y $|x-b| < \varepsilon \Rightarrow$ \\
-    $|b-a| \leq |a-x| + |x-b| < \varepsilon + \varepsilon = 2 \varepsilon = |b-a|$ Absurdo!
-    Como $lim_{n \to \infty} x_n = a \Rightarrow \exists n_0 : x_n \in (a - \varepsilon, a+ \varepsilon), \forall n > n_0 \Rightarrow$ \\
-    $x_n \notin (b-\varepsilon, b+\varepsilon), \forall n > n_0 \therefore lim_{n \to \infty} x_n \neq b$ pues vimos que son disjuntos. 
+    Supongamos que $a \neq b$. Tomemos $\e = \dfrac{|b-a|}{2} > 0$. \\
+    $(a - \e, a+\e) \cap (b-\e, b+\e) = \varnothing$. En efecto si 
+    $x$ pertenece a la intersección entonces $|x-a| < \e$ y $|x-b| < \e \Rightarrow$ \\
+    $|b-a| \leq |a-x| + |x-b| < \e + \e = 2 \e = |b-a|$ Absurdo!
+    Como $lim_{n \to \infty} x_n = a \Rightarrow \exists n_0 : x_n \in (a - \e, a+ \e), \forall n > n_0 \Rightarrow$ \\
+    $x_n \notin (b-\e, b+\e), \forall n > n_0 \therefore lim_{n \to \infty} x_n \neq b$ pues vimos que son disjuntos. 
   \end{proof}
 \end{theorem}
 
@@ -30,15 +30,15 @@ Una subsucesión de $x$ es la restricción de $x$ a un subconjunto infinito $A =
   Si $lim_{n \to \infty} x_n = a \Rightarrow$ toda subsucesión de $(x_n)_{n \in \N}$ converge a $a$.
 
   \begin{proof}
-    Dado $(x_{n_1}, x_{n_2}, \cdots)$ una subsucesión de $(x_n)_{n \in \N}$. Por hipotesis dado $\varepsilon > 0, \exists n_0 \in \N : |x_n - a| < \varepsilon, \forall n > n_0$. Como los índices de la subsucesión son infinitos, $\exists n_{i_0} > n_0 \Rightarrow$ si $n_i > n_{i_0} \Rightarrow |x_{n_i} - a| < \varepsilon, (n_i > n_{i_0} > n_0) \Rightarrow lim_{n \to \infty} x_{n_i} = a$.
+    Dado $(x_{n_1}, x_{n_2}, \cdots)$ una subsucesión de $(x_n)_{n \in \N}$. Por hipotesis dado $\e > 0, \exists n_0 \in \N : |x_n - a| < \e, \forall n > n_0$. Como los índices de la subsucesión son infinitos, $\exists n_{i_0} > n_0 \Rightarrow$ si $n_i > n_{i_0} \Rightarrow |x_{n_i} - a| < \e, (n_i > n_{i_0} > n_0) \Rightarrow lim_{n \to \infty} x_{n_i} = a$.
   \end{proof}
 \end{theorem}
 
 \begin{theorem}
   Toda sucesión convergente es acotada.
   \begin{proof}
-    Sea $a = lim_{n \to \infty} x_n$. Tomando $\varepsilon = 1, \exists n_{\varepsilon} : x_n \in (a - 1, a+1), \forall n > n_{\varepsilon}$. \\
-    $A = \{ x_1, x_2, \cdots, x_{n_{\varepsilon}}, a-1, a+1 \}$, $c = min(A)$, $d = max(A) \Rightarrow x_n \in [c, d], \forall n \in \N \therefore $ la sucesión es acotada.
+    Sea $a = lim_{n \to \infty} x_n$. Tomando $\e = 1, \exists n_{\e} : x_n \in (a - 1, a+1), \forall n > n_{\e}$. \\
+    $A = \{ x_1, x_2, \cdots, x_{n_{\e}}, a-1, a+1 \}$, $c = min(A)$, $d = max(A) \Rightarrow x_n \in [c, d], \forall n \in \N \therefore $ la sucesión es acotada.
   \end{proof}
 \end{theorem}
 
@@ -46,9 +46,9 @@ Una subsucesión de $x$ es la restricción de $x$ a un subconjunto infinito $A =
   Toda sucesión monótona y acotada es convergente.
   \begin{proof}
     Supongamos que $(x_n)_{n \in \N}$ es creciente y acotada y quiero ver que $lim_{n \to \infty} x_n = a = sup\{x_n\}_{n \in \N}$. \\
-    Dado $\varepsilon > 0$, como $a-\varepsilon < a, a-\varepsilon$ no puede ser cota superior de $\{x_n\} \Rightarrow \exists n_0 : x_{n_0} > a - \varepsilon$.
-    Como $(x_n)_{n \in \N}$ es monótona, si $n > n_0 \Rightarrow x_n > x_{n_0} > a - \varepsilon \Rightarrow$ \\
-    $a-\varepsilon < x_n \leq a < a+\varepsilon, \forall n > n_0 \therefore x_n \to a$. \\
+    Dado $\e > 0$, como $a-\e < a, a-\e$ no puede ser cota superior de $\{x_n\} \Rightarrow \exists n_0 : x_{n_0} > a - \e$.
+    Como $(x_n)_{n \in \N}$ es monótona, si $n > n_0 \Rightarrow x_n > x_{n_0} > a - \e \Rightarrow$ \\
+    $a-\e < x_n \leq a < a+\e, \forall n > n_0 \therefore x_n \to a$. \\
     Análogamente para $(x_n)_{n \in \N}$ es decreciente y acotada.
   \end{proof}
 \end{theorem}
@@ -75,8 +75,8 @@ Una subsucesión de $x$ es la restricción de $x$ a un subconjunto infinito $A =
   Si $lim_{n \to \infty} x_n = 0$ e $(y_n)_{n \in \N}$ una sucesión acotada $\Rightarrow lim_{n \to \infty} x_n \cdot y_n = 0$.
   \begin{proof}
     $\exists c : |y_n| < c, \forall n \in \N$, pues $y_n$ es acotado. \\
-    Dado $\varepsilon > 0$, como $x_n \to 0, \exists n_0 : |x_n| < \varepsilon/c, \forall n > n_0 \Rightarrow$ \\
-    $|x_n y_n| < c (\varepsilon/c) = \varepsilon, \forall n > n_0 \therefore x_n \cdot y_n \to 0$.
+    Dado $\e > 0$, como $x_n \to 0, \exists n_0 : |x_n| < \e/c, \forall n > n_0 \Rightarrow$ \\
+    $|x_n y_n| < c (\e/c) = \e, \forall n > n_0 \therefore x_n \cdot y_n \to 0$.
   \end{proof}
 \end{theorem}
 
@@ -85,9 +85,9 @@ Sea $lim_{n \to \infty} x_n = a$ y $lim_{n \to \infty} y_n = b$.
 \begin{prop}
   $x_n + y_n \to a+b$.
   \begin{proof}
-    Dado $\varepsilon > 0, \exists n_0 \in \N : |x_n - a| < \dfrac{\varepsilon}{2}, \forall n > n_0$ y \\ $\exists n_1 \in \N : |y_n - b| < \dfrac{\varepsilon}{2}, \forall n > n_1$.
+    Dado $\e > 0, \exists n_0 \in \N : |x_n - a| < \dfrac{\e}{2}, \forall n > n_0$ y \\ $\exists n_1 \in \N : |y_n - b| < \dfrac{\e}{2}, \forall n > n_1$.
     Sea $n_2 = max(n_0, n_1)$ \\
-    Si $n > n_2, |(x_n + y_n)-(a + b)| \leq |x_n - a| + |y_n - b| \leq \dfrac{\varepsilon}{2} + \dfrac{\varepsilon}{2} = \varepsilon$.
+    Si $n > n_2, |(x_n + y_n)-(a + b)| \leq |x_n - a| + |y_n - b| \leq \dfrac{\e}{2} + \dfrac{\e}{2} = \e$.
   \end{proof}
 \end{prop}
 
@@ -111,11 +111,11 @@ Sea $lim_{n \to \infty} x_n = a$ y $lim_{n \to \infty} y_n = b$.
   $\dfrac{x_n}{y_n} \to \dfrac{a}{b}$.
   \begin{proof}
     Si $y_n \cancel{\to} 0 \Rightarrow y_n \neq 0$ salvo quizá finitos términos. \\
-    En efecto, como $b \neq 0$, si $\varepsilon = |b|$ resulta que $0 \notin (b - \varepsilon, b + \varepsilon) \Rightarrow$ \\
-    $\exists n_{\varepsilon} : y_n \in (b-\varepsilon, b+\varepsilon), \forall n > n_{\varepsilon}$, luego $y_n \neq 0, \forall n > n_{\varepsilon}$. \\
+    En efecto, como $b \neq 0$, si $\e = |b|$ resulta que $0 \notin (b - \e, b + \e) \Rightarrow$ \\
+    $\exists n_{\e} : y_n \in (b-\e, b+\e), \forall n > n_{\e}$, luego $y_n \neq 0, \forall n > n_{\e}$. \\
 
     Ahora escribo $\dfrac{x_n}{y_n} - \dfrac{a}{b} = \dfrac{x_n \cdot b - a \cdot y_n}{y_n \cdot b}$ quiero ver que $\dfrac{1}{y_n \cdot b}$ es acotada. \\
-    Como $y_n \cdot b \to b²$ si $\varepsilon = \dfrac{b²}{2}, \exists n_0 : y_n \cdot b > \dfrac{b²}{2}, \forall n > n_0 \Rightarrow$ \\
+    Como $y_n \cdot b \to b²$ si $\e = \dfrac{b²}{2}, \exists n_0 : y_n \cdot b > \dfrac{b²}{2}, \forall n > n_0 \Rightarrow$ \\
     $0 < \dfrac{1}{y_n \cdot b} < \dfrac{2}{b²}, \forall n > n_0 \Rightarrow (\dfrac{1}{y_n \cdot b})_{n \in \N}$ es acotada.
   \end{proof}
 \end{prop}
@@ -144,18 +144,18 @@ Sea $lim_{n \to \infty} x_n = a$ y $lim_{n \to \infty} y_n = b$.
 
 \begin{note}
   La definición de límite puede ser reformulada de la siguiente forma: \\
-  Dado $a \in \R$ es el límite de $(x_n)_{n \in \N} \iff \forall \varepsilon > 0$ el conjunto $\{ n \in \N : x_n \in (a - \varepsilon, a + \varepsilon) \}$ tiene complemento finito (o vacío) en $\N$.
+  Dado $a \in \R$ es el límite de $(x_n)_{n \in \N} \iff \forall \e > 0$ el conjunto $\{ n \in \N : x_n \in (a - \e, a + \e) \}$ tiene complemento finito (o vacío) en $\N$.
 \end{note}
 
-Vamos a ver que $a \in \R$ es el límite de alguna subsucesión de $(x_n)_{n \in \N} \iff \forall \varepsilon > 0$ el conjunto $\{ n \in \N : x_n \in (a - \varepsilon, a + \varepsilon) \}$ es subconjunto infinito de $\N$ 
+Vamos a ver que $a \in \R$ es el límite de alguna subsucesión de $(x_n)_{n \in \N} \iff \forall \e > 0$ el conjunto $\{ n \in \N : x_n \in (a - \e, a + \e) \}$ es subconjunto infinito de $\N$ 
 \begin{theorem}
-  $a \in \R$ es el límite de alguna subsucesión de $(x_n)_{n \in \N} \iff \forall \varepsilon > 0, \exists$ infinitos índices $n : x_n \in (a-\varepsilon, a+\varepsilon)$.
+  $a \in \R$ es el límite de alguna subsucesión de $(x_n)_{n \in \N} \iff \forall \e > 0, \exists$ infinitos índices $n : x_n \in (a-\e, a+\e)$.
   \begin{proof}
     Para la ida tenemos que $a = lim_{n \in A} x_n$, con $A = \{ n_1 < n_2 < \cdots \}$. \\
-    $\forall \varepsilon > 0, \exists i_0 : x_{n_i} \in (a - \varepsilon, a + \varepsilon), \forall i > i_0$. \\
-    Como existen infinitos $i > i_0 : n_i \in A \Rightarrow \exists$ infinitos $n_i \in \N$ tales que $x_{n_i} \in (a - \varepsilon, a + \varepsilon)$. \\
+    $\forall \e > 0, \exists i_0 : x_{n_i} \in (a - \e, a + \e), \forall i > i_0$. \\
+    Como existen infinitos $i > i_0 : n_i \in A \Rightarrow \exists$ infinitos $n_i \in \N$ tales que $x_{n_i} \in (a - \e, a + \e)$. \\
 
-    Recíprocamente si tomamos sucesivamente $\varepsilon = 1, 1/2, 1/3, \cdots$. Puedo obtener $A = \{ n_1, n_2, \cdots \} : lim_{n \in A} x_n = a$ pues: \\
+    Recíprocamente si tomamos sucesivamente $\e = 1, 1/2, 1/3, \cdots$. Puedo obtener $A = \{ n_1, n_2, \cdots \} : lim_{n \in A} x_n = a$ pues: \\
     Sea $n_1 \in \N : x_{n_1} \in (a-1, a+1)$. Supongamos por inducción que $n_1 < n_2 < \cdots < n_i$ fueron definidos tales que $x_{n_2} \in (a - 1/2, a + 1/2), \cdots x_{n_i} \in (a - 1/i, a + 1/i)$. \\
     Como el conjunto $\{ n \in \N : x_n \in (a - \frac{1}{1+i}, a + \frac{1}{1+i}) \}$ es infinito, contiene algún $x_n$ con $n > n_i$ y lo tomo como $x_{n_i + 1}$. \\
     Como $| x_{n_i} - a | < \frac{1}{i}, \forall i \in \N \Rightarrow lim_{i \to \infty} x_{n_i} = a$.

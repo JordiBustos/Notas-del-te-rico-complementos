@@ -134,18 +134,18 @@ Gödel 1940 probó que no se puede demostrar, Cohen en 1963 que no se puede refu
 
 Sucesiones de números racionales $(a_n)_{n \in \N} \subset \Q$. \\
 
-Sea $(a_n)_{n \in \N} \subset \Q$ decimos que tiende a 0 si dado $\varepsilon > 0, \exists n_0 \in \N : |a_n| < \varepsilon, \forall n > n_0$.
+Sea $(a_n)_{n \in \N} \subset \Q$ decimos que tiende a 0 si dado $\e > 0, \exists n_0 \in \N : |a_n| < \e, \forall n > n_0$.
 Notamos $a_n \to 0$.
 
 \begin{definition}
-  Sea $(a_n)_{n \in \N} \subset \Q$. Decimos que la sucesión es de Cauchy $\iff$ dado $\varepsilon > 0, \exists n_0 : \forall n,m > n_0, |a_n - a_m| < \varepsilon$.
+  Sea $(a_n)_{n \in \N} \subset \Q$. Decimos que la sucesión es de Cauchy $\iff$ dado $\e > 0, \exists n_0 : \forall n,m > n_0, |a_n - a_m| < \e$.
 \end{definition}
 
 \begin{theorem}
   $(a_n)_{n \in \N} \subset \Q$ es convergente (es decir $a_n - q \to 0, q \in \Q$) $\Rightarrow$ es de Cauchy.
   \begin{proof}
-    Dado $\varepsilon > 0, \exists n_0 \in \N : |a_n - q| < \dfrac{\varepsilon}{2}, \forall n > n_0$. \\
-    $|a_n - a_m| = |(a_n - q) + (q - a_n)| \leq |a_n - q| + |q - a_m| < \dfrac{\varepsilon}{2} + \dfrac{\varepsilon}{2} = \varepsilon$ \\
+    Dado $\e > 0, \exists n_0 \in \N : |a_n - q| < \dfrac{\e}{2}, \forall n > n_0$. \\
+    $|a_n - a_m| = |(a_n - q) + (q - a_n)| \leq |a_n - q| + |q - a_m| < \dfrac{\e}{2} + \dfrac{\e}{2} = \e$ \\
     $\forall n,m > n_0$.
   \end{proof}
 \end{theorem}
@@ -154,7 +154,7 @@ Notamos $a_n \to 0$.
   Toda sucesión de Cauchy es acotada.
 
   \begin{proof}
-    Como $(a_n)_{n \in \N} \subset \Q$ es de Cauchy, eligiendo $\varepsilon = 1$ \\
+    Como $(a_n)_{n \in \N} \subset \Q$ es de Cauchy, eligiendo $\e = 1$ \\
     $\exists n_0 \in \N : |a_n - a_m| < 1, \forall n,m > n_0$. \\
     En particular $|a_n - a_{n_0+1}| < 1$ \\
     $a_{n_0+1} - 1 < a_n < 1 + a_{n_0+1}, \forall n > n_0 \Rightarrow |a_n| < max(|a_{n_0+1} + 1|, |a_{n_0+1} - 1|), \forall n > n_0$. \\
@@ -170,8 +170,8 @@ Notamos $a_n \to 0$.
   La relación anterior es de equivalencia. \\
   i) Reflexidad: $a_n - a_n = 0 \to 0$. \\
   ii) Simetría: $a_n - b_n \to 0 \Rightarrow b_n - a_n = -(a_n-b_n) \to 0$. \\
-  iii) Tansitividad: $\varepsilon > 0, \exists n_0 : |a_n - b_n| < \dfrac{\varepsilon}{2}, \forall n > n_0$
-  y $\exists n_1 : |b_n - c_n| < \dfrac{\varepsilon}{2}, \forall n > n_1$. Tomando $n > max(n_0, n_1), |a_n - c_n| \leq |a_n - b_n| + |b_n - c_n| < \dfrac{\varepsilon}{2} + \dfrac{\varepsilon}{2} < \varepsilon$.
+  iii) Tansitividad: $\e > 0, \exists n_0 : |a_n - b_n| < \dfrac{\e}{2}, \forall n > n_0$
+  y $\exists n_1 : |b_n - c_n| < \dfrac{\e}{2}, \forall n > n_1$. Tomando $n > max(n_0, n_1), |a_n - c_n| \leq |a_n - b_n| + |b_n - c_n| < \dfrac{\e}{2} + \dfrac{\e}{2} < \e$.
 \end{prop}
 
 \begin{definition}

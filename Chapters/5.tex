@@ -12,7 +12,7 @@
   $([a_n] + [(b_n)]) - ([c_n] +[d_n])) = ([a_n] - [(c_n)]) + ([b_n] - [(d_n)]) = 0 \Rightarrow $ la suma está bien definida. \\
   $a_n b_n - c_n d_n = a_n b_n - c_n b_n + c_n b_n - c_n d_n = b_n (a_n - c_n) + c_n (b_n - d_n) \Rightarrow |a_n \cdot b_n - c_n \cdot b_n| \leq |b_n| |a_n - c_n| + |c_n| |b_n - d_n|$. \\
   Como $(b_n)_{n \in \N}$ y $(c_n)_{n \in \N}$ están acotadas $\exists M : |b_n| < M$, $|c_n| < M, \forall n \in \N$. \\
-  $|a_n b_n - c_n b_n| \leq M (|a_n c_n| + |b_n - d_n|) < \varepsilon, \forall n > n_0$. \\
+  $|a_n b_n - c_n b_n| \leq M (|a_n c_n| + |b_n - d_n|) < \e, \forall n > n_0$. \\
   Porque $a_n - c_n \to 0$, $b_n - d_n \to 0$.
 \end{definition}
 
@@ -27,11 +27,11 @@
   Dado $S \in \R - \{0\}, \exists t \in \R : s \cdot t = 1$.
   \begin{proof}
     $S = [(a_n)]$ sabemos que $S \notin \tilde{0}$, o sea $a_n \cancel{\to} 0$. Podría pasar que algunos de los terminos de $(a_n)_{n \in \N}$ si sean $0$, lo que pasa es que $a_n \neq 0.$ para $n$ lo suficiente grande. \\
-    Como $a_n \cancel{\to} 0$, $\exists \varepsilon_1 > 0, \exists$ infinitos valores de $M: |a_M - 0| > \varepsilon_1$, si $\varepsilon = \dfrac{\varepsilon_1}{2}$, como $(a_n)_{n \in \N}$ es de cauchy, $\exists n : |a_n - a_m| < \dfrac{\varepsilon}{2}, \forall n, m > n_0$. \\
-    Si $M > n_0$ (puedo porque son infinitos) $: |a_M| > \varepsilon_1 \Rightarrow |a_m - a_M| < \dfrac{\varepsilon_1}{2}, \forall m > n_0$. \\
-    $-\varepsilon_1/2 < a_n - a_m < \varepsilon_1 / 2$ o $-\varepsilon_1 / 2 < a_m - a_n < \varepsilon_1 / 2$. \\ 
-    Si $a_M > 0 \Rightarrow \dfrac{\varepsilon_1}{2} < a_M - \dfrac{\varepsilon_1}{2} < a_n < a_M + \dfrac{\varepsilon_1}{2}, \forall n > n_0$. \\
-    Si $a_M < 0$, $\dfrac{\varepsilon_1}{2} < -a_M - \dfrac{\varepsilon_1}{2} < -a_n<-a_m+ \dfrac{\varepsilon_1}{2} \Rightarrow a_n < -\dfrac{\varepsilon_1}{2}, \forall n > n_0$. \\
+    Como $a_n \cancel{\to} 0$, $\exists \e_1 > 0, \exists$ infinitos valores de $M: |a_M - 0| > \e_1$, si $\e = \dfrac{\e_1}{2}$, como $(a_n)_{n \in \N}$ es de cauchy, $\exists n : |a_n - a_m| < \dfrac{\e}{2}, \forall n, m > n_0$. \\
+    Si $M > n_0$ (puedo porque son infinitos) $: |a_M| > \e_1 \Rightarrow |a_m - a_M| < \dfrac{\e_1}{2}, \forall m > n_0$. \\
+    $-\e_1/2 < a_n - a_m < \e_1 / 2$ o $-\e_1 / 2 < a_m - a_n < \e_1 / 2$. \\ 
+    Si $a_M > 0 \Rightarrow \dfrac{\e_1}{2} < a_M - \dfrac{\e_1}{2} < a_n < a_M + \dfrac{\e_1}{2}, \forall n > n_0$. \\
+    Si $a_M < 0$, $\dfrac{\e_1}{2} < -a_M - \dfrac{\e_1}{2} < -a_n<-a_m+ \dfrac{\e_1}{2} \Rightarrow a_n < -\dfrac{\e_1}{2}, \forall n > n_0$. \\
     O sea que $\forall n > n_0, a_n$ tiene el mismo signo que $a_M$ en particular $a_n \neq 0, \forall n > n_0$. \\
     Sabiendo esto veamos que $\exists$ el inverso: \\
     $S = [(a_n)] \neq 0$ por lo anterior $\exists n_0 : a_n \neq 0, \forall n > n_0$. \\
@@ -80,9 +80,9 @@ Veamos un ejemplo de como se prueban los axiomas de orden.
     Supongamos que $\forall m, n_0, \exists n>n_0 : m \cdot a_n \leq b_n$.
     Como $(b_n)_{n \in \N}$ es de Cauchy $\Rightarrow$ $\exists M \in \Q : b_n < M, \forall n \in \N \Rightarrow$. \\
     $a_n \leq \dfrac{b_n}{m} \leq \dfrac{M}{m}$, para algún $n > n_0, \forall n_0$. \\
-    Como $\Q$ es arquimediano, dado $\varepsilon > 0, \exists m : \dfrac{M}{m} < \dfrac{\varepsilon}{2}$, elijo $m$ así y tengo que $a_n \leq \dfrac{b_n}{m} < \dfrac{M}{m} < \dfrac{\varepsilon}{2}, n > n_0, \forall n_0$. \\
-    Como $(a_n)_{n \in \N}$ es de Cauchy $\exists n_0 : \forall n,k > n_0, |a_n - a_k| < \varepsilon/2$. Para este $n_0, \exists$ algún $n > n_0$ tal que $a_n < \varepsilon / 2 \Rightarrow$ \\
-    $\forall k > n_0, a_k - a_n < \varepsilon / 2 \Rightarrow a_k < a_n + \varepsilon / 2 < \varepsilon / 2 + \varepsilon / 2 < \varepsilon \Rightarrow a_n \to 0$. Absurdo! $([a_n]) = S > 0$. \\
+    Como $\Q$ es arquimediano, dado $\e > 0, \exists m : \dfrac{M}{m} < \dfrac{\e}{2}$, elijo $m$ así y tengo que $a_n \leq \dfrac{b_n}{m} < \dfrac{M}{m} < \dfrac{\e}{2}, n > n_0, \forall n_0$. \\
+    Como $(a_n)_{n \in \N}$ es de Cauchy $\exists n_0 : \forall n,k > n_0, |a_n - a_k| < \e/2$. Para este $n_0, \exists$ algún $n > n_0$ tal que $a_n < \e / 2 \Rightarrow$ \\
+    $\forall k > n_0, a_k - a_n < \e / 2 \Rightarrow a_k < a_n + \e / 2 < \e / 2 + \e / 2 < \e \Rightarrow a_n \to 0$. Absurdo! $([a_n]) = S > 0$. \\
 
     Luego $\exists m \in \N : m \cdot a_n - b_n > 0, \forall n > n_0$. Queda ver que $m \cdot a_n - b_n \cancel{\to} 0$, si $m \cdot a_n - b_n \cancel{\to} 0$ nada que probar. Caso contrario tomamos $m+1$ en vez de $m$. \\
     $(m+1) \cdot a_n - b_n = m \cdot a_n + a_n - b_n > a_n > 0, \forall n > n_0 \Rightarrow m \cdot a_n - b_n \to 0$ y $a_n \cancel{\to} 0 \therefore$ \\
@@ -91,12 +91,12 @@ Veamos un ejemplo de como se prueban los axiomas de orden.
 \end{theorem}
 
 \begin{theorem}
-  $\Q$ es denso en $\R$. Es decir dado $r \in \R$ y $\varepsilon > 0, \exists q \in \Q : |r-q| < \varepsilon$. $r = [(a_n)]$, con $(a_n)_{n \in \N} \subset \Q$ es de Cauchy.
+  $\Q$ es denso en $\R$. Es decir dado $r \in \R$ y $\e > 0, \exists q \in \Q : |r-q| < \e$. $r = [(a_n)]$, con $(a_n)_{n \in \N} \subset \Q$ es de Cauchy.
 
   \begin{proof}
-    Dado $\varepsilon > 0, \exists n_0 : |a_n - a_m| < \varepsilon, \forall n, m > n_0$. \\
+    Dado $\e > 0, \exists n_0 : |a_n - a_m| < \e, \forall n, m > n_0$. \\
     Elijo algún $l > n_0$ y defino $q = [(a_l, a_l, \cdots)] \Rightarrow r-q = [(a_n - a_l)]$ y $q-r = [(a_l - a_n)]$.
-    Como $l > n_0 \Rightarrow (\forall n > n_0)(a_n-a_l < \varepsilon)(a_l - a_n < \varepsilon) \Rightarrow |r-q| < \varepsilon$.
+    Como $l > n_0 \Rightarrow (\forall n > n_0)(a_n-a_l < \e)(a_l - a_n < \e) \Rightarrow |r-q| < \e$.
   \end{proof}
 \end{theorem}
 
@@ -120,14 +120,14 @@ Como $s_0 < M$ es fácil ver que $(u_n)_{n \in \N}$ es decreciente y que $(l_n)_
     Es de cauchy. \\
 
     * \begin{proof}
-      Supongamos que $(l_n)_{n \in \N}$ no es de Cauchy. Entonces existe $\varepsilon > 0 : \forall n_0, \exists n, m \geq n_0 : l_n - l_m \geq \varepsilon$. \\
-      Como $(l_n)_{n \in \N}$ es creciente, $l_n - l_{n_0} \geq \varepsilon$, inductivamente consigo: \\
-      $n_1 > n_0 : l_{n_1} - l_{n_0} \geq \varepsilon$ \\
-      $n_2 > n_1 : l_{n_2} - l_{n_1} \geq \varepsilon$ \\
+      Supongamos que $(l_n)_{n \in \N}$ no es de Cauchy. Entonces existe $\e > 0 : \forall n_0, \exists n, m \geq n_0 : l_n - l_m \geq \e$. \\
+      Como $(l_n)_{n \in \N}$ es creciente, $l_n - l_{n_0} \geq \e$, inductivamente consigo: \\
+      $n_1 > n_0 : l_{n_1} - l_{n_0} \geq \e$ \\
+      $n_2 > n_1 : l_{n_2} - l_{n_1} \geq \e$ \\
       \vdots \\
 
-      Por otro lado por la arquimedianidad $\exists k \in \N : k \cdot \varepsilon > M - l_{n_0} \Rightarrow$ \\
-      $l_{n_k} - l_{n_0} = (l_{n_k} - l_{n_{k-1}}) + (l_{n_{k-1}} - l_{n_{k-2}}) + \cdots + (l_{n_1} - l_{n_0}) > k \cdot \varepsilon > M - l_{n_0} \Rightarrow$ \\
+      Por otro lado por la arquimedianidad $\exists k \in \N : k \cdot \e > M - l_{n_0} \Rightarrow$ \\
+      $l_{n_k} - l_{n_0} = (l_{n_k} - l_{n_{k-1}}) + (l_{n_{k-1}} - l_{n_{k-2}}) + \cdots + (l_{n_1} - l_{n_0}) > k \cdot \e > M - l_{n_0} \Rightarrow$ \\
       $l_{n_k} > M$. Absurdo!
     \end{proof}
   \end{proof}
@@ -138,10 +138,10 @@ Como $s_0 < M$ es fácil ver que $(u_n)_{n \in \N}$ es decreciente y que $(l_n)_
   \begin{proof}
     Sea $u_n$ un termino de $(u_n)_{n \in \N} \Rightarrow \exists q_n \in \Q : |u_n - q_n| < \dfrac{1}{n}$ \\
     Consideremos $(q_1, q_2, \cdots) \subset \Q$. \\
-    Afirmo que $(q_n)_{n \in \N}$ es de Cauchy. Dado $\varepsilon > 0$, como $(u_n)_{n \in \N}$ es de Cauchy $\Rightarrow$ \\
-    $\exists n_0 : \forall n, m > n_0, |u_n - u_m| < \dfrac{\varepsilon}{3}$. \\
+    Afirmo que $(q_n)_{n \in \N}$ es de Cauchy. Dado $\e > 0$, como $(u_n)_{n \in \N}$ es de Cauchy $\Rightarrow$ \\
+    $\exists n_0 : \forall n, m > n_0, |u_n - u_m| < \dfrac{\e}{3}$. \\
     Por arquimedianidad $\exists n_1 : \dfrac{1}{m}, \forall n > n_1 \Rightarrow$ si $n > max(n_0, n_1) \Rightarrow$ \\
-    $|q_n - q_m| \leq |q_n - u_n| + |u_n - u_m| + |u_m - q_m| < \varepsilon \Rightarrow$ \\
+    $|q_n - q_m| \leq |q_n - u_n| + |u_n - u_m| + |u_m - q_m| < \e \Rightarrow$ \\
     $u = [(q_n)] \in \R$, falta ver que $u_n \to u$. \\
     Si $\tilde{q}_n = [(q_n, q_n, \cdots)] \in \R \Rightarrow \tilde{q}_n - u \to 0$ pues $q_n$ es de Cauchy y por construcción $u_n - q_n < \dfrac{1}{n} \Rightarrow u_n - \tilde{q}_n \to 0$ y como $\tilde{q}_n - u \to 0 \Rightarrow$ \\
     $u_n \to u$.
@@ -159,7 +159,7 @@ Como $s_0 < M$ es fácil ver que $(u_n)_{n \in \N}$ es decreciente y que $(l_n)_
     \vdots \\
     $u_n - l_n = (\dfrac{1}{2})^n (M - s)$ \\
     
-    Por arquimedianidad de $\R, \forall \epsilon > 0, \dfrac{1}{2^n} (M - s) < \varepsilon, \forall n > n_0 \Rightarrow$ \\
+    Por arquimedianidad de $\R, \forall \epsilon > 0, \dfrac{1}{2^n} (M - s) < \e, \forall n > n_0 \Rightarrow$ \\
     $u_n - l_n \to 0 \therefore$ $l_n \to u$, pues $u_n \to u$.
   \end{proof}
 \end{lemma}
@@ -167,11 +167,11 @@ Como $s_0 < M$ es fácil ver que $(u_n)_{n \in \N}$ es decreciente y que $(l_n)_
 \begin{theorem}
   $\R$ tiene la propiedad del supremo.
   \begin{proof}
-    1) Veamos que $u$ es cota superior, si no $u < s, s \in S \Rightarrow \varepsilon = s - u > 0$, como $u_n \to u$ y es decreciente $\exists n : u_n - u < \varepsilon \Rightarrow u_n < u + \varepsilon = u + s - u = s$ Absurdo, por construcción $u_n$ era cota superior de $S, \forall n$. \\
+    1) Veamos que $u$ es cota superior, si no $u < s, s \in S \Rightarrow \e = s - u > 0$, como $u_n \to u$ y es decreciente $\exists n : u_n - u < \e \Rightarrow u_n < u + \e = u + s - u = s$ Absurdo, por construcción $u_n$ era cota superior de $S, \forall n$. \\
 
     2) Veamos que es la menor de las cotas superiores. \\
     Sabemos que $l_n$ no es cota superior de $S$, así que $(\forall n \in \N)(\exists s_n \in S) : l_n \leq s_n$. Como $l_n \to u$ y $l_n$ es creciente $\Rightarrow$ \\
-    $\forall \varepsilon > 0, \exists n_0 : l_n > u - \varepsilon, \forall n>n_0 \Rightarrow s_n \geq l_n > u - \varepsilon, \forall n > n_0$. Es decir que para todo $\varepsilon > 0$ tengo un $s_n$ más grande en $S \therefore u$ es la menor de las cotas superiores.   
+    $\forall \e > 0, \exists n_0 : l_n > u - \e, \forall n>n_0 \Rightarrow s_n \geq l_n > u - \e, \forall n > n_0$. Es decir que para todo $\e > 0$ tengo un $s_n$ más grande en $S \therefore u$ es la menor de las cotas superiores.   
   \end{proof}
 \end{theorem}
 

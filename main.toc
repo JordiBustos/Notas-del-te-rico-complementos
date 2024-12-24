@@ -37,15 +37,15 @@
 \contentsline {chapter}{\numberline {7}Clase VII - 13/09}{40}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Límite superior e inferior}{40}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Sucesiones de Cauchy}{40}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Límites infinitos}{40}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Series numéricas}{40}{section.7.4}%
-\contentsline {chapter}{\numberline {8}Clase VIII - 24/09}{42}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Ejemplo de convergencia condicional}{42}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Corolarios de series}{42}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Criterios de convergencia}{42}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Criterio del cociente y de la raíz}{42}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Criterio de Dirichlet}{42}{subsection.8.3.2}%
-\contentsline {subsection}{\numberline {8.3.3}Criterio de Leibniz}{42}{subsection.8.3.3}%
-\contentsline {section}{\numberline {8.4}Parte positiva y negativa}{42}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Reordenamientos}{42}{section.8.5}%
+\contentsline {section}{\numberline {7.3}Límites infinitos}{41}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Series numéricas}{42}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Clase VIII - 24/09}{45}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Ejemplo de convergencia condicional}{45}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Corolarios de series}{45}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Criterios de convergencia}{45}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Criterio del cociente y de la raíz}{45}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Criterio de Dirichlet}{45}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Criterio de Leibniz}{45}{subsection.8.3.3}%
+\contentsline {section}{\numberline {8.4}Parte positiva y negativa}{45}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Reordenamientos}{45}{section.8.5}%
 \contentsfinish 

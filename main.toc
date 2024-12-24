@@ -42,10 +42,10 @@
 \contentsline {chapter}{\numberline {8}Clase VIII - 24/09}{45}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Ejemplo de convergencia condicional}{45}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Corolarios de series}{45}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Criterios de convergencia}{45}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Criterio del cociente y de la raíz}{45}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Criterio de Dirichlet}{45}{subsection.8.3.2}%
-\contentsline {subsection}{\numberline {8.3.3}Criterio de Leibniz}{45}{subsection.8.3.3}%
-\contentsline {section}{\numberline {8.4}Parte positiva y negativa}{45}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Reordenamientos}{45}{section.8.5}%
+\contentsline {section}{\numberline {8.3}Criterios de convergencia}{46}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Criterio de la raíz}{46}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Criterio del cociente y D'Alembert}{46}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Criterio de Dirichlet - Abel}{48}{subsection.8.3.3}%
+\contentsline {section}{\numberline {8.4}Parte positiva y negativa}{49}{section.8.4}%
+\contentsline {section}{\numberline {8.5}Reordenamientos}{49}{section.8.5}%
 \contentsfinish 

@@ -26,8 +26,8 @@
 \begin{theorem}
   Dado $S \in \R - \{0\}, \exists t \in \R : s \cdot t = 1$.
   \begin{proof}
-    $S = [(a_n)]$ sabemos que $S \notin \tilde{0}$, o sea $a_n \cancel{\to} 0$. Podría pasar que algunos de los terminos de $(a_n)_{n \in \N}$ si sean $0$, lo que pasa es que $a_n \neq 0.$ para $n$ lo suficiente grande. \\
-    Como $a_n \cancel{\to} 0$, $\exists \e_1 > 0, \exists$ infinitos valores de $M: |a_M - 0| > \e_1$, si $\e = \dfrac{\e_1}{2}$, como $(a_n)_{n \in \N}$ es de cauchy, $\exists n : |a_n - a_m| < \dfrac{\e}{2}, \forall n, m > n_0$. \\
+    $S = [(a_n)]$ sabemos que $S \notin \tilde{0}$, o sea $a_n \not \to 0$. Podría pasar que algunos de los terminos de $(a_n)_{n \in \N}$ si sean $0$, lo que pasa es que $a_n \neq 0.$ para $n$ lo suficiente grande. \\
+    Como $a_n \not \to 0$, $\exists \e_1 > 0, \exists$ infinitos valores de $M: |a_M - 0| > \e_1$, si $\e = \dfrac{\e_1}{2}$, como $(a_n)_{n \in \N}$ es de cauchy, $\exists n : |a_n - a_m| < \dfrac{\e}{2}, \forall n, m > n_0$. \\
     Si $M > n_0$ (puedo porque son infinitos) $: |a_M| > \e_1 \Rightarrow |a_m - a_M| < \dfrac{\e_1}{2}, \forall m > n_0$. \\
     $-\e_1/2 < a_n - a_m < \e_1 / 2$ o $-\e_1 / 2 < a_m - a_n < \e_1 / 2$. \\ 
     Si $a_M > 0 \Rightarrow \dfrac{\e_1}{2} < a_M - \dfrac{\e_1}{2} < a_n < a_M + \dfrac{\e_1}{2}, \forall n > n_0$. \\
@@ -66,7 +66,7 @@ Veamos un ejemplo de como se prueban los axiomas de orden.
   Sean $s, t \in \R : s > t, r \in \R \Rightarrow s+r > t+r$.
   \begin{proof}
     $s = [(a_n)], t = [(b_n)], r = [(c_n)]$. \\
-    Como $s > t, \exists n_0 : a_n - b_n > 0, \forall n > n_0, a_n - b_n \cancel{\to} 0 \Rightarrow (a_n + c_n) - (b_n + c_n) = a_n + b_n > 0$ y $(a_n + c_n) - (b_n + c_n) \cancel{\to} 0 \Rightarrow$ \\
+    Como $s > t, \exists n_0 : a_n - b_n > 0, \forall n > n_0, a_n - b_n \not \to 0 \Rightarrow (a_n + c_n) - (b_n + c_n) = a_n + b_n > 0$ y $(a_n + c_n) - (b_n + c_n) \not \to 0 \Rightarrow$ \\
     $s + r - (t + r) > 0 \Rightarrow s+r > t+r$.
   \end{proof}
 \end{theorem}
@@ -75,7 +75,7 @@ Veamos un ejemplo de como se prueban los axiomas de orden.
   $\R$ con esta construcción es Arquimediano.
   \begin{proof}
     Sean $s, t > 0, s, t \in \R$ quiero ver que $\exists m \in \N : m \cdot s > t$. \\
-    Es decir si $s = [(a_n)]$, $t = [(b_n)]$ quiero ver que $[(m \cdot a_n)] > [(b_n)]$. O sea que $m \cdot a_n - b_n \cancel{\to} 0$ y que $\exists n_0 : m \cdot a_n - b_n > 0, \forall n> n_0$. \\
+    Es decir si $s = [(a_n)]$, $t = [(b_n)]$ quiero ver que $[(m \cdot a_n)] > [(b_n)]$. O sea que $m \cdot a_n - b_n \not \to 0$ y que $\exists n_0 : m \cdot a_n - b_n > 0, \forall n> n_0$. \\
 
     Supongamos que $\forall m, n_0, \exists n>n_0 : m \cdot a_n \leq b_n$.
     Como $(b_n)_{n \in \N}$ es de Cauchy $\Rightarrow$ $\exists M \in \Q : b_n < M, \forall n \in \N \Rightarrow$. \\

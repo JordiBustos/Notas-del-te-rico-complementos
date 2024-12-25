@@ -51,14 +51,18 @@
 \contentsline {chapter}{\numberline {9}Clase IX - 27/09}{53}{chapter.9}%
 \contentsline {section}{\numberline {9.1}(Continuación) Reordenamientos}{53}{section.9.1}%
 \contentsline {section}{\numberline {9.2}Topología Euclídea}{53}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Entorno}{53}{section.9.3}%
-\contentsline {chapter}{\numberline {10}Clase X - 01/10}{55}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Continuación - Clausura}{55}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Punto de acumulación}{55}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Conjunto derivado}{55}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Sucesiones en varias dimensiones}{55}{section.10.4}%
-\contentsline {section}{\numberline {10.5}Conjuntos compactos}{55}{section.10.5}%
-\contentsline {chapter}{\numberline {11}Clase XI - 04/10}{57}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Corolarios Conjuntos Compactos}{57}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Propiedades de límites}{57}{section.11.2}%
+\contentsline {subsection}{\numberline {9.2.1}Conjuntos abiertos}{54}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Interior de un conjunto}{55}{subsection.9.2.2}%
+\contentsline {section}{\numberline {9.3}Entorno}{56}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Conjunto Cerrado}{57}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Clausura}{57}{subsection.9.4.1}%
+\contentsline {chapter}{\numberline {10}Clase X - 01/10}{60}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Continuación - Clausura}{60}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Punto de acumulación}{60}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Conjunto derivado}{60}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Sucesiones en varias dimensiones}{60}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Conjuntos compactos}{60}{section.10.5}%
+\contentsline {chapter}{\numberline {11}Clase XI - 04/10}{62}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Corolarios Conjuntos Compactos}{62}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Propiedades de límites}{62}{section.11.2}%
 \contentsfinish 

@@ -5,4 +5,14 @@ Walter Rudin.
 \newblock {\em Principles of mathematical analysis, 3rd Edition}.
 \newblock McGraw-Hill, New York, 1976.
 
+\bibitem{lages_lima}
+Elon~Lages Lima.
+\newblock {\em Curso de Análise, Vol.1}.
+\newblock IMPA, Río de Janeiro, 2014.
+
+\bibitem{apostol}
+Tom~Mike Apostol.
+\newblock {\em Calculus}.
+\newblock John Wiley and Sons, New York, 1967.
+
 \end{thebibliography}

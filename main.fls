@@ -434,6 +434,11 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/euex10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 OUTPUT main.toc
+INPUT ./Chapters/preface.tex
+INPUT ./Chapters/preface.tex
+INPUT ./Chapters/preface.tex
+INPUT ./Chapters/preface.tex
+INPUT Chapters/preface.tex
 INPUT ./Chapters/1.tex
 INPUT ./Chapters/1.tex
 INPUT ./Chapters/1.tex

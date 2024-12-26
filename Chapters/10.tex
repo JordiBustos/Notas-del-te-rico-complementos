@@ -1,9 +1,207 @@
-\section{Continuación - Clausura}
+\section{(Continuación) Clausura}
+
+\begin{prop}
+  Sean $X \subset \R^n y x \in \R^n$. Son equivalentes:
+  \begin{enumerate}
+    \item $x \in \overline{X}$.
+    \item $\forall r > 0, B_r(x) \cap X \neq \varnothing$.
+    \item $\forall$ entorno abierto $N$ de $X$, $N \cap X \neq \varnothing$.
+    \item $\forall$ entorno $N$ de $X$, $N \cap X \neq \varnothing$.
+  \end{enumerate}
+
+  \begin{proof}
+    4) $\Rightarrow$ 3) $\Rightarrow$ 2) son inmediatos. \\
+    2) $\Rightarrow$ 1) Por contrarrecíproco, supongamos que $x \notin \overline{X}$ de manera tal que $\exists$ F cerrado tal que $x \in F$ y $X \subset F$ (si no estaría en la clasura) $\Rightarrow x \in F^c$ que es abierto $\Rightarrow \exists r > 0, B_r(x) \subset F^c, B_r(X) \cap X \subset B_r(x) \cap F = \varnothing$. \\
+    1) $\Rightarrow$ 4) Supongamos que existe $N$ entorno de X tal que $N \cap X = \varnothing$. El conjunto $U = N^{\circ}$ es abierto y $x \in U$. Además $U \subset N \subset X^c \Rightarrow X \subset U^c$ que es cerrado y $x \in U^c \Rightarrow x \notin \overline{X}$.
+  \end{proof}
+\end{prop}
+
+\begin{eg}
+  Si $\Q^n$ es el conjunto de puntos de $\R^n$ que tienen todas sus coordenadas racionales $\overline{\Q^n} = \R^n$. Decimos que $\Q^n$ es denso en $\R^n$.
+
+  \begin{proof}
+    1) $\overline{\Q^n} \subseteq \R^n : \Q^n \subset \R^n$, que es cerrado $\Rightarrow \overline{\Q^n} \subseteq \R^n$. \\
+    2) $\R^n \subseteq \overline{\Q^n}:$ Si $x \in \R^n$ y $U$ es entorno abierto de $x, U \cap \Q^n \neq \varnothing$ (1) $\iff$ 2)). Como $U$ es abierto $\exists r > 0 : B_r(x) \subset U$. \\
+    Si $x = (x_1, \cdots, x_n)$ para cada $i \in \{1, \cdots, n\}$ elijo un racional $q_i$ en el intervalo $(x_i - \dfrac{r}{\sqrt{n}}, x_i + \dfrac{r}{\sqrt{n}}) : |x_i - q_i| < \dfrac{r}{\sqrt{n}} \Rightarrow d(x, q) < r$. Sabemos que existe porque ya probamos que $\Q$ es denso en $\R$. \\
+    $\Rightarrow q \in B_r(x) \subset U \Rightarrow U \cap \Q^n \neq \varnothing$ pues al menos $q$ está allí $\forall U$ entorno abierto de X.
+    $\therefore \R^n \subset \Q^n$.
+  \end{proof}
+\end{eg}
 
 \section{Punto de acumulación}
 
-\section{Conjunto derivado}
+\begin{definition}[Punto de acumulación]
+  $X \subset \R^n$. Un punto $x \in X$ es de acumulación si pertenece a $\overline{X - \{ x \}}$. \\
+\end{definition}
+
+\begin{definition}[Conjunto derivado]
+  El conjunto derivado de X es el conjunto de todos los puntos de acumulación de $X$.
+\end{definition}
+
+\begin{prop}
+  Dados $X \subset \R^n, x \in X$, son equivalentes:
+  \begin{enumerate}
+    \item $x$ es un punto de acumulación.
+    \item $\forall r > 0, B_r(x)$ contiene un punto de $X$ distinto de $x$.
+    \item Todo entorno abierto de $x$ contiene un punto de $X$ distinto de $x$.
+    \item Todo entorno de $x$ contiene un punto de $X$ distinto de $x$.
+  \end{enumerate}
+
+  \begin{proof}
+    4) $\Rightarrow$ 3) $\Rightarrow$ 2) son inmediatos. \\
+    2) $\Rightarrow$ 1) Por contrarrecíproco: $x \in X$ no es punto de acumulación de $X$ luego $x \in (\overline{X - \{x\}})^c$. Como ese conjunto es abierto $\exists r > 0, B_r(x) \subset (\overline{X - \{ x \}} \Rightarrow B_r(x) \cap (X - \{x \}) \subset B_r(x) \cap (\overline{X - \{x\}}) = \varnothing$. \\
+    1) $\Rightarrow$ 4) Sea $x \in X^{\prime}$ y $N$ un entorno de $x$. Como $x \in \overline{X - \{x\}} \Rightarrow N \cap (X - \{x\}) \neq \varnothing$.
+  \end{proof}
+\end{prop}
+
+\begin{prop}
+  Si $X \subset \R^n \Rightarrow \overline{X} = X \cup X^{\prime}$.
+  \begin{proof}
+    Sea $X \subset \R^n$ sabemos que $X \subset \overline{X}$. Por otro lado si $x \in X^{\prime} \Rightarrow$ \\
+    Para cualquier entorno $N$ de $X$, $N \cap X \subset N \cap (\overline{X - \{x\}}) \neq \varnothing \Rightarrow$ \\
+    $x \in \overline{X} \Rightarrow X^{\prime} \subset \overline{X} \Rightarrow X \cup X^{\prime} \subset \overline{X}$. \\
+
+    Sea $x \in \overline{X}$ y supongamos que $x \notin X$. Para cada entorno $N$ de $X$ tenemos que $N \cap (X - \{x\}) = N \cap X \neq \varnothing \Rightarrow x \in X^{\prime}$, luego $\overline{X} \subset X \cup X^{\prime}$. \\
+    $\therefore \overline{X} = X \cup X^{\prime}$.
+  \end{proof}
+\end{prop}
+
+\begin{prop}
+  Sea $X \subset \R^n$. Un punto $x$ es punto de acumulación de $X \iff \forall$ entorno abierto de $X$ contiene infinitos elementos de $x$.
+  
+  \begin{proof}
+    $\Leftarrow$) Si todo entorno abierto de $x$ contiene infinitos elementos de $X$ entonces hay alguno distinto de $x$ y $x \in X^{\prime}$. \\
+    $\Rightarrow$) Sea $x \in X^{\prime}$ y $N$ un entorno abierto de $x \Rightarrow \exists r > 0 : B_r(x) \subset N$. \\
+    Construyamos una sucesión de puntos $(x_n)_{n \in N}$ pertenecientes a $N \cap X$ y tales que $d(x_n, x) > d(x_{n+1}, x) > 0, \forall n \in \N$. \\
+    $x_1 \neq x$, si $n > 0$ y ya elegimos $x_1, \cdots x_n : d(x_1, x) > \cdots > 0, \forall i \in \{1, \cdots, n-1\}$. Como $B_{d(x_n, x)}(x)$ es un entorno abierto de $x$ y $x \in X^{\prime}$ contiene algún punto distinto de $x$, lo llamo $x_{n+1}$. \\
+    Tenemos entonces que $d(x_n, x) > d(x_{n+1}, x) > 0 \Rightarrow$ los términos de la sucesión $(x_n)_{n \in N}$ son todos diferentes de $x$, distintos dos a dos y pertenecen a $B_r(x)$. \\
+    $\therefore (x_n)_{n \in \N} \subset N \cap X$ es infinito.
+  \end{proof}
+\end{prop}
+
+\begin{prop}
+  $X \subset \R^n, (X^{\prime})^{\prime} \subset X^{\prime}$.
+  \begin{proof}
+    $x \in (X^{\prime})^{\prime}$ y $N$ un entorno abierto de $x$. Sabemos que $N$ contiene un punto $y \in X^{\prime}$ distinto de $x$. Luego contiene infinitos puntos de $X \therefore x \in X^{\prime}$.
+  \end{proof}
+\end{prop}
+
+\begin{corollary}
+  El conjunto derivado de todo subconjunto de $\R^n$ es cerrado.
+  \begin{proof}
+    $\overline{X^{\prime}} = X^{\prime} \cup (X^{\prime})^{\prime} = X^{\prime} \therefore$ es cerrado.
+  \end{proof}
+\end{corollary}
+
+\begin{definition}[Conjunto perfecto]
+  $X \subset \R^n$ es un conjunto perfecto $\iff X = X^{\prime}$.
+\end{definition}
+
+\begin{definition}[Punto aislado]
+  $X \subset \R^n, x \in X$ es aislado en $X$ si $\exists N$ un entorno de $x : N \cap X = \{x\}$. 
+\end{definition}
+
+\begin{definition}[Conjunto discreto]
+  Un conjunto es discreto $\iff$ todos sus puntos son aislados.
+\end{definition}
+
+\begin{eg}
+  $Z \subset R$ es discreto.
+\end{eg}
 
 \section{Sucesiones en varias dimensiones}
 
+Decimos que una sucesión $(x_n)_{n \in \N} \subset \R^n$ converge a un punto $L \in \R^n$ si $(\forall \e > 0)(\exists n_0 \in \N) : \forall n > n_0, d(x_n, L) < \e$.
+
+\begin{lemma}
+  Si una sucesión tiene límite en $\R^n$ es único.
+  \begin{proof}
+    Supongamos que converge a $L$ y a $L^{\prime}$ con $L \neq L^{\prime} \Rightarrow$ \\
+    $(\forall \e > 0)(\exists n_0 \in \N) : (\forall n > n_0), d(x_n, L) < \e$ \\ 
+    $(\forall \e > 0)(\exists n_1 \in \N) : (\forall n > n_1), d(x_n, L^{\prime}) < \e$ \\
+    $d(L, L^{\prime}) \leq d(L, x_n) + d(x_n, L^{\prime}) \leq 2 \cdot \e, \forall n > max(n_0, n_1)$. \\
+    Sea $\e = d(L, L^{\prime})/2 \Rightarrow d(L, L^{\prime}) < d(L, L^{\prime})$ Absurdo!
+  \end{proof}
+\end{lemma}
+
+\begin{prop}
+  Sea $(x_n)_{n \in \N} \subset \R^n$ y $L \in \R^n$ son equivalentes:
+
+  \begin{enumerate}
+    \item $L = lim_{n \to \infty} x_n$
+    \item $\forall r > 0, \exists n_0 \in \N : \forall n > n_0, x_n \in B_r(L)$
+    \item $\forall$ entorno abierto $N$ de $L, \exists n_0 \in \N : \forall n > n_0, x_n \in N$
+    \item $\forall$ entorno $N$ de $L, \exists n_0 \in \N : \forall n > n_0, x_n \in N$ 
+  \end{enumerate}
+
+  \begin{proof}
+    4) $\Rightarrow$ 3) $\Rightarrow$ 2) $\Rightarrow$ 1) son inmediatos de la definición de límite. \\
+    1) $\Rightarrow$ 4) Sea $N$ un entorno de $L$. Como $L \in N^{\circ}, \exists r > 0 : B_r(L) \subset N^{\circ}$ y como $lim_{n \to \infty} x_n = L \Rightarrow \exists n_0 \in \N : \forall n > n_0, d(L, x_n) < r \Rightarrow$ \\
+    $x_n \in B_r(x), \forall n > n_0 \therefore x_n \in N, \forall n > n_0$.
+  \end{proof}
+\end{prop}
+
+\begin{prop}
+  Ejercicio: Demostrar las siguientes propiedades en $\R^n$.
+  \begin{enumerate}
+    \item Toda sucesión convergente es acotada.
+    \item Suma de sucesiones convergentes es convergente y el límite de la suma es la suma de los límites.
+    \item Si $(x_n)_{n \in \N} \subset \R^n$ y $(\lambda_n)_{n \in \N} \subset \R$ convergen $\Rightarrow (x_n \cdot \lambda_n)_{n \in \N} \to lim_{n \to \infty} x_n \cdot lim_{n \to \infty} \lambda_n$.
+  \end{enumerate}
+\end{prop}
+
+\begin{prop}
+  Sea $(x_n)_{n \in \N} \subset \R^n, x_i = (x_{i_1}, x_{i_2}, \cdots, x_{i_n}) \in \R^n$. Son equivalentes:
+  \begin{enumerate}
+    \item La sucesión converge en $\R^n$.
+    \item $\forall i \in \{1, \cdots, n\}, (x_{n_i})_{n \in \N}$ converge a $\R$.
+  \end{enumerate}
+  Si se cumplen y además $lim_{n \to \infty} = L$ y $lim_{n \to \infty} x_{n_i} = L_i, \forall i \in \{1, \cdots, n\} \Rightarrow L = (L_1, \cdots, L_n)$.
+  \begin{proof}
+    1) $\Rightarrow$ 2) Sea $L = lim_{n \to \infty} x_n$ y $L = (L_1, \cdots, L_n)$, si $i \in \{1, \cdots, n\}$ y $\e > 0, \exists n_0 : \forall n > n_0, d(x_n, L) < \e \Rightarrow$ \\
+    $\forall n > n_0, d(x_{n_i}, L_i) < \e \therefore lim_{n \to \infty} x_{n_i} = L_i$. \\
+    2) $\Rightarrow$ 1) Si $lim_{n \to \infty} x_{n_i} = L_i, \forall i \in \{1, \cdots, m\}$. Llamo $L = (L_1, \cdots, L_m)$. \\
+    Dado $\e > 0, \exists n_i \in \N : \forall n > n_i, d(x_{n_i}, L_i) < \dfrac{\e}{\sqrt{n}} \Rightarrow n_0 = max(n_1, \cdots, n_m)$ y $n > n_0$, $d(x_n, L) = (d(x_{n_1}, L_1)^2 + \cdots + d(x_{n_m}, L_m)^2) < (\dfrac{\e^2}{n} + \cdots + \dfrac{\e^2}{n})^{\frac{1}{2}} = \e$. \\
+    $\therefore lim_{n \to \infty} x_n = L$.
+  \end{proof}
+\end{prop}
+
 \section{Conjuntos compactos}
+
+\begin{theorem}
+  Un subconjunto $F \subset \R^n$ es cerrado $\iff$ si $(x_n)_{n \in \N} \subset F$ y $x_n \to x, x \in F$.
+  \begin{proof}
+    $\Rightarrow$) Sea $F \subset \R^n$ cerrado y supongamos que $\exists (x_n)_{n \in \N} \subset F$, $x_n \to L \in F^c$. Como $F^c$ es abierto, entonces $\exists r > 0 : B_r(X) \subset F^c \Rightarrow \exists n_0 \in \N : x_n \subset F^c, \forall n > n_0$. Absurdo pues $(x_n)_{n \in \N} \subset F$.
+
+    $\Leftarrow$) Si $F \subset \R^n$ no es cerrado $\exists x \in F^{\prime}$ y $x \notin F$. Como $x$ es punto de acumulación $\forall n > n_0 \in \N, B_{\frac{1}{n}}(x) \cap X \neq \varnothing$ y elijamos un punto $x_n$ allí. $(x_n)_{n \in \N} \subset F$ y $d(x_n, n) < \dfrac{1}{n}, \forall n > n_0 \therefore x_n \to x \notin F$.
+  \end{proof}
+\end{theorem}
+
+\begin{eg}
+  $(0, 1]$ no es cerrado pues $\dfrac{1}{n} \to 0$ y $\dfrac{1}{n} \in (0, 1], \forall n \in \N$.
+\end{eg}
+
+\begin{definition}[Relativamente compacto]
+  Un subconjunto $F \subset \R^n$ se dice relativamente compacto si toda sucesión en $F$ posee una subsucesión convergente.
+\end{definition}
+
+\begin{definition}[Compacto]
+  Un conjunto se dice compacto si además de ser relativamente compacto cumple que está acotado.
+\end{definition}
+
+\begin{prop}
+  Un subconjunto de $\R^n$ es relativamente compacto $\iff$ es acotado.
+  \begin{proof}
+    Sea $F \subset \R^n$ no acotado $\Rightarrow$ para cada $n \in \N, \exists y_n \in F : ||y_n|| > n$. \\
+    Si $f : \N \to \N$ es una función estrictamente creciente cualquiera entonces la sucesión $(y_{f(n)})_{n \in \N}$ de $(y_n)_{n \in \N}$ no es acotada, pues $||y_{f(n)}|| > f(n) \geq n$ y $\therefore$ no converge. Luego $F$ no es relativamente compacto. \\
+
+    Supongamos ahora que $F$ es acotado, digamos que $\exists k > 0 : F \subset B_k(0)$ y sea $(x_n)_{n \in N}$ una sucesión en $F$. \\
+    Para cada $m \in \N$, $x_m = (x_{m_1}, x_{m_2}, \cdots, x_{m_n})$. Si $L = \{1, \cdots, n\} \Rightarrow \forall m \in \N, ||x_{m_i}|| \leq ||x_m|| < k$, es decir que las sucesiones $(x_{m_1})_{m \in \N}, \cdots, (x_{m_n})_{m \in \N} \subset \R$ son acotadas. \\
+    En particular $\exists f: \N \to \N$ estrictamente creciente tal que la subsucesión $(x_{f(m)_1})_{m \in \N}$ converge. Es decir que $1$ es un elemento del conjunto $D$ de todos los $f \in \{1, \cdots, n\}$ con la propiedad: "Hay una función estrictamente creciente $f: \N \to \N : \forall i \in \{1, \cdots, f\}$ la sucesión $(x_{f(m)_i})_{m \in \N}$ converge". \\
+    Sea $k = maxD$ y $k < n$. Como $k \in D, \exists f: \N \to \N$ estrictamente creciente tal que $\forall i \in \{1, \cdots, k\}$ la sucesión $(x_{f(m)_i})_{m \in \N}$ converge. \\
+    Por otro lado $(x_{f(m)_{k+1}})_{m \in \N}$ es acotada $\Rightarrow$ Hay una función $g: \N \to \N$ estrictamente creciente tal que $(x_{g(f(m))_{k+1}})_{m \in \N}$ converge. \\
+    Entonces las $k+1$ sucesiones convergen y $g(f(m))$ generan subsucesiones que convergen a lo mismo. \\
+    Sea $h = g \circ f$ estrictamente creciente, entonces $k+1 \in D$ absurdo pues $k = maxD$. Luego $k = n \Rightarrow \exists f: \N \to \N$ estrictamente creciente tal que \\
+    $(x_{f(m)_1})_{m \in \N}, \cdots, (x_{f(m)_n})_{n \in \N}$ convergen $\therefore F$ es relativamente compacto.
+  \end{proof}
+\end{prop}

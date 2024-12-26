@@ -1,68 +1,68 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{\numberline {1}Clase I - 23/08 }{6}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Repaso de funciones}{6}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Propiedades}{6}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Función inversa}{7}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Composición de funciones}{7}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}Familia de funciones}{8}{subsection.1.1.4}%
-\contentsline {section}{\numberline {1.2}Números naturales}{8}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Cuerpo}{9}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Axiomas de la suma}{9}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Axiomas del producto}{9}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Cuerpos Ordenados}{10}{subsection.1.3.3}%
-\contentsline {chapter}{\numberline {2}Clase II - 27/08}{12}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Cuerpo Arquimediano}{12}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Supremo e ínfimo}{12}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Cuerpo completo}{14}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Cardinalidad - introducción}{15}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Clase III - 30/08}{18}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Conjuntos numerables}{18}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Cantor - Schröder - Bernstein}{19}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Los Reales son no numerables}{20}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Principio de encaje de Intervalos}{20}{subsection.3.3.1}%
-\contentsline {section}{\numberline {3.4}Propiedades}{21}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Clase IV - 03/09}{24}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Operaciones con cardinales}{24}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Hipótesis del continuo}{26}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Construcción de los Reales}{27}{section.4.3}%
-\contentsline {chapter}{\numberline {5}Clase V - 06/09}{29}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Construcción de los Reales}{29}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Cuerpo ordenado}{30}{section.5.2}%
-\contentsline {section}{\numberline {5.3}R tiene la propiedad del supremo}{31}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Clase VI - 10/09}{35}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Sucesiones}{35}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Propiedades de límites}{36}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Ejemplo subsucesiones}{37}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Punto de acumulación}{38}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Clase VII - 13/09}{41}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Límite superior e inferior}{41}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Sucesiones de Cauchy}{41}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Límites infinitos}{42}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Series numéricas}{43}{section.7.4}%
-\contentsline {chapter}{\numberline {8}Clase VIII - 24/09}{46}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Ejemplo de convergencia condicional}{46}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Corolarios de series}{46}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Criterios de convergencia}{47}{section.8.3}%
-\contentsline {subsection}{\numberline {8.3.1}Criterio de la raíz}{47}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Criterio del cociente y D'Alembert}{47}{subsection.8.3.2}%
-\contentsline {subsection}{\numberline {8.3.3}Criterio de Dirichlet - Abel}{49}{subsection.8.3.3}%
-\contentsline {section}{\numberline {8.4}Parte positiva y negativa}{50}{section.8.4}%
-\contentsline {section}{\numberline {8.5}Reordenamientos}{50}{section.8.5}%
-\contentsline {chapter}{\numberline {9}Clase IX - 27/09}{53}{chapter.9}%
-\contentsline {section}{\numberline {9.1}(Continuación) Reordenamientos}{53}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Topología Euclídea}{53}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Conjuntos abiertos}{54}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}Interior de un conjunto}{55}{subsection.9.2.2}%
-\contentsline {section}{\numberline {9.3}Entorno}{56}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Conjunto Cerrado}{57}{section.9.4}%
-\contentsline {subsection}{\numberline {9.4.1}Clausura}{57}{subsection.9.4.1}%
-\contentsline {chapter}{\numberline {10}Clase X - 01/10}{60}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Continuación - Clausura}{60}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Punto de acumulación}{60}{section.10.2}%
-\contentsline {section}{\numberline {10.3}Conjunto derivado}{60}{section.10.3}%
-\contentsline {section}{\numberline {10.4}Sucesiones en varias dimensiones}{60}{section.10.4}%
-\contentsline {section}{\numberline {10.5}Conjuntos compactos}{60}{section.10.5}%
-\contentsline {chapter}{\numberline {11}Clase XI - 04/10}{62}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Corolarios Conjuntos Compactos}{62}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Propiedades de límites}{62}{section.11.2}%
+\contentsline {chapter}{\numberline {1}Prefacio}{6}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Clase I - 23/08 }{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Repaso de funciones}{8}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Propiedades}{8}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Función inversa}{9}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Composición de funciones}{9}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Familia de funciones}{10}{subsection.2.1.4}%
+\contentsline {section}{\numberline {2.2}Números naturales}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Cuerpo}{11}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Axiomas de la suma}{11}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Axiomas del producto}{11}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Cuerpos Ordenados}{12}{subsection.2.3.3}%
+\contentsline {chapter}{\numberline {3}Clase II - 27/08}{14}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Cuerpo Arquimediano}{14}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Supremo e ínfimo}{14}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Cuerpo completo}{16}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Cardinalidad - introducción}{17}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Clase III - 30/08}{20}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Conjuntos numerables}{20}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Cantor - Schröder - Bernstein}{21}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Los Reales son no numerables}{22}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Principio de encaje de Intervalos}{22}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}Propiedades}{23}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Clase IV - 03/09}{26}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Operaciones con cardinales}{26}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Hipótesis del continuo}{28}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Construcción de los Reales}{29}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Clase V - 06/09}{31}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Construcción de los Reales}{31}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Cuerpo ordenado}{32}{section.6.2}%
+\contentsline {section}{\numberline {6.3}R tiene la propiedad del supremo}{33}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Clase VI - 10/09}{37}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Sucesiones}{37}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Propiedades de límites}{38}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Ejemplo subsucesiones}{39}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Punto de acumulación}{40}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Clase VII - 13/09}{43}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Límite superior e inferior}{43}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Sucesiones de Cauchy}{43}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Límites infinitos}{44}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Series numéricas}{45}{section.8.4}%
+\contentsline {chapter}{\numberline {9}Clase VIII - 24/09}{48}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Ejemplo de convergencia condicional}{48}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Corolarios de series}{48}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Criterios de convergencia}{49}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Criterio de la raíz}{49}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Criterio del cociente y D'Alembert}{49}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Criterio de Dirichlet - Abel}{51}{subsection.9.3.3}%
+\contentsline {section}{\numberline {9.4}Parte positiva y negativa}{52}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Reordenamientos}{52}{section.9.5}%
+\contentsline {chapter}{\numberline {10}Clase IX - 27/09}{55}{chapter.10}%
+\contentsline {section}{\numberline {10.1}(Continuación) Reordenamientos}{55}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Topología Euclídea}{55}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Conjuntos abiertos}{56}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}Interior de un conjunto}{57}{subsection.10.2.2}%
+\contentsline {section}{\numberline {10.3}Entorno}{58}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Conjunto Cerrado}{59}{section.10.4}%
+\contentsline {subsection}{\numberline {10.4.1}Clausura}{59}{subsection.10.4.1}%
+\contentsline {chapter}{\numberline {11}Clase X - 01/10}{62}{chapter.11}%
+\contentsline {section}{\numberline {11.1}(Continuación) Clausura}{62}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Punto de acumulación}{62}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Sucesiones en varias dimensiones}{64}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Conjuntos compactos}{66}{section.11.4}%
+\contentsline {chapter}{\numberline {12}Clase XI - 04/10}{69}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Corolarios Conjuntos Compactos}{69}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Propiedades de límites}{69}{section.12.2}%
 \contentsfinish 

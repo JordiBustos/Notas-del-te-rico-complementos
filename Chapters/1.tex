@@ -128,8 +128,10 @@ La suma se define como $m+1 = S(m)$, $m+S(n) = S(m+n)$.
 \begin{prop}
     Asociatividad: sea $X = \{ p \in \N : m+(n+p) = (m+n) +p, \forall n,m \in \N \}$.
     \begin{proof}
-        $1 \in X$, $p \in X \Rightarrow m + (n+S(p)) = m + S(n+p) = S(m +(n+p)) = S((n+m)+p) = (m+n) + S(p)$.
-        Por inducción $X = \N$.
+        $1 \in X$, $p \in X \Rightarrow$ \begin{equation}
+          m + (n+S(p)) = m + S(n+p) = S(m +(n+p)) = S((n+m)+p) = (m+n) + S(p)
+        \end{equation}
+        $\therefore$ Por inducción $X = \N$.
     \end{proof}
 \end{prop}
 
@@ -151,8 +153,7 @@ La suma se define como $m+1 = S(m)$, $m+S(n) = S(m+n)$.
     Cumple la asociatividad, conmutatividad, ley de cancelación y monotonía.
 \end{definition}
 
-\begin{theorem}
-    Principio de buena ordenación \\
+\begin{theorem}[Principio de buena ordenación]
     Todo subconjunto no vacío $A \subset \N$ tiene un elemento mínimo.
     \begin{proof}
         Llamemos $\mathbb{I}_m = \{ p \in \N : 1 \leq p \leq n \} = [[ 1, m ]]$ y $X = \{ m \in \N : \mathbb{I}_m \subset \N - A \}$. \\

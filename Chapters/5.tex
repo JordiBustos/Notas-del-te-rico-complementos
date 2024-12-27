@@ -29,7 +29,7 @@
     $S = [(a_n)]$ sabemos que $S \notin \tilde{0}$, o sea $a_n \not \to 0$. Podría pasar que algunos de los terminos de $(a_n)_{n \in \N}$ si sean $0$, lo que pasa es que $a_n \neq 0.$ para $n$ lo suficiente grande. \\
     Como $a_n \not \to 0$, $\exists \e_1 > 0, \exists$ infinitos valores de $M: |a_M - 0| > \e_1$, si $\e = \dfrac{\e_1}{2}$, como $(a_n)_{n \in \N}$ es de cauchy, $\exists n : |a_n - a_m| < \dfrac{\e}{2}, \forall n, m > n_0$. \\
     Si $M > n_0$ (puedo porque son infinitos) $: |a_M| > \e_1 \Rightarrow |a_m - a_M| < \dfrac{\e_1}{2}, \forall m > n_0$. \\
-    $-\e_1/2 < a_n - a_m < \e_1 / 2$ o $-\e_1 / 2 < a_m - a_n < \e_1 / 2$. \\ 
+    $-\e_1/2 < a_n - a_m < \e_1 / 2$ o $-\e_1 / 2 < a_m - a_n < \e_1 / 2$. \\
     Si $a_M > 0 \Rightarrow \dfrac{\e_1}{2} < a_M - \dfrac{\e_1}{2} < a_n < a_M + \dfrac{\e_1}{2}, \forall n > n_0$. \\
     Si $a_M < 0$, $\dfrac{\e_1}{2} < -a_M - \dfrac{\e_1}{2} < -a_n<-a_m+ \dfrac{\e_1}{2} \Rightarrow a_n < -\dfrac{\e_1}{2}, \forall n > n_0$. \\
     O sea que $\forall n > n_0, a_n$ tiene el mismo signo que $a_M$ en particular $a_n \neq 0, \forall n > n_0$. \\
@@ -37,14 +37,14 @@
     $S = [(a_n)] \neq 0$ por lo anterior $\exists n_0 : a_n \neq 0, \forall n > n_0$. \\
     Sea $(b_n)_{n \in \N} \subset \Q$ como \\
     $b_n = \begin{cases}
-      0 & \text{si } n < n_0, \\ 
-      \dfrac{1}{a_n} & \text{si } n > n_0.
-    \end{cases} \Rightarrow$ \\
+        0              & \text{si } n < n_0, \\
+        \dfrac{1}{a_n} & \text{si } n > n_0.
+      \end{cases} \Rightarrow$ \\
 
     $a_n b_n = \begin{cases}
-      0 & \text{si } n < n_0, \\
-      1 & \text{si } n > n_0,
-    \end{cases} \Rightarrow$ \\
+        0 & \text{si } n < n_0, \\
+        1 & \text{si } n > n_0,
+      \end{cases} \Rightarrow$ \\
 
     $(1, 1, \cdots) - (a_n \cdot b_n)_{n \in \N} \to 0 \therefore [(a_n b_n)] = [(1, 1, \cdots)]$, es decir $t = [(b_n)]$ cumple que $t \cdot s = 1$.
   \end{proof}
@@ -53,7 +53,7 @@
 \section{Cuerpo ordenado}
 
 Para probrar que $\R$ es un cuerpo ordenado bajo esta definición hay que definir qué es ser positivo. \\
-Sea $s \in \R$ decimos que $s$ es positivo si $s \neq 0$ y $s = [(a_n)]$ tal que $a_n > 0 \forall n > n_0$. O sea, todos los terminos son positivos a partir de un punto. 
+Sea $s \in \R$ decimos que $s$ es positivo si $s \neq 0$ y $s = [(a_n)]$ tal que $a_n > 0 \forall n > n_0$. O sea, todos los terminos son positivos a partir de un punto.
 
 \begin{definition}
   Decimos que $s > t$ si $s-t > 0$.
@@ -158,7 +158,7 @@ Como $s_0 < M$ es fácil ver que $(u_n)_{n \in \N}$ es decreciente y que $(l_n)_
     $u_2 - l_2 = \dfrac{1}{2} (u_1 - l_1) = (\dfrac{1}{2})² (u - s)$ \\
     \vdots \\
     $u_n - l_n = (\dfrac{1}{2})^n (M - s)$ \\
-    
+
     Por arquimedianidad de $\R, \forall \epsilon > 0, \dfrac{1}{2^n} (M - s) < \e, \forall n > n_0 \Rightarrow$ \\
     $u_n - l_n \to 0 \therefore$ $l_n \to u$, pues $u_n \to u$.
   \end{proof}
@@ -171,7 +171,7 @@ Como $s_0 < M$ es fácil ver que $(u_n)_{n \in \N}$ es decreciente y que $(l_n)_
 
     2) Veamos que es la menor de las cotas superiores. \\
     Sabemos que $l_n$ no es cota superior de $S$, así que $(\forall n \in \N)(\exists s_n \in S) : l_n \leq s_n$. Como $l_n \to u$ y $l_n$ es creciente $\Rightarrow$ \\
-    $\forall \e > 0, \exists n_0 : l_n > u - \e, \forall n>n_0 \Rightarrow s_n \geq l_n > u - \e, \forall n > n_0$. Es decir que para todo $\e > 0$ tengo un $s_n$ más grande en $S \therefore u$ es la menor de las cotas superiores.   
+    $\forall \e > 0, \exists n_0 : l_n > u - \e, \forall n>n_0 \Rightarrow s_n \geq l_n > u - \e, \forall n > n_0$. Es decir que para todo $\e > 0$ tengo un $s_n$ más grande en $S \therefore u$ es la menor de las cotas superiores.
   \end{proof}
 \end{theorem}
 

@@ -6,11 +6,13 @@
 
 \theoremstyle{definition}
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{black!70!black}, bodyfont=\normalfont,
+    headfont=\bfseries\sffamily\color{magenta!80!black}, bodyfont=\normalfont,
     mdframed={
         linewidth=2pt,
-        rightline=true, topline=false, bottomline=false,
-        linecolor=black, backgroundcolor=black!3!white,
+        rightline=true, topline=true, bottomline=true,
+        linecolor=gray!50, backgroundcolor=gray!5,
+        innertopmargin=10pt, innerbottommargin=10pt, innerrightmargin=10pt, innerleftmargin=10pt,
+        roundcorner=6pt,
     }
 ]{thmbox}
 
@@ -18,19 +20,23 @@
     headfont=\bfseries\sffamily\color{black!3}, bodyfont=\normalfont,
     mdframed={
         linewidth=2pt,
-        rightline=false, topline=false, bottomline=false,
-        linecolor=black, backgroundcolor=black!3!white,align=center,
+        rightline=false, topline=true, bottomline=true,
+        linecolor=gray!50, backgroundcolor=gray!5,
+        innertopmargin=10pt, innerbottommargin=10pt, innerrightmargin=10pt, innerleftmargin=10pt,
+        roundcorner=6pt,
+        align=center,
     }
 ]{thmtikz}
 
-
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{black!70!black}, bodyfont=\normalfont,
+    headfont=\bfseries\sffamily\color{magenta!80!black}, bodyfont=\normalfont,
     numbered=no,
     mdframed={
         linewidth=0pt,
-        rightline=false, topline=false, bottomline=false,
-        linecolor=black, backgroundcolor=black!2!white,
+        rightline=false, topline=true, bottomline=true,
+        linecolor=gray!20, backgroundcolor=gray!2,
+        innertopmargin=10pt, innerbottommargin=10pt, innerrightmargin=10pt, innerleftmargin=10pt,
+        roundcorner=6pt,
     },
     qed=\qedsymbol
 ]{thmproofbox}

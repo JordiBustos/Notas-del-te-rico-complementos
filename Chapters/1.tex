@@ -1,6 +1,7 @@
 \section{Repaso de funciones}
 
-Una función $f: A \to B$ es un objeto que consta de tres partes: un conjunto $A$ (dominio), un conjunto $B$ (codominio) y una regla que permite asociar todo elemento de $A$ a un único elemento de $B$. Es decir, $f(x) \in B$, donde $x \in A$. Además, $f(x) = y$, lo que significa que $f$ asigna a $x$ el valor $f(x)$.\\
+Una función $f: A \to B$ es un objeto que consta de tres partes: un conjunto $A$ (dominio), un conjunto $B$ (codominio) y una regla que permite asociar todo elemento de $A$ a un único elemento de $B$. Es decir, $f(x) \in B$, donde $x \in A$.
+Además, $f(x) = y$, lo que significa que $f$ asigna a $x$ el valor $f(x)$.
 
 El gráfico de $f: A \to B$ es el subconjunto de $A \times B$ dada por $(x, f(x))$ con $x \in A$ y $f(x) \in B$.\\
 Notamos $G(f) = \{ (x, y) \in A \times B : y = f(x) \}$.
@@ -31,13 +32,13 @@ Notamos $G(f) = \{ (x, y) \in A \times B : y = f(x) \}$.
     $f(X \cap Y) \subset f(X) \cap f(Y)$. La igualdad vale si y sólo si es inyectiva.
     \begin{proof}
         Sea $a \in f(X \cap Y) \Rightarrow $ $\exists x \in X \cap Y : f(x) = b \Rightarrow$ $ x \in X \Rightarrow f(x) \in f(X) $ y $ y \in Y \Rightarrow f(y) \in f(Y). $ \\ Si $f: A \to B$ no es inyectiva $\Rightarrow \exists x \neq y : f(x) = f(y)$. Si $X = \{x\}$, $Y = \{y\}$ $\Rightarrow X \cap Y = \varnothing$. $f(X) \cap f(Y) = \{f(x)\}$ luego $f(X \cap Y) = \varnothing$. \\ Si $f$ es inyectiva, sea $y \in f(X) \cap f(Y) \Rightarrow \exists a \in X, b \in Y$ tal que $f(a) = f(b) = y$. Como $f$ es inyectiva $a = b \Rightarrow a \in X \cap Y \Rightarrow y = f(a)$, $y \in f(X \cap Y) \Rightarrow f(X) \cap f(Y) \subset f(X \cap Y) \\
-        \therefore$ Si $f$ es inyectiva son iguales.
+            \therefore$ Si $f$ es inyectiva son iguales.
     \end{proof}
 \end{prop}
 
 
 \begin{prop}
-    $X \subset Y \Rightarrow f(X) \subset f(Y)$ 
+    $X \subset Y \Rightarrow f(X) \subset f(Y)$
 \end{prop}
 
 \begin{prop}
@@ -81,7 +82,7 @@ Sea $f: A \to B$:
 Sean $f: A \to B$ y $g: B \to C$, definimos $g \circ f: A \to C$ como $(g \circ f)(x) = g(f(x)) \forall x \in X$, es suficiente que $f(A) \subset B$.
 
 \begin{prop}
-    Composición de funciones suryectivas/inyectivas es suryectiva/inyectiva.
+    Composición de funciones suryectivas/inyectivas es \\ suryectiva/inyectiva.
 \end{prop}
 
 \begin{prop}
@@ -94,35 +95,35 @@ Sean $f: A \to B$ y $g: B \to C$, definimos $g \circ f: A \to C$ como $(g \circ 
 
 \begin{definition}
     Dada $f: A \to B$ y $g: B \to A$, $g$ es una inversa a izquierda si y sólo si $g \circ f = id_A$. $\exists g$ si y sólo si $f$ es inyectiva. \\
-    Análoamente para la inversa a derecha si $f$ es suryectiva. 
+    Análoamente para la inversa a derecha si $f$ es suryectiva.
     Si $f$ es biyectiva $\Rightarrow g$ es inversa a ambos lados y es única.
 \end{definition}
 
 \subsection{Familia de funciones}
 
-Sea $L$ un conjunto de elementos que llamamos índices y representamos genéricamente con $\lambda$. \\
-
-Dado un conjunto X, una familia de elementos de X con índices en $L$ es $X: L \to x$. El valor de $x$ en $\lambda \in L$ lo notamos $x_\lambda$ y la familia $(x_\lambda)_{\lambda \in L}$. \\
+Sea $L$ un conjunto de elementos que llamamos índices y representamos genéricamente con $\lambda$. Dado un conjunto X, una familia de elementos de X con índices en $L$ es $X: L \to x$.
+El valor de $x$ en $\lambda \in L$ lo notamos $x_\lambda$ y la familia $(x_\lambda)_{\lambda \in L}$.
 
 \begin{eg}
     $L = \{ 1, 2 \}$ los valores de $x: \{1, 2\} \to X$ se representan por $x_1, x_2$, es decir que los puedo identificar con pares ordenados $(x_1, x_2)$ de elementos de $X$.
 \end{eg}
 
-Una familia con elementos en $\N$ se llama sucesión. $(x_n)_{n \in \N}$ de elementos de $X$ es una función de $x: \N \to X$ donde $x_n = x(n)$. \\
+Una familia con elementos en $\N$ se llama sucesión. $(x_n)_{n \in \N}$ de elementos de $X$ es una función de $x: \N \to X$ donde $x_n = x(n)$.
 
 Las propiedades enunciadas previamente se pueden extender a cualquier familia de conjuntos.
 
 \section{Números naturales}
 
 Partimos de un conjunto $\N$ y una función $S: \N \to \N$ que cumple los siguientes axiomas (de Peano):
-
-1) Es inyectiva. \\
-2) $\N - S(\N)$ tiene un solo elemento y lo llamamos 1. \\
-3) Principio de inducción, si $X \subset \N$ tal que $1 \in X$ y $\forall m \in X$ vale $S(m) \Rightarrow X = \N$. \\
+\begin{enumerate}
+    \item Es inyectiva.
+    \item $\N - S(\N)$ tiene un solo elemento y lo llamamos 1.
+    \item Principio de inducción, si $X \subset \N$ tal que $1 \in X$ y $\forall m \in X$ vale $S(m) \Rightarrow X = \N$.
+\end{enumerate}
 
 El principio de inducción permite definir operaciones
 
-La suma se define como $m+1 = S(m)$, $m+S(n) = S(m+n)$. 
+La suma se define como $m+1 = S(m)$, $m+S(n) = S(m+n)$.
 
 \begin{prop}
     Asociatividad: sea $X = \{ p \in \N : m+(n+p) = (m+n) +p, \forall n,m \in \N \}$.
@@ -157,14 +158,14 @@ La suma se define como $m+1 = S(m)$, $m+S(n) = S(m+n)$.
         Llamemos $\mathbb{I}_m = \{ p \in \N : 1 \leq p \leq n \} = [[ 1, m ]]$ y $X = \{ m \in \N : \mathbb{I}_m \subset \N - A \}$. \\
         Si $1 \in A \Rightarrow 1$ es primer elemento.
         Si $1 \notin A \Rightarrow 1 \in X$ como $X \neq \N$ pues $X \subseteq \N - A$ y $A \neq \varnothing$.
-        Por el principio de inducción $\exists m \in X$ tal que $m+1 \notin X$, si no tendríamos que $X = \N$. Luego todos los elementos entre $1$ y $m$ están en $\N - A$ y $m+1 \in A$, se sigue que $a = m+1$ es primer elemento de A. 
+        Por el principio de inducción $\exists m \in X$ tal que $m+1 \notin X$, si no tendríamos que $X = \N$. Luego todos los elementos entre $1$ y $m$ están en $\N - A$ y $m+1 \in A$, se sigue que $a = m+1$ es primer elemento de A.
     \end{proof}
 \end{theorem}
 
 
 \section{Cuerpo}
 
-Un cuerpo es un conjunto dotado de dos operaciones, suma y producto y se denota por $\mathbb{K}$. 
+Un cuerpo es un conjunto dotado de dos operaciones, suma y producto y se denota por $\mathbb{K}$.
 
 \subsection{Axiomas de la suma}
 
@@ -174,7 +175,7 @@ Un cuerpo es un conjunto dotado de dos operaciones, suma y producto y se denota 
 
 3) Neutro: $\exists 0 \in \mathbb{K} :x+0 = x, \forall x \in X$.
 
-4) Opuesto: $\forall x \in X, \exists -x \in \mathbb{K} : x +(-x) = 0_\mathbb{K}$. 
+4) Opuesto: $\forall x \in X, \exists -x \in \mathbb{K} : x +(-x) = 0_\mathbb{K}$.
 
 \subsection{Axiomas del producto}
 
@@ -184,21 +185,21 @@ Un cuerpo es un conjunto dotado de dos operaciones, suma y producto y se denota 
 
 3) Neutro: $\exists 1 \in \mathbb{K}-\{0\} :x \cdot 1 = x, \forall x \in X$.
 
-4) Inverso: $\forall x \in X, \exists x^{-1} \in \mathbb{K} : x \cdot x^{-1} = 1_\mathbb{K}$. 
+4) Inverso: $\forall x \in X, \exists x^{-1} \in \mathbb{K} : x \cdot x^{-1} = 1_\mathbb{K}$.
 
 Axioma de distributividad: $\forall x,y,z \in \mathbb{K}, x(y+z)=xy+xz$.
 
 \begin{eg}
     $\Q, \Z_2$.
-\end{eg} 
+\end{eg}
 
 \subsection{Cuerpos Ordenados}
 
-Un cuerpo ordenado es un cuerpo $\mathbb{K}$ que tiene un subconjunto $P \in \mathbb{K}$ llamado conjunto de elementos positivos de $\mathbb{K}$ que cumplen: \\
-
-1) $x,y \in P \Rightarrow x+y \in P, xy \in P$.
-
-2) $x \in \mathbb{K} \Rightarrow x \in P$ o $-x \in P$ o $x=0$. \\
+Un cuerpo ordenado es un cuerpo $\mathbb{K}$ que tiene un subconjunto $P \in \mathbb{K}$ llamado conjunto de elementos positivos de $\mathbb{K}$ que cumplen:
+\begin{enumerate}
+    \item $x,y \in P \Rightarrow x+y \in P, xy \in P$.
+    \item $x \in \mathbb{K} \Rightarrow x \in P$ o $-x \in P$ o $x=0$.
+\end{enumerate}
 
 \begin{eg}
     $\Q$ con $P = \{ p/q:p,q\in \N \}$, $\Z_2$ no es ordenado.
@@ -213,7 +214,7 @@ En un cuerpo ordenado definimos $x<y$ para significar que $y-x\in P$.
 La relación $<$ tiene las siguientes propiedades:
 
 \begin{prop}
-    Transitividad: $x<y$ y $y<z \Rightarrow x<z$. 
+    Transitividad: $x<y$ y $y<z \Rightarrow x<z$.
 \end{prop}
 
 \begin{prop}

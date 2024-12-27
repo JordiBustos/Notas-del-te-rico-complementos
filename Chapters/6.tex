@@ -18,11 +18,11 @@ Una subsucesión de $x$ es la restricción de $x$ a un subconjunto infinito $A =
   Si $lim_{n \to \infty} x_n = a$ y $lim_{n \to \infty} x_n = b \Rightarrow a=b$
   \begin{proof}
     Supongamos que $a \neq b$. Tomemos $\e = \dfrac{|b-a|}{2} > 0$. \\
-    $(a - \e, a+\e) \cap (b-\e, b+\e) = \varnothing$. En efecto si 
+    $(a - \e, a+\e) \cap (b-\e, b+\e) = \varnothing$. En efecto si
     $x$ pertenece a la intersección entonces $|x-a| < \e$ y $|x-b| < \e \Rightarrow$ \\
     $|b-a| \leq |a-x| + |x-b| < \e + \e = 2 \e = |b-a|$ Absurdo!
     Como $lim_{n \to \infty} x_n = a \Rightarrow \exists n_0 : x_n \in (a - \e, a+ \e), \forall n > n_0 \Rightarrow$ \\
-    $x_n \notin (b-\e, b+\e), \forall n > n_0 \therefore lim_{n \to \infty} x_n \neq b$ pues vimos que son disjuntos. 
+    $x_n \notin (b-\e, b+\e), \forall n > n_0 \therefore lim_{n \to \infty} x_n \neq b$ pues vimos que son disjuntos.
   \end{proof}
 \end{theorem}
 
@@ -103,7 +103,7 @@ Sea $lim_{n \to \infty} x_n = a$ y $lim_{n \to \infty} y_n = b$.
   \begin{proof}
     $x_n \cdot y_n - ab = x_n \cdot y_n - x_n \cdot b + x_n \cdot b - a \cdot b = x_n \cdot (y_n - b) + b \cdot (x_n - a)$. \\
     Como $y_n - b \to 0$ y $x_n$ es acotada, pues es convergente $\Rightarrow x_n \cdot (y_n-b) \to 0$.
-    Además $x_n - a \to 0 \Rightarrow b(x_n - a) \to 0 \Rightarrow x_n \cdot y_n = a \cdot b$. 
+    Además $x_n - a \to 0 \Rightarrow b(x_n - a) \to 0 \Rightarrow x_n \cdot y_n = a \cdot b$.
   \end{proof}
 \end{prop}
 
@@ -126,8 +126,8 @@ Sea $lim_{n \to \infty} x_n = a$ y $lim_{n \to \infty} y_n = b$.
   $x_n = \sqrt[n]{a}, \ a > 0$. \\
   $(x_n)_{n \in \N}$ es monótona (decreciente si $a > 1$, creciente si $0 < a < 1$) y acotada $0 < l = \lim_{n \to \infty} \sqrt[n]{a}$. \\
   Para ver que $l = 1$, considero la subsucesión $(a^{\frac{1}{n(n+1)}})_{n \in \N}$ convergente a $l$. \\
-  $l = \lim_{n \to \infty} a^{\frac{1}{n(n+1)}} = \lim_{n \to \infty} a^{\frac{1}{n} - \frac{1}{n+1}} = 
-  \frac{\lim_{n \to \infty} a^{\frac{1}{n}}}{\lim_{n \to \infty} a^{\frac{1}{n+1}}} = \frac{l}{l} = 1.$ \\
+  $l = \lim_{n \to \infty} a^{\frac{1}{n(n+1)}} = \lim_{n \to \infty} a^{\frac{1}{n} - \frac{1}{n+1}} =
+    \frac{\lim_{n \to \infty} a^{\frac{1}{n}}}{\lim_{n \to \infty} a^{\frac{1}{n+1}}} = \frac{l}{l} = 1.$ \\
   $\therefore l = 1$.
 \end{eg}
 
@@ -147,7 +147,7 @@ Sea $lim_{n \to \infty} x_n = a$ y $lim_{n \to \infty} y_n = b$.
   Dado $a \in \R$ es el límite de $(x_n)_{n \in \N} \iff \forall \e > 0$ el conjunto $\{ n \in \N : x_n \in (a - \e, a + \e) \}$ tiene complemento finito (o vacío) en $\N$.
 \end{note}
 
-Vamos a ver que $a \in \R$ es el límite de alguna subsucesión de $(x_n)_{n \in \N} \iff \forall \e > 0$ el conjunto $\{ n \in \N : x_n \in (a - \e, a + \e) \}$ es subconjunto infinito de $\N$ 
+Vamos a ver que $a \in \R$ es el límite de alguna subsucesión de $(x_n)_{n \in \N} \iff \forall \e > 0$ el conjunto $\{ n \in \N : x_n \in (a - \e, a + \e) \}$ es subconjunto infinito de $\N$
 \begin{theorem}
   $a \in \R$ es el límite de alguna subsucesión de $(x_n)_{n \in \N} \iff \forall \e > 0, \exists$ infinitos índices $n : x_n \in (a-\e, a+\e)$.
   \begin{proof}
@@ -175,7 +175,7 @@ Vamos a ver que $a \in \R$ es el límite de alguna subsucesión de $(x_n)_{n \in
   $\alpha \leq a_1 \leq a_2 \leq \cdots \leq a_n \leq \cdots \leq b_n \leq \cdots \leq \cdots \leq b_2 \leq b_1 \leq \beta \Rightarrow$. \\
   $\exists a = lim_{n \to \infty} a_n = sup(a_n)_{n \in \N} = sup(inf(X_n)_{n \in \N})$. \\
   $b = lim_{n \to \infty} b_n = inf(b_n)_{n \in \N} = inf(sup(X_n)_{n \in \N})$. \\
-  
+
   $a$ se llama el límite inferior de la sucesión $(x_n)_{n \in \N}$. \\
   $a = \liminf_{n \to \infty} x_n$. \\
 

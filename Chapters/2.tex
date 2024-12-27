@@ -1,6 +1,6 @@
 \section{Cuerpo Arquimediano}
 
-Si $\mathbb{K}$ es un cuerpo ordenado, $\N \subset \Z \subset \Q \subset \mathbb{K}$, pero esto no necesariamente implica que $\N$ es no acotado. 
+Si $\mathbb{K}$ es un cuerpo ordenado, $\N \subset \Z \subset \Q \subset \mathbb{K}$, pero esto no necesariamente implica que $\N$ es no acotado.
 
 \begin{eg}
     $\Q(t):$ cuerpo de funciones racionales con coeficientes en $\Q$, $r(t) = p(t)/q(t)$, $p, q \in \Q, q \neq 0$. Este cuerpo puede ser ordenado diciendo que $r(t)$ es positivo si y sólo si el coeficiente de mayor grado del polinomio $pq$ es positivo.
@@ -9,7 +9,7 @@ Si $\mathbb{K}$ es un cuerpo ordenado, $\N \subset \Z \subset \Q \subset \mathbb
 
 \begin{theorem}
     En un cuerpo ordenado $\mathbb{K}$ son equivalentes: \\
-    1) $\N \subset \mathbb{K}$ no es acotado superiormente. \\ 
+    1) $\N \subset \mathbb{K}$ no es acotado superiormente. \\
     2) Dados $a, b \in \mathbb{K}$ con $a>0, \exists n \in \N:m \cdot a>b$. \\
     3) Dado cualquier $0<a \in \mathbb{K}, \exists n \in \N : 0 < \dfrac{1}a < a$. \\
     Cuando vale cualquiera decimos que $\mathbb{K}$ es arquimediano.
@@ -23,7 +23,6 @@ Si $\mathbb{K}$ es un cuerpo ordenado, $\N \subset \Z \subset \Q \subset \mathbb
     \end{proof}
 \end{theorem}
 
-
 \section{Supremo e ínfimo}
 
 \begin{definition}
@@ -33,9 +32,9 @@ Si $\mathbb{K}$ es un cuerpo ordenado, $\N \subset \Z \subset \Q \subset \mathbb
 Es decir, se cumple:
 
 \begin{enumerate}
-  \item $\forall x \in X, x \leq b$
-  \item Si $c \in \mathbb{K}$ y $x \leq c$, $\forall x \in X \Rightarrow b \leq c$.
-  \item Dado $c < b$ en $\mathbb{K}, \exists x \in X : c<x$
+    \item $\forall x \in X, x \leq b$
+    \item Si $c \in \mathbb{K}$ y $x \leq c$, $\forall x \in X \Rightarrow b \leq c$.
+    \item Dado $c < b$ en $\mathbb{K}, \exists x \in X : c<x$
 \end{enumerate}
 
 \begin{note}
@@ -51,9 +50,9 @@ Es decir, se cumple:
 Es decir, se cumple:
 
 \begin{enumerate}
-  \item $\forall x \in X, x \geq b$
-  \item Si $c \in \mathbb{K}$ y $x \geq c$, $\forall x \in X \Rightarrow b \geq c$. 
-  \item Dado $c > b$ en $\mathbb{K}, \exists x \in X : b < x < c$.
+    \item $\forall x \in X, x \geq b$
+    \item Si $c \in \mathbb{K}$ y $x \geq c$, $\forall x \in X \Rightarrow b \geq c$.
+    \item Dado $c > b$ en $\mathbb{K}, \exists x \in X : b < x < c$.
 \end{enumerate}
 
 \begin{eg}
@@ -64,33 +63,37 @@ Es decir, se cumple:
 \end{eg}
 
 \begin{eg}
-    $Y = \{ y \in \Q : y=\dfrac{1}{2^n}, n\in \N \}$. Veamos que $inf(Y) =0, sup(Y) = \dfrac12$. \\
-    $\dfrac{1}{2} \in Y, \dfrac{1}{2^n}<\dfrac{1}{2} \forall n \in \N \Rightarrow \dfrac{1}{2} = sup(Y)$. \\
-    
-    Como $0 < \dfrac{1}{2^n} \forall n \in \N \Rightarrow 0$ es cota inferior. Sea $0<c \in \mathbb{K}$, $2^n = (1+1)^n \leq 1+n \leq \dfrac{1}{c} \Rightarrow n \leq \dfrac{1}{c} -1 \Rightarrow \dfrac{1}{2^n} < c \Rightarrow c$ no puede ser cota inferior por la propiedad 3 de la arquimedianidad $\therefore 0$ es el ínfimo de $Y$. 
+    Sea $Y = \{ y \in \Q : y=\dfrac{1}{2^n}, n\in \N \}$. Veamos que $inf(Y) =0, sup(Y) = \dfrac{1}{2}$.
+    \begin{equation}
+        \dfrac{1}{2} \in Y, \dfrac{1}{2^n}<\dfrac{1}{2} \forall n \in \N \Rightarrow \dfrac{1}{2} = sup(Y)
+    \end{equation}
+
+    Como $0 < \dfrac{1}{2^n} (\forall n \in \N) \Rightarrow 0$ es cota inferior.
+    Sea
+    \begin{equation}
+        0 < c \in \mathbb{K}, 2^n = (1+1)^n \leq 1+n \leq \dfrac{1}{c} \Rightarrow n \leq \dfrac{1}{c} -1 \Rightarrow \dfrac{1}{2^n} < c
+    \end{equation}
+    $\Rightarrow c$ no puede ser cota inferior por la propiedad 3 de la arquimedianidad $\therefore 0$ es el ínfimo de $Y$.
 \end{eg}
 
 El problema más serio de los racionales desde el punto de vista del análisis es que algunos conjuntos acotados de números racionales no tienen súpremo (o ínfimo) en $\Q$.
 
 \begin{eg}
-    Sean $X = \{ X \in \Q : x \geq 0, x² < 2 \}$,
-    $Y \{ y \in \Q : y>0, y² > 2 \}$. Notemos que si $z>2 \Rightarrow z² > 4 \Rightarrow z \notin X \Rightarrow X \subset [0, 2]$ y $X$ es un conjunto acotado. Además $Y \subset (0, +\infty)$ por lo que es un conjunto acotado inferiormente. Veamos que $\nexists$ supremo e ínfimo en $\Q$. \\
-    
-    1) Quiero ver que $X$ no tiene máximo. Dado $x \in X$ quiero encontrar $r \in \Q$ tal que $0<r<1$ y $x+r \in X \iff (x+r)² =x^2+2xr+r² < 2$. Como $r<1 \Rightarrow (x+r)²<x²+2xr+r=x²+r(2x+1)<2 \therefore x+r \in X$. \\
-    2) Quiero ver que $Y$ no tiene elemento mínimo, dado $y \in Y$ tomo $r \in \Q : 0 < r < \dfrac{y²-2}{2y}$
-    \begin{equation}
-        (y-r)²=y²-2yr+r²>y²-2yr>2
-    \end{equation}
-    \begin{equation}
-        y²-2 > 2yr
-    \end{equation}
-    \begin{equation}
-        \dfrac{y²-2}{2y}>r
-    \end{equation}
-    Es decir que $y-r \in Y$ e $y-r < y$ \\
-    
-    3) Si $x \in X, y \in Y \Rightarrow x < y$
-    $x² < 2 < y² \Rightarrow x² < y²$. \\
+    Sean $X = \{ X \in \Q : x \geq 0, x² < 2 \}, Y \{ y \in \Q : y>0, y² > 2 \}$. Notemos que si $z>2 \Rightarrow z² > 4 \Rightarrow z \notin X \Rightarrow X \subset [0, 2]$ y $X$ es un conjunto acotado. Además $Y \subset (0, +\infty)$ por lo que es un conjunto acotado inferiormente. Veamos que $\nexists$ supremo e ínfimo en $\Q$. \begin{enumerate}
+        \item Quiero ver que $X$ no tiene máximo. Dado $x \in X$ quiero encontrar $r \in \Q$ tal que $0<r<1$ y $x+r \in X \iff (x+r)² =x^2+2xr+r² < 2$. Como $r<1 \Rightarrow (x+r)²<x²+2xr+r=x²+r(2x+1)<2 \therefore x+r \in X$.
+        \item Quiero ver que $Y$ no tiene elemento mínimo, dado $y \in Y$ tomo $r \in \Q : 0 < r < \dfrac{y²-2}{2y}$.
+              \begin{equation}
+                  (y - r)² = y² - 2yr + r² > y² - 2yr > 2
+              \end{equation}
+              \begin{equation}
+                  y² - 2 > 2yr
+              \end{equation}
+              \begin{equation}
+                  \dfrac{y²-2}{2y}>r
+              \end{equation}
+              Es decir que $y-r \in Y$ e $y-r < y$.
+        \item Si $x \in X, y \in Y \Rightarrow x < y \Rightarrow x² < 2 < y² \Rightarrow x² < y²$.
+    \end{enumerate}
 
     Veamos que por 1, 2, 3 $\nexists sup(X), inf(Y)$. Supongamos $0< \alpha = sup(X)$, no puede ser $\alpha²<2$ porque si no $\alpha \in X$ y $X$ no tiene máximo. Tampoco puede ser $\alpha² > 2$ pues estaría en $Y$ e $Y$ no tiene mínimo, pues habría un $\beta \in Y$ con $\beta < \alpha$ y por 3) sería $x < \beta < \alpha, \forall x \in X$ lo que contradice que $sup(X) = \alpha$, pues sería $\beta$ el supremo.
     En definitiva si existiese $sup(X) = \alpha$, debe ser $\alpha² = 2 \notin \Q$. Luego $X$ no tiene supremo en $\Q$.
@@ -130,7 +133,7 @@ Ejercicio: Dados $0<a \in \R, m \in \N \Rightarrow \exists! 0<b\in \R : b^m =a$.
     $\Q$ es denso en $\R$.
     \begin{proof}
         Como $b-a>0, \exists p\in \N: 0 < \dfrac{1}{p}<b-a$. \\
-        Sea $A = \{ m \in \Z: \dfrac{m}{p} \geq b \}$. Como $\R$ es Arquimediano, $A$ es un conjunto de números enteros no vacío y acotado por $bp$. Sea $m_0$ el menor elemento de A entonces $b\leq \dfrac{m_0}{p}$ y $\dfrac{m_0-1}{p} <b$. También $\dfrac{m_0-1}{p} > 0$, si no tendríamos que 
+        Sea $A = \{ m \in \Z: \dfrac{m}{p} \geq b \}$. Como $\R$ es Arquimediano, $A$ es un conjunto de números enteros no vacío y acotado por $bp$. Sea $m_0$ el menor elemento de A entonces $b\leq \dfrac{m_0}{p}$ y $\dfrac{m_0-1}{p} <b$. También $\dfrac{m_0-1}{p} > 0$, si no tendríamos que
         \begin{equation}
             \dfrac{m_0-1}{p} \leq a \leq b \leq \dfrac{m_0}{p}
         \end{equation}
@@ -144,7 +147,7 @@ Ejercicio: Dados $0<a \in \R, m \in \N \Rightarrow \exists! 0<b\in \R : b^m =a$.
 
 \begin{eg}
     $\mathbb{R-Q}$ es denso en $\R$. \\
-    Para ver que $\mathbb{R-Q}$ es denso usamos la misma idea tomando $p \in \N :0<\dfrac1p<\dfrac{b-a}{\sqrt2}$ por Arquimedianidad y $\dfrac{\sqrt2}{p} < b-a$ por longitud del intervalo. 
+    Para ver que $\mathbb{R-Q}$ es denso usamos la misma idea tomando $p \in \N :0<\dfrac1p<\dfrac{b-a}{\sqrt2}$ por Arquimedianidad y $\dfrac{\sqrt2}{p} < b-a$ por longitud del intervalo.
     Ejercicio terminar la demostración.
 \end{eg}
 
@@ -159,22 +162,25 @@ Dado $n \in \N$ definimos $\mathbb{I}_n = \{1, 2, 3,\cdots, n\}$.
 \begin{theorem}
     Sean $n, m \in \N$. Entonces, $\mathbb{I}_n \sim \mathbb{I}_m \iff n = m$.
     \begin{proof}
-        Sabemos que si $\mathbb{I}_n \sim \mathbb{I}_m$, entonces $\exists f: \mathbb{I}_n \to \mathbb{I}_m$ biyectiva. Supongamos que $n < m$. \\
-        Esto implica que puedo definir $g: \mathbb{I}_m \to \mathbb{I}_{n+1}$ suryectiva como:
-        \[
-        g(k) = 
-        \begin{cases} 
-            k & \text{si } 1 \leq k \leq n+1, \\
-            1 & \text{si } k > n+1.
-        \end{cases}
-        \]
-        $g \circ f: \mathbb{I}_n \to \mathbb{I}_{n+1} \Rightarrow$ basta probar que $\nexists$ funciones $h: \mathbb{I}_n \to \mathbb{I}_{n+1}$ suryectivas para probar el absurdo. 
-        Por inducción: \\
-        Si $m=1$ luego $h$ no puede ser suryectiva. Supongamos que vale si $1 \leq k \leq n-1$, si $\exists h: \mathbb{I}_n \to \mathbb{I}_{n+1}$ suryectiva $\exists k : f(n) = k$. Defino una permutación $r$ de $\mathbb{I}_{n+1}$ tal que $r(k) = n+1 \Rightarrow$ \\
-        $r \circ h: \mathbb{I}_n \to \mathbb{I}_{n+1}$ es suryectiva y $(r \circ f)(n) = r(k) = n+1$. \\
-        $\Rightarrow$ la restricción $r \circ f|_{\mathbb{I}_{n-1}}:\mathbb{I}_{n-1} \to \mathbb{I}_n$ y es suryectiva. Abusrdo, por Hipotesis inductiva no existen suryectivas de $\mathbb{I}_{n-1} \to \mathbb{I}_n$ \\
+        Sabemos que si $\mathbb{I}_n \sim \mathbb{I}_m$, entonces $\exists f: \mathbb{I}_n \to \mathbb{I}_m$ biyectiva. Supongamos que $n < m$. Esto implica que puedo definir $g: \mathbb{I}_m \to \mathbb{I}_{n+1}$ suryectiva como:
+        \begin{equation}
+            g(k) =
+            \begin{cases}
+                k & \text{si } 1 \leq k \leq n+1, \\
+                1 & \text{si } k > n+1.
+            \end{cases}
+        \end{equation}
 
-        $\Leftarrow$ trivial.
+        Dada $g \circ f: \mathbb{I}_n \to \mathbb{I}_{n+1}$ basta probar que $\nexists$ funciones $h: \mathbb{I}_n \to \mathbb{I}_{n+1}$ suryectivas para probar el absurdo. Por inducción
+        Si $m = 1$, $h$ no puede ser suryectiva. Supongamos que vale para $1 \leq k \leq n-1$. Si $\exists h: \mathbb{I}_n \to \mathbb{I}_{n+1}$ suryectiva, entonces $\exists k : f(n) = k$.
+
+        Definimos una permutación $r$ de $\mathbb{I}_{n+1}$ tal que $r(k) = n+1$. Por lo tanto, $r \circ h: \mathbb{I}_n \to \mathbb{I}_{n+1}$ es suryectiva y $(r \circ f)(n) = r(k) = n+1$. Esto implica que la restricción
+        \[
+            r \circ f|_{\mathbb{I}_{n-1}} : \mathbb{I}_{n-1} \to \mathbb{I}_n
+        \]
+        es suryectiva. Esto es un absurdo, ya que por la hipótesis inductiva no existen funciones suryectivas de $\mathbb{I}_{n-1} \to \mathbb{I}_n$.
+
+        El caso $\Leftarrow$ es trivial.
     \end{proof}
 \end{theorem}
 

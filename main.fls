@@ -514,9 +514,6 @@ INPUT ./Chapters/parciales.tex
 INPUT ./Chapters/parciales.tex
 INPUT ./Chapters/parciales.tex
 INPUT Chapters/parciales.tex
-INPUT ./main.bbl
-INPUT ./main.bbl
-INPUT main.bbl
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

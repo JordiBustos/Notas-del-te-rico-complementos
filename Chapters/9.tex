@@ -54,7 +54,7 @@
 
 \subsection{Conjuntos abiertos}
 \begin{definition}
-  Si $x \in \R^n$ y $r > 0$, la bola abierta centrada en $x$ de radio $r$ es el conjunto $B_r(x) = B(x,r) = \{ y \in \R^n : d(x, y) < r \}$. 
+  Si $x \in \R^n$ y $r > 0$, la bola abierta centrada en $x$ de radio $r$ es el conjunto $B_r(x) = B(x,r) = \{ y \in \R^n : d(x, y) < r \}$.
 \end{definition}
 
 \begin{definition}
@@ -78,7 +78,7 @@
     Si $y \in R^n - U \Rightarrow y \notin B_r(x)$ por lo que $d(x, y) > r > 0$ y $r$ es una cota inferior mínima positiva del conjunto, pues si $d(x,y) < r \Rightarrow y \in B_r(x)$ absurdo! \\
 
     Para la vuelta tomemos $s = inf\{ d(x,y) : y \in \R^n - U \} > 0$. Consideremos $B_{\frac{s}{2}}(x)$. Si $z$ pertenece a esa bola entonces $d(x, z) < \frac{s}{2} < s \Rightarrow$ \\
-    $d(x, z) \notin \{ d(x,y) : y \in R^n - U \}$ pues si no sería el ínfimo, se sigue que $z \in U$ y entonces $B_{\frac{s}{2}}(x) \subset U \therefore U$ es abierto. 
+    $d(x, z) \notin \{ d(x,y) : y \in R^n - U \}$ pues si no sería el ínfimo, se sigue que $z \in U$ y entonces $B_{\frac{s}{2}}(x) \subset U \therefore U$ es abierto.
   \end{proof}
 \end{prop}
 
@@ -137,7 +137,7 @@ Notemos que la hipotesis de que la familia sea finita en la intersección es nec
 \begin{corollary}
   Si $X \subset Y \Rightarrow X^{\circ} \subset Y^{\circ}$.
   \begin{proof}
-    $X^{\circ} \subset X \subset Y$. Como $Y$ es el mayor abierto contenido en $Y$ se sigue que $X^{\circ} \subset Y^{\circ} \subset Y$. 
+    $X^{\circ} \subset X \subset Y$. Como $Y$ es el mayor abierto contenido en $Y$ se sigue que $X^{\circ} \subset Y^{\circ} \subset Y$.
   \end{proof}
 \end{corollary}
 
@@ -148,7 +148,7 @@ Propiedades del interior
   \begin{proof}
     $(X \cap Y)^{\circ} \subset X \cap Y \Rightarrow X^{\circ} \cap Y^{\circ}$ es abierto $\Rightarrow (X^{\circ} \cap Y^{\circ}) \subset (X \cap Y)^{\circ}$. \\
     $X \cap Y \subset X \Rightarrow (X \cap Y)^{\circ} \subset X^{\circ}$ y $X \cap Y \subset Y \Rightarrow (X \cap Y)^{\circ} \subset Y^{\circ} \Rightarrow$ \\
-    $(X \cap Y)^{\circ} \subset X^{\circ} \cap Y^{\circ}$. 
+    $(X \cap Y)^{\circ} \subset X^{\circ} \cap Y^{\circ}$.
   \end{proof}
 \end{prop}
 
@@ -156,7 +156,7 @@ Propiedades del interior
   $X^{\circ} \cup Y^{\circ} \subset (X \cup Y)^{\circ}$.
   \begin{proof}
     $X^{\circ} \subset X \subset X \cup Y$ y $Y^{\circ} \subset Y \subset X \cup Y \Rightarrow$ \\
-    $X^{\circ} \cup Y^{\circ} \subset (X \cup Y) \Rightarrow X^{\circ} \cup Y^{\circ} \subset (X \cup Y)^{\circ}$, pues $X^{\circ} \cup Y^{\circ}$ es abierto. 
+    $X^{\circ} \cup Y^{\circ} \subset (X \cup Y) \Rightarrow X^{\circ} \cup Y^{\circ} \subset (X \cup Y)^{\circ}$, pues $X^{\circ} \cup Y^{\circ}$ es abierto.
   \end{proof}
 \end{prop}
 
@@ -170,9 +170,9 @@ $1 \notin X^{\circ} \cup Y^{\circ} = (-1, 1) \cup (1, 2)$, pero $1 \in (X \cup Y
 \end{definition}
 
 \begin{prop}
-    Un subconjunto de $\R^n$ es abierto $\iff$ es un entorno de cada uno de sus puntos.
+  Un subconjunto de $\R^n$ es abierto $\iff$ es un entorno de cada uno de sus puntos.
   \begin{proof}
-      Si $U$ es entorno de cada uno de sus puntos entonces $U \subset U^{\circ} \Rightarrow U = U^{\circ} \therefore$ es abierto.
+    Si $U$ es entorno de cada uno de sus puntos entonces $U \subset U^{\circ} \Rightarrow U = U^{\circ} \therefore$ es abierto.
   \end{proof}
 \end{prop}
 
@@ -227,7 +227,7 @@ $1 \notin X^{\circ} \cup Y^{\circ} = (-1, 1) \cup (1, 2)$, pero $1 \in (X \cup Y
 \end{definition}
 
 \begin{prop}
-  Sea $X \subset R^n \Rightarrow \overline{X}$ es el menor subconjunto cerrado de $\R^n$ que contiene a $X$ en el sentido de que es contenido en todo subconjunto cerrado de $\R^n$ que contiene a $X$. 
+  Sea $X \subset R^n \Rightarrow \overline{X}$ es el menor subconjunto cerrado de $\R^n$ que contiene a $X$ en el sentido de que es contenido en todo subconjunto cerrado de $\R^n$ que contiene a $X$.
 \end{prop}
 
 \begin{corollary}

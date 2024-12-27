@@ -8,7 +8,7 @@
     Como $a = \lim_{n \to \infty} a_n$ (los ínfimos de $X_n$). Dados $\e$ y $n_0 \in \N, \exists n_1 > n_0 : a-\e < a_{n_1} < a+\e$, $a_{n_1} = inf(X_{n_1}) \Rightarrow a + \e$ no puede ser cota inferior de $X_{n_1}$. \\
     $\Rightarrow \exists n \geq n_1 : a_{n_1} \leq x_n \leq a+\e$, $(n \geq n_1 \geq n_0$ y $(a - \e < x_n < a + \e$), luego $a$ es punto de acumulación de $(x_n)_{n \in \N}$. \\
     Falta ver que si $c < a \Rightarrow c$ no es punto de acumulación. \\
-    Como $a = lim_{n \to \infty} a_n$ y $c < a \Rightarrow \exists n_0 \in \N : c < a_{n_0} \leq a$. Como $a_{n_0}$ es el ínfimo de $X_{n_0}$ si $n \geq n_0 \Rightarrow c < a_{n_0} \geq x_n$. Tomando $\e = a_{n_0} - c \Rightarrow c+\e = a_{n_0}$ y entonces $\forall x_n: n \geq n_0, x_n \notin (c - \e, c + \e) \therefore c$ no es punto de acumulación.  
+    Como $a = lim_{n \to \infty} a_n$ y $c < a \Rightarrow \exists n_0 \in \N : c < a_{n_0} \leq a$. Como $a_{n_0}$ es el ínfimo de $X_{n_0}$ si $n \geq n_0 \Rightarrow c < a_{n_0} \geq x_n$. Tomando $\e = a_{n_0} - c \Rightarrow c+\e = a_{n_0}$ y entonces $\forall x_n: n \geq n_0, x_n \notin (c - \e, c + \e) \therefore c$ no es punto de acumulación.
   \end{proof}
 \end{theorem}
 
@@ -34,7 +34,7 @@
 Dada una sucesión $(x_n)_{n \in \N} \subset \R$, decimos que es de Cauchy si dado $\e > 0, \exists n_0 \in \N : |x_n - x_m| < \e, \forall n,m > n_0$. Al igual que hicimos con las sucesiones de Cauchy en $\Q$.
 
 \begin{enumerate}
-  \item Toda sucesión convergente es de Cauchy 
+  \item Toda sucesión convergente es de Cauchy
   \item Toda sucesión de Cauchy es acotada
 \end{enumerate}
 
@@ -43,7 +43,7 @@ Dada una sucesión $(x_n)_{n \in \N} \subset \R$, decimos que es de Cauchy si da
   \begin{proof}
     Dado $\e > 0 : \exists n_0 : |x_n - x_m| < \e / 2, \forall n,m > n_0$. \\
     Como $a$ es el límite de una subsucesión $\exists n_1 > n_0 : |x_n - a| < \e / 2$. \\
-    $\Rightarrow$ si $n > n_0, |x_n - a| \leq |x_n - x_{n_1}| + |x_{n_1} - a| < \e / 2 + \e / 2 = \e$. 
+    $\Rightarrow$ si $n > n_0, |x_n - a| \leq |x_n - x_{n_1}| + |x_{n_1} - a| < \e / 2 + \e / 2 = \e$.
   \end{proof}
 \end{lemma}
 
@@ -97,7 +97,7 @@ Dada una sucesión $(x_n)_{n \in \N} \subset \R$, decimos que es de Cauchy si da
   b) $(x_n)_{n \in \N}$ es acotada y $lim_{n \to \infty} y_n = +\infty \Rightarrow lim_{n \to \infty} \frac{x_n}{y_n} = 0$.
   \begin{proof}
     a) Dado $A > 0, \exists n_0 \in \N : 0 < y_n < c/A, \forall n > n_0 \Rightarrow \frac{x_n}{y_n} > (A/c) \cdot c = A, \forall n > n_0 \therefore lim_{n \to \infty} \frac{x_n}{y_n} = + \infty$. \\
-    b) Dado $\e > 0, \exists n_0 \in \N : y_n > k/\e, \forall n > n_0$, donde $k > 0$ es cota superior de $x_n \Rightarrow \forall n > n_0, 0 < \frac{x_n}{y_n} < k \cdot (\e/k) = \e \therefore lim_{n \to \infty} \frac{x_n}{y_n} = 0$.  
+    b) Dado $\e > 0, \exists n_0 \in \N : y_n > k/\e, \forall n > n_0$, donde $k > 0$ es cota superior de $x_n \Rightarrow \forall n > n_0, 0 < \frac{x_n}{y_n} < k \cdot (\e/k) = \e \therefore lim_{n \to \infty} \frac{x_n}{y_n} = 0$.
   \end{proof}
 \end{prop}
 
@@ -135,8 +135,9 @@ Dada una sucesión $(a_n)_{n \in \N} \subset \R$ formamos una nueva sucesión $(
 \end{theorem}
 
 \begin{corollary}[Criterio de comparación]
-  Sean $a_n, b_n \geq 0, \forall n \in \N$, dadas $\sum_{n \geq 1} a_n$, $\sum_{n \geq 1} b_n \Rightarrow$ \\
-  Si $\exists c > 0, n_0 \in \N : a_n \leq c \cdot b_n, \forall n > n_0 \Rightarrow$ \\
+  Sean $a_n, b_n \geq 0, \forall n \in \N$, dadas $\sum_{n \geq 1} a_n$, $\sum_{n \geq 1} b_n \Rightarrow$ Si \begin{equation}
+    \exists c > 0, n_0 \in \N : a_n \leq c \cdot b_n, \forall n > n_0 \Rightarrow 
+  \end{equation}
   \begin{enumerate}
     \item Si $\sum b_n$ converge entonces $\sum a_n$ converge.
     \item Si $\sum a_n$ diverge entonces $\sum b_n$ diverge.
@@ -146,7 +147,7 @@ Dada una sucesión $(a_n)_{n \in \N} \subset \R$ formamos una nueva sucesión $(
     $\sum a_n$ converge $\iff$ Dado $n_0 \in \N, \sum_{n \geq n_0} a_n$ converge.
   \end{note}
   \begin{proof}
-    Sea $(s_n)_{n \in \N}$ la primera serie, $(t_n)_{n \in \N}$ la segunda, $t_n = s_{n + n_0} - s_{n_0}$. 
+    Sea $(s_n)_{n \in \N}$ la primera serie, $(t_n)_{n \in \N}$ la segunda, $t_n = s_{n + n_0} - s_{n_0}$.
   \end{proof}
 \end{corollary}
 

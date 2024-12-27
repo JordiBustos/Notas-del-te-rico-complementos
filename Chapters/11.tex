@@ -5,7 +5,7 @@
 \end{corollary}
 
 \begin{definition}[Cubrimiento]
-  Sea $X \subset R^n$. Una familia $U$ de subconjuntos de $\R^n$ es un cubrimiento de $X$ si $X \subset \bigcup_{u \in U} u$ y es un cubrimiento abierto si todo subconjunto de $U$ es abierto. 
+  Sea $X \subset R^n$. Una familia $U$ de subconjuntos de $\R^n$ es un cubrimiento de $X$ si $X \subset \bigcup_{u \in U} u$ y es un cubrimiento abierto si todo subconjunto de $U$ es abierto.
 \end{definition}
 
 \begin{definition}[Subcubrimiento]
@@ -14,14 +14,18 @@
 
 \begin{theorem}[Lindelöf]
   Todo cubrimiento abierto de algún subconjunto de $\R^n$ admite a lo sumo un subcubrimiento a lo sumo numerable.
-
   \begin{proof}
-    Sea $X \subset \R^n$ y $U$ un cubrimiento abierto de $X$. \\
-    Si $X = \varnothing \Rightarrow \varnothing$ es un subcubrimiento de $U$ a lo sumo numerable. \\
-    Si $X \neq \varnothing \Rightarrow U \neq \varnothing \Rightarrow$ Podemos fijar $U_0 \in U$. \\
-    Para cada $q \in \Q^n$ y sea $s \in \Q > 0$. Elegimos un elemento $U(q, s)$ de $U$ de la siguiente forma: \\
+    Sea $X \subset \R^n$ y $U$ un cubrimiento abierto de $X$.
+    \begin{itemize}
+      \item Si $X = \varnothing \Rightarrow \varnothing$ es un subcubrimiento de $U$ a lo
+            sumo numerable.
+      \item Si $X \neq \varnothing \Rightarrow U \neq \varnothing \Rightarrow$ Podemos
+            fijar $U_0 \in U$.
+    \end{itemize}
+    Para cada $q \in \Q^n$ y sea $s \in \Q > 0$. Elegimos un elemento $U(q, s)$ de $U$ de la siguiente forma:
     \begin{enumerate}
-      \item Si hay elementos de $U$ que contienen a $B_s(q)$ elegimos cualquiera de ellos y lo llamamos $u(q, s)$.
+      \item Si hay elementos de $U$ que contienen a $B_s(q)$ elegimos cualquiera de ellos y
+            lo llamamos $u(q, s)$.
       \item Si no hay ninguno ponemos $U(q, s) = U_0$.
     \end{enumerate}
     Sea $x \in X$ como $U$ es un cubrimiento abierto de $X$, $\exists u \in U$ abierto tal que $x \in u \Rightarrow \exists r > 0 : B_r(x) \subset u$. \\
@@ -33,22 +37,31 @@
 \begin{corollary}
   Un subconjunto $F \subset \R^n$ es compacto $\iff \forall$ cubrimiento abierto de $F$ admite un subcubrimiento finito.
   \begin{proof}
-    $\Rightarrow$) Sea $F \subset \R^n$ compacto y $U$ un cubrimiento abierto de $F$. Por el teorema anterior hay un subcubrimiento a lo sumo numerable $V$ de $U$ y $\exists f: \N \to V$ sobreyectiva. \\
-    Por el absurdo supongamos que $U$ no contiene subcubrimiento finito de $F$. En particular si $m \in \N, V_m = \{ f(1), \cdots, f(m) \} \in V$ no es subcubrimiento de $F$, por ser finito $\Rightarrow$ \\
-    $\exists x_m \in F - \bigcup_{i = 1}^m f(i)$. \\
-    De esta forma tenemos una sucesión de elementos de $F, (x_m)_{m \in \N}$. Como $F$ es compacto $\exists h: \N \to \N$ estrictamente creciente tal que $(x_{h(m)})_{m \in \N}) \to L \in F$. \\
-    Como $V$ es un cubrimiento de $F$ y $f$ es sobreyectiva $\Rightarrow \exists s \in \N : L \in f(s)$. \\
+    Para la ida sea $F \subset \R^n$ compacto, $U$ un cubrimiento abierto de $F$. Por Lindelöf hay un subcubrimiento a lo sumo numerable $V$ de $U$ y $\exists f: \N \to V$ suryectiva.
+    Por el absurdo supongamos que $U$ no contiene subcubrimiento finito de $F$.
+    En particular si $m \in \N, V_m = \{ f(1), \cdots, f(m) \} \in V$ no es subcubrimiento de $F$, por ser finito
+    \begin{equation}
+      \Rightarrow \exists x_m \in F - \bigcup_{i = 1}^m f(i)
+    \end{equation} De esta forma tenemos una sucesión de elementos de $F, (x_m)_{m \in \N}$. \\
+    Como $F$ es compacto $\exists h: \N \to \N$ estrictamente creciente tal que $(x_{h(m)})_{m \in \N} \to L \in F$. \\
+    Como $V$ es un cubrimiento de $F$ y $f$ es sobreyectiva $\Rightarrow \exists s \in \N : L \in f(s)$.
     Por otro lado como $lim_{n \to \infty} x_m = L$ y $f(s)$ es un entorno de $L, \exists m_0 \in \N : x_{h(m)} \in f(s), \forall m > m_0$. \\
     Como $m < h(s + m_0) \Rightarrow x_{h(s+m_0)} \in f(s)$ Absurdo! \\
     $x_{h(m_0 + s)} \in F - \bigcup_{i=1}^{h(s+m_0)} f(i)$ que es disjunto con $f(s)$ pues $s < h(s + m_0)$. \\
     $\therefore V$ y, por lo tanto, $U$ contienen un subcubrimiento finito. \\
 
-    $\Leftarrow$) Supongamos ahora que todo cubrimiento abierto de $F$ admite un subcubrimiento finito, pero que $F$ no es compacto. \\
-    Hay una sucesión $(x_m)_{m \in \N} \subset F$ que no tiene ninguna subsucesión convergente. Si $x \in F$, no hay ningua subsucesión de $(x_m)_{m \in \N}$ que converge a $x$ y, por lo tanto, $\exists r_x > 0 : S_x = \{ m \in \N : x_m \in B_r(x) \}$ es finito. \\
-    El conjunto $U = \{ B_{r_x}(x) : x \in F \}$  es un cubrimiento abierto de $F$. \\
-    Por hipotesis hay un subconjunto finito $\{ y_1, \cdots, y_k\}$ tal que $\{ B_{r_{y_1}}(y_1), \cdots, B_{r_{y_k}}(y_k) \}$ es subcubrimiento de $F$. \\
-    En particular $\forall m \in \N, \exists i \in \{ 1, \cdots, k \} : x_m \in B_{r_{y_i}}(y_i) \Rightarrow$ \\
-    $m \in S_y \therefore \N \subset S_{y_1} \cup \cdots \cup S_{y_k}$ Absurdo! pues los $S_{y_i}$ son finitos.
+    Para la vuelta supongamos que todo cubrimiento abierto de $F$ admite un
+    subcubrimiento finito, pero que $F$ no es compacto. \\ Hay una sucesión
+    $(x_m)_{m \in \N} \subset F$ que no tiene ninguna subsucesión convergente. Si
+    $x \in F$, no hay ningua subsucesión de $(x_m)_{m \in \N}$ que converge a $x$
+    y, por lo tanto, $\exists r_x > 0 : S_x = \{ m \in \N : x_m \in B_r(x) \}$ es
+    finito. \\ El conjunto $U = \{ B_{r_x}(x) : x \in F \}$ es un cubrimiento
+    abierto de $F$. \\ Por hipotesis hay un subconjunto finito $\{ y_1, \cdots,
+      y_k\}$ tal que $\{ B_{r_{y_1}}(y_1), \cdots, B_{r_{y_k}}(y_k) \}$ es
+    subcubrimiento de $F$. \\ En particular $\forall m \in \N, \exists i \in \{ 1,
+      \cdots, k \} : x_m \in B_{r_{y_i}}(y_i) \Rightarrow$ \\ $m \in S_y \therefore
+      \N \subset S_{y_1} \cup \cdots \cup S_{y_k}$ Absurdo! pues los $S_{y_i}$ son
+    finitos.
   \end{proof}
 \end{corollary}
 
@@ -89,18 +102,23 @@
 \begin{prop}
   Sea $A \subset \R^n, x_0 \in A^{\prime}, f: A \to \R^k, y \in \R^k$ son equivalentes:
   \begin{enumerate}
-    \item $lim_{x \to x_0} f(x) = y$ 
+    \item $lim_{x \to x_0} f(x) = y$
     \item $(\forall \e > 0)(\exists \delta > 0) : f(B_{\delta}(x_0)) \cap (A - \{x_0\}) \subset B_{\e}(y)$
     \item $\forall$ entorno $V$ de $y$, $\exists$ un entorno $U$ de $x_0$ tal que $f(U \cap (A - \{x_0\})) \subset V$.
   \end{enumerate}
 
   \begin{proof}
-    1) $\Rightarrow$ 2) Dado $\e > 0, \exists \delta > 0 : ||x - x_0 || < \delta \Rightarrow ||f(x) - y|| < \e$ \\
-    Si $x \in B_{\delta}(x_0) \cap (A - \{x_0\}) \Rightarrow x \in A$ y $||x - x_0|| < \delta \Rightarrow$ \\
-    $||f(x) - y|| < \e \Rightarrow f(x) \in B_{\e}(y) \therefore f(B_{\delta}(x_0)) \cap (A - \{x_0\}) \subset B_{\e}(y)$. \\
+    1) $\Rightarrow$ 2) Dado \begin{equation}
+      \e > 0, \exists \delta > 0 : ||x - x_0 || < \delta \Rightarrow ||f(x) - y|| < \e
+    \end{equation} Si \begin{equation} x \in B_{\delta}(x_0) \cap (A - \{x_0\}) \Rightarrow x \in A, ||x - x_0|| < \delta \Rightarrow
+    \end{equation}
+    \begin{equation}
+      ||f(x) - y|| < \e \Rightarrow f(x) \in B_{\e}(y) \therefore f(B_{\delta}(x_0)) \cap (A - \{x_0\}) \subset B_{\e}(y)
+    \end{equation}
 
-    2) $\Rightarrow$ 3) Si $V$ es un entorno de $y \Rightarrow \exists \e > 0 : B_{\e}(y) \subset V$. Por hipótesis $\exists \delta > 0 : f(B_{\delta}(x_0) \cap (A - \{x_0\})) \subset B_{\e}(y)$ \\
-    Tomo $U = B_{\delta}(x_0)$ que es un entorno de $x$. \\
+    2) $\Rightarrow$ 3) Si $V$ es un entorno de $y \Rightarrow \exists \e > 0 : B_{\e}(y) \subset V$. Por hipótesis \begin{equation}
+      \exists \delta > 0 : f(B_{\delta}(x_0) \cap (A - \{x_0\})) \subset B_{\e}(y)
+    \end{equation} Tomo $U = B_{\delta}(x_0)$ que es un entorno de $x$.
 
     3) $\Rightarrow$ 1) Sea $\e > 0$. Como $B_{\e}(y)$ es un entorno de $y$. Por hipótesis $\exists$ un entorno $U$ de $x_0 : f(U \cap (A - \{x_0\})) \subset B_{\e}(y)$. Como $U$ es entorno de $x_0, \exists \delta > 0 : B_{\delta}(x_0) \subset U$. \\
     Si $x \in A$ es tal que $0 < ||x - x_0|| < \delta \Rightarrow x \in B_{\delta}(x_0) \cap (A - \{x_0\}) \Rightarrow f(x) \in B_{\e}(y) \Rightarrow ||f(x) - y|| < \e$ \\
@@ -111,9 +129,11 @@
 \begin{prop}
   $A \subset \R^n, x_0 \in A^{\prime}, f: A \to \R^k, \lim_{x \to x_0} f(x) = y \iff \forall (x_n)_{n \in \N} \subset A - \{x_0\}, x_n \to x_0, (f(x_n))_{n \in \N}$ converge a $y$.
   \begin{proof}
-    $\Rightarrow$) Supongamos que $lim_{x \to x_0} f(x) = y$. Sea $(x_n)_{n \in \N} \subset A - \{x_0\}, x_n \to x_0$. \\
-    Dado $\e > 0, \exists \delta > 0 : d(x, x_0) < \delta \Rightarrow d(f(x), y) < \e$. Además $\exists n_0 \in \N : d(x_n, x_0) < \delta, \forall n > n_0$. \\
-    $\Rightarrow d(f(x_n), y) < \e, \forall n > n_0 \therefore (f(x_n))_{n \in \N} \to y$. \\
+    $\Rightarrow$) Supongamos que $lim_{x \to x_0} f(x) = y$. Sea $(x_n)_{n \in \N} \subset A - \{x_0\}, x_n \to x_0$. Dado \begin{equation}
+      \e > 0, \exists \delta > 0 : d(x, x_0) < \delta \Rightarrow d(f(x), y) < \e
+    \end{equation} Además \begin{equation}
+      \exists n_0 \in \N : d(x_n, x_0) < \delta, \forall n > n_0
+    \end{equation} \begin{equation} \Rightarrow d(f(x_n), y) < \e, \forall n > n_0 \therefore (f(x_n))_{n \in \N} \to y \end{equation}
 
     $\Leftarrow$) $\forall (x_n)_{n \in \N} \subset A - \{x_0\}, x_n \to x_0, (f(x_n))_{n \in \N} \to y$. \\
     Supongamos que $lim_{x \to x_0} f(x) \neq y$. Luego $\exists \e > 0 : \forall \delta > 0, d(x, x_0) < \delta$, pero $d(f(x), y) \geq \e$. \\
@@ -131,27 +151,27 @@
   \end{enumerate}
 \end{prop}
 
-
 \begin{prop}
   Sea $A \subset \R^n, x_0 \in A^{\prime}, f: A \to \R^k, lim_{x \to x_0} f(x) = y$.
   \begin{enumerate}
     \item Si $z \neq y, \exists r > 0 : z \in f(B_r(x_0) - (A -\{x_0\}))$.
-    \item Si $y > 0 \Rightarrow \exists r > 0 : f(x) > 0, \forall x \in (B_r(x_0) - (A - \{x_0\}))$.
+    \item Si $y > 0 \Rightarrow \exists r > 0 : f(x) > 0, \forall x \in (B_r(x_0) - (A -
+            \{x_0\}))$.
     \item $\exists r > 0 : f$ es acotada sobre $B_r(x_0) \cap A$, o sea, $\{f(x) : x \in B_r(x_0) \cap A\}$ está acotado superiormente.
   \end{enumerate}
 
   \begin{proof}
-    1) $y \neq z \Rightarrow d(y, z) > 0 \Rightarrow \exists r > 0 : 0 < d(x, x_0) < r \Rightarrow d(f(x), y) < d(y, z)$. \\
-    Si $x \in B_r(x_0) \cap (A - \{x_0\}) \Rightarrow 0 < d(x, x_0) < r \Rightarrow d(f(x), y) < d(z, y)$. \\
-    $\therefore f(x) \neq z$, o sea, $z \in f(B_r(x_0) \cap (A - \{x_0\}))$. \\
-
-    2) Como $y > 0 \Rightarrow \dfrac{y}{2} > 0 \Rightarrow \exists r > 0 : \forall x \in X : 0 < d(x, x_0) < r \Rightarrow$ \\
-    $d(f(x), y) < \e = \dfrac{y}{2}, f(x) > y - \dfrac{y}{2} > 0, \forall x \in B_r(x_0) \cap (A - \{x_0\})$. \\
-
-    3) Sea $\e = 1 \Rightarrow \exists r > 0 : \forall x \in A$ vale que $0 < d(x, x_0) < r \Rightarrow d(f(x), y) < 1 \Rightarrow$ \\
-    Si $x \in B_r(x_0) \cap (A - \{x_0\}), ||f(x)|| = ||f(x) + y - y|| \leq ||f(x) - y|| + ||y|| < 1 + ||y||$. \\
-    $\therefore$ si $x_0 \notin A, 1+||y||$ es cota superior para $\{f(x) : x \in B_r(x) \cap A\}$. \\
-    Si $x_0 \in A \Rightarrow 1 + ||y|| + ||f(x_0)||$ es cota superior. La definición del límite no sirve para $x_0$, por eso se separa en casos. 
+    \begin{enumerate}
+      \item $y \neq z \Rightarrow d(y, z) > 0 \Rightarrow \exists r > 0 : 0 < d(x, x_0) < r \Rightarrow d(f(x), y) < d(y, z)$.
+      \item $x \in B_r(x_0) \cap (A - \{x_0\}) \Rightarrow 0 < d(x, x_0) < r \Rightarrow d(f(x), y) < d(z, y) \therefore f(x) \neq z$, o sea, $z \in f(B_r(x_0) \cap (A - \{x_0\}))$.
+      \item Sea $\e = 1 \Rightarrow \exists r > 0 : \forall x \in A$ vale que $0 < d(x,
+              x_0) < r \Rightarrow d(f(x), y) < 1 \Rightarrow$ \\ Si $x \in B_r(x_0) \cap (A
+              - \{x_0\}), ||f(x)|| = ||f(x) + y - y|| \leq ||f(x) - y|| + ||y|| < 1 + ||y||$.
+            \\ $\therefore$ si $x_0 \notin A, 1+||y||$ es cota superior para $\{f(x) : x
+              \in B_r(x) \cap A\}$. \\ Si $x_0 \in A \Rightarrow 1 + ||y|| + ||f(x_0)||$ es
+            cota superior. La definición del límite no sirve para $x_0$, por eso se separa
+            en casos.
+    \end{enumerate}
   \end{proof}
 \end{prop}
 
@@ -159,14 +179,12 @@
   Sea $A \subset \R^n, x_0 \in A^{\prime}$ y $f, g, h: A \to \R, \forall x \in A, f(x) \leq g(x) \leq h(x)$, si: \\
   $lim_{x \to x_0} f(x) = lim_{x \to x_0} h(x) = y \Rightarrow lim_{x \to x_0} g(x) = y$.
   \begin{proof}
-    Dado $\e > 0, \exists \delta_1, \delta_2 > 0 :$ \\
-    \begin{equation}
+    Dado $\e > 0, \exists \delta_1, \delta_2 > 0 :$ \begin{equation}
       0 < d(x, x_0) < \delta_1 \Rightarrow d(f(x), y) < \e
     \end{equation}
     \begin{equation}
       0 < d(x, x_0) < \delta_2 \Rightarrow d(h(x), y) < \e
-    \end{equation}
-    Sea $\delta = min(\delta_1, \delta_2) \Rightarrow \exists x \in A : 0 < d(x, x_0) < \delta \Rightarrow$ \\
+    \end{equation} Sea $\delta = min(\delta_1, \delta_2) \Rightarrow \exists x \in A : 0 < d(x, x_0) < \delta \Rightarrow$
     \begin{equation}
       y - \e < f(x) \leq g(x) \leq h(x) < y + \e \Rightarrow d(g(x), y) < \e
     \end{equation}

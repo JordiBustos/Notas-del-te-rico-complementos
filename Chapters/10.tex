@@ -68,7 +68,7 @@
 
 \begin{prop}
   Sea $X \subset \R^n$. Un punto $x$ es punto de acumulación de $X \iff \forall$ entorno abierto de $X$ contiene infinitos elementos de $x$.
-  
+
   \begin{proof}
     $\Leftarrow$) Si todo entorno abierto de $x$ contiene infinitos elementos de $X$ entonces hay alguno distinto de $x$ y $x \in X^{\prime}$. \\
     $\Rightarrow$) Sea $x \in X^{\prime}$ y $N$ un entorno abierto de $x \Rightarrow \exists r > 0 : B_r(x) \subset N$. \\
@@ -98,7 +98,7 @@
 \end{definition}
 
 \begin{definition}[Punto aislado]
-  $X \subset \R^n, x \in X$ es aislado en $X$ si $\exists N$ un entorno de $x : N \cap X = \{x\}$. 
+  $X \subset \R^n, x \in X$ es aislado en $X$ si $\exists N$ un entorno de $x : N \cap X = \{x\}$.
 \end{definition}
 
 \begin{definition}[Conjunto discreto]
@@ -117,7 +117,7 @@ Decimos que una sucesión $(x_n)_{n \in \N} \subset \R^n$ converge a un punto $L
   Si una sucesión tiene límite en $\R^n$ es único.
   \begin{proof}
     Supongamos que converge a $L$ y a $L^{\prime}$ con $L \neq L^{\prime} \Rightarrow$ \\
-    $(\forall \e > 0)(\exists n_0 \in \N) : (\forall n > n_0), d(x_n, L) < \e$ \\ 
+    $(\forall \e > 0)(\exists n_0 \in \N) : (\forall n > n_0), d(x_n, L) < \e$ \\
     $(\forall \e > 0)(\exists n_1 \in \N) : (\forall n > n_1), d(x_n, L^{\prime}) < \e$ \\
     $d(L, L^{\prime}) \leq d(L, x_n) + d(x_n, L^{\prime}) \leq 2 \cdot \e, \forall n > max(n_0, n_1)$. \\
     Sea $\e = d(L, L^{\prime})/2 \Rightarrow d(L, L^{\prime}) < d(L, L^{\prime})$ Absurdo!
@@ -131,7 +131,7 @@ Decimos que una sucesión $(x_n)_{n \in \N} \subset \R^n$ converge a un punto $L
     \item $L = lim_{n \to \infty} x_n$
     \item $\forall r > 0, \exists n_0 \in \N : \forall n > n_0, x_n \in B_r(L)$
     \item $\forall$ entorno abierto $N$ de $L, \exists n_0 \in \N : \forall n > n_0, x_n \in N$
-    \item $\forall$ entorno $N$ de $L, \exists n_0 \in \N : \forall n > n_0, x_n \in N$ 
+    \item $\forall$ entorno $N$ de $L, \exists n_0 \in \N : \forall n > n_0, x_n \in N$
   \end{enumerate}
 
   \begin{proof}

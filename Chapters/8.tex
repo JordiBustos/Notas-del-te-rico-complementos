@@ -3,7 +3,7 @@
 \begin{eg}
   $\sum_{n \geq 1} \dfrac{(-1)^{n+1}}{n}$ converge, pero no lo hace absolutamente.
   \begin{proof}
-    i) Las sumas parciales pares son: 
+    i) Las sumas parciales pares son:
 
     \begin{itemize}
       \item $S_2 = 1 - 1/2$
@@ -40,14 +40,14 @@
 
 \begin{corollary}
   $\forall n > n_0, |a_n| \leq k \cdot c^n$ con $0 < c < 1, k > 0 \Rightarrow$ \\
-  $\sum a_n$ es absolutamente convergente. 
+  $\sum a_n$ es absolutamente convergente.
   \begin{proof}
     Como $c \in (0, 1), \sum c^n$ converge (serie geométrica).
   \end{proof}
 \end{corollary}
 
 \begin{note}
-  Tomando $k = 1, |a_n| \leq c^n \iff \sqrt[n]{a_n} \leq c < 1, \forall n > n_0 \in \N$. Que esto valga para algún $n_0$ específico significa que $\limsup_{n \to \infty} \sqrt[n]{a_n} < 1$. 
+  Tomando $k = 1, |a_n| \leq c^n \iff \sqrt[n]{a_n} \leq c < 1, \forall n > n_0 \in \N$. Que esto valga para algún $n_0$ específico significa que $\limsup_{n \to \infty} \sqrt[n]{a_n} < 1$.
 \end{note}
 
 \section{Criterios de convergencia}
@@ -95,8 +95,7 @@
 \end{note}
 
 \begin{theorem}
-  $(a_n)_{n \in \N}$ acotada $a_n > 0, \forall n \in \N \Rightarrow$ \\
-  \begin{equation}
+  $(a_n)_{n \in \N}$ acotada $a_n > 0, \forall n \in \N \Rightarrow$ \begin{equation}
     \liminf_{n \to \infty} \dfrac{a_{n+1}}{a_n} \leq \liminf_{n \to \infty} \sqrt[n]{a_n} \leq \limsup_{n \to \infty} \sqrt[n]{a_n} \leq \limsup_{n \to \infty} \dfrac{a_{n+1}}{a_n}
   \end{equation}
   En particular si $\exists lim_{n \to \infty} \dfrac{a_{n+1}}{a_n} \Rightarrow \exists lim_{n \to \infty} \sqrt[n]{a_n}$ y son iguales.
@@ -106,35 +105,32 @@
     Supongamos que no lo es $\Rightarrow$
     \begin{equation}
       \exists c : \limsup_{n \to \infty} \dfrac{a_{n+1}}{a_n} < c < \limsup_{n \to \infty} \sqrt[n]{a_n}
-    \end{equation}
-    Por la primer desigualdad $\exists n_0 \in \N : \forall n > n_0, \dfrac{a_{n+1}}{a_n} < c \Rightarrow$ \\
-    \begin{equation}
+    \end{equation} Por la primer desigualdad $\exists n_0 \in \N : \forall n > n_0, \dfrac{a_{n+1}}{a_n} < c \Rightarrow$ \begin{equation}
       \dfrac{a_{n_0+1}}{a_{n_0}} < c, \dfrac{a_{n_0+2}}{a_{n_0+1}} < c, \cdots, \dfrac{a_n}{a_{n+1}} < c \Rightarrow
     \end{equation}
-    Multiplicando termino a termino 
+    Multiplicando termino a termino
     \begin{equation}
       \dfrac{a_n}{a_{n_0}} < c^{n - n_0} \Rightarrow a_n < \dfrac{a_{n_0}}{c^{n_0}} \cdot c^n
-    \end{equation}
-    Llamemos $k = a_{n_0}/c^{n_0} \in \R \Rightarrow$
-    $lim_{n \to \infty} \sqrt[n]{k} = 1 \Rightarrow lim_{n \to \infty} \sqrt[n]{k \cdot c^n} = c \cdot lim_{n \to \infty} \sqrt[n]{k} = c$ \\
-    Tendríamos que $\limsup_{n \to \infty} \sqrt[n]{a_n} \leq \limsup_{n \to \infty} \sqrt[n]{k \cdot c^n} = c$ Absurdo! \\
+    \end{equation} Llamemos $k = a_{n_0}/c^{n_0} \in \R \Rightarrow$ \begin{equation} 
+      lim_{n \to \infty} \sqrt[n]{k} = 1 \Rightarrow lim_{n \to \infty} \sqrt[n]{k \cdot c^n} = c \cdot lim_{n \to \infty} \sqrt[n]{k} = c
+    \end{equation} Tendríamos que \begin{equation}
+      \limsup_{n \to \infty} \sqrt[n]{a_n} \leq \limsup_{n \to \infty} \sqrt[n]{k \cdot c^n} = c
+    \end{equation} Absurdo!
     Luego debe ser $\limsup_{n \to \infty} \sqrt[n]{a_n} \leq \lim_{n \to \infty} \dfrac{a_{n+1}}{a_n}$. \\
-
-
   \end{proof}
 \end{theorem}
 
 \begin{eg}
   Puede existir el límite de la raíz y no del cociente.
-
   \begin{proof}
-    Sean $0 < a < b$ y la sucesión $(x_n)_{n \in \N}$ que se obtiene alternando cada término por $a$ ó $b$. \\
-    $x_1 = a$, $x_2 = a \cdot b$, $x_3 = a² \cdot b$, $x_4 = a² \cdot b²$. \\
+    Sean $0 < a < b$ y la sucesión $(x_n)_{n \in \N}$ que se obtiene alternando cada término por $a$ ó $b$ \begin{equation}
+      x_1 = a, x_2 = a \cdot b, x_3 = a² \cdot b, x_4 = a² \cdot b²
+    \end{equation}
 
     $\dfrac{x_{n+1}}{x_n} = \begin{cases}
-      b & \text{si n es par}, \\
-      a & \text{si no}
-    \end{cases}$
+        b & \text{si n es par}, \\
+        a & \text{si no}
+      \end{cases}$
 
     Luego $\not \exists lim_{n \to \infty} \dfrac{x_{n+1}}{x_n}$, pero $\limsup_{n \to \infty} x_n = b$, $\liminf_{n \to \infty} x_n = a$. \\
     Por otro lado $lim_{n \to \infty} \sqrt[n]{x_n} = \sqrt{a \cdot b}$. Si $x_{2k} = a^k \cdot b^k \Rightarrow \sqrt[2k]{a^k \cdot b^k} = \sqrt{a \cdot b}$. \\
@@ -150,13 +146,13 @@
 
   \begin{proof}
     \begin{equation}
-      a_1 \cdot b_1 + \cdots a_n \cdot b_n =  
+      a_1 \cdot b_1 + \cdots a_n \cdot b_n =
     \end{equation}
     \begin{equation}
       a_1 \cdot (b_1 - b_2) + (a_1 + a_2) \cdot (b_2 - b_3) + \cdots + (a_1 + \cdots + a_{n-1}) \cdot (b_{n-1} - b_n) + (a_1 + \cdots + a_n) \cdot b_n
     \end{equation}
     \begin{equation}
-      = S_1 \cdot (b_1 - b_2) + S_2 \cdot (b_2 - b_3) + S_3 \cdot (b_3 - b_2) + \cdots + S_{n-1} (b_{n-1} - b_n) + S_n \cdot b_n 
+      = S_1 \cdot (b_1 - b_2) + S_2 \cdot (b_2 - b_3) + S_3 \cdot (b_3 - b_2) + \cdots + S_{n-1} (b_{n-1} - b_n) + S_n \cdot b_n
     \end{equation}
     \begin{equation}
       = \sum_{i = 2}^n S_{i-1} \cdot (b_{i-1} - b_i) + S_n \cdot b_n
@@ -176,7 +172,7 @@
 \end{corollary}
 
 \begin{corollary}[Criterio de Leibniz]
-  Si $(b_n)_{n \in \N}$ es decreciente y $lim_{n \to \infty} b_n = 0 \Rightarrow \sum (-1)^n b_n$ converge.
+  Si $(b_n)_{n \in \N}$ es decreciente y $ b_n \to 0 \Rightarrow \sum (-1)^n b_n$ converge.
   \begin{proof}
     Aplicamos el criterio de Dirichlet pues $\sum (-1)^n$ no converge y $S_n = 0, -1$ son acotadas.
   \end{proof}
@@ -186,34 +182,34 @@
 
 \begin{definition}
   Sea $\sum_{n \geq 1} a_n$, para cada $n \in \N$ definimos $p_n = \begin{cases}
-    a_n & \text{si } a_n > 0, \\
-    0 & \text{ c.c }
-  \end{cases}$ \\
+      a_n & \text{si } a_n > 0, \\
+      0   & \text{ c.c }
+    \end{cases}$ \\
   $q_n = \begin{cases}
-    0 & \text{si } a_n \geq 0, \\
-    -a_n & \text{ c.c }
-  \end{cases} \Rightarrow p_m, q_n \geq 0, \forall n \in N, a_n = p_n - q_n$ y $|a_n| = p_n + q_n = a_n + 2 \cdot q_n = 2 \cdot p_n - a_n$.  
+      0    & \text{si } a_n \geq 0, \\
+      -a_n & \text{ c.c }
+    \end{cases} \Rightarrow p_m, q_n \geq 0, \forall n \in N, a_n = p_n - q_n$ y $|a_n| = p_n + q_n = a_n + 2 \cdot q_n = 2 \cdot p_n - a_n$.
 \end{definition}
 
 \begin{note}
-  Si $\sum_{n \geq 1} a_n$ converge absolutamente $\Rightarrow \forall k \in \N$ vale que:
-  \begin{equation}
-    \sum_{n \geq 1} |a_n| \geq \sum_{n = 1}^k |a_n| = \sum_{n = 1}^k p_n + \sum_{n = 1}^k q_n \Rightarrow 
-  \end{equation}
-  $\sum_{n \geq 1} p_n$ y $\sum_{n \geq 1} q_n$ convergen, pues son crecientes y están acotadas por $\sum_{n \geq 1} |a_n|$. \\
-
-  Además si $\sum_{n \geq 1} p_n$ y $\sum_{n \geq 1} q_n$ convergen $\Rightarrow \sum a_n$ converge absolutamente.
+  Si $\sum_{n \geq 1} a_n$ converge absolutamente $\Rightarrow \forall k \in \N$ vale que \begin{equation}
+    \sum_{n \geq 1} |a_n| \geq \sum_{n = 1}^k |a_n| = \sum_{n = 1}^k p_n + \sum_{n = 1}^k q_n \Rightarrow
+  \end{equation} \begin{equation}
+    \sum_{n \geq 1} p_n, \sum_{n \geq 1} q_n
+  \end{equation} convergen, pues son crecientes y están acotadas por $\sum_{n \geq 1} |a_n|$. Además si $\sum_{n \geq 1} p_n$ y $\sum_{n \geq 1} q_n$ convergen $\Rightarrow \sum a_n$ converge absolutamente.
 \end{note}
 
 \begin{theorem}
   Si $\sum a_n$ converge condicionalmente $\Rightarrow \sum_{n \geq 1} p_n$ y $\sum_{n \geq 1} q_n$ son divergentes.
 
   \begin{proof}
-    Supongamos que $\sum q_n = c \Rightarrow |a_n| = a_n + 2 \cdot q_n$ \\
+    Supongamos que \begin{equation}
+      \sum q_n = c \Rightarrow |a_n| = a_n + 2 \cdot q_n
+    \end{equation}
     \begin{equation}
       \sum_{n = 1}^k |a_n| = \sum_{n = 1}^k a_n + 2 \cdot \sum_{n = 1}^k q_n
     \end{equation}
-    Si $k \to +\infty$ luego $\sum_{n \geq 1} |a_n| = \sum_{n \geq 1} a_n + 2 \cdot c$ Absurdo! pues no converge absolutamente $\therefore \sum_{n \geq 1} q_n$ diverge. 
+    Si $k \to +\infty$ luego $\sum_{n \geq 1} |a_n| = \sum_{n \geq 1} a_n + 2 \cdot c$ Absurdo! pues no converge absolutamente $\therefore \sum_{n \geq 1} q_n$ diverge.
   \end{proof}
 \end{theorem}
 
@@ -229,11 +225,11 @@
     Sea $\sum a_n, a_n > 0 \forall n \in \N$. Sea $\phi: \N \to \N$ una biyección y $b_n = a_{\phi(n)}$ quiero ver que $\sum b_n = \sum a_n$. \\
     Sea $S_n$ las sumas parciales de $a_n$ y $T_n$ las de $b_n$. Para cada $n \in \N$ llamo $m = max(\phi(1), \cdots \phi(n))$. Donde $\{ \phi(1), \cdots, \phi(n) \} \subseteq [[1, m]]$. \\
     Luego $T_n = \sum_{i \geq 1} a_{\phi(i)} \leq \sum_{j \geq 1} a_j = S_m$. Luego $T_n \leq S_m$. \\
-    Análogamente con $\phi^{-1} \Rightarrow S_m \leq T_n$ luego $\lim_{n \to \infty} S_n = lim_{n \to \infty} T_n \therefore \sum_{n \geq 1} a_n = \sum_{n \geq 1} b_n$. 
+    Análogamente con $\phi^{-1} \Rightarrow S_m \leq T_n$ luego $\lim_{n \to \infty} S_n = lim_{n \to \infty} T_n \therefore \sum_{n \geq 1} a_n = \sum_{n \geq 1} b_n$.
   \end{proof}
 \end{theorem}
 
-El caso general, $\sum_{n \geq 1} a_n = \sum_{n \geq 1} p_n - \sum_{n \geq 1} q_n \Rightarrow$ todo reordenamiento $(b_n)_{n \in N}$ de los términos de $(a_n)_{n \in \N}$ produce un reordenamiento de $(p_n)_{n \in \N}$ y $(q_n)_{n \in \N}$ que llamo $(u_n)_{n \in \N}$, $(v_n)_{n \in \N}$. De modo que son la parte positiva y negativa de $(b_n)_{n \in \N}$ y usamos el caso anterior pues son términos de valores positivos.  
+El caso general, $\sum_{n \geq 1} a_n = \sum_{n \geq 1} p_n - \sum_{n \geq 1} q_n \Rightarrow$ todo reordenamiento $(b_n)_{n \in N}$ de los términos de $(a_n)_{n \in \N}$ produce un reordenamiento de $(p_n)_{n \in \N}$ y $(q_n)_{n \in \N}$ que llamo $(u_n)_{n \in \N}$, $(v_n)_{n \in \N}$. De modo que son la parte positiva y negativa de $(b_n)_{n \in \N}$ y usamos el caso anterior pues son términos de valores positivos.
 
 
 

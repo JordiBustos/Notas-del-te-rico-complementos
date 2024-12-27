@@ -1,7 +1,7 @@
 \section{Conjuntos numerables}
 
 \begin{definition}
-    Un conjunto $X$ es numerable si $X \sim \N$. Cada biyección se llama una enumeración de los elementos de $X$. 
+    Un conjunto $X$ es numerable si $X \sim \N$. Cada biyección se llama una enumeración de los elementos de $X$.
 \end{definition}
 
 \begin{definition}
@@ -16,12 +16,12 @@
 \end{eg}
 
 \begin{eg}
-    $\Z$ es numerable. 
+    $\Z$ es numerable.
     \begin{proof}
         Definimos $f: \Z \to \N$ como $f(n) = \begin{cases}
-            2n & \text{si } n >0, \\
-            -2n+1 & \text{si } n \leq 0.
-        \end{cases}$ y $f^{-1}$ es una enumeración.
+                2n    & \text{si } n >0,     \\
+                -2n+1 & \text{si } n \leq 0.
+            \end{cases}$ y $f^{-1}$ es una enumeración.
     \end{proof}
 \end{eg}
 
@@ -56,19 +56,17 @@
     Si $\exists f: X \to Y$ y $g: Y \to X$ inyectivas $\Rightarrow \exists h:X \to Y$ biyectiva.
 
     \begin{proof}
-        Vamos a probar que existen dos particiones distintas de $X$ e $Y$. Sea $X = X_1 \cup X_2$ y $Y = Y_1 \cup Y_2 : f: X_1 \to Y_1$ y $g: X_2 \to Y_2$ son biyectivas. \\ 
-        
-        Podemos definir a $h: X \to Y$ como $h(x) = \begin{cases}
-            f(x) & \text{si } x \in X_1, \\
-            g^{-1}(x) & \text{si } x \in X_2.
-        \end{cases}$ y resulta biyectiva. \\
-        
-        Definimos $\phi(x):P(X) \to P(X)$, $\phi(A) = X-g(Y-f(A))$. Veamos primero que $\phi$ es creciente (i.e $A \subseteq B \Rightarrow \phi(A) \subseteq \phi(B)$.
+        Vamos a probar que existen dos particiones distintas de $X$ e $Y$. Sea $X = X_1 \cup X_2$ y $Y = Y_1 \cup Y_2 : f: X_1 \to Y_1$ y $g: X_2 \to Y_2$ son biyectivas. Podemos definir a $h: X \to Y$ como \begin{equation} h(x) = \begin{cases}
+                f(x)      & \text{si } x \in X_1, \\
+                g^{-1}(x) & \text{si } x \in X_2.
+            \end{cases}
+        \end{equation}
+        Que es biyectiva. Definimos $\phi(x):P(X) \to P(X)$, $\phi(A) = X-g(Y-f(A))$. Veamos primero que $\phi$ es creciente (i.e $A \subseteq B \Rightarrow \phi(A) \subseteq \phi(B)$.
         \begin{proof}
-             $A \subseteq B \iff f(A) \subseteq f(B) \iff y - f(B) \subseteq y - f(A) \iff g(y-f(B)) \subseteq g(y-f(A)) \iff X - \phi(A) \subseteq X - \phi(B)$
+            $A \subseteq B \iff f(A) \subseteq f(B) \iff y - f(B) \subseteq y - f(A) \iff g(y-f(B)) \subseteq g(y-f(A)) \iff X - \phi(A) \subseteq X - \phi(B)$
         \end{proof}
-        Sea $\mathscr{C} = \{ C \subset X: \phi(C) \subset C \} \neq \varnothing$ pues $X \in \mathscr{C}$ y $A = \bigcap_{C \in \mathscr{C}} C \neq \varnothing$, $A \subset C, \forall C \in \mathscr{C}$ y $\phi$ es creciente y tenemos que $\phi(C) \subset C \Rightarrow \phi(A) \subset \phi(C) \subset C \Rightarrow \phi(C) \in A$. Además, usando otra vez que $\phi$ es creciente, $\phi(\phi(A)) \subset \phi(A) \Rightarrow \phi(A) \in \mathscr{C} \Rightarrow A \subset \phi(A) \Rightarrow A = \phi(A)$. \\
 
+        Sea $\mathscr{C} = \{ C \subset X: \phi(C) \subset C \} \neq \varnothing$ pues $X \in \mathscr{C}$ y $A = \bigcap_{C \in \mathscr{C}} C \neq \varnothing$, $A \subset C, \forall C \in \mathscr{C}$ y $\phi$ es creciente y tenemos que $\phi(C) \subset C \Rightarrow \phi(A) \subset \phi(C) \subset C \Rightarrow \phi(C) \in A$. Además, usando otra vez que $\phi$ es creciente, $\phi(\phi(A)) \subset \phi(A) \Rightarrow \phi(A) \in \mathscr{C} \Rightarrow A \subset \phi(A) \Rightarrow A = \phi(A)$.
         Sean $X_1 = A$, $X-X_1=X_2=g_2(Y_2)$ \\
         $Y_1 = f(A)$, $Y_2 = Y - f(A) \Rightarrow$ \\
         $A = \phi(A) = X-g(Y-f(A)) \iff X-A = g(Y-f(A)) \iff X-X_1=g(Y_2) = X_2 \therefore f:X_1 \to Y_1$ y $g: X_2 \to Y_2$ son biyectivas.
@@ -84,10 +82,10 @@
 \end{eg}
 
 \begin{eg}
-    $(\N \times \N)$ es numerable. 
+    $(\N \times \N)$ es numerable.
     \begin{proof}
         $f: \N \to \N\times \N, f(n)=(1, n)$ es inyectiva.
-        $f: \N\times \N \to \N , f((n, m))= 2^n \cdot 3^m$ es inyectiva por Teorema Fundamental de la Aritmética $\therefore$ es numerable. 
+        $f: \N\times \N \to \N , f((n, m))= 2^n \cdot 3^m$ es inyectiva por Teorema Fundamental de la Aritmética $\therefore$ es numerable.
     \end{proof}
 \end{eg}
 
@@ -96,10 +94,12 @@
 \begin{theorem}
     $\R$  no es numerable.
     \begin{proof}
-        Supongamos que es numerable. $\Rightarrow$ \\
-        $\exists f: \N \to \R$ biyectiva. A cada número real $x_n$ le asignamos un intervalo centrado en ese punto de longitud $2^{-n}$. La unión de todos esos intervalos tiene longitud menor o igual a la suma de las longitudes (se pueden superponer). \\
-        
-        $|\bigcup_{n\in\N} Ix_n| \leq \sum_{i=1}^{n} |Ix_n| = \sum_{n \in \N}\dfrac{1}{2^n} = 1 $. Se cubrió un intervalo de longitud $1$ de toda la recta real, por lo tanto quedan reales afuera y eso es un absurdo $\therefore$ $\R$ no es numerable.
+        Supongamos que es numerable $\Rightarrow$
+        $\exists f: \N \to \R$ biyectiva. A cada número real $x_n$ le asignamos un intervalo centrado en ese punto de longitud $2^{-n}$. La unión de todos esos intervalos tiene longitud menor o igual a la suma de las longitudes (se pueden superponer).
+        \begin{equation}
+            |\bigcup_{n\in\N} Ix_n| \leq \sum_{i=1}^{n} |Ix_n| = \sum_{n \in \N}\dfrac{1}{2^n} = 1
+        \end{equation}
+        Se cubrió un intervalo de longitud $1$ de toda la recta real, por lo tanto quedan reales afuera y eso es un absurdo $\therefore \R$ no es numerable.
     \end{proof}
 \end{theorem}
 
@@ -148,7 +148,7 @@ La idea del último ejemplo (argumento diagonal), se puede adaptar para probar q
 \end{theorem}
 
 \begin{corollary}
-    $f: X \to Y$ inyectiva e $Y$ numerable $\Rightarrow$ $X$ es a lo sumo numerable. 
+    $f: X \to Y$ inyectiva e $Y$ numerable $\Rightarrow$ $X$ es a lo sumo numerable.
     \begin{proof}
         $f$ es inyectiva $\Rightarrow X \sim f(X)$ y como $f(X) \subset Y \Rightarrow$ es a lo sumo numerable por el teorema anterior.
     \end{proof}
@@ -171,12 +171,12 @@ La idea del último ejemplo (argumento diagonal), se puede adaptar para probar q
 \begin{eg}
     $\Q(x) \sim \N$.
     \begin{proof}
-        $\Q_k[x] = \{ p \in \Q(x) : gr(p) \leq k \}$ tenemos $f_n : \Q^{n+1} \to \Q_n[x]$, $f(a_0, \cdots, a_{n+1}) = a_0 + \cdots + a_nx^n$, cada $f_n$ es biyectiva $\Rightarrow \Q^{n+1}$ es numerable y como la unión numerable de conjuntos numerables es numerable $\therefore \Q(x)$ es numerable. 
+        $\Q_k[x] = \{ p \in \Q(x) : gr(p) \leq k \}$ tenemos $f_n : \Q^{n+1} \to \Q_n[x]$, $f(a_0, \cdots, a_{n+1}) = a_0 + \cdots + a_nx^n$, cada $f_n$ es biyectiva $\Rightarrow \Q^{n+1}$ es numerable y como la unión numerable de conjuntos numerables es numerable $\therefore \Q(x)$ es numerable.
     \end{proof}
 \end{eg}
 
 \begin{definition}
-    Un número se dice algebraico si es raíz de algún polinomio con coeficientes enteros, por ejemplo $\sqrt{2}$ es raíz de $x² = 2$. 
+    Un número se dice algebraico si es raíz de algún polinomio con coeficientes enteros, por ejemplo $\sqrt{2}$ es raíz de $x² = 2$.
 \end{definition}
 
 \begin{definition}

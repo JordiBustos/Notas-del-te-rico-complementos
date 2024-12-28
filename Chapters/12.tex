@@ -66,7 +66,8 @@
 \begin{prop}
   Sea $A \subset \R^n, x_0 \in A, f: A \to \R^k \Rightarrow f$ es continua en $x_0 \iff$ cada vez que $(x_n)_{n \in \N} \subset A$ converge a $x_0 \Rightarrow f(x(x_n)_{n \in \N}) converge a f(x_0)$.
   \begin{proof}
-    Para la ida supongamos $f$ continua en $x_0$ y $x_n \to x_0, (x_n)_{n \in \N} \subset A$. Sea $\e > 0, \exists \delta > 0 : 0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e$. Además $\exists n_0 \in \N : (\forall n > n_0)(d(x_n, x_0)) < \delta$ (tomando $\e = \delta$ en la definición) $\Rightarrow d(f(x_n), f(x_0)) < \e \therefore lim_{n \to \infty} f(x_n) = f(x_0)$. \\
+    Para la ida supongamos $f$ continua en $x_0$ y $x_n \to x_0, (x_n)_{n \in \N} \subset A$. Sea $\e > 0, \exists \delta > 0 : 0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e$.
+    Además $\exists n_0 \in \N : (\forall n > n_0)(d(x_n, x_0)) < \delta$ (tomando $\e = \delta$ en la definición) $\Rightarrow d(f(x_n), f(x_0)) < \e \therefore lim_{n \to \infty} f(x_n) = f(x_0)$.
 
     Para la vuelta supongamos que $f$ no es continua en $x_0$, $x_0$ no es punto aislado de $A$ y $lim_{x \to x_0} f(x) \neq f(x_0)$. Para cada $n \in \N, \exists x_n \in A : d(x_n, x_0) < \delta$, pero $d(f(x), f(x_0)) > \e$, es decir que $lim_{n \to \infty} x_n = x_0$, pero $lim_{n \to \infty} f(x_n) \neq f(x_0)$.
   \end{proof}
@@ -137,7 +138,6 @@
   \end{proof}
 \end{prop}
 
-%TODO proof
 \begin{prop}
   $A \subset \R^n, f: A \to \R^k$ son equivalentes:
   \begin{enumerate}
@@ -145,14 +145,25 @@
     \item $\forall V \subset \R^k$ abierto, $f^{-1}(V)$ es abierto relativo a $A$.
     \item $\forall F \subset \R^k$ cerrado, $f^{-1}(V)$ es cerrado relativo a $A$.
   \end{enumerate}
+  \begin{proof}
+    1) $\Rightarrow$ 2)  Si $x \in f^{-1}(V)$, $f$ es continua en $x$ y $V$ es un entorno de $f(x)$. Por lo que $\exists U$ entorno de $x$ relativo a $A : f(U) \subset V$. Luego $U \subset f^{-1}(V)$. Entonces $f^{-1}(V)$ es un entorno de $x$ relativo a A y $f^{-1}(V)$ es abierto relativo a A. \\
+    2) $\Rightarrow$ 3) Si $F \subset \R^k$ es cerrado, entonces $F^c$ es abierto y $f^{-1}(F^c)$ es abierto relativo a $A$ por hipótesis, pero $f^{-1}(F) = A - f^{-1}(F^c)$. Luego $f^{-1}(F)$ es cerrado relativo a A. \\
+    3) $\Rightarrow$ 1) Sea $x \in A$. $V$ entorno de $f(x) \Rightarrow f^{-1}(\R^k - V^{\circ})$ es un cerrado relativo a $A \Rightarrow f^{-1}(V^{\circ}) = A - f^{-1}(\R^k - V^{\circ})$ es abierto relativo a A y $f(f^{-1}(V^{\circ}) \subset V$. Luego $f$ es continua en $x$, pues dado un entorno de $x$, $f^{-1}(V^{\circ})$ encontramos un conjunto donde la imagen "se mete adentro".
+  \end{proof}
 \end{prop}
 
-% TODO proof
 \begin{corollary}
+  Sean $f, g: A \to \R^k$ continuas.
   \begin{enumerate}
-    \item Si $f,g : A \to \R^k$ son continuas entonces $\{ x \in A : f(x) \neq g(x) \}$ es abierto en $A$ y $\{x \in A: f(x) = g(x)\}$ es cerrado en $A$.
-    \item Si $f: A \to \R$ es continua, entonces $\{x \in A : f(x) > 0\}$ es abierto en $A$.
+    \item $\{ x \in A : f(x) \neq g(x) \}$ es abierto en $A$ y $\{x \in A: f(x) = g(x)\}$ es cerrado en $A$.
+    \item $\{x \in A : f(x) > 0\}$ es abierto en $A$.
   \end{enumerate}
+  \begin{proof}
+    \begin{enumerate}
+      \item Sea $h: A \to \R^k$, $h = f - g$ es continua y $\R^k - \{0\}$ es abierto $\Rightarrow h^{-1}(\R^k - \{0\}) = \{ x \in A : f(x) - g(x) \neq 0 \}$ es abierto en A. Como $\{0\}$ es cerrado $\Rightarrow h^{-1}(\{0\}) = \{ x \in A : f(x) - g(x) = 0\}$ es cerrado.
+      \item Como $f$ es continua y $(0, +\infty)$ es abierto, luego $f^{-1}((0, +\infty)) = \{x \in A : f(x) > 0\}$ es abierto en A.
+    \end{enumerate}
+  \end{proof}
 \end{corollary}
 
 \begin{note}

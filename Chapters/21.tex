@@ -1,5 +1,33 @@
 \section{Diferenciación de sucesiones de funciones}
 
+\begin{theorem}
+  Sea $(f_n)_{n \in \N}$ una sucesión de funciones derivables en $[a, b]$. Si $\exists c \in [a, b] : (f_n(c))_{n \in \N}$ es convergente y si las derivadas $f_n^{\prime}$ convergen uniformemente en $[a, b]$, digamos $f_n^{\prime} \rightrightarrows g_n \Rightarrow f_n \rightrightarrows f$ en $[a, b]$ y $f^{\prime} = g$.
+  Es decir que $(lim_{n \to +\infty} f_n)^{\prime} = (lim_{n \to +\infty} f_n^{\prime})$ siempre que las derivadas converjan uniformemente.
+  \begin{proof}
+    Veamos que $(f_n)_{n \in \N}$ es de Cauchy. Vamos a usar Teorema de Valor Medio aplicado en $f_m - f_n$. \begin{equation}
+      (f_m(x) - f_n(x)) - (f_m(c) - f_n(c)) = (x-c)(f_m^{\prime}(d) - f_n^{\prime}(d)) \text{  } (\forall x \in [a, b])(d \in (x, c))
+    \end{equation}
+    \begin{equation}
+      f_m(x) - f_n(x) = f_m(c) - f_m(c) + (x-c) (f_m^{\prime}(d) - f_n^{\prime}(d)) \Rightarrow
+    \end{equation} Como $f_n^{\prime}$, $f_m^{\prime}$ convergen uniformemente y $f_n(c)$, $f_m(c)$ convergen $\therefore (f_n)_{n \in \N}$ es de Cauchy. Entonces $f_n$ converge uniformemente, digamos $f_n \rightrightarrows f$. Reescribo la igualdad anterior con $x_0$ en vez de $c$.
+    \begin{equation}
+      \dfrac{f_m(x_0) - f_n(x) - (f_m(x_0) - f_n(x_0))}{x - x_0} = f_m^{\prime}(d) - f_n^{\prime} \text{  } d \in (x, x_0)
+    \end{equation}
+    \begin{equation}
+      \dfrac{f_m(x) - f_m(c)}{x - c} - \dfrac{f_n(x) - f_n(c)}{x - c} = f_m^{\prime}(d) - f_n^{\prime}(d)
+    \end{equation}
+    Sea $q_n(x) = \dfrac{f_n(x)-f_n(x_0)}{x-x_0}$ y $q(x) = \dfrac{f(x)-f(x_0)}{x - x_0}$ con $x \neq x_0$. Por la igualdad anterior $(q_n)_{n \in \N}$ es de Cauchy $\therefore q_n \rightrightarrows q$. Así que \begin{equation}
+      lim_{x \to x_0} (lim_{n \to +\infty} q_n(x)) = lim_{n \to +\infty}(lim_{x \to x_0} q_n(x)) = q(x)
+    \end{equation} O sea, \begin{equation}
+      lim_{x \to x_0} \dfrac{f(x) - f(x_0)}{x-x_0} = lim_{n \to +\infty} q_n(x_0) = g(x_0) \Rightarrow f^{\prime} = g
+    \end{equation} 
+  \end{proof} 
+\end{theorem}
+
+\begin{corollary}
+  Sea $\sum_{n \geq 1} f_n$, $f_i$ derivable en $[a, b]$ $\forall i$. Si $\sum_{n \geq 1} f_n(c)$ converge con $c \in [a, b]$ y $\sum f_n^{\prime} = g \Rightarrow \sum_{n \geq 1} f_n \rightrightarrows f$ en $[a, b]$ y $f$ es derivable con $f^{\prime} = g$. 
+\end{corollary}
+
 \section{Series de potencia}
 
 \section{Familias equicontinuas}

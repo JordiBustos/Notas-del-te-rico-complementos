@@ -16,7 +16,7 @@
   \begin{proof}
     Como $f$ es acotada $\exists k : f(x) \in B_k(0) \subset \R^k, \forall x \in A$. Sea $x_0 \in A$ queremos ver que $f$ es continua en $x_0$. Sea $(x_n)_{n \in \N} \subset A$ tal que $x_n \to x_0$ y supongamos que $f(x_n) \not \to f(x_0) \Rightarrow (\exists \e > 0), h: \N \to \N$ estrictamente creciente tal que $\|f(x_{h(n)} - f(x_0)) \geq \e, \forall n \in \N$. \\
     Para cada $n \in \N$ consideremos $p_n = (x_{h(n)}, f(x_{h(n)})) \in G_f$. Como $x_{h(n)}$ converge, es acotada, $\exists L > 0 : x_{h(n)} \in B_L(0), \forall n \in \N$. Luego $(p_n)_{n \in \N}$ es acotada pues toma valores en $B_L(0)$ o $B_k(0)$, por lo que existe $\phi$ estrictamente creciente tal que $(p_{\phi_{h(n)}})_{n \in \N}$ converge a $p \in R^n \times \R^k$.
-    Supongamos que $p = (x_0^{\prime}, y) \Rightarrow x_{\phi_{h(n)}} \to x_0^{\prime}$ y $f(x_{\phi_{h(n)}}) \to y$. Como $x_{\phi_{h(n)}}$ es subsubsucesión de $x_n \to x_0^{\prime} = x_0 \in A$. Se tiene que $lim_{n \to +\infty} p_{\phi_{h(n)}} \in A \times \R^k$. Como estamos suponiendo que $G_f$ es cerrado entonces $x_0, y \in G_f$, es decir $y = f(x_0)$, pero entonces $f(x_{\phi_{h(n)}}) \to f(x_0)$. Absurdo!
+    Supongamos que $p = (x_0^{\prime}, y) \Rightarrow x_{\phi_{h(n)}} \to x_0^{\prime}$ y $f(x_{\phi_{h(n)}}) \to y$. Como $x_{\phi_{h(n)}}$ es subsubsucesión de $x_n \to x_0^{\prime} = x_0 \in A$. Se tiene que $\lim_{n \to +\infty} p_{\phi_{h(n)}} \in A \times \R^k$. Como estamos suponiendo que $G_f$ es cerrado entonces $x_0, y \in G_f$, es decir $y = f(x_0)$, pero entonces $f(x_{\phi_{h(n)}}) \to f(x_0)$. Absurdo!
   \end{proof}
 \end{prop}
 
@@ -33,7 +33,7 @@
 \begin{theorem}[Weiertrass]
   Sea $K \subset \R^n$ compacto y no vacío. Una función continua $f: K \to \R$ es acotada superiormente y más aún $\exists y \in K : f(x) \leq f(y) (\forall x \in K)$.
   \begin{proof}
-    Si $f$ no es acotada superiormente para cada $n \in \N, \exists x_n \in K : f(x_n) \geq n$. Como $(x_n)_{n \in \N} \subset K$ que es compacto $\exists \phi: \N \to \N$ estrictamente creciente tal que $lim_{n \to +\infty} x_{\phi(n)} = \alpha \in K$. Como $f$ es continua en $\alpha, f(x_n) \to f(\alpha)$ y como es convergente, tiene que ser acotada. Absurdo, pues $f(x_{\phi(n)}) \geq h(n) \geq n (\forall n \in \N) \therefore f$ es acotada superiormente. \\
+    Si $f$ no es acotada superiormente para cada $n \in \N, \exists x_n \in K : f(x_n) \geq n$. Como $(x_n)_{n \in \N} \subset K$ que es compacto $\exists \phi: \N \to \N$ estrictamente creciente tal que $\lim_{n \to +\infty} x_{\phi(n)} = \alpha \in K$. Como $f$ es continua en $\alpha, f(x_n) \to f(\alpha)$ y como es convergente, tiene que ser acotada. Absurdo, pues $f(x_{\phi(n)}) \geq h(n) \geq n (\forall n \in \N) \therefore f$ es acotada superiormente. \\
     Sea ahora $F = \{ f(x) : x \in K\}$ este conjunto está acotado superiormente y es no vacío, $\exists s = sup(F) \Rightarrow \exists (y_n)_{n \in \N} \subset K : f(y_n) \to s$. Como $K$ es compacto $\exists \phi : \N \to \N$ estrictamente creciente tal que $y_{\phi(n)} \to y \in K$. Como $f$ es continua en $y \Rightarrow f(y_{\phi(n)}) \to f(y) \Rightarrow f(y) = s$. Luego $f(y)$ es cota superior de $F$ y $f(y) \in F \therefore$ alcanza valor máximo.
   \end{proof}
 \end{theorem}
@@ -56,7 +56,7 @@
 
   \begin{proof}
     Si $f(a) = f(b)$ no hay nada que probar. \\
-    Supongamos que $f(a) < f(b) \Rightarrow$ Sea $y \in (f(a), f(b))$ y consideremos a $U = \{ x \in [a, b] : f(x) < y \} \neq \varnothing$. Luego $U$ es acotado y entonces $\exists \alpha = sup(U)$ y $\alpha \in [a, b] \Rightarrow \exists (x_n)_{n \in \N} \subset U : x_n \to \alpha \Rightarrow f(x_n) \to f(\alpha)$ pues $f$ es continua. Como $(\forall n \in \N)(x_n \in U)(f(x_n) < y) \Rightarrow lim_{n \to +\infty} f(x_n) \leq y$. Quiero ver que $f(\alpha) = y$. Si fuese $f(\alpha) < y \Rightarrow \alpha \in U$. Además, como $y < f(b)$ y $\alpha \in [a, b]$ tiene que ser $\alpha < b$. Como $f$ es continua, $U$ es abierto relativo a $[a, b]$ así que $\exists r > 0 : B_r(\alpha) \cap [a, b] \subset U$. Si $s = \dfrac{1}{2} min(r, b-\alpha) \Rightarrow \alpha + s \in B_r(\alpha)$ y $a \leq \alpha + s \leq b \Rightarrow \alpha + s \in U \Rightarrow f(\alpha + s) < y$ Absurdo pues $\alpha = sup(U) \therefore f(\alpha) = y$.
+    Supongamos que $f(a) < f(b) \Rightarrow$ Sea $y \in (f(a), f(b))$ y consideremos a $U = \{ x \in [a, b] : f(x) < y \} \neq \varnothing$. Luego $U$ es acotado y entonces $\exists \alpha = sup(U)$ y $\alpha \in [a, b] \Rightarrow \exists (x_n)_{n \in \N} \subset U : x_n \to \alpha \Rightarrow f(x_n) \to f(\alpha)$ pues $f$ es continua. Como $(\forall n \in \N)(x_n \in U)(f(x_n) < y) \Rightarrow \lim_{n \to +\infty} f(x_n) \leq y$. Quiero ver que $f(\alpha) = y$. Si fuese $f(\alpha) < y \Rightarrow \alpha \in U$. Además, como $y < f(b)$ y $\alpha \in [a, b]$ tiene que ser $\alpha < b$. Como $f$ es continua, $U$ es abierto relativo a $[a, b]$ así que $\exists r > 0 : B_r(\alpha) \cap [a, b] \subset U$. Si $s = \dfrac{1}{2} min(r, b-\alpha) \Rightarrow \alpha + s \in B_r(\alpha)$ y $a \leq \alpha + s \leq b \Rightarrow \alpha + s \in U \Rightarrow f(\alpha + s) < y$ Absurdo pues $\alpha = sup(U) \therefore f(\alpha) = y$.
   \end{proof}
 \end{theorem}
 

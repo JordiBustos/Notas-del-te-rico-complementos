@@ -89,7 +89,7 @@
 \begin{definition}
   Sea $F : A \subset \R^n \to \R^n$ y sea $p \in A^{\circ}$ si $T_p : \R^n \to \R^n$ es una transformación lineal que verifica:
   \begin{equation}
-    lim_{x \to p} \dfrac{\| F(x) - F(p) - T_p(x-p) \|}{\|x-p\|} = 0 \Rightarrow
+    \lim_{x \to p} \dfrac{\| F(x) - F(p) - T_p(x-p) \|}{\|x-p\|} = 0 \Rightarrow
   \end{equation} Decimos que $F$ es diferenciable en $p$. A la transformación lineal la llamamos diferencial de $F$ en $p$ y lo notamos $DF_p$.
 \end{definition}
 
@@ -111,18 +111,18 @@ Además la diferencial de $F$ es la matriz que se obtiene al poner como filas lo
 También podemos observar que si $F$ es diferenciable en $P$ y $v \in \R^n \Rightarrow \alpha(t) = p + t \cdot v$.
 
 \begin{equation}
-  0 = lim_{t \to 0} \dfrac{\| F(p + t \cdot v) - F(p) - DF_p(t \cdot v) \|}{|t|} 
+  0 = \lim_{t \to 0} \dfrac{\| F(p + t \cdot v) - F(p) - DF_p(t \cdot v) \|}{|t|} 
 \end{equation}
 \begin{equation}
-  = lim_{t \to 0} \| \dfrac{F(p + tv) - F(p)}{t} - DF_p(v) \| 
+  = \lim_{t \to 0} \| \dfrac{F(p + tv) - F(p)}{t} - DF_p(v) \| 
 \end{equation}
 \begin{equation}
-  \iff DF_p(v) = lim_{t \to 0} \dfrac{F(p+t \cdot v) - F(p)}{t} \text{  } (\forall v \in \R^n)
+  \iff DF_p(v) = \lim_{t \to 0} \dfrac{F(p+t \cdot v) - F(p)}{t} \text{  } (\forall v \in \R^n)
 \end{equation}
 
 \begin{note}
   Si $G, H: A \subset \R^n \to \R^n$ son diferenciables podemos considerar su producto escalar como $F(x) = \langle G(x), H(x) \rangle$ que es diferenciable.
-  Además $lim_{t \to 0} \dfrac{F(p + tx) - F(p)}{t}$ = \begin{equation}
+  Además $\lim_{t \to 0} \dfrac{F(p + tx) - F(p)}{t}$ = \begin{equation}
     \lim_{t \to 0} \dfrac{1}{t} ( \langle G(p + tx), H(p+tx) \rangle - \langle G(p), H(p) \rangle )
   \end{equation}
   \begin{equation}

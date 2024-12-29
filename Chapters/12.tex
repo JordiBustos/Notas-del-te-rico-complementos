@@ -2,12 +2,12 @@
 \begin{prop}
   Sea $A \subset \R^n, f: A \to \R^k, f=(f_1, \cdots, f_k), y = (y_1, \cdots, y_k) \in \R^k$ son equivalentes:
   \begin{enumerate}
-    \item $lim_{x \to x_0} f(x) = y$. 
-    \item $\forall i \in \{1, \cdots, k\}, lim_{x \to x_0} f_i(x) = y_i$.
+    \item $\lim_{x \to x_0} f(x) = y$. 
+    \item $\forall i \in \{1, \cdots, k\}, \lim_{x \to x_0} f_i(x) = y_i$.
   \end{enumerate}
   \begin{proof}
     \begin{itemize}
-      \item Para la ida $(\forall \e > 0)(\exists \delta > 0) : (\forall x \in A), 0 < d(x, x_0) < \delta \Rightarrow d(f(x), y) < \e$. Luego, si $d(x, x_0) < \delta \Rightarrow d(f_i(x) - y_i) < d(f(x) - y) < \e \therefore lim_{x \to x_0} f_i(x) = y_i$.
+      \item Para la ida $(\forall \e > 0)(\exists \delta > 0) : (\forall x \in A), 0 < d(x, x_0) < \delta \Rightarrow d(f(x), y) < \e$. Luego, si $d(x, x_0) < \delta \Rightarrow d(f_i(x) - y_i) < d(f(x) - y) < \e \therefore \lim_{x \to x_0} f_i(x) = y_i$.
       \item Para la vuelta, sea $\e > 0, (\forall i \in \{1, \cdots, k\})(\exists \delta_i > 0) : (\forall x \in A) 0 \leq d(x, x_0) < \delta_i$. \\
     $\Rightarrow d(f_i(x) - y_i) < \dfrac{\e}{\sqrt{k}}$. Si $\delta = min(\delta_i, i = 1, \cdots, k)$ y $0 \leq d(x, x_0) < \delta$.
     $\Rightarrow d(f(x) - y) = \sqrt{\sum_{i = 1}^k | f_i(x) - y_i |^2 } < \sqrt{\sum_{i = 1}^k \dfrac{\e^2}{k}} = \e$.
@@ -18,8 +18,8 @@
 \begin{definition}[Límites laterales]
   Sea $A \subset R, f: A \to R^k$.
   \begin{enumerate}
-    \item Si $x_0$ es un punto de acumulación de $A_{x_0}^{+} = A \cap [x_0, +\infty)$ y la restricción $f|_{A_{x_0}^{+}} \to R$ tiene límite igual a $y$ en $x_0 \Rightarrow$ decimos que y es límite por derecha de $f$ en $x_0 \Rightarrow lim_{x \to x_0^+} f(x) = y$.
-    \item Si $x_0$ es un punto de acumulación de $A_{x_0}^{-} = A \cap (-\infty, x_0]$ y la restricción $f|_{A_{x_0}^{-}} \to R$ tiene límite igual a $y$ en $x_0 \Rightarrow$ decimos que y es límite por izquierda de $f$ en $x_0 \Rightarrow lim_{x \to x_0^-} f(x) = y$.
+    \item Si $x_0$ es un punto de acumulación de $A_{x_0}^{+} = A \cap [x_0, +\infty)$ y la restricción $f|_{A_{x_0}^{+}} \to R$ tiene límite igual a $y$ en $x_0 \Rightarrow$ decimos que y es límite por derecha de $f$ en $x_0 \Rightarrow \lim_{x \to x_0^+} f(x) = y$.
+    \item Si $x_0$ es un punto de acumulación de $A_{x_0}^{-} = A \cap (-\infty, x_0]$ y la restricción $f|_{A_{x_0}^{-}} \to R$ tiene límite igual a $y$ en $x_0 \Rightarrow$ decimos que y es límite por izquierda de $f$ en $x_0 \Rightarrow \lim_{x \to x_0^-} f(x) = y$.
   \end{enumerate}
 \end{definition}
 
@@ -30,9 +30,9 @@
 \end{definition}
 
 \begin{lemma}
-  Sea $A \subset \R^n, x_0 \in A \Rightarrow f: A \to \R^k$ es continua en $x_0 \iff$ o bien $x_0$ es aislado en $A$ o bien $lim_{x \to x_0} f(x) = f(x_0)$.
+  Sea $A \subset \R^n, x_0 \in A \Rightarrow f: A \to \R^k$ es continua en $x_0 \iff$ o bien $x_0$ es aislado en $A$ o bien $\lim_{x \to x_0} f(x) = f(x_0)$.
   \begin{proof}
-    Si $f$ es continua en $x_0$ y $x_0$ no es aislado en $A$ quiero ver que entonces $lim_{x \to x_0} f(x) = f(x_0)$. Como $\forall x \in A$ vale que $d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e$. Entonces $0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0) < \e$. Si $x_0$ es punto asilado de $A \Rightarrow \exists \delta>0, B_{\delta}(x_0) \cap A =  \{x_0\}$ y vale que $\forall x \in A : d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e$, pues $d(f(x_0), f(x_0)) = 0 < \e$. Si $x_0$ no es punto aislado de $A$. Como $lim_{x \to x_0} f(x) = f(x_0)$, dado $\e > 0, \exists \delta > 0 : \forall x \in A, 0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e$ y si $x = x_0$ claramente $d(f(x), f(x_0)) = 0 < \e$.
+    Si $f$ es continua en $x_0$ y $x_0$ no es aislado en $A$ quiero ver que entonces $\lim_{x \to x_0} f(x) = f(x_0)$. Como $\forall x \in A$ vale que $d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e$. Entonces $0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0) < \e$. Si $x_0$ es punto asilado de $A \Rightarrow \exists \delta>0, B_{\delta}(x_0) \cap A =  \{x_0\}$ y vale que $\forall x \in A : d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e$, pues $d(f(x_0), f(x_0)) = 0 < \e$. Si $x_0$ no es punto aislado de $A$. Como $\lim_{x \to x_0} f(x) = f(x_0)$, dado $\e > 0, \exists \delta > 0 : \forall x \in A, 0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e$ y si $x = x_0$ claramente $d(f(x), f(x_0)) = 0 < \e$.
   \end{proof}
 \end{lemma}
 
@@ -67,9 +67,9 @@
   Sea $A \subset \R^n, x_0 \in A, f: A \to \R^k \Rightarrow f$ es continua en $x_0 \iff$ cada vez que $(x_n)_{n \in \N} \subset A$ converge a $x_0 \Rightarrow f(x(x_n)_{n \in \N}) converge a f(x_0)$.
   \begin{proof}
     Para la ida supongamos $f$ continua en $x_0$ y $x_n \to x_0, (x_n)_{n \in \N} \subset A$. Sea $\e > 0, \exists \delta > 0 : 0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e$.
-    Además $\exists n_0 \in \N : (\forall n > n_0)(d(x_n, x_0)) < \delta$ (tomando $\e = \delta$ en la definición) $\Rightarrow d(f(x_n), f(x_0)) < \e \therefore lim_{n \to \infty} f(x_n) = f(x_0)$.
+    Además $\exists n_0 \in \N : (\forall n > n_0)(d(x_n, x_0)) < \delta$ (tomando $\e = \delta$ en la definición) $\Rightarrow d(f(x_n), f(x_0)) < \e \therefore \lim_{n \to \infty} f(x_n) = f(x_0)$.
 
-    Para la vuelta supongamos que $f$ no es continua en $x_0$, $x_0$ no es punto aislado de $A$ y $lim_{x \to x_0} f(x) \neq f(x_0)$. Para cada $n \in \N, \exists x_n \in A : d(x_n, x_0) < \delta$, pero $d(f(x), f(x_0)) > \e$, es decir que $lim_{n \to \infty} x_n = x_0$, pero $lim_{n \to \infty} f(x_n) \neq f(x_0)$.
+    Para la vuelta supongamos que $f$ no es continua en $x_0$, $x_0$ no es punto aislado de $A$ y $\lim_{x \to x_0} f(x) \neq f(x_0)$. Para cada $n \in \N, \exists x_n \in A : d(x_n, x_0) < \delta$, pero $d(f(x), f(x_0)) > \e$, es decir que $\lim_{n \to \infty} x_n = x_0$, pero $\lim_{n \to \infty} f(x_n) \neq f(x_0)$.
   \end{proof}
 \end{prop}
 
@@ -132,7 +132,7 @@
 \end{definition}
 
 \begin{prop}
-  $A \subset \R^n, f: A \to \R^k$ continua $\iff$ cada vez que $(x_n)_{n \in \N} \subset A, x_n \to x \in A$ se tiene que $lim_{n \to \infty} f(x_n) = x$.
+  $A \subset \R^n, f: A \to \R^k$ continua $\iff$ cada vez que $(x_n)_{n \in \N} \subset A, x_n \to x \in A$ se tiene que $\lim_{n \to \infty} f(x_n) = x$.
   \begin{proof}
     Inmediato.
   \end{proof}

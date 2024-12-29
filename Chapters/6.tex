@@ -10,12 +10,12 @@ Una subsucesión de $x$ es la restricción de $x$ a un subconjunto infinito $A =
 \end{note}
 
 \begin{definition}
-  Decimos que $a = lim_{n \to \infty} x_n \iff (\forall \e > 0)(\exists n_0 \in \N) : |x_n - a| < \e, \forall n > n_0$. \\
+  Decimos que $a = \lim_{n \to \infty} x_n \iff (\forall \e > 0)(\exists n_0 \in \N) : |x_n - a| < \e, \forall n > n_0$. \\
   Equivalentemente, si $\forall \e > 0$ el intervalo $(a-\e, a+\e)$ contiene a todos los términos de la sucesión salvo quizás un número finitos.
 \end{definition}
 
 \begin{theorem}[Unicidad del límite]
-  Si $lim_{n \to \infty} x_n = a$ y $lim_{n \to \infty} x_n = b \Rightarrow a=b$
+  Si $\lim_{n \to \infty} x_n = a$ y $lim_{n \to \infty} x_n = b \Rightarrow a=b$
   \begin{proof}
     Supongamos que $a \neq b$. Tomemos $\e = \dfrac{|b-a|}{2} > 0$. \\
     $(a - \e, a+\e) \cap (b-\e, b+\e) = \varnothing$. En efecto si

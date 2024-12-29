@@ -1,7 +1,7 @@
 \section{Sucesiones de funciones}
 
 \begin{definition}[Convergencia puntual]
-  $X \subset \R$ y sean $f_n: X \to \R$ $\forall n \in \N$. La sucesión $(f_n)_{n \in \N}$ converge puntualmente a $f: X \to \R$ si $(\forall x \in X) lim_{n \to +\infty} f_n(x) = f(x)$.
+  $X \subset \R$ y sean $f_n: X \to \R$ $\forall n \in \N$. La sucesión $(f_n)_{n \in \N}$ converge puntualmente a $f: X \to \R$ si $(\forall x \in X) \lim_{n \to +\infty} f_n(x) = f(x)$.
 \end{definition}
 
 \begin{eg}
@@ -9,7 +9,7 @@
     0 & \text{si } 0 \leq x < 1, \\
     1 & \text{si } x = 1.
   \end{cases}\end{equation}
-  Si $x \in [0, 1)$, $lim_{n \to \infty} f_n(x) = lim_{n \to \infty} x^n = 0$. Por otro lado si $x = 1$, $lim_{n \to \infty} 1^n = 1$. \\
+  Si $x \in [0, 1)$, $\lim_{n \to \infty} f_n(x) = \lim_{n \to \infty} x^n = 0$. Por otro lado si $x = 1$, $\lim_{n \to \infty} 1^n = 1$. \\
   \begin{tikzpicture}
     \begin{axis}[
       width=10cm, height=7cm,
@@ -43,13 +43,13 @@
 \end{eg}
 
 \begin{eg}
-  $f_n: [0, 2\pi] \to \R$, $f_n(x) = cos(nx)$ no converge puntualmente pues si $x = \pi$, $f_n(\pi) = (-1)^n$ y $\nexists lim_{n \to +\infty} f_n(\pi)$.
+  $f_n: [0, 2\pi] \to \R$, $f_n(x) = cos(nx)$ no converge puntualmente pues si $x = \pi$, $f_n(\pi) = (-1)^n$ y $\nexists \lim_{n \to +\infty} f_n(\pi)$.
 \end{eg}
 
 Notemos que si $f_n: X \subset \R \to \R$ converge puntualmente a $f: X \to \R \Rightarrow (\forall \e > 0)(\exists n_0 \in \N) : |f_n(x) - f(x)| < \e$ $(\forall n > n_0)$, pero $n_0$ depende de $\e$ y de $x$. Si $\e$ está fijo puede ser que ningún $n_0 \in \N$ sirva $\forall x \in X$.
 
 \begin{eg}
-  $f_n: [0, 1] \to \R$, $f_n(x) = x^n$. Si $\e = \frac{1}{2}$ $(\forall n \in \N)(\exists x \in [0, 1)) : |f_n(x) - f(x)| \geq \e = \frac{1}{2} \iff |x^n - 0| \geq \frac{1}{2}$. En efecto pues dado $n \in \N$, $lim_{x \to 1} x^n = 1$. 
+  $f_n: [0, 1] \to \R$, $f_n(x) = x^n$. Si $\e = \frac{1}{2}$ $(\forall n \in \N)(\exists x \in [0, 1)) : |f_n(x) - f(x)| \geq \e = \frac{1}{2} \iff |x^n - 0| \geq \frac{1}{2}$. En efecto pues dado $n \in \N$, $\lim_{x \to 1} x^n = 1$. 
 \end{eg}
 
 \begin{definition}[Convergencia uniforme]
@@ -72,7 +72,7 @@ Notemos que si $f_n: X \subset \R \to \R$ converge puntualmente a $f: X \to \R \
   \end{proof}
 \end{theorem}
 
-$f = \sum f_n$ es un caso particular del límite. $f : X \to \R$, $f_n: X \to \R$. $f = lim_{n \to +\infty} S_n$, $S_n$ la suma parcial, luego $\sum f_n \rightrightarrows f \iff (\forall \e > 0)(\exists n_0 \in \N) : |S_{n+1}(x) - S_n| < \e$ $(\forall n > n_0)(\forall x \in X)$.
+$f = \sum f_n$ es un caso particular del límite. $f : X \to \R$, $f_n: X \to \R$. $f = \lim_{n \to +\infty} S_n$, $S_n$ la suma parcial, luego $\sum f_n \rightrightarrows f \iff (\forall \e > 0)(\exists n_0 \in \N) : |S_{n+1}(x) - S_n| < \e$ $(\forall n > n_0)(\forall x \in X)$.
 
 \begin{definition}[Convergencia normal]
   Decimos que $\sum f_n: X \to \R$ converge normalmente si $\exists (a_n)_{n \in \N} \subset \R : \sum a_n < +\infty$ y $ |f_n(x)| < a_n$ $(\forall n \in \N)(\forall x \in X)$.
@@ -117,29 +117,29 @@ Notemos que la convergencia normal implica la convergencia uniforme que a su vez
     1 & \text{si } x = 1, \\
     0 & \text{si } 0 \leq x < 1. 
   \end{cases}$ \begin{equation}
-    lim_{x \to 1} (lim_{n \to \infty} f_n(x)) = lim_{x \to 1} f(x) = 0
+    \lim_{x \to 1} (\lim_{n \to \infty} f_n(x)) = \lim_{x \to 1} f(x) = 0
   \end{equation}
   \begin{equation}
-    lim_{n \to \infty} (lim_{x \to 1} f_n(x)) = lim_{n \to \infty} (lim_{x \to 1} x^n) = lim_{n \to \infty} 1 = 1
+    \lim_{n \to \infty} (\lim_{x \to 1} f_n(x)) = \lim_{n \to \infty} (\lim_{x \to 1} x^n) = \lim_{n \to \infty} 1 = 1
   \end{equation}
 \end{eg}
 
 \begin{theorem}
-  Sea $a$ un punto de acumulación de $X$. Si la sucesión $f_n: X \to \R$ converge uniformemente a $f: X \to \R$ y $(\forall n \in \N)(\exists lim_{x \to a} f_n(x) = L_n) \Rightarrow$
+  Sea $a$ un punto de acumulación de $X$. Si la sucesión $f_n: X \to \R$ converge uniformemente a $f: X \to \R$ y $(\forall n \in \N)(\exists \lim_{x \to a} f_n(x) = L_n) \Rightarrow$
   \begin{enumerate}
-    \item $\exists lim_{n \to \infty}$.
-    \item $L = lim_{x \to a} f(x)$.
+    \item $\exists \lim_{n \to \infty}$.
+    \item $L = \lim_{x \to a} f(x)$.
   \end{enumerate}
   Es decir que \begin{equation}
-    lim_{n \to \infty}(lim_{x \to a} f_n(x)) = lim_{x \to a}(lim_{n \to \infty} f_n(x))
+    \lim_{n \to \infty}(\lim_{x \to a} f_n(x)) = \lim_{x \to a}(\lim_{n \to \infty} f_n(x))
   \end{equation}
   Siempre que los límites de adentro existan y el de la sucesión de funciones sea uniforme.
 
   \begin{proof}
-    Para ver que $\exists lim_{n \to \infty} L_n = L$. Probemos que $L_n$ es de Cauchy.
+    Para ver que $\exists \lim_{n \to \infty} L_n = L$. Probemos que $L_n$ es de Cauchy.
     \begin{enumerate}
       \item Dado $\e > 0$, como $f_n \rightrightarrows f$, $\exists n_0 \in \N : |f_n(x) - f_m(x)| < \frac{\e}{3}$ $(\forall n > n_0)(\forall x \in X)$. Si $m,n > n_0$, $\exists x \in X : |L_m - f_m(x)| < \frac{\e}{3}$ y $|L_n - f_n(x)| < \frac{\e}{3} \Rightarrow |L_n - L_m| \leq |L_n - f_n(x)| + |f_n(x) - f_m(x)| + |f_m(x) - L_m| < \e$.
-      \item Veamos que si $f(x) = lim_{n \to \infty} f_n$ verifica $lim_{x \to a} f(x) = L$. Dado $\e > 0$, $\exists n_0 \in \N : |L_n - L| < \frac{\e}{3}$, $|f_n(x) - f(x)| < \frac{\e}{3}$ $(\forall n > n_0 \in \N)(\forall x \in X)$. Si $n > n_0$, como $lim_{x \to a} f_n(x) = L_n$, $\exists \delta > 0 : 0 < |x-a| < \delta \Rightarrow |f_n(x) - L_n| < \frac{\e}{3} \Rightarrow$ si $|x-a| < \delta \Rightarrow |f(x) - L| < \e$. 
+      \item Veamos que si $f(x) = \lim_{n \to \infty} f_n$ verifica $\lim_{x \to a} f(x) = L$. Dado $\e > 0$, $\exists n_0 \in \N : |L_n - L| < \frac{\e}{3}$, $|f_n(x) - f(x)| < \frac{\e}{3}$ $(\forall n > n_0 \in \N)(\forall x \in X)$. Si $n > n_0$, como $\lim_{x \to a} f_n(x) = L_n$, $\exists \delta > 0 : 0 < |x-a| < \delta \Rightarrow |f_n(x) - L_n| < \frac{\e}{3} \Rightarrow$ si $|x-a| < \delta \Rightarrow |f(x) - L| < \e$. 
     \end{enumerate}
   \end{proof}
 \end{theorem}
@@ -147,26 +147,26 @@ Notemos que la convergencia normal implica la convergencia uniforme que a su vez
 \begin{corollary}
   Sea $a \in X$ punto de acumulación. Si \begin{enumerate}
     \item $\sum f_n \rightrightarrows f$ en $X$
-    \item $\forall n \in \N$, $\exists lim_{x \to a} f_n(x) = L_n$
-  \end{enumerate} $\Rightarrow \sum L_n < +\infty$ y $\sum L_n = lim_{x \to a} f(x)$.
+    \item $\forall n \in \N$, $\exists \lim_{x \to a} f_n(x) = L_n$
+  \end{enumerate} $\Rightarrow \sum L_n < +\infty$ y $\sum L_n = \lim_{x \to a} f(x)$.
   Es decir que \begin{equation}
-    lim_{x \to a}(\sum f_n(x)) = \sum(lim_{x \to a} f_n(x))
+    \lim_{x \to a}(\sum f_n(x)) = \sum(\lim_{x \to a} f_n(x))
   \end{equation} Siempre que $\sum f_n$ sea uniformemente convergente.
 \end{corollary}
 
 Notemos que el teorema también vale si $a = +\infty$
 \begin{equation}
-  lim_{n \to +\infty} (lim_{x \to +\infty} f_n(X)) = lim_{x \to +\infty}(lim_{n \to +\infty} f_n(x))
+  \lim_{n \to +\infty} (\lim_{x \to +\infty} f_n(X)) = \lim_{x \to +\infty}(\lim_{n \to +\infty} f_n(x))
 \end{equation} Siempre que los límites de adentro existan y la convergencia de la sucesión de funciones sea uniforme. La demostración queda como ejercicio.
 
 \begin{theorem}
   Si $f_n \rightrightarrows f$ y todas las $f_n$ son continuas en $a \in X \Rightarrow f$ es continua en $a$.
   \begin{proof}
     Si $a$ es punto aislado es inmediato. Si $a \in X^{\prime} \Rightarrow$ \begin{equation}
-      lim_{x \to a} f(x) = lim_{x \to a}(lim_{n \to \infty} f_n(x)) 
+      \lim_{x \to a} f(x) = \lim_{x \to a}(\lim_{n \to \infty} f_n(x)) 
     \end{equation}
     \begin{equation}
-      = lim_{n \to \infty}(lim_{x \to a} f_n(x)) = lim_{n \to \infty} f_n(a) = f(a)
+      = \lim_{n \to \infty}(\lim_{x \to a} f_n(x)) = \lim_{n \to \infty} f_n(a) = f(a)
     \end{equation}
   \end{proof}
 \end{theorem}
@@ -194,11 +194,11 @@ Si el límite de $(f_n)_{n \in \N}$ no es continuo y las funciones de la sucesi�
 \section{Integración de sucesiones de funciones}
 
 \begin{theorem}
-  Si $f_n: [a, b] \to \R$ son funciones integrables que convergen uniformemente a $f: [a, b] \to \R \Rightarrow$ es integrable y vale que $\int_a^b f(x) dx = lim_{n \to +\infty} \int_a^b f_n(x) dx$.
+  Si $f_n: [a, b] \to \R$ son funciones integrables que convergen uniformemente a $f: [a, b] \to \R \Rightarrow$ es integrable y vale que $\int_a^b f(x) dx = \lim_{n \to +\infty} \int_a^b f_n(x) dx$.
   \begin{proof}
     Sean $D_n$ y $D$ los conjuntos de discontinuidad de $f_n$ y $f$. Si $x \notin D_n$ $(\forall n \in \N) \Rightarrow x \notin D$, pues el límite uniforme es continuo en los puntos de discontinuidad. Luego $D \subseteq \bigcup_n D_n$ Como $|D_n| = 0$ $(\forall n \in \N)$, pues son integrables, tenemos que $|D| = 0 \Rightarrow f$ es integrable. Ahora, dado $\e > 0$, $\exists n_0 \in \N : |f_n(x) - f(x)| < \frac{e}{b-a}$ $(\forall x \in [a, b])(\forall n > n_0)$. Luego $(\forall n > n_0)$ \begin{equation} |\int_a^b f(x) dx - \int_a^b f_n(x) dx| \leq \int_a^b |f(x) - f_n(x)|dx < \frac{\e}{b-a} \cdot (b-a) = \e
     \end{equation}
-    Es decir que $\int_a^b \lim_{n \to +\infty} f_n(x) dx = lim_{n \to +\infty} \int_a^b f_n(x) dx$.
+    Es decir que $\int_a^b \lim_{n \to +\infty} f_n(x) dx = \lim_{n \to +\infty} \int_a^b f_n(x) dx$.
   \end{proof}
 \end{theorem}
 
@@ -221,7 +221,7 @@ Si el límite de $(f_n)_{n \in \N}$ no es continuo y las funciones de la sucesi�
 \end{note}
 
 \begin{note}
-  $f_n \to f$ en $[a, b]$, $f_n$ y $f$ son integrables, pero $lim_{n \to \infty} \int_a^b f_n \neq \int_a^b f$. Por ejemplo si $f_n: [0, 1] \to \R$, $f_n(x) = \begin{cases}
+  $f_n \to f$ en $[a, b]$, $f_n$ y $f$ son integrables, pero $\lim_{n \to \infty} \int_a^b f_n \neq \int_a^b f$. Por ejemplo si $f_n: [0, 1] \to \R$, $f_n(x) = \begin{cases}
     (n+1) x^{n+1} & \text{si } x \in [0, 1), \\
     0 & \text{si } x = 1.
   \end{cases}$ Luego si $f: [0, 1] \to \{0\}$, $f(x) = 0 \Rightarrow f_n \to f$, pero $\int_0^1 f_n(x) dx = 1 \neq 0 = \int_0^1 f(x) dx$. 

@@ -45,7 +45,7 @@
     \end{equation} De esta forma tenemos una sucesión de elementos de $F, (x_m)_{m \in \N}$. \\
     Como $F$ es compacto $\exists h: \N \to \N$ estrictamente creciente tal que $(x_{h(m)})_{m \in \N} \to L \in F$. \\
     Como $V$ es un cubrimiento de $F$ y $f$ es sobreyectiva $\Rightarrow \exists s \in \N : L \in f(s)$.
-    Por otro lado como $lim_{n \to \infty} x_m = L$ y $f(s)$ es un entorno de $L, \exists m_0 \in \N : x_{h(m)} \in f(s), \forall m > m_0$. \\
+    Por otro lado como $\lim_{n \to \infty} x_m = L$ y $f(s)$ es un entorno de $L, \exists m_0 \in \N : x_{h(m)} \in f(s), \forall m > m_0$. \\
     Como $m < h(s + m_0) \Rightarrow x_{h(s+m_0)} \in f(s)$ Absurdo! \\
     $x_{h(m_0 + s)} \in F - \bigcup_{i=1}^{h(s+m_0)} f(i)$ que es disjunto con $f(s)$ pues $s < h(s + m_0)$. \\
     $\therefore V$ y, por lo tanto, $U$ contienen un subcubrimiento finito. \\
@@ -102,7 +102,7 @@
 \begin{prop}
   Sea $A \subset \R^n, x_0 \in A^{\prime}, f: A \to \R^k, y \in \R^k$ son equivalentes:
   \begin{enumerate}
-    \item $lim_{x \to x_0} f(x) = y$
+    \item $\lim_{x \to x_0} f(x) = y$
     \item $(\forall \e > 0)(\exists \delta > 0) : f(B_{\delta}(x_0)) \cap (A - \{x_0\}) \subset B_{\e}(y)$
     \item $\forall$ entorno $V$ de $y$, $\exists$ un entorno $U$ de $x_0$ tal que $f(U \cap (A - \{x_0\})) \subset V$.
   \end{enumerate}
@@ -122,21 +122,21 @@
 
     3) $\Rightarrow$ 1) Sea $\e > 0$. Como $B_{\e}(y)$ es un entorno de $y$. Por hipótesis $\exists$ un entorno $U$ de $x_0 : f(U \cap (A - \{x_0\})) \subset B_{\e}(y)$. Como $U$ es entorno de $x_0, \exists \delta > 0 : B_{\delta}(x_0) \subset U$. \\
     Si $x \in A$ es tal que $0 < \|x - x_0\| < \delta \Rightarrow x \in B_{\delta}(x_0) \cap (A - \{x_0\}) \Rightarrow f(x) \in B_{\e}(y) \Rightarrow \|f(x) - y\| < \e$ \\
-    $\therefore lim_{x \to x_0} f(x) = y$.
+    $\therefore \lim_{x \to x_0} f(x) = y$.
   \end{proof}
 \end{prop}
 
 \begin{prop}
   $A \subset \R^n, x_0 \in A^{\prime}, f: A \to \R^k, \lim_{x \to x_0} f(x) = y \iff \forall (x_n)_{n \in \N} \subset A - \{x_0\}, x_n \to x_0, (f(x_n))_{n \in \N}$ converge a $y$.
   \begin{proof}
-    $\Rightarrow$) Supongamos que $lim_{x \to x_0} f(x) = y$. Sea $(x_n)_{n \in \N} \subset A - \{x_0\}, x_n \to x_0$. Dado \begin{equation}
+    $\Rightarrow$) Supongamos que $\lim_{x \to x_0} f(x) = y$. Sea $(x_n)_{n \in \N} \subset A - \{x_0\}, x_n \to x_0$. Dado \begin{equation}
       \e > 0, \exists \delta > 0 : d(x, x_0) < \delta \Rightarrow d(f(x), y) < \e
     \end{equation} Además \begin{equation}
       \exists n_0 \in \N : d(x_n, x_0) < \delta, \forall n > n_0
     \end{equation} \begin{equation} \Rightarrow d(f(x_n), y) < \e, \forall n > n_0 \therefore (f(x_n))_{n \in \N} \to y \end{equation}
 
     $\Leftarrow$) $\forall (x_n)_{n \in \N} \subset A - \{x_0\}, x_n \to x_0, (f(x_n))_{n \in \N} \to y$. \\
-    Supongamos que $lim_{x \to x_0} f(x) \neq y$. Luego $\exists \e > 0 : \forall \delta > 0, d(x, x_0) < \delta$, pero $d(f(x), y) \geq \e$. \\
+    Supongamos que $\lim_{x \to x_0} f(x) \neq y$. Luego $\exists \e > 0 : \forall \delta > 0, d(x, x_0) < \delta$, pero $d(f(x), y) \geq \e$. \\
     En particular consideremos $(x_n)_{n \in \N} \subset A - \{x_0\}$ y podemos encontrar $d(x_n, x_0) < \delta, \forall n > n_0 \in \N$ pues $x_n \to x_0$. \\
     Luego $d(f(x_n), y) \geq \e, \forall n > n_0 \therefore (f(x_n))_{n \in \N} \not \to y$.
   \end{proof}
@@ -145,14 +145,14 @@
 \begin{prop}
   Sea $A \subset \R^n, x_0 \in A^{\prime}, f, g: A \to \R^k, h: A \to \R$.
   \begin{enumerate}
-    \item $lim_{x \to x_0} f(x) = y, lim_{x \to x_0} g(x) = z \Rightarrow$ \\ $lim_{x \to x_0} f(x) + g(x) = lim_{x \to x_0} f(x) + lim_{x \to x_0} g(x) = y+z$.
-    \item $lim_{x \to x_0} h(x) = r \Rightarrow lim_{x \to x_0} h(x) \cdot f(x) = r \cdot y$
-    \item $lim_{x \to x_0} h(x) = r \neq 0, h(x) \neq 0 (\forall x \in A) \Rightarrow lim_{x \to x_0} \dfrac{1}{h(x)} = \dfrac{1}{lim_{x \to x_0} h(x)} = \dfrac{1}{r}$.
+    \item $\lim_{x \to x_0} f(x) = y, \lim_{x \to x_0} g(x) = z \Rightarrow$ \\ $\lim_{x \to x_0} f(x) + g(x) = \lim_{x \to x_0} f(x) + \lim_{x \to x_0} g(x) = y+z$.
+    \item $\lim_{x \to x_0} h(x) = r \Rightarrow \lim_{x \to x_0} h(x) \cdot f(x) = r \cdot y$
+    \item $\lim_{x \to x_0} h(x) = r \neq 0, h(x) \neq 0 (\forall x \in A) \Rightarrow \lim_{x \to x_0} \dfrac{1}{h(x)} = \dfrac{1}{\lim_{x \to x_0} h(x)} = \dfrac{1}{r}$.
   \end{enumerate}
 \end{prop}
 
 \begin{prop}
-  Sea $A \subset \R^n, x_0 \in A^{\prime}, f: A \to \R^k, lim_{x \to x_0} f(x) = y$.
+  Sea $A \subset \R^n, x_0 \in A^{\prime}, f: A \to \R^k, \lim_{x \to x_0} f(x) = y$.
   \begin{enumerate}
     \item Si $z \neq y, \exists r > 0 : z \in f(B_r(x_0) - (A -\{x_0\}))$.
     \item Si $y > 0 \Rightarrow \exists r > 0 : f(x) > 0, \forall x \in (B_r(x_0) - (A -
@@ -177,7 +177,7 @@
 
 \begin{theorem}[Teorema del Sandwich]
   Sea $A \subset \R^n, x_0 \in A^{\prime}$ y $f, g, h: A \to \R, \forall x \in A, f(x) \leq g(x) \leq h(x)$, si: \\
-  $lim_{x \to x_0} f(x) = lim_{x \to x_0} h(x) = y \Rightarrow lim_{x \to x_0} g(x) = y$.
+  $\lim_{x \to x_0} f(x) = \lim_{x \to x_0} h(x) = y \Rightarrow \lim_{x \to x_0} g(x) = y$.
   \begin{proof}
     Dado $\e > 0, \exists \delta_1, \delta_2 > 0 :$ \begin{equation}
       0 < d(x, x_0) < \delta_1 \Rightarrow d(f(x), y) < \e
@@ -189,5 +189,5 @@
       y - \e < f(x) \leq g(x) \leq h(x) < y + \e \Rightarrow d(g(x), y) < \e
     \end{equation}
   \end{proof}
-  $\therefore lim_{x \to x_0} g(x) = y$.
+  $\therefore \lim_{x \to x_0} g(x) = y$.
 \end{theorem}

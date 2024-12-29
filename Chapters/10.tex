@@ -128,7 +128,7 @@ Decimos que una sucesión $(x_n)_{n \in \N} \subset \R^n$ converge a un punto $L
   Sea $(x_n)_{n \in \N} \subset \R^n$ y $L \in \R^n$ son equivalentes:
 
   \begin{enumerate}
-    \item $L = lim_{n \to \infty} x_n$
+    \item $L = \lim_{n \to \infty} x_n$
     \item $\forall r > 0, \exists n_0 \in \N : \forall n > n_0, x_n \in B_r(L)$
     \item $\forall$ entorno abierto $N$ de $L, \exists n_0 \in \N : \forall n > n_0, x_n \in N$
     \item $\forall$ entorno $N$ de $L, \exists n_0 \in \N : \forall n > n_0, x_n \in N$
@@ -136,7 +136,7 @@ Decimos que una sucesión $(x_n)_{n \in \N} \subset \R^n$ converge a un punto $L
 
   \begin{proof}
     4) $\Rightarrow$ 3) $\Rightarrow$ 2) $\Rightarrow$ 1) son inmediatos de la definición de límite. \\
-    1) $\Rightarrow$ 4) Sea $N$ un entorno de $L$. Como $L \in N^{\circ}, \exists r > 0 : B_r(L) \subset N^{\circ}$ y como $lim_{n \to \infty} x_n = L \Rightarrow \exists n_0 \in \N : \forall n > n_0, d(L, x_n) < r \Rightarrow$ \\
+    1) $\Rightarrow$ 4) Sea $N$ un entorno de $L$. Como $L \in N^{\circ}, \exists r > 0 : B_r(L) \subset N^{\circ}$ y como $\lim_{n \to \infty} x_n = L \Rightarrow \exists n_0 \in \N : \forall n > n_0, d(L, x_n) < r \Rightarrow$ \\
     $x_n \in B_r(x), \forall n > n_0 \therefore x_n \in N, \forall n > n_0$.
   \end{proof}
 \end{prop}
@@ -146,7 +146,7 @@ Decimos que una sucesión $(x_n)_{n \in \N} \subset \R^n$ converge a un punto $L
   \begin{enumerate}
     \item Toda sucesión convergente es acotada.
     \item Suma de sucesiones convergentes es convergente y el límite de la suma es la suma de los límites.
-    \item Si $(x_n)_{n \in \N} \subset \R^n$ y $(\lambda_n)_{n \in \N} \subset \R$ convergen $\Rightarrow (x_n \cdot \lambda_n)_{n \in \N} \to lim_{n \to \infty} x_n \cdot lim_{n \to \infty} \lambda_n$.
+    \item Si $(x_n)_{n \in \N} \subset \R^n$ y $(\lambda_n)_{n \in \N} \subset \R$ convergen $\Rightarrow (x_n \cdot \lambda_n)_{n \in \N} \to \lim_{n \to \infty} x_n \cdot \lim_{n \to \infty} \lambda_n$.
   \end{enumerate}
 \end{prop}
 
@@ -156,13 +156,13 @@ Decimos que una sucesión $(x_n)_{n \in \N} \subset \R^n$ converge a un punto $L
     \item La sucesión converge en $\R^n$.
     \item $\forall i \in \{1, \cdots, n\}, (x_{n_i})_{n \in \N}$ converge a $\R$.
   \end{enumerate}
-  Si se cumplen y además $lim_{n \to \infty} = L$ y $lim_{n \to \infty} x_{n_i} = L_i, \forall i \in \{1, \cdots, n\} \Rightarrow L = (L_1, \cdots, L_n)$.
+  Si se cumplen y además $\lim_{n \to \infty} = L$ y $\lim_{n \to \infty} x_{n_i} = L_i, \forall i \in \{1, \cdots, n\} \Rightarrow L = (L_1, \cdots, L_n)$.
   \begin{proof}
-    1) $\Rightarrow$ 2) Sea $L = lim_{n \to \infty} x_n$ y $L = (L_1, \cdots, L_n)$, si $i \in \{1, \cdots, n\}$ y $\e > 0, \exists n_0 : \forall n > n_0, d(x_n, L) < \e \Rightarrow$ \\
-    $\forall n > n_0, d(x_{n_i}, L_i) < \e \therefore lim_{n \to \infty} x_{n_i} = L_i$. \\
-    2) $\Rightarrow$ 1) Si $lim_{n \to \infty} x_{n_i} = L_i, \forall i \in \{1, \cdots, m\}$. Llamo $L = (L_1, \cdots, L_m)$. \\
+    1) $\Rightarrow$ 2) Sea $L = \lim_{n \to \infty} x_n$ y $L = (L_1, \cdots, L_n)$, si $i \in \{1, \cdots, n\}$ y $\e > 0, \exists n_0 : \forall n > n_0, d(x_n, L) < \e \Rightarrow$ \\
+    $\forall n > n_0, d(x_{n_i}, L_i) < \e \therefore \lim_{n \to \infty} x_{n_i} = L_i$. \\
+    2) $\Rightarrow$ 1) Si $\lim_{n \to \infty} x_{n_i} = L_i, \forall i \in \{1, \cdots, m\}$. Llamo $L = (L_1, \cdots, L_m)$. \\
     Dado $\e > 0, \exists n_i \in \N : \forall n > n_i, d(x_{n_i}, L_i) < \dfrac{\e}{\sqrt{n}} \Rightarrow n_0 = max(n_1, \cdots, n_m)$ y $n > n_0$, $d(x_n, L) = (d(x_{n_1}, L_1)^2 + \cdots + d(x_{n_m}, L_m)^2) < (\dfrac{\e^2}{n} + \cdots + \dfrac{\e^2}{n})^{\frac{1}{2}} = \e$. \\
-    $\therefore lim_{n \to \infty} x_n = L$.
+    $\therefore \lim_{n \to \infty} x_n = L$.
   \end{proof}
 \end{prop}
 

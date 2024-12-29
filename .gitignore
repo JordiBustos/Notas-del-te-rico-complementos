@@ -10,3 +10,7 @@
 **/*.cb
 **/*.cb2
 **/*.lb
+**/*.fdb_latexmk
+**/*.xdv
+**/*.bbl
+**/*.blg

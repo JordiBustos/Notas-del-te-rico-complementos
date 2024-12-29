@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: unsrt.bst
+Database file #1: references.bib
+I was expecting a `,' or a `}'---line 27 of file references.bib
+ :   
+ :   publisher={Universidad de Buenos Aires}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty publisher in larotonda
+You've used 4 entries,
+            1791 wiz_defined-function locations,
+            464 strings with 3797 characters,
+and the built_in function-call counts, 605 in all, are:
+= -- 47
+> -- 16
+< -- 0
++ -- 8
+- -- 4
+* -- 16
+:= -- 100
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 5
+duplicate$ -- 40
+empty$ -- 77
+format.name$ -- 4
+if$ -- 140
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 8
+newline$ -- 23
+num.names$ -- 4
+pop$ -- 29
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 8
+stack$ -- 0
+substring$ -- 0
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 4
+width$ -- 5
+write$ -- 41
+(There was 1 error message)

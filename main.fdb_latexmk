@@ -1,10 +1,18 @@
 # Fdb version 4
-["xdvipdfmx"] 1735431103.35909 "main.xdv" "main.pdf" "main" 1735431103.65476 0
-  "main.xdv" 1735431103.07082 1993332 2e88bbde82713d8dcd6ee40ede0a9af4 "xelatex"
+["bibtex main"] 1735433474.27178 "main.aux" "main.bbl" "main" 1735433474.29628 2
+  "./references.bib" 1735433416.68913 650 7fa2a894fcc986f88a2ee5afc186268d ""
+  "/usr/share/texlive/texmf-dist/bibtex/bst/base/unsrt.bst" 1292289607 18030 1376b4b231b50c66211e47e42eda2875 ""
+  "main.aux" 1735433474.02797 142445 0427638024f88859af0f201ec86048c4 "xelatex"
+  (generated)
+  "main.bbl"
+  "main.blg"
+  (rewritten before read)
+["xdvipdfmx"] 1735431405.81239 "main.xdv" "main.pdf" "main" 1735433465.52352 0
+  "main.xdv" 1735433474.03997 1997704 de56a3dea050aca7812357ca97f46df6 "xelatex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["xelatex"] 1735431089.92984 "main.tex" "main.xdv" "main" 1735431103.65147 0
+["xelatex"] 1735433465.52681 "main.tex" "main.xdv" "main" 1735433474.29647 0
   "/etc/texmf/web2c/texmf.cnf" 1734915587.16846 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/palatino/pplb8t.tfm" 1136768653 3456 16dd534f88eb2bd21ebc7203786b436e ""
@@ -240,14 +248,15 @@
   "Chapters/8.tex" 1735267876.54777 11665 28928133695d6ba20a32f16a4e023e8a ""
   "Chapters/9.tex" 1735266244.25404 13107 6891b5d1537aea0e241b63f5cb6ee911 ""
   "Chapters/parciales.tex" 1735266258.27948 3989 3b4df9341e6d6885266f0f4563af2106 ""
-  "Chapters/preface.tex" 1735266261.45193 1352 7e76e577523ab89d95c6e7f84aab8358 ""
+  "Chapters/preface.tex" 1735431392.73682 1468 7a2117a50c5ec0bff105beee589c6cb6 ""
   "Configs/boxes.tex" 1735260989.49721 2216 b6367ee6a4be8af5331cb7df250b72cd ""
   "Configs/configs.tex" 1735082025.56119 988 044c573f611f8dba69e864c05b66f21e ""
   "Configs/formats.tex" 1734926318 3669 ac44fa1460936ded3acbe6bc30661871 ""
-  "main.aux" 1735431103.05582 142360 114d1d274ecacd25fc726c234760429b "xelatex"
-  "main.out" 1735431103.06982 18317 873a4f4b597c2620fe077d9461e38291 "xelatex"
-  "main.tex" 1735428507.02946 2982 8ecfa05cfb0eaea89a35a47604ea3428 ""
-  "main.toc" 1735431103.07082 9162 902e765687d719c85595c49a84713839 "xelatex"
+  "main.aux" 1735433474.02797 142445 0427638024f88859af0f201ec86048c4 "xelatex"
+  "main.bbl" 1735433474.29397 510 8d8abbb4ddf3db7c23073048535adf83 "bibtex main"
+  "main.out" 1735433474.03897 18317 873a4f4b597c2620fe077d9461e38291 "xelatex"
+  "main.tex" 1735433465.39499 2970 a43028a7821d987e799267c04f31ee5d ""
+  "main.toc" 1735433474.03997 9162 902e765687d719c85595c49a84713839 "xelatex"
   (generated)
   "main.aux"
   "main.log"

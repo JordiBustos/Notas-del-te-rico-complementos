@@ -137,3 +137,12 @@ Una familia (o sucesión) es equicontinua si es equicontinua en todo punto del d
     \end{equation}
   \end{proof}
 \end{theorem}
+
+\begin{eg}
+  $f_n(x) = \dfrac{sen(nx)}{n}$ es equicontinua en todo $\R$.
+\end{eg}
+
+\begin{eg}
+  $f_n(x) = nx$ no es equicontinua en ningún $x_0 \in \R$. Sea $\e = \frac{1}{2}$. $\forall \delta > 0$, $\exists n \in \N : \frac{1}{n} < \delta \Rightarrow x = x_0 + \frac{1}{n}$ cumple que
+  $|x - x_0| = \frac{1}{n} < \delta$, pero $|f_n(x) - f_n(x_0)| = |nx - nx_0| = |n x_0 + 1 - n x_0| = 1 > \e = \frac{1}{2}$.
+\end{eg}

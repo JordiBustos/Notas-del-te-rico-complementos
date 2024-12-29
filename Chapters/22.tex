@@ -1,4 +1,70 @@
-\section{Equicontinuidad uniforme}
+  \section{Equicontinuidad uniforme}
+
+  \begin{theorem}
+  Si $E$ es una familia de funciones derivables en $I : \exists c > 0 : |f^{\prime}(x)| \leq c$ $(\forall f \in E)(\forall x \in I) \Rightarrow E$ es equicontinua en $I$.
+  \begin{proof}
+    Sea $x_0 \in I$, $\e > 0$, $\delta = \frac{\e}{c}$. Si $x \in I$ y $|x - x_0| < \delta \Rightarrow |f(x) - f(x_0)| \leq c |x - x_0| < c \cdot \frac{\e}{c} < \e$ $(\forall f \in E)$ usando Teorema del Valor Medio.
+  \end{proof}
+\end{theorem}
+
+Más en general, con el mismo argumento, se ve que si $\forall x \in I$, $\exists c_x > 0$ y un intervalo $I_x$ tal que $x \in I_x \subset I$ y $|f^{\prime}(y)| \leq c_x$ $(\forall f \in E)(\forall y \in I_x) \Rightarrow E$ es equicontinua. 
+
+\begin{definition}[Equicontinuidad uniforme]
+  Una familia $E$ de funciones, $f: X \to \R$ se dice uniformemente equicontinua si $(\forall \e > 0)(\exists \delta > 0) : x, y \in X$, $|x-y| < \delta \Rightarrow |f(x) - f(y)| < \e$ $(\forall f \in E)$
+\end{definition}
+
+\begin{eg}
+  $E$ es una familia de funciones derivables en $I$ y $|f^{\prime}(x)| \leq c$ $(\forall f \in E) \Rightarrow E$ es uniformemente equicontinua
+\end{eg}
+
+\begin{eg}
+  Una familia formada por una única función continua, pero uniformemente continua es una familia equicontinua, pero no uniformemente.
+\end{eg}
+
+\begin{theorem}
+  Sea $K \subset \R$ compacto. Toda familia de funciones $f: K \to \R$ equicontinua es uniformemente equicontinua.
+  \begin{proof}
+    Si $E$ no fuese uniformemente equicontinua, $\exists \e > 0 : (\forall n \in \N)$, $x_n$, $y_n \in K$, $f_n \in E : |x_n - y_n| < \frac{1}{n} < \delta$, pero $|f_n(x_n) - f_n(y_n)| \geq \e$. 
+    Pasando a una subsucesión, podemos suponer que $x_n \to x \in K$ ($K$ es compacto) y como $|y_n - x_n| < \frac{1}{n}$ tenemos que $y_n \to x$. \\
+    Como la familia $E$ es equicontinua en $x$, $\exists \delta > 0 : z \in K$ y $|x - z| < \delta \Rightarrow |f(x) - f(z)| < \frac{\e}{2}$ $(\forall f \in E) \Rightarrow |f_n(x_n) - f_n(y_n)| \leq |f_n(x_n) - f_n(x)| + |f_n(y_n) - f(x)| < \e$ $(\forall n > n_0 \in \N)$, pues $|x_n - x| < \delta$ y $|y_n - x| < \delta$ Absurdo! 
+  \end{proof}
+\end{theorem}
+
+\begin{theorem}
+  Si una sucesión equicontinua de funciones $f_n: X \to \R$ converge puntualmente en un subconjunto denso $D \subset X \Rightarrow f_n$ converge uniformemente sobre cualquier compacto $K \subset X$.
+
+  \begin{proof}
+    Sea $\e > 0$ quiero ver que $\exists n_0 \in \N : |f_m(x) - f_n(x)| < \e$ ($\forall m, n > n_0)(\forall x \in K)$. Luego $\forall d \in D$, $\exists n_d \in \N : |f_m(d) - f_n(d)| < \frac{\e}{3}$ $(\forall n, m > n_d)$. \\
+    Por otro lado $\forall y \in K$, $\exists$ un intervalo abierto $I_y$ (centrado en $y$) tal que $|f_n(x) - f(z)| < \frac{e}{3}$ $(\forall x, z \in X \cap I_y)(\forall n \in \N)$. Como $K$ es compacto del cubrimiento $K \subset \bigcup_{y \in K} I_y$ podemos extraer un subcubrimiento finito $K \subset I_1 \cup I_2 \cup \cdots \cup I_p$. \\
+    Como $D$ es denso en $X$, en cada intervalo $I_i$ podemos elegir $d_i \in D \cap I_i$. Sea $n_0 = max(n_{d_1}, \cdots n_{d_p}) \Rightarrow$ si $n, m > n_0$ y $x \in K \Rightarrow \exists i : x \in I_i$ así que \begin{equation}
+      |f_m(x) - f_n(x)| \leq |f_m(x) - f_m(d_i)| + |f_m(d_i) - f_n(d_i)| + |f_n(d_i) - f_n(x)| < \e
+    \end{equation} $\therefore$ es uniformemente equicontinua.
+  \end{proof}
+\end{theorem}
+
+\begin{definition}[Acotada puntualmente]
+  Una familia $E$ de funciones $f: X \to \R$, se dice puntualmente acotada si $\forall x \in X$, $\exists c_x > 0 : |f(x)| \leq c_x$ $(\forall f \in E)$.
+\end{definition}
+
+\begin{definition}[Uniformemente acotada]
+  Se dice uniformemente acotada si $\exists c > 0 : |f(x)| < c$ $(\forall f \in E)(\forall x \in X)$.
+\end{definition}
+
+\begin{theorem}[Cantor - Tijonov]
+  Sea $X \subset \R$ numerable. Toda sucesión puntualmente acotada de funciones $f: X \to \R$ posee una subsucesión puntualmente convergente.
+  \begin{proof}
+    Sea $X = \{x_1, \cdots\}$ como $(f_n)_{n \in \N}$ es acotada, tiene una subsucesión convergente $\Rightarrow \N_1 \subset \N$ infinito tal que $a_1 = \lim_{n \in \N_1} f_n(x_1)$. \\
+    Como $(f_n(x_2))_{n \in \N_1}$ es acotada, $\exists \N_2 \subset \N_1$ infinito tal que $\exists a_2 = lim_{n \in \N_2} f_n(x_2)$. Así siguiendo para cada $i \in \N$ tenemos $\N_1 \supset \N_2 \supset \cdots \supset \N_i \supset \cdots$, tales que $lim_{n \in \N_i} f_n(x_i) = a_i$. \\
+    Definimos a $\N^* \subset \N$ tomando como i-ésimo elemento de $\N^*$ al i-ésimo elemento de $\N_i \Rightarrow (\forall i \in \N) (f_n(x_i))_{n \in \N^*}$ es a partir del i-ésimo elemento una subsucesión de $(f_n(x_i))_{n \in \N_i}$ converge $\therefore$ Esto prueba que $(f_n)_{n \in \N^*}$ converge $\forall x_i \in X$.
+  \end{proof}
+\end{theorem}
+
+\begin{theorem}[Arzelà - Ascoli]
+  Sea $K \subset \R$ compacto, toda sucesión equicontinua y puntualmente acotada de funciones $f_n: K \to \R$ posee una subsucesión uniformemente convergente.
+  \begin{proof}
+    Como $K \subset \R$, $\exists X \subset K$ numerable y denso en $K$. Por el teorema anterior, como $X$ es numerable $(f_n)_{n \in \N}$ tiene una subsucesión puntualmente convergente en $X$ (por ser $f_n$ puntualmente acotada). Como $(f_n)_{n \in \N}$ es equicontinua y converge puntualmente en $X \subset K$ denso, converge uniformemente en $K$ por ser compacto. 
+  \end{proof}
+\end{theorem}
 
 \section{Ecuaciones diferenciales}
 TODO 

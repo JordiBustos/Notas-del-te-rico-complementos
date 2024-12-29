@@ -14,7 +14,7 @@
 \begin{prop}
   Si $G_f$ es cerrado en $A \times \R^k$ y $f$ es acotada $\Rightarrow f$ es continua.
   \begin{proof}
-    Como $f$ es acotada $\exists k : f(x) \in B_k(0) \subset \R^k, \forall x \in A$. Sea $x_0 \in A$ queremos ver que $f$ es continua en $x_0$. Sea $(x_n)_{n \in \N} \subset A$ tal que $x_n \to x_0$ y supongamos que $f(x_n) \not \to f(x_0) \Rightarrow (\exists \e > 0), h: \N \to \N$ estrictamente creciente tal que $||f(x_{h(n)} - f(x_0)) \geq \e, \forall n \in \N$. \\
+    Como $f$ es acotada $\exists k : f(x) \in B_k(0) \subset \R^k, \forall x \in A$. Sea $x_0 \in A$ queremos ver que $f$ es continua en $x_0$. Sea $(x_n)_{n \in \N} \subset A$ tal que $x_n \to x_0$ y supongamos que $f(x_n) \not \to f(x_0) \Rightarrow (\exists \e > 0), h: \N \to \N$ estrictamente creciente tal que $\|f(x_{h(n)} - f(x_0)) \geq \e, \forall n \in \N$. \\
     Para cada $n \in \N$ consideremos $p_n = (x_{h(n)}, f(x_{h(n)})) \in G_f$. Como $x_{h(n)}$ converge, es acotada, $\exists L > 0 : x_{h(n)} \in B_L(0), \forall n \in \N$. Luego $(p_n)_{n \in \N}$ es acotada pues toma valores en $B_L(0)$ o $B_k(0)$, por lo que existe $\phi$ estrictamente creciente tal que $(p_{\phi_{h(n)}})_{n \in \N}$ converge a $p \in R^n \times \R^k$.
     Supongamos que $p = (x_0^{\prime}, y) \Rightarrow x_{\phi_{h(n)}} \to x_0^{\prime}$ y $f(x_{\phi_{h(n)}}) \to y$. Como $x_{\phi_{h(n)}}$ es subsubsucesión de $x_n \to x_0^{\prime} = x_0 \in A$. Se tiene que $lim_{n \to +\infty} p_{\phi_{h(n)}} \in A \times \R^k$. Como estamos suponiendo que $G_f$ es cerrado entonces $x_0, y \in G_f$, es decir $y = f(x_0)$, pero entonces $f(x_{\phi_{h(n)}}) \to f(x_0)$. Absurdo!
   \end{proof}
@@ -69,8 +69,8 @@
 \begin{eg}
   Si $x \in \R^n, r > 0, B_r(x)$ es convexo.
   \begin{proof}
-    $y, z \in B_r(x), t \in [0,1] \Rightarrow$ \begin{equation} ||(1-t)y+tz - x|| = || (1-t)y + tz - (1-t)x - tx || \end{equation} \begin{equation} \leq ||(1 -t) (y-x) || + ||t(z-x)|| \end{equation}
-    \begin{equation} \leq (1-t) ||y-x|| + t ||z-x|| < (1-t)r + tr = r \end{equation} $\therefore (1-t)y + tz \in B_r(x) (\forall t \in [0, 1])$.
+    $y, z \in B_r(x), t \in [0,1] \Rightarrow$ \begin{equation} \|(1-t)y+tz - x\| = \| (1-t)y + tz - (1-t)x - tx \| \end{equation} \begin{equation} \leq \|(1 -t) (y-x) \| + \|t(z-x)\| \end{equation}
+    \begin{equation} \leq (1-t) \|y-x\| + t \|z-x\| < (1-t)r + tr = r \end{equation} $\therefore (1-t)y + tz \in B_r(x) (\forall t \in [0, 1])$.
   \end{proof}
 \end{eg}
 

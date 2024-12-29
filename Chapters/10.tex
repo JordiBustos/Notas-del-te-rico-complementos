@@ -192,11 +192,11 @@ Decimos que una sucesión $(x_n)_{n \in \N} \subset \R^n$ converge a un punto $L
 \begin{prop}
   Un subconjunto de $\R^n$ es relativamente compacto $\iff$ es acotado.
   \begin{proof}
-    Sea $F \subset \R^n$ no acotado $\Rightarrow$ para cada $n \in \N, \exists y_n \in F : ||y_n|| > n$. \\
-    Si $f : \N \to \N$ es una función estrictamente creciente cualquiera entonces la sucesión $(y_{f(n)})_{n \in \N}$ de $(y_n)_{n \in \N}$ no es acotada, pues $||y_{f(n)}|| > f(n) \geq n$ y $\therefore$ no converge. Luego $F$ no es relativamente compacto. \\
+    Sea $F \subset \R^n$ no acotado $\Rightarrow$ para cada $n \in \N, \exists y_n \in F : \|y_n\| > n$. \\
+    Si $f : \N \to \N$ es una función estrictamente creciente cualquiera entonces la sucesión $(y_{f(n)})_{n \in \N}$ de $(y_n)_{n \in \N}$ no es acotada, pues $\|y_{f(n)}\| > f(n) \geq n$ y $\therefore$ no converge. Luego $F$ no es relativamente compacto. \\
 
     Supongamos ahora que $F$ es acotado, digamos que $\exists k > 0 : F \subset B_k(0)$ y sea $(x_n)_{n \in N}$ una sucesión en $F$. \\
-    Para cada $m \in \N$, $x_m = (x_{m_1}, x_{m_2}, \cdots, x_{m_n})$. Si $L = \{1, \cdots, n\} \Rightarrow \forall m \in \N, ||x_{m_i}|| \leq ||x_m|| < k$, es decir que las sucesiones $(x_{m_1})_{m \in \N}, \cdots, (x_{m_n})_{m \in \N} \subset \R$ son acotadas. \\
+    Para cada $m \in \N$, $x_m = (x_{m_1}, x_{m_2}, \cdots, x_{m_n})$. Si $L = \{1, \cdots, n\} \Rightarrow \forall m \in \N, \|x_{m_i}\| \leq \|x_m\| < k$, es decir que las sucesiones $(x_{m_1})_{m \in \N}, \cdots, (x_{m_n})_{m \in \N} \subset \R$ son acotadas. \\
     En particular $\exists f: \N \to \N$ estrictamente creciente tal que la subsucesión $(x_{f(m)_1})_{m \in \N}$ converge. Es decir que $1$ es un elemento del conjunto $D$ de todos los $f \in \{1, \cdots, n\}$ con la propiedad: "Hay una función estrictamente creciente $f: \N \to \N : \forall i \in \{1, \cdots, f\}$ la sucesión $(x_{f(m)_i})_{m \in \N}$ converge". \\
     Sea $k = maxD$ y $k < n$. Como $k \in D, \exists f: \N \to \N$ estrictamente creciente tal que $\forall i \in \{1, \cdots, k\}$ la sucesión $(x_{f(m)_i})_{m \in \N}$ converge. \\
     Por otro lado $(x_{f(m)_{k+1}})_{m \in \N}$ es acotada $\Rightarrow$ Hay una función $g: \N \to \N$ estrictamente creciente tal que $(x_{g(f(m))_{k+1}})_{m \in \N}$ converge. \\

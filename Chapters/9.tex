@@ -18,25 +18,25 @@
 \section{Topología Euclídea}
 
 \begin{definition}
-  La norma euclídea es la función $|| \cdot ||$ que en cada punto $x = (x_1, \cdots, x_n) \in \R^n$ toma el valor $||x|| = \sqrt{\sum_{i = 1}^n x_i^2}$.
+  La norma euclídea es la función $\| \cdot \|$ que en cada punto $x = (x_1, \cdots, x_n) \in \R^n$ toma el valor $\|x\| = \sqrt{\sum_{i = 1}^n x_i^2}$.
 
   Propiedades: \\
   \begin{enumerate}
-    \item $\forall x \in \R^n, ||x|| > 0$ y $||x|| = 0 \iff x = 0$.
-    \item $\forall x \in \R^n, \forall \lambda \in \R, || \lambda x|| = |\lambda| ||x||$.
-    \item $||x+y|| \leq ||x|| + ||y||$.
+    \item $\forall x \in \R^n, \|x\| > 0$ y $\|x\| = 0 \iff x = 0$.
+    \item $\forall x \in \R^n, \forall \lambda \in \R, \| \lambda x\| = |\lambda| \|x\|$.
+    \item $\|x+y\| \leq \|x\| + \|y\|$.
   \end{enumerate}
 \end{definition}
 
 \begin{prop}[Desigualdad de Cauchy-Schwarz]
-  Si $x = (x_1, \cdots, x_n)$ e $y = (y_1, \cdots, y_n) \in \R^n \Rightarrow | \sum_{i = 1}^n x_i \cdot y_i | \leq ||x|| \cdot ||y||$.
+  Si $x = (x_1, \cdots, x_n)$ e $y = (y_1, \cdots, y_n) \in \R^n \Rightarrow | \sum_{i = 1}^n x_i \cdot y_i | \leq \|x\| \cdot \|y\|$.
   \begin{proof}
     Ejercicio
   \end{proof}
 \end{prop}
 
 \begin{definition}
-  La distancia euclídea es la función $d: \R^n \times \R^n \to \R : d(x, y) = ||x-y||$.
+  La distancia euclídea es la función $d: \R^n \times \R^n \to \R : d(x, y) = \|x-y\|$.
   Tenemos que $\forall x,y,z \in \R^n$.
   \begin{enumerate}
     \item $d(x, y) > 0$ y $d(x, y) = 0 \iff x=y$
@@ -45,9 +45,9 @@
   \end{enumerate}
   \begin{proof}
     \begin{enumerate}
-      \item $d(x, y) = ||x-y|| > 0, d(x, y) = 0 \iff ||x-y|| = 0 \iff x = y$.
-      \item $d(x, y) = ||x-y|| = ||(-1)|| \cdot ||y-x|| = ||y-x|| = d(y, x)$.
-      \item $d(x, z) = ||x-z|| = ||x-z+y-y|| \leq ||x-y|| + ||z-y|| = d(x, y) + d(y, z)$.
+      \item $d(x, y) = \|x-y\| > 0, d(x, y) = 0 \iff \|x-y\| = 0 \iff x = y$.
+      \item $d(x, y) = \|x-y\| = \|(-1)\| \cdot \|y-x\| = \|y-x\| = d(y, x)$.
+      \item $d(x, z) = \|x-z\| = \|x-z+y-y\| \leq \|x-y\| + \|z-y\| = d(x, y) + d(y, z)$.
     \end{enumerate}
   \end{proof}
 \end{definition}

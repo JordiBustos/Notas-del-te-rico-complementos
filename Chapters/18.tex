@@ -100,4 +100,118 @@
 
 \section{Integral de Riemann en varias dimensiones}
 
+\begin{itemize}
+  \item Sean $I_1, \cdots I_n$ intervalos de $\R$ el conjunto $I \subset \R^n$ dado por $I_1 \times \cdots \times I_n = I$. Se llama intervalo n-dimensional.
+  \item Se admite el caso degenerado en que uno o más de los $I_k$ se reduce a un solo punto.
+  \item Si todos los $I_k$ son abiertos o cerrados o acotados, entonces $I$ tiene la misma propiedad en $\R^n$.
+  \item Notamos con $|I|$ a la medida de los intervalos, con la siguiente propiedad $|I| = |I_1| \cdots |I_n|$ con $|I_k|$ la longitud de $I_k$.
+  \item Si $I$ es compacto de $\R^n$ y $P_k$ es una partición de $I_k \Rightarrow P = P_1 \times \cdots \times P_n$ es una partición de $I$.
+  \item Una partición $P^{\prime}$ se dice más fina que $P$ si $P \subset P^{\prime}$.
+\end{itemize}
+
+\begin{definition}
+  Sea $f$ acotada en un intervalo compacto. Si $P$ es una partición de $I$ que define $n$ subintervalos $I_1, \cdots, I_n \subset \R^n$ y $\alpha_k \in I_k$, una suma de Riemann de $f$ asociada a $P$ es una suma de la forma $\sum (f, P^*) = \sum_{k = 1}^n f(\alpha_k) |I_k|$. \\
+  Decimos que $f$ es integrable Riemann en $I$ si $\exists A \in R : (\forall \e > 0)(\exists P_{\e})$ partición de $I : (\forall P)$ más fina que $P_{\e}$ se tiene que $|\sum(f, P^*) - A| < \e$.
+  Notamos \begin{equation}
+    A =  \int_I f(x) \, \mathrm{d}x = \int \int \cdots \int_I f(x_1, \cdots, x_n)\, \mathrm{d}x_1 \cdots \mathrm{d}x_n
+    \end{equation}
+\end{definition}
+
+\begin{definition}
+  Sea $I \subset \R^n$ un intervalo compacto, si $P$ es una partición de $I$ que define $n$ subintervalos $I_1, \cdots I_n \subset \R^n$ definimos $m_k = m_k(f) = inf\{f(x) : x \in I_k\}$ y $M_k = M_k(f) = sup\{f(x) : x \in I_k\}$.
+  Las sumas inferiores y superiores son $s(f, P) = \sum m_k |I_k|$ y $S(f, P) = \sum M_k |I_k|$.
+  La integral superior e inferior de Riemann son \begin{equation}
+    \upint_I f(x) \, \mathrm{d}x = inf(S(f, P))
+  \end{equation}
+  \begin{equation}
+    \lowint_I f(x)\, \mathrm{d}x = sup(s(f, P))
+  \end{equation}
+  Mantienen las propiedades de $\R$.
+\end{definition}
+
+\begin{theorem}
+  $I \subset \R^n$ compacto, son equivalentes:
+  \begin{enumerate}
+    \item $f$ es integrable en $I$.
+    \item $(\forall \e > 0)(\exists P_{\e})$ de $I : P$ refina a $P_{\e}$ $S(f, P) - s(f, P) < \e$.
+    \item $\lowint_I f(x) \, \mathrm{d}x = \upint_I f(x) \, \mathrm{d}x$.
+  \end{enumerate}
+  \begin{proof}
+    Ejercicio, es equivalente a las demostraciones en $\R$.
+  \end{proof}
+\end{theorem}
+
+\begin{theorem}
+  Sea $f$ definida en un compacto $K = [a, b] \times [c, d] \subset \R^2 \Rightarrow$ \begin{enumerate}
+    \item \begin{equation}
+      \int \lowint_K f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \lowint_a^b(\upint_c^d f(x, y)\, \mathrm{d}y)\mathrm{d}x \leq \upint_a^b \upint_c^d f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \int \upint_K f(x, y) \, \mathrm{d}x \mathrm{d}y
+    \end{equation}
+    \item Valen reemplazando $\upint_c^d$ por $\lowint_c^d$.
+    \item \begin{equation}
+      \int \lowint_K f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \lowint_c^d ( \upint_a^b f(x, y)\, \mathrm{d}x ) \mathrm{d}y \leq \upint_c^d \upint_a^b f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \int \upint_K f(x, y) \, \mathrm{d}x \mathrm{d}y
+    \end{equation}
+    \item Valen reemplazando $\upint_a^b$ por $\lowint_a^b$.
+    \item Si $\exists \int \int_K f(x, y) \, \mathrm{d}x \mathrm{d}y \Rightarrow$ \begin{equation}
+      \int \int_K f(x, y) \, \mathrm{d}x \mathrm{d}y = \int_a^b(\lowint_c^d f(x, y) \, \mathrm{d}y)\mathrm{d}x = \int_c^d \lowint_a^b f(x, y) \, \mathrm{d}x \mathrm{d}y = \int_c^d(\upint_a^b f(x,y) \, \mathrm{d}x)\mathrm{d}y
+    \end{equation} 
+  \end{enumerate}
+  \begin{proof}
+    \begin{enumerate}
+      1) Si $F(x) = \upint_c^d f(x, y) \, \mathrm{d}y$ $(\forall x \in [a, b]) \Rightarrow |F(x)| \leq M (d - c)$, $M = sup_Q f$. Llamo \begin{equation}
+        \overline{I} = \upint_a^b F(x)\, \mathrm{d}x = \upint_a^b(\upint_c^d f(x, y)\, \mathrm{d}y) \mathrm{d}x \text{ y }
+        \underline{I} = \lowint_a^b F(x)\, \mathrm{d}x = \lowint_a^b( \lowint_c^d f(x, y)\, \mathrm{d}y) \mathrm{d}x
+      \end{equation} Si $P_1 = \{x_0, \cdots, x_n\}$ partición de $[a, b]$, $P_2 = \{ y_0, \cdots, y_m \}$ partición de $[c, d]$. $P_1 \times P_2$ es una partición de $Q$ con $n \cdot m$ intervalos $Q_{ij}$. Luego \begin{equation}
+        \overline{I}_{ij} = \upint_{x_{i-1}}^{x_i}( \upint_{y_{j-1}}^{y_j}f(x, y)\,\mathrm{d}y)\mathrm{d}x \text{ y }
+        \underline{I}_{ij} = \lowint_{x_{i-1}}^{x_i}( \lowint_{y_{j-1}}^{y_j}f(x, y)\,\mathrm{d}y)\mathrm{d}x
+      \end{equation} Como $\upint_c^d f(x, y)\, \mathrm{d}y = \sum_{j = 1}^m \upint_{y_{j-1}}^{y_j} f(x, y)\, \mathrm{d}y \Rightarrow$ \begin{equation}
+        \upint_a^b(\upint_c^d f(x, y)\, \mathrm{d}y)\mathrm{d}x = \upint_a^b( \sum_{j = 1}^m \int_{y_{j-1}}^{y_j}f(x, y)\, \mathrm{d}y)\mathrm{d}x
+      \end{equation}
+      \begin{equation}
+        \leq \sum_{j = 1}^m \upint_a^b(\int_{y_{j-1}}^{y_j}f(x, y)\, \mathrm{d}y)\mathrm{d}x = \sum_{j = 1}^m \sum_{i = 1}^n \upint_{x_{i-1}}^{x_i}(\int_{y_{j-1}}^{y_j}f(x,y)\,\mathrm{d}y)\mathrm{d}x
+      \end{equation}
+      \begin{equation}
+        \Rightarrow \overline{I} \leq \sum_{j = 1}^m \sum_{i = 1}^n \overline{I_{ij}} \text{, y } \underline{I} \geq \sum_{j = 1}^m \sum_{i = 1}^n \underline{I_{ij}}
+      \end{equation}
+      Si escribimos $m_{ij} = inf\{ f(x, y) : (x, y) \in Q \}$ y $M_{ij} = sup\{ f(x, y) : (x, y) \in Q\} \Rightarrow$ \begin{equation}
+        m_{ij} (y_j - y_{j-1}) \leq \upint_{y_{j-1}}^{y_j} f(x, y)\, \mathrm{d} y \leq M_{ij} (y_j - y_{j-1})
+      \end{equation}
+      \begin{equation}
+        m_{ij} |Q_{ij}| \leq \lowint_{x_{i-1}}^{x_i} ( \upint_{y_{j-1}}^{y_j} f(x, y)\, \mathrm{d}y )\mathrm{d}x \leq M_{ij} |Q_{ij}|
+      \end{equation}
+      \begin{equation}
+        \Rightarrow s(f, P) \leq \underline{I} \leq \overline{I} \leq S(f, P)
+      \end{equation} Como esto vale para cualquier partición $P$ de $Q \Rightarrow$ \begin{equation}
+        \int\lowint_Q f \leq \underline{I} \leq \overline{I} \leq \int\upint_Q f
+      \end{equation}
+      2) Es análoga $F(x) = \lowint_c^d f(x, y) \, \mathrm{d}y$, 3) y 4) Análogo cambiando $x$ por $y$ y 5) es consecuencia de las anteriores.
+    \end{enumerate}
+  \end{proof}
+\end{theorem}
+
 \section{Teorema de Fubini}
+\begin{corollary}[Fubini]
+  Si $f$ es continua en $Q$ \begin{equation}
+    \int\int_Q f = \int_a^b(\int_c^d f(x, y) \, \mathrm{d}x) \mathrm{d}y = \int_c^d(\int_a^b f(x, y)\, \mathrm{d}x)\mathrm{d}y
+  \end{equation}
+\end{corollary}
+
+\begin{definition}
+  Sea $S$ un subconjunto de un intervalo compacto $I \subset \R^n$. Para cada partición $P$ de $I$ definimos $\underline{J}(S, P)$ como la suma de las medidas de los subintervalos definidos por la partición que solo contienen los puntos interiores de $S$ y la medida $\overline{J}(S, P)$ como la suma de las medidas de los intervalos que contienen puntos de $\overline{S}$.
+\end{definition}
+
+\begin{definition}
+  $\underline{c}(S) = sup_P \underline{J}(S, P)$ contenido de Jordan del interior de $S$.
+  $\overline{c}(S) = inf_P \overline{J}(S, P)$ contenido de Jordan superior.
+\end{definition}
+
+\begin{definition}[Contenido de Jordan]
+  Si $\overline{c}(S) = \underline{c}(S)$ notamos $c(S)$ y se llama contenido de Jordan. Decimos que $S$ es medible Jordan.
+\end{definition}
+
+\begin{note}
+  \begin{enumerate}
+    \item Se puede ver que $\overline{c}(S)$ y $\underline{c}(S)$ solo dependen de $S$ y no de $I$.
+    \item $0 \leq \underline{c}(S) \leq \overline{c}(S)$.
+    \item Si $S$ es tal que $c(S) = 0 \Rightarrow \underline{c}(S) = \overline{c}(S) = 0$. Así que $S$ se puede cubrir con finitos intervalos cuyas medidas suman menos que $\e$, $\forall \e > 0$. 
+  \end{enumerate}
+\end{note}

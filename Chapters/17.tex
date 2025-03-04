@@ -1,6 +1,6 @@
 \section{Integral de Riemann}
 
-Consideremos $f: [a, b] \subset \R \to \R$ acotada. Digamos $m = inf\{ f(x) : x \in [a,b] \}$ y $M = sup \{ f(x) : x \in [a, b] \}$. 
+Consideremos $f: [a, b] \subset \R \to \R$ acotada. Digamos $m = inf\{ f(x) : x \in [a,b] \}$ y $M = sup \{ f(x) : x \in [a, b] \}$.
 Una partición de $[a, b]$ es un subconjunto finito $P \subset [a, b]$ tal que $a \in P$ y $b \in P$.
 Escribimos $P = \{ t_0, \cdots, t_n \}$ y por convención $t_0 = a$, $t_n = b$ y $t_0 < t_1 < \cdots < t_n$.
 Notamos $m_i$, $M_i$ al ínfimo y al supremo de $f$ en $[t_{i-1}, t_i]$ $i \in \{ 1, \cdots, n \}$ de la partición.
@@ -39,7 +39,7 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
 \end{corollary}
 
 \begin{definition}
-  Si $f: [a, b] \to \R$ es acotada, definimos su integral inferior como \begin{equation} 
+  Si $f: [a, b] \to \R$ es acotada, definimos su integral inferior como \begin{equation}
     \lowint_a^b f(x)\,\mathrm{d}x = sup_P s(f, P)
   \end{equation}
   Donde el supremo es sobre todas las particiones $P$ de $[a, b]$. Es decir $\forall$ partición $P$ de $[a, b]$, $s(f, P) \leq \lowint_a^b f(x)\, \mathrm{d}x$.
@@ -70,7 +70,7 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
 
   \begin{proof}
     Si $A$, $B$ son los conjuntos de sumas inferiores de $f|_{[a, c)}$ y $f|_{[c, b]} \Rightarrow A + B = \{ x+y : x \in A, y \in B \}$ es el conjunto de las sumas inferiores de $f$ respecto a particiones
-    de $[a, b]$ que contienen a $c \Rightarrow$ \begin{equation} 
+    de $[a, b]$ que contienen a $c \Rightarrow$ \begin{equation}
       \lowint_a^b f(x)\,\mathrm{d}x = sup(A+B) = sup(A) + sup(B) = \lowint_a^c f(x)\,\mathrm{d}x + \lowint_c^b f(x)\,\mathrm{d}x
     \end{equation}
     Análogamente para las sumas superiores.
@@ -79,8 +79,8 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
 
 \begin{prop}
   Sean $f, g: [a, b] \to \R$ acotadas $\Rightarrow$
-  \begin{equation} 
-    \lowint_a^b f(x)\,\mathrm{d}x + \lowint_a^b g(x)\,\mathrm{d}x \leq \lowint_a^b f(x)+g(x)\,\mathrm{d}x 
+  \begin{equation}
+    \lowint_a^b f(x)\,\mathrm{d}x + \lowint_a^b g(x)\,\mathrm{d}x \leq \lowint_a^b f(x)+g(x)\,\mathrm{d}x
   \end{equation}
   \begin{equation}
     \leq \upint_a^b f(x) + g(x)\, \mathrm{d}x \leq \upint_a^b f(x)\, \mathrm{d}x + \upint_a^b g(x)\, \mathrm{d}x
@@ -101,7 +101,7 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
 \begin{prop}
   Sean $f, g: [a, b] \to \R$ acotadas $\Rightarrow$
   Si $c > 0$ \begin{equation}
-  \lowint_a^b c f(x)\,\mathrm{d}x = c \lowint_a^b f(x)\,\mathrm{d}x
+    \lowint_a^b c f(x)\,\mathrm{d}x = c \lowint_a^b f(x)\,\mathrm{d}x
   \end{equation} y \begin{equation}
     \upint_a^b c f(x)\, \mathrm{d}x = c \upint_a^b f(x)\, \mathrm{d}x
   \end{equation}
@@ -134,12 +134,12 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
 
 \begin{eg}
   $f: [a, b] \to \R$, $f(x) = \begin{cases}
-    1 & \text{si } x \in \Q, \\
-    0 & \text{si } x \notin \Q
-  \end{cases}$
+      1 & \text{si } x \in \Q,   \\
+      0 & \text{si } x \notin \Q
+    \end{cases}$
   No es integrable.
   \begin{proof}
-    Para cualquier partición de $[a, b]$, $m_i = 0$, $M_i = 1$ en todos los intervalos de la partición $\Rightarrow s(f, P) = 0$, $S(f, P) = b-a$ $(\forall P)$. 
+    Para cualquier partición de $[a, b]$, $m_i = 0$, $M_i = 1$ en todos los intervalos de la partición $\Rightarrow s(f, P) = 0$, $S(f, P) = b-a$ $(\forall P)$.
   \end{proof}
 \end{eg}
 
@@ -215,7 +215,7 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
   Toda función $f : [a, b] \to \R$ continua es integrable.
   \begin{proof}
     Como $[a, b]$ es compacto, $f$ es acotada y uniformemente continua. Dado $\e > 0$ $\exists \delta > 0 : x, y \in [a, b]$, $|x-y| < \delta \Rightarrow |f(x) - f(y)| < \dfrac{\e}{b-a}$. \\
-    Sea $n \in \N : \dfrac{b-a}{n} < \delta$ y consideremos la partición de $[a, b]$ dada por $t_i = a + i \cdot \dfrac{b-a}{n}$ con $i \in \{0, \cdots, n\} \Rightarrow$ si $x, y \in [t_{i-1}, t_i]$ vale que $|f(x) - f(y)| \Rightarrow \sum_{i=1}^n \omega_i (t_{i-1} - t_i) < \e \therefore f$ es integrable. 
+    Sea $n \in \N : \dfrac{b-a}{n} < \delta$ y consideremos la partición de $[a, b]$ dada por $t_i = a + i \cdot \dfrac{b-a}{n}$ con $i \in \{0, \cdots, n\} \Rightarrow$ si $x, y \in [t_{i-1}, t_i]$ vale que $|f(x) - f(y)| \Rightarrow \sum_{i=1}^n \omega_i (t_{i-1} - t_i) < \e \therefore f$ es integrable.
   \end{proof}
 \end{theorem}
 
@@ -240,7 +240,7 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
 \begin{eg}
   Sea $f: [a, b] \to \R$ \begin{equation}
     f(x) = \begin{cases}
-      0 & \text{si } x = 0, x \in \R - \Q, \\
+      0           & \text{si } x = 0, x \in \R - \Q,                    \\
       \frac{1}{q} & \text{si } x = \frac{p}{q} \text{ con } (p, q) = 1.
     \end{cases}
   \end{equation}

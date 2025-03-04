@@ -33,7 +33,7 @@
 \end{definition}
 
 \begin{theorem}
-  Sea $f: [a, b] \to \R$ acotada $\Rightarrow (\forall \e > 0)(\exists \delta > 0) : $ si $|P| < \delta \Rightarrow S(f, P) < \upint_a^b f(x) \, \mathrm{d}x + \e$ 
+  Sea $f: [a, b] \to \R$ acotada $\Rightarrow (\forall \e > 0)(\exists \delta > 0) : $ si $|P| < \delta \Rightarrow S(f, P) < \upint_a^b f(x) \, \mathrm{d}x + \e$
   \begin{proof}
     Supongamos que $f$ es positiva en $[a, b]$. Dado $\e > 0$, $\exists P_0 = \{t_0, \cdots, t_n\}$ partición de $[a, b]$ tal que $S(f, P_0) < \int_a^b f(x) \, \mathrm{d}x + \frac{\e}{2}$. \\
     Sea $M$ el supremo de $f$ en $[a, b]$ y $\delta : 0 < \delta < \frac{\e}{2nM}$. Si $P$ es una partición de norma menor que $\delta$. Llamo $[r_{\alpha - 1}, r_{\alpha}]$ a los intervalos de $P$ contenidos en algún intervalo $[t_{i-1}, t_i]$ de $P_0$ y $[r_{\beta - 1}, r_{\beta}]$ a los demás. Cada uno de estos intervalos contienen al menos un punto $t_i$ en su interior, así que son como mucho $n$. Entonces $S(f, P) = \sum_{\alpha} M_{\alpha} (r_{\alpha} - r_{\alpha - 1}) + \sum_{\beta} M_{\beta} (r_{\beta} - r_{\beta - 1}) \leq \sum_{i = 1}^n M_i (t_i - t_{i-1}) + M \delta n$.
@@ -50,7 +50,7 @@
 
 \begin{corollary}
   Si $f: [a, b] \to \R$ es acotada, $\int_a^b f(x) \, \mathrm{d}x = \lim_{|P| \to 0} S(f, P)$. \\
-  Si $f: [a, b] \to \R$ es acotada, $\int_a^b f(x) \, \mathrm{d}x = \lim_{|P| \to 0} s(f, P)$. 
+  Si $f: [a, b] \to \R$ es acotada, $\int_a^b f(x) \, \mathrm{d}x = \lim_{|P| \to 0} s(f, P)$.
   \begin{proof}
     $-s(f, P) = S(-f, P) \Rightarrow - \lowint_a^b f(x)\, \mathrm{d}x = \upint_a^b -f(x) \, \mathrm{d}x$.
   \end{proof}
@@ -61,7 +61,7 @@
 \end{definition}
 
 \begin{definition}
-  Si $f: [a,b] \to \R$ es una función acotada y $P^*$ una partición punteada, definimos la suma de Riemann de $f$ asociada a $P^*$ como $\sum (f, P^*) = \sum_{i = 1}^n f(\alpha_i) (t_i - t_{i-1})$. 
+  Si $f: [a,b] \to \R$ es una función acotada y $P^*$ una partición punteada, definimos la suma de Riemann de $f$ asociada a $P^*$ como $\sum (f, P^*) = \sum_{i = 1}^n f(\alpha_i) (t_i - t_{i-1})$.
 \end{definition}
 
 \begin{definition}
@@ -69,7 +69,7 @@
 \end{definition}
 
 \begin{theorem}
-  $f: [a, b] \to \R$ acotada $\Rightarrow \exists I = \lim_{|P| \to 0} \sum (f, P^*) \iff f$ es integrable y en ese caso $I = \int_a^b f(x) \, \mathrm{d}x$. 
+  $f: [a, b] \to \R$ acotada $\Rightarrow \exists I = \lim_{|P| \to 0} \sum (f, P^*) \iff f$ es integrable y en ese caso $I = \int_a^b f(x) \, \mathrm{d}x$.
   \begin{proof}
     Si $f$ es integrable, por el corolario anterior \begin{equation}
       \lim_{|P| \to 0} s(f, P) = \lim_{|P| \to 0} S(f, P) = \int_a^b f(x) \, \mathrm{d}x
@@ -86,7 +86,7 @@
 \end{theorem}
 
 \begin{eg}
-  Sea $f: [1, 2] \to \R$, $f(x) = \frac{1}{x}$. Sabemos que \begin{equation}\int_1^2 \frac{1}{x} \, \mathrm{d}x = ln(2) - ln(1) = ln(2)\end{equation} Para cada $n \in \N$, $P_n = \{1, \frac{n+1}{n}, \frac{n+2}{n}, \cdots, \frac{2 \cdot n}{n}\}$. En cada intervalo $[\frac{n+i-1}{n}, \frac{n+i}{n}]$, $i = 1, \cdots, n$. Elijo $\alpha_i = \frac{n+i}{n}$. Luego 
+  Sea $f: [1, 2] \to \R$, $f(x) = \frac{1}{x}$. Sabemos que \begin{equation}\int_1^2 \frac{1}{x} \, \mathrm{d}x = ln(2) - ln(1) = ln(2)\end{equation} Para cada $n \in \N$, $P_n = \{1, \frac{n+1}{n}, \frac{n+2}{n}, \cdots, \frac{2 \cdot n}{n}\}$. En cada intervalo $[\frac{n+i-1}{n}, \frac{n+i}{n}]$, $i = 1, \cdots, n$. Elijo $\alpha_i = \frac{n+i}{n}$. Luego
   \begin{equation}
     f(\alpha_i) = f(\frac{n+i}{n}) = \frac{n}{n+i} \text{, y } t_i - t_{i-1} = \frac{1}{n}
   \end{equation}
@@ -114,7 +114,7 @@
   Decimos que $f$ es integrable Riemann en $I$ si $\exists A \in R : (\forall \e > 0)(\exists P_{\e})$ partición de $I : (\forall P)$ más fina que $P_{\e}$ se tiene que $|\sum(f, P^*) - A| < \e$.
   Notamos \begin{equation}
     A =  \int_I f(x) \, \mathrm{d}x = \int \int \cdots \int_I f(x_1, \cdots, x_n)\, \mathrm{d}x_1 \cdots \mathrm{d}x_n
-    \end{equation}
+  \end{equation}
 \end{definition}
 
 \begin{definition}
@@ -144,16 +144,16 @@
 \begin{theorem}
   Sea $f$ definida en un compacto $K = [a, b] \times [c, d] \subset \R^2 \Rightarrow$ \begin{enumerate}
     \item \begin{equation}
-      \int \lowint_K f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \lowint_a^b(\upint_c^d f(x, y)\, \mathrm{d}y)\mathrm{d}x \leq \upint_a^b \upint_c^d f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \int \upint_K f(x, y) \, \mathrm{d}x \mathrm{d}y
-    \end{equation}
+            \int \lowint_K f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \lowint_a^b(\upint_c^d f(x, y)\, \mathrm{d}y)\mathrm{d}x \leq \upint_a^b \upint_c^d f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \int \upint_K f(x, y) \, \mathrm{d}x \mathrm{d}y
+          \end{equation}
     \item Valen reemplazando $\upint_c^d$ por $\lowint_c^d$.
     \item \begin{equation}
-      \int \lowint_K f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \lowint_c^d ( \upint_a^b f(x, y)\, \mathrm{d}x ) \mathrm{d}y \leq \upint_c^d \upint_a^b f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \int \upint_K f(x, y) \, \mathrm{d}x \mathrm{d}y
-    \end{equation}
+            \int \lowint_K f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \lowint_c^d ( \upint_a^b f(x, y)\, \mathrm{d}x ) \mathrm{d}y \leq \upint_c^d \upint_a^b f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \int \upint_K f(x, y) \, \mathrm{d}x \mathrm{d}y
+          \end{equation}
     \item Valen reemplazando $\upint_a^b$ por $\lowint_a^b$.
     \item Si $\exists \int \int_K f(x, y) \, \mathrm{d}x \mathrm{d}y \Rightarrow$ \begin{equation}
-      \int \int_K f(x, y) \, \mathrm{d}x \mathrm{d}y = \int_a^b(\lowint_c^d f(x, y) \, \mathrm{d}y)\mathrm{d}x = \int_c^d \lowint_a^b f(x, y) \, \mathrm{d}x \mathrm{d}y = \int_c^d(\upint_a^b f(x,y) \, \mathrm{d}x)\mathrm{d}y
-    \end{equation} 
+            \int \int_K f(x, y) \, \mathrm{d}x \mathrm{d}y = \int_a^b(\lowint_c^d f(x, y) \, \mathrm{d}y)\mathrm{d}x = \int_c^d \lowint_a^b f(x, y) \, \mathrm{d}x \mathrm{d}y = \int_c^d(\upint_a^b f(x,y) \, \mathrm{d}x)\mathrm{d}y
+          \end{equation}
   \end{enumerate}
   \begin{proof}
     \begin{enumerate}
@@ -212,6 +212,6 @@
   \begin{enumerate}
     \item Se puede ver que $\overline{c}(S)$ y $\underline{c}(S)$ solo dependen de $S$ y no de $I$.
     \item $0 \leq \underline{c}(S) \leq \overline{c}(S)$.
-    \item Si $S$ es tal que $c(S) = 0 \Rightarrow \underline{c}(S) = \overline{c}(S) = 0$. Así que $S$ se puede cubrir con finitos intervalos cuyas medidas suman menos que $\e$, $\forall \e > 0$. 
+    \item Si $S$ es tal que $c(S) = 0 \Rightarrow \underline{c}(S) = \overline{c}(S) = 0$. Así que $S$ se puede cubrir con finitos intervalos cuyas medidas suman menos que $\e$, $\forall \e > 0$.
   \end{enumerate}
 \end{note}

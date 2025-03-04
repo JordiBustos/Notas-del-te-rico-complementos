@@ -5,9 +5,9 @@
 \end{definition}
 
 \begin{prop}
-  Si $f$ es continua, $G_f$ es cerrado en $A \times \R^k$. 
+  Si $f$ es continua, $G_f$ es cerrado en $A \times \R^k$.
   \begin{proof}
-    Si $(p_n)_{n \in \N} \subset G_f$ y $p_n \to p \in A \times \R^k$. Para cada $n \in \N$ podemos poner $p_n = (x_n, y_n)$ con $y_n = f(x_n)$. Si $p = (x, y)$ tiene que ser $x_n \to x, y_n \to y$. Como $f$ es continua $f(x_n) \to f(x)$, pero como $y_n = f(x_n) \to y = f(x) \Rightarrow p = (x, y) \in G_f$. 
+    Si $(p_n)_{n \in \N} \subset G_f$ y $p_n \to p \in A \times \R^k$. Para cada $n \in \N$ podemos poner $p_n = (x_n, y_n)$ con $y_n = f(x_n)$. Si $p = (x, y)$ tiene que ser $x_n \to x, y_n \to y$. Como $f$ es continua $f(x_n) \to f(x)$, pero como $y_n = f(x_n) \to y = f(x) \Rightarrow p = (x, y) \in G_f$.
   \end{proof}
 \end{prop}
 
@@ -75,7 +75,7 @@
 \end{eg}
 
 \begin{prop}
-  Sea $C \subset \R^n$ y sea $f : C \to \R$ continua $\Rightarrow$ si $a, b \in C$ e $y$ está entre $f(a)$ y $f(b) \Rightarrow \exists \alpha \in C : f(\alpha) = y$. 
+  Sea $C \subset \R^n$ y sea $f : C \to \R$ continua $\Rightarrow$ si $a, b \in C$ e $y$ está entre $f(a)$ y $f(b) \Rightarrow \exists \alpha \in C : f(\alpha) = y$.
   \begin{proof}
     Sea $\sigma: [0, 1] \to \R^n, \sigma(t) = (1-t)a+tb \Rightarrow \sigma$ es continua y $\sigma([0, 1]) \subset C \Rightarrow g = f \circ \sigma: [0, 1] \to \R$ es continua y $g(0) = f(a), g(1) = f(b) \Rightarrow y$ está entre $g(a)$ y $g(b)$ así que $\exists \beta \in [0, 1] : g(\beta) = y$. Si llamo $\alpha = \sigma(\beta) \Rightarrow f(\alpha) = f(\sigma(\beta)) = g(\beta) = y$.
   \end{proof}
@@ -107,7 +107,7 @@
 \begin{prop}
   $A \subset \R^n, A \neq \varnothing$ es conexo $\iff$ el único subconjunto no vacío $U$ de $A$ que es simultáneamente abierot y cerrado en $A$ es $A$ mismo.
   \begin{proof}
-    Si $A$ no es conexo $\exists U, V$ abiertos, no vacíos en $A$ tales que $U \cap V = \varnothing$ y $U \cup V = A$. Luego $U \neq \varnothing, U \neq A$ y $U$ es abierto y cerrado en $A$. Por otro lado si $A$ es conexo y $U$ es un subconjunto $U \neq \varnothing$ de $A$ abierto y cerrado en $A \Rightarrow V = A - U$ es abierto en $A$ y cumple que $U \cap V = \varnothing, U \cup V = A, V = \varnothing \Rightarrow U = A$. 
+    Si $A$ no es conexo $\exists U, V$ abiertos, no vacíos en $A$ tales que $U \cap V = \varnothing$ y $U \cup V = A$. Luego $U \neq \varnothing, U \neq A$ y $U$ es abierto y cerrado en $A$. Por otro lado si $A$ es conexo y $U$ es un subconjunto $U \neq \varnothing$ de $A$ abierto y cerrado en $A \Rightarrow V = A - U$ es abierto en $A$ y cumple que $U \cap V = \varnothing, U \cup V = A, V = \varnothing \Rightarrow U = A$.
   \end{proof}
 \end{prop}
 
@@ -118,7 +118,7 @@
   \end{proof}
 \end{theorem}
 
-TODO: Revisar este puede no estar bien. 
+TODO: Revisar este puede no estar bien.
 \begin{prop}
   $A$ una familia de subconjuntos conexos de $\R^n$. Si cada vez que $B, C \in A$ vale que son disjuntos $\Rightarrow \bigcup_{a \in A} a$ es conexo.
   \begin{proof}

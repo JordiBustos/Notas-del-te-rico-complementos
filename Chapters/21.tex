@@ -20,12 +20,12 @@
       \lim_{x \to x_0} (\lim_{n \to +\infty} q_n(x)) = \lim_{n \to +\infty}(\lim_{x \to x_0} q_n(x)) = q(x)
     \end{equation} O sea, \begin{equation}
       \lim_{x \to x_0} \dfrac{f(x) - f(x_0)}{x-x_0} = \lim_{n \to +\infty} q_n(x_0) = g(x_0) \Rightarrow f^{\prime} = g
-    \end{equation} 
-  \end{proof} 
+    \end{equation}
+  \end{proof}
 \end{theorem}
 
 \begin{corollary}
-  Sea $\sum_{n \geq 1} f_n$, $f_i$ derivable en $[a, b]$ $\forall i$. Si $\sum_{n \geq 1} f_n(c)$ converge con $c \in [a, b]$ y $\sum f_n^{\prime} = g \Rightarrow \sum_{n \geq 1} f_n \rightrightarrows f$ en $[a, b]$ y $f$ es derivable con $f^{\prime} = g$. 
+  Sea $\sum_{n \geq 1} f_n$, $f_i$ derivable en $[a, b]$ $\forall i$. Si $\sum_{n \geq 1} f_n(c)$ converge con $c \in [a, b]$ y $\sum f_n^{\prime} = g \Rightarrow \sum_{n \geq 1} f_n \rightrightarrows f$ en $[a, b]$ y $f$ es derivable con $f^{\prime} = g$.
 \end{corollary}
 
 \section{Series de potencia}
@@ -128,7 +128,7 @@ Así que ninguna subsucesión puede converger uniformemente a $0$.
 Una familia (o sucesión) es equicontinua si es equicontinua en todo punto del dominio.
 
 \begin{theorem}
-  Sea $f_n: X \to \R$ continuas, $f: X \to \R$ y $f_n \rightrightarrows f \Rightarrow (f_n)_{n \in \N}$ es equicontinua. 
+  Sea $f_n: X \to \R$ continuas, $f: X \to \R$ y $f_n \rightrightarrows f \Rightarrow (f_n)_{n \in \N}$ es equicontinua.
   \begin{proof}
     Sea $\e > 0$, $x_0 \in X$, $\exists n_0 \in \N : |f_n(x) - f(x)| < \frac{\e}{3}$ $(\forall x \in X)$ $(\forall n > n_0)$ por la convergencia uniforme.
     Como $f$ y $f_n$ son continuas $\exists \delta > 0 : |x - x_0| < \delta_i \Rightarrow |f(x) - f(x_0)| < \frac{\e}{3}$ y $|f_i(x) - f_i(x_0)| < \frac{\e}{3}$ $(\forall i \in \{1, \cdots, n_0\})$.

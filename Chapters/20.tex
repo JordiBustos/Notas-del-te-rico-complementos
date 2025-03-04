@@ -6,21 +6,21 @@
 
 \begin{eg}
   $f_n: [0, 1] \to \R$ $f_n(x) = x^n$, converge puntualmente a $f: [0, 1] \to \R$ dada por \begin{equation} f(x) = \begin{cases}
-    0 & \text{si } 0 \leq x < 1, \\
-    1 & \text{si } x = 1.
-  \end{cases}\end{equation}
+      0 & \text{si } 0 \leq x < 1, \\
+      1 & \text{si } x = 1.
+    \end{cases}\end{equation}
   Si $x \in [0, 1)$, $\lim_{n \to \infty} f_n(x) = \lim_{n \to \infty} x^n = 0$. Por otro lado si $x = 1$, $\lim_{n \to \infty} 1^n = 1$. \\
   \begin{tikzpicture}
     \begin{axis}[
-      width=10cm, height=7cm,
-      xlabel={$x$},
-      ylabel={$f_n(x)$},
-      xmin=0, xmax=1,
-      ymin=0, ymax=1,
-      legend pos=north west,
-      grid=major,
-      title={Funciones $f_n(x) = x^n$ en $[0, 1]$}
-    ]
+        width=10cm, height=7cm,
+        xlabel={$x$},
+        ylabel={$f_n(x)$},
+        xmin=0, xmax=1,
+        ymin=0, ymax=1,
+        legend pos=north west,
+        grid=major,
+        title={Funciones $f_n(x) = x^n$ en $[0, 1]$}
+      ]
       \addplot[domain=0:1, samples=100, thick, blue] {x^1};
       \addlegendentry{$f_1(x) = x^1$}
 
@@ -49,7 +49,7 @@
 Notemos que si $f_n: X \subset \R \to \R$ converge puntualmente a $f: X \to \R \Rightarrow (\forall \e > 0)(\exists n_0 \in \N) : |f_n(x) - f(x)| < \e$ $(\forall n > n_0)$, pero $n_0$ depende de $\e$ y de $x$. Si $\e$ está fijo puede ser que ningún $n_0 \in \N$ sirva $\forall x \in X$.
 
 \begin{eg}
-  $f_n: [0, 1] \to \R$, $f_n(x) = x^n$. Si $\e = \frac{1}{2}$ $(\forall n \in \N)(\exists x \in [0, 1)) : |f_n(x) - f(x)| \geq \e = \frac{1}{2} \iff |x^n - 0| \geq \frac{1}{2}$. En efecto pues dado $n \in \N$, $\lim_{x \to 1} x^n = 1$. 
+  $f_n: [0, 1] \to \R$, $f_n(x) = x^n$. Si $\e = \frac{1}{2}$ $(\forall n \in \N)(\exists x \in [0, 1)) : |f_n(x) - f(x)| \geq \e = \frac{1}{2} \iff |x^n - 0| \geq \frac{1}{2}$. En efecto pues dado $n \in \N$, $\lim_{x \to 1} x^n = 1$.
 \end{eg}
 
 \begin{definition}[Convergencia uniforme]
@@ -57,7 +57,7 @@ Notemos que si $f_n: X \subset \R \to \R$ converge puntualmente a $f: X \to \R \
 \end{definition}
 
 \begin{eg}
-  $f_n: [0, 1] \to \R$, $f_n(x) = x^n$, $f_n(x)$ no converge uniformemente. Consideremos $f_n: [0, 1 - \delta]$, $\delta \in (0, 1) \Rightarrow$ la convergencia a $f(x) = 0$ es uniforme. En efecto, dado $\e > 0$ quiero ver que $\exists n_0 \in \N : |x^n - 0| = x^n < \e$ $\forall n > n_0$, $\forall x \in [0, 1 - \delta]$. $x^n$ es creciente entonces $0 \leq x^n \leq (1-\delta)^n$. $(1-\delta)^n \to 0$. Dado $\e > 0$, $\exists n_0 \in \N : | (1-\delta)^n - 0 | < \e$ $(\forall n > n_0) \Rightarrow |x^n - 0| \leq |(1-\delta)^n - 0| < \e$ $(\forall n > n_0)$ $(\forall x \in [0, 1-\delta]) \therefore$ la convergencia es uniforme.  
+  $f_n: [0, 1] \to \R$, $f_n(x) = x^n$, $f_n(x)$ no converge uniformemente. Consideremos $f_n: [0, 1 - \delta]$, $\delta \in (0, 1) \Rightarrow$ la convergencia a $f(x) = 0$ es uniforme. En efecto, dado $\e > 0$ quiero ver que $\exists n_0 \in \N : |x^n - 0| = x^n < \e$ $\forall n > n_0$, $\forall x \in [0, 1 - \delta]$. $x^n$ es creciente entonces $0 \leq x^n \leq (1-\delta)^n$. $(1-\delta)^n \to 0$. Dado $\e > 0$, $\exists n_0 \in \N : | (1-\delta)^n - 0 | < \e$ $(\forall n > n_0) \Rightarrow |x^n - 0| \leq |(1-\delta)^n - 0| < \e$ $(\forall n > n_0)$ $(\forall x \in [0, 1-\delta]) \therefore$ la convergencia es uniforme.
 \end{eg}
 
 \begin{definition}[Sucesión de Cauchy]
@@ -68,7 +68,7 @@ Notemos que si $f_n: X \subset \R \to \R$ converge puntualmente a $f: X \to \R \
   Una sucesión de funciones $f_n : X \to \R$ es uniformemente convergente $\iff$ es de Cauchy.
   \begin{proof}
     Para la ida tomemos $\e > 0$, luego $\exists n_0 \in \N : |f_n(x) - f(x)| < \frac{\e}{2}$ $(\forall n > n_0)(\forall x \in X)$ por hipótesis. Luego si $n, m > n_0 \Rightarrow |f_n(x) - f_m(x)| < |f_n(x) - f(x)| + |f_m(x) - f(x)| < \e$ $(\forall x \in X)$. \\
-    Para la vuelta tenemos que $\forall x \in X$ $(f_n(x))_{n \in \N}$ es una sucesión de Cauchy que converge a un límite que llamo $f(x)$. Dado $\e > 0$, $\exists n_0 \in \N : |f_n(x) - f_m(x)| < \e$ $(\forall n, m > n_0)$. $\forall x \in X$ fijado el $x$ y el $n$ tomamos $m \to +\infty \therefore |f_n(x) - f(x)| < \e$ $(\forall x \in X)(\forall n > n_0) \therefore$ la convergencia es uniforme. 
+    Para la vuelta tenemos que $\forall x \in X$ $(f_n(x))_{n \in \N}$ es una sucesión de Cauchy que converge a un límite que llamo $f(x)$. Dado $\e > 0$, $\exists n_0 \in \N : |f_n(x) - f_m(x)| < \e$ $(\forall n, m > n_0)$. $\forall x \in X$ fijado el $x$ y el $n$ tomamos $m \to +\infty \therefore |f_n(x) - f(x)| < \e$ $(\forall x \in X)(\forall n > n_0) \therefore$ la convergencia es uniforme.
   \end{proof}
 \end{theorem}
 
@@ -102,9 +102,9 @@ Notemos que la convergencia normal implica la convergencia uniforme que a su vez
 
 \begin{eg}
   $f_n: [1, +\infty) \to \R$, $f_n = \begin{cases}
-    \frac{1}{x} & \text{si } x \in [n, n+1], \\
-    0 & \text{caso contrario.}
-  \end{cases}$
+      \frac{1}{x} & \text{si } x \in [n, n+1], \\
+      0           & \text{caso contrario.}
+    \end{cases}$
   Llamo $f: [1, +\infty) \to \R$, $f(x) = \frac{1}{x}$. Afirmo que $\sum_{n \geq 1} f_n \rightrightarrows f$. Porque $0 \leq f(x) - S_n < \frac{1}{n}$ $(\forall x \in [1, +\infty))$, pero no converge normalmente en $[1, +\infty)$, pues si fuese $f(x) \leq a_n$ $(\forall x \in [1, +\infty))$ tomando $x = n \Rightarrow \frac{1}{n} \leq a_n \Rightarrow \sum a_n = +\infty$ y no puede ser normal la serie.
 \end{eg}
 
@@ -114,9 +114,9 @@ Notemos que la convergencia normal implica la convergencia uniforme que a su vez
 
 \begin{eg}
   $f_n(x) = x^n$, $f(x) = \begin{cases}
-    1 & \text{si } x = 1, \\
-    0 & \text{si } 0 \leq x < 1. 
-  \end{cases}$ \begin{equation}
+      1 & \text{si } x = 1,        \\
+      0 & \text{si } 0 \leq x < 1.
+    \end{cases}$ \begin{equation}
     \lim_{x \to 1} (\lim_{n \to \infty} f_n(x)) = \lim_{x \to 1} f(x) = 0
   \end{equation}
   \begin{equation}
@@ -139,7 +139,7 @@ Notemos que la convergencia normal implica la convergencia uniforme que a su vez
     Para ver que $\exists \lim_{n \to \infty} L_n = L$. Probemos que $L_n$ es de Cauchy.
     \begin{enumerate}
       \item Dado $\e > 0$, como $f_n \rightrightarrows f$, $\exists n_0 \in \N : |f_n(x) - f_m(x)| < \frac{\e}{3}$ $(\forall n > n_0)(\forall x \in X)$. Si $m,n > n_0$, $\exists x \in X : |L_m - f_m(x)| < \frac{\e}{3}$ y $|L_n - f_n(x)| < \frac{\e}{3} \Rightarrow |L_n - L_m| \leq |L_n - f_n(x)| + |f_n(x) - f_m(x)| + |f_m(x) - L_m| < \e$.
-      \item Veamos que si $f(x) = \lim_{n \to \infty} f_n$ verifica $\lim_{x \to a} f(x) = L$. Dado $\e > 0$, $\exists n_0 \in \N : |L_n - L| < \frac{\e}{3}$, $|f_n(x) - f(x)| < \frac{\e}{3}$ $(\forall n > n_0 \in \N)(\forall x \in X)$. Si $n > n_0$, como $\lim_{x \to a} f_n(x) = L_n$, $\exists \delta > 0 : 0 < |x-a| < \delta \Rightarrow |f_n(x) - L_n| < \frac{\e}{3} \Rightarrow$ si $|x-a| < \delta \Rightarrow |f(x) - L| < \e$. 
+      \item Veamos que si $f(x) = \lim_{n \to \infty} f_n$ verifica $\lim_{x \to a} f(x) = L$. Dado $\e > 0$, $\exists n_0 \in \N : |L_n - L| < \frac{\e}{3}$, $|f_n(x) - f(x)| < \frac{\e}{3}$ $(\forall n > n_0 \in \N)(\forall x \in X)$. Si $n > n_0$, como $\lim_{x \to a} f_n(x) = L_n$, $\exists \delta > 0 : 0 < |x-a| < \delta \Rightarrow |f_n(x) - L_n| < \frac{\e}{3} \Rightarrow$ si $|x-a| < \delta \Rightarrow |f(x) - L| < \e$.
     \end{enumerate}
   \end{proof}
 \end{theorem}
@@ -163,7 +163,7 @@ Notemos que el teorema también vale si $a = +\infty$
   Si $f_n \rightrightarrows f$ y todas las $f_n$ son continuas en $a \in X \Rightarrow f$ es continua en $a$.
   \begin{proof}
     Si $a$ es punto aislado es inmediato. Si $a \in X^{\prime} \Rightarrow$ \begin{equation}
-      \lim_{x \to a} f(x) = \lim_{x \to a}(\lim_{n \to \infty} f_n(x)) 
+      \lim_{x \to a} f(x) = \lim_{x \to a}(\lim_{n \to \infty} f_n(x))
     \end{equation}
     \begin{equation}
       = \lim_{n \to \infty}(\lim_{x \to a} f_n(x)) = \lim_{n \to \infty} f_n(a) = f(a)
@@ -207,7 +207,7 @@ Si el límite de $(f_n)_{n \in \N}$ no es continuo y las funciones de la sucesi�
 \end{corollary}
 
 \begin{note}
-  Si $f_n: [a, b] \to \R$ son integrables y convergen puntualmente a $f$ en $[a, b]$ puede pasar que $f$ no sea integrable por ejemplo si $\Q \cap [a, b] = \{r_1, \cdots\}$ y 
+  Si $f_n: [a, b] \to \R$ son integrables y convergen puntualmente a $f$ en $[a, b]$ puede pasar que $f$ no sea integrable por ejemplo si $\Q \cap [a, b] = \{r_1, \cdots\}$ y
   \begin{equation}
     f_n(x) = \begin{cases}
       1 & \text{si } x \in \{r_1, \cdots, r_n\}, \\
@@ -215,14 +215,14 @@ Si el límite de $(f_n)_{n \in \N}$ no es continuo y las funciones de la sucesi�
     \end{cases}
   \end{equation}
   Luego $f(x) = \begin{cases}
-    1 & \text{si } x \in \Q \cap [a, b], \\
-    0 & \text{caso contrario}.
-  \end{cases} \Rightarrow f_n \to f \text{ en } [a, b]$, cada $f_n$ es integrable, pero $f$ no lo es.
+      1 & \text{si } x \in \Q \cap [a, b], \\
+      0 & \text{caso contrario}.
+    \end{cases} \Rightarrow f_n \to f \text{ en } [a, b]$, cada $f_n$ es integrable, pero $f$ no lo es.
 \end{note}
 
 \begin{note}
   $f_n \to f$ en $[a, b]$, $f_n$ y $f$ son integrables, pero $\lim_{n \to \infty} \int_a^b f_n \neq \int_a^b f$. Por ejemplo si $f_n: [0, 1] \to \R$, $f_n(x) = \begin{cases}
-    (n+1) x^{n+1} & \text{si } x \in [0, 1), \\
-    0 & \text{si } x = 1.
-  \end{cases}$ Luego si $f: [0, 1] \to \{0\}$, $f(x) = 0 \Rightarrow f_n \to f$, pero $\int_0^1 f_n(x) dx = 1 \neq 0 = \int_0^1 f(x) dx$. 
+      (n+1) x^{n+1} & \text{si } x \in [0, 1), \\
+      0             & \text{si } x = 1.
+    \end{cases}$ Luego si $f: [0, 1] \to \{0\}$, $f(x) = 0 \Rightarrow f_n \to f$, pero $\int_0^1 f_n(x) dx = 1 \neq 0 = \int_0^1 f(x) dx$.
 \end{note}

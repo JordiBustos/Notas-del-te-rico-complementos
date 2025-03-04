@@ -20,12 +20,12 @@
     Supongamos que $x \in U$. Como $A$ es abierto, $\exists r > 0 : B_r(x) \subset A$. Si $y$ es un punto cualquiera de $B_r(x) \Rightarrow t: [0, 1] \to \R^n$ es continua, verifica que $t(0) = x_0, t(1) = y$ y toma valores en $A$.
     \begin{equation}
       t(\alpha) = \begin{cases}
-        \sigma(2\alpha) & \text{si } \alpha \in [0, \frac{1}{2}], \\
+        \sigma(2\alpha)           & \text{si } \alpha \in [0, \frac{1}{2}], \\
         (2 - 2 \alpha)x + (2t-1)y & \text{si } \alpha \in (\frac{1}{2}, 1].
       \end{cases}
     \end{equation} Luego $y \in U \Rightarrow B_r(x) \subset U \Rightarrow U$ es abierto en $\R^n$ y $\therefore$ es abierto en $A$. Veamos que $U$ también es cerrado en $A$. Sea $(u_n)_{n \in \N} \subset U : u_n \to u$ quiero ver que $u \in U$. Como $A$ es abierto $\exists s > 0 : B_s(u) \subset A$ y como $u_n \to u, \exists m : u_m \in B_s(u)$. Como $u_n \subset U, \exists \sigma: [0, 1] \to \R^n$ continua, con valores en $A$ y tal que $\sigma(0) = x_0$, $\sigma(1) = u_m$. Como antes, $t: [0, 1] \to \R^n$ es continua, toma valores en $A$.
     \begin{equation} t(\alpha) = \begin{cases}
-        \sigma(2\alpha) & \text{si } \alpha \in [0, \frac{1}{2}], \\
+        \sigma(2\alpha)                & \text{si } \alpha \in [0, \frac{1}{2}], \\
         (2 - 2\alpha) u_m + (2t - 1) u & \text{si } t \in (\frac{1}{2}, 1].
       \end{cases}
     \end{equation}$\Rightarrow t(0) = x_0$, $t_1 = u \Rightarrow u \in U$. \\
@@ -52,7 +52,7 @@
 \begin{theorem}
   $f$ continua, $f: K \subset \R^n \to \R^k$, $K$ compacto $\Rightarrow f$ es uniformemente continua.
   \begin{proof}
-    Sea $\e > 0$, como $f$ es continua $(\forall x \in K)(\exists \delta_x > 0) : (\forall x_0 \in K) : \|x - x_0\| < \delta_x \Rightarrow \|f(x) - f(x_0)\| < \frac{\e}{2}$. Sea $U = \{B_{\delta_x} : x \in K\}$ es un cubrimiento abierto de $K$. Como $K$ es compacto $U$ tiene un número de Lebesgue, $\exists \delta > 0 : x, y \in K$ y $ \|x-y\| < \delta \Rightarrow \exists u \in U : x, y \in u$. Dados $x, y \in K : \|x-y\| < \delta \Rightarrow \exists z \in K : x, y \in B_{\delta_z}(z) \Rightarrow \|f(x) - f(z)\| < \frac{\e}{2}$ y $\|f(y) - f(z)\| < \frac{\e}{2}$. 
+    Sea $\e > 0$, como $f$ es continua $(\forall x \in K)(\exists \delta_x > 0) : (\forall x_0 \in K) : \|x - x_0\| < \delta_x \Rightarrow \|f(x) - f(x_0)\| < \frac{\e}{2}$. Sea $U = \{B_{\delta_x} : x \in K\}$ es un cubrimiento abierto de $K$. Como $K$ es compacto $U$ tiene un número de Lebesgue, $\exists \delta > 0 : x, y \in K$ y $ \|x-y\| < \delta \Rightarrow \exists u \in U : x, y \in u$. Dados $x, y \in K : \|x-y\| < \delta \Rightarrow \exists z \in K : x, y \in B_{\delta_z}(z) \Rightarrow \|f(x) - f(z)\| < \frac{\e}{2}$ y $\|f(y) - f(z)\| < \frac{\e}{2}$.
     \begin{equation}
       \|f(x) - f(y)\| = \|f(x) - f(z) - (f(y) - f(z))\| \leq \|f(x) - f(z)\| + \|f(y) - f(z)\| < \e
     \end{equation} $\therefore f$ es uniformemente continua.
@@ -63,22 +63,22 @@
   Sea $A \subset \R^n$, $f: A \to \R^k$ uniformemente continua $\Rightarrow \exists !$ función continua $\overline{f}: \overline{A} \to \R^k : \overline{f}(x) = f(x) (\forall x \in A)$ y $\overline{f}$ es uniformemente continua.
   \begin{proof}
     \begin{enumerate}
-      \item Afirmo que dado $x_0 \in \overline{A}$, $(x_n)_{n \in \N} \subset A$, $x_n \to x_0 \Rightarrow (f(x_n))_{n \in \N}$ converge. En efecto, dado $\e > 0$, $\exists \delta > 0 : \|x-y\| < \delta \Rightarrow \|f(x) - f(y)\| < \e$. Luego $\exists n_0 \in \N : (\forall n, m > n_0) \|x_n - x_m\| < \frac{\delta}{2} \Rightarrow$ \begin{equation} 
-        \|x_0 - x_m\| + \|x_m - x_0\| < \delta \iff \|x_n - x_m\| < \delta \iff \|f(x_n) - f(x_m)\| < \e
-      \end{equation} $\therefore (f(x_n)_{n \in \N})$ es de Cauchy.
+      \item Afirmo que dado $x_0 \in \overline{A}$, $(x_n)_{n \in \N} \subset A$, $x_n \to x_0 \Rightarrow (f(x_n))_{n \in \N}$ converge. En efecto, dado $\e > 0$, $\exists \delta > 0 : \|x-y\| < \delta \Rightarrow \|f(x) - f(y)\| < \e$. Luego $\exists n_0 \in \N : (\forall n, m > n_0) \|x_n - x_m\| < \frac{\delta}{2} \Rightarrow$ \begin{equation}
+              \|x_0 - x_m\| + \|x_m - x_0\| < \delta \iff \|x_n - x_m\| < \delta \iff \|f(x_n) - f(x_m)\| < \e
+            \end{equation} $\therefore (f(x_n)_{n \in \N})$ es de Cauchy.
       \item Afirmo que sea $x_0 \in \overline{A}$, $\exists ! L_x \in \R^k : (x_n)_{n \in \N} \subset A$ y $x_n \to x_0$, $f(x_n) \to L_x$. En efecto, supongamos que $x_n \to x_0$, $y_n \to x_0$ y $f(x_n) \to L_x$ y $f(y_n) \to L_y$. Como $f$ es uniformemente continua en $A$, $\exists \delta > 0 : (\forall u, v \in A) : \|u-v\| < \delta \Rightarrow \|f(u) - f(v)\| < \e$. Como $x_n \to x_0$ e $y_n \to x_0 \Rightarrow \exists n_0 \in \N : (\forall n, m > n_0) (\|x_n - x_0\| < \frac{\delta}{2}) (\| y_n - x_0 \| < \frac{\delta}{2})$ \begin{equation}
-        \Rightarrow \|x_n - y_n\| \leq \|x_n - x_0\| + \|y_n - x_0\| < \delta \Rightarrow \|f(x_n) - f(y_n)\| < \frac{\e}{3}
-      \end{equation} Luego como $\|f(x_n) - L_x\| < \frac{\e}{3}$ y $\|f(y_n) - L_y\| < \frac{\e}{3}$, $(\forall n > n_0) \therefore \|L_x - L_y\| < \e$.
+              \Rightarrow \|x_n - y_n\| \leq \|x_n - x_0\| + \|y_n - x_0\| < \delta \Rightarrow \|f(x_n) - f(y_n)\| < \frac{\e}{3}
+            \end{equation} Luego como $\|f(x_n) - L_x\| < \frac{\e}{3}$ y $\|f(y_n) - L_y\| < \frac{\e}{3}$, $(\forall n > n_0) \therefore \|L_x - L_y\| < \e$.
       \item Acabamos de ver que $\exists \overline{f}: \overline{A} \to \R^k : f(x) = L_x$ Veamos que a) $f(A) \subset \overline{f}|_A$ b) $\overline{f}$ es uniformemente continua en $\overline{A}$. \begin{enumerate}
-        \item Sea $x \in A$, $x_n = x$ $(\forall n \in \N)$, $x_n \to x$, $f(x_n) \to f(x) = L_x = \overline{f}(x)$, $(f(x))_{n \in \N}$ es constante $f(x) = \overline{f}(x)$.
-        \item Dado $\e > 0$, $\exists \delta > 0 : \|x-y\| < \delta \Rightarrow \|f(x) - f(y)\| < \frac{\e}{3}$. Sean $u, v \in \overline{A} : \|u - v\| < \delta \Rightarrow \exists (u_n)_{n \in \N}$, $(v_n)_{n \in \N} \subset \overline{A}$ con $u_n \to u$, $v_n \to v$, $f(u_n) \to \overline{f}(u)$, $f(v_n) \to \overline{f}(v)$. Luego $\exists n_0 \in \N : \|f(u_n) - \overline{f}(u)\| < \frac{\e}{3}$ y $\|f(v_n) - \overline{f}(v)\| < \frac{\e}{3}$. Además $\|u_n - u\| < \frac{1}{2} \cdot (\delta - \|u - v\|)$, $\|v_n - v\| < \frac{1}{2} \cdot (\delta - \|u - v\|)$, $(\forall n > n_0$). Luego \begin{equation}
-          \|u_n - v_n\| < \|u_n - u\| + \|v_n - v\| + \|u - v\| < \delta \Rightarrow
-        \end{equation}
-        \begin{equation}
-          \|\overline{f}(u) - \overline{f}(v)\| < \|\overline{f}(u) - f(u_n)\| + \|f(u_n) - f(v_n)\| + \|f(v_n) - \overline{f}(v)\| < \e
-        \end{equation} $\therefore \overline{f}$ es uniformemente continua.
-      \end{enumerate}
-      \item Veamos por último la unicidad, si $g: \overline{A} \to \R^k$ continua y $g(x) = f(x) (\forall x \in A) \Rightarrow g|_A = \overline{f}|_A$. En efecto, como $A \subset \overline{A} \Rightarrow \overline{f} = g$. 
+              \item Sea $x \in A$, $x_n = x$ $(\forall n \in \N)$, $x_n \to x$, $f(x_n) \to f(x) = L_x = \overline{f}(x)$, $(f(x))_{n \in \N}$ es constante $f(x) = \overline{f}(x)$.
+              \item Dado $\e > 0$, $\exists \delta > 0 : \|x-y\| < \delta \Rightarrow \|f(x) - f(y)\| < \frac{\e}{3}$. Sean $u, v \in \overline{A} : \|u - v\| < \delta \Rightarrow \exists (u_n)_{n \in \N}$, $(v_n)_{n \in \N} \subset \overline{A}$ con $u_n \to u$, $v_n \to v$, $f(u_n) \to \overline{f}(u)$, $f(v_n) \to \overline{f}(v)$. Luego $\exists n_0 \in \N : \|f(u_n) - \overline{f}(u)\| < \frac{\e}{3}$ y $\|f(v_n) - \overline{f}(v)\| < \frac{\e}{3}$. Además $\|u_n - u\| < \frac{1}{2} \cdot (\delta - \|u - v\|)$, $\|v_n - v\| < \frac{1}{2} \cdot (\delta - \|u - v\|)$, $(\forall n > n_0$). Luego \begin{equation}
+                      \|u_n - v_n\| < \|u_n - u\| + \|v_n - v\| + \|u - v\| < \delta \Rightarrow
+                    \end{equation}
+                    \begin{equation}
+                      \|\overline{f}(u) - \overline{f}(v)\| < \|\overline{f}(u) - f(u_n)\| + \|f(u_n) - f(v_n)\| + \|f(v_n) - \overline{f}(v)\| < \e
+                    \end{equation} $\therefore \overline{f}$ es uniformemente continua.
+            \end{enumerate}
+      \item Veamos por último la unicidad, si $g: \overline{A} \to \R^k$ continua y $g(x) = f(x) (\forall x \in A) \Rightarrow g|_A = \overline{f}|_A$. En efecto, como $A \subset \overline{A} \Rightarrow \overline{f} = g$.
     \end{enumerate}
   \end{proof}
 \end{theorem}
@@ -99,11 +99,11 @@ Además la diferencial de $F$ es la matriz que se obtiene al poner como filas lo
 \begin{equation}
   DF_p = \begin{pmatrix}
     \nabla f_1(p) \\
-    \vdots \\
+    \vdots        \\
     \nabla f_n(p)
   \end{pmatrix} = \begin{pmatrix}
     \dfrac{\partial f_1}{\partial x_1}(p) & \cdots & \dfrac{\partial f_1}{\partial x_n}(p) \\
-    \vdots & \cdots & \vdots \\
+    \vdots                                & \cdots & \vdots                                \\
     \dfrac{\partial f_n}{\partial x_1}(p) & \cdots & \dfrac{\partial f_n}{\partial x_n}(p)
   \end{pmatrix}
 \end{equation}
@@ -111,10 +111,10 @@ Además la diferencial de $F$ es la matriz que se obtiene al poner como filas lo
 También podemos observar que si $F$ es diferenciable en $P$ y $v \in \R^n \Rightarrow \alpha(t) = p + t \cdot v$.
 
 \begin{equation}
-  0 = \lim_{t \to 0} \dfrac{\| F(p + t \cdot v) - F(p) - DF_p(t \cdot v) \|}{|t|} 
+  0 = \lim_{t \to 0} \dfrac{\| F(p + t \cdot v) - F(p) - DF_p(t \cdot v) \|}{|t|}
 \end{equation}
 \begin{equation}
-  = \lim_{t \to 0} \| \dfrac{F(p + tv) - F(p)}{t} - DF_p(v) \| 
+  = \lim_{t \to 0} \| \dfrac{F(p + tv) - F(p)}{t} - DF_p(v) \|
 \end{equation}
 \begin{equation}
   \iff DF_p(v) = \lim_{t \to 0} \dfrac{F(p+t \cdot v) - F(p)}{t} \text{  } (\forall v \in \R^n)
@@ -129,7 +129,7 @@ También podemos observar que si $F$ es diferenciable en $P$ y $v \in \R^n \Righ
     \lim_{t \to 0} \dfrac{1}{t} ( \langle G(p+tx), H(p+tx) \rangle - \langle G(p), H(p+tx) \rangle + \langle G(p), H(p+tx) \rangle - \langle G(p), H(p) \rangle)
   \end{equation}
   \begin{equation}
-    \lim_{t \to 0} \dfrac{1}{t} (\langle G(p+tx) - G(p), H(p + tx) \rangle + \langle G(p), H(p+tx) - H(p) \rangle) 
+    \lim_{t \to 0} \dfrac{1}{t} (\langle G(p+tx) - G(p), H(p + tx) \rangle + \langle G(p), H(p+tx) - H(p) \rangle)
   \end{equation}
   \begin{equation}
     \langle DG_p(x), H(p) \rangle + \langle G(p), DH_p \rangle \Rightarrow
@@ -157,23 +157,23 @@ También podemos observar que si $F$ es diferenciable en $P$ y $v \in \R^n \Righ
   \end{enumerate}
   \begin{proof}
     \begin{enumerate}
-      \item $\|T\|_{\infty} > 0$ es trivial. Si $T = 0 \Rightarrow Tx = 0 \Rightarrow \|Tx\|_{\infty} = 0$ y si $\|T\|_{\infty} \neq 0 \Rightarrow Tx=0 (\forall x \in \overline{B_1(0)}$ pues por linealidad si 
-        \begin{equation}
-          x \neq 0 \Rightarrow Tx = T(\dfrac{x}{\|x\|} \cdot \|x\|) = \|x\| T(\dfrac{x}{x}) = 0 \therefore T = 0
-        \end{equation}
+      \item $\|T\|_{\infty} > 0$ es trivial. Si $T = 0 \Rightarrow Tx = 0 \Rightarrow \|Tx\|_{\infty} = 0$ y si $\|T\|_{\infty} \neq 0 \Rightarrow Tx=0 (\forall x \in \overline{B_1(0)}$ pues por linealidad si
+            \begin{equation}
+              x \neq 0 \Rightarrow Tx = T(\dfrac{x}{\|x\|} \cdot \|x\|) = \|x\| T(\dfrac{x}{x}) = 0 \therefore T = 0
+            \end{equation}
       \item Trivial
       \item $S + T \in \R^{n \times m}$ dado $x \in \overline{B_1(0)}$ \begin{equation}
-          \|(S+T)(x)\| = \| Tx + Sx \| \leq \|Tx\| + \|Sx\| \leq  \|x\| \cdot (\|Tx\|_{\infty} + \|Sx\|_{\infty}) 
-      \end{equation} 
-      \begin{equation}
-        \leq \|Tx\|_{\infty} + \|Sx\|_{\infty} \therefore \|(T+S)(x)\|_{\infty} \leq \|T\|_{\infty} + \|S\|_{\infty}
-      \end{equation}
+              \|(S+T)(x)\| = \| Tx + Sx \| \leq \|Tx\| + \|Sx\| \leq  \|x\| \cdot (\|Tx\|_{\infty} + \|Sx\|_{\infty})
+            \end{equation}
+            \begin{equation}
+              \leq \|Tx\|_{\infty} + \|Sx\|_{\infty} \therefore \|(T+S)(x)\|_{\infty} \leq \|T\|_{\infty} + \|S\|_{\infty}
+            \end{equation}
     \end{enumerate}
   \end{proof}
 \end{lemma}
 
 \begin{lemma}
-  Si $F: A \subset \R^n \to \R^n$ es diferenciable con $p \in A^{\circ}$, $\exists R > 0$ y $c_r > 0 : x \in B_r(p) \Rightarrow \| F(x) - F(p) \| \leq c_r \| x - p\|$ 
+  Si $F: A \subset \R^n \to \R^n$ es diferenciable con $p \in A^{\circ}$, $\exists R > 0$ y $c_r > 0 : x \in B_r(p) \Rightarrow \| F(x) - F(p) \| \leq c_r \| x - p\|$
   Esto implica la continuidad uniforme en $B_r(p)$.
   \begin{proof}
     Como $F$ es diferenciable en $p$, $\exists B_r(p)$ donde el cociente de diferenciabilidad es menor que $1$. \begin{equation}

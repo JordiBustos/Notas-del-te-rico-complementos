@@ -1,13 +1,13 @@
-  \section{Equicontinuidad uniforme}
+\section{Equicontinuidad uniforme}
 
-  \begin{theorem}
+\begin{theorem}
   Si $E$ es una familia de funciones derivables en $I : \exists c > 0 : |f^{\prime}(x)| \leq c$ $(\forall f \in E)(\forall x \in I) \Rightarrow E$ es equicontinua en $I$.
   \begin{proof}
     Sea $x_0 \in I$, $\e > 0$, $\delta = \frac{\e}{c}$. Si $x \in I$ y $|x - x_0| < \delta \Rightarrow |f(x) - f(x_0)| \leq c |x - x_0| < c \cdot \frac{\e}{c} < \e$ $(\forall f \in E)$ usando Teorema del Valor Medio.
   \end{proof}
 \end{theorem}
 
-Más en general, con el mismo argumento, se ve que si $\forall x \in I$, $\exists c_x > 0$ y un intervalo $I_x$ tal que $x \in I_x \subset I$ y $|f^{\prime}(y)| \leq c_x$ $(\forall f \in E)(\forall y \in I_x) \Rightarrow E$ es equicontinua. 
+Más en general, con el mismo argumento, se ve que si $\forall x \in I$, $\exists c_x > 0$ y un intervalo $I_x$ tal que $x \in I_x \subset I$ y $|f^{\prime}(y)| \leq c_x$ $(\forall f \in E)(\forall y \in I_x) \Rightarrow E$ es equicontinua.
 
 \begin{definition}[Equicontinuidad uniforme]
   Una familia $E$ de funciones, $f: X \to \R$ se dice uniformemente equicontinua si $(\forall \e > 0)(\exists \delta > 0) : x, y \in X$, $|x-y| < \delta \Rightarrow |f(x) - f(y)| < \e$ $(\forall f \in E)$
@@ -24,9 +24,9 @@ Más en general, con el mismo argumento, se ve que si $\forall x \in I$, $\exist
 \begin{theorem}
   Sea $K \subset \R$ compacto. Toda familia de funciones $f: K \to \R$ equicontinua es uniformemente equicontinua.
   \begin{proof}
-    Si $E$ no fuese uniformemente equicontinua, $\exists \e > 0 : (\forall n \in \N)$, $x_n$, $y_n \in K$, $f_n \in E : |x_n - y_n| < \frac{1}{n} < \delta$, pero $|f_n(x_n) - f_n(y_n)| \geq \e$. 
+    Si $E$ no fuese uniformemente equicontinua, $\exists \e > 0 : (\forall n \in \N)$, $x_n$, $y_n \in K$, $f_n \in E : |x_n - y_n| < \frac{1}{n} < \delta$, pero $|f_n(x_n) - f_n(y_n)| \geq \e$.
     Pasando a una subsucesión, podemos suponer que $x_n \to x \in K$ ($K$ es compacto) y como $|y_n - x_n| < \frac{1}{n}$ tenemos que $y_n \to x$. \\
-    Como la familia $E$ es equicontinua en $x$, $\exists \delta > 0 : z \in K$ y $|x - z| < \delta \Rightarrow |f(x) - f(z)| < \frac{\e}{2}$ $(\forall f \in E) \Rightarrow |f_n(x_n) - f_n(y_n)| \leq |f_n(x_n) - f_n(x)| + |f_n(y_n) - f(x)| < \e$ $(\forall n > n_0 \in \N)$, pues $|x_n - x| < \delta$ y $|y_n - x| < \delta$ Absurdo! 
+    Como la familia $E$ es equicontinua en $x$, $\exists \delta > 0 : z \in K$ y $|x - z| < \delta \Rightarrow |f(x) - f(z)| < \frac{\e}{2}$ $(\forall f \in E) \Rightarrow |f_n(x_n) - f_n(y_n)| \leq |f_n(x_n) - f_n(x)| + |f_n(y_n) - f(x)| < \e$ $(\forall n > n_0 \in \N)$, pues $|x_n - x| < \delta$ y $|y_n - x| < \delta$ Absurdo!
   \end{proof}
 \end{theorem}
 
@@ -62,9 +62,9 @@ Más en general, con el mismo argumento, se ve que si $\forall x \in I$, $\exist
 \begin{theorem}[Arzelà - Ascoli]
   Sea $K \subset \R$ compacto, toda sucesión equicontinua y puntualmente acotada de funciones $f_n: K \to \R$ posee una subsucesión uniformemente convergente.
   \begin{proof}
-    Como $K \subset \R$, $\exists X \subset K$ numerable y denso en $K$. Por el teorema anterior, como $X$ es numerable $(f_n)_{n \in \N}$ tiene una subsucesión puntualmente convergente en $X$ (por ser $f_n$ puntualmente acotada). Como $(f_n)_{n \in \N}$ es equicontinua y converge puntualmente en $X \subset K$ denso, converge uniformemente en $K$ por ser compacto. 
+    Como $K \subset \R$, $\exists X \subset K$ numerable y denso en $K$. Por el teorema anterior, como $X$ es numerable $(f_n)_{n \in \N}$ tiene una subsucesión puntualmente convergente en $X$ (por ser $f_n$ puntualmente acotada). Como $(f_n)_{n \in \N}$ es equicontinua y converge puntualmente en $X \subset K$ denso, converge uniformemente en $K$ por ser compacto.
   \end{proof}
 \end{theorem}
 
 \section{Ecuaciones diferenciales}
-TODO 
+TODO

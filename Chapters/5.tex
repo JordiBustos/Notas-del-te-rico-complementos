@@ -9,8 +9,18 @@
   $s \cdot t = [(a_n b_n)]$ la clase de equivalencia de $(a_n b_n)_{n \in \N}$. \\
   Veamos que están bien definidas, si $[(a_n)] = [(c_n)]$ y $[(b_n)] = [(d_n)]$. \\
   $a_n - c_n \to 0$ y $b_n - d_n \to 0$. \\
-  $([a_n] + [(b_n)]) - ([c_n] +[d_n])) = ([a_n] - [(c_n)]) + ([b_n] - [(d_n)]) = 0 \Rightarrow $ la suma está bien definida. \\
-  $a_n b_n - c_n d_n = a_n b_n - c_n b_n + c_n b_n - c_n d_n = b_n (a_n - c_n) + c_n (b_n - d_n) \Rightarrow |a_n \cdot b_n - c_n \cdot b_n| \leq |b_n| |a_n - c_n| + |c_n| |b_n - d_n|$. \\
+  \begin{align*}
+    ([a_n] + [(b_n)]) - ([c_n] +[d_n])) & =                                              \\
+                                        & = ([a_n] - [(c_n)]) + ([b_n] - [(d_n)])        \\
+                                        & = 0                                            \\
+                                        & \Rightarrow \text{la suma está bien definida.}
+  \end{align*}
+  \begin{align*}
+    a_n b_n - c_n d_n & =                                                                                       \\
+                      & = a_n b_n - c_n b_n + c_n b_n - c_n d_n                                                 \\
+                      & = b_n (a_n - c_n) + c_n (b_n - d_n)                                                     \\
+                      & \Rightarrow |a_n \cdot b_n - c_n \cdot b_n| \leq |b_n| |a_n - c_n| + |c_n| |b_n - d_n|. \\
+  \end{align*}
   Como $(b_n)_{n \in \N}$ y $(c_n)_{n \in \N}$ están acotadas $\exists M : |b_n| < M$, $|c_n| < M, \forall n \in \N$. \\
   $|a_n b_n - c_n b_n| \leq M (|a_n c_n| + |b_n - d_n|) < \e, \forall n > n_0$. \\
   Porque $a_n - c_n \to 0$, $b_n - d_n \to 0$.
@@ -61,6 +71,8 @@ Sea $s \in \R$ decimos que $s$ es positivo si $s \neq 0$ y $s = [(a_n)]$ tal que
 \end{definition}
 
 Veamos un ejemplo de como se prueban los axiomas de orden.
+
+\clearpage
 
 \begin{theorem}
   Sean $s, t \in \R : s > t, r \in \R \Rightarrow s+r > t+r$.
@@ -133,6 +145,8 @@ Como $s_0 < M$ es fácil ver que $(u_n)_{n \in \N}$ es decreciente y que $(l_n)_
   \end{proof}
 \end{lemma}
 
+\clearpage
+
 \begin{lemma}
   $\exists u \in \R : u_n \to u$.
   \begin{proof}
@@ -163,6 +177,8 @@ Como $s_0 < M$ es fácil ver que $(u_n)_{n \in \N}$ es decreciente y que $(l_n)_
     $u_n - l_n \to 0 \therefore$ $l_n \to u$, pues $u_n \to u$.
   \end{proof}
 \end{lemma}
+
+\clearpage
 
 \begin{theorem}
   $\R$ tiene la propiedad del supremo.

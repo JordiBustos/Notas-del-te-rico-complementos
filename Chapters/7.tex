@@ -113,15 +113,15 @@ Dada una sucesión $(a_n)_{n \in \N} \subset \R$ formamos una nueva sucesión $(
   \end{proof}
 \end{theorem}
 
+\clearpage
+
 \begin{eg}
-  El recíproco del teorema anterior es falsa pues $\sum_{n \geq 1} \frac{1}{n}$ diverge.
+  El recíproco del teorema anterior es falso pues $\sum_{n \geq 1} \frac{1}{n}$ diverge.
   \begin{proof}
-    \begin{equation}
-      S_{2^n} = 1 + 1/2 + (1/3 + 1/4) + (1/5 + 1/6 + 1/7 + 1/8) + \cdots + (\frac{1}{2^{n-1}+1} + \cdots + \frac{1}{2^n})
-    \end{equation}
-    \begin{equation}
-      > 1 + 1/2 + 2/4 + 4/8 + \cdots + \frac{2^{n-1}}{2^n} = 1 + n/2
-    \end{equation}
+    \begin{align*}
+      S_{2^n} & = 1 + 1/2 + (1/3 + 1/4) + (1/5 + 1/6 + 1/7 + 1/8) + \cdots + (\frac{1}{2^{n-1}+1} + \cdots + \frac{1}{2^n}) \\
+              & > 1 + 1/2 + 2/4 + 4/8 + \cdots + \frac{2^{n-1}}{2^n} = 1 + n/2
+    \end{align*}
     Luego $\lim_{n \to \infty} S_{2^n} = + \infty$.
   \end{proof}
 \end{eg}

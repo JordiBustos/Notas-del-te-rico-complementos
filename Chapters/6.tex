@@ -69,6 +69,8 @@ Una subsucesión de $x$ es la restricción de $x$ a un subconjunto infinito $A =
   Si $-1 < a < 0$, la sucesión converge pues $|a^n| = |a|^n = a^n \to 0$.
 \end{eg}
 
+\clearpage
+
 \section{Propiedades de límites}
 
 \begin{theorem}
@@ -106,6 +108,8 @@ Sea $lim_{n \to \infty} x_n = a$ y $lim_{n \to \infty} y_n = b$.
     Además $x_n - a \to 0 \Rightarrow b(x_n - a) \to 0 \Rightarrow x_n \cdot y_n = a \cdot b$.
   \end{proof}
 \end{prop}
+
+\clearpage
 
 \begin{prop}
   $\dfrac{x_n}{y_n} \to \dfrac{a}{b}$.
@@ -183,10 +187,14 @@ Vamos a ver que $a \in \R$ es el límite de alguna subsucesión de $(x_n)_{n \in
   $b = \limsup_{n \to \infty} x_n$.
 \end{definition}
 
+\clearpage
+
 \begin{eg}
-  $(x_n)_{n \in \N} = (-1, 2, -1/2, 3/2, -1/3, 4/3, \cdots)$. \\
-  $(x_{2n+1})_{n \in \N} = -\frac{1}{n}$ y $(x_{2n})_{n \in \N} = 1 + \frac{1}{n}$. \\
-  Luego $inf(X_{2n-2}) = inf(X_{2n-1}) = -\frac{1}{n}$ \\
-  $sup(X_{2n-2}) = sup(X_{2n-1}) = 1 + \frac{1}{n} \Rightarrow$
-  $\liminf_{n \to \infty} x_n = 0$ y $\limsup_{n \to \infty} x_n = 1$.
+  \begin{align*}
+     & (x_n)_{n \in \N} = (-1, 2, -1/2, 3/2, -1/3, 4/3, \cdots),                      \\
+     & (x_{2n+1})_{n \in \N} = -\frac{1}{n}, \ (x_{2n})_{n \in \N} = 1 + \frac{1}{n}, \\
+     & \text{Luego, } \inf(X_{2n-2}) = \inf(X_{2n-1}) = -\frac{1}{n},                 \\
+     & \sup(X_{2n-2}) = \sup(X_{2n-1}) = 1 + \frac{1}{n} \Rightarrow                  \\
+     & \liminf_{n \to \infty} x_n = 0, \ \limsup_{n \to \infty} x_n = 1.
+  \end{align*}
 \end{eg}

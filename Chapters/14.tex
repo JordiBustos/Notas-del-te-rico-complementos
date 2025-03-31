@@ -12,6 +12,8 @@
   $\R^n$ es conexo y, en particular, los únicos subconjuntos de $\R^n$ que son abiertos y cerrados son $\varnothing, \R^n$.
 \end{corollary}
 
+\clearpage
+
 \begin{theorem}
   Un subconjunto abierto de $\R^n$ no vacío es arco-conexo $\iff$ es conexo.
 
@@ -41,6 +43,8 @@
   \end{equation}
 \end{definition}
 
+\clearpage
+
 \begin{eg}
   \begin{enumerate}
     \item $f(x) = x$. Tomando $\e = \delta$ en la definición.
@@ -58,6 +62,8 @@
     \end{equation} $\therefore f$ es uniformemente continua.
   \end{proof}
 \end{theorem}
+
+\clearpage
 
 \begin{theorem}
   Sea $A \subset \R^n$, $f: A \to \R^k$ uniformemente continua $\Rightarrow \exists !$ función continua $\overline{f}: \overline{A} \to \R^k : \overline{f}(x) = f(x) (\forall x \in A)$ y $\overline{f}$ es uniformemente continua.
@@ -110,33 +116,24 @@ Además la diferencial de $F$ es la matriz que se obtiene al poner como filas lo
 
 También podemos observar que si $F$ es diferenciable en $P$ y $v \in \R^n \Rightarrow \alpha(t) = p + t \cdot v$.
 
-\begin{equation}
-  0 = \lim_{t \to 0} \dfrac{\| F(p + t \cdot v) - F(p) - DF_p(t \cdot v) \|}{|t|}
-\end{equation}
-\begin{equation}
-  = \lim_{t \to 0} \| \dfrac{F(p + tv) - F(p)}{t} - DF_p(v) \|
-\end{equation}
-\begin{equation}
-  \iff DF_p(v) = \lim_{t \to 0} \dfrac{F(p+t \cdot v) - F(p)}{t} \text{  } (\forall v \in \R^n)
-\end{equation}
+\begin{align*}
+  0 & = \lim_{t \to 0} \dfrac{\| F(p + t \cdot v) - F(p) - DF_p(t \cdot v) \|}{|t|}                 \\
+    & = \lim_{t \to 0} \| \dfrac{F(p + tv) - F(p)}{t} - DF_p(v) \|                                  \\
+    & \iff DF_p(v) = \lim_{t \to 0} \dfrac{F(p+t \cdot v) - F(p)}{t} \text{  } (\forall v \in \R^n)
+\end{align*}
 
 \begin{note}
   Si $G, H: A \subset \R^n \to \R^n$ son diferenciables podemos considerar su producto escalar como $F(x) = \langle G(x), H(x) \rangle$ que es diferenciable.
-  Además $\lim_{t \to 0} \dfrac{F(p + tx) - F(p)}{t}$ = \begin{equation}
-    \lim_{t \to 0} \dfrac{1}{t} ( \langle G(p + tx), H(p+tx) \rangle - \langle G(p), H(p) \rangle )
-  \end{equation}
-  \begin{equation}
-    \lim_{t \to 0} \dfrac{1}{t} ( \langle G(p+tx), H(p+tx) \rangle - \langle G(p), H(p+tx) \rangle + \langle G(p), H(p+tx) \rangle - \langle G(p), H(p) \rangle)
-  \end{equation}
-  \begin{equation}
-    \lim_{t \to 0} \dfrac{1}{t} (\langle G(p+tx) - G(p), H(p + tx) \rangle + \langle G(p), H(p+tx) - H(p) \rangle)
-  \end{equation}
-  \begin{equation}
-    \langle DG_p(x), H(p) \rangle + \langle G(p), DH_p \rangle \Rightarrow
-  \end{equation}
-  \begin{equation}
-    D\langle G, H \rangle_p = \langle DG_p(x), H)(p) \rangle + \langle G(p), DH_p(x) \rangle
-  \end{equation}
+
+  Además:
+  \begin{align*}
+     & \lim_{t \to 0} \dfrac{F(p + tx) - F(p)}{t} =                                                                                                                 \\
+     & \lim_{t \to 0} \dfrac{1}{t} ( \langle G(p + tx), H(p+tx) \rangle - \langle G(p), H(p) \rangle )                                                              \\
+     & \lim_{t \to 0} \dfrac{1}{t} ( \langle G(p+tx), H(p+tx) \rangle - \langle G(p), H(p+tx) \rangle + \langle G(p), H(p+tx) \rangle - \langle G(p), H(p) \rangle) \\
+     & \lim_{t \to 0} \dfrac{1}{t} (\langle G(p+tx) - G(p), H(p + tx) \rangle + \langle G(p), H(p+tx) - H(p) \rangle)                                               \\
+     & \langle DG_p(x), H(p) \rangle + \langle G(p), DH_p \rangle \Rightarrow                                                                                       \\
+     & D\langle G, H \rangle_p = \langle DG_p(x), H)(p) \rangle + \langle G(p), DH_p(x) \rangle                                                                     \\
+  \end{align*}
 \end{note}
 
 \begin{lemma}
@@ -171,6 +168,8 @@ También podemos observar que si $F$ es diferenciable en $P$ y $v \in \R^n \Righ
     \end{enumerate}
   \end{proof}
 \end{lemma}
+
+\clearpage
 
 \begin{lemma}
   Si $F: A \subset \R^n \to \R^n$ es diferenciable con $p \in A^{\circ}$, $\exists R > 0$ y $c_r > 0 : x \in B_r(p) \Rightarrow \| F(x) - F(p) \| \leq c_r \| x - p\|$

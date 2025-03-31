@@ -12,6 +12,8 @@
   Un subcubrimiento de $U$ es un cubrimiento $V$ de $X$ tal que $V \subset U$.
 \end{definition}
 
+\clearpage
+
 \begin{theorem}[Lindelöf]
   Todo cubrimiento abierto de algún subconjunto de $\R^n$ admite a lo sumo un subcubrimiento a lo sumo numerable.
   \begin{proof}
@@ -33,6 +35,8 @@
     Así que hay elementos de $U$ que contienen a $B_s(q)$ y por lo tanto $x \in B_s(q) \subset U(q, s)$. Esto prueba que $V = \{ U(q, s) : q \in \Q^n, s \in Q > 0 \}$ es un subcubrimiento de $U$ y es numerable pues $\Q^n \times \Q^n$ es numerable y la función $Q^n \times \Q > 0 \to V$, $(q, s) \mapsto U(q, s)$, es suryectiva $\therefore V$ es a lo sumo numerable.
   \end{proof}
 \end{theorem}
+
+\clearpage
 
 \begin{corollary}
   Un subconjunto $F \subset \R^n$ es compacto $\iff \forall$ cubrimiento abierto de $F$ admite un subcubrimiento finito.
@@ -64,6 +68,8 @@
     finitos.
   \end{proof}
 \end{corollary}
+
+\clearpage
 
 \begin{prop}
   Sea $K \subset \R^n$ compacto. Si $U$ es un cubrimiento abierto de $K$ entonces $\exists \delta > 0 :$ si $x, y \in K, d(x, y) < \delta \Rightarrow \exists u \in U$ abierto tal que $x, y \in u$. \\
@@ -98,6 +104,8 @@
     $\therefore$ el límite es único.
   \end{proof}
 \end{lemma}
+
+\clearpage
 
 \begin{prop}
   Sea $A \subset \R^n, x_0 \in A^{\prime}, f: A \to \R^k, y \in \R^k$ son equivalentes:
@@ -175,19 +183,19 @@
   \end{proof}
 \end{prop}
 
+\clearpage
+
 \begin{theorem}[Teorema del Sandwich]
   Sea $A \subset \R^n, x_0 \in A^{\prime}$ y $f, g, h: A \to \R, \forall x \in A, f(x) \leq g(x) \leq h(x)$, si: \\
   $\lim_{x \to x_0} f(x) = \lim_{x \to x_0} h(x) = y \Rightarrow \lim_{x \to x_0} g(x) = y$.
   \begin{proof}
-    Dado $\e > 0, \exists \delta_1, \delta_2 > 0 :$ \begin{equation}
-      0 < d(x, x_0) < \delta_1 \Rightarrow d(f(x), y) < \e
-    \end{equation}
-    \begin{equation}
-      0 < d(x, x_0) < \delta_2 \Rightarrow d(h(x), y) < \e
-    \end{equation} Sea $\delta = min(\delta_1, \delta_2) \Rightarrow \exists x \in A : 0 < d(x, x_0) < \delta \Rightarrow$
-    \begin{equation}
-      y - \e < f(x) \leq g(x) \leq h(x) < y + \e \Rightarrow d(g(x), y) < \e
-    \end{equation}
+    Dado $\e > 0, \exists \delta_1, \delta_2 > 0$ :
+    \begin{align*}
+       & 0 < d(x, x_0) < \delta_1 \Rightarrow d(f(x), y) < \e                                                                 \\
+       & 0 < d(x, x_0) < \delta_2 \Rightarrow d(h(x), y) < \e                                                                 \\
+       & \text{Sea } \delta = \text{min}(\delta_1, \delta_2) \Rightarrow \exists x \in A : 0 < d(x, x_0) < \delta \Rightarrow \\
+       & y - \e < f(x) \leq g(x) \leq h(x) < y + \e \Rightarrow d(g(x), y) < \e
+    \end{align*}
+    $\therefore \lim_{x \to x_0} g(x) = y$.
   \end{proof}
-  $\therefore \lim_{x \to x_0} g(x) = y$.
 \end{theorem}

@@ -64,7 +64,7 @@
 \end{prop}
 
 \begin{prop}
-  Sea $A \subset \R^n, x_0 \in A, f: A \to \R^k \Rightarrow f$ es continua en $x_0 \iff$ cada vez que $(x_n)_{n \in \N} \subset A$ converge a $x_0 \Rightarrow f(x(x_n)_{n \in \N}) converge a f(x_0)$.
+  Sea $A \subset \R^n$, $x_0 \in A$ y sea $f: A \to \R^k \Rightarrow f$ es continua en $x_0 \iff$ cada vez que $(x_n)_{n \in \N} \subset A$ converge a $x_0 \Rightarrow f((x_n)_{n \in \N})$ converge a $f(x_0)$.
   \begin{proof}
     Para la ida supongamos $f$ continua en $x_0$ y $x_n \to x_0, (x_n)_{n \in \N} \subset A$. Sea $\e > 0, \exists \delta > 0 : 0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e$.
     Además $\exists n_0 \in \N : (\forall n > n_0)(d(x_n, x_0)) < \delta$ (tomando $\e = \delta$ en la definición) $\Rightarrow d(f(x_n), f(x_0)) < \e \therefore \lim_{n \to \infty} f(x_n) = f(x_0)$.

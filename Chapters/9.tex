@@ -74,7 +74,7 @@
   Un subconjunto propio $U \subset \R^n$ es abierto $\iff \forall x \in U$ se tiene que $inf\{d(x, y) : y \in \R^n - U\} > 0$. \\
   El ínfimo existe pues el conjunto es no vacío y acotado superiormente.
   \begin{proof}
-    Para la ida tenemos que si $U$ es abierto entonces $\exists r > 0 : B_r(x) \subset U$. \\
+    Para la ida tenemos que si $U$ es abierto $\Rightarrow (\forall x \in U) \text{ } \exists r > 0 : B_r(x) \subset U$. \\
     Si $y \in R^n - U \Rightarrow y \notin B_r(x)$ por lo que $d(x, y) > r > 0$ y $r$ es una cota inferior mínima positiva del conjunto, pues si $d(x,y) < r \Rightarrow y \in B_r(x)$ absurdo! \\
 
     Para la vuelta tomemos $s = inf\{ d(x,y) : y \in \R^n - U \} > 0$. Consideremos $B_{\frac{s}{2}}(x)$. Si $z$ pertenece a esa bola entonces $d(x, z) < \frac{s}{2} < s \Rightarrow$ \\
@@ -137,7 +137,7 @@ Notemos que la hipotesis de que la familia sea finita en la intersección es nec
 \begin{corollary}
   Si $X \subset Y \Rightarrow X^{\circ} \subset Y^{\circ}$.
   \begin{proof}
-    $X^{\circ} \subset X \subset Y$. Como $Y$ es el mayor abierto contenido en $Y$ se sigue que $X^{\circ} \subset Y^{\circ} \subset Y$.
+    $X^{\circ} \subset X \subset Y$. Como $Y^{\circ}$ es el mayor abierto contenido en $Y$ se sigue que $X^{\circ} \subset Y^{\circ} \subset Y$.
   \end{proof}
 \end{corollary}
 
@@ -166,7 +166,7 @@ $1 \notin X^{\circ} \cup Y^{\circ} = (-1, 1) \cup (1, 2)$, pero $1 \in (X \cup Y
 \section{Entorno}
 
 \begin{definition}[Entorno]
-  Sea $x \in \R^n$ un entorno de $x$ es un subconjunto $N \subset R^n : x \in N^{\circ}$.
+  Sea $x \in \R^n$, un entorno de $x$ es un subconjunto $N \subset R^n : x \in N^{\circ}$.
 \end{definition}
 
 \begin{prop}

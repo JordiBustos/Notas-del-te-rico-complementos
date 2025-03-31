@@ -61,6 +61,8 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
   \end{proof}
 \end{lemma}
 
+\clearpage
+
 \begin{theorem}
   Sea $a < c < b$ y $f: [a, b] \to \R$ acotada. Entonces \begin{equation}
     \lowint_a^b f(x)\,\mathrm{d}x = \lowint_a^c f(x)\,\mathrm{d}x + \lowint_c^b f(x)\,\mathrm{d}x
@@ -127,10 +129,12 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
 \end{prop}
 
 \begin{definition}[Integrable]
-  Una función acotada $f: [a, b] \to \R$ se dice integrable si \begin{equation}
+  Una función acotada $f: [a, b] \to \R$ se dice integrable si \begin{align*}
     \lowint_a^b f(x) \, \mathrm{d}x = \upint_a^b f(x) \, \mathrm{d}x
-  \end{equation}
+  \end{align*}
 \end{definition}
+
+\clearpage
 
 \begin{eg}
   $f: [a, b] \to \R$, $f(x) = \begin{cases}
@@ -162,6 +166,8 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
   \end{proof}
 \end{note}
 
+\clearpage
+
 \begin{theorem}
   Sea $f: [a, b] \to \R$ acotada. Son equivalentes \begin{enumerate}
     \item $f$ es integrable.
@@ -174,11 +180,15 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
     1) $\iff$ 2) es el lema anterior. \\
     3) $\iff$ 4) vale porque $\sum_{i = 1}^n \omega_i (t_i - t_{i-1}) = S(f, P) - s(f, P)$. \\
     3) $\Rightarrow$ 2) trivial. \\
-    2) $\Rightarrow$ 3) Si $S(f, G) - s(f, P) < \e$ tomando $P_0 = P \cup G$. \begin{equation}
-      s(f, P) \leq s(f, P_0) \leq S(f, P_0) \leq S(f, Q) \Rightarrow S(f, P_0) - s(f, P_0) \e
-    \end{equation}
+    2) $\Rightarrow$ 3) Si $S(f, G) - s(f, P) < \e$ tomando $P_0 = P \cup G$. \begin{align*}
+      s(f, P) & \leq s(f, P_0) \\
+      & \leq S(f, P_0) \leq S(f, Q) \\
+      & \Rightarrow S(f, P_0) - s(f, P_0) < \e
+    \end{align*}
   \end{proof}
 \end{theorem}
+
+\clearpage
 
 \section{Continuidad e integración}
 
@@ -193,23 +203,21 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
   \end{enumerate}
   \begin{proof}
     1, 2, 3, 4 equivalente a las demostraciones de suma superior e inferior. \\
-    5) $| |f(x)| - |f(y)|| \leq |f(x) - f(y)|$. Para cualquier $x \in [a, b]$ vale que $\omega(|f|, X) \leq \omega(f, X)$. En particular $\forall P$ partición de $[a, b]$ $\omega_i(|f|) \leq \omega_i(f) \therefore |f|$ es integrable y como además $-|f(x)| \leq f(x) \leq |f(x)| \Rightarrow$ \begin{equation}
-      -\int_a^b |f(x)| \, \mathrm{d}x \leq \int_a^b f(x) \, \mathrm{d}x \leq \int_a^b |f(x)| \, \mathrm{d}x \Rightarrow
-    \end{equation}
-    \begin{equation}
-      | \int_a^b f(x) \, \mathrm{d}x | \leq \int_a^b |f(x)| \, \mathrm{d}x
-    \end{equation}
-    6) Dada una partición $P$ de $[a, b]$ sean $\omega_i(f \cdot g)$, $\omega_i(f)$, $\omega_i(g)$ las oscilaciones de las funciones en $[t_{i-1}, t_i]$ \begin{equation}
-      |fg(x) - fg(y)| = |f(x)g(x) - f(y)g(y) + f(x)g(y) - f(x)g(y)|
-    \end{equation}
-    \begin{equation}
-      \leq |f(x)| \cdot |g(x)- g(y)| + |g(y)| \cdot |f(x) - f(y)|
-    \end{equation}
-    \begin{equation}
-      \leq k \omega(g) + k \omega(f) = k (\omega(g) + \omega(f))
-    \end{equation} Luego $f \cdot g$ es integrable.
+    5) $| |f(x)| - |f(y)|| \leq |f(x) - f(y)|$. Para cualquier $x \in [a, b]$ vale que $\omega(|f|, X) \leq \omega(f, X)$. En particular $\forall P$ partición de $[a, b]$ $\omega_i(|f|) \leq \omega_i(f) \therefore |f|$ es integrable y como además $-|f(x)| \leq f(x) \leq |f(x)| \Rightarrow$ 
+    \begin{align*}
+      -\int_a^b |f(x)| \, \mathrm{d}x & \leq \int_a^b f(x) \, \mathrm{d}x \leq \int_a^b |f(x)| \, \mathrm{d}x \Rightarrow \\
+      & | \int_a^b f(x) \, \mathrm{d}x | \leq \int_a^b |f(x)| \, \mathrm{d}x
+    \end{align*}
+    6) Dada una partición $P$ de $[a, b]$ sean $\omega_i(f \cdot g)$, $\omega_i(f)$, $\omega_i(g)$ las oscilaciones de las funciones en $[t_{i-1}, t_i]$ 
+    \begin{align*}
+      |fg(x) - fg(y)| & = |f(x)g(x) - f(y)g(y) + f(x)g(y) - f(x)g(y)| \\
+      & \leq |f(x)| \cdot |g(x)- g(y)| + |g(y)| \cdot |f(x) - f(y)| \\
+      & \leq k \omega(g) + k \omega(f) = k (\omega(g) + \omega(f)) \\
+    \end{align*} Luego $f \cdot g$ es integrable.
   \end{proof}
 \end{theorem}
+
+\clearpage
 
 \begin{theorem}
   Toda función $f : [a, b] \to \R$ continua es integrable.
@@ -236,6 +244,8 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
     Sea $t_0$, $\cdots$, $t_n$ los puntos donde $f$ es discontinua $\Rightarrow f$ es integrable en $[t_{i-1}, t_i]$ por ser continua en $[c, d]$ con $t_{i-1} < c < d < t_i$.
   \end{proof}
 \end{corollary}
+
+\clearpage
 
 \begin{eg}
   Sea $f: [a, b] \to \R$ \begin{equation}

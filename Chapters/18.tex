@@ -85,6 +85,8 @@
   \end{proof}
 \end{theorem}
 
+\clearpage
+
 \begin{eg}
   Sea $f: [1, 2] \to \R$, $f(x) = \frac{1}{x}$. Sabemos que \begin{equation}\int_1^2 \frac{1}{x} \, \mathrm{d}x = ln(2) - ln(1) = ln(2)\end{equation} Para cada $n \in \N$, $P_n = \{1, \frac{n+1}{n}, \frac{n+2}{n}, \cdots, \frac{2 \cdot n}{n}\}$. En cada intervalo $[\frac{n+i-1}{n}, \frac{n+i}{n}]$, $i = 1, \cdots, n$. Elijo $\alpha_i = \frac{n+i}{n}$. Luego
   \begin{equation}
@@ -141,52 +143,56 @@
   \end{proof}
 \end{theorem}
 
+\clearpage
+
 \begin{theorem}
-  Sea $f$ definida en un compacto $K = [a, b] \times [c, d] \subset \R^2 \Rightarrow$ \begin{enumerate}
-    \item \begin{equation}
-            \int \lowint_K f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \lowint_a^b(\upint_c^d f(x, y)\, \mathrm{d}y)\mathrm{d}x \leq \upint_a^b \upint_c^d f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \int \upint_K f(x, y) \, \mathrm{d}x \mathrm{d}y
-          \end{equation}
-    \item Valen reemplazando $\upint_c^d$ por $\lowint_c^d$.
-    \item \begin{equation}
-            \int \lowint_K f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \lowint_c^d ( \upint_a^b f(x, y)\, \mathrm{d}x ) \mathrm{d}y \leq \upint_c^d \upint_a^b f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \int \upint_K f(x, y) \, \mathrm{d}x \mathrm{d}y
-          \end{equation}
-    \item Valen reemplazando $\upint_a^b$ por $\lowint_a^b$.
-    \item Si $\exists \int \int_K f(x, y) \, \mathrm{d}x \mathrm{d}y \Rightarrow$ \begin{equation}
-            \int \int_K f(x, y) \, \mathrm{d}x \mathrm{d}y = \int_a^b(\lowint_c^d f(x, y) \, \mathrm{d}y)\mathrm{d}x = \int_c^d \lowint_a^b f(x, y) \, \mathrm{d}x \mathrm{d}y = \int_c^d(\upint_a^b f(x,y) \, \mathrm{d}x)\mathrm{d}y
-          \end{equation}
-  \end{enumerate}
+  Sea $f$ definida en un compacto $K = [a, b] \times [c, d] \subset \R^2 \Rightarrow$
+  \begin{align*}
+    \int \lowint_K f(x, y) \, \mathrm{d}x \mathrm{d}y & \leq \lowint_a^b(\upint_c^d f(x, y)\, \mathrm{d}y)\mathrm{d}x                                                       \\
+                                                      & \leq \upint_a^b \upint_c^d f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \int \upint_K f(x, y) \, \mathrm{d}x \mathrm{d}y
+  \end{align*}
   \begin{proof}
-    \begin{enumerate}
-      1) Si $F(x) = \upint_c^d f(x, y) \, \mathrm{d}y$ $(\forall x \in [a, b]) \Rightarrow |F(x)| \leq M (d - c)$, $M = sup_Q f$. Llamo \begin{equation}
-        \overline{I} = \upint_a^b F(x)\, \mathrm{d}x = \upint_a^b(\upint_c^d f(x, y)\, \mathrm{d}y) \mathrm{d}x \text{ y }
-        \underline{I} = \lowint_a^b F(x)\, \mathrm{d}x = \lowint_a^b( \lowint_c^d f(x, y)\, \mathrm{d}y) \mathrm{d}x
-      \end{equation} Si $P_1 = \{x_0, \cdots, x_n\}$ partición de $[a, b]$, $P_2 = \{ y_0, \cdots, y_m \}$ partición de $[c, d]$. $P_1 \times P_2$ es una partición de $Q$ con $n \cdot m$ intervalos $Q_{ij}$. Luego \begin{equation}
-        \overline{I}_{ij} = \upint_{x_{i-1}}^{x_i}( \upint_{y_{j-1}}^{y_j}f(x, y)\,\mathrm{d}y)\mathrm{d}x \text{ y }
-        \underline{I}_{ij} = \lowint_{x_{i-1}}^{x_i}( \lowint_{y_{j-1}}^{y_j}f(x, y)\,\mathrm{d}y)\mathrm{d}x
-      \end{equation} Como $\upint_c^d f(x, y)\, \mathrm{d}y = \sum_{j = 1}^m \upint_{y_{j-1}}^{y_j} f(x, y)\, \mathrm{d}y \Rightarrow$ \begin{equation}
-        \upint_a^b(\upint_c^d f(x, y)\, \mathrm{d}y)\mathrm{d}x = \upint_a^b( \sum_{j = 1}^m \int_{y_{j-1}}^{y_j}f(x, y)\, \mathrm{d}y)\mathrm{d}x
-      \end{equation}
-      \begin{equation}
-        \leq \sum_{j = 1}^m \upint_a^b(\int_{y_{j-1}}^{y_j}f(x, y)\, \mathrm{d}y)\mathrm{d}x = \sum_{j = 1}^m \sum_{i = 1}^n \upint_{x_{i-1}}^{x_i}(\int_{y_{j-1}}^{y_j}f(x,y)\,\mathrm{d}y)\mathrm{d}x
-      \end{equation}
-      \begin{equation}
-        \Rightarrow \overline{I} \leq \sum_{j = 1}^m \sum_{i = 1}^n \overline{I_{ij}} \text{, y } \underline{I} \geq \sum_{j = 1}^m \sum_{i = 1}^n \underline{I_{ij}}
-      \end{equation}
-      Si escribimos $m_{ij} = inf\{ f(x, y) : (x, y) \in Q \}$ y $M_{ij} = sup\{ f(x, y) : (x, y) \in Q\} \Rightarrow$ \begin{equation}
-        m_{ij} (y_j - y_{j-1}) \leq \upint_{y_{j-1}}^{y_j} f(x, y)\, \mathrm{d} y \leq M_{ij} (y_j - y_{j-1})
-      \end{equation}
-      \begin{equation}
-        m_{ij} |Q_{ij}| \leq \lowint_{x_{i-1}}^{x_i} ( \upint_{y_{j-1}}^{y_j} f(x, y)\, \mathrm{d}y )\mathrm{d}x \leq M_{ij} |Q_{ij}|
-      \end{equation}
-      \begin{equation}
-        \Rightarrow s(f, P) \leq \underline{I} \leq \overline{I} \leq S(f, P)
-      \end{equation} Como esto vale para cualquier partición $P$ de $Q \Rightarrow$ \begin{equation}
-        \int\lowint_Q f \leq \underline{I} \leq \overline{I} \leq \int\upint_Q f
-      \end{equation}
-      2) Es análoga $F(x) = \lowint_c^d f(x, y) \, \mathrm{d}y$, 3) y 4) Análogo cambiando $x$ por $y$ y 5) es consecuencia de las anteriores.
-    \end{enumerate}
+    Si $F(x) = \upint_c^d f(x, y) \, \mathrm{d}y$ $(\forall x \in [a, b]) \Rightarrow |F(x)| \leq M (d - c)$, $M = sup_Q f$. Llamo $
+      \overline{I} = \upint_a^b F(x)\, \mathrm{d}x = \upint_a^b(\upint_c^d f(x, y)\, \mathrm{d}y) \mathrm{d}x \text{ y }
+      \underline{I} = \lowint_a^b F(x)\, \mathrm{d}x = \lowint_a^b( \lowint_c^d f(x, y)\, \mathrm{d}y) \mathrm{d}x
+    $ \\
+    Si $P_1 = \{x_0, \cdots, x_n\}$ partición de $[a, b]$, $P_2 = \{ y_0, \cdots, y_m \}$ partición de $[c, d]$. $P_1 \times P_2$ es una partición de $Q$ con $n \cdot m$ intervalos $Q_{ij}$. Luego \begin{equation}
+      \overline{I}_{ij} = \upint_{x_{i-1}}^{x_i}( \upint_{y_{j-1}}^{y_j}f(x, y)\,\mathrm{d}y)\mathrm{d}x \text{ y }
+      \underline{I}_{ij} = \lowint_{x_{i-1}}^{x_i}( \lowint_{y_{j-1}}^{y_j}f(x, y)\,\mathrm{d}y)\mathrm{d}x
+    \end{equation} Como $\upint_c^d f(x, y)\, \mathrm{d}y = \sum_{j = 1}^m \upint_{y_{j-1}}^{y_j} f(x, y)\, \mathrm{d}y \Rightarrow$ \begin{align*}
+      \upint_a^b(\upint_c^d f(x, y)\, \mathrm{d}y)\mathrm{d}x & = \upint_a^b( \sum_{j = 1}^m \int_{y_{j-1}}^{y_j}f(x, y)\, \mathrm{d}y)\mathrm{d}x                                                                                                              \\
+                                                              & \leq \sum_{j = 1}^m \upint_a^b(\int_{y_{j-1}}^{y_j}f(x, y)\, \mathrm{d}y)\mathrm{d}x = \sum_{j = 1}^m \sum_{i = 1}^n \upint_{x_{i-1}}^{x_i}(\int_{y_{j-1}}^{y_j}f(x,y)\,\mathrm{d}y)\mathrm{d}x \\
+      \Rightarrow                                             & \overline{I} \leq \sum_{j = 1}^m \sum_{i = 1}^n \overline{I_{ij}} \text{ y,}                                                                                                                    \\
+                                                              & \underline{I} \geq \sum_{j = 1}^m \sum_{i = 1}^n \underline{I_{ij}}
+    \end{align*}
+    Si escribimos $m_{ij} = inf\{ f(x, y) : (x, y) \in Q \}$ y $M_{ij} = sup\{ f(x, y) : (x, y) \in Q\} \Rightarrow$ \begin{align*}
+      m_{ij} (y_j - y_{j-1}) & \leq \upint_{y_{j-1}}^{y_j} f(x, y)\, \mathrm{d} y \leq M_{ij} (y_j - y_{j-1})                                \\
+      m_{ij} |Q_{ij}|        & \leq \lowint_{x_{i-1}}^{x_i} ( \upint_{y_{j-1}}^{y_j} f(x, y)\, \mathrm{d}y )\mathrm{d}x \leq M_{ij} |Q_{ij}| \\
+                             & \Rightarrow s(f, P) \leq \underline{I} \leq \overline{I} \leq S(f, P)
+    \end{align*}
+    Como esto vale para cualquier partición $P$ de $Q \Rightarrow$ \begin{equation}
+      \int\lowint_Q f \leq \underline{I} \leq \overline{I} \leq \int\upint_Q f
+    \end{equation}
   \end{proof}
 \end{theorem}
+
+\clearpage
+
+\begin{note}
+  También tenemos que
+
+  \begin{enumerate}
+    \item Vale reemplazando $\upint_c^d$ por $\lowint_c^d$.
+    \item $ \int \lowint_K f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \lowint_c^d ( \upint_a^b f(x, y)\, \mathrm{d}x ) \mathrm{d}y \leq \upint_c^d \upint_a^b f(x, y) \, \mathrm{d}x \mathrm{d}y \leq \int \upint_K f(x, y) \, \mathrm{d}x \mathrm{d}y $
+    \item Valen reemplazando $\upint_a^b$ por $\lowint_a^b$.
+    \item Si $\exists \int \int_K f(x, y) \, \mathrm{d}x \mathrm{d}y \Rightarrow$ \begin{align*}
+            \int \int_K f(x, y) \, \mathrm{d}x \mathrm{d}y & = \int_a^b(\lowint_c^d f(x, y) \, \mathrm{d}y)\mathrm{d}x \\ 
+             = \int_c^d \lowint_a^b f(x, y) \, \mathrm{d}x \mathrm{d}y & = \int_c^d(\upint_a^b f(x,y) \, \mathrm{d}x)\mathrm{d}y
+    \end{align*}
+  \end{enumerate}
+
+  La demostración de 1) Es análoga $F(x) = \lowint_c^d f(x, y) \, \mathrm{d}y$, 2) y 3) Análogo cambiando $x$ por $y$ y 4) es consecuencia de las anteriores.
+\end{note}
 
 \section{Teorema de Fubini}
 \begin{corollary}[Fubini]
@@ -203,6 +209,8 @@
   $\underline{c}(S) = sup_P \underline{J}(S, P)$ contenido de Jordan del interior de $S$.
   $\overline{c}(S) = inf_P \overline{J}(S, P)$ contenido de Jordan superior.
 \end{definition}
+
+\clearpage
 
 \begin{definition}[Contenido de Jordan]
   Si $\overline{c}(S) = \underline{c}(S)$ notamos $c(S)$ y se llama contenido de Jordan. Decimos que $S$ es medible Jordan.

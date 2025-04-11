@@ -11,15 +11,12 @@ Si $\mathbb{K}$ es un cuerpo ordenado, $\N \subset \Z \subset \Q \subset \mathbb
     En un cuerpo ordenado $\mathbb{K}$ son equivalentes: \\
     1) $\N \subset \mathbb{K}$ no es acotado superiormente. \\
     2) Dados $a, b \in \mathbb{K}$ con $a>0, \exists n \in \N:m \cdot a>b$. \\
-    3) Dado cualquier $0<a \in \mathbb{K}, \exists n \in \N : 0 < \dfrac{1}a < a$. \\
+    3) Dado cualquier $0<a \in \mathbb{K}, \exists n \in \N : 0 < \dfrac{1}{n} < a$. \\
     Cuando vale cualquiera decimos que $\mathbb{K}$ es arquimediano.
     \begin{proof}
-        1) $\Rightarrow$ 2) \\
-        Como $\N$ es no acotado, dados $a,b \in \mathbb{K}$, $a>0$, $\exists m \in \N : m > \dfrac ba$, caso contrario $\dfrac ba$ sería cota de $\N \Rightarrow ma>b$ \\
-        2) $\Rightarrow$ 3) \\
-        Dado $a>0, \exists n \in \N : ma>1$ (tomando $b=1$ en 2.) $\Rightarrow a>\dfrac 1m >0$ \\
-        3) $\Rightarrow$ 1) \\
-        Dado $0<a \in \mathbb{K} \Rightarrow \forall n \in \N, 0<\dfrac 1n<\dfrac 1a$, pues 3. vale para todo $\mathbb{K} \Rightarrow b<n \Rightarrow$ es no acotado (pues ningún $b>0$ puede ser cota superior).
+        1) $\Rightarrow$ 2) Como $\N$ es no acotado, dados $a,b \in \mathbb{K}$, $a>0$, $\exists m \in \N : m > \dfrac ba$, caso contrario $\dfrac ba$ sería cota de $\N \Rightarrow ma>b$ \\
+        2) $\Rightarrow$ 3) Dado $a>0, \exists n \in \N : ma>1$ (tomando $b=1$ en 2.) $\Rightarrow a>\dfrac 1m >0$ \\
+        3) $\Rightarrow$ 1) Dado $0<a \in \mathbb{K} \Rightarrow \forall n \in \N, 0<\dfrac 1n<\dfrac 1a$, pues 3. vale para todo $\mathbb{K} \Rightarrow b<n \Rightarrow$ es no acotado (pues ningún $b>0$ puede ser cota superior).
     \end{proof}
 \end{theorem}
 
@@ -28,6 +25,8 @@ Si $\mathbb{K}$ es un cuerpo ordenado, $\N \subset \Z \subset \Q \subset \mathbb
 \begin{definition}[Supremo]
     Dados un cuerpo ordenado $\mathbb{K}$ y un subconjunto $X \subset \mathbb{K}$ acotado superiormente, decimos que $b \in \mathbb{K}$ es supremo de $X$ si es la menor de las cotas superiores de $X$ en $\mathbb{K}$.
 \end{definition}
+
+\clearpage
 
 Es decir, se cumple:
 
@@ -66,33 +65,30 @@ Es decir, se cumple:
 
 \begin{eg}
     Sea $Y = \{ y \in \Q : y=\dfrac{1}{2^n}, n\in \N \}$. Veamos que $inf(Y) =0, sup(Y) = \dfrac{1}{2}$.
-    \begin{equation}
-        \dfrac{1}{2} \in Y, \dfrac{1}{2^n}<\dfrac{1}{2} \forall n \in \N \Rightarrow \dfrac{1}{2} = sup(Y)
-    \end{equation}
+    \begin{align*}
+         & \dfrac{1}{2} \in Y \text{, } \dfrac{1}{2^n} \leq \dfrac{1}{2} \quad (\forall n \in \N) \\
+         & \Rightarrow \dfrac{1}{2} = sup(Y)
+    \end{align*}
 
     Como $0 < \dfrac{1}{2^n} (\forall n \in \N) \Rightarrow 0$ es cota inferior.
-    Sea
-    \begin{equation}
-        0 < c \in \mathbb{K}, 2^n = (1+1)^n \leq 1+n \leq \dfrac{1}{c} \Rightarrow n \leq \dfrac{1}{c} -1 \Rightarrow \dfrac{1}{2^n} < c
-    \end{equation}
+    Sea \begin{align*}
+         & 0 < c \in \mathbb{K}, 2^n = (1+1)^n \leq 1+n \leq \dfrac{1}{c}     \\
+         & \Rightarrow n \leq \dfrac{1}{c} - 1 \Rightarrow \dfrac{1}{2^n} < c
+    \end{align*}
     $\Rightarrow c$ no puede ser cota inferior por la propiedad 3 de la arquimedianidad $\therefore 0$ es el ínfimo de $Y$.
 \end{eg}
 
 El problema más serio de los racionales desde el punto de vista del análisis es que algunos conjuntos acotados de números racionales no tienen súpremo (o ínfimo) en $\Q$.
 
 \begin{eg}
-    Sean $X = \{ X \in \Q : x \geq 0, x² < 2 \}, Y \{ y \in \Q : y>0, y² > 2 \}$. Notemos que si $z>2 \Rightarrow z² > 4 \Rightarrow z \notin X \Rightarrow X \subset [0, 2]$ y $X$ es un conjunto acotado. Además $Y \subset (0, +\infty)$ por lo que es un conjunto acotado inferiormente. Veamos que $\nexists$ supremo e ínfimo en $\Q$. \begin{enumerate}
+    Sean $X = \{ X \in \Q : x \geq 0, x² < 2 \}\text{, } Y = \{ y \in \Q : y>0, y² > 2 \}$. Notemos que si $z>2 \Rightarrow z² > 4 \Rightarrow z \notin X \Rightarrow X \subset [0, 2]$ y $X$ es un conjunto acotado. Además $Y \subset (0, +\infty)$ por lo que es un conjunto acotado inferiormente. Veamos que $\nexists$ supremo e ínfimo en $\Q$. \begin{enumerate}
         \item Quiero ver que $X$ no tiene máximo. Dado $x \in X$ quiero encontrar $r \in \Q$ tal que $0<r<1$ y $x+r \in X \iff (x+r)² =x^2+2xr+r² < 2$. Como $r<1 \Rightarrow (x+r)²<x²+2xr+r=x²+r(2x+1)<2 \therefore x+r \in X$.
         \item Quiero ver que $Y$ no tiene elemento mínimo, dado $y \in Y$ tomo $r \in \Q : 0 < r < \dfrac{y²-2}{2y}$.
-              \begin{equation}
-                  (y - r)² = y² - 2yr + r² > y² - 2yr > 2
-              \end{equation}
-              \begin{equation}
-                  y² - 2 > 2yr
-              \end{equation}
-              \begin{equation}
-                  \dfrac{y²-2}{2y}>r
-              \end{equation}
+              \begin{align*}
+                  (y - r)²          = y² - 2yr + r² > y² - 2yr & > 2   \\
+                  y² - 2                                       & > 2yr \\
+                  \dfrac{y²-2}{2y}                             & > r
+              \end{align*}
               Es decir que $y-r \in Y$ e $y-r < y$.
         \item Si $x \in X, y \in Y \Rightarrow x < y \Rightarrow x² < 2 < y² \Rightarrow x² < y²$.
     \end{enumerate}

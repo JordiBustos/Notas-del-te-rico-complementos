@@ -7,11 +7,15 @@ El gráfico de $f: A \to B$ es el subconjunto de $A \times B$ dada por $(x, f(x)
 Notamos $G(f) = \{ (x, y) \in A \times B : y = f(x) \}$.
 
 \begin{definition}[Inyectividad]
-    $f: A \to B$ es inyectiva cuando para $x, y \in A$, $f(x) = f(y) \Rightarrow x = y$.
+    $f: A \to B$ es inyectiva cuando para \begin{align*}
+        x, y \in A\text{, } f(x) = f(y) \Rightarrow x = y
+    \end{align*}
 \end{definition}
 
 \begin{definition}[Suryectividad]
-    $f: A \to B$ es suryectiva cuando para $(\forall y\in B)(\exists x\in A)(f(x) = y)$
+    $f: A \to B$ es suryectiva cuando para \begin{align*}
+        (\forall y\in B) \quad (\exists x\in A) \quad f(x) = y
+    \end{align*}
 \end{definition}
 
 \begin{definition}[Biyectividad]
@@ -31,10 +35,26 @@ Notamos $G(f) = \{ (x, y) \in A \times B : y = f(x) \}$.
 \clearpage
 
 \begin{prop}
-    $f(X \cap Y) \subset f(X) \cap f(Y)$. La igualdad vale si y sólo si es inyectiva.
+    $f(X \cap Y) \subset f(X) \cap f(Y)$. La igualdad vale $\iff$ si es inyectiva.
     \begin{proof}
-        Sea $a \in f(X \cap Y) \Rightarrow $ $\exists x \in X \cap Y : f(x) = b \Rightarrow$ $ x \in X \Rightarrow f(x) \in f(X) $ y $ y \in Y \Rightarrow f(y) \in f(Y). $ \\ Si $f: A \to B$ no es inyectiva $\Rightarrow \exists x \neq y : f(x) = f(y)$. Si $X = \{x\}$, $Y = \{y\}$ $\Rightarrow X \cap Y = \varnothing$. $f(X) \cap f(Y) = \{f(x)\}$ luego $f(X \cap Y) = \varnothing$. \\ Si $f$ es inyectiva, sea $y \in f(X) \cap f(Y) \Rightarrow \exists a \in X, b \in Y$ tal que $f(a) = f(b) = y$. Como $f$ es inyectiva $a = b \Rightarrow a \in X \cap Y \Rightarrow y = f(a)$, $y \in f(X \cap Y) \Rightarrow f(X) \cap f(Y) \subset f(X \cap Y) \\
-            \therefore$ Si $f$ es inyectiva son iguales.
+        Sea $a \in f(X \cap Y) \Rightarrow$ \begin{align*}
+             & \exists x \in X \cap Y : f(x) = b \Rightarrow                                  \\
+             & x \in X \Rightarrow f(x) \in f(X) \text{ e } y \in Y \Rightarrow f(y) \in f(Y)
+        \end{align*}
+        Si $f: A \to B$ no es inyectiva $\Rightarrow$
+        \begin{align*}
+             & \exists x \neq y : f(x) = f(y)                                             \\
+             & \text{Si } X = \{x\}\text{, } Y = \{y\} \Rightarrow X \cap Y = \varnothing \\
+             & f(X) \cap f(Y) = \{f(x)\} \Rightarrow f(X \cap Y) = \varnothing            \\
+        \end{align*}
+        Si $f$ es inyectiva, sea $y \in f(X) \cap f(Y) \Rightarrow$
+        \begin{align*}
+             & \exists a \in X, b \in Y : f(a) = f(b) = y                                       \\
+             & \text{ Como }f \text{ es inyectiva} \Rightarrow a = b \Rightarrow a \in X \cap Y \\
+             & \Rightarrow y = f(a) \Rightarrow y \in f(X \cap Y)                               \\
+             & \Rightarrow f(X) \cap f(Y) \subset f(X \cap Y)
+        \end{align*}
+        $\therefore$ Si $f$ es inyectiva son iguales.
     \end{proof}
 \end{prop}
 
@@ -97,7 +117,7 @@ Sean $f: A \to B$ y $g: B \to C$, definimos $g \circ f: A \to C$ como $(g \circ 
 
 \begin{definition}
     Dada $f: A \to B$ y $g: B \to A$, $g$ es una inversa a izquierda si y sólo si $g \circ f = id_A$. $\exists g$ si y sólo si $f$ es inyectiva. \\
-    Análogamente para la inversa a derecha si $f$ es suryectiva.
+    Análogamente para la inversa a derecha, si $f$ es suryectiva. \\
     Si $f$ es biyectiva $\Rightarrow g$ es inversa a ambos lados y es única.
 \end{definition}
 
@@ -154,8 +174,6 @@ La suma se define como $m+1 = S(m)$, $m+S(n) = S(m+n)$.
     La multiplicación se define recursivamente como: $m \times 1 =m$ y $m \times (n+1) = m \times n + m$. \\
     Cumple la asociatividad, conmutatividad, ley de cancelación y monotonía.
 \end{definition}
-
-\clearpage
 
 \begin{theorem}[Principio de buena ordenación]
     Todo subconjunto no vacío $A \subset \N$ tiene un elemento mínimo.

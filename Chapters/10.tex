@@ -5,14 +5,14 @@
   \begin{enumerate}
     \item $x \in \overline{X}$.
     \item $\forall r > 0, B_r(x) \cap X \neq \varnothing$.
-    \item $\forall$ entorno abierto $N$ de $X$, $N \cap X \neq \varnothing$.
-    \item $\forall$ entorno $N$ de $X$, $N \cap X \neq \varnothing$.
+    \item $\forall$ entorno abierto $N$ de $x$, $N \cap X \neq \varnothing$.
+    \item $\forall$ entorno $N$ de $x$, $N \cap X \neq \varnothing$.
   \end{enumerate}
 
   \begin{proof}
     4) $\Rightarrow$ 3) $\Rightarrow$ 2) son inmediatos. \\
     2) $\Rightarrow$ 1) Por contrarrecíproco, supongamos que $x \notin \overline{X}$ de manera tal que $\exists$ F cerrado tal que $x \in F$ y $X \subset F$ (si no estaría en la clasura) $\Rightarrow x \in F^c$ que es abierto $\Rightarrow \exists r > 0, B_r(x) \subset F^c, B_r(X) \cap X \subset B_r(x) \cap F = \varnothing$. \\
-    1) $\Rightarrow$ 4) Supongamos que existe $N$ entorno de X tal que $N \cap X = \varnothing$. El conjunto $U = N^{\circ}$ es abierto y $x \in U$. Además $U \subset N \subset X^c \Rightarrow X \subset U^c$ que es cerrado y $x \in U^c \Rightarrow x \notin \overline{X}$.
+    1) $\Rightarrow$ 4) Supongamos que existe $N$ entorno de $x$ tal que $N \cap X = \varnothing$. El conjunto $U = N^{\circ}$ es abierto y $x \in U$. Además $U \subset N \subset X^c \Rightarrow X \subset U^c$ que es cerrado y $x \notin U^c \Rightarrow x \notin \overline{X}$.
   \end{proof}
 \end{prop}
 
@@ -35,7 +35,7 @@
 \end{definition}
 
 \begin{definition}[Conjunto derivado]
-  El conjunto derivado de X es el conjunto de todos los puntos de acumulación de $X$.
+  El conjunto derivado de X es el conjunto de todos los puntos de acumulación de $X$ y lo notamos $X^\prime$.
 \end{definition}
 
 \begin{prop}
@@ -49,7 +49,7 @@
 
   \begin{proof}
     4) $\Rightarrow$ 3) $\Rightarrow$ 2) son inmediatos. \\
-    2) $\Rightarrow$ 1) Por contrarrecíproco: $x \in X$ no es punto de acumulación de $X$ luego $x \in (\overline{X - \{x\}})^c$. Como ese conjunto es abierto $\exists r > 0, B_r(x) \subset (\overline{X - \{ x \}} \Rightarrow B_r(x) \cap (X - \{x \}) \subset B_r(x) \cap (\overline{X - \{x\}}) = \varnothing$. \\
+    2) $\Rightarrow$ 1) Por contrarrecíproco: $x \in X$ no es punto de acumulación de $X$ luego $x \in (\overline{X - \{x\}})^c$. Como ese conjunto es abierto $\exists r > 0, B_r(x) \subset (\overline{X - \{ x \}})^c \Rightarrow B_r(x) \cap (X - \{x \}) \subset B_r(x) \cap (\overline{X - \{x\}}) = \varnothing$. \\
     1) $\Rightarrow$ 4) Sea $x \in X^{\prime}$ y $N$ un entorno de $x$. Como $x \in \overline{X - \{x\}} \Rightarrow N \cap (X - \{x\}) \neq \varnothing$.
   \end{proof}
 \end{prop}

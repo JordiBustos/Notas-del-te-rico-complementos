@@ -4,10 +4,8 @@
   Sea $f: [a, b] \to \R$ integrable. Si $f$ es continua en $c \in [a, b] \Rightarrow F: [a, b] \to \R$, $F(x) = \int_a^x f(t)\, \mathrm{d}t$ es derivable en $c$ y $f(x) = F^{\prime}(c)$.
   \begin{proof}
     \begin{align*}
-      | \dfrac{F(c+h) - F(c)}{h} - f(c) | = |\dfrac{1}{h}| \cdot | \int_c^{c+h} f(t)\, \mathrm{d}t - h \cdot f(c) |
-    \end{align*}
-    \begin{align*}
-      \leq \dfrac{1}{h} \cdot \int_c^{c+h}| f(t) - f(c) | \, \mathrm{d}t *
+      \left| \dfrac{F(c+h) - F(c)}{h} - f(c) \right| & = |\dfrac{1}{h}| \cdot \left| \int_c^{c+h} f(t)\, \mathrm{d}t - h \cdot f(c) \right| \\
+      & \leq \dfrac{1}{h} \cdot \int_c^{c+h}| f(t) - f(c) | \, \mathrm{d}t *
     \end{align*}
     Como $f$ es continua es continua en $c \Rightarrow$ Dado $\e > 0$, $\exists \delta > 0 : t \in [a, b]$ y $|t-c| < \delta \Rightarrow |f(t) - f(c)| < \e$.
     Si $0 < h < \delta$ y $c+h \in [a, b]$ tenemos que $* \leq \dfrac{1}{h} \cdot \e \cdot h = \e \Rightarrow$ \begin{align*}

@@ -8,15 +8,18 @@ Si $\mathbb{K}$ es un cuerpo ordenado, $\N \subset \Z \subset \Q \subset \mathbb
 \end{eg}
 
 \begin{theorem}
-    En un cuerpo ordenado $\mathbb{K}$ son equivalentes: \\
-    1) $\N \subset \mathbb{K}$ no es acotado superiormente. \\
-    2) Dados $a, b \in \mathbb{K}$ con $a>0, \exists n \in \N:m \cdot a>b$. \\
-    3) Dado cualquier $0<a \in \mathbb{K}, \exists n \in \N : 0 < \dfrac{1}{n} < a$. \\
-    Cuando vale cualquiera decimos que $\mathbb{K}$ es arquimediano.
+    En un cuerpo ordenado $\mathbb{K}$ son equivalentes: \begin{enumerate}
+        \item $\N \subset \mathbb{K}$ no es acotado superiormente.
+        \item Dados $a, b \in \mathbb{K}$ con $a>0, \exists n \in \N:m \cdot a>b$.
+        \item Dado cualquier $0<a \in \mathbb{K}, \exists n \in \N : 0 < \dfrac{1}{n} < a$.
+        \item $\mathbb{K}$ es arquimediano.
+    \end{enumerate}
     \begin{proof}
-        1) $\Rightarrow$ 2) Como $\N$ es no acotado, dados $a,b \in \mathbb{K}$, $a>0$, $\exists m \in \N : m > \dfrac ba$, caso contrario $\dfrac ba$ sería cota de $\N \Rightarrow ma>b$ \\
-        2) $\Rightarrow$ 3) Dado $a>0, \exists n \in \N : ma>1$ (tomando $b=1$ en 2.) $\Rightarrow a>\dfrac 1m >0$ \\
-        3) $\Rightarrow$ 1) Dado $0<a \in \mathbb{K} \Rightarrow \forall n \in \N, 0<\dfrac 1n<\dfrac 1a$, pues 3. vale para todo $\mathbb{K} \Rightarrow b<n \Rightarrow$ es no acotado (pues ningún $b>0$ puede ser cota superior).
+        Sea $\mathbb{K}$ un cuerpo ordenado. \begin{enumerate}
+            \item[1) $\Rightarrow$ 2)] Como $\N$ es no acotado, dados $a,b \in \mathbb{K}$, $a>0$, $\exists m \in \N : m > \dfrac ba$, caso contrario $\dfrac ba$ sería cota de $\N \Rightarrow ma>b$
+            \item[2) $\Rightarrow$ 3)] Dado $a>0$, tomamos $b=1$ y por 2) $\exists n \in \N : ma > 1 \Rightarrow a > \dfrac{1}{m} > 0$.
+            \item[3) $\Rightarrow$ 1)] Dado $0<a \in \mathbb{K} \Rightarrow \forall n \in \N, 0<\dfrac 1n<\dfrac 1a$, pues 3. vale para todo $\mathbb{K} \Rightarrow b<n \Rightarrow$ es no acotado (pues ningún $b>0$ puede ser cota superior).
+        \end{enumerate}
     \end{proof}
 \end{theorem}
 
@@ -25,8 +28,6 @@ Si $\mathbb{K}$ es un cuerpo ordenado, $\N \subset \Z \subset \Q \subset \mathbb
 \begin{definition}[Supremo]
     Dados un cuerpo ordenado $\mathbb{K}$ y un subconjunto $X \subset \mathbb{K}$ acotado superiormente, decimos que $b \in \mathbb{K}$ es supremo de $X$ si es la menor de las cotas superiores de $X$ en $\mathbb{K}$.
 \end{definition}
-
-\clearpage
 
 Es decir, se cumple:
 
@@ -76,8 +77,8 @@ Es decir, se cumple:
 
     Como $0 < \dfrac{1}{2^n} (\forall n \in \N) \Rightarrow 0$ es cota inferior.
     Sea \begin{align*}
-         0 & < c \in \mathbb{K}, 2^n = (1+1)^n \leq 1+n \leq \dfrac{1}{c}     \\
-         & \Rightarrow n \leq \dfrac{1}{c} - 1 \Rightarrow \dfrac{1}{2^n} < c
+        0 & < c \in \mathbb{K}, 2^n = (1+1)^n \leq 1+n \leq \dfrac{1}{c}       \\
+          & \Rightarrow n \leq \dfrac{1}{c} - 1 \Rightarrow \dfrac{1}{2^n} < c
     \end{align*}
     $\Rightarrow c$ no puede ser cota inferior por la propiedad 3 de la arquimedianidad $\therefore 0$ es el ínfimo de $Y$.
 \end{eg}
@@ -117,7 +118,7 @@ Si $b \in \mathbb{K}$ es una cota superior de $\N \Rightarrow n+1 \in \N<b, \for
 \begin{note}
     Sea $\mathbb{K}$ un cuerpo ordenado completo. Entonces:
     \begin{enumerate}
-        \item Es arquimediano. 
+        \item Es arquimediano.
         \item Dado un subconjunto no vacío y acotado inferiormente tiene ínfimo en $\mathbb{K}$.
     \end{enumerate}
     \begin{proof}

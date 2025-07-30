@@ -119,16 +119,23 @@ La idea del último ejemplo (argumento diagonal), se puede adaptar para probar q
 \subsection{Principio de encaje de Intervalos}
 
 \begin{theorem}
-    Sea $\mathbb{I}_1 \supset \mathbb{I}_2 \supset \mathbb{I}_3 \supset \cdots $ una sucesión de intervalos cerrados y acotados $\mathbb{I}_n = [a_n, b_n] \Rightarrow$ \\
-    La intersección de todos es no vacía. \\
-    $\bigcap_{n=1}^{\infty} \mathbb{I}_n = [a,b]$ con $a = sup(a_n), b=inf(b_n)$.
+    Sea $I_1 \supset I_2 \supset I_3 \supset \cdots $ una sucesión de intervalos cerrados y acotados $I_n = [a_n, b_n] \Rightarrow$
+    La intersección de todos es no vacía y $\bigcap_{n=1}^{\infty} I_n = [a,b]$ con $a = sup(a_n), b=inf(b_n)$.
     \begin{proof}
-        $\forall n \in \N$, $\exists \mathbb{I}_{n+1} \subset \mathbb{I}_n \Rightarrow a_n \leq a_{n+1} \leq b_{n+1} \leq b_n$ \\
-        $a_1 \leq a_2 \leq \cdots \leq b_n \leq \cdots \leq b_1$. El conjunto $A$ de los $a_i$ está acotado y $B$ el conjunto de los $b_i$ también. \\
-        Sea $\alpha = sup(A)$, $\beta = inf(B)$. Como $a_n \leq b_n, \forall n \in \N \Rightarrow \alpha \leq \beta \Rightarrow a_1 \leq \cdots \leq a_1 \leq \alpha \leq \beta \leq \cdots \leq b_1$. \\
-        Luego $[\alpha, \beta] \subset \mathbb{I}_n \forall n \in \N \Rightarrow \bigcap_{n\geq1} I_n$. \\
-        Además ningún $x \leq \alpha$ puede pertenecer a todos los $\mathbb{I}_n$. En efecto, si $x < \alpha = sup(A) \Rightarrow \exists a_1\in A: x<a_1 \Rightarrow x\notin \mathbb{I}_n$. \\
-        Análogamente con el ínfimo.
+        Sea $n \in \N$, tenemos que $I_{n+1} \subseteq I_n$ con $I_n = [a_n\text{, } b_n] \, \forall n \in \N$. Entonces, \begin{align*}
+            a_n \leq a_{n+1} \leq b_{n+1} \leq b_n
+        \end{align*}
+        Sea $A = \{ a_n : n \in \N \}$ y $B = \{ b_n : n \in \N \}$. Claramente \begin{align*}
+            a_1 \leq a_n \leq b_n \leq b_1 \, \forall n \in \N
+        \end{align*}
+        Luego $A$ y $B$ están acotados y podemos llamar $\alpha = \sup(A)$, $\beta = \inf(B)$ con $\alpha \leq \beta$. Luego, \begin{align*}
+             & a_1 \leq \cdots \leq a_n \leq \alpha \leq \beta \leq b_n \leq \cdots \leq b_1 \quad \forall n \in \N \\
+             & \Rightarrow [\alpha\text{, }\beta] \subseteq I_n \quad \forall n \in \N                              \\
+             & \Rightarrow [\alpha\text{, }\beta] \subseteq \bigcap_{n \geq 1} I_n                                  \\
+             & \Rightarrow \bigcap_{n \geq 1} I_n \neq \varnothing
+        \end{align*}
+        Notemos que si $x < \alpha$ entonces $\exists a_i \in A$ tal que $x < a_i \Rightarrow x \notin I_i \Rightarrow x \notin \bigcap_{n \geq 1} I_n$.
+        Análogamente si $x < \beta \therefore \bigcap_{n \geq 1} I_n = [\alpha\text{, }\beta]$.
     \end{proof}
 \end{theorem}
 
@@ -141,6 +148,8 @@ La idea del último ejemplo (argumento diagonal), se puede adaptar para probar q
         Si $x \in \mathbb{I}$ no puede ser igual o mayor que $x_1$ (por construcción se los excluye en algún paso) $\Rightarrow \R$ es no numerable, pues ese $x$ queda afuera.
     \end{proof}
 \end{theorem}
+
+\clearpage
 
 \section{Propiedades}
 
@@ -171,6 +180,8 @@ La idea del último ejemplo (argumento diagonal), se puede adaptar para probar q
         $x_n$ es numerable $\Rightarrow \exists f:\N \to x_n$ biyectiva. Sea $f:\N \times \N \to \bigcup_{n \in \N} x_n $ definida como $f(n, n) = f_n(n)$. Veamos que es suryectiva, dado $x \in X$, $\exists n \in \N:x \in x_n \Rightarrow \exists m:x=f_n(m)$ luego $X=f_n(m) = f(n, m)$. Como $\N \times \N$ es numerable y $f: \N \times \N \to \bigcup_{n \geq 1}{x_n}$ es suryectiva $\Rightarrow \bigcup_{n \geq 1}x_n$ es a lo sumo numerable $\therefore$ como es infinito, es numerable.
     \end{proof}
 \end{theorem}
+
+\clearpage
 
 \begin{eg}
     $\Q(x) \sim \N$.

@@ -5,24 +5,27 @@
 \end{note}
 
 \begin{definition}
-  $\tilde{s}, \tilde{t} \in \R$, $s = [(a_n)], t = [(b_n)]$ definimos $s+t = [(a_n + b_n)]$ la clase de equivalencia de $(a_n + b_n)_{n \in \N}$. \\
-  $s \cdot t = [(a_n b_n)]$ la clase de equivalencia de $(a_n b_n)_{n \in \N}$. \\
-  Veamos que están bien definidas, si $[(a_n)] = [(c_n)]$ y $[(b_n)] = [(d_n)]$. \\
-  $a_n - c_n \to 0$ y $b_n - d_n \to 0$. \\
+  $\tilde{s}, \tilde{t} \in \R$, $s = [(a_n)], t = [(b_n)]$ definimos:
+  \begin{itemize}
+    \item $s+t = [(a_n + b_n)]$ la clase de equivalencia de $(a_n + b_n)_{n \in \N}$.
+    \item $s \cdot t = [(a_n b_n)]$ la clase de equivalencia de $(a_n b_n)_{n \in \N}$.
+  \end{itemize}
+  Veamos que están bien definidas, si: \begin{align*}
+    [(a_n)] = [(c_n)] \text{ y } [(b_n)] = [(d_n)] \Rightarrow a_n - c_n \to 0 \text{ y } b_n - d_n \to 0. 
+  \end{align*}
+  En efecto,
   \begin{align*}
-    ([a_n] + [(b_n)]) - ([c_n] +[d_n])) & =                                              \\
-                                        & = ([a_n] - [(c_n)]) + ([b_n] - [(d_n)])        \\
+    ([a_n] + [(b_n)]) - ([c_n] +[d_n]) & = ([a_n] - [(c_n)]) + ([b_n] - [(d_n)])        \\
                                         & = 0                                            \\
                                         & \Rightarrow \text{la suma está bien definida.}
   \end{align*}
   \begin{align*}
-    a_n b_n - c_n d_n & =                                                                                       \\
-                      & = a_n b_n - c_n b_n + c_n b_n - c_n d_n                                                 \\
+    a_n b_n - c_n d_n & = a_n b_n - c_n b_n + c_n b_n - c_n d_n                                                 \\
                       & = b_n (a_n - c_n) + c_n (b_n - d_n)                                                     \\
                       & \Rightarrow |a_n \cdot b_n - c_n \cdot b_n| \leq |b_n| |a_n - c_n| + |c_n| |b_n - d_n|. \\
   \end{align*}
   Como $(b_n)_{n \in \N}$ y $(c_n)_{n \in \N}$ están acotadas $\exists M : |b_n| < M$, $|c_n| < M, \forall n \in \N$. \\
-  $|a_n b_n - c_n b_n| \leq M (|a_n c_n| + |b_n - d_n|) < \e, \forall n > n_0$. \\
+  $|a_n b_n - c_n b_n| \leq M (|a_n - c_n| + |b_n - d_n|) < \e, \forall n > n_0$. \\
   Porque $a_n - c_n \to 0$, $b_n - d_n \to 0$.
 \end{definition}
 

@@ -5,11 +5,8 @@ Una partición de $[a, b]$ es un subconjunto finito $P \subset [a, b]$ tal que $
 Escribimos $P = \{ t_0, \cdots, t_n \}$ y por convención $t_0 = a$, $t_n = b$ y $t_0 < t_1 < \cdots < t_n$.
 Notamos $m_i$, $M_i$ al ínfimo y al supremo de $f$ en $[t_{i-1}, t_i]$ $i \in \{ 1, \cdots, n \}$ de la partición.
 \begin{align*}
-  s(f, P) = m_1 (t_1 - t_0) + \cdots + m_n (t_n - t_{n-1})
-\end{align*}
-
-\begin{align*}
-  S(f, P) = M_1 (t_1 - t_0) + \cdots + M_n (t_n - t_{n-1})
+  & s(f, P) = m_1 (t_1 - t_0) + \cdots + m_n (t_n - t_{n-1}) \\
+  & S(f, P) = M_1 (t_1 - t_0) + \cdots + M_n (t_n - t_{n-1})
 \end{align*}
 
 Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
@@ -22,10 +19,8 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
   Sea $f: [a, b] \to \R$ acotada y sea $P$, $G$ particiones del intervalo, si $P \subset G \Rightarrow s(f, P) \leq s(f, G)$ y $S(f, G) \leq S(f, P)$.
   \begin{proof}
     Si $P = \{ t_0, t_1, \cdots t_n \}$ y $G = \{ t_0, t_1, \cdots, t_{i-1}, r, t_i, \cdots, t_n \}$. Si $m_i = inf_{[t_{i-1}, t_i]}(f)$, $m^{\prime} = inf_{[t_{i-1}, r]}(f)$, $m^{\prime \prime} = inf_{[r, t_i]}(f) \Rightarrow m_i \leq m^{\prime}$, $m_i \leq m^{\prime \prime}$. \begin{align*}
-      s(f, G) - s(f, P) = m^{\prime} (r - t_{i-1}) + m^{\prime \prime} (t_i - r) - m_i (t_i - t_{i-1})
-    \end{align*}
-    \begin{align*}
-      = (m^{\prime} - m)(r - t_{i-1}) + (m^{\prime \prime} - m_i) (t_i - r) \geq 0
+      s(f, G) - s(f, P) & = m^{\prime} (r - t_{i-1}) + m^{\prime \prime} (t_i - r) - m_i (t_i - t_{i-1}) \\
+      & = (m^{\prime} - m)(r - t_{i-1}) + (m^{\prime \prime} - m_i) (t_i - r) \geq 0
     \end{align*}
     Análogamente para sumas superiores. Iterando en $S_i$, $P \subset G$ se ve que $s(f, P) \leq s(f, G)$.
   \end{proof}
@@ -65,9 +60,8 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
 
 \begin{theorem}
   Sea $a < c < b$ y $f: [a, b] \to \R$ acotada. Entonces \begin{align*}
-    \lowint_a^b f(x)\,\mathrm{d}x = \lowint_a^c f(x)\,\mathrm{d}x + \lowint_c^b f(x)\,\mathrm{d}x
-  \end{align*} y \begin{align*}
-    \upint_a^b f(x)\, \mathrm{d}x = \upint_a^c f(x)\, \mathrm{d}x + \upint_c^b f(x)\, \mathrm{d}x
+    & \lowint_a^b f(x)\,\mathrm{d}x = \lowint_a^c f(x)\,\mathrm{d}x + \lowint_c^b f(x)\,\mathrm{d}x \\
+    & \upint_a^b f(x)\, \mathrm{d}x = \upint_a^c f(x)\, \mathrm{d}x + \upint_c^b f(x)\, \mathrm{d}x
   \end{align*}
 
   \begin{proof}
@@ -149,7 +143,7 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
 
 \begin{note}
   Si dada $f: [a, b] \to \R$ acotada llamamos $\sigma$ al conjunto de sumas inferiores y $\sum$ al de las superiores, decir que $f$ es integrable signifca que $sup \sigma = inf \sum$.
-  En particular esto pasa $\iff (\forall \e > 0)(\exists s \in \sigma)$, $S in \sum : S - s < \e$.
+  En particular esto pasa $\iff (\forall \e > 0) \quad \exists s \in \sigma$, $S \in \sum : S - s < \e$.
   \begin{proof}
     Ejercicio
   \end{proof}

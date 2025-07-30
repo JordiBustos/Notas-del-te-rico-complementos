@@ -17,18 +17,18 @@ Una subsucesión de $x$ es la restricción de $x$ a un subconjunto infinito $A =
 \begin{theorem}[Unicidad del límite]
   Si $\lim_{n \to \infty} x_n = a$ y $lim_{n \to \infty} x_n = b \Rightarrow a=b$
   \begin{proof}
-    Supongamos que $a \neq b$. Tomemos $\e = \dfrac{|b-a|}{2} > 0$. \\
-    $(a - \e, a+\e) \cap (b-\e, b+\e) = \varnothing$. En efecto si
-    $x$ pertenece a la intersección entonces $|x-a| < \e$ y $|x-b| < \e \Rightarrow$ \\
-    $|b-a| \leq |a-x| + |x-b| < \e + \e = 2 \e = |b-a|$ Absurdo!
-    Como $lim_{n \to \infty} x_n = a \Rightarrow \exists n_0 : x_n \in (a - \e, a+ \e), \forall n > n_0 \Rightarrow$ \\
-    $x_n \notin (b-\e, b+\e), \forall n > n_0 \therefore lim_{n \to \infty} x_n \neq b$ pues vimos que son disjuntos.
+    Sea $\e > 0$, $\exists n_0$, $n_1 \in \N$ tales que $|x_n - a| < \e$ y $|x_n - b| < \e$, $\forall n > \max(n_0\text{, } n_1)$. Luego, \begin{align*}
+      |a - b| & \leq |a - x_n| + |x_n - b|                                                                                  \\
+              & < \e + \e = 2\e\text{, } \forall n > \max(n_0\text{, } n_1)                                                 \\
+              & \Rightarrow |a - b| < 2\e \quad \forall \e > 0 \Rightarrow a = b.
+    \end{align*}
   \end{proof}
 \end{theorem}
 
+\clearpage
+
 \begin{theorem}
   Si $lim_{n \to \infty} x_n = a \Rightarrow$ toda subsucesión de $(x_n)_{n \in \N}$ converge a $a$.
-
   \begin{proof}
     Dado $(x_{n_1}, x_{n_2}, \cdots)$ una subsucesión de $(x_n)_{n \in \N}$. Por hipotesis dado $\e > 0, \exists n_0 \in \N : |x_n - a| < \e, \forall n > n_0$. Como los índices de la subsucesión son infinitos, $\exists n_{i_0} > n_0 \Rightarrow$ si $n_i > n_{i_0} \Rightarrow |x_{n_i} - a| < \e, (n_i > n_{i_0} > n_0) \Rightarrow lim_{n \to \infty} x_{n_i} = a$.
   \end{proof}

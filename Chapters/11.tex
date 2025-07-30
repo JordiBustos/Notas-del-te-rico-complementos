@@ -44,9 +44,9 @@
     Para la ida sea $F \subset \R^n$ compacto, $U$ un cubrimiento abierto de $F$. Por Lindelöf hay un subcubrimiento a lo sumo numerable $V$ de $U$ y $\exists f: \N \to V$ suryectiva.
     Por el absurdo supongamos que $U$ no contiene subcubrimiento finito de $F$.
     En particular si $m \in \N, V_m = \{ f(1), \cdots, f(m) \} \in V$ no es subcubrimiento de $F$, por ser finito
-    \begin{equation}
+    \begin{align*}
       \Rightarrow \exists x_m \in F - \bigcup_{i = 1}^m f(i)
-    \end{equation} De esta forma tenemos una sucesión de elementos de $F, (x_m)_{m \in \N}$. \\
+    \end{align*} De esta forma tenemos una sucesión de elementos de $F, (x_m)_{m \in \N}$. \\
     Como $F$ es compacto $\exists h: \N \to \N$ estrictamente creciente tal que $(x_{h(m)})_{m \in \N} \to L \in F$. \\
     Como $V$ es un cubrimiento de $F$ y $f$ es sobreyectiva $\Rightarrow \exists s \in \N : L \in f(s)$.
     Por otro lado como $\lim_{n \to \infty} x_m = L$ y $f(s)$ es un entorno de $L, \exists m_0 \in \N : x_{h(m)} \in f(s), \forall m > m_0$. \\
@@ -116,17 +116,17 @@
   \end{enumerate}
 
   \begin{proof}
-    1) $\Rightarrow$ 2) Dado \begin{equation}
+    1) $\Rightarrow$ 2) Dado \begin{align*}
       \e > 0, \exists \delta > 0 : \|x - x_0 \| < \delta \Rightarrow \|f(x) - y\| < \e
-    \end{equation} Si \begin{equation} x \in B_{\delta}(x_0) \cap (A - \{x_0\}) \Rightarrow x \in A, \|x - x_0\| < \delta \Rightarrow
-    \end{equation}
-    \begin{equation}
+    \end{align*} Si \begin{align*} x \in B_{\delta}(x_0) \cap (A - \{x_0\}) \Rightarrow x \in A, \|x - x_0\| < \delta \Rightarrow
+    \end{align*}
+    \begin{align*}
       \|f(x) - y\| < \e \Rightarrow f(x) \in B_{\e}(y) \therefore f(B_{\delta}(x_0)) \cap (A - \{x_0\}) \subset B_{\e}(y)
-    \end{equation}
+    \end{align*}
 
-    2) $\Rightarrow$ 3) Si $V$ es un entorno de $y \Rightarrow \exists \e > 0 : B_{\e}(y) \subset V$. Por hipótesis \begin{equation}
+    2) $\Rightarrow$ 3) Si $V$ es un entorno de $y \Rightarrow \exists \e > 0 : B_{\e}(y) \subset V$. Por hipótesis \begin{align*}
       \exists \delta > 0 : f(B_{\delta}(x_0) \cap (A - \{x_0\})) \subset B_{\e}(y)
-    \end{equation} Tomo $U = B_{\delta}(x_0)$ que es un entorno de $x$.
+    \end{align*} Tomo $U = B_{\delta}(x_0)$ que es un entorno de $x$.
 
     3) $\Rightarrow$ 1) Sea $\e > 0$. Como $B_{\e}(y)$ es un entorno de $y$. Por hipótesis $\exists$ un entorno $U$ de $x_0 : f(U \cap (A - \{x_0\})) \subset B_{\e}(y)$. Como $U$ es entorno de $x_0, \exists \delta > 0 : B_{\delta}(x_0) \subset U$. \\
     Si $x \in A$ es tal que $0 < \|x - x_0\| < \delta \Rightarrow x \in B_{\delta}(x_0) \cap (A - \{x_0\}) \Rightarrow f(x) \in B_{\e}(y) \Rightarrow \|f(x) - y\| < \e$ \\
@@ -137,11 +137,11 @@
 \begin{prop}
   $A \subset \R^n, x_0 \in A^{\prime}, f: A \to \R^k, \lim_{x \to x_0} f(x) = y \iff \forall (x_n)_{n \in \N} \subset A - \{x_0\}, x_n \to x_0, (f(x_n))_{n \in \N}$ converge a $y$.
   \begin{proof}
-    $\Rightarrow$) Supongamos que $\lim_{x \to x_0} f(x) = y$. Sea $(x_n)_{n \in \N} \subset A - \{x_0\}, x_n \to x_0$. Dado \begin{equation}
+    $\Rightarrow$) Supongamos que $\lim_{x \to x_0} f(x) = y$. Sea $(x_n)_{n \in \N} \subset A - \{x_0\}, x_n \to x_0$. Dado \begin{align*}
       \e > 0, \exists \delta > 0 : d(x, x_0) < \delta \Rightarrow d(f(x), y) < \e
-    \end{equation} Además \begin{equation}
+    \end{align*} Además \begin{align*}
       \exists n_0 \in \N : d(x_n, x_0) < \delta, \forall n > n_0
-    \end{equation} \begin{equation} \Rightarrow d(f(x_n), y) < \e, \forall n > n_0 \therefore (f(x_n))_{n \in \N} \to y \end{equation}
+    \end{align*} \begin{align*} \Rightarrow d(f(x_n), y) < \e, \forall n > n_0 \therefore (f(x_n))_{n \in \N} \to y \end{align*}
 
     $\Leftarrow$) $\forall (x_n)_{n \in \N} \subset A - \{x_0\}, x_n \to x_0, (f(x_n))_{n \in \N} \to y$. \\
     Supongamos que $\lim_{x \to x_0} f(x) \neq y$. Luego $\exists \e > 0 : \forall \delta > 0, d(x, x_0) < \delta$, pero $d(f(x), y) \geq \e$. \\

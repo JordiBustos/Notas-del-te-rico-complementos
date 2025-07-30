@@ -112,6 +112,8 @@ $f : X \to \R$, $f_n: X \to \R$. $f = \lim_{n \to +\infty} S_n$, $S_n$ la suma p
   $\sum_{n \geq 1} \frac{sen(nx)}{n^2}$ es normalmente convergente pues $|\frac{sen(nx)}{n^2}| \leq \frac{1}{n²}$ $(\forall n \in N)$ y $\sum \frac{1}{n²}$ converge.
 \end{eg}
 
+\clearpage
+
 \begin{theorem}[Test de Weierstrass]
   Si $\sum f_n$ es normalmente convergente $\Rightarrow \sum |f_n|$ y $\sum f_n$ son uniformemente convergentes.
   \begin{proof}
@@ -151,6 +153,8 @@ Notemos que la convergencia normal implica la convergencia uniforme que a su vez
   Sea $(f_n)_{n \in \N}$ nos preguntamos si el límite en $x$ y en $n$ son intercambiables. La respuesta en general es no.
 \end{note}
 
+\clearpage
+
 \begin{eg}
   $f_n(x) = x^n$, $f(x) = \begin{cases}
       1 & \text{si } x = 1,        \\
@@ -162,8 +166,6 @@ Notemos que la convergencia normal implica la convergencia uniforme que a su vez
     \lim_{n \to \infty} \left(\lim_{x \to 1} f_n(x)\right) = \lim_{n \to \infty} \left(\lim_{x \to 1} x^n\right) = \lim_{n \to \infty} 1 = 1
   \end{align*}
 \end{eg}
-
-\clearpage
 
 \begin{theorem}
   Sea $a$ un punto de acumulación de $X$. Si la sucesión $f_n: X \to \R$ converge uniformemente a $f: X \to \R$ y $(\forall n \in \N)(\exists \lim_{x \to a} f_n(x) = L_n) \Rightarrow$
@@ -264,7 +266,13 @@ Si el límite de $(f_n)_{n \in \N}$ no es continuo y las funciones de la sucesi�
 \begin{theorem}
   Si $f_n: [a, b] \to \R$ son funciones integrables que convergen uniformemente a $f: [a, b] \to \R \Rightarrow$ es integrable y vale que $\int_a^b f(x) dx = \lim_{n \to +\infty} \int_a^b f_n(x) dx$.
   \begin{proof}
-    Sean $D_n$ y $D$ los conjuntos de discontinuidad de $f_n$ y $f$. Si $x \notin D_n$ $(\forall n \in \N) \Rightarrow x \notin D$, pues el límite uniforme es continuo en los puntos de discontinuidad. Luego $D \subseteq \bigcup_n D_n$ Como $|D_n| = 0$ $(\forall n \in \N)$, pues son integrables, tenemos que $|D| = 0 \Rightarrow f$ es integrable. Ahora, dado $\e > 0$, $\exists n_0 \in \N : |f_n(x) - f(x)| < \frac{e}{b-a}$ $(\forall x \in [a, b])(\forall n > n_0)$. Luego $(\forall n > n_0)$ \begin{align*} |\int_a^b f(x) dx - \int_a^b f_n(x) dx| \leq \int_a^b |f(x) - f_n(x)|dx < \frac{\e}{b-a} \cdot (b-a) = \e
+    Sean $D_n$ y $D$ los conjuntos de discontinuidad de $f_n$ y $f$. Si $x \notin D_n$ $(\forall n \in \N) \Rightarrow x \notin D$,
+    pues el límite uniforme es continuo en los puntos de discontinuidad.
+    Luego $D \subseteq \bigcup_{n \in \N} D_n$ Como $|D_n| = 0$ $(\forall n \in \N)$, pues son integrables,
+    tenemos que $|D| = 0 \Rightarrow f$ es integrable. Ahora, dado $\e > 0$,
+    $\exists n_0 \in \N : |f_n(x) - f(x)| < \frac{\e}{b-a}$ $(\forall x \in [a, b])(\forall n > n_0)$. Luego $(\forall n > n_0)$
+    \begin{align*}
+      \left|\int_a^b f(x) dx - \int_a^b f_n(x) dx\right| \leq \int_a^b |f(x) - f_n(x)|dx < \frac{\e}{b-a} \cdot (b-a) = \e
     \end{align*}
     Es decir que $\int_a^b \lim_{n \to +\infty} f_n(x) dx = \lim_{n \to +\infty} \int_a^b f_n(x) dx$.
   \end{proof}

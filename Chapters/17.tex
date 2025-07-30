@@ -4,13 +4,13 @@ Consideremos $f: [a, b] \subset \R \to \R$ acotada. Digamos $m = inf\{ f(x) : x 
 Una partición de $[a, b]$ es un subconjunto finito $P \subset [a, b]$ tal que $a \in P$ y $b \in P$.
 Escribimos $P = \{ t_0, \cdots, t_n \}$ y por convención $t_0 = a$, $t_n = b$ y $t_0 < t_1 < \cdots < t_n$.
 Notamos $m_i$, $M_i$ al ínfimo y al supremo de $f$ en $[t_{i-1}, t_i]$ $i \in \{ 1, \cdots, n \}$ de la partición.
-\begin{equation}
+\begin{align*}
   s(f, P) = m_1 (t_1 - t_0) + \cdots + m_n (t_n - t_{n-1})
-\end{equation}
+\end{align*}
 
-\begin{equation}
+\begin{align*}
   S(f, P) = M_1 (t_1 - t_0) + \cdots + M_n (t_n - t_{n-1})
-\end{equation}
+\end{align*}
 
 Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
 
@@ -21,12 +21,12 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
 \begin{lemma}
   Sea $f: [a, b] \to \R$ acotada y sea $P$, $G$ particiones del intervalo, si $P \subset G \Rightarrow s(f, P) \leq s(f, G)$ y $S(f, G) \leq S(f, P)$.
   \begin{proof}
-    Si $P = \{ t_0, t_1, \cdots t_n \}$ y $G = \{ t_0, t_1, \cdots, t_{i-1}, r, t_i, \cdots, t_n \}$. Si $m_i = inf_{[t_{i-1}, t_i]}(f)$, $m^{\prime} = inf_{[t_{i-1}, r]}(f)$, $m^{\prime \prime} = inf_{[r, t_i]}(f) \Rightarrow m_i \leq m^{\prime}$, $m_i \leq m^{\prime \prime}$. \begin{equation}
+    Si $P = \{ t_0, t_1, \cdots t_n \}$ y $G = \{ t_0, t_1, \cdots, t_{i-1}, r, t_i, \cdots, t_n \}$. Si $m_i = inf_{[t_{i-1}, t_i]}(f)$, $m^{\prime} = inf_{[t_{i-1}, r]}(f)$, $m^{\prime \prime} = inf_{[r, t_i]}(f) \Rightarrow m_i \leq m^{\prime}$, $m_i \leq m^{\prime \prime}$. \begin{align*}
       s(f, G) - s(f, P) = m^{\prime} (r - t_{i-1}) + m^{\prime \prime} (t_i - r) - m_i (t_i - t_{i-1})
-    \end{equation}
-    \begin{equation}
+    \end{align*}
+    \begin{align*}
       = (m^{\prime} - m)(r - t_{i-1}) + (m^{\prime \prime} - m_i) (t_i - r) \geq 0
-    \end{equation}
+    \end{align*}
     Análogamente para sumas superiores. Iterando en $S_i$, $P \subset G$ se ve que $s(f, P) \leq s(f, G)$.
   \end{proof}
 \end{lemma}
@@ -39,17 +39,17 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
 \end{corollary}
 
 \begin{definition}
-  Si $f: [a, b] \to \R$ es acotada, definimos su integral inferior como \begin{equation}
+  Si $f: [a, b] \to \R$ es acotada, definimos su integral inferior como \begin{align*}
     \lowint_a^b f(x)\,\mathrm{d}x = sup_P s(f, P)
-  \end{equation}
+  \end{align*}
   Donde el supremo es sobre todas las particiones $P$ de $[a, b]$. Es decir $\forall$ partición $P$ de $[a, b]$, $s(f, P) \leq \lowint_a^b f(x)\, \mathrm{d}x$.
   Además dado $\e > 0$ $\exists P : \lowint_a^b f(x)\, \mathrm{d}x \leq s(f, P) + \e$.
 \end{definition}
 
 \begin{definition}
-  Análogamente se define la integral superior de $f$ como \begin{equation}
+  Análogamente se define la integral superior de $f$ como \begin{align*}
     \upint_a^b f(x)\, \mathrm{d}x = inf_P S(f, P)
-  \end{equation}
+  \end{align*}
 \end{definition}
 
 \begin{lemma}
@@ -64,65 +64,65 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
 \clearpage
 
 \begin{theorem}
-  Sea $a < c < b$ y $f: [a, b] \to \R$ acotada. Entonces \begin{equation}
+  Sea $a < c < b$ y $f: [a, b] \to \R$ acotada. Entonces \begin{align*}
     \lowint_a^b f(x)\,\mathrm{d}x = \lowint_a^c f(x)\,\mathrm{d}x + \lowint_c^b f(x)\,\mathrm{d}x
-  \end{equation} y \begin{equation}
+  \end{align*} y \begin{align*}
     \upint_a^b f(x)\, \mathrm{d}x = \upint_a^c f(x)\, \mathrm{d}x + \upint_c^b f(x)\, \mathrm{d}x
-  \end{equation}
+  \end{align*}
 
   \begin{proof}
     Si $A$, $B$ son los conjuntos de sumas inferiores de $f|_{[a, c)}$ y $f|_{[c, b]} \Rightarrow A + B = \{ x+y : x \in A, y \in B \}$ es el conjunto de las sumas inferiores de $f$ respecto a particiones
-    de $[a, b]$ que contienen a $c \Rightarrow$ \begin{equation}
+    de $[a, b]$ que contienen a $c \Rightarrow$ \begin{align*}
       \lowint_a^b f(x)\,\mathrm{d}x = sup(A+B) = sup(A) + sup(B) = \lowint_a^c f(x)\,\mathrm{d}x + \lowint_c^b f(x)\,\mathrm{d}x
-    \end{equation}
+    \end{align*}
     Análogamente para las sumas superiores.
   \end{proof}
 \end{theorem}
 
 \begin{prop}
   Sean $f, g: [a, b] \to \R$ acotadas $\Rightarrow$
-  \begin{equation}
+  \begin{align*}
     \lowint_a^b f(x)\,\mathrm{d}x + \lowint_a^b g(x)\,\mathrm{d}x \leq \lowint_a^b f(x)+g(x)\,\mathrm{d}x
-  \end{equation}
-  \begin{equation}
+  \end{align*}
+  \begin{align*}
     \leq \upint_a^b f(x) + g(x)\, \mathrm{d}x \leq \upint_a^b f(x)\, \mathrm{d}x + \upint_a^b g(x)\, \mathrm{d}x
-  \end{equation}
+  \end{align*}
   \begin{proof}
     Sea $m_i(f)$, $m_i(g)$, $m_i(f+g)$ los ínfimos de $f$, $g$, $f+g$ respectivamente en $[t_{i-1}, t_i]$ de una partición $P \Rightarrow m_i(f+g) \geq m_i(f) + m_i(g)$. \\
-    Por un lado tenemos que \begin{equation}
+    Por un lado tenemos que \begin{align*}
       \lowint_a^b f(x)+g(x)\, \mathrm{d}x \geq s(f, P) + s(g, P)
-    \end{equation} y por otro lado dadas dos particiones $P$, $G$ \begin{equation}
+    \end{align*} y por otro lado dadas dos particiones $P$, $G$ \begin{align*}
       s(f, P) + s(g, G) \leq s(f, P \cup G) + s(g, P \cup G) \leq \lowint_a^b f(x)+g(x)\,\mathrm{d}x \Rightarrow
-    \end{equation}
-    \begin{equation}
+    \end{align*}
+    \begin{align*}
       \lowint_a^b f(x) \, \mathrm{d}x + \lowint_a^b g(x) \, \mathrm{d}x = sup_{P, G}(s(f, P)+s(g, G)) \leq \lowint_a^b f(x) + g(x)\, \mathrm{d}x
-    \end{equation}
+    \end{align*}
   \end{proof}
 \end{prop}
 
 \begin{prop}
   Sean $f, g: [a, b] \to \R$ acotadas $\Rightarrow$
-  Si $c > 0$ \begin{equation}
+  Si $c > 0$ \begin{align*}
     \lowint_a^b c f(x)\,\mathrm{d}x = c \lowint_a^b f(x)\,\mathrm{d}x
-  \end{equation} y \begin{equation}
+  \end{align*} y \begin{align*}
     \upint_a^b c f(x)\, \mathrm{d}x = c \upint_a^b f(x)\, \mathrm{d}x
-  \end{equation}
-  Si $c < 0$ \begin{equation}
+  \end{align*}
+  Si $c < 0$ \begin{align*}
     \lowint_a^b c f(x)\,\mathrm{d}x = c \upint_a^b f(x)\,\mathrm{d}x
-  \end{equation} y \begin{equation}
+  \end{align*} y \begin{align*}
     \upint_a^b c f(x)\,\mathrm{d}x = c \lowint_a^b f(x)\,\mathrm{d}x
-  \end{equation}
+  \end{align*}
   \begin{proof}
     $m_i(c f) = c m(f)$ y $M_i(c f) = c M_i(f)$ si $c > 0$ y $m_i(c f) = c M_i(f)$ y $M_i(c f) = c m_i(f)$ si $c < 0$ por propiedades de supremo e ínfimo.
   \end{proof}
 \end{prop}
 
 \begin{prop}
-  Sean $f, g: [a, b] \to \R$ acotadas $\Rightarrow$ si $f(x) \leq g(x)$ $(\forall x \in [a, b]) \Rightarrow$ \begin{equation}
+  Sean $f, g: [a, b] \to \R$ acotadas $\Rightarrow$ si $f(x) \leq g(x)$ $(\forall x \in [a, b]) \Rightarrow$ \begin{align*}
     \lowint_a^b f(x)\,\mathrm{d}x \leq \lowint_a^b g(x)\,\mathrm{d}x
-  \end{equation} y \begin{equation}
+  \end{align*} y \begin{align*}
     \upint_a^b f(x)\, \mathrm{d}x \leq \upint_a^b g(x)\, \mathrm{d}x
-  \end{equation}
+  \end{align*}
   \begin{proof}
     Si $f(x) \leq g(x)$ $(\forall x \in [a, b]) \Rightarrow m_i(f) \leq m_i(g)$ y $M_i(f) \leq M_i(g)$ $\forall$ partición $P$ de $[a, b] \Rightarrow s(f, P) \leq s(g, P)$ y $S(f, P) \leq s(g, P) \Rightarrow$ vale para la integral.
   \end{proof}
@@ -248,12 +248,12 @@ Vale que $m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)$
 \clearpage
 
 \begin{eg}
-  Sea $f: [a, b] \to \R$ \begin{equation}
+  Sea $f: [a, b] \to \R$ \begin{align*}
     f(x) = \begin{cases}
       0           & \text{si } x = 0, x \in \R - \Q,                    \\
       \frac{1}{q} & \text{si } x = \frac{p}{q} \text{ con } (p, q) = 1.
     \end{cases}
-  \end{equation}
+  \end{align*}
   $f$ es discontinua en un conjunto infinito (los racionales de $[a, b]$), pero es integrable en $[a, b]$ y $\int_a^b f(x)\, \mathrm{d}x = 0$.
   \begin{proof}
     Dado $\e > 0$, $F = \{ x \in [a, b] : f(x) \geq \dfrac{\e}{b-a} \}$ es finito. Tomemos una partición de $[a, b]$ tal que la suma de los intervalos de $P$ que contienen a un punto de $F$ sea menor que $\e \Rightarrow F \cap [t_{i-1}, t_i] = \varnothing \Rightarrow 0 \leq f(x) < \dfrac{\e}{b-a} \Rightarrow M_i < \dfrac{\e}{b-a}$. \\

@@ -3,16 +3,16 @@
 \begin{theorem}[Teorema Fundamental del Cálculo]
   Sea $f: [a, b] \to \R$ integrable. Si $f$ es continua en $c \in [a, b] \Rightarrow F: [a, b] \to \R$, $F(x) = \int_a^x f(t)\, \mathrm{d}t$ es derivable en $c$ y $f(x) = F^{\prime}(c)$.
   \begin{proof}
-    \begin{equation}
+    \begin{align*}
       | \dfrac{F(c+h) - F(c)}{h} - f(c) | = |\dfrac{1}{h}| \cdot | \int_c^{c+h} f(t)\, \mathrm{d}t - h \cdot f(c) |
-    \end{equation}
-    \begin{equation}
+    \end{align*}
+    \begin{align*}
       \leq \dfrac{1}{h} \cdot \int_c^{c+h}| f(t) - f(c) | \, \mathrm{d}t *
-    \end{equation}
+    \end{align*}
     Como $f$ es continua es continua en $c \Rightarrow$ Dado $\e > 0$, $\exists \delta > 0 : t \in [a, b]$ y $|t-c| < \delta \Rightarrow |f(t) - f(c)| < \e$.
-    Si $0 < h < \delta$ y $c+h \in [a, b]$ tenemos que $* \leq \dfrac{1}{h} \cdot \e \cdot h = \e \Rightarrow$ \begin{equation}
+    Si $0 < h < \delta$ y $c+h \in [a, b]$ tenemos que $* \leq \dfrac{1}{h} \cdot \e \cdot h = \e \Rightarrow$ \begin{align*}
       \lim_{h \to 0^+} \dfrac{F(c+h) - F(c)}{h} = f(c)
-    \end{equation}
+    \end{align*}
     Para $h < 0$ es análogo, luego $\lim_{h \to 0^-} \dfrac{F(c+h) - F(c)}{h} = f(c) \Rightarrow F^{\prime}(c) = f(c)$.
   \end{proof}
 \end{theorem}
@@ -22,9 +22,9 @@
   \begin{proof}
     Para cualquier partición de $[a, b]$, $P = \{ t_0, \cdots, t_n \} \Rightarrow F(b) - F(a) = \sum_{i = 1}^n (F(t_i) - F(t_{i-1})) = \sum_{i = 1}^n F(\alpha_i) (t_i - t_{i-1})$ $(\alpha_i \in (t_i, t_{i-1}))(\forall i)$ Por teorema del valor medio. \\
     Si $m_i^{\prime}$ y $M_i^{\prime}$ son el ínfimo y supremo de $F^{\prime}$ en $[t_i, t_{i-1}] \Rightarrow m_i^{\prime} \leq \alpha_i \leq M_i^{\prime} \Rightarrow$\
-    \begin{equation}
+    \begin{align*}
       s(F^{\prime}, P) \leq F(b) - F(a) \leq S(F^{\prime}, P) \Rightarrow F(b) - F(a) = \int_a^b F^{\prime}(t) \, \mathrm{d}t = \int_a^b f(x) \, \mathrm{d}x
-    \end{equation}
+    \end{align*}
   \end{proof}
 \end{corollary}
 
@@ -37,12 +37,12 @@
   \begin{proof}
     Supongamos que $f$ es positiva en $[a, b]$. Dado $\e > 0$, $\exists P_0 = \{t_0, \cdots, t_n\}$ partición de $[a, b]$ tal que $S(f, P_0) < \int_a^b f(x) \, \mathrm{d}x + \frac{\e}{2}$. \\
     Sea $M$ el supremo de $f$ en $[a, b]$ y $\delta : 0 < \delta < \frac{\e}{2nM}$. Si $P$ es una partición de norma menor que $\delta$. Llamo $[r_{\alpha - 1}, r_{\alpha}]$ a los intervalos de $P$ contenidos en algún intervalo $[t_{i-1}, t_i]$ de $P_0$ y $[r_{\beta - 1}, r_{\beta}]$ a los demás. Cada uno de estos intervalos contienen al menos un punto $t_i$ en su interior, así que son como mucho $n$. Entonces $S(f, P) = \sum_{\alpha} M_{\alpha} (r_{\alpha} - r_{\alpha - 1}) + \sum_{\beta} M_{\beta} (r_{\beta} - r_{\beta - 1}) \leq \sum_{i = 1}^n M_i (t_i - t_{i-1}) + M \delta n$.
-    Si $[r_{\tilde{\alpha}}, r_{\tilde{\alpha}-1}] \subset [t_{i-1}, t_i]$ con $i$ fijo \begin{equation}
+    Si $[r_{\tilde{\alpha}}, r_{\tilde{\alpha}-1}] \subset [t_{i-1}, t_i]$ con $i$ fijo \begin{align*}
       \sum_{\tilde{\alpha}} M_{\tilde{\alpha}} (r_{\tilde{\alpha}} - r_{\tilde{\alpha}-1}) \leq M_i (t_i - t_{i-1}) \Rightarrow
-    \end{equation}
-    \begin{equation}
+    \end{align*}
+    \begin{align*}
       S(f, P) < S(f, P_0) + \frac{\e}{2} < \upint_a^b f(x) \, \mathrm{d}x + \e
-    \end{equation}
+    \end{align*}
     Para el caso general (sin pedir $f$ positiva, como $f$ es acotada $\exists c \in \R$ tal que $f(x) + c \geq 0$ $(\forall x \in [a, b])$, si $g(x) = f(x) + c \Rightarrow S(g, P) = S(f, P) + c (b-a)$ y además $\upint_a^b g(x) \, \mathrm{d}x = \upint_a^b f(x) \, \mathrm{d}x + c (b-a)$ y se reduce al caso anterior.
   \end{proof}
 \end{theorem}
@@ -71,16 +71,16 @@
 \begin{theorem}
   $f: [a, b] \to \R$ acotada $\Rightarrow \exists I = \lim_{|P| \to 0} \sum (f, P^*) \iff f$ es integrable y en ese caso $I = \int_a^b f(x) \, \mathrm{d}x$.
   \begin{proof}
-    Si $f$ es integrable, por el corolario anterior \begin{equation}
+    Si $f$ es integrable, por el corolario anterior \begin{align*}
       \lim_{|P| \to 0} s(f, P) = \lim_{|P| \to 0} S(f, P) = \int_a^b f(x) \, \mathrm{d}x
-    \end{equation}
-    Como \begin{equation}s(f, P) \leq \sum(f, P^*) \leq S(f, P) \Rightarrow \lim_{|P| \to 0} \sum(f, P^*) = \int_a^b f(x) \, \mathrm{d}x \end{equation}
+    \end{align*}
+    Como \begin{align*}s(f, P) \leq \sum(f, P^*) \leq S(f, P) \Rightarrow \lim_{|P| \to 0} \sum(f, P^*) = \int_a^b f(x) \, \mathrm{d}x \end{align*}
     Recíprocamente supongamos que el límite existe $\Rightarrow (\forall \e > 0) \exists P = \{ t_0, \cdots, t_n \} : |\sum (f, P^*) - I| < \frac{\e}{4}$ cualquiera sea la forma de puntear la partición $P$. \\
     Fijemos $P$ y elijamos dos formas de puntearla, para la primera forma elijamos $\alpha_i : f(\alpha_i) < m_i + \frac{\e}{4 \cdot n \cdot (t_i - t_{i-1})}$. Esto me da $P^*$ tal que $\sum (f, P^*) = \sum_{i = 1}^n f(\alpha_i) (t_i - t_{i-1}) < \sum_{i = 1}^n m_i (t_i - t_{i-1}) + \frac{\e}{4} = s(f, P) + \frac{\e}{4}$. \\
     Análogamente, elegimos la segunda $\tilde{P} : S(f, P) - \frac{\e}{4} < \sum (f, \tilde{P}) \Rightarrow$
-    \begin{equation}
+    \begin{align*}
       \sum (f, \tilde{P}) - \frac{\e}{4} < s(f, P) \leq S(f, P) < \sum (f, \tilde{P}) + \frac{\e}{4}
-    \end{equation}
+    \end{align*}
     $\Rightarrow s(f, P)$ y $S(f, P)$ están en $(I - \frac{\e}{2}, I + \frac{\e}{2}) \Rightarrow S(f, P)- s(f, P) < \e \therefore f$ es integrable y $\int_a^b f(x) \, \mathrm{d}x = I$.
   \end{proof}
 \end{theorem}
@@ -88,16 +88,16 @@
 \clearpage
 
 \begin{eg}
-  Sea $f: [1, 2] \to \R$, $f(x) = \frac{1}{x}$. Sabemos que \begin{equation}\int_1^2 \frac{1}{x} \, \mathrm{d}x = ln(2) - ln(1) = ln(2)\end{equation} Para cada $n \in \N$, $P_n = \{1, \frac{n+1}{n}, \frac{n+2}{n}, \cdots, \frac{2 \cdot n}{n}\}$. En cada intervalo $[\frac{n+i-1}{n}, \frac{n+i}{n}]$, $i = 1, \cdots, n$. Elijo $\alpha_i = \frac{n+i}{n}$. Luego
-  \begin{equation}
+  Sea $f: [1, 2] \to \R$, $f(x) = \frac{1}{x}$. Sabemos que \begin{align*}\int_1^2 \frac{1}{x} \, \mathrm{d}x = ln(2) - ln(1) = ln(2)\end{align*} Para cada $n \in \N$, $P_n = \{1, \frac{n+1}{n}, \frac{n+2}{n}, \cdots, \frac{2 \cdot n}{n}\}$. En cada intervalo $[\frac{n+i-1}{n}, \frac{n+i}{n}]$, $i = 1, \cdots, n$. Elijo $\alpha_i = \frac{n+i}{n}$. Luego
+  \begin{align*}
     f(\alpha_i) = f(\frac{n+i}{n}) = \frac{n}{n+i} \text{, y } t_i - t_{i-1} = \frac{1}{n}
-  \end{equation}
-  \begin{equation}
+  \end{align*}
+  \begin{align*}
     \Rightarrow \sum_{i = 0}^n f(\alpha_i) (t_i - t_{i-1}) = \sum(f, P^*) = \sum_{i = 0}^n \frac{n}{n+i} \cdot \frac{1}{n} = \sum_{i = 0}^n \frac{1}{n+i}
-  \end{equation} y
-  \begin{equation}
+  \end{align*} y
+  \begin{align*}
     \lim_{n \to +\infty} \frac{1}{n+1} + \cdots + \frac{1}{2n} = ln(2)
-  \end{equation}
+  \end{align*}
 \end{eg}
 
 \section{Integral de Riemann en varias dimensiones}
@@ -114,20 +114,20 @@
 \begin{definition}
   Sea $f$ acotada en un intervalo compacto. Si $P$ es una partición de $I$ que define $n$ subintervalos $I_1, \cdots, I_n \subset \R^n$ y $\alpha_k \in I_k$, una suma de Riemann de $f$ asociada a $P$ es una suma de la forma $\sum (f, P^*) = \sum_{k = 1}^n f(\alpha_k) |I_k|$. \\
   Decimos que $f$ es integrable Riemann en $I$ si $\exists A \in R : (\forall \e > 0)(\exists P_{\e})$ partición de $I : (\forall P)$ más fina que $P_{\e}$ se tiene que $|\sum(f, P^*) - A| < \e$.
-  Notamos \begin{equation}
+  Notamos \begin{align*}
     A =  \int_I f(x) \, \mathrm{d}x = \int \int \cdots \int_I f(x_1, \cdots, x_n)\, \mathrm{d}x_1 \cdots \mathrm{d}x_n
-  \end{equation}
+  \end{align*}
 \end{definition}
 
 \begin{definition}
   Sea $I \subset \R^n$ un intervalo compacto, si $P$ es una partición de $I$ que define $n$ subintervalos $I_1, \cdots I_n \subset \R^n$ definimos $m_k = m_k(f) = inf\{f(x) : x \in I_k\}$ y $M_k = M_k(f) = sup\{f(x) : x \in I_k\}$.
   Las sumas inferiores y superiores son $s(f, P) = \sum m_k |I_k|$ y $S(f, P) = \sum M_k |I_k|$.
-  La integral superior e inferior de Riemann son \begin{equation}
+  La integral superior e inferior de Riemann son \begin{align*}
     \upint_I f(x) \, \mathrm{d}x = inf(S(f, P))
-  \end{equation}
-  \begin{equation}
+  \end{align*}
+  \begin{align*}
     \lowint_I f(x)\, \mathrm{d}x = sup(s(f, P))
-  \end{equation}
+  \end{align*}
   Mantienen las propiedades de $\R$.
 \end{definition}
 
@@ -156,10 +156,10 @@
       \overline{I} = \upint_a^b F(x)\, \mathrm{d}x = \upint_a^b(\upint_c^d f(x, y)\, \mathrm{d}y) \mathrm{d}x \text{ y }
       \underline{I} = \lowint_a^b F(x)\, \mathrm{d}x = \lowint_a^b( \lowint_c^d f(x, y)\, \mathrm{d}y) \mathrm{d}x
     $ \\
-    Si $P_1 = \{x_0, \cdots, x_n\}$ partición de $[a, b]$, $P_2 = \{ y_0, \cdots, y_m \}$ partición de $[c, d]$. $P_1 \times P_2$ es una partición de $Q$ con $n \cdot m$ intervalos $Q_{ij}$. Luego \begin{equation}
+    Si $P_1 = \{x_0, \cdots, x_n\}$ partición de $[a, b]$, $P_2 = \{ y_0, \cdots, y_m \}$ partición de $[c, d]$. $P_1 \times P_2$ es una partición de $Q$ con $n \cdot m$ intervalos $Q_{ij}$. Luego \begin{align*}
       \overline{I}_{ij} = \upint_{x_{i-1}}^{x_i}( \upint_{y_{j-1}}^{y_j}f(x, y)\,\mathrm{d}y)\mathrm{d}x \text{ y }
       \underline{I}_{ij} = \lowint_{x_{i-1}}^{x_i}( \lowint_{y_{j-1}}^{y_j}f(x, y)\,\mathrm{d}y)\mathrm{d}x
-    \end{equation} Como $\upint_c^d f(x, y)\, \mathrm{d}y = \sum_{j = 1}^m \upint_{y_{j-1}}^{y_j} f(x, y)\, \mathrm{d}y \Rightarrow$ \begin{align*}
+    \end{align*} Como $\upint_c^d f(x, y)\, \mathrm{d}y = \sum_{j = 1}^m \upint_{y_{j-1}}^{y_j} f(x, y)\, \mathrm{d}y \Rightarrow$ \begin{align*}
       \upint_a^b(\upint_c^d f(x, y)\, \mathrm{d}y)\mathrm{d}x & = \upint_a^b( \sum_{j = 1}^m \int_{y_{j-1}}^{y_j}f(x, y)\, \mathrm{d}y)\mathrm{d}x                                                                                                              \\
                                                               & \leq \sum_{j = 1}^m \upint_a^b(\int_{y_{j-1}}^{y_j}f(x, y)\, \mathrm{d}y)\mathrm{d}x = \sum_{j = 1}^m \sum_{i = 1}^n \upint_{x_{i-1}}^{x_i}(\int_{y_{j-1}}^{y_j}f(x,y)\,\mathrm{d}y)\mathrm{d}x \\
       \Rightarrow                                             & \overline{I} \leq \sum_{j = 1}^m \sum_{i = 1}^n \overline{I_{ij}} \text{ y,}                                                                                                                    \\
@@ -170,9 +170,9 @@
       m_{ij} |Q_{ij}|        & \leq \lowint_{x_{i-1}}^{x_i} ( \upint_{y_{j-1}}^{y_j} f(x, y)\, \mathrm{d}y )\mathrm{d}x \leq M_{ij} |Q_{ij}| \\
                              & \Rightarrow s(f, P) \leq \underline{I} \leq \overline{I} \leq S(f, P)
     \end{align*}
-    Como esto vale para cualquier partición $P$ de $Q \Rightarrow$ \begin{equation}
+    Como esto vale para cualquier partición $P$ de $Q \Rightarrow$ \begin{align*}
       \int\lowint_Q f \leq \underline{I} \leq \overline{I} \leq \int\upint_Q f
-    \end{equation}
+    \end{align*}
   \end{proof}
 \end{theorem}
 
@@ -196,9 +196,9 @@
 
 \section{Teorema de Fubini}
 \begin{corollary}[Fubini]
-  Si $f$ es continua en $Q$ \begin{equation}
+  Si $f$ es continua en $Q$ \begin{align*}
     \int\int_Q f = \int_a^b(\int_c^d f(x, y) \, \mathrm{d}x) \mathrm{d}y = \int_c^d(\int_a^b f(x, y)\, \mathrm{d}x)\mathrm{d}y
-  \end{equation}
+  \end{align*}
 \end{corollary}
 
 \begin{definition}

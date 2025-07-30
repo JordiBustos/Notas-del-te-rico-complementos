@@ -74,7 +74,7 @@ El producto cumple las siguientes propiedades:
 
   \begin{proof}
     \begin{enumerate}
-      \item Vimos que \begin{equation} card(\{ 2n : n \in \N \}) = \aleph_0, card(\{ 2n+1 : n \in \N \}) = \aleph_0 \end{equation} La unión de ambos conjuntos es $\N$. Además $\N \times \N = \aleph_0$, así $\aleph_0 \cdot \aleph_0 = \aleph_0$.
+      \item Vimos que \begin{align*} card(\{ 2n : n \in \N \}) = \aleph_0, card(\{ 2n+1 : n \in \N \}) = \aleph_0 \end{align*} La unión de ambos conjuntos es $\N$. Además $\N \times \N = \aleph_0$, así $\aleph_0 \cdot \aleph_0 = \aleph_0$.
 
       \item Si pruebo que el cardinal de cualquier intervalo no degenerado (sin extremos iguales) de la recta es $c$, puedo probar que $c+c=c$ observando que $(0,1) = (0, \dfrac{1}{2}) \cup (\dfrac{1}{2}, 1)$. \\
             En efecto, $\arctan(x)$ es una biyección entre $\R$ y el intervalo $(-\dfrac{\pi}{2}, \dfrac{\pi}{2})$, y hay una biyección entre este intervalo y cualquier $(a, b)$ dada por $y = \dfrac{b}{\pi} \cdot (x + \dfrac{\pi}{2}) + a$. \\
@@ -146,7 +146,7 @@ Gödel 1940 probó que no se puede demostrar, Cohen en 1963 que no se puede refu
 
 \section{Construcción de los Reales}
 
-Sucesiones de números racionales $(a_n)_{n \in \N} \subset \Q$. Decimos que $(a_n)_{n \in \N}$ tiende a 0 si dado \begin{equation} \e > 0, \exists n_0 \in \N : |a_n| < \e, \forall n > n_0 \end{equation} Notamos $a_n \to 0$.
+Sucesiones de números racionales $(a_n)_{n \in \N} \subset \Q$. Decimos que $(a_n)_{n \in \N}$ tiende a 0 si dado \begin{align*} \e > 0, \exists n_0 \in \N : |a_n| < \e, \forall n > n_0 \end{align*} Notamos $a_n \to 0$.
 
 \begin{definition}
   Sea $(a_n)_{n \in \N} \subset \Q$. Decimos que la sucesión es de Cauchy $\iff$ dado $\e > 0, \exists n_0 : \forall n,m > n_0, |a_n - a_m| < \e$.

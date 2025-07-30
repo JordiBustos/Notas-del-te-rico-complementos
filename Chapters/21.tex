@@ -4,23 +4,23 @@
   Sea $(f_n)_{n \in \N}$ una sucesión de funciones derivables en $[a, b]$. Si $\exists c \in [a, b] : (f_n(c))_{n \in \N}$ es convergente y si las derivadas $f_n^{\prime}$ convergen uniformemente en $[a, b]$, digamos $f_n^{\prime} \rightrightarrows g_n \Rightarrow f_n \rightrightarrows f$ en $[a, b]$ y $f^{\prime} = g$.
   Es decir que $(\lim_{n \to +\infty} f_n)^{\prime} = (\lim_{n \to +\infty} f_n^{\prime})$ siempre que las derivadas converjan uniformemente.
   \begin{proof}
-    Veamos que $(f_n)_{n \in \N}$ es de Cauchy. Vamos a usar Teorema de Valor Medio aplicado en $f_m - f_n$. \begin{equation}
+    Veamos que $(f_n)_{n \in \N}$ es de Cauchy. Vamos a usar Teorema de Valor Medio aplicado en $f_m - f_n$. \begin{align*}
       (f_m(x) - f_n(x)) - (f_m(c) - f_n(c)) = (x-c)(f_m^{\prime}(d) - f_n^{\prime}(d)) \text{  } (\forall x \in [a, b])(d \in (x, c))
-    \end{equation}
-    \begin{equation}
+    \end{align*}
+    \begin{align*}
       f_m(x) - f_n(x) = f_m(c) - f_m(c) + (x-c) (f_m^{\prime}(d) - f_n^{\prime}(d)) \Rightarrow
-    \end{equation} Como $f_n^{\prime}$, $f_m^{\prime}$ convergen uniformemente y $f_n(c)$, $f_m(c)$ convergen $\therefore (f_n)_{n \in \N}$ es de Cauchy. Entonces $f_n$ converge uniformemente, digamos $f_n \rightrightarrows f$. Reescribo la igualdad anterior con $x_0$ en vez de $c$.
-    \begin{equation}
+    \end{align*} Como $f_n^{\prime}$, $f_m^{\prime}$ convergen uniformemente y $f_n(c)$, $f_m(c)$ convergen $\therefore (f_n)_{n \in \N}$ es de Cauchy. Entonces $f_n$ converge uniformemente, digamos $f_n \rightrightarrows f$. Reescribo la igualdad anterior con $x_0$ en vez de $c$.
+    \begin{align*}
       \dfrac{f_m(x_0) - f_n(x) - (f_m(x_0) - f_n(x_0))}{x - x_0} = f_m^{\prime}(d) - f_n^{\prime} \text{  } d \in (x, x_0)
-    \end{equation}
-    \begin{equation}
+    \end{align*}
+    \begin{align*}
       \dfrac{f_m(x) - f_m(c)}{x - c} - \dfrac{f_n(x) - f_n(c)}{x - c} = f_m^{\prime}(d) - f_n^{\prime}(d)
-    \end{equation}
-    Sea $q_n(x) = \dfrac{f_n(x)-f_n(x_0)}{x-x_0}$ y $q(x) = \dfrac{f(x)-f(x_0)}{x - x_0}$ con $x \neq x_0$. Por la igualdad anterior $(q_n)_{n \in \N}$ es de Cauchy $\therefore q_n \rightrightarrows q$. Así que \begin{equation}
+    \end{align*}
+    Sea $q_n(x) = \dfrac{f_n(x)-f_n(x_0)}{x-x_0}$ y $q(x) = \dfrac{f(x)-f(x_0)}{x - x_0}$ con $x \neq x_0$. Por la igualdad anterior $(q_n)_{n \in \N}$ es de Cauchy $\therefore q_n \rightrightarrows q$. Así que \begin{align*}
       \lim_{x \to x_0} (\lim_{n \to +\infty} q_n(x)) = \lim_{n \to +\infty}(\lim_{x \to x_0} q_n(x)) = q(x)
-    \end{equation} O sea, \begin{equation}
+    \end{align*} O sea, \begin{align*}
       \lim_{x \to x_0} \dfrac{f(x) - f(x_0)}{x-x_0} = \lim_{n \to +\infty} q_n(x_0) = g(x_0) \Rightarrow f^{\prime} = g
-    \end{equation}
+    \end{align*}
   \end{proof}
 \end{theorem}
 
@@ -64,12 +64,12 @@ Notemos que una serie de potencias puede no converger uniformemente en $(-r, r)$
   Sea $\sum_p \alpha_p$ una serie no necesariamente convergente, con sumas parciales acotadas. Es decir que si $S_p = \alpha_1 + \cdots + \alpha_p$ $\exists k > 0 : |S_p| \leq k$ $(\forall p \in \N)$.
   Si además $b_1 \geq b_2 \geq \cdots \geq b_p \geq 0$ es decreciente $\Rightarrow \forall p \in \N$ vale que $|\alpha_1 b_1 + \cdots + \alpha_p b_p| \leq k b_1$.
   \begin{proof}
-    \begin{equation}
+    \begin{align*}
       |\alpha_1 b_1 + \cdots + \alpha_p b_p| = |S_1 b_1 + (S_2 - S_1) b_2 + \cdots (S_p - S_{p-1}) b_p|
-    \end{equation}
-    \begin{equation}
+    \end{align*}
+    \begin{align*}
       = |S_1 (b_1 - b_2) + \cdots + S_{p-1} (b_{p-1} - b_p) + S_p b_p| \leq k b_1
-    \end{equation}
+    \end{align*}
   \end{proof}
 \end{lemma}
 
@@ -77,12 +77,12 @@ Notemos que una serie de potencias puede no converger uniformemente en $(-r, r)$
   Sea $\sum a_n x^n$ con radio de convergencia $0 < r < +\infty$. Si $\sum a_n r^n$ converge $\Rightarrow \sum a_n x^n$ converge en $[0, r]$. En particular $\lim_{x \to r^-} (\sum a_n x^n) = \sum a_n r^n$.
   \begin{proof}
     Dado $\e > 0$, $\exists n_0 \in \N : |a_{n+1} r^{n+1} + \cdots + a_{n+p} r^{n+p}| < \e$ $(\forall p \in \N) (\forall n > n_0)$. Si llamo $\alpha_p = a_{n+p} r^{n+p}$ $(\forall p \in \N)(n > n_0) \Rightarrow \alpha_p$
-    cumplen las hipótesis del lema anterior con $k = \e$, $(\forall x \in [0, r])$ tenemos que \begin{equation}
+    cumplen las hipótesis del lema anterior con $k = \e$, $(\forall x \in [0, r])$ tenemos que \begin{align*}
       |a_{n+1} r^{n+1} + \cdots + a_{n+p} r^{n+p}| = |\alpha_1 \frac{x}{r} + \cdots + \alpha_p (\frac{x}{r})^p| (\frac{x}{r})^n
-    \end{equation} Así que usando el lema para $b_p = (\frac{x}{r})^p$, vale que $\forall n > n_0$, $\forall x \in [0, r]$
-    \begin{equation}
+    \end{align*} Así que usando el lema para $b_p = (\frac{x}{r})^p$, vale que $\forall n > n_0$, $\forall x \in [0, r]$
+    \begin{align*}
       |a_{n+1} x^{n+1} + \cdots + a_{n + p} x^{n+p}| < \e \cdot (\frac{x}{r} \cdot (\frac{x}{r})^n) \leq \e
-    \end{equation} $\therefore \sum a_n x^n$ converge uniformemente en $[0, r] \Rightarrow \sum a_n x^n = f(x)$ es continua en $[0, r] \Rightarrow \sum a_n r^n = f(r) = \lim_{x \to r^-} f(x) = \lim_{x \to r^-} (\sum a_n x^n)$.
+    \end{align*} $\therefore \sum a_n x^n$ converge uniformemente en $[0, r] \Rightarrow \sum a_n x^n = f(x)$ es continua en $[0, r] \Rightarrow \sum a_n r^n = f(r) = \lim_{x \to r^-} f(x) = \lim_{x \to r^-} (\sum a_n x^n)$.
   \end{proof}
 \end{theorem}
 
@@ -136,9 +136,9 @@ Una familia (o sucesión) es equicontinua si es equicontinua en todo punto del d
   \begin{proof}
     Sea $\e > 0$, $x_0 \in X$, $\exists n_0 \in \N : |f_n(x) - f(x)| < \frac{\e}{3}$ $(\forall x \in X)$ $(\forall n > n_0)$ por la convergencia uniforme.
     Como $f$ y $f_n$ son continuas $\exists \delta > 0 : |x - x_0| < \delta_i \Rightarrow |f(x) - f(x_0)| < \frac{\e}{3}$ y $|f_i(x) - f_i(x_0)| < \frac{\e}{3}$ $(\forall i \in \{1, \cdots, n_0\})$.
-    Sea $\delta = min(\delta_1, \delta_2, \cdots, \delta_{n_0}) \Rightarrow$ Si $n > n_0$ y $|x - x_0| < \delta \Rightarrow$ \begin{equation}
+    Sea $\delta = min(\delta_1, \delta_2, \cdots, \delta_{n_0}) \Rightarrow$ Si $n > n_0$ y $|x - x_0| < \delta \Rightarrow$ \begin{align*}
       |f_n(x) - f_n(x_0)| \leq |f_n(x) - f(x)| + |f(x) - f(x_0)| + |f(x_0) - f_n(x_0)| < \e
-    \end{equation}
+    \end{align*}
   \end{proof}
 \end{theorem}
 

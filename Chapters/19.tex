@@ -28,9 +28,9 @@
 \begin{theorem}
   $S \subset \R^n \Rightarrow \overline{c}(\partial S) = \overline{c}(S) - \underline{c}(S)$. En particular $S$ es medible Jordan $\iff \partial S$ tiene contenido de Jordan nulo.
   \begin{proof}
-    Sea $I \subset \R^n$ un intervalo compacto que contiene a $\overline{S} \Rightarrow$ Para toda partición $P$ de $I$, $J(\partial S, P) = \overline{J}(S, P) - \underline{J}(S, P) \Rightarrow \overline{J}(\partial S, P) \geq \overline{c}(S) - \underline{c}(S) \Rightarrow \overline{c}(\partial S) \geq \overline{c}(S) - \underline{c}(S)$. Para la desigualdad opuesta, dado $\e > 0$ sea $P_1$ tal que $\overline{J}(S, P_1) < \overline{c}(S) + \frac{\e}{2}$ y sea $P_2$ tal que $\underline{J}(S, P_2) > \underline{c}(S) - \frac{\e}{2}$. Si $P = P_1 \cup P_2$, como refinar aumenta las sumas interiores y achica las exteriores \begin{equation}
+    Sea $I \subset \R^n$ un intervalo compacto que contiene a $\overline{S} \Rightarrow$ Para toda partición $P$ de $I$, $J(\partial S, P) = \overline{J}(S, P) - \underline{J}(S, P) \Rightarrow \overline{J}(\partial S, P) \geq \overline{c}(S) - \underline{c}(S) \Rightarrow \overline{c}(\partial S) \geq \overline{c}(S) - \underline{c}(S)$. Para la desigualdad opuesta, dado $\e > 0$ sea $P_1$ tal que $\overline{J}(S, P_1) < \overline{c}(S) + \frac{\e}{2}$ y sea $P_2$ tal que $\underline{J}(S, P_2) > \underline{c}(S) - \frac{\e}{2}$. Si $P = P_1 \cup P_2$, como refinar aumenta las sumas interiores y achica las exteriores \begin{align*}
       \overline{c}(\partial S) \leq \overline{J}(\partial S, P) = \overline{J}(S, P) - \underline{J}(S, P) \leq \overline{J}(S, P_1) - \underline{J}(S, P_2) \leq \overline{c}(S) - \underline(c)(S) + \e
-    \end{equation}
+    \end{align*}
     Como vale $\forall \e > 0 \Rightarrow \overline{c}(\partial S) \leq \overline{c}(S) - \underline{c}(S)$.
   \end{proof} y juntando las dos desigualdades se tiene que $\overline{\partial S} = \overline{c}(S) - \underline{c}(S)$.
 \end{theorem}

@@ -18,7 +18,7 @@ Más en general, con el mismo argumento, se ve que si $\forall x \in I$, $\exist
 \end{eg}
 
 \begin{eg}
-  Una familia formada por una única función continua, pero uniformemente continua es una familia equicontinua, pero no uniformemente.
+  Una familia formada por una única función continua, pero no uniformemente continua es una familia equicontinua, pero no uniformemente.
 \end{eg}
 
 \clearpage
@@ -38,9 +38,9 @@ Más en general, con el mismo argumento, se ve que si $\forall x \in I$, $\exist
   \begin{proof}
     Sea $\e > 0$ quiero ver que $\exists n_0 \in \N : |f_m(x) - f_n(x)| < \e$ ($\forall m, n > n_0)(\forall x \in K)$. Luego $\forall d \in D$, $\exists n_d \in \N : |f_m(d) - f_n(d)| < \frac{\e}{3}$ $(\forall n, m > n_d)$. \\
     Por otro lado $\forall y \in K$, $\exists$ un intervalo abierto $I_y$ (centrado en $y$) tal que $|f_n(x) - f(z)| < \frac{e}{3}$ $(\forall x, z \in X \cap I_y)(\forall n \in \N)$. Como $K$ es compacto del cubrimiento $K \subset \bigcup_{y \in K} I_y$ podemos extraer un subcubrimiento finito $K \subset I_1 \cup I_2 \cup \cdots \cup I_p$. \\
-    Como $D$ es denso en $X$, en cada intervalo $I_i$ podemos elegir $d_i \in D \cap I_i$. Sea $n_0 = max(n_{d_1}, \cdots n_{d_p}) \Rightarrow$ si $n, m > n_0$ y $x \in K \Rightarrow \exists i : x \in I_i$ así que \begin{equation}
+    Como $D$ es denso en $X$, en cada intervalo $I_i$ podemos elegir $d_i \in D \cap I_i$. Sea $n_0 = max(n_{d_1}, \cdots n_{d_p}) \Rightarrow$ si $n, m > n_0$ y $x \in K \Rightarrow \exists i : x \in I_i$ así que \begin{align*}
       |f_m(x) - f_n(x)| \leq |f_m(x) - f_m(d_i)| + |f_m(d_i) - f_n(d_i)| + |f_n(d_i) - f_n(x)| < \e
-    \end{equation} $\therefore$ es uniformemente equicontinua.
+    \end{align*} $\therefore$ es uniformemente equicontinua.
   \end{proof}
 \end{theorem}
 

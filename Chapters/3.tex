@@ -58,11 +58,11 @@
     Si $\exists f: X \to Y$ y $g: Y \to X$ inyectivas $\Rightarrow \exists h:X \to Y$ biyectiva.
 
     \begin{proof}
-        Vamos a probar que existen dos particiones distintas de $X$ e $Y$. Sea $X = X_1 \cup X_2$ y $Y = Y_1 \cup Y_2 : f: X_1 \to Y_1$ y $g: X_2 \to Y_2$ son biyectivas. Podemos definir a $h: X \to Y$ como \begin{equation} h(x) = \begin{cases}
-                f(x)      & \text{si } x \in X_1, \\
-                g^{-1}(x) & \text{si } x \in X_2.
-            \end{cases}
-        \end{equation}
+        Vamos a probar que existen dos particiones distintas de $X$ e $Y$. Sea $X = X_1 \cup X_2$ y $Y = Y_1 \cup Y_2 : f: X_1 \to Y_1$ y $g: X_2 \to Y_2$ son biyectivas. Podemos definir a $h: X \to Y$ como \begin{align*} h(x) = \begin{cases}
+                       f(x)      & \text{si } x \in X_1, \\
+                       g^{-1}(x) & \text{si } x \in X_2.
+                   \end{cases}
+        \end{align*}
         Que es biyectiva. Definimos $\phi(x):P(X) \to P(X)$, $\phi(A) = X-g(Y-f(A))$. Veamos primero que $\phi$ es creciente (i.e $A \subseteq B \Rightarrow \phi(A) \subseteq \phi(B)$.
         \begin{proof}
             $A \subseteq B \iff f(A) \subseteq f(B) \iff y - f(B) \subseteq y - f(A) \iff g(y-f(B)) \subseteq g(y-f(A)) \iff X - \phi(A) \subseteq X - \phi(B)$
@@ -100,9 +100,9 @@
     \begin{proof}
         Supongamos que es numerable $\Rightarrow$
         $\exists f: \N \to \R$ biyectiva. A cada número real $x_n$ le asignamos un intervalo centrado en ese punto de longitud $2^{-n}$. La unión de todos esos intervalos tiene longitud menor o igual a la suma de las longitudes (se pueden superponer).
-        \begin{equation}
-            |\bigcup_{n\in\N} Ix_n| \leq \sum_{i=1}^{n} |Ix_n| = \sum_{n \in \N}\dfrac{1}{2^n} = 1
-        \end{equation}
+        \begin{align*}
+            \left|\bigcup_{n \in \N} I_{x_n}\right| \leq \sum_{n \geq 1} |I_{x_n}| = \sum_{n \in \N}\dfrac{1}{2^n} = 1
+        \end{align*}
         Se cubrió un intervalo de longitud $1$ de toda la recta real, por lo tanto quedan reales afuera y eso es un absurdo $\therefore \R$ no es numerable.
     \end{proof}
 \end{theorem}

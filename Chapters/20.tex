@@ -84,8 +84,6 @@ Notemos que si $f_n: X \subset \R \to \R$ converge puntualmente a $f: X \to \R \
   $(f_n)_{n \in \N}$, $f_n: X \to \R$ es de Cauchy si $\forall \e > 0$, $\exists n_0 \in N : \forall n$,$m > n_0$,$\forall x \in X$, $|f_n(x) - f_m(x)| < \e$.
 \end{definition}
 
-\clearpage
-
 \begin{theorem}
   Una sucesión de funciones $f_n : X \to \R$ es uniformemente convergente $\iff$ es de Cauchy.
   \begin{proof}
@@ -112,19 +110,13 @@ $f : X \to \R$, $f_n: X \to \R$. $f = \lim_{n \to +\infty} S_n$, $S_n$ la suma p
   $\sum_{n \geq 1} \frac{sen(nx)}{n^2}$ es normalmente convergente pues $|\frac{sen(nx)}{n^2}| \leq \frac{1}{n²}$ $(\forall n \in N)$ y $\sum \frac{1}{n²}$ converge.
 \end{eg}
 
-\clearpage
-
 \begin{theorem}[Test de Weierstrass]
   Si $\sum f_n$ es normalmente convergente $\Rightarrow \sum |f_n|$ y $\sum f_n$ son uniformemente convergentes.
   \begin{proof}
     $X$ el dominio de todas las $f_i \Rightarrow (\forall n \in \N)(\forall p \in \N)(\forall x \in X) \Rightarrow$ \begin{align*}
-      |S_{n + p}(x) - S_n(x)| = |f_{n+1}(x) + \cdots + f_{n + p}(x)|
-    \end{align*}
-    \begin{align*}
-      \leq |f_{n+1}(x)| + \cdots + |f_{n+p}(x)|
-    \end{align*}
-    \begin{align*}
-      \leq a_{n+1} + \cdots + a_{n+p} < \e
+      |S_{n + p}(x) - S_n(x)| & = |f_{n+1}(x) + \cdots + f_{n + p}(x)| \\
+      & \leq |f_{n+1}(x)| + \cdots + |f_{n+p}(x)| \\
+      & \leq a_{n+1} + \cdots + a_{n+p} < \e
     \end{align*}
     Por la hipótesis de la convergencia normal $\therefore \sum f_n$ y $\sum |f_n|$ convergen uniformemente.
   \end{proof}
@@ -232,8 +224,6 @@ Si el límite de $(f_n)_{n \in \N}$ no es continuo y las funciones de la sucesi�
 \begin{definition}[Convergencia monótona]
   Decimos que $(f_n)_{n \in \N}$ converge monótonamente a $f$, si $(\forall x \in X)$ la sucesión $(f_n)_{n \in \N}$ es monótona y $f_n(x) \to f(x)$.
 \end{definition}
-
-\clearpage
 
 \begin{theorem}
   Sea $X \subset \R$ compacto. Si una sucesión de funciones continuas $f_n: X \to \R$ converge monótonamente a una función continua $f: X \to \R \Rightarrow$ la convergencia es uniforme.

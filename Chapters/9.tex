@@ -1,41 +1,24 @@
-\section{(Continuación) Reordenamientos}
-
-\begin{theorem}
-  Si $\sum_{n \geq 1} a_n$ converge condicionalmente. Dado $c \in \R, \exists$ reordenamiento $(b_n)_{n \in \N}$ de los términos de $\sum_{n \geq 1} a_n$ tal que $\sum_{n \geq 1} b_n = c$.
-  \begin{proof}
-    Como $a_n$ converge condicionalmente entonces $a_n \to 0 \Rightarrow p_n, q_n \to 0$, pero $\sum_{n \geq 1} p_n = \sum_{n \geq 1} q_n = +\infty$. \\
-    Reordenemos la serie tomando $p_1, p_2, \cdots, p_{n_1}$ donde $n_1$ es el menor índice tal que $p_1 + \cdots + p_{n_1} > c, (T_1)$. \\
-    Similarmente $-q_1, -q_2, \cdots, q_{n_2}$ donde $n_2$ es el menor índice tales que $\sum_{i = 1}^{n_1} p_i + \sum_{i = 1}^{n_2} q_i < c, (T_2)$. \\
-    Seguimos con el menor $n_3$ tal que $\sum_{i = 1}^{n_1} p_i + \sum_{i = 1}^{n_2} q_i + \sum_{i = 1}^{n_3} p_i > c, (T_3)$, etc. \\
-    Veamos que las sumas parciales $T_n$ de este reordenamiento tienden a 0. \\
-    $\forall i$ impar tenemos que $T_{n_i +1} < c < T_i \Rightarrow$ \\
-    $0 < T_{n_i} - c \leq p_{n_i} \Rightarrow 0 < c - T_{n_i} < q_{n_i}$ y como $\lim_{i \to \infty} p_{n_i} = 0 = \lim_{i \to \infty} q_{n_i} \Rightarrow \lim_{i \to \infty} T_{n_i} = c$. \\
-    Además para $i$ impar si $n_i < n < n_{i+1} \Rightarrow T_{n_i+1} \leq T_n \leq T_{n_i}$ y para $i$ par, si $n_i < n < n_{i+1} \Rightarrow T_{n_i+1} \leq T_n \leq T_{n_i}$ \\
-    $\therefore \lim_{n \to \infty} T_n = c$.
-  \end{proof}
-\end{theorem}
-
 \section{Topología Euclídea}
 
 \begin{definition}
   La norma euclídea es la función $\| \cdot \|$ que en cada punto $x = (x_1, \cdots, x_n) \in \R^n$ toma el valor $\|x\| = \sqrt{\sum_{i = 1}^n x_i^2}$.
-
-  Propiedades: \\
-  \begin{enumerate}
+  Propiedades: \begin{enumerate}
     \item $\forall x \in \R^n, \|x\| > 0$ y $\|x\| = 0 \iff x = 0$.
     \item $\forall x \in \R^n, \forall \lambda \in \R, \| \lambda x\| = |\lambda| \|x\|$.
     \item $\|x+y\| \leq \|x\| + \|y\|$.
   \end{enumerate}
 \end{definition}
 
-\clearpage
-
 \begin{prop}[Desigualdad de Cauchy-Schwarz]
-  Si $x = (x_1, \cdots, x_n)$ e $y = (y_1, \cdots, y_n) \in \R^n \Rightarrow | \sum_{i = 1}^n x_i \cdot y_i | \leq \|x\| \cdot \|y\|$.
+  Dados $x$, $y \in \R^n$ entonces \begin{align*}
+    \left| \sum_{i = 1}^n x_i \cdot y_i \right| \leq \|x\| \cdot \|y\|
+  \end{align*}
   \begin{proof}
     Ejercicio
   \end{proof}
 \end{prop}
+
+\clearpage
 
 \begin{definition}
   La distancia euclídea es la función $d: \R^n \times \R^n \to \R : d(x, y) = \|x-y\|$.
@@ -72,11 +55,13 @@
   \end{proof}
 \end{lemma}
 
+\clearpage
+
 \begin{prop}
   Un subconjunto propio $U \subset \R^n$ es abierto $\iff \forall x \in U$ se tiene que $inf\{d(x, y) : y \in \R^n - U\} > 0$. \\
-  El ínfimo existe pues el conjunto es no vacío y acotado superiormente.
+  El ínfimo existe pues el conjunto es no vacío y acotado inferiormente.
   \begin{proof}
-    Para la ida tenemos que si $U$ es abierto $\Rightarrow (\forall x \in U) \text{ } \exists r > 0 : B_r(x) \subset U$. \\
+    Para la ida tenemos que si $U$ es abierto $\Rightarrow (\forall x \in U) \, \, \exists r > 0 : B_r(x) \subset U$. \\
     Si $y \in R^n - U \Rightarrow y \notin B_r(x)$ por lo que $d(x, y) > r > 0$ y $r$ es una cota inferior mínima positiva del conjunto, pues si $d(x,y) < r \Rightarrow y \in B_r(x)$ absurdo! \\
 
     Para la vuelta tomemos $s = inf\{ d(x,y) : y \in \R^n - U \} > 0$. Consideremos $B_{\frac{s}{2}}(x)$. Si $z$ pertenece a esa bola entonces $d(x, z) < \frac{s}{2} < s \Rightarrow$ \\
@@ -111,9 +96,10 @@ Notemos que la hipotesis de que la familia sea finita en la intersección es nec
 \begin{corollary}
   Un subconjunto de $\R^n$ es abierto $\iff$ es la unión de una familia de bolas abiertas.
   \begin{proof}
-    Para la ida: Sea $U \subset \R^n$ un conjunto abierto y sea $u$ la familia de bolas abiertas de $\R^n$ contenidas en $U$. Si llamamos $\tilde{U}$ a la unión de todas basta ver que $\tilde{U} = U$. \\
-    $\subset$) Inmediato. \\
-    $\supset$) Dado $x \in U, \exists r > 0 : B_r(x) \subset U$ por ser $U$ abierto y $B_r(x) \in u \Rightarrow B_r(x) \subset \tilde{U} \Rightarrow U \subset \tilde{U}$ pues vale $\forall x \in U$. \\
+    Para la ida: Sea $U \subset \R^n$ un conjunto abierto y sea $u$ la familia de bolas abiertas de $\R^n$ contenidas en $U$. Si llamamos $\tilde{U}$ a la unión de todas basta ver que $\tilde{U} = U$. \begin{itemize}
+      \item[$\subset$)] Inmediato.
+      \item[$\supset$)] Dado $x \in U, \exists r > 0 : B_r(x) \subset U$ por ser $U$ abierto y $B_r(x) \in u \Rightarrow B_r(x) \subset \tilde{U} \Rightarrow U \subset \tilde{U}$ pues vale $\forall x \in U$.
+    \end{itemize}
     La vuelta es la proposición anterior.
   \end{proof}
 \end{corollary}

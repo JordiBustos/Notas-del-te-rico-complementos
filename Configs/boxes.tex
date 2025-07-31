@@ -1,5 +1,4 @@
-% Tcolorboxes
-\makeatother
+
 \usepackage{thmtools}
 \usepackage[framemethod=TikZ]{mdframed}
 \mdfsetup{skipabove=1em,skipbelow=1em}
@@ -8,36 +7,27 @@
 \declaretheoremstyle[
     headfont=\bfseries\sffamily\color{magenta!80!black}, bodyfont=\normalfont,
     mdframed={
-        linewidth=2pt,
-        rightline=true, topline=true, bottomline=true,
-        linecolor=gray!50, backgroundcolor=gray!5,
-        innertopmargin=10pt, innerbottommargin=10pt, innerrightmargin=10pt, innerleftmargin=10pt,
-        roundcorner=6pt,
-    }
+            linecolor=white!60,
+            innertopmargin=0pt, innerbottommargin=0pt, innerrightmargin=12pt, innerleftmargin=12pt,
+        }
 ]{thmbox}
 
 \declaretheoremstyle[
-    headfont=\bfseries\sffamily\color{black!3}, bodyfont=\normalfont,
+    headfont=\bfseries\sffamily\color{black}, bodyfont=\normalfont,
     mdframed={
-        linewidth=2pt,
-        rightline=false, topline=true, bottomline=true,
-        linecolor=gray!50, backgroundcolor=gray!5,
-        innertopmargin=10pt, innerbottommargin=10pt, innerrightmargin=10pt, innerleftmargin=10pt,
-        roundcorner=6pt,
-        align=center,
-    }
+            linecolor=white!60,
+            innertopmargin=0pt, innerbottommargin=0pt, innerrightmargin=12pt, innerleftmargin=12pt,
+            align=center,
+        }
 ]{thmtikz}
 
 \declaretheoremstyle[
     headfont=\bfseries\sffamily\color{magenta!80!black}, bodyfont=\normalfont,
     numbered=no,
     mdframed={
-        linewidth=0pt,
-        rightline=false, topline=true, bottomline=true,
-        linecolor=gray!20, backgroundcolor=gray!2,
-        innertopmargin=10pt, innerbottommargin=10pt, innerrightmargin=10pt, innerleftmargin=10pt,
-        roundcorner=6pt,
-    },
+            linecolor=white!40,
+            innertopmargin=10pt, innerbottommargin=0pt, innerrightmargin=12pt, innerleftmargin=12pt,
+        },
     qed=\qedsymbol
 ]{thmproofbox}
 
@@ -51,7 +41,7 @@
 \declaretheorem[style=thmproofbox, name=Demostración]{replacementproof}
 \renewenvironment{proof}[1][\proofname]{\vspace{-10pt}\begin{replacementproof}}{\end{replacementproof}}
 
-\declaretheorem[style=thmbox, numbered=no, name=Nota]{note}
+\declaretheorem[style=thmbox, numbered=no, name=Observación]{note}
 \declaretheorem[style=thmbox, numbered=no, ]{temp}
 \declaretheorem[style=thmtikz, numbered=no, name=.]{tikznt}
 

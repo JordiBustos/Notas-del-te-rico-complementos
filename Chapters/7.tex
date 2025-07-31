@@ -105,15 +105,18 @@ Dada una sucesión $(x_n)_{n \in \N} \subset \R$, decimos que es de Cauchy si da
 
 Dada una sucesión $(a_n)_{n \in \N} \subset \R$ formamos una nueva sucesión $(S_n)_{n \in \N}$. Dada por $S_1 = a_1, S_2 = a_1 + a_2, \cdots, S_n = a_1 + \cdots + a_n$; que llamamos sumas parciales de la serie $\sum_{n \geq 1} a_n$.
 
+\clearpage
 
 \begin{theorem}
   $\sum_{n \geq 1} a_n$ converge $\Rightarrow \lim_{n \to \infty} a_n = 0$.
   \begin{proof}
-    $\lim_{n \to \infty} S_n = \lim_{n \to \infty} S_{n-1} \Rightarrow 0 = s - s = \lim_{n \to \infty} S_n - \lim_{n \to \infty} S_{n-1} = \lim_{n \to \infty} S_n - S_{n-1} = \lim_{n \to \infty} a_n$.
+    \begin{align*}
+      & \lim_{n \to \infty} S_n = \lim_{n \to \infty} S_{n-1} \Rightarrow \\
+      & 0 = s - s = \lim_{n \to \infty} S_n - \lim_{n \to \infty} S_{n-1} \\
+      & = \lim_{n \to \infty} S_n - S_{n-1} = \lim_{n \to \infty} a_n
+    \end{align*}
   \end{proof}
 \end{theorem}
-
-\clearpage
 
 \begin{eg}
   El recíproco del teorema anterior es falso pues $\sum_{n \geq 1} \frac{1}{n}$ diverge.
@@ -134,27 +137,33 @@ Dada una sucesión $(a_n)_{n \in \N} \subset \R$ formamos una nueva sucesión $(
   \end{proof}
 \end{theorem}
 
-\begin{corollary}[Criterio de comparación]
-  Sean $a_n, b_n \geq 0, \forall n \in \N$, dadas $\sum_{n \geq 1} a_n$, $\sum_{n \geq 1} b_n \Rightarrow$ Si \begin{align*}
-    \exists c > 0, n_0 \in \N : a_n \leq c \cdot b_n, \forall n > n_0 \Rightarrow
-  \end{align*}
-  \begin{enumerate}
-    \item Si $\sum b_n$ converge entonces $\sum a_n$ converge.
-    \item Si $\sum a_n$ diverge entonces $\sum b_n$ diverge.
-  \end{enumerate}
-
-  \begin{note}
-    $\sum a_n$ converge $\iff$ Dado $n_0 \in \N, \sum_{n \geq n_0} a_n$ converge.
-  \end{note}
-  \begin{proof}
-    Sea $(s_n)_{n \in \N}$ la primera serie, $(t_n)_{n \in \N}$ la segunda, $t_n = s_{n + n_0} - s_{n_0}$.
-  \end{proof}
-\end{corollary}
-
 \begin{theorem}[Criterio de Cauchy]
   $\sum a_n$ converge $\iff \forall \e > 0, \exists n_0 \in \N : | a_{n+1} + \cdots + a_{n+p} | < \e, \forall n > n_0, p \in \N$.
   \begin{proof}
     $|s_{n+p} - s_n| = |a_{n+1} + \cdots + a_{n+p}| < \e, \forall n > n_0 \in \N \Rightarrow (s_n)_{n \in \N}$ es de Cauchy y por lo tanto convergente.
+  \end{proof}
+\end{theorem}
+
+\clearpage
+
+\begin{theorem}[Criterio de comparación]
+  Sean $a_n, b_n \geq 0, \forall n \in \N$, dadas $\sum_{n \geq 1} a_n$, $\sum_{n \geq 1} b_n \Rightarrow$ Si \begin{align*}
+    \exists c > 0, n_0 \in \N : a_n \leq c \cdot b_n, \forall n > n_0 \Rightarrow
+  \end{align*}
+  \begin{enumerate}
+    \item[(a)] Si $\sum b_n$ converge entonces $\sum a_n$ converge.
+    \item[(b)] Si $\sum a_n$ diverge entonces $\sum b_n$ diverge.
+  \end{enumerate}
+
+  Notemos que $\sum a_n$ converge $\iff$ Dado $n_0 \in \N, \sum_{n \geq n_0} a_n$ converge, por lo que solo nos interesa la cola de la sucesión.
+  \begin{proof}
+    Si $\sum b_n$ es convergente entonces es de Cauchy y dado $\e > 0$, existe $n_0 \in \N$ tal que $\forall n \geq n_0$ se cumple: \begin{align*}
+      \sum_{m = n}^{n + p} b_m < \e
+    \end{align*}
+    Luego, \begin{align*}
+      \left| \sum_{m = n}^{n+p} a_m \right| \leq \sum_{m=n}^{n+p} |a_n| \leq \sum_{m=n}^{n+p} b_m < \e
+    \end{align*}
+    Por lo que $\sum a_n$ es de Cauchy y, por lo tanto, es convergente. Finalmente, (b) se deduce de (a).
   \end{proof}
 \end{theorem}
 
@@ -166,7 +175,7 @@ Dada una sucesión $(a_n)_{n \in \N} \subset \R$ formamos una nueva sucesión $(
 \begin{theorem}
   Toda serie absolutamente convergente es convergente.
   \begin{proof}
-    Como $\sum |a_n|$ converge $\Rightarrow \forall \e > 0, \exists n_0 \in \N : | |a_{n+1}| + \cdots + |a_{n+p}| < \e, \forall n > n_0, p \in \N \Rightarrow$ \\
+    Como $\sum |a_n|$ converge $\Rightarrow \forall \e > 0, \exists n_0 \in \N : \left| |a_{n+1}| + \cdots + |a_{n+p}| \right| < \e, \forall n > n_0, p \in \N \Rightarrow$ \\
     $|a_{n+1} + \cdots + a_{n+p}| \leq |a_{n+1}| + \cdots + |a_{n+p}| < \e, \forall n > n_0, p \in \N \therefore \sum a_n$ converge.
   \end{proof}
 \end{theorem}

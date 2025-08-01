@@ -75,8 +75,6 @@
     \end{proof}
 \end{theorem}
 
-\clearpage
-
 \begin{eg}
     $\N \sim \Z \sim \Q$.
     \begin{proof}
@@ -149,14 +147,16 @@ La idea del último ejemplo (argumento diagonal), se puede adaptar para probar q
     \end{proof}
 \end{theorem}
 
-\clearpage
-
 \section{Propiedades}
 
 \begin{theorem}
     Sea $X$ numerable, $Y \subset X \Rightarrow$ $Y$ es a lo sumo numerable.
     \begin{proof}
-        Supongamos que $Y$ no es finito. Como $X \sim Y$ puedo pensar $X = (x_n)_{n\geq1}$ y defino $n_1=min\{ n \in \N: x_n \in Y \}$ e inductivamente elegimos $n_1, n_2, \cdots , n_k, \cdots$. Definimos $n_k = min\{ n \in \N : n > n_k, x_n \in Y \} \Rightarrow$ Tenemos la sucesión estrictamente creciente de naturales y podemos definir $g: \N \to Y, g(K) = x_{n_k}$. $g$ es inyectiva si $K\neq Y, n_k \neq n_j$ por ser estrictamente creciente y es suryectiva, si $y \in Y \Rightarrow y = x_j$. Para ningún $j \Rightarrow \exists k :n_k\leq j \leq n_k+1$. Como $j \leq n_{k+1}=\{ n>n_k:x_n \in Y \}$ debe ser $j = n_k$.
+        Supongamos que $Y$ no es finito. Como $X \sim Y$ puedo pensar $X = (x_n)_{n\geq1}$ y defino
+        \begin{align*}
+            n_1=min\{ n \in \N: x_n \in Y \}
+        \end{align*}
+        E inductivamente elegimos $n_1, n_2, \cdots , n_k, \cdots$. Definimos $n_k = min\{ n \in \N : n > n_k, x_n \in Y \} \Rightarrow$ Tenemos la sucesión estrictamente creciente de naturales y podemos definir $g: \N \to Y, g(K) = x_{n_k}$. $g$ es inyectiva si $K\neq Y, n_k \neq n_j$ por ser estrictamente creciente y es suryectiva, si $y \in Y \Rightarrow y = x_j$. Para ningún $j \Rightarrow \exists k :n_k\leq j \leq n_k+1$. Como $j \leq n_{k+1}=\{ n>n_k:x_n \in Y \}$ debe ser $j = n_k$.
     \end{proof}
 \end{theorem}
 
@@ -180,8 +180,6 @@ La idea del último ejemplo (argumento diagonal), se puede adaptar para probar q
         $x_n$ es numerable $\Rightarrow \exists f:\N \to x_n$ biyectiva. Sea $f:\N \times \N \to \bigcup_{n \in \N} x_n $ definida como $f(n, n) = f_n(n)$. Veamos que es suryectiva, dado $x \in X$, $\exists n \in \N:x \in x_n \Rightarrow \exists m:x=f_n(m)$ luego $X=f_n(m) = f(n, m)$. Como $\N \times \N$ es numerable y $f: \N \times \N \to \bigcup_{n \geq 1}{x_n}$ es suryectiva $\Rightarrow \bigcup_{n \geq 1}x_n$ es a lo sumo numerable $\therefore$ como es infinito, es numerable.
     \end{proof}
 \end{theorem}
-
-\clearpage
 
 \begin{eg}
     $\Q(x) \sim \N$.

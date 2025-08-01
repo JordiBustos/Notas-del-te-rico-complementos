@@ -53,11 +53,12 @@ finitos con $X, Y, Z$ disjuntos dos a dos.
 \end{prop}
 
 \begin{note}
-  No vale la ley de cancelación: $n+m=n+p \;\cancel{\Rightarrow}\; m=p$.
-  $n \cdot m = n \cdot p \;\cancel{\Rightarrow}\; m=p$.
+  No vale la ley de cancelación:
+  \begin{align*}
+     & n+m=n+p \;\cancel{\Rightarrow}\; m=p               \\
+     & n \cdot m = n \cdot p \;\cancel{\Rightarrow}\; m=p
+  \end{align*}
 \end{note}
-
-\clearpage
 
 \begin{eg}
   Si $n = card(\N) = \aleph_0$ y $card(\R) = c$, tenemos que:
@@ -146,29 +147,37 @@ Gödel 1940 probó que no se puede demostrar, Cohen en 1963 que no se puede refu
 
 \section{Construcción de los Reales}
 
-Sucesiones de números racionales $(a_n)_{n \in \N} \subset \Q$. Decimos que $(a_n)_{n \in \N}$ tiende a 0 si dado \begin{align*} \e > 0, \exists n_0 \in \N : |a_n| < \e, \forall n > n_0 \end{align*} Notamos $a_n \to 0$.
+Sucesiones de números racionales $(a_n)_{n \in \N} \subset \Q$. Decimos que $(a_n)_{n \in \N}$ tiende a 0 si dado \begin{align*}
+  \e > 0\text{, } \exists n_0 \in \N : |a_n| < \e \quad \forall n > n_0
+\end{align*} Notamos $a_n \to 0$.
 
-\begin{definition}
-  Sea $(a_n)_{n \in \N} \subset \Q$. Decimos que la sucesión es de Cauchy $\iff$ dado $\e > 0, \exists n_0 : \forall n,m > n_0, |a_n - a_m| < \e$.
+\begin{definition}[Sucesión de Cauchy]
+  Sea $(a_n)_{n \in \N} \subset \Q$. Decimos que la sucesión es de Cauchy $\iff$ dado $\e > 0, \exists n_0 : \forall n\text{, }m > n_0\text{, } |a_n - a_m| < \e$.
 \end{definition}
 
 \begin{theorem}
   $(a_n)_{n \in \N} \subset \Q$ es convergente (es decir $a_n - q \to 0, q \in \Q$) $\Rightarrow$ es de Cauchy.
   \begin{proof}
-    Dado $\e > 0, \exists n_0 \in \N : |a_n - q| < \dfrac{\e}{2}, \forall n > n_0$. \\
-    $|a_n - a_m| = |(a_n - q) + (q - a_n)| \leq |a_n - q| + |q - a_m| < \dfrac{\e}{2} + \dfrac{\e}{2} = \e$ \\
-    $\forall n,m > n_0$.
+    Sea $\e > 0$,
+    \begin{align*}
+       & \exists n_0 \in \N : |a_n - q| < \dfrac{\e}{2}, \forall n > n_0                                 \\
+       & | a_n - a_m| = |(a_n - q) + (q - a_m)|                                                          \\
+       & \leq |a_n - q| + |q - a_m| < \dfrac{\e}{2} + \dfrac{\e}{2} = \e \quad \forall n\text{, }m > n_0
+    \end{align*}
   \end{proof}
 \end{theorem}
 
 \begin{theorem}
   Toda sucesión de Cauchy es acotada.
-
   \begin{proof}
-    Como $(a_n)_{n \in \N} \subset \Q$ es de Cauchy, eligiendo $\e = 1$ \\
-    $\exists n_0 \in \N : |a_n - a_m| < 1, \forall n,m > n_0$. \\
-    En particular $|a_n - a_{n_0+1}| < 1$ \\
-    $a_{n_0+1} - 1 < a_n < 1 + a_{n_0+1}, \forall n > n_0 \Rightarrow |a_n| < max(|a_{n_0+1} + 1|, |a_{n_0+1} - 1|), \forall n > n_0$. \\
+    Como $(a_n)_{n \in \N} \subset \Q$ es de Cauchy, eligiendo $\e = 1$ \begin{align*}
+      \exists n_0 \in \N : |a_n - a_m| < 1, \forall n\text{, }m > n_0
+    \end{align*}
+    En particular $|a_n - a_{n_0+1}| < 1$
+    \begin{align*}
+       & a_{n_0+1} - 1 < a_n < 1 + a_{n_0+1}, \forall n > n_0                                    \\
+       & \Rightarrow |a_n| < max(|a_{n_0+1} + 1|\text{, } |a_{n_0+1} - 1|) \quad \forall n > n_0
+    \end{align*}
     Tomo $M = max(|a_0|, \cdots, |a_{n_0}|, |a_{n_0+1} + 1|, |a_{n_0+1} - 1|)$ y vale $\forall n \in \N$.
   \end{proof}
 \end{theorem}
@@ -180,11 +189,12 @@ Sucesiones de números racionales $(a_n)_{n \in \N} \subset \Q$. Decimos que $(a
 \clearpage
 
 \begin{prop}
-  La relación anterior es de equivalencia. \\
-  i) Reflexidad: $a_n - a_n = 0 \to 0$. \\
-  ii) Simetría: $a_n - b_n \to 0 \Rightarrow b_n - a_n = -(a_n-b_n) \to 0$. \\
-  iii) Tansitividad: $\e > 0, \exists n_0 : |a_n - b_n| < \dfrac{\e}{2}, \forall n > n_0$
-  y $\exists n_1 : |b_n - c_n| < \dfrac{\e}{2}, \forall n > n_1$. Tomando $n > max(n_0, n_1), |a_n - c_n| \leq |a_n - b_n| + |b_n - c_n| < \dfrac{\e}{2} + \dfrac{\e}{2} < \e$.
+  La relación anterior es de equivalencia. \begin{itemize}
+    \item Reflexiva: $a_n - a_n = 0 \to 0$.
+    \item Simétrica: $a_n - b_n \to 0 \Rightarrow b_n - a_n = -(a_n-b_n) \to 0$.
+    \item Transitiva: $\e > 0, \exists n_0 : |a_n - b_n| < \dfrac{\e}{2}, \forall n > n_0$
+          y $\exists n_1 : |b_n - c_n| < \dfrac{\e}{2}, \forall n > n_1$. Tomando $n > max(n_0, n_1), |a_n - c_n| \leq |a_n - b_n| + |b_n - c_n| < \dfrac{\e}{2} + \dfrac{\e}{2} < \e$.
+  \end{itemize}
 \end{prop}
 
 \begin{definition}

@@ -64,7 +64,6 @@ Dada una sucesión $(x_n)_{n \in \N} \subset \R$, decimos que es de Cauchy si da
   Decimos que $\lim_{n \to \infty} x_n = - \infty$ si dado $a > 0, \exists n_0 \in \N : x_n < -a \forall n > n_0$.
 \end{definition}
 
-
 \begin{prop}
   $\lim_{n \to \infty} x_n = + \infty$ e $(y_n)_{n \in \N}$ es acotada inferiormente $\Rightarrow \lim_{n \to \infty} (x_n + y_n) = +\infty$.
   \begin{proof}
@@ -81,7 +80,6 @@ Dada una sucesión $(x_n)_{n \in \N} \subset \R$, decimos que es de Cauchy si da
   \end{proof}
 \end{prop}
 
-
 \begin{prop}
   $x_n > 0 \forall n \in \N \Rightarrow \lim_{n \to \infty} x_n = 0 \iff \lim_{n \to \infty} = \frac{1}{x_n} = +\infty$.
   \begin{proof}
@@ -92,12 +90,15 @@ Dada una sucesión $(x_n)_{n \in \N} \subset \R$, decimos que es de Cauchy si da
 \end{prop}
 
 \begin{prop}
-  Sean $(x_n)_{n \in \N}, \forall n \in \N$ e $(y_n)_{n \in \N}$ sucesiones de números positivos $\Rightarrow$ \\
-  a) Si $\exists c > 0 : x_n > c, \forall n \in \N$ y si $\lim_{n \to \infty} y_n = 0 \Rightarrow \lim_{n \to \infty} \frac{x_n}{y_n} = +\infty$. \\
-  b) $(x_n)_{n \in \N}$ es acotada y $\lim_{n \to \infty} y_n = +\infty \Rightarrow \lim_{n \to \infty} \frac{x_n}{y_n} = 0$.
+  Sean $(x_n)_{n \in \N}, \forall n \in \N$ e $(y_n)_{n \in \N}$ sucesiones de números positivos $\Rightarrow$ \begin{enumerate}
+    \item Si $\exists c > 0 : x_n > c, \forall n \in \N$ y si $\lim_{n \to \infty} y_n = 0 \Rightarrow \lim_{n \to \infty} \frac{x_n}{y_n} = +\infty$.
+    \item $(x_n)_{n \in \N}$ es acotada y $\lim_{n \to \infty} y_n = +\infty \Rightarrow \lim_{n \to \infty} \frac{x_n}{y_n} = 0$
+  \end{enumerate}
   \begin{proof}
-    a) Dado $A > 0, \exists n_0 \in \N : 0 < y_n < c/A, \forall n > n_0 \Rightarrow \frac{x_n}{y_n} > (A/c) \cdot c = A, \forall n > n_0 \therefore \lim_{n \to \infty} \frac{x_n}{y_n} = + \infty$. \\
-    b) Dado $\e > 0, \exists n_0 \in \N : y_n > k/\e, \forall n > n_0$, donde $k > 0$ es cota superior de $x_n \Rightarrow \forall n > n_0, 0 < \frac{x_n}{y_n} < k \cdot (\e/k) = \e \therefore \lim_{n \to \infty} \frac{x_n}{y_n} = 0$.
+    \begin{enumerate}
+      \item Dado $A > 0, \exists n_0 \in \N : 0 < y_n < c/A, \forall n > n_0 \Rightarrow \frac{x_n}{y_n} > (A/c) \cdot c = A, \forall n > n_0 \therefore \lim_{n \to \infty} \frac{x_n}{y_n} = + \infty$.
+      \item Dado $\e > 0, \exists n_0 \in \N : y_n > k/\e, \forall n > n_0$, donde $k > 0$ es cota superior de $x_n \Rightarrow \forall n > n_0, 0 < \frac{x_n}{y_n} < k \cdot (\e/k) = \e \therefore \lim_{n \to \infty} \frac{x_n}{y_n} = 0$.
+    \end{enumerate}
   \end{proof}
 \end{prop}
 
@@ -105,15 +106,13 @@ Dada una sucesión $(x_n)_{n \in \N} \subset \R$, decimos que es de Cauchy si da
 
 Dada una sucesión $(a_n)_{n \in \N} \subset \R$ formamos una nueva sucesión $(S_n)_{n \in \N}$. Dada por $S_1 = a_1, S_2 = a_1 + a_2, \cdots, S_n = a_1 + \cdots + a_n$; que llamamos sumas parciales de la serie $\sum_{n \geq 1} a_n$.
 
-\clearpage
-
 \begin{theorem}
   $\sum_{n \geq 1} a_n$ converge $\Rightarrow \lim_{n \to \infty} a_n = 0$.
   \begin{proof}
     \begin{align*}
-      & \lim_{n \to \infty} S_n = \lim_{n \to \infty} S_{n-1} \Rightarrow \\
-      & 0 = s - s = \lim_{n \to \infty} S_n - \lim_{n \to \infty} S_{n-1} \\
-      & = \lim_{n \to \infty} S_n - S_{n-1} = \lim_{n \to \infty} a_n
+       & \lim_{n \to \infty} S_n = \lim_{n \to \infty} S_{n-1} \Rightarrow \\
+       & 0 = s - s = \lim_{n \to \infty} S_n - \lim_{n \to \infty} S_{n-1} \\
+       & = \lim_{n \to \infty} S_n - S_{n-1} = \lim_{n \to \infty} a_n
     \end{align*}
   \end{proof}
 \end{theorem}
@@ -130,8 +129,9 @@ Dada una sucesión $(a_n)_{n \in \N} \subset \R$ formamos una nueva sucesión $(
 \end{eg}
 
 \begin{theorem}
-  $a_n \geq 0, \forall n > 0 \Rightarrow$ \\
-  $\sum_{n \geq 1} a_n$ converge $\iff S_n$ forman una sucesión acotada.
+  $a_n \geq 0, \forall n > 0 \Rightarrow$ \begin{align*}
+    \sum_{n \geq 1} a_n \text{ converge } \iff S_n \text{ forman una sucesión acotada.}
+  \end{align*}
   \begin{proof}
     Por ser $a_n \geq 0$, $(S_n)_{n \in \N}$ es monótona creciente, luego converge $\iff$ es acotada.
   \end{proof}
@@ -143,8 +143,6 @@ Dada una sucesión $(a_n)_{n \in \N} \subset \R$ formamos una nueva sucesión $(
     $|s_{n+p} - s_n| = |a_{n+1} + \cdots + a_{n+p}| < \e, \forall n > n_0 \in \N \Rightarrow (s_n)_{n \in \N}$ es de Cauchy y por lo tanto convergente.
   \end{proof}
 \end{theorem}
-
-\clearpage
 
 \begin{theorem}[Criterio de comparación]
   Sean $a_n, b_n \geq 0, \forall n \in \N$, dadas $\sum_{n \geq 1} a_n$, $\sum_{n \geq 1} b_n \Rightarrow$ Si \begin{align*}

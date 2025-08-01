@@ -18,8 +18,6 @@
   \end{proof}
 \end{prop}
 
-\clearpage
-
 \begin{definition}
   La distancia euclídea es la función $d: \R^n \times \R^n \to \R : d(x, y) = \|x-y\|$.
   Tenemos que $\forall x,y,z \in \R^n$.
@@ -55,13 +53,14 @@
   \end{proof}
 \end{lemma}
 
-\clearpage
-
 \begin{prop}
   Un subconjunto propio $U \subset \R^n$ es abierto $\iff \forall x \in U$ se tiene que $inf\{d(x, y) : y \in \R^n - U\} > 0$. \\
   El ínfimo existe pues el conjunto es no vacío y acotado inferiormente.
   \begin{proof}
-    Para la ida tenemos que si $U$ es abierto $\Rightarrow (\forall x \in U) \, \, \exists r > 0 : B_r(x) \subset U$. \\
+    Para la ida tenemos que si $U$ es abierto
+    \begin{align*}
+      \Rightarrow (\forall x \in U) \quad \exists r > 0 : B_r(x) \subset U
+    \end{align*}
     Si $y \in R^n - U \Rightarrow y \notin B_r(x)$ por lo que $d(x, y) > r > 0$ y $r$ es una cota inferior mínima positiva del conjunto, pues si $d(x,y) < r \Rightarrow y \in B_r(x)$ absurdo! \\
 
     Para la vuelta tomemos $s = inf\{ d(x,y) : y \in \R^n - U \} > 0$. Consideremos $B_{\frac{s}{2}}(x)$. Si $z$ pertenece a esa bola entonces $d(x, z) < \frac{s}{2} < s \Rightarrow$ \\
@@ -251,3 +250,31 @@ $1 \notin X^{\circ} \cup Y^{\circ} = (-1, 1) \cup (1, 2)$, pero $1 \in (X \cup Y
     $X \cap Y \subset X \subset \overline{X}$ y $X \cap Y \subset Y \subset \overline{Y} \Rightarrow X \cap Y \subset \overline{X} \cap \overline{Y} \Rightarrow \overline{X \cap Y} \subset \overline{X} \cap \overline{Y}$. Pues es el menor de los cerrados.
   \end{proof}
 \end{prop}
+
+\begin{prop}
+  Sean $X \subset \R^n$ y $x \in \R^n$. Son equivalentes:
+  \begin{enumerate}
+    \item $x \in \overline{X}$.
+    \item $\forall r > 0, B_r(x) \cap X \neq \varnothing$.
+    \item $\forall$ entorno abierto $N$ de $x$, $N \cap X \neq \varnothing$.
+    \item $\forall$ entorno $N$ de $x$, $N \cap X \neq \varnothing$.
+  \end{enumerate}
+
+  \begin{proof}
+    4) $\Rightarrow$ 3) $\Rightarrow$ 2) son inmediatos. \\
+    2) $\Rightarrow$ 1) Por contrarrecíproco, supongamos que $x \notin \overline{X}$ de manera tal que $\exists$ F cerrado tal que $x \in F$ y $X \subset F$ (si no estaría en la clasura) $\Rightarrow x \in F^c$ que es abierto $\Rightarrow \exists r > 0, B_r(x) \subset F^c, B_r(X) \cap X \subset B_r(x) \cap F = \varnothing$. \\
+    1) $\Rightarrow$ 4) Supongamos que existe $N$ entorno de $x$ tal que $N \cap X = \varnothing$. El conjunto $U = N^{\circ}$ es abierto y $x \in U$. Además $U \subset N \subset X^c \Rightarrow X \subset U^c$ que es cerrado y $x \notin U^c \Rightarrow x \notin \overline{X}$.
+  \end{proof}
+\end{prop}
+
+\begin{eg}
+  Si $\Q^n$ es el conjunto de puntos de $\R^n$ que tienen todas sus coordenadas racionales $\overline{\Q^n} = \R^n$. Decimos que $\Q^n$ es denso en $\R^n$.
+
+  \begin{proof}
+    1) $\overline{\Q^n} \subseteq \R^n : \Q^n \subset \R^n$, que es cerrado $\Rightarrow \overline{\Q^n} \subseteq \R^n$. \\
+    2) $\R^n \subseteq \overline{\Q^n}:$ Si $x \in \R^n$ y $U$ es entorno abierto de $x, U \cap \Q^n \neq \varnothing$ (1) $\iff$ 2)). Como $U$ es abierto $\exists r > 0 : B_r(x) \subset U$. \\
+    Si $x = (x_1, \cdots, x_n)$ para cada $i \in \{1, \cdots, n\}$ elijo un racional $q_i$ en el intervalo $(x_i - \dfrac{r}{\sqrt{n}}, x_i + \dfrac{r}{\sqrt{n}}) : |x_i - q_i| < \dfrac{r}{\sqrt{n}} \Rightarrow d(x, q) < r$. Sabemos que existe porque ya probamos que $\Q$ es denso en $\R$. \\
+    $\Rightarrow q \in B_r(x) \subset U \Rightarrow U \cap \Q^n \neq \varnothing$ pues al menos $q$ está allí $\forall U$ entorno abierto de X.
+    $\therefore \R^n \subset \Q^n$.
+  \end{proof}
+\end{eg}

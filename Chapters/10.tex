@@ -1,33 +1,3 @@
-\section{(Continuación) Clausura}
-
-\begin{prop}
-  Sean $X \subset \R^n$ y $x \in \R^n$. Son equivalentes:
-  \begin{enumerate}
-    \item $x \in \overline{X}$.
-    \item $\forall r > 0, B_r(x) \cap X \neq \varnothing$.
-    \item $\forall$ entorno abierto $N$ de $x$, $N \cap X \neq \varnothing$.
-    \item $\forall$ entorno $N$ de $x$, $N \cap X \neq \varnothing$.
-  \end{enumerate}
-
-  \begin{proof}
-    4) $\Rightarrow$ 3) $\Rightarrow$ 2) son inmediatos. \\
-    2) $\Rightarrow$ 1) Por contrarrecíproco, supongamos que $x \notin \overline{X}$ de manera tal que $\exists$ F cerrado tal que $x \in F$ y $X \subset F$ (si no estaría en la clasura) $\Rightarrow x \in F^c$ que es abierto $\Rightarrow \exists r > 0, B_r(x) \subset F^c, B_r(X) \cap X \subset B_r(x) \cap F = \varnothing$. \\
-    1) $\Rightarrow$ 4) Supongamos que existe $N$ entorno de $x$ tal que $N \cap X = \varnothing$. El conjunto $U = N^{\circ}$ es abierto y $x \in U$. Además $U \subset N \subset X^c \Rightarrow X \subset U^c$ que es cerrado y $x \notin U^c \Rightarrow x \notin \overline{X}$.
-  \end{proof}
-\end{prop}
-
-\begin{eg}
-  Si $\Q^n$ es el conjunto de puntos de $\R^n$ que tienen todas sus coordenadas racionales $\overline{\Q^n} = \R^n$. Decimos que $\Q^n$ es denso en $\R^n$.
-
-  \begin{proof}
-    1) $\overline{\Q^n} \subseteq \R^n : \Q^n \subset \R^n$, que es cerrado $\Rightarrow \overline{\Q^n} \subseteq \R^n$. \\
-    2) $\R^n \subseteq \overline{\Q^n}:$ Si $x \in \R^n$ y $U$ es entorno abierto de $x, U \cap \Q^n \neq \varnothing$ (1) $\iff$ 2)). Como $U$ es abierto $\exists r > 0 : B_r(x) \subset U$. \\
-    Si $x = (x_1, \cdots, x_n)$ para cada $i \in \{1, \cdots, n\}$ elijo un racional $q_i$ en el intervalo $(x_i - \dfrac{r}{\sqrt{n}}, x_i + \dfrac{r}{\sqrt{n}}) : |x_i - q_i| < \dfrac{r}{\sqrt{n}} \Rightarrow d(x, q) < r$. Sabemos que existe porque ya probamos que $\Q$ es denso en $\R$. \\
-    $\Rightarrow q \in B_r(x) \subset U \Rightarrow U \cap \Q^n \neq \varnothing$ pues al menos $q$ está allí $\forall U$ entorno abierto de X.
-    $\therefore \R^n \subset \Q^n$.
-  \end{proof}
-\end{eg}
-
 \section{Punto de acumulación}
 
 \begin{definition}[Punto de acumulación]
@@ -108,7 +78,7 @@
 \end{definition}
 
 \begin{eg}
-  $Z \subset R$ es discreto.
+  $\Z \subset \R$ es discreto.
 \end{eg}
 
 \section{Sucesiones en varias dimensiones}
@@ -194,7 +164,10 @@ Decimos que una sucesión $(x_n)_{n \in \N} \subset \R^n$ converge a un punto $L
 \begin{prop}
   Un subconjunto de $\R^n$ es relativamente compacto $\iff$ es acotado.
   \begin{proof}
-    Sea $F \subset \R^n$ no acotado $\Rightarrow$ para cada $n \in \N, \exists y_n \in F : \|y_n\| > n$. \\
+    Sea $F \subset \R^n$ no acotado $\Rightarrow$
+    \begin{align*}
+      \forall  n \in \N \quad \exists y_n \in F : \|y_n\| > n
+    \end{align*}
     Si $f : \N \to \N$ es una función estrictamente creciente cualquiera entonces la sucesión $(y_{f(n)})_{n \in \N}$ de $(y_n)_{n \in \N}$ no es acotada, pues $\|y_{f(n)}\| > f(n) \geq n$ y $\therefore$ no converge. Luego $F$ no es relativamente compacto. \\
 
     Supongamos ahora que $F$ es acotado, digamos que $\exists k > 0 : F \subset B_k(0)$ y sea $(x_n)_{n \in N}$ una sucesión en $F$. \\
@@ -207,3 +180,7 @@ Decimos que una sucesión $(x_n)_{n \in \N} \subset \R^n$ converge a un punto $L
     $(x_{f(m)_1})_{m \in \N}, \cdots, (x_{f(m)_n})_{n \in \N}$ convergen $\therefore F$ es relativamente compacto.
   \end{proof}
 \end{prop}
+
+\begin{corollary}
+  $F \subset \R^n$ es compacto $\iff$ es cerrado y acotado.
+\end{corollary}

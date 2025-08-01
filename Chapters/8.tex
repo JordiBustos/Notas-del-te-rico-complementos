@@ -51,17 +51,18 @@
 
 \section{Criterios de convergencia}
 
-\subsection{Criterio de la raíz}
-
-\begin{corollary}
+\begin{corollary}[Criterio de la raíz]
   Si $\limsup_{n \to \infty} \sqrt[n]{|a_n|} < 1 \Rightarrow \sum a_n$ converge absolutamente.
   \begin{note}
-    Si existen infinitos índices tales que $\sqrt[n]{|a_n|} > 1 \Rightarrow \sum a_n$ diverge pues $a_n \not \to 0$.
-    Si $\limsup_{n \to \infty} \sqrt[n]{|a_n|} = 1$ el criterio no concluye ($\sum \frac{1}{n}$, $\sum \frac{1}{n^2})$.
+    \begin{enumerate}
+      \item Si $\limsup_{n \to \infty} \sqrt[n]{|a_n|} > 1 \Rightarrow \sum a_n$ diverge, pues existen infinitos índices tales que $\sqrt[n]{|a_n|} > 1$ y entonces $a_n \not \to 0$.
+      \item Si $\limsup_{n \to \infty} \sqrt[n]{|a_n|} = 1$ el criterio no concluye ($\sum \frac{1}{n}$, $\sum \frac{1}{n^2})$.
+      \item Si $\alpha = \limsup_{n \to \infty} \sqrt[n]{ |a_n| } < 1 \Rightarrow \exists \beta \in (0\text{, }1) : \alpha < \beta < 1$ y $N \in \N$ tal que \begin{align*}
+        \sqrt[n]{|a_n|} < \beta, \forall n > N \Rightarrow |a_n| < \beta^n, \forall n > N
+      \end{align*} Como $0 < \beta < 1$ la serie $\sum \beta^n$ converge, por el criterio de comparación $\sum a_n$ converge absolutamente.
+    \end{enumerate}
   \end{note}
 \end{corollary}
-
-\subsection{Criterio del cociente y D'Alembert}
 
 \begin{theorem}[Criterio del cociente]
   Sean $\sum_{n \geq 1} a_n$ una serie tal que $a_n \neq 0, \forall n \in \N$ y $\sum_{n \geq 1} b_n$ una serie de términos positivos y convergente $\Rightarrow$ \\
@@ -80,7 +81,7 @@
 \end{theorem}
 
 \begin{corollary}[Criterio de D'Alembert]
-  Si $\exists c \in (0, 1) : \dfrac{|a_{n+1}|}{a_n} \leq c, \forall n > n_0 \Rightarrow \sum_{n \geq 1} a_n$ converge absolutamente. \\
+  Si $\exists c \in (0, 1) : \dfrac{|a_{n+1}|}{|a_n|} \leq c, \forall n > n_0 \Rightarrow \sum_{n \geq 1} a_n$ converge absolutamente. \\
   Equivalentemente si $\limsup \dfrac{|a_{n+1}|}{|a_n|} < 1 \Rightarrow \sum_{n \geq 1} a_n$ converge absolutamente.
   Si el cociente es $1$ el criterio no decide y si es mayor que $1$ la serie diverge.
   \begin{proof}

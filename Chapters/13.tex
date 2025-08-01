@@ -71,8 +71,11 @@
 \begin{eg}
   Si $x \in \R^n, r > 0, B_r(x)$ es convexo.
   \begin{proof}
-    $y, z \in B_r(x), t \in [0,1] \Rightarrow$ \begin{align*} \|(1-t)y+tz - x\| = \| (1-t)y + tz - (1-t)x - tx \| \end{align*} \begin{align*} \leq \|(1 -t) (y-x) \| + \|t(z-x)\| \end{align*}
-    \begin{align*} \leq (1-t) \|y-x\| + t \|z-x\| < (1-t)r + tr = r \end{align*} $\therefore (1-t)y + tz \in B_r(x) (\forall t \in [0, 1])$.
+    $y, z \in B_r(x), t \in [0,1] \Rightarrow$ \begin{align*}
+      \|(1-t)y+tz - x\| & = \| (1-t)y + tz - (1-t)x - tx \|                \\
+                        & \leq \|(1 -t) (y-x) \| + \|t(z-x)\|              \\
+                        & \leq (1-t) \|y-x\| + t \|z-x\| < (1-t)r + tr = r
+    \end{align*} $\therefore (1-t)y + tz \in B_r(x) (\forall t \in [0, 1])$.
   \end{proof}
 \end{eg}
 
@@ -112,8 +115,6 @@
     Si $A$ no es conexo $\exists U, V$ abiertos, no vacíos en $A$ tales que $U \cap V = \varnothing$ y $U \cup V = A$. Luego $U \neq \varnothing, U \neq A$ y $U$ es abierto y cerrado en $A$. Por otro lado si $A$ es conexo y $U$ es un subconjunto $U \neq \varnothing$ de $A$ abierto y cerrado en $A \Rightarrow V = A - U$ es abierto en $A$ y cumple que $U \cap V = \varnothing, U \cup V = A, V = \varnothing \Rightarrow U = A$.
   \end{proof}
 \end{prop}
-
-\clearpage
 
 \begin{theorem}
   $A \subset \R^n$ conexo y $f: A \to \R^k$ continua entonces $f(A)$ es conexo.

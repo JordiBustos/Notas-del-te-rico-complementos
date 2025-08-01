@@ -18,14 +18,12 @@ Una subsucesión de $x$ es la restricción de $x$ a un subconjunto infinito $A =
   Si $\lim_{n \to \infty} x_n = a$ y $lim_{n \to \infty} x_n = b \Rightarrow a=b$
   \begin{proof}
     Sea $\e > 0$, $\exists n_0$, $n_1 \in \N$ tales que $|x_n - a| < \e$ y $|x_n - b| < \e$, $\forall n > \max(n_0\text{, } n_1)$. Luego, \begin{align*}
-      |a - b| & \leq |a - x_n| + |x_n - b|                                                                                  \\
-              & < \e + \e = 2\e\text{, } \forall n > \max(n_0\text{, } n_1)                                                 \\
+      |a - b| & \leq |a - x_n| + |x_n - b|                                        \\
+              & < \e + \e = 2\e\text{, } \forall n > \max(n_0\text{, } n_1)       \\
               & \Rightarrow |a - b| < 2\e \quad \forall \e > 0 \Rightarrow a = b.
     \end{align*}
   \end{proof}
 \end{theorem}
-
-\clearpage
 
 \begin{theorem}
   Si $lim_{n \to \infty} x_n = a \Rightarrow$ toda subsucesión de $(x_n)_{n \in \N}$ converge a $a$.
@@ -109,18 +107,19 @@ Sea $lim_{n \to \infty} x_n = a$ y $lim_{n \to \infty} y_n = b$.
   \end{proof}
 \end{prop}
 
-\clearpage
-
 \begin{prop}
   $\dfrac{x_n}{y_n} \to \dfrac{a}{b}$.
   \begin{proof}
-    Si $y_n \not \to 0 \Rightarrow y_n \neq 0$ salvo quizá finitos términos. \\
-    En efecto, como $b \neq 0$, si $\e = |b|$ resulta que $0 \notin (b - \e, b + \e) \Rightarrow$ \\
-    $\exists n_{\e} : y_n \in (b-\e, b+\e), \forall n > n_{\e}$, luego $y_n \neq 0, \forall n > n_{\e}$. \\
-
-    Ahora escribo $\dfrac{x_n}{y_n} - \dfrac{a}{b} = \dfrac{x_n \cdot b - a \cdot y_n}{y_n \cdot b}$ quiero ver que $\dfrac{1}{y_n \cdot b}$ es acotada. \\
-    Como $y_n \cdot b \to b²$ si $\e = \dfrac{b²}{2}, \exists n_0 : y_n \cdot b > \dfrac{b²}{2}, \forall n > n_0 \Rightarrow$ \\
-    $0 < \dfrac{1}{y_n \cdot b} < \dfrac{2}{b²}, \forall n > n_0 \Rightarrow \left(\dfrac{1}{y_n \cdot b}\right)_{n \in \N}$ es acotada.
+    Si $y_n \not \to 0 \Rightarrow y_n \neq 0$ salvo quizá finitos términos. En efecto, como $b \neq 0$, si $\e = |b|$ resulta que $0 \notin (b - \e, b + \e) \Rightarrow$
+    \begin{align*}
+      \exists n_{\e} : y_n \in (b-\e, b+\e) \quad \forall n > n_{\e}
+    \end{align*} Luego $y_n \neq 0, \forall n > n_{\e}$. Ahora escribo \begin{align*}
+      \dfrac{x_n}{y_n} - \dfrac{a}{b} = \dfrac{x_n \cdot b - a \cdot y_n}{y_n \cdot b}
+    \end{align*} Quiero ver que $\dfrac{1}{y_n \cdot b}$ es acotada. Como
+    \begin{align*}
+       & y_n \cdot b \to b² \text{ si } \e = \dfrac{b²}{2} \, \exists n_0 : y_n \cdot b > \dfrac{b²}{2}, \forall n > n_0 \Rightarrow                   \\
+       & 0 < \dfrac{1}{y_n \cdot b} < \dfrac{2}{b²} \quad \forall n > n_0 \Rightarrow \left(\dfrac{1}{y_n \cdot b}\right)_{n \in \N} \text{ es acotada}.
+    \end{align*}
   \end{proof}
 \end{prop}
 

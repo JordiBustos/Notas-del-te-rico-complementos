@@ -11,13 +11,13 @@
     \item $s \cdot t = [(a_n b_n)]$ la clase de equivalencia de $(a_n b_n)_{n \in \N}$.
   \end{itemize}
   Veamos que están bien definidas, si: \begin{align*}
-    [(a_n)] = [(c_n)] \text{ y } [(b_n)] = [(d_n)] \Rightarrow a_n - c_n \to 0 \text{ y } b_n - d_n \to 0. 
+    [(a_n)] = [(c_n)] \text{ y } [(b_n)] = [(d_n)] \Rightarrow a_n - c_n \to 0 \text{ y } b_n - d_n \to 0.
   \end{align*}
   En efecto,
   \begin{align*}
     ([a_n] + [(b_n)]) - ([c_n] +[d_n]) & = ([a_n] - [(c_n)]) + ([b_n] - [(d_n)])        \\
-                                        & = 0                                            \\
-                                        & \Rightarrow \text{la suma está bien definida.}
+                                       & = 0                                            \\
+                                       & \Rightarrow \text{la suma está bien definida.}
   \end{align*}
   \begin{align*}
     a_n b_n - c_n d_n & = a_n b_n - c_n b_n + c_n b_n - c_n d_n                                                 \\
@@ -148,8 +148,6 @@ Como $s_0 < M$ es fácil ver que $(u_n)_{n \in \N}$ es decreciente y que $(l_n)_
   \end{proof}
 \end{lemma}
 
-\clearpage
-
 \begin{lemma}
   $\exists u \in \R : u_n \to u$.
   \begin{proof}
@@ -168,20 +166,20 @@ Como $s_0 < M$ es fácil ver que $(u_n)_{n \in \N}$ es decreciente y que $(l_n)_
 \begin{lemma}
   $l_n \to u$
   \begin{proof}
-    Según las posibles definiciones de $l_n$ tenemos que: \\
-    $u_{n+1} - l_{n+1} = m_n - l_n = \dfrac{u_n+l_n}{2} - l_n = \dfrac{u_n-l_n}{2}$ o \\
-    $u_{n+1} - l_{n+1} = u_{n+1} - m_n = u_n - \dfrac{u_n - l_n}{2} = \dfrac{u_n - l_n}{2} \Rightarrow$ \\
-    $u_1 - l_1 = \dfrac{1}{2} (M-s)$ \\
-    $u_2 - l_2 = \dfrac{1}{2} (u_1 - l_1) = (\dfrac{1}{2})² (u - s)$ \\
-    \vdots \\
-    $u_n - l_n = (\dfrac{1}{2})^n (M - s)$ \\
-
-    Por arquimedianidad de $\R, \forall \epsilon > 0, \dfrac{1}{2^n} (M - s) < \e, \forall n > n_0 \Rightarrow$ \\
+    Según las posibles definiciones de $l_n$ tenemos que: \begin{align*}
+       & u_{n+1} - l_{n+1} = m_n - l_n = \dfrac{u_n+l_n}{2} - l_n = \dfrac{u_n-l_n}{2} \text{ o bien }     \\
+       & u_{n+1} - l_{n+1} = u_{n+1} - m_n = u_n - \dfrac{u_n - l_n}{2} = \dfrac{u_n - l_n}{2} \Rightarrow \\
+       & u_1 - l_1 = \dfrac{1}{2} (M-s)                                                                    \\
+       & u_2 - l_2 = \dfrac{1}{2} (u_1 - l_1) = (\dfrac{1}{2})² (u - s)                                    \\
+       & \vdots                                                                                            \\
+       & u_n - l_n = (\dfrac{1}{2})^n (M - s)
+    \end{align*}
+    Por arquimedianidad de $\R$ \begin{align*}
+      \forall \epsilon > 0\text{, } \dfrac{1}{2^n} (M - s) < \e \quad \forall n > n_0 \Rightarrow
+    \end{align*}
     $u_n - l_n \to 0 \therefore$ $l_n \to u$, pues $u_n \to u$.
   \end{proof}
 \end{lemma}
-
-\clearpage
 
 \begin{theorem}
   $\R$ tiene la propiedad del supremo.

@@ -12,8 +12,6 @@
   $\R^n$ es conexo y, en particular, los únicos subconjuntos de $\R^n$ que son abiertos y cerrados son $\varnothing, \R^n$.
 \end{corollary}
 
-\clearpage
-
 \begin{theorem}
   Un subconjunto abierto de $\R^n$ no vacío es arco-conexo $\iff$ es conexo.
 
@@ -22,14 +20,14 @@
     Supongamos que $x \in U$. Como $A$ es abierto, $\exists r > 0 : B_r(x) \subset A$. Si $y$ es un punto cualquiera de $B_r(x) \Rightarrow t: [0, 1] \to \R^n$ es continua, verifica que $t(0) = x_0, t(1) = y$ y toma valores en $A$.
     \begin{align*}
       t(\alpha) = \begin{cases}
-        \sigma(2\alpha)           & \text{si } \alpha \in [0, \frac{1}{2}], \\
-        (2 - 2 \alpha)x + (2t-1)y & \text{si } \alpha \in (\frac{1}{2}, 1].
-      \end{cases}
+                    \sigma(2\alpha)           & \text{si } \alpha \in [0, \frac{1}{2}], \\
+                    (2 - 2 \alpha)x + (2t-1)y & \text{si } \alpha \in (\frac{1}{2}, 1].
+                  \end{cases}
     \end{align*} Luego $y \in U \Rightarrow B_r(x) \subset U \Rightarrow U$ es abierto en $\R^n$ y $\therefore$ es abierto en $A$. Veamos que $U$ también es cerrado en $A$. Sea $(u_n)_{n \in \N} \subset U : u_n \to u$ quiero ver que $u \in U$. Como $A$ es abierto $\exists s > 0 : B_s(u) \subset A$ y como $u_n \to u, \exists m : u_m \in B_s(u)$. Como $u_n \subset U, \exists \sigma: [0, 1] \to \R^n$ continua, con valores en $A$ y tal que $\sigma(0) = x_0$, $\sigma(1) = u_m$. Como antes, $t: [0, 1] \to \R^n$ es continua, toma valores en $A$.
     \begin{align*} t(\alpha) = \begin{cases}
-        \sigma(2\alpha)                & \text{si } \alpha \in [0, \frac{1}{2}], \\
-        (2 - 2\alpha) u_m + (2t - 1) u & \text{si } t \in (\frac{1}{2}, 1].
-      \end{cases}
+                    \sigma(2\alpha)                & \text{si } \alpha \in [0, \frac{1}{2}], \\
+                    (2 - 2\alpha) u_m + (2t - 1) u & \text{si } t \in (\frac{1}{2}, 1].
+                  \end{cases}
     \end{align*}$\Rightarrow t(0) = x_0$, $t_1 = u \Rightarrow u \in U$. \\
     En definitiva $U$ es abierto y cerrado en $A, U \neq \varnothing, x_0 \in U$ y como $A$ es conexo, debe ser $U = A$ y $A$ es arco-conexo.
   \end{proof}
@@ -42,8 +40,6 @@
     (\forall \e > 0)(\exists \delta > 0) : (\forall x,y \in A), \|x-y\| < \delta \Rightarrow \|f(x) - f(y)\| < \e
   \end{align*}
 \end{definition}
-
-\clearpage
 
 \begin{eg}
   \begin{enumerate}
@@ -104,14 +100,14 @@ Además la diferencial de $F$ es la matriz que se obtiene al poner como filas lo
 
 \begin{align*}
   DF_p = \begin{pmatrix}
-    \nabla f_1(p) \\
-    \vdots        \\
-    \nabla f_n(p)
-  \end{pmatrix} = \begin{pmatrix}
-    \dfrac{\partial f_1}{\partial x_1}(p) & \cdots & \dfrac{\partial f_1}{\partial x_n}(p) \\
-    \vdots                                & \cdots & \vdots                                \\
-    \dfrac{\partial f_n}{\partial x_1}(p) & \cdots & \dfrac{\partial f_n}{\partial x_n}(p)
-  \end{pmatrix}
+           \nabla f_1(p) \\
+           \vdots        \\
+           \nabla f_n(p)
+         \end{pmatrix} = \begin{pmatrix}
+                           \dfrac{\partial f_1}{\partial x_1}(p) & \cdots & \dfrac{\partial f_1}{\partial x_n}(p) \\
+                           \vdots                                & \cdots & \vdots                                \\
+                           \dfrac{\partial f_n}{\partial x_1}(p) & \cdots & \dfrac{\partial f_n}{\partial x_n}(p)
+                         \end{pmatrix}
 \end{align*}
 
 También podemos observar que si $F$ es diferenciable en $P$ y $v \in \R^n \Rightarrow \alpha(t) = p + t \cdot v$.
@@ -160,26 +156,20 @@ También podemos observar que si $F$ es diferenciable en $P$ y $v \in \R^n \Righ
             \end{align*}
       \item Trivial
       \item $S + T \in \R^{n \times m}$ dado $x \in \overline{B_1(0)}$ \begin{align*}
-              \|(S+T)(x)\| = \| Tx + Sx \| \leq \|Tx\| + \|Sx\| \leq  \|x\| \cdot (\|Tx\|_{\infty} + \|Sx\|_{\infty})
-            \end{align*}
-            \begin{align*}
-              \leq \|Tx\|_{\infty} + \|Sx\|_{\infty} \therefore \|(T+S)(x)\|_{\infty} \leq \|T\|_{\infty} + \|S\|_{\infty}
+              \|(S+T)(x)\| & = \| Tx + Sx \| \leq \|Tx\| + \|Sx\| \leq  \|x\| \cdot (\|Tx\|_{\infty} + \|Sx\|_{\infty})                   \\
+                           & \leq \|Tx\|_{\infty} + \|Sx\|_{\infty} \therefore \|(T+S)(x)\|_{\infty} \leq \|T\|_{\infty} + \|S\|_{\infty}
             \end{align*}
     \end{enumerate}
   \end{proof}
 \end{lemma}
-
-\clearpage
 
 \begin{lemma}
   Si $F: A \subset \R^n \to \R^n$ es diferenciable con $p \in A^{\circ}$, $\exists R > 0$ y $c_r > 0 : x \in B_r(p) \Rightarrow \| F(x) - F(p) \| \leq c_r \| x - p\|$
   Esto implica la continuidad uniforme en $B_r(p)$.
   \begin{proof}
     Como $F$ es diferenciable en $p$, $\exists B_r(p)$ donde el cociente de diferenciabilidad es menor que $1$. \begin{align*}
-      \dfrac{\|F(x) - F(p)\|}{\|x - p \|} \leq \dfrac{\|F(x) - F(p) - DF_p(x-p) \|}{\|x-p\|} + \dfrac{\| DF_p(x-p) \|}{\|x-p\|}
-    \end{align*}
-    \begin{align*}
-      < 1 + \dfrac{\|DF_p(x-p)\|_{\infty} \|x-p\|}{\|x-p\|} = 1 + \|DF_p(x-p)\|_{\infty}
+      \dfrac{\|F(x) - F(p)\|}{\|x - p \|} & \leq \dfrac{\|F(x) - F(p) - DF_p(x-p) \|}{\|x-p\|} + \dfrac{\| DF_p(x-p) \|}{\|x-p\|} \\
+                                          & < 1 + \dfrac{\|DF_p(x-p)\|_{\infty} \|x-p\|}{\|x-p\|} = 1 + \|DF_p(x-p)\|_{\infty}
     \end{align*}
     Si $x \in B_r(p) \Rightarrow$. Luego $c_r = 1 + \|DF_p(x-p)\|_{\infty} \Rightarrow \|F(X) - F(p)\| \leq c_r \|x-p\|$ $(\forall x \in B_r(p))$.
   \end{proof}

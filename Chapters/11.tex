@@ -7,9 +7,9 @@
 \end{definition}
 
 \begin{lemma}
-  Si \(A \subset \R^n\) y \(x_0 \in A^{\prime} \), \(f: A \to \R^k\) tiene como muhco un único límite en \(x_0\).
+  Si \(A \subset \R^n\) y \(x_0 \in A^{\prime} \), \(f: A \to \R^k\) tiene como mucho un único límite en \(x_0\).
   \begin{proof}
-    Sea \(y, y^{\prime} \in \R^k :\) son límite de \(f\) en \(x_0 \in A^{\prime} \). Tomemos \(\e = \dfrac{1}{2} \cdot \|y - y^{\prime}\| > 0\). \begin{align*}
+    Sea \(y, y^{\prime} \in \R^k \): son límite de \(f\) en \(x_0 \in A^{\prime} \). Tomemos \(\e = \dfrac{1}{2} \cdot \|y - y^{\prime}\| > 0\).\begin{align*}
        & \Rightarrow \exists \delta_1, \delta_2 : 0 < \| x - x_0 \| < \delta_1 \Rightarrow \|f(x) - y \| < \e \\
        & 0 < \|x - x_0\| < \delta_2 \Rightarrow \|f(x) - y^{\prime}\| < \e                                    \\
        & \text{Si } \delta = \min(\delta_1, \delta_2) \Rightarrow \text{ Si } 0 < \|x - x_0\| < \delta        \\
@@ -29,15 +29,15 @@
   \end{enumerate}
 
   \begin{proof}
-    1) \(\Rightarrow \) 2) Dado \begin{align*}
+    (1) \(\Rightarrow \) (2) Dado \begin{align*}
        & \e > 0 \, \exists \delta > 0 : \|x - x_0 \| < \delta \Rightarrow \|f(x) - y\| < \e                                              \\
        & \text{Si } x \in B_{\delta}(x_0) \cap (A - \{x_0\}) \Rightarrow x \in A, \|x - x_0\| < \delta                                   \\
        & \Rightarrow \|f(x) - y\| < \e \Rightarrow f(x) \in B_{\e}(y) \therefore f(B_{\delta}(x_0)) \cap (A - \{x_0\}) \subset B_{\e}(y)
     \end{align*}
-    2) \(\Rightarrow \) 3) Si \(V\) es un entorno de \(y \Rightarrow \exists \e > 0 : B_{\e}(y) \subset V\). Por hipótesis \begin{align*}
+    (2) \(\Rightarrow \) (3) Si \(V\) es un entorno de \(y \Rightarrow \exists \e > 0 : B_{\e}(y) \subset V\). Por hipótesis \begin{align*}
       \exists \delta > 0 : f(B_{\delta}(x_0) \cap (A - \{x_0\})) \subset B_{\e}(y)
     \end{align*} Tomo \(U = B_{\delta}(x_0)\) que es un entorno de \(x\).
-    3) \(\Rightarrow \) 1) Sea \(\e > 0\). Como \(B_{\e}(y)\) es un entorno de \(y\). Por hipótesis \(\exists \) un entorno \(U\) de \(x_0 : f(U \cap (A - \{x_0\})) \subset B_{\e}(y)\). Como \(U\) es entorno de \(x_0, \exists \delta > 0 : B_{\delta}(x_0) \subset U\). \\
+    (3) \(\Rightarrow \) (1) Sea \(\e > 0\). Como \(B_{\e}(y)\) es un entorno de \(y\). Por hipótesis \(\exists \) un entorno \(U\) de \(x_0 : f(U \cap (A - \{x_0\})) \subset B_{\e}(y)\). Como \(U\) es entorno de \(x_0, \exists \delta > 0 : B_{\delta}(x_0) \subset U\). \\
     Si \(x \in A\) es tal que \(0 < \|x - x_0\| < \delta \Rightarrow x \in B_{\delta}(x_0) \cap (A - \{x_0\}) \Rightarrow f(x) \in B_{\e}(y) \Rightarrow \|f(x) - y\| < \e \) \\
     \(\therefore \lim_{x \to x_0} f(x) = y\).
   \end{proof}

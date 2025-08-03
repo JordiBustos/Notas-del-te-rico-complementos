@@ -4,8 +4,8 @@
 \usepackage{emptypage}
 \setlength{\parindent}{0pt}
 \newcommand*{\blankpage}{
-{\newpage \vspace*{5cm}\thispagestyle{empty}\centering \bfseries  \textit{This page is intentionally left blank.} \par}
-\vspace{\fill}}
+	{\newpage \vspace*{5cm}\thispagestyle{empty}\centering \bfseries  \textit{This page is intentionally left blank.} \par}
+	\vspace{\fill}}
 \let\uwu=\cleardoublepage
 
 %titlepage
@@ -15,55 +15,55 @@
 
 \DeclareFixedFont{\titlefont}{T1}{ppl}{bx}{n}{0.75in}
 
-\makeatletter                       
+\makeatletter
 \def\printauthor{%                  
-    {\large \@author}}              
+	{\large \@author}}
 \makeatother
 \author{Bustos Jordi\\
-    \texttt{jordibustos01@gmail.com}
-    }
+	\texttt{jordibustos01@gmail.com}
+}
 
 \newcommand\titlepagedecoration{%
-\begin{tikzpicture}[remember picture,overlay,shorten >= -10pt]
+	\begin{tikzpicture}[remember picture,overlay,shorten >= -10pt]
 
-\coordinate (aux1) at ([yshift=-15pt]current page.north east);
-\coordinate (aux2) at ([yshift=-410pt]current page.north east);
-\coordinate (aux3) at ([xshift=-4.5cm]current page.north east);
-\coordinate (aux4) at ([yshift=-150pt]current page.north east);
+		\coordinate (aux1) at ([yshift=-15pt]current page.north east);
+		\coordinate (aux2) at ([yshift=-410pt]current page.north east);
+		\coordinate (aux3) at ([xshift=-4.5cm]current page.north east);
+		\coordinate (aux4) at ([yshift=-150pt]current page.north east);
 
-\begin{scope}[black!40,line width=12pt,rounded corners=12pt]
-\draw
-  (aux1) -- coordinate (a)
-  ++(225:5) --
-  ++(-45:5.1) coordinate (b);
-\draw[shorten <= -10pt]
-  (aux3) --
-  (a) --
-  (aux1);
-\draw[opacity=0.6,black,shorten <= -10pt]
-  (b) --
-  ++(225:2.2) --
-  ++(-45:2.2);
-\end{scope}
-\draw[black,line width=8pt,rounded corners=8pt,shorten <= -10pt]
-  (aux4) --
-  ++(225:0.8) --
-  ++(-45:0.8);
-\begin{scope}[black!70,line width=6pt,rounded corners=8pt]
-\draw[shorten <= -10pt]
-  (aux2) --
-  ++(225:3) coordinate[pos=0.45] (c) --
-  ++(-45:3.1);
-\draw
-  (aux2) --
-  (c) --
-  ++(135:2.5) --
-  ++(45:2.5) --
-  ++(-45:2.5) coordinate[pos=0.3] (d);   
-\draw 
-  (d) -- +(45:1);
-\end{scope}
-\end{tikzpicture}%
+		\begin{scope}[black!40,line width=12pt,rounded corners=12pt]
+			\draw
+			(aux1) -- coordinate (a)
+			++(225:5) --
+			++(-45:5.1) coordinate (b);
+			\draw[shorten <= -10pt]
+			(aux3) --
+			(a) --
+			(aux1);
+			\draw[opacity=0.6,black,shorten <= -10pt]
+			(b) --
+			++(225:2.2) --
+			++(-45:2.2);
+		\end{scope}
+		\draw[black,line width=8pt,rounded corners=8pt,shorten <= -10pt]
+		(aux4) --
+		++(225:0.8) --
+		++(-45:0.8);
+		\begin{scope}[black!70,line width=6pt,rounded corners=8pt]
+			\draw[shorten <= -10pt]
+			(aux2) --
+			++(225:3) coordinate[pos=0.45] (c) --
+			++(-45:3.1);
+			\draw
+			(aux2) --
+			(c) --
+			++(135:2.5) --
+			++(45:2.5) --
+			++(-45:2.5) coordinate[pos=0.3] (d);
+			\draw
+			(d) -- +(45:1);
+		\end{scope}
+	\end{tikzpicture}%
 }
 
 \usepackage{framed}
@@ -72,35 +72,35 @@
 \patchcmd{\tableofcontents}{\contentsname}{\sffamily\contentsname}{}{}
 
 \renewenvironment{leftbar}
-  {\def\FrameCommand{\hspace{6em}%
-    {\color{black}\vrule width 2pt depth 6pt}\hspace{1em}}%
-    \MakeFramed{\parshape 1 0cm \dimexpr\textwidth-6em\relax\FrameRestore}\vskip2pt%
-  }
- {\endMakeFramed}
+{\def\FrameCommand{\hspace{6em}%
+		{\color{black}\vrule width 2pt depth 6pt}\hspace{1em}}%
+	\MakeFramed{\parshape 1 0cm \dimexpr\textwidth-6em\relax\FrameRestore}\vskip2pt%
+}
+{\endMakeFramed}
 
 
 
 \titlecontents{chapter}
-  [0em]{\Large\bfseries\vspace*{2\baselineskip}}
-  {\hspace{-1.2cm}\parbox{6.5em}{%
-    \hfill\Huge\sffamily\bfseries\color{black}\thecontentspage}%
-   \vspace*{-1.9\baselineskip}\leftbar\sffamily\bfseries}
-  {}{\endleftbar}
+[0em]{\Large\bfseries\vspace*{2\baselineskip}}
+{\hspace{-1.2cm}\parbox{6.5em}{%
+		\hfill\Huge\sffamily\bfseries\color{black}\thecontentspage}%
+	\vspace*{-1.9\baselineskip}\leftbar\sffamily\bfseries}
+{}{\endleftbar}
 \titlecontents{section}
-  [11.4em]
-  {\sffamily\contentslabel{3em}}{}{} 
-  {\phantom{    }\dotfill \nobreak\itshape\color{black}\contentspage}
+[11.4em]
+{\sffamily\contentslabel{3em}}{}{}
+{\phantom{    }\dotfill \nobreak\itshape\color{black}\contentspage}
 \titlecontents{subsection}
-  [13em]
-  {\sffamily\contentslabel{3em}}{}{}  
-  {\phantom{    }\dotfill \nobreak\itshape\color{black}\contentspage}
+[13em]
+{\sffamily\contentslabel{3em}}{}{}
+{\phantom{    }\dotfill \nobreak\itshape\color{black}\contentspage}
 
 
 \newcommand{\mychapter}[2]{
-    \setcounter{chapter}{#1}
-    \setcounter{section}{0}
-    \chapter*{#2}
-    \addcontentsline{toc}{chapter}{#2}
+	\setcounter{chapter}{#1}
+	\setcounter{section}{0}
+	\chapter*{#2}
+	\addcontentsline{toc}{chapter}{#2}
 }
 
 

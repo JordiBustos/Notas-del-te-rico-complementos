@@ -3,7 +3,7 @@
 Si \(\mathbb{K} \) es un cuerpo ordenado, \(\N \subset \Z \subset \Q \subset \mathbb{K} \), pero esto no necesariamente implica que \(\N \) es no acotado.
 
 \begin{eg}
-    \(\Q(t):\) cuerpo de funciones racionales con coeficientes en \(\Q \), \(r(t) = p(t)/q(t)\), \(p, q \in \Q, q \neq 0\). Este cuerpo puede ser ordenado diciendo que \(r(t)\) es positivo si y sólo si el coeficiente de mayor grado del polinomio \(pq\) es positivo.
+    \(\Q(t)\): cuerpo de funciones racionales con coeficientes en \(\Q \), \(r(t) = p(t)/q(t)\), \(p, q \in \Q, q \neq 0\). Este cuerpo puede ser ordenado diciendo que \(r(t)\) es positivo si y sólo si el coeficiente de mayor grado del polinomio \(pq\) es positivo.
     En este cuerpo observemos que \(p(t)=t=t/1\) cumple que \(\forall n \in \N, p(t)=t-n \in P \Rightarrow t>n, \forall n \in \N \). Es decir que en \(\Q(t)\), \(\N \) es un conjunto acotado, por ejemplo por \(t\).
 \end{eg}
 
@@ -17,7 +17,7 @@ Si \(\mathbb{K} \) es un cuerpo ordenado, \(\N \subset \Z \subset \Q \subset \ma
     \begin{proof}
         Sea \(\mathbb{K} \) un cuerpo ordenado.\begin{enumerate}
             \item[(1) \(\Rightarrow \) (2)] Como \(\N \) es no acotado, dados \(a,b \in \mathbb{K} \), \(a>0\), \(\exists m \in \N : m > \dfrac ba\), caso contrario \(\dfrac ba\) sería cota de \(\N \Rightarrow ma>b\)
-            \item[(2) \(\Rightarrow \) (3)] Dado \(a>0\), tomamos \(b=1\) y por 2) \(\exists n \in \N : ma > 1 \Rightarrow a > \dfrac{1}{m} > 0\).
+            \item[(2) \(\Rightarrow \) (3)] Dado \(a>0\), tomamos \(b=1\) y por (2) \(\exists n \in \N : ma > 1 \Rightarrow a > \dfrac{1}{m} > 0\).
             \item[(3) \(\Rightarrow \) (1)] Dado \(0<a \in \mathbb{K} \Rightarrow \forall n \in \N, 0<\dfrac 1n<\dfrac 1a\), pues (3) vale para todo \(\mathbb{K} \Rightarrow b<n \Rightarrow \) es no acotado (pues ningún \(b>0\) puede ser cota superior).
         \end{enumerate}
     \end{proof}
@@ -75,7 +75,7 @@ Es decir, se cumple:
 
     Como \(0 < \dfrac{1}{2^n} (\forall n \in \N) \Rightarrow 0\) es cota inferior.
     Sea \begin{align*}
-        0 & < c \in \mathbb{K}, 2^n = (1+1)^n \leq 1+n \leq \dfrac{1}{c}       \\
+        0 & < c \in \mathbb{K}, 2^n = {(1+1)}^n \leq 1+n \leq \dfrac{1}{c}       \\
           & \Rightarrow n \leq \dfrac{1}{c} - 1 \Rightarrow \dfrac{1}{2^n} < c
     \end{align*}
     \(\Rightarrow c\) no puede ser cota inferior por la propiedad 3 de la arquimedianidad \(\therefore 0\) es el ínfimo de \(Y\).
@@ -84,7 +84,7 @@ Es decir, se cumple:
 El problema más serio de los racionales desde el punto de vista del análisis es que algunos conjuntos acotados de números racionales no tienen súpremo (o ínfimo) en \(\Q \).
 
 \begin{eg}
-    Sean \(X = \{ x \in \Q : x \geq 0, x² < 2 \}\text{, } Y = \{ y \in \Q : y>0, y² > 2 \} \). Notemos que si \(z>2 \Rightarrow z² > 4 \Rightarrow z \notin X \Rightarrow X \subset [0, 2]\) y \(X\) es un conjunto acotado. Además \(Y \subset (0, +\infty)\) por lo que es un conjunto acotado inferiormente. Veamos que \(\nexists \) supremo e ínfimo en \(\Q \). \begin{enumerate}
+    Sean \(X = \{ x \in \Q : x \geq 0, x² < 2 \}\text{, } Y = \{ y \in \Q : y>0, y² > 2 \} \). Notemos que si \(z>2 \Rightarrow z² > 4 \Rightarrow z \notin X \Rightarrow X \subset [0, 2]\) y \(X\) es un conjunto acotado. Además \(Y \subset (0, +\infty)\) por lo que es un conjunto acotado inferiormente. Veamos que \(\nexists \) supremo e ínfimo en \(\Q \).\begin{enumerate}
         \item Quiero ver que \(X\) no tiene máximo. Dado \(x \in X\) quiero encontrar \(r \in \Q \) tal que \(0<r<1\) y \(x+r \in X \iff (x+r)² =x^2+2xr+r² < 2\). Como \(r<1 \Rightarrow (x+r)²<x²+2xr+r=x²+r(2x+1)<2 \therefore x+r \in X\).
         \item Quiero ver que \(Y\) no tiene elemento mínimo, dado \(y \in Y\) tomo \(r \in \Q : 0 < r < \dfrac{y²-2}{2y} \).
               \begin{align*}
@@ -127,7 +127,7 @@ Si \(b \in \mathbb{K} \) es una cota superior de \(\N \Rightarrow n+1 \in \N<b, 
 Axioma: Existe un cuerpo ordenado llamado \(\R \).
 
 
-Ejercicio: Dados \(0<a \in \R, m \in \N \Rightarrow \exists! 0<b\in \R : b^m =a\). Sugerencia Definir \(X = \{ x \in \R : x\geq0, x^n<a \} \), \(Y = \{ y \in \R : y>0, y^n >a \} \) e imitar la demostración anterior. Probar y usar que dado \(x>0\) \(\exists \) para cada \(m \in \N \) un número real positivo que depende de \(x\) tal que \((x+d)^m \leq A_nd+x^n, \forall 0<d<1.\).
+Ejercicio: Dados \(0<a \in \R, m \in \N \Rightarrow \exists! 0<b\in \R : b^m =a\). Sugerencia Definir \(X = \{ x \in \R : x\geq0, x^n<a \} \), \(Y = \{ y \in \R : y>0, y^n >a \} \) e imitar la demostración anterior. Probar y usar que dado \(x>0\) \(\exists \) para cada \(m \in \N \) un número real positivo que depende de \(x\) tal que \({(x+d)}^m \leq A_n \cdot d + x^n, \forall 0<d<1\).
 
 \begin{definition}[Conjunto Denso]
     Un conjunto \(X \subset \R \) se dice denso en \(\R \) si todo intervalo abierto \((a, b)\) contiene algún punto de \(X\).
@@ -155,7 +155,7 @@ Ejercicio: Dados \(0<a \in \R, m \in \N \Rightarrow \exists! 0<b\in \R : b^m =a\
     Ejercicio terminar la demostración.
 \end{eg}
 
-\section{Cardinalidad - introducción}
+\section{Introducción a cardinalidad}
 
 \begin{definition}
     Decimos que dos conjuntos \(X, Y\) tienen el mismo cardinal (coordinables o equipotentes) si \(\exists f: X \to Y\) biyectiva. Notamos \(X \sim Y\) o \(card(X) = card(Y)\) o \( \#X=\#Y\) y \(\sim \) es una relación de equivalencia.

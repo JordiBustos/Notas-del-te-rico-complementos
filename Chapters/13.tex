@@ -34,7 +34,7 @@
   Sea \(K \subset \R^n\) compacto y no vacío. Una función continua \(f: K \to \R \) es acotada superiormente y más aún \(\exists y \in K : f(x) \leq f(y) (\forall x \in K)\).
   \begin{proof}
     Si \(f\) no es acotada superiormente para cada \(n \in \N, \exists x_n \in K : f(x_n) \geq n\). Como \({(x_n)}_{n \in \N} \subset K\) que es compacto \(\exists \phi: \N \to \N \) estrictamente creciente tal que \(\lim_{n \to +\infty} x_{\phi(n)} = \alpha \in K\). Como \(f\) es continua en \(\alpha, f(x_n) \to f(\alpha)\) y como es convergente, tiene que ser acotada. Absurdo, pues \(f(x_{\phi(n)}) \geq h(n) \geq n (\forall n \in \N) \therefore f\) es acotada superiormente. \\
-    Sea ahora \(F = \{ f(x) : x \in K\} \) este conjunto está acotado superiormente y es no vacío, \(\exists s = \sup(F) \Rightarrow \exists (y_n)_{n \in \N} \subset K : f(y_n) \to s\). Como \(K\) es compacto \(\exists \phi : \N \to \N \) estrictamente creciente tal que \(y_{\phi(n)} \to y \in K\). Como \(f\) es continua en \(y \Rightarrow f(y_{\phi(n)}) \to f(y) \Rightarrow f(y) = s\). Luego \(f(y)\) es cota superior de \(F\) y \(f(y) \in F \therefore \) alcanza valor máximo.
+    Sea ahora \(F = \{ f(x) : x \in K\} \) este conjunto está acotado superiormente y es no vacío, \(\exists s = \sup(F) \Rightarrow \exists {(y_n)}_{n \in \N} \subset K : f(y_n) \to s\). Como \(K\) es compacto \(\exists \phi : \N \to \N \) estrictamente creciente tal que \(y_{\phi(n)} \to y \in K\). Como \(f\) es continua en \(y \Rightarrow f(y_{\phi(n)}) \to f(y) \Rightarrow f(y) = s\). Luego \(f(y)\) es cota superior de \(F\) y \(f(y) \in F \therefore \) alcanza valor máximo.
   \end{proof}
 \end{theorem}
 

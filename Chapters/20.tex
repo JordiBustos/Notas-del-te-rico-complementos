@@ -1,7 +1,7 @@
 \section{Sucesiones de funciones}
 
 \begin{definition}[Convergencia puntual]
-  \(X \subseteq \R \) y sean \(f_n: X \to \R \quad (\forall n \in \N)\). La sucesión \((f_n)_{n \in \N} \) converge puntualmente a \(f: X \to \R \) si \((\forall x \in X)\):
+  \(X \subseteq \R \) y sean \(f_n: X \to \R \quad (\forall n \in \N)\). La sucesión \({(f_n)}_{n \in \N} \) converge puntualmente a \(f: X \to \R \) si \((\forall x \in X)\):
   \begin{align*}
     \lim_{n \to +\infty} f_n(x) = f(x)
   \end{align*}
@@ -12,7 +12,7 @@
       0 & \text{si } 0 \leq x < 1, \\
       1 & \text{si } x = 1.
     \end{cases}\end{align*}
-  En efecto, si \(x \in [0, 1)\), \(\lim_{n \to \infty} f_n(x) = \lim_{n \to \infty} x^n = 0\). Por otro lado si \(x = 1\), \(\lim_{n \to \infty} 1^n = 1\). \\
+  En efecto, si \(x \in \interval[open right]{0}{1} \), \(\lim_{n \to \infty} f_n(x) = \lim_{n \to \infty} x^n = 0\). Por otro lado si \(x = 1\), \(\lim_{n \to \infty} 1^n = 1\). \\
   \begin{tikzpicture}
     \begin{axis}[
         width=10cm, height=7cm,
@@ -46,24 +46,24 @@
 \end{eg}
 
 \begin{eg}
-  \(f_n: [0, 2 \cdot \pi] \to \R \), \(f_n(x) = cos(nx)\) no converge puntualmente pues si \(x = \pi\), \(f_n(\pi) = (-1)^n\) y \(\nexists \lim_{n \to +\infty} f_n(\pi)\).
+  \(f_n: [0, 2 \cdot \pi] \to \R \), \(f_n(x) = \cos(nx)\) no converge puntualmente pues si \(x = \pi \), \(f_n(\pi) = {(-1)}^n\) y \(\nexists \lim_{n \to +\infty} f_n(\pi)\).
 \end{eg}
 
 Notemos que si \(f_n: X \subset \R \to \R \) converge puntualmente a \(f: X \to \R \Rightarrow (\forall \e > 0)(\exists n_0 \in \N) : |f_n(x) - f(x)| < \e \) \((\forall n > n_0)\), pero \(n_0\) depende de \(\e \) y de \(x\). Si \(\e \) está fijo puede ser que ningún \(n_0 \in \N \) sirva \(\forall x \in X\).
 
 \begin{eg}
   Tomemos \(f_n: [0, 1] \to \R \) dada por \(f_n(x) = x^n\). Si: \begin{align*}
-    \e = \frac{1}{2} & \Rightarrow (\forall n \in \N) \, \exists x \in [0\text{, }1) : |f_n(x) - f(x)| \geq \e = \frac{1}{2} \\
+    \e = \frac{1}{2} & \Rightarrow (\forall n \in \N) \, \exists x \in \interval[open right]{0}{1} : |f_n(x) - f(x)| \geq \e = \frac{1}{2} \\
                      & \iff |x^n - 0| \geq \frac{1}{2}
   \end{align*}
   En efecto pues dado \(n \in \N \), \(\lim_{x \to 1} x^n = 1\).
 \end{eg}
 
 \begin{definition}[Convergencia uniforme]
-  \((f_n)_{n \in \N} \) converge uniformemente a \(f: X \to \R \) si \((\forall \e > 0)(\forall x \in X)(\exists n_0 \in \N) : (\forall n > n_0)\) \(|f_n(x) - f(x)| < \e \). Notamos \(f_n \rightrightarrows f\).
+  \({(f_n)}_{n \in \N} \) converge uniformemente a \(f: X \to \R \) si \((\forall \e > 0)(\forall x \in X)(\exists n_0 \in \N) : (\forall n > n_0)\) \(|f_n(x) - f(x)| < \e \). Notamos \(f_n \rightrightarrows f\).
 \end{definition}
 
-De la definición se desprende que \((f_n)_{n \in \N} \) converge uniformemente a \(f\) si y solo si \begin{align*}
+De la definición se desprende que \({(f_n)}_{n \in \N} \) converge uniformemente a \(f\) si y solo si \begin{align*}
   \lim_{n \to +\infty} \sup_{x \in X} |f_n(x) - f(x)| = 0
 \end{align*}
 
@@ -76,28 +76,28 @@ De la definición se desprende que \((f_n)_{n \in \N} \) converge uniformemente 
   \end{align*}
   Como \(x^n\) es creciente entonces
   \begin{align*}
-     & 0 \leq x^n \leq (1 - \delta)^n                                                                                      \\
-     & \text{Como } \lim_{n \to +\infty} (1 - \delta)^n = 0                                                                \\
-     & \Rightarrow \text{Dado } \e > 0 \quad \exists n_0 \in \N \, : \, |(1 - \delta)^n - 0 | < \e \quad \forall n > n_0   \\
-     & \Rightarrow |x^n - 0| \leq |(1 - \delta)^n - 0| < \e \quad \forall n > n_0 \quad \forall x \in [0\text{, }1-\delta]
+     & 0 \leq x^n \leq {(1 - \delta)}^n                                                                                      \\
+     & \text{Como } \lim_{n \to +\infty} {(1 - \delta)}^n = 0                                                                \\
+     & \Rightarrow \text{Dado } \e > 0 \quad \exists n_0 \in \N \, : \, |{(1 - \delta)}^n - 0 | < \e \quad \forall n > n_0   \\
+     & \Rightarrow |x^n - 0| \leq |{(1 - \delta)}^n - 0| < \e \quad \forall n > n_0 \quad \forall x \in [0\text{, }1-\delta]
   \end{align*}
   \(\therefore \) la convergencia es uniforme.
 \end{eg}
 
 \begin{definition}[Sucesión de Cauchy]
-  \((f_n)_{n \in \N} \), \(f_n: X \to \R \) es de Cauchy si \(\forall \e > 0\), \(\exists n_0 \in N : \forall n\),\(m > n_0\),\(\forall x \in X\), \(|f_n(x) - f_m(x)| < \e \).
+  \({(f_n)}_{n \in \N} \), \(f_n: X \to \R \) es de Cauchy si \( \forall \e > 0 \), \(\exists n_0 \in N : \forall n\),\(m > n_0\),\(\forall x \in X\), \(|f_n(x) - f_m(x)| < \e \).
 \end{definition}
 
 \begin{theorem}
   Una sucesión de funciones \(f_n : X \to \R \) es uniformemente convergente \(\iff \) es de Cauchy.
   \begin{proof}
     Para la ida tomemos \(\e > 0\), luego \(\exists n_0 \in \N : |f_n(x) - f(x)| < \frac{\e}{2} \) \((\forall n > n_0)(\forall x \in X)\) por hipótesis. Luego si \(n, m > n_0 \Rightarrow |f_n(x) - f_m(x)| < |f_n(x) - f(x)| + |f_m(x) - f(x)| < \e \) \((\forall x \in X)\). \\
-    Para la vuelta tenemos que \(\forall x \in X\) \((f_n(x))_{n \in \N} \) es una sucesión de Cauchy que converge a un límite que llamo \(f(x)\). Dado \(\e > 0\), \(\exists n_0 \in \N : |f_n(x) - f_m(x)| < \e \) \((\forall n, m > n_0)\). \(\forall x \in X\) fijado el \(x\) y el \(n\) tomamos \(m \to +\infty \therefore |f_n(x) - f(x)| < \e \) \((\forall x \in X)(\forall n > n_0) \therefore \) la convergencia es uniforme.
+    Para la vuelta tenemos que \(\forall x \in X\) \({(f_n(x))}_{n \in \N} \) es una sucesión de Cauchy que converge a un límite que llamo \(f(x)\). Dado \(\e > 0\), \(\exists n_0 \in \N : |f_n(x) - f_m(x)| < \e \) \((\forall n, m > n_0)\).\(\forall x \in X\) fijado el \(x\) y el \(n\) tomamos \(m \to +\infty \therefore |f_n(x) - f(x)| < \e \) \((\forall x \in X)(\forall n > n_0) \therefore \) la convergencia es uniforme.
   \end{proof}
 \end{theorem}
 
 \(f = \sum f_n\) es un caso particular del límite.
-\(f : X \to \R \), \(f_n: X \to \R \). \(f = \lim_{n \to +\infty} S_n\), \(S_n\) la suma parcial, luego
+\(f : X \to \R \), \(f_n: X \to \R \).\(f = \lim_{n \to +\infty} S_n\), \(S_n\) la suma parcial, luego
 \begin{align*}
   \sum f_n \rightrightarrows f \iff (\forall \e > 0) \, (\exists n_0 \in \N) \, : \, |S_{n+1}(x) - S_n(x)| < \e \quad (\forall n > n_0) \, (\forall x \in X)
 \end{align*}
@@ -105,7 +105,7 @@ De la definición se desprende que \((f_n)_{n \in \N} \) converge uniformemente 
 \begin{definition}[Convergencia normal]
   Decimos que \(\sum f_n: X \to \R \) converge normalmente si
   \begin{align*}
-     & \exists (a_n)_{n \in \N} \subset \R : \sum a_n < +\infty \text{ y } \\
+     & \exists {(a_n)}_{n \in \N} \subset \R : \sum a_n < +\infty \text{ y } \\
      & |f_n(x)| < a_n \quad (\forall n \in \N)(\forall x \in X).
   \end{align*}
 \end{definition}
@@ -129,24 +129,24 @@ De la definición se desprende que \((f_n)_{n \in \N} \) converge uniformemente 
 Notemos que la convergencia normal implica la convergencia uniforme que a su vez implica la convergencia puntual, pero el camino inverso no vale.
 
 \begin{eg}
-  Sea \(f_n : [1\text{, }+\infty)\) dada por \begin{align*}
+  Sea \(f_n : \interval[open right]{1}{+\infty} \) dada por \begin{align*}
     f_n(x) = \begin{cases}
                \frac{1}{x} & \text{si } x \in [n, n+1], \\
                0           & \text{caso contrario.}
              \end{cases}
   \end{align*}
-  Si llamamos \(f: [1\text{, } +\infty) \to \R \) a \(f(x) = \frac{1}{x} \).
+  Si llamamos \(f: \interval[open right]{1}{+\infty} \to \R \) a \(f(x) = \frac{1}{x} \).
   Afirmo que \(\sum_{n \geq 1} f_n \rightrightarrows f\). En efecto, pues
   \begin{align*}
-     & 0 \leq f(x) - S_n < \frac{1}{n} \quad (\forall x \in [1\text{, } +\infty)) \text{ pues si }                                                                  \\
-     & x \leq n+1 \Rightarrow f(x) = \frac{1}{x} \text{ y } S_n = \frac{1}{x} \text{ i.e } x \in [1\text{, } n+1) \Rightarrow \text{ la suma parcial no se anula, } \\
+     & 0 \leq f(x) - S_n < \frac{1}{n} \quad (\forall x \in \interval[open right]{1}{+\infty}) \text{ pues si }                                                                  \\
+     & x \leq n+1 \Rightarrow f(x) = \frac{1}{x} \text{ y } S_n = \frac{1}{x} \text{ i.e } x \in \interval[open right]{1}{n+1} \Rightarrow \text{ la suma parcial no se anula, } \\
      & x > n+1 \Rightarrow f(x) = \frac{1}{x} \text{ y } S_n = 0 \text{ i.e no aparece en la suma.}
   \end{align*}
-  Pero no converge normalmente en \([1, +\infty)\), pues si fuese \(f(x) \leq a_n\) \((\forall x \in [1, +\infty))\) tomando \(x = n \Rightarrow \frac{1}{n} \leq a_n \Rightarrow \sum a_n = +\infty\) y no puede ser normal la serie.
+  Pero no converge normalmente en \(\interval[open right]{1}{+\infty}\), pues si fuese \(f(x) \leq a_n\) \((\forall x \in \interval[open right]{1}{+\infty})\) tomando \(x = n \Rightarrow \frac{1}{n} \leq a_n \Rightarrow \sum a_n = + \infty \) y no puede ser normal la serie.
 \end{eg}
 
 \begin{note}
-  Sea \((f_n)_{n \in \N} \) nos preguntamos si el límite en \(x\) y en \(n\) son intercambiables. La respuesta en general es no.
+  Sea \({(f_n)}_{n \in \N} \) nos preguntamos si el límite en \(x\) y en \(n\) son intercambiables. La respuesta en general es no.
 \end{note}
 
 \begin{eg}
@@ -197,7 +197,7 @@ Notemos que la convergencia normal implica la convergencia uniforme que a su vez
   Sea \(a \in X\) punto de acumulación. Si \begin{enumerate}
     \item \(\sum f_n \rightrightarrows f\) en \(X\)
     \item \(\forall n \in \N \), \(\exists \lim_{x \to a} f_n(x) = L_n\)
-  \end{enumerate} \(\Rightarrow \sum L_n < +\infty\) y \(\sum L_n = \lim_{x \to a} f(x)\).
+  \end{enumerate} \(\Rightarrow \sum L_n < +\infty \) y \(\sum L_n = \lim_{x \to a} f(x)\).
   Es decir que \begin{align*}
     \lim_{x \to a}\left(\sum f_n(x)\right) = \sum\left(\lim_{x \to a} f_n(x)\right)
   \end{align*} Siempre que \(\sum f_n\) sea uniformemente convergente.
@@ -219,10 +219,10 @@ Siempre que los límites de adentro existan y la convergencia de la sucesión de
   \end{proof}
 \end{theorem}
 
-Si el límite de \((f_n)_{n \in \N} \) no es continuo y las funciones de la sucesión sí, el límite no puede ser uniforme. Por otro lado que el límite sea continuo tampoco alcanza para que la convergencia sea uniforme.
+Si el límite de \({(f_n)}_{n \in \N} \) no es continuo y las funciones de la sucesión sí, el límite no puede ser uniforme. Por otro lado que el límite sea continuo tampoco alcanza para que la convergencia sea uniforme.
 
 \begin{definition}[Convergencia monótona]
-  Decimos que \((f_n)_{n \in \N} \) converge monótonamente a \(f\), si \((\forall x \in X)\) la sucesión \((f_n)_{n \in \N} \) es monótona y \(f_n(x) \to f(x)\).
+  Decimos que \({(f_n)}_{n \in \N} \) converge monótonamente a \(f\), si \((\forall x \in X)\) la sucesión \({(f_n)}_{n \in \N} \) es monótona y \(f_n(x) \to f(x)\).
 \end{definition}
 
 \begin{theorem}
@@ -231,7 +231,7 @@ Si el límite de \((f_n)_{n \in \N} \) no es continuo y las funciones de la suce
     Dado \(\e > 0\), definamos
     \begin{align*}
       K_n & = \{ x \in X : |f_n(x) - f(x)| \geq \e \} \quad (\forall n \in \N) \\
-          & = |f_n(x) - f(x)|^{-1}([\e, +\infty))
+          & = |f_n(x) - f(x)|^{-1}(\interval[open right]{\e}{+\infty})
     \end{align*}
     Como \(f_n\), \(f\) son continuas, \(K_n\) es cerrado de \(X \Rightarrow K_n\) es compacto \((\forall n \in \N)\). Afirmo que como \((f_n)\) es monótona,
     \(K_1 \supset K_2 \supset K_3 \supset \cdots \).
@@ -288,7 +288,7 @@ Si el límite de \((f_n)_{n \in \N} \) no es continuo y las funciones de la suce
 
 \begin{note}
   \(f_n \to f\) en \([a, b]\), \(f_n\) y \(f\) son integrables, pero \(\lim_{n \to \infty} \int_a^b f_n \neq \int_a^b f\). Por ejemplo si \(f_n: [0, 1] \to \R \), \(f_n(x) = \begin{cases}
-      (n+1) x^{n+1} & \text{si } x \in [0, 1), \\
+      (n+1) x^{n+1} & \text{si } x \in \interval[open right]{0}{1}, \\
       0             & \text{si } x = 1.
     \end{cases} \) Luego si \(f: [0, 1] \to \{0\} \), \(f(x) = 0 \Rightarrow f_n \to f\), pero \(\int_0^1 f_n(x) dx = 1 \neq 0 = \int_0^1 f(x) dx\).
 \end{note}

@@ -1,17 +1,17 @@
 \section{Límites en varias dimensiones}
 
 \begin{prop}
-  Sea \(A \subset \R^n, f: A \to \R^k, f=(f_1, \cdots, f_k), y = (y_1, \cdots, y_k) \in \R^k\) son equivalentes:
+  Sea \(A \subset \R^n, f: A \to \R^k, f=(f_1, \ldots, f_k), y = (y_1, \ldots, y_k) \in \R^k\) son equivalentes:
   \begin{enumerate}
     \item \(\lim_{x \to x_0} f(x) = y\).
-    \item \(\forall i \in \{1, \cdots, k\}, \lim_{x \to x_0} f_i(x) = y_i\).
+    \item \(\forall i \in \{1, \ldots, k\}, \lim_{x \to x_0} f_i(x) = y_i\).
   \end{enumerate}
   \begin{proof}
     \begin{itemize}
-      \item Para la ida \((\forall \e > 0)(\exists \delta > 0) : (\forall x \in A), 0 < d(x, x_0) < \delta \Rightarrow d(f(x), y) < \e\). Luego, si \(d(x, x_0) < \delta \Rightarrow d(f_i(x) - y_i) < d(f(x) - y) < \e \therefore \lim_{x \to x_0} f_i(x) = y_i\).
-      \item Para la vuelta, sea \(\e > 0, (\forall i \in \{1, \cdots, k\})(\exists \delta_i > 0) : (\forall x \in A) 0 \leq d(x, x_0) < \delta_i\). \\
-            \(\Rightarrow d(f_i(x) - y_i) < \dfrac{\e}{\sqrt{k}}\). Si \(\delta = min(\delta_i, i = 1, \cdots, k)\) y \(0 \leq d(x, x_0) < \delta\).
-            \(\Rightarrow d(f(x) - y) = \sqrt{\sum_{i = 1}^k | f_i(x) - y_i |^2 } < \sqrt{\sum_{i = 1}^k \dfrac{\e^2}{k}} = \e\).
+      \item Para la ida \((\forall \e > 0)(\exists \delta > 0) : (\forall x \in A), 0 < d(x, x_0) < \delta \Rightarrow d(f(x), y) < \e \). Luego, si \(d(x, x_0) < \delta \Rightarrow d(f_i(x) - y_i) < d(f(x) - y) < \e \therefore \lim_{x \to x_0} f_i(x) = y_i\).
+      \item Para la vuelta, sea \(\e > 0, (\forall i \in \{1, \ldots, k\})(\exists \delta_i > 0) : (\forall x \in A) 0 \leq d(x, x_0) < \delta_i\). \\
+            \(\Rightarrow d(f_i(x) - y_i) < \dfrac{\e}{\sqrt{k}} \). Si \(\delta = \min(\delta_i, i = 1, \ldots, k)\) y \(0 \leq d(x, x_0) < \delta \).
+            \(\Rightarrow d(f(x) - y) = \sqrt{\sum_{i = 1}^k | f_i(x) - y_i |^2 } < \sqrt{\sum_{i = 1}^k \dfrac{\e^2}{k}} = \e \).
     \end{itemize}
   \end{proof}
 \end{prop}
@@ -19,21 +19,21 @@
 \begin{definition}[Límites laterales]
   Sea \(A \subset R, f: A \to R^k\).
   \begin{enumerate}
-    \item Si \(x_0\) es un punto de acumulación de \(A_{x_0}^{+} = A \cap [x_0, +\infty)\) y la restricción \(f|_{A_{x_0}^{+}} \to R\) tiene límite igual a \(y\) en \(x_0 \Rightarrow\) decimos que y es límite por derecha de \(f\) en \(x_0 \Rightarrow \lim_{x \to x_0^+} f(x) = y\).
-    \item Si \(x_0\) es un punto de acumulación de \(A_{x_0}^{-} = A \cap (-\infty, x_0]\) y la restricción \(f|_{A_{x_0}^{-}} \to R\) tiene límite igual a \(y\) en \(x_0 \Rightarrow\) decimos que y es límite por izquierda de \(f\) en \(x_0 \Rightarrow \lim_{x \to x_0^-} f(x) = y\).
+    \item Si \(x_0\) es un punto de acumulación de \(A_{x_0}^{+} = A \cap \interval[open right]{x_0}{+\infty} \) y la restricción \(f|_{A_{x_0}^{+}} \to R\) tiene límite igual a \(y\) en \(x_0 \Rightarrow \) decimos que y es límite por derecha de \(f\) en \(x_0 \Rightarrow \lim_{x \to x_0^+} f(x) = y\).
+    \item Si \(x_0\) es un punto de acumulación de \(A_{x_0}^{-} = A \cap \interval[open left]{-\infty}{x_0} \) y la restricción \(f|_{A_{x_0}^{-}} \to R\) tiene límite igual a \(y\) en \(x_0 \Rightarrow \) decimos que y es límite por izquierda de \(f\) en \(x_0 \Rightarrow \lim_{x \to x_0^-} f(x) = y\).
   \end{enumerate}
 \end{definition}
 
 \section{Continuidad en un punto}
 
 \begin{definition}
-  Sea \(A \subset \R^n, x_0 \in A\) decimos que \(f: A \to \R^k\) es continua en \(x_0 \iff (\forall \e > 0)(\exists \delta > 0) : \forall x \in A\) vale que \(0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e\).
+  Sea \(A \subset \R^n, x_0 \in A\) decimos que \(f: A \to \R^k\) es continua en \(x_0 \iff (\forall \e > 0)(\exists \delta > 0) : \forall x \in A\) vale que \(0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e \).
 \end{definition}
 
 \begin{lemma}
-  Sea \(A \subset \R^n, x_0 \in A \Rightarrow f: A \to \R^k\) es continua en \(x_0 \iff\) o bien \(x_0\) es aislado en \(A\) o bien \(\lim_{x \to x_0} f(x) = f(x_0)\).
+  Sea \(A \subset \R^n, x_0 \in A \Rightarrow f: A \to \R^k\) es continua en \(x_0 \iff \) o bien \(x_0\) es aislado en \(A\) o bien \(\lim_{x \to x_0} f(x) = f(x_0)\).
   \begin{proof}
-    Si \(f\) es continua en \(x_0\) y \(x_0\) no es aislado en \(A\) quiero ver que entonces \(\lim_{x \to x_0} f(x) = f(x_0)\). Como \(\forall x \in A\) vale que \(d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e\). Entonces \(0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0) < \e\). Si \(x_0\) es punto asilado de \(A \Rightarrow \exists \delta>0, B_{\delta}(x_0) \cap A =  \{x_0\}\) y vale que \(\forall x \in A : d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e\), pues \(d(f(x_0), f(x_0)) = 0 < \e\). Si \(x_0\) no es punto aislado de \(A\). Como \(\lim_{x \to x_0} f(x) = f(x_0)\), dado \(\e > 0, \exists \delta > 0 : \forall x \in A, 0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e\) y si \(x = x_0\) claramente \(d(f(x), f(x_0)) = 0 < \e\).
+    Si \(f\) es continua en \(x_0\) y \(x_0\) no es aislado en \(A\) quiero ver que entonces \(\lim_{x \to x_0} f(x) = f(x_0)\). Como \(\forall x \in A\) vale que \(d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e \). Entonces \(0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0) < \e \). Si \(x_0\) es punto asilado de \(A \Rightarrow \exists \delta>0, B_{\delta}(x_0) \cap A =  \{x_0\} \) y vale que \(\forall x \in A : d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e \), pues \(d(f(x_0), f(x_0)) = 0 < \e \). Si \(x_0\) no es punto aislado de \(A\). Como \(\lim_{x \to x_0} f(x) = f(x_0)\), dado \(\e > 0, \exists \delta > 0 : \forall x \in A, 0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e \) y si \(x = x_0\) claramente \(d(f(x), f(x_0)) = 0 < \e \).
   \end{proof}
 \end{lemma}
 
@@ -53,24 +53,24 @@
   Sea \(A \subset \R^n, x_0 \in A, f: A \to \R^k\) son equivalentes:
   \begin{enumerate}
     \item \(f\) es continua en \(x_0\).
-    \item Para todo entorno \(V\) de \(x_0, \exists\) un entorno \(U\) de \(x_0\) relativo a \(A\) tal que \(f(U) \subset V\).
+    \item Para todo entorno \(V\) de \(x_0, \exists \) un entorno \(U\) de \(x_0\) relativo a \(A\) tal que \(f(U) \subset V\).
     \item Para todo entorno \(V\) de \(f(x_0)\), el conjunto \(f^{-1}(V)\) es un entorno de \(x_0\) relativo a \(A\).
   \end{enumerate}
 
   \begin{proof}
-    a) \(\Rightarrow\) b) Sea \(V\) un entorno de \(f(x_0) \Rightarrow (\exists \e > 0) : B_{\e}(f(x_0)) \subset V\). Como \(f\) es continua en \(x_0, (\exists \delta > 0) : (\forall x \in A)\) vale que \(d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e\). Si \(U = A \cap B_{\delta}(x_0)\) que es un entorno de \(x_0\) relativo de \(A\) y si \(x \in U \Rightarrow f(x) \in B_{\e}(f(x_0)) \subset V \therefore f(U) \subset V\). \\
-    b) \(\Rightarrow\) c) Sea \(V\) un entorno de \(f(x_0)\), por hipótesis \(\exists U\) entorno de \(x_0\) relativo a \(A\) tal que \(f(U) \subset V \Rightarrow U \subset f^{-1}(V)\). Luego \(f^{-1}(V)\) es un entorno de \(x_0\) relativo a \(A\). \\
-    c) \(\Rightarrow\) a) Sea \(\e > 0\) como \(B_{\e}(f(x_0))\) es un entorno de \(f(x_0)\). Por hipótesis \(\exists U\) entorno de \(x_0\) relativo a \(A : f(U) \subset B_{\e}(f(x_0))\). Es decir que \(\exists U_0 \subset \R^n\) entorno de \(x_0 : U = A \cap U_0\). Si \(\delta > 0\) es tal que \(B_{\delta}(x_0) \subset U_0\) y \(x \in A\) cumple que \(d(x, x_0) < \delta \Rightarrow x \in B_{\delta}(x_0) \cap A \subset U_0 \cap A = U \therefore f(x) \in f(U) \subset B_{\e}(f(x_0))  \Rightarrow d(f(x), f(x_0)) < \e\).
+    a) \(\Rightarrow \) b) Sea \(V\) un entorno de \(f(x_0) \Rightarrow (\exists \e > 0) : B_{\e}(f(x_0)) \subset V\). Como \(f\) es continua en \(x_0, (\exists \delta > 0) : (\forall x \in A)\) vale que \(d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e \). Si \(U = A \cap B_{\delta}(x_0)\) que es un entorno de \(x_0\) relativo de \(A\) y si \(x \in U \Rightarrow f(x) \in B_{\e}(f(x_0)) \subset V \therefore f(U) \subset V\). \\
+    b) \(\Rightarrow \) c) Sea \(V\) un entorno de \(f(x_0)\), por hipótesis \(\exists U\) entorno de \(x_0\) relativo a \(A\) tal que \(f(U) \subset V \Rightarrow U \subset f^{-1}(V)\). Luego \(f^{-1}(V)\) es un entorno de \(x_0\) relativo a \(A\). \\
+    c) \(\Rightarrow \) a) Sea \(\e > 0\) como \(B_{\e}(f(x_0))\) es un entorno de \(f(x_0)\). Por hipótesis \(\exists U\) entorno de \(x_0\) relativo a \(A : f(U) \subset B_{\e}(f(x_0))\). Es decir que \(\exists U_0 \subset \R^n\) entorno de \(x_0 : U = A \cap U_0\). Si \(\delta > 0\) es tal que \(B_{\delta}(x_0) \subset U_0\) y \(x \in A\) cumple que \(d(x, x_0) < \delta \Rightarrow x \in B_{\delta}(x_0) \cap A \subset U_0 \cap A = U \therefore f(x) \in f(U) \subset B_{\e}(f(x_0))  \Rightarrow d(f(x), f(x_0)) < \e \).
   \end{proof}
 \end{prop}
 
 \begin{prop}
-  Sea \(A \subset \R^n\), \(x_0 \in A\) y sea \(f: A \to \R^k \Rightarrow f\) es continua en \(x_0 \iff\) cada vez que \((x_n)_{n \in \N} \subset A\) converge a \(x_0 \Rightarrow f((x_n)_{n \in \N})\) converge a \(f(x_0)\).
+  Sea \(A \subset \R^n\), \(x_0 \in A\) y sea \(f: A \to \R^k \Rightarrow f\) es continua en \(x_0 \iff \) cada vez que \({(x_n)}_{n \in \N} \subset A\) converge a \(x_0 \Rightarrow f({(x_n)}_{n \in \N})\) converge a \(f(x_0)\).
   \begin{proof}
-    Para la ida supongamos \(f\) continua en \(x_0\) y \(x_n \to x_0, (x_n)_{n \in \N} \subset A\). Sea \(\e > 0, \exists \delta > 0 : 0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e\).
-    Además \(\exists n_0 \in \N : (\forall n > n_0)(d(x_n, x_0)) < \delta\) (tomando \(\e = \delta\) en la definición) \(\Rightarrow d(f(x_n), f(x_0)) < \e \therefore \lim_{n \to \infty} f(x_n) = f(x_0)\).
+    Para la ida supongamos \(f\) continua en \(x_0\) y \(x_n \to x_0, {(x_n)}_{n \in \N} \subset A\). Sea \(\e > 0, \exists \delta > 0 : 0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e \).
+    Además \(\exists n_0 \in \N : (\forall n > n_0)(d(x_n, x_0)) < \delta \) (tomando \(\e = \delta \) en la definición) \(\Rightarrow d(f(x_n), f(x_0)) < \e \therefore \lim_{n \to \infty} f(x_n) = f(x_0)\).
 
-    Para la vuelta supongamos que \(f\) no es continua en \(x_0\), \(x_0\) no es punto aislado de \(A\) y \(\lim_{x \to x_0} f(x) \neq f(x_0)\). Para cada \(n \in \N, \exists x_n \in A : d(x_n, x_0) < \delta\), pero \(d(f(x), f(x_0)) > \e\), es decir que \(\lim_{n \to \infty} x_n = x_0\), pero \(\lim_{n \to \infty} f(x_n) \neq f(x_0)\).
+    Para la vuelta supongamos que \(f\) no es continua en \(x_0\), \(x_0\) no es punto aislado de \(A\) y \(\lim_{x \to x_0} f(x) \neq f(x_0)\). Para cada \(n \in \N, \exists x_n \in A : d(x_n, x_0) < \delta \), pero \(d(f(x), f(x_0)) > \e \), es decir que \(\lim_{n \to \infty} x_n = x_0\), pero \(\lim_{n \to \infty} f(x_n) \neq f(x_0)\).
   \end{proof}
 \end{prop}
 
@@ -84,8 +84,8 @@
 \begin{prop}
   \(A \subset \R^k, x_0 \in A\):
   \begin{enumerate}
-    \item \(f, g: A \to \R^k, h: A \to \R\) continuas en \(x_0 \Rightarrow f+g: A \to \R^k, h \cdot f: A \to \R^k\) son continuas.
-    \item Si \(f: A \to \R\) es continua en \(x_0\) y \(\forall x \in A, f(x) \neq 0 \Rightarrow \dfrac{1}{f}: A \to \R\) es continua en \(x_0\).
+    \item \(f, g: A \to \R^k, h: A \to \R \) continuas en \(x_0 \Rightarrow f+g: A \to \R^k, h \cdot f: A \to \R^k\) son continuas.
+    \item Si \(f: A \to \R \) es continua en \(x_0\) y \(\forall x \in A, f(x) \neq 0 \Rightarrow \dfrac{1}{f}: A \to \R \) es continua en \(x_0\).
   \end{enumerate}
 
   \begin{proof}
@@ -97,7 +97,7 @@
   Sea \(A \subset \R^k, x_0 \in A, f: A \to \R^k\) continua en \(x_0\).
   \begin{enumerate}
     \item \(f(x_0) \neq y_0 \Rightarrow \exists U\) entorno de \(x_0\) relativo a \(A\) tal que \(y_0 \neq f(U)\).
-    \item \(k \in \R : f(x_0) < k \Rightarrow \exists U\) entorno de \(x_0\) relativo a \(A\) : \(f(x) < k \forall x \in U\).
+    \item \(k \in \R : f(x_0) < k \Rightarrow \exists U\) entorno de \(x_0\) relativo a \(A\): \(f(x) < k \forall x \in U\).
     \item \(\exists U\) entorno de \(x_0\) relativo a \(A : f\) es acotada en \(U\), o sea, \(f(U)\) es acotado.
   \end{enumerate}
 
@@ -120,7 +120,7 @@
 \end{theorem}
 
 \begin{prop}
-  Sea \(A \subset \R^n, x_0 \in A \Rightarrow f: A \to \R^k\) es continua en \(x_0 \iff\) cada una de sus componentes \(f_1, \cdots, f_k: A \to \R\) son continuas en \(x_0\).
+  Sea \(A \subset \R^n, x_0 \in A \Rightarrow f: A \to \R^k\) es continua en \(x_0 \iff \) cada una de sus componentes \(f_1, \ldots, f_k: A \to \R \) son continuas en \(x_0\).
   \begin{proof}
     Ejercicio
   \end{proof}
@@ -133,7 +133,7 @@
 \end{definition}
 
 \begin{prop}
-  \(A \subset \R^n, f: A \to \R^k\) continua \(\iff\) cada vez que \((x_n)_{n \in \N} \subset A, x_n \to x \in A\) se tiene que \(\lim_{n \to \infty} f(x_n) = x\).
+  \(A \subset \R^n, f: A \to \R^k\) continua \(\iff \) cada vez que \({(x_n)}_{n \in \N} \subset A, x_n \to x \in A\) se tiene que \(\lim_{n \to \infty} f(x_n) = x\).
   \begin{proof}
     Inmediato.
   \end{proof}
@@ -147,9 +147,9 @@
     \item \(\forall F \subset \R^k\) cerrado, \(f^{-1}(V)\) es cerrado relativo a \(A\).
   \end{enumerate}
   \begin{proof}
-    1) \(\Rightarrow\) 2)  Si \(x \in f^{-1}(V)\), \(f\) es continua en \(x\) y \(V\) es un entorno de \(f(x)\). Por lo que \(\exists U\) entorno de \(x\) relativo a \(A : f(U) \subset V\). Luego \(U \subset f^{-1}(V)\). Entonces \(f^{-1}(V)\) es un entorno de \(x\) relativo a A y \(f^{-1}(V)\) es abierto relativo a A. \\
-    2) \(\Rightarrow\) 3) Si \(F \subset \R^k\) es cerrado, entonces \(F^c\) es abierto y \(f^{-1}(F^c)\) es abierto relativo a \(A\) por hipótesis, pero \(f^{-1}(F) = A - f^{-1}(F^c)\). Luego \(f^{-1}(F)\) es cerrado relativo a A. \\
-    3) \(\Rightarrow\) 1) Sea \(x \in A\). \(V\) entorno de \(f(x) \Rightarrow f^{-1}(\R^k - V^{\circ})\) es un cerrado relativo a \(A \Rightarrow f^{-1}(V^{\circ}) = A - f^{-1}(\R^k - V^{\circ})\) es abierto relativo a A y \(f(f^{-1}(V^{\circ}) \subset V\). Luego \(f\) es continua en \(x\), pues dado un entorno de \(x\), \(f^{-1}(V^{\circ})\) encontramos un conjunto donde la imagen "se mete adentro".
+    1) \(\Rightarrow \) 2)  Si \(x \in f^{-1}(V)\), \(f\) es continua en \(x\) y \(V\) es un entorno de \(f(x)\). Por lo que \(\exists U\) entorno de \(x\) relativo a \(A : f(U) \subset V\). Luego \(U \subset f^{-1}(V)\). Entonces \(f^{-1}(V)\) es un entorno de \(x\) relativo a A y \(f^{-1}(V)\) es abierto relativo a A. \\
+    2) \(\Rightarrow \) 3) Si \(F \subset \R^k\) es cerrado, entonces \(F^c\) es abierto y \(f^{-1}(F^c)\) es abierto relativo a \(A\) por hipótesis, pero \(f^{-1}(F) = A - f^{-1}(F^c)\). Luego \(f^{-1}(F)\) es cerrado relativo a A. \\
+    3) \(\Rightarrow \) 1) Sea \(x \in A\). \(V\) entorno de \(f(x) \Rightarrow f^{-1}(\R^k - V^{\circ})\) es un cerrado relativo a \(A \Rightarrow f^{-1}(V^{\circ}) = A - f^{-1}(\R^k - V^{\circ})\) es abierto relativo a A y \(f(f^{-1}(V^{\circ}) \subset V\). Luego \(f\) es continua en \(x\), pues dado un entorno de \(x\), \(f^{-1}(V^{\circ})\) encontramos un conjunto donde la imagen "se mete adentro".
   \end{proof}
 \end{prop}
 
@@ -158,17 +158,17 @@
 \begin{corollary}
   Sean \(f, g: A \to \R^k\) continuas.
   \begin{enumerate}
-    \item \(\{ x \in A : f(x) \neq g(x) \}\) es abierto en \(A\) y \(\{x \in A: f(x) = g(x)\}\) es cerrado en \(A\).
-    \item \(\{x \in A : f(x) > 0\}\) es abierto en \(A\).
+    \item \(\{ x \in A : f(x) \neq g(x) \} \) es abierto en \(A\) y \(\{x \in A: f(x) = g(x)\} \) es cerrado en \(A\).
+    \item \(\{x \in A : f(x) > 0\} \) es abierto en \(A\).
   \end{enumerate}
   \begin{proof}
     \begin{enumerate}
-      \item Sea \(h: A \to \R^k\), \(h = f - g\) es continua y \(\R^k - \{0\}\) es abierto \(\Rightarrow h^{-1}(\R^k - \{0\}) = \{ x \in A : f(x) - g(x) \neq 0 \}\) es abierto en A. Como \(\{0\}\) es cerrado \(\Rightarrow h^{-1}(\{0\}) = \{ x \in A : f(x) - g(x) = 0\}\) es cerrado.
-      \item Como \(f\) es continua y \((0, +\infty)\) es abierto, luego \(f^{-1}((0, +\infty)) = \{x \in A : f(x) > 0\}\) es abierto en A.
+      \item Sea \(h: A \to \R^k\), \(h = f - g\) es continua y \(\R^k - \{0\} \) es abierto \(\Rightarrow h^{-1}(\R^k - \{0\}) = \{ x \in A : f(x) - g(x) \neq 0 \} \) es abierto en A. Como \(\{0\} \) es cerrado \(\Rightarrow h^{-1}(\{0\}) = \{ x \in A : f(x) - g(x) = 0\} \) es cerrado.
+      \item Como \(f\) es continua y \((0, +\infty)\) es abierto, luego \(f^{-1}((0, +\infty)) = \{x \in A : f(x) > 0\} \) es abierto en A.
     \end{enumerate}
   \end{proof}
 \end{corollary}
 
 \begin{note}
-  La imagen por una función continua de un conjunto abierto o cerrado puede no ser ni abierto ni cerrado. \(f(x) = \dfrac{1}{1+x^2}\) es continua, \(\R\) es abierto y cerrado y \(f(\R) = (0, 1]\) que no es ni abierto ni cerrado.
+  La imagen por una función continua de un conjunto abierto o cerrado puede no ser ni abierto ni cerrado. \(f(x) = \dfrac{1}{1+x^2} \) es continua, \(\R \) es abierto y cerrado y \(f(\R) = (0, 1]\) que no es ni abierto ni cerrado.
 \end{note}

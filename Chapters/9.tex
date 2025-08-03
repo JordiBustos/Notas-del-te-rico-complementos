@@ -1,11 +1,11 @@
 \section{Topología Euclídea}
 
 \begin{definition}
-  La norma euclídea es la función \(\| \cdot \|\) que en cada punto \(x = (x_1, \cdots, x_n) \in \R^n\) toma el valor \(\|x\| = \sqrt{\sum_{i = 1}^n x_i^2}\).
+  La norma euclídea es la función \( \| \cdot \| \) que en cada punto \(x = (x_1, \ldots, x_n) \in \R^n\) toma el valor \( \|x\| = \sqrt{\sum_{i = 1}^n x_i^2} \).
   Propiedades: \begin{enumerate}
-    \item \(\forall x \in \R^n, \|x\| > 0\) y \(\|x\| = 0 \iff x = 0\).
-    \item \(\forall x \in \R^n, \forall \lambda \in \R, \| \lambda x\| = |\lambda| \|x\|\).
-    \item \(\|x+y\| \leq \|x\| + \|y\|\).
+    \item \(\forall x \in \R^n, \|x\| > 0\) y \( \|x\| = 0 \iff x = 0\).
+    \item \(\forall x \in \R^n, \forall \lambda \in \R, \| \lambda x\| = |\lambda| \|x\| \).
+    \item \( \|x+y\| \leq \|x\| + \|y\| \).
   \end{enumerate}
 \end{definition}
 
@@ -15,15 +15,15 @@
   \end{align*}
   \begin{proof}
     Tenemos que \begin{align*}
-      & \left(\sum_{k = 1}^{n+1} a^2_k\right) \cdot \left(\sum_{k = 1}^{n+1} b^2_k \right) - \sum_{1 \leq k \leq j \leq n+1} (a_k b_j - a_j b_k) = \left(\sum_{k = 1}^{n+1} a_k b_k \right)^2 \\
-      & \text{Como } \sum_{1 \leq k \leq j \leq n+1} (a_k b_j + a_j b_k)^2 \geq 0 \quad \forall n \in \N \\
-      & \Rightarrow \left(\sum_{k = 1}^{n+1} a_k b_k \right)^2 \leq \left(\sum_{k = 1}^{n+1} a^2_k\right) \cdot \left(\sum_{k = 1}^{n+1} b^2_k \right) 
+      & \left(\sum_{k = 1}^{n+1} a^2_k\right) \cdot \left(\sum_{k = 1}^{n+1} b^2_k \right) - \sum_{1 \leq k \leq j \leq n+1} (a_k b_j - a_j b_k) = {\left(\sum_{k = 1}^{n+1} a_k b_k \right)}^2 \\
+      & \text{Como } \sum_{1 \leq k \leq j \leq n+1} {(a_k b_j + a_j b_k)}^2 \geq 0 \quad \forall n \in \N \\
+      & \Rightarrow {\left(\sum_{k = 1}^{n+1} a_k b_k \right)}^2 \leq \left(\sum_{k = 1}^{n+1} a^2_k\right) \cdot \left(\sum_{k = 1}^{n+1} b^2_k \right) 
     \end{align*}
   \end{proof}
 \end{prop}
 
 \begin{definition}
-  La distancia euclídea es la función \(d: \R^n \times \R^n \to \R : d(x, y) = \|x-y\|\).
+  La distancia euclídea es la función \(d: \R^n \times \R^n \to \R : d(x, y) = \|x-y\| \).
   Tenemos que \(\forall x,y,z \in \R^n\).
   \begin{enumerate}
     \item \(d(x, y) > 0\) y \(d(x, y) = 0 \iff x=y\)
@@ -32,7 +32,7 @@
   \end{enumerate}
   \begin{proof}
     \begin{enumerate}
-      \item \(d(x, y) = \|x-y\| > 0, d(x, y) = 0 \iff \|x-y\| = 0 \iff x = y\).
+      \item \(d(x, y) = \|x-y\| > 0, d(x, y) = 0 \iff \|x-y\| = 0 \iff x = y \).
       \item \(d(x, y) = \|x-y\| = \|(-1)\| \cdot \|y-x\| = \|y-x\| = d(y, x)\).
       \item \(d(x, z) = \|x-z\| = \|x-z+y-y\| \leq \|x-y\| + \|z-y\| = d(x, y) + d(y, z)\).
     \end{enumerate}
@@ -41,7 +41,7 @@
 
 \subsection{Conjuntos abiertos}
 \begin{definition}
-  Si \(x \in \R^n\) y \(r > 0\), la bola abierta centrada en \(x\) de radio \(r\) es el conjunto \(B_r(x) = B(x,r) = \{ y \in \R^n : d(x, y) < r \}\).
+  Si \(x \in \R^n\) y \(r > 0\), la bola abierta centrada en \(x\) de radio \(r\) es el conjunto \(B_r(x) = B(x,r) = \{ y \in \R^n : d(x, y) < r \} \).
 \end{definition}
 
 \begin{definition}
@@ -51,14 +51,14 @@
 \begin{lemma}
   La bola abierta \(B_r(x)\) es un conjunto abierto.
   \begin{proof}
-    Sea \(s = r - d(x, y), y \in B_r(x)\). Si \(z \in B_s(y) \Rightarrow\) \\
+    Sea \(s = r - d(x, y), y \in B_r(x)\). Si \(z \in B_s(y) \Rightarrow \) \\
     \(d(x, z) \leq d(x, y) + d(y, z) < d(x, y) + s = r\) \\
-    Luego \(z \in B_r(x) \Rightarrow B_s(y) \subset B_r(x) \therefore\) es abierto.
+    Luego \(z \in B_r(x) \Rightarrow B_s(y) \subset B_r(x) \therefore \) es abierto.
   \end{proof}
 \end{lemma}
 
 \begin{prop}
-  Un subconjunto propio \(U \subset \R^n\) es abierto \(\iff \forall x \in U\) se tiene que \(inf\{d(x, y) : y \in \R^n - U\} > 0\). \\
+  Un subconjunto propio \(U \subset \R^n\) es abierto \(\iff \forall x \in U\) se tiene que \( \inf \{d(x, y) : y \in \R^n - U\} > 0\). \\
   El ínfimo existe pues el conjunto es no vacío y acotado inferiormente.
   \begin{proof}
     Para la ida tenemos que si \(U\) es abierto
@@ -67,39 +67,39 @@
     \end{align*}
     Si \(y \in R^n - U \Rightarrow y \notin B_r(x)\) por lo que \(d(x, y) > r > 0\) y \(r\) es una cota inferior mínima positiva del conjunto, pues si \(d(x,y) < r \Rightarrow y \in B_r(x)\) absurdo! \\
 
-    Para la vuelta tomemos \(s = inf\{ d(x,y) : y \in \R^n - U \} > 0\). Consideremos \(B_{\frac{s}{2}}(x)\). Si \(z\) pertenece a esa bola entonces \(d(x, z) < \frac{s}{2} < s \Rightarrow\) \\
-    \(d(x, z) \notin \{ d(x,y) : y \in R^n - U \}\) pues si no sería el ínfimo, se sigue que \(z \in U\) y entonces \(B_{\frac{s}{2}}(x) \subset U \therefore U\) es abierto.
+    Para la vuelta tomemos \(s = \inf \{ d(x,y) : y \in \R^n - U \} > 0\). Consideremos \(B_{\frac{s}{2}}(x)\). Si \(z\) pertenece a esa bola entonces \(d(x, z) < \frac{s}{2} < s \Rightarrow \) \\
+    \(d(x, z) \notin \{ d(x,y) : y \in R^n - U \} \) pues si no sería el ínfimo, se sigue que \(z \in U\) y entonces \(B_{\frac{s}{2}}(x) \subset U \therefore U\) es abierto.
   \end{proof}
 \end{prop}
 
 \begin{prop}
   Propiedades de conjuntos abiertos:
   \begin{enumerate}
-    \item \(\varnothing\), \(\R^n\) son abiertos.
+    \item \(\varnothing \), \(\R^n\) son abiertos.
     \item Intersección de una familia finita y no vacía de \(\R^n\) de subconjuntos abiertos es un conjunto abierto.
     \item La unión de una familia cualquiera de subconjuntos abiertos de \(\R^n\) es abierto.
   \end{enumerate}
   \begin{proof}
     \begin{enumerate}
       \item Por definición
-      \item \(U = \bigcap_{i = 1}^k U_i, U_i \subset \R^n\), abierto. Tomando \(B_r(x)\) con \(r = min(r_1, \cdots, r_k)\) y listo.
+      \item \(U = \bigcap_{i = 1}^k U_i, U_i \subset \R^n\), abierto. Tomando \(B_r(x)\) con \(r = \min(r_1, \ldots, r_k)\) y listo.
       \item Si \(u\) es una familia de abiertos de \(\R^n\) y \(U\) su unión, dado \(x \in U\) tiene que haber algún \(V \in u\) tal que \(x \in V\). Por ser \(V\) abierto \(\exists r > 0 : B_r(x) \subset V \subset U \therefore U\) es abierto.
     \end{enumerate}
   \end{proof}
 \end{prop}
 
-Notemos que la hipotesis de que la familia sea finita en la intersección es necesaria pues si definimos \(U_n = \left(1 - \dfrac{1}{n}, 1 + \dfrac{1}{n}\right) \quad \forall n \in \N \Rightarrow \bigcap_{n \geq 1} U_n = \{1\}\) que no es abierto.
+Notemos que la hipotesis de que la familia sea finita en la intersección es necesaria pues si definimos \(U_n = \left(1 - \dfrac{1}{n}, 1 + \dfrac{1}{n}\right) \quad \forall n \in \N \Rightarrow \bigcap_{n \geq 1} U_n = \{1\} \) que no es abierto.
 
 \begin{definition}
   La topología Euclídea es el conjunto de todos los abiertos de \(\R^n\).
 \end{definition}
 
 \begin{corollary}
-  Un subconjunto de \(\R^n\) es abierto \(\iff\) es la unión de una familia de bolas abiertas.
+  Un subconjunto de \(\R^n\) es abierto \(\iff \) es la unión de una familia de bolas abiertas.
   \begin{proof}
-    Para la ida: Sea \(U \subset \R^n\) un conjunto abierto y sea \(u\) la familia de bolas abiertas de \(\R^n\) contenidas en \(U\). Si llamamos \(\tilde{U}\) a la unión de todas basta ver que \(\tilde{U} = U\). \begin{itemize}
-      \item[\(\subset\))] Inmediato.
-      \item[\(\supset\))] Dado \(x \in U, \exists r > 0 : B_r(x) \subset U\) por ser \(U\) abierto y \(B_r(x) \in u \Rightarrow B_r(x) \subset \tilde{U} \Rightarrow U \subset \tilde{U}\) pues vale \(\forall x \in U\).
+    Para la ida: Sea \(U \subset \R^n\) un conjunto abierto y sea \(u\) la familia de bolas abiertas de \(\R^n\) contenidas en \(U\). Si llamamos \(\tilde{U} \) a la unión de todas basta ver que \(\tilde{U} = U\).\begin{itemize}
+      \item[(\(\subset \))] Inmediato.
+      \item[(\(\supset \))] Dado \(x \in U, \exists r > 0 : B_r(x) \subset U\) por ser \(U\) abierto y \(B_r(x) \in u \Rightarrow B_r(x) \subset \tilde{U} \Rightarrow U \subset \tilde{U} \) pues vale \(\forall x \in U\).
     \end{itemize}
     La vuelta es la proposición anterior.
   \end{proof}
@@ -108,7 +108,7 @@ Notemos que la hipotesis de que la familia sea finita en la intersección es nec
 \subsection{Interior de un conjunto}
 
 \begin{definition}[Interior]
-  \(X \subset \R^n\) decimos que \(x \in \R^n\) es interior a \(X\) si \(\exists r > 0 : B_r(x) \subset X\). El interior del conjunto X, que notamos \(X^{\circ}\), es el conjunto de puntos interiores de X.
+  \(X \subset \R^n\) decimos que \(x \in \R^n\) es interior a \(X\) si \(\exists r > 0 : B_r(x) \subset X\). El interior del conjunto X, que notamos \(X^{\circ} \), es el conjunto de puntos interiores de X.
 \end{definition}
 
 \begin{note}
@@ -116,61 +116,61 @@ Notemos que la hipotesis de que la familia sea finita en la intersección es nec
 \end{note}
 
 \begin{prop}
-  Sea \(X \subset \R^n\). \(X^{\circ}\) es abierto y coincide con la unión de todos los subconjuntos abiertos de \(X\). En particular \(X^{\circ}\) es el mayor abierto contenido en \(X\).
+  Sea \(X \subset \R^n\). \(X^{\circ} \) es abierto y coincide con la unión de todos los subconjuntos abiertos de \(X\). En particular \(X^{\circ} \) es el mayor abierto contenido en \(X\).
   \begin{proof}
-    Sea \(U\) la unión de todos los subconjuntos abiertos de X, veamos que \(U = X^{\circ}\). \\
-    i) Si \(x \in X^{\circ}, \exists r > 0 : B_r(x) \subset U\), como \(B_r(x)\) es abierto \(B_r(x) \subset U\) por lo que \(X^{\circ} \subset U\). \\
-    ii) Si \(x \in U \Rightarrow \exists V \subset X\) abierto tal que \(x \in X\), como \(V\) es abierto \(\exists r > 0 : B_r(x) \subset V \subset X \Rightarrow X^{\circ}\) por definición de punto interior, luego \(U \subset X^{\circ}\). \\
+    Sea \(U\) la unión de todos los subconjuntos abiertos de X, veamos que \(U = X^{\circ} \). \\
+    (i) Si \(x \in X^{\circ}, \exists r > 0 : B_r(x) \subset U\), como \(B_r(x)\) es abierto \(B_r(x) \subset U\) por lo que \(X^{\circ} \subset U\). \\
+    (ii) Si \(x \in U \Rightarrow \exists V \subset X\) abierto tal que \(x \in X\), como \(V\) es abierto \(\exists r > 0 : B_r(x) \subset V \subset X \Rightarrow X^{\circ} \) por definición de punto interior, luego \(U \subset X^{\circ} \). \\
     \(\therefore X^{\circ} = U\).
   \end{proof}
 \end{prop}
 
 \begin{corollary}
-  Si \(X \subset Y \Rightarrow X^{\circ} \subset Y^{\circ}\).
+  Si \(X \subset Y \Rightarrow X^{\circ} \subset Y^{\circ} \).
   \begin{proof}
-    \(X^{\circ} \subset X \subset Y\). Como \(Y^{\circ}\) es el mayor abierto contenido en \(Y\) se sigue que \(X^{\circ} \subset Y^{\circ} \subset Y\).
+    \(X^{\circ} \subset X \subset Y\). Como \(Y^{\circ} \) es el mayor abierto contenido en \(Y\) se sigue que \(X^{\circ} \subset Y^{\circ} \subset Y\).
   \end{proof}
 \end{corollary}
 
 \subsection{Propiedades del interior}
 
 \begin{prop}
-  \((X \cap Y)^{\circ} = X^{\circ} \cap Y^{\circ}\).
+  \({(X \cap Y)}^{\circ} = X^{\circ} \cap Y^{\circ} \).
   \begin{proof}
-    \((X \cap Y)^{\circ} \subset X \cap Y \Rightarrow X^{\circ} \cap Y^{\circ}\) es abierto \(\Rightarrow (X^{\circ} \cap Y^{\circ}) \subset (X \cap Y)^{\circ}\). \\
-    \(X \cap Y \subset X \Rightarrow (X \cap Y)^{\circ} \subset X^{\circ}\) y \(X \cap Y \subset Y \Rightarrow (X \cap Y)^{\circ} \subset Y^{\circ} \Rightarrow\) \\
-    \((X \cap Y)^{\circ} \subset X^{\circ} \cap Y^{\circ}\).
+    \({(X \cap Y)}^{\circ} \subset X \cap Y \Rightarrow X^{\circ} \cap Y^{\circ} \) es abierto \(\Rightarrow (X^{\circ} \cap Y^{\circ}) \subset {(X \cap Y)}^{\circ} \). \\
+    \(X \cap Y \subset X \Rightarrow {(X \cap Y)}^{\circ} \subset X^{\circ} \) y \(X \cap Y \subset Y \Rightarrow {(X \cap Y)}^{\circ} \subset Y^{\circ} \Rightarrow \) \\
+    \({(X \cap Y)}^{\circ} \subset X^{\circ} \cap Y^{\circ} \).
   \end{proof}
 \end{prop}
 
 \begin{prop}
-  \(X^{\circ} \cup Y^{\circ} \subset (X \cup Y)^{\circ}\).
+  \(X^{\circ} \cup Y^{\circ} \subset {(X \cup Y)}^{\circ} \).
   \begin{proof}
-    \(X^{\circ} \subset X \subset X \cup Y\) y \(Y^{\circ} \subset Y \subset X \cup Y \Rightarrow\) \\
-    \(X^{\circ} \cup Y^{\circ} \subset (X \cup Y) \Rightarrow X^{\circ} \cup Y^{\circ} \subset (X \cup Y)^{\circ}\), pues \(X^{\circ} \cup Y^{\circ}\) es abierto.
+    \(X^{\circ} \subset X \subset X \cup Y\) y \(Y^{\circ} \subset Y \subset X \cup Y \Rightarrow \) \\
+    \(X^{\circ} \cup Y^{\circ} \subset {(X \cup Y)} \Rightarrow X^{\circ} \cup Y^{\circ} \subset {(X \cup Y)}^{\circ} \), pues \(X^{\circ} \cup Y^{\circ} \) es abierto.
   \end{proof}
 \end{prop}
 
-Notemos que la inclusión puede ser estricta pues sea \(X = (-1, 1)\), \(Y = [1, 2] \Rightarrow\) \\
-\(1 \notin X^{\circ} \cup Y^{\circ} = (-1, 1) \cup (1, 2)\), pero \(1 \in (X \cup Y)^{\circ} = (-1, 2)\).
+Notemos que la inclusión puede ser estricta pues sea \(X = (-1, 1)\), \(Y = [1, 2] \Rightarrow \) \\
+\(1 \notin X^{\circ} \cup Y^{\circ} = (-1, 1) \cup (1, 2)\), pero \(1 \in {(X \cup Y)}^{\circ} = (-1, 2)\).
 
 \section{Entorno}
 
 \begin{definition}[Entorno]
-  Sea \(x \in \R^n\), un entorno de \(x\) es un subconjunto \(N \subset R^n : x \in N^{\circ}\).
+  Sea \(x \in \R^n\), un entorno de \(x\) es un subconjunto \(N \subset R^n : x \in N^{\circ} \).
 \end{definition}
 
 \begin{prop}
-  Un subconjunto de \(\R^n\) es abierto \(\iff\) es un entorno de cada uno de sus puntos.
+  Un subconjunto de \(\R^n\) es abierto \(\iff \) es un entorno de cada uno de sus puntos.
   \begin{proof}
-    Si \(U\) es entorno de cada uno de sus puntos entonces \(U \subset U^{\circ} \Rightarrow U = U^{\circ} \therefore\) es abierto.
+    Si \(U\) es entorno de cada uno de sus puntos entonces \(U \subset U^{\circ} \Rightarrow U = U^{\circ} \therefore \) es abierto.
   \end{proof}
 \end{prop}
 
 \begin{prop}
   El interior de un subconjunto \(X \subset \R^n\) es el conjunto de puntos de los que \(X\) es entorno.
   \begin{proof}
-    Sea \(U\) el conjunto de puntos de \(X\) de los que \(X\) es un entorno. Si \(x \in U \Rightarrow X\) es el entorno de \(x\) y \(x \in X^{\circ} \Rightarrow U \subset X^{\circ}\). Si \(x \in X^{\circ} \Rightarrow X\) es un entorno de \(x \Rightarrow x \in U \Rightarrow X^{\circ} \subset U\).
+    Sea \(U\) el conjunto de puntos de \(X\) de los que \(X\) es un entorno. Si \(x \in U \Rightarrow X\) es el entorno de \(x\) y \(x \in X^{\circ} \Rightarrow U \subset X^{\circ} \). Si \(x \in X^{\circ} \Rightarrow X\) es un entorno de \(x \Rightarrow x \in U \Rightarrow X^{\circ} \subset U\).
   \end{proof}
 \end{prop}
 
@@ -190,82 +190,82 @@ Notemos que la inclusión puede ser estricta pues sea \(X = (-1, 1)\), \(Y = [1,
   \end{enumerate}
   \begin{proof}
     \begin{enumerate}
-      \item \((\R^n)^c = \varnothing\) y \(\varnothing^c = \R^n\) abiertos.
-      \item Si \(F_1, \cdots, F_k \subset R^n\) son cerrados \(\Rightarrow (F_1 \cup \cdots \cup F_k)^c = F_1^c \cap \cdots \cap F_k^c\) y cada \(F_i\) es abierto.
-      \item Si \(F\) es una familia de cerrados \((\bigcap_{f \in F} f)^c = (\bigcup_{f \in F} f^c)\) que es abierto.
+      \item \({(\R^n)}^c = \varnothing \) y \(\varnothing^c = \R^n\) abiertos.
+      \item Si \(F_1, \ldots, F_k \subset R^n\) son cerrados \(\Rightarrow {(F_1 \cup \cdots \cup F_k)}^c = F_1^c \cap \cdots \cap F_k^c\) y cada \(F_i\) es abierto.
+      \item Si \(F\) es una familia de cerrados \(\bigcap_{f \in F} {f}^c = (\bigcup_{f \in F} f^c)\) que es abierto.
     \end{enumerate}
   \end{proof}
 \end{prop}
 
 \begin{definition}
-  Si \(x \in R^n, r > 0\) llamamos bola cerrada centrada en \(x\) de radio \(r\) al conjunto \(\overline{B_r{x}} = \overline{B(r, x)} = \{ y \in \R^n : d(x, y) \leq r \}\).
+  Si \(x \in R^n, r > 0\) llamamos bola cerrada centrada en \(x\) de radio \(r\) al conjunto \(\overline{B_r{x}} = \overline{B(r, x)} = \{ y \in \R^n : d(x, y) \leq r \} \).
 \end{definition}
 
 \begin{prop}
   Veamos que la bola cerrada es, efectivamente, cerrada.
   \begin{proof}
-    Si \(y \in \R^n - \overline{B_r(x)}\) tenemos que \(d(x, y) > r\). Llamamos \(0 < r_1 = d(x, y) - r\) y queremos que \(B_{r_1}(y) \subset R^n - \overline{B_r(x)}\). \\
+    Si \(y \in \R^n - \overline{B_r(x)} \) tenemos que \(d(x, y) > r\). Llamamos \(0 < r_1 = d(x, y) - r\) y queremos que \(B_{r_1}(y) \subset R^n - \overline{B_r(x)} \). \\
     Sea \(z \in B_{r_1}(y)\) por desigualdad triangular: \\
     \(d(x, y) \leq d(x, z) + d(z, y)\) \\
-    \(d(x, z) \geq d(x, y) - d(z, y) > d(x, y) - r_1 = r \Rightarrow z \notin \overline{B_r(x)} \therefore B_{r_1}(y) \subset \R^n - \overline{B_r(x)}\).
+    \(d(x, z) \geq d(x, y) - d(z, y) > d(x, y) - r_1 = r \Rightarrow z \notin \overline{B_r(x)} \therefore B_{r_1}(y) \subset \R^n - \overline{B_r(x)} \).
   \end{proof}
 \end{prop}
 
 \subsection{Clausura}
 
 \begin{definition}[Clausura]
-  La clausura de un subconjunto \(X \subset R^n\) es la intersección \(\overline{X}\) de todos los subconjuntos cerrados de \(R^n\) que contienen a \(X\).
+  La clausura de un subconjunto \(X \subset R^n\) es la intersección \(\overline{X} \) de todos los subconjuntos cerrados de \(R^n\) que contienen a \(X\).
 \end{definition}
 
 \begin{prop}
-  Sea \(X \subset R^n \Rightarrow \overline{X}\) es el menor subconjunto cerrado de \(\R^n\) que contiene a \(X\) en el sentido de que es contenido en todo subconjunto cerrado de \(\R^n\) que contiene a \(X\).
+  Sea \(X \subset R^n \Rightarrow \overline{X} \) es el menor subconjunto cerrado de \(\R^n\) que contiene a \(X\) en el sentido de que es contenido en todo subconjunto cerrado de \(\R^n\) que contiene a \(X\).
 \end{prop}
 
 \begin{corollary}
   Un subconjunto \(X \subset \R^n\) es cerrado \(\iff \overline{X} = X\).
   \begin{proof}
-    Si \(X\) es cerrado, contiene a \(X\) y luego \(\overline{X} \subset X\), como \(X \subset \overline{X} \Rightarrow X = \overline{X}\). \\
-    Si \(X = \overline{X} \Rightarrow X\) es cerrado, pues \(\overline{X}\) es cerrado.
+    Si \(X\) es cerrado, contiene a \(X\) y luego \(\overline{X} \subset X\), como \(X \subset \overline{X} \Rightarrow X = \overline{X} \). \\
+    Si \(X = \overline{X} \Rightarrow X\) es cerrado, pues \(\overline{X} \) es cerrado.
   \end{proof}
 \end{corollary}
 
 \begin{prop}
-  \(X \subset Y \Rightarrow \overline{X} \subset \overline{Y}\).
+  \(X \subset Y \Rightarrow \overline{X} \subset \overline{Y} \).
   \begin{proof}
-    \(X \subset Y \subset \overline{Y}\), pero como \(\overline{X}\) es el menor cerrado que contiene a \(X \Rightarrow \overline{X} \subset \overline{Y}\).
+    \(X \subset Y \subset \overline{Y} \), pero como \(\overline{X} \) es el menor cerrado que contiene a \(X \Rightarrow \overline{X} \subset \overline{Y} \).
   \end{proof}
 \end{prop}
 
 \begin{prop}
-  \(\overline{X \cup Y} = \overline{X} \cup \overline{Y}\).
+  \(\overline{X \cup Y} = \overline{X} \cup \overline{Y} \).
   \begin{proof}
-    \(X \subset X \cup Y \Rightarrow \overline{X} \subset \overline{X \cup Y}\) \\
-    \(Y \subset X \cup Y \Rightarrow \overline{Y} \subset \overline{X \cup Y} \Rightarrow\) \\
-    \(\overline{X} \cup \overline{Y} \subset \overline{X \cup Y}\). \\
-    Para la otra contención notemos que \(X \subset \overline{X}\) y \(Y \subset \overline{Y} \Rightarrow X \cup Y \subset \overline{X \cup Y} \Rightarrow \overline{X \cup Y} \subset \overline{X} \cup \overline{Y}\).
+    \(X \subset X \cup Y \Rightarrow \overline{X} \subset \overline{X \cup Y} \) \\
+    \(Y \subset X \cup Y \Rightarrow \overline{Y} \subset \overline{X \cup Y} \Rightarrow \) \\
+    \(\overline{X} \cup \overline{Y} \subset \overline{X \cup Y} \). \\
+    Para la otra contención notemos que \(X \subset \overline{X} \) y \(Y \subset \overline{Y} \Rightarrow X \cup Y \subset \overline{X \cup Y} \Rightarrow \overline{X \cup Y} \subset \overline{X} \cup \overline{Y} \).
   \end{proof}
 \end{prop}
 
 \begin{prop}
-  \(\overline{X \cap Y} \subset \overline{X} \cap \overline{Y}\).
+  \(\overline{X \cap Y} \subset \overline{X} \cap \overline{Y} \).
   \begin{proof}
-    \(X \cap Y \subset X \subset \overline{X}\) y \(X \cap Y \subset Y \subset \overline{Y} \Rightarrow X \cap Y \subset \overline{X} \cap \overline{Y} \Rightarrow \overline{X \cap Y} \subset \overline{X} \cap \overline{Y}\). Pues es el menor de los cerrados.
+    \(X \cap Y \subset X \subset \overline{X} \) y \(X \cap Y \subset Y \subset \overline{Y} \Rightarrow X \cap Y \subset \overline{X} \cap \overline{Y} \Rightarrow \overline{X \cap Y} \subset \overline{X} \cap \overline{Y} \). Pues es el menor de los cerrados.
   \end{proof}
 \end{prop}
 
 \begin{prop}
   Sean \(X \subset \R^n\) y \(x \in \R^n\). Son equivalentes:
   \begin{enumerate}
-    \item \(x \in \overline{X}\).
-    \item \(\forall r > 0, B_r(x) \cap X \neq \varnothing\).
-    \item \(\forall\) entorno abierto \(N\) de \(x\), \(N \cap X \neq \varnothing\).
-    \item \(\forall\) entorno \(N\) de \(x\), \(N \cap X \neq \varnothing\).
+    \item \(x \in \overline{X} \).
+    \item \(\forall r > 0, B_r(x) \cap X \neq \varnothing \).
+    \item \(\forall \) entorno abierto \(N\) de \(x\), \(N \cap X \neq \varnothing \).
+    \item \(\forall \) entorno \(N\) de \(x\), \(N \cap X \neq \varnothing \).
   \end{enumerate}
 
   \begin{proof}
-    4) \(\Rightarrow\) 3) \(\Rightarrow\) 2) son inmediatos. \\
-    2) \(\Rightarrow\) 1) Por contrarrecíproco, supongamos que \(x \notin \overline{X}\) de manera tal que \(\exists\) F cerrado tal que \(x \in F\) y \(X \subset F\) (si no estaría en la clasura) \(\Rightarrow x \in F^c\) que es abierto \(\Rightarrow \exists r > 0, B_r(x) \subset F^c, B_r(X) \cap X \subset B_r(x) \cap F = \varnothing\). \\
-    1) \(\Rightarrow\) 4) Supongamos que existe \(N\) entorno de \(x\) tal que \(N \cap X = \varnothing\). El conjunto \(U = N^{\circ}\) es abierto y \(x \in U\). Además \(U \subset N \subset X^c \Rightarrow X \subset U^c\) que es cerrado y \(x \notin U^c \Rightarrow x \notin \overline{X}\).
+    (4) \(\Rightarrow \) (3) \(\Rightarrow \) (2) son inmediatos. \\
+    (2) \(\Rightarrow \) (1) Por contrarrecíproco, supongamos que \(x \notin \overline{X} \) de manera tal que \(\exists \) F cerrado tal que \(x \in F\) y \(X \subset F\) (si no estaría en la clasura) \(\Rightarrow x \in F^c\) que es abierto \(\Rightarrow \exists r > 0, B_r(x) \subset F^c, B_r(X) \cap X \subset B_r(x) \cap F = \varnothing \). \\
+    (1) \(\Rightarrow \) (4) Supongamos que existe \(N\) entorno de \(x\) tal que \(N \cap X = \varnothing \). El conjunto \(U = N^{\circ} \) es abierto y \(x \in U\). Además \(U \subset N \subset X^c \Rightarrow X \subset U^c\) que es cerrado y \(x \notin U^c \Rightarrow x \notin \overline{X} \).
   \end{proof}
 \end{prop}
 
@@ -273,10 +273,10 @@ Notemos que la inclusión puede ser estricta pues sea \(X = (-1, 1)\), \(Y = [1,
   Si \(\Q^n\) es el conjunto de puntos de \(\R^n\) que tienen todas sus coordenadas racionales \(\overline{\Q^n} = \R^n\). Decimos que \(\Q^n\) es denso en \(\R^n\).
 
   \begin{proof}
-    1) \(\overline{\Q^n} \subseteq \R^n : \Q^n \subset \R^n\), que es cerrado \(\Rightarrow \overline{\Q^n} \subseteq \R^n\). \\
-    2) \(\R^n \subseteq \overline{\Q^n}:\) Si \(x \in \R^n\) y \(U\) es entorno abierto de \(x, U \cap \Q^n \neq \varnothing\) (1) \(\iff\) 2)). Como \(U\) es abierto \(\exists r > 0 : B_r(x) \subset U\). \\
-    Si \(x = (x_1, \cdots, x_n)\) para cada \(i \in \{1, \cdots, n\}\) elijo un racional \(q_i\) en el intervalo \((x_i - \dfrac{r}{\sqrt{n}}, x_i + \dfrac{r}{\sqrt{n}}) : |x_i - q_i| < \dfrac{r}{\sqrt{n}} \Rightarrow d(x, q) < r\). Sabemos que existe porque ya probamos que \(\Q\) es denso en \(\R\). \\
-    \(\Rightarrow q \in B_r(x) \subset U \Rightarrow U \cap \Q^n \neq \varnothing\) pues al menos \(q\) está allí \(\forall U\) entorno abierto de X.
+    (1) \(\overline{\Q^n} \subseteq \R^n : \Q^n \subset \R^n\), que es cerrado \(\Rightarrow \overline{\Q^n} \subseteq \R^n\). \\
+    (2) \(\R^n \subseteq \overline{\Q^n}\): Si \(x \in \R^n\) y \(U\) es entorno abierto de \(x, U \cap \Q^n \neq \varnothing \) (1) \(\iff \) (2). Como \(U\) es abierto \(\exists r > 0 : B_r(x) \subset U\). \\
+    Si \(x = (x_1, \ldots, x_n)\) para cada \(i \in \{1, \ldots, n\} \) elijo un racional \(q_i\) en el intervalo \((x_i - \dfrac{r}{\sqrt{n}}, x_i + \dfrac{r}{\sqrt{n}}) : |x_i - q_i| < \dfrac{r}{\sqrt{n}} \Rightarrow d(x, q) < r\). Sabemos que existe porque ya probamos que \(\Q \) es denso en \(\R \). \\
+    \(\Rightarrow q \in B_r(x) \subset U \Rightarrow U \cap \Q^n \neq \varnothing \) pues al menos \(q\) está allí \(\forall U\) entorno abierto de X.
     \(\therefore \R^n \subset \Q^n\).
   \end{proof}
 \end{eg}

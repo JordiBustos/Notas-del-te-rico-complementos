@@ -1,37 +1,37 @@
 \section{Límite superior e inferior}
 
 \begin{theorem}
-  \((x_n)_{n \in \N}\) acotada \(\Rightarrow \liminf x_n\) es el menor punto de acumulación de la sucesión y \(\limsup x_n\) es el mayor.
+  \({(x_n)}_{n \in \N} \) acotada \(\Rightarrow \liminf x_n\) es el menor punto de acumulación de la sucesión y \(\limsup x_n\) es el mayor.
 
   \begin{proof}
-    Veamos que \(a = \liminf_{n \to \infty} x_n\) es punto de acumulación de \((x_n)_{n \in \N}\). \\
-    Como \(a = \lim_{n \to \infty} a_n\) (los ínfimos de \(X_n\)). Dados \(\e\) y \(n_0 \in \N, \exists n_1 > n_0 : a-\e < a_{n_1} < a+\e\), \(a_{n_1} = inf(X_{n_1}) \Rightarrow a + \e\) no puede ser cota inferior de \(X_{n_1}\). \\
-    \(\Rightarrow \exists n \geq n_1 : a_{n_1} \leq x_n \leq a+\e\), \((n \geq n_1 \geq n_0\) y \((a - \e < x_n < a + \e\)), luego \(a\) es punto de acumulación de \((x_n)_{n \in \N}\). \\
+    Veamos que \(a = \liminf_{n \to \infty} x_n\) es punto de acumulación de \({(x_n)}_{n \in \N} \). \\
+    Como \(a = \lim_{n \to \infty} a_n\) (los ínfimos de \(X_n\)). Dados \(\e \) y \(n_0 \in \N, \exists n_1 > n_0 : a-\e < a_{n_1} < a+\e \), \(a_{n_1} = \inf(X_{n_1}) \Rightarrow a + \e \) no puede ser cota inferior de \(X_{n_1} \). \\
+    \(\Rightarrow \exists n \geq n_1 : a_{n_1} \leq x_n \leq a+\e \), \( n \geq n_1 \geq n_0\) y \((a - \e < x_n < a + \e \)), luego \(a\) es punto de acumulación de \({(x_n)}_{n \in \N} \). \\
     Falta ver que si \(c < a \Rightarrow c\) no es punto de acumulación. \\
-    Como \(a = \lim_{n \to \infty} a_n\) y \(c < a \Rightarrow \exists n_0 \in \N : c < a_{n_0} \leq a\). Como \(a_{n_0}\) es el ínfimo de \(X_{n_0}\) si \(n \geq n_0 \Rightarrow c < a_{n_0} \geq x_n\). Tomando \(\e = a_{n_0} - c \Rightarrow c+\e = a_{n_0}\) y entonces \(\forall x_n: n \geq n_0, x_n \notin (c - \e, c + \e) \therefore c\) no es punto de acumulación.
+    Como \(a = \lim_{n \to \infty} a_n\) y \(c < a \Rightarrow \exists n_0 \in \N : c < a_{n_0} \leq a\). Como \(a_{n_0} \) es el ínfimo de \(X_{n_0} \) si \(n \geq n_0 \Rightarrow c < a_{n_0} \geq x_n\). Tomando \(\e = a_{n_0} - c \Rightarrow c+\e = a_{n_0} \) y entonces \(\forall x_n: n \geq n_0, x_n \notin (c - \e, c + \e) \therefore c\) no es punto de acumulación.
   \end{proof}
 \end{theorem}
 
 \begin{theorem}
-  Toda sucesión acotada de \(\R\) tiene una subsucesión convergente.
+  Toda sucesión acotada de \(\R \) tiene una subsucesión convergente.
   \begin{proof}
     \(\limsup x_n\) es punto de acumulación de \(x_n\) así que alguna subsucesión converge a él.
   \end{proof}
 \end{theorem}
 
 \begin{corollary}
-  Una sucesión acotada de \(\R\) es convergente \(\iff \limsup x_n = \liminf x_n\), es decir, posee un único punto de acumulación.
+  Una sucesión acotada de \(\R \) es convergente \(\iff \limsup x_n = \liminf x_n\), es decir, posee un único punto de acumulación.
   \begin{proof}
-    Para la ida tenemos que si \((x_n)_{n \in \N}\) converge, toda subsucesión converge a lo mismo y en particular \(\limsup x_n = \liminf x_n = lim_{n \to \infty} x_n\). \\
-    Para la vuelta, si \(\limsup x_n = \liminf x_n = \lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n \Rightarrow\) \\
-    Dado \(\e > 0, \exists n_0 \in \N : a - \e \leq a_{n_0} \leq a \leq b_{n_0} \leq a + \e\). \\
-    Como \(n \geq n_0 \Rightarrow a_{n_0} \leq x_n \leq b_{n_0}\).
+    Para la ida tenemos que si \({(x_n)}_{n \in \N} \) converge, toda subsucesión converge a lo mismo y en particular \(\limsup x_n = \liminf x_n = \lim_{n \to \infty} x_n\). \\
+    Para la vuelta, si \(\limsup x_n = \liminf x_n = \lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n \Rightarrow \) \\
+    Dado \(\e > 0, \exists n_0 \in \N : a - \e \leq a_{n_0} \leq a \leq b_{n_0} \leq a + \e \). \\
+    Como \(n \geq n_0 \Rightarrow a_{n_0} \leq x_n \leq b_{n_0} \).
   \end{proof}
 \end{corollary}
 
 \section{Sucesiones de Cauchy}
 
-Dada una sucesión \((x_n)_{n \in \N} \subset \R\), decimos que es de Cauchy si dado \(\e > 0, \exists n_0 \in \N : |x_n - x_m| < \e, \forall n,m > n_0\). Al igual que hicimos con las sucesiones de Cauchy en \(\Q\).
+Dada una sucesión \({(x_n)}_{n \in \N} \subset \R \), decimos que es de Cauchy si dado \(\e > 0, \exists n_0 \in \N : |x_n - x_m| < \e, \forall n,m > n_0\). Al igual que hicimos con las sucesiones de Cauchy en \(\Q \).
 
 \begin{enumerate}
   \item Toda sucesión convergente es de Cauchy
@@ -43,12 +43,12 @@ Dada una sucesión \((x_n)_{n \in \N} \subset \R\), decimos que es de Cauchy si 
   \begin{proof}
     Dado \(\e > 0 : \exists n_0 : |x_n - x_m| < \e / 2, \forall n,m > n_0\). \\
     Como \(a\) es el límite de una subsucesión \(\exists n_1 > n_0 : |x_n - a| < \e / 2\). \\
-    \(\Rightarrow\) si \(n > n_0, |x_n - a| \leq |x_n - x_{n_1}| + |x_{n_1} - a| < \e / 2 + \e / 2 = \e\).
+    \(\Rightarrow \) si \(n > n_0, |x_n - a| \leq |x_n - x_{n_1}| + |x_{n_1} - a| < \e / 2 + \e / 2 = \e \).
   \end{proof}
 \end{lemma}
 
 \begin{theorem}
-  Toda sucesión de Cauchy en \(\R\) es convergente.
+  Toda sucesión de Cauchy en \(\R \) es convergente.
   \begin{proof}
     Por ser de Cauchy es acotada, por ser acotada alguna subsucesión converge al \(\limsup\) o \(\liminf\) y por el lema anterior, toda la sucesión converge.
   \end{proof}
@@ -65,10 +65,10 @@ Dada una sucesión \((x_n)_{n \in \N} \subset \R\), decimos que es de Cauchy si 
 \end{definition}
 
 \begin{prop}
-  \(\lim_{n \to \infty} x_n = + \infty\) e \((y_n)_{n \in \N}\) es acotada inferiormente \(\Rightarrow \lim_{n \to \infty} (x_n + y_n) = +\infty\).
+  \(\lim_{n \to \infty} x_n = + \infty\) e \((y_n)_{n \in \N} \) es acotada inferiormente \(\Rightarrow \lim_{n \to \infty} (x_n + y_n) = +\infty\).
   \begin{proof}
-    Sea \(A > 0, \exists c \in \R : c < y_n, \forall n \in \N\).
-    Como \(\lim_{n \to \infty} x_n = + \infty, \exists n_0 \in \N : x_n > A - c, \forall n > n_0 \Rightarrow\)
+    Sea \(A > 0, \exists c \in \R : c < y_n, \forall n \in \N \).
+    Como \(\lim_{n \to \infty} x_n = + \infty, \exists n_0 \in \N : x_n > A - c, \forall n > n_0 \Rightarrow \)
     Si \(n > n_0, x_n + y_n > A - c + c = A \therefore \lim_{n \to \infty} (x_n + y_n) = +\infty\).
   \end{proof}
 \end{prop}
@@ -76,7 +76,7 @@ Dada una sucesión \((x_n)_{n \in \N} \subset \R\), decimos que es de Cauchy si 
 \begin{prop}
   \(\lim_{n \to \infty} x_n = +\infty\) y \(\exists c > 0 : y_n > c, \forall n \in \N \Rightarrow \lim_{n \to \infty} (x_n \cdot y_n) = + \infty\).
   \begin{proof}
-    Dado \(A > 0, \exists n_0 \in \N : x_n > A/c, \forall n > n_0 \Rightarrow\) si \(n > n_0, x_n \cdot y_n > (A/c) \cdot c = A \therefore \lim_{n \to \infty} x_n \cdot y_n = + \infty\).
+    Dado \(A > 0, \exists n_0 \in \N : x_n > A/c, \forall n > n_0 \Rightarrow \) si \(n > n_0, x_n \cdot y_n > (A/c) \cdot c = A \therefore \lim_{n \to \infty} x_n \cdot y_n = + \infty\).
   \end{proof}
 \end{prop}
 
@@ -84,15 +84,15 @@ Dada una sucesión \((x_n)_{n \in \N} \subset \R\), decimos que es de Cauchy si 
   \(x_n > 0 \forall n \in \N \Rightarrow \lim_{n \to \infty} x_n = 0 \iff \lim_{n \to \infty} = \frac{1}{x_n} = +\infty\).
   \begin{proof}
     Para la ida, \(\lim_{n \to \infty} x_n = 0\). Dado \(A > 0, \exists n_0 \in \N : 0 < x_n < 1/A, \forall n > n_0 \Rightarrow \frac{1}{x_n} > A, \forall n > n_0 \therefore \lim_{n \to \infty} \frac{1}{x_n} = +\infty\). \\
-    Para la vuelta \(\lim_{n \to \infty} \frac{1}{x_n} = +\infty\). Dado \(\e > 0, \exists n_0 \in \N : \frac{1}{x_n} > \frac{1}{\e}, \forall n > n_0 \Rightarrow\) \\
+    Para la vuelta \(\lim_{n \to \infty} \frac{1}{x_n} = +\infty\). Dado \(\e > 0, \exists n_0 \in \N : \frac{1}{x_n} > \frac{1}{\e}, \forall n > n_0 \Rightarrow \) \\
     \(0 < x_n < \e, \forall n > n_0 \therefore \lim_{n \to \infty} x_n = 0\).
   \end{proof}
 \end{prop}
 
 \begin{prop}
-  Sean \((x_n)_{n \in \N}, \forall n \in \N\) e \((y_n)_{n \in \N}\) sucesiones de números positivos \(\Rightarrow\) \begin{enumerate}
-    \item Si \(\exists c > 0 : x_n > c, \forall n \in \N\) y si \(\lim_{n \to \infty} y_n = 0 \Rightarrow \lim_{n \to \infty} \frac{x_n}{y_n} = +\infty\).
-    \item \((x_n)_{n \in \N}\) es acotada y \(\lim_{n \to \infty} y_n = +\infty \Rightarrow \lim_{n \to \infty} \frac{x_n}{y_n} = 0\)
+  Sean \({(x_n)}_{n \in \N}, \forall n \in \N \) e \((y_n)_{n \in \N} \) sucesiones de números positivos \(\Rightarrow \) \begin{enumerate}
+    \item Si \(\exists c > 0 : x_n > c, \forall n \in \N \) y si \(\lim_{n \to \infty} y_n = 0 \Rightarrow \lim_{n \to \infty} \frac{x_n}{y_n} = +\infty\).
+    \item \({(x_n)}_{n \in \N} \) es acotada y \(\lim_{n \to \infty} y_n = +\infty \Rightarrow \lim_{n \to \infty} \frac{x_n}{y_n} = 0\)
   \end{enumerate}
   \begin{proof}
     \begin{enumerate}
@@ -104,7 +104,7 @@ Dada una sucesión \((x_n)_{n \in \N} \subset \R\), decimos que es de Cauchy si 
 
 \section{Series numéricas}
 
-Dada una sucesión \((a_n)_{n \in \N} \subset \R\) formamos una nueva sucesión \((S_n)_{n \in \N}\). Dada por \(S_1 = a_1, S_2 = a_1 + a_2, \cdots, S_n = a_1 + \cdots + a_n\); que llamamos sumas parciales de la serie \(\sum_{n \geq 1} a_n\).
+Dada una sucesión \((a_n)_{n \in \N} \subset \R \) formamos una nueva sucesión \((S_n)_{n \in \N} \). Dada por \(S_1 = a_1, S_2 = a_1 + a_2, \ldots, S_n = a_1 + \cdots + a_n\); que llamamos sumas parciales de la serie \(\sum_{n \geq 1} a_n\).
 
 \begin{theorem}
   \(\sum_{n \geq 1} a_n\) converge \(\Rightarrow \lim_{n \to \infty} a_n = 0\).
@@ -118,7 +118,7 @@ Dada una sucesión \((a_n)_{n \in \N} \subset \R\) formamos una nueva sucesión 
 \end{theorem}
 
 \begin{eg}
-  El recíproco del teorema anterior es falso pues \(\sum_{n \geq 1} \frac{1}{n}\) diverge.
+  El recíproco del teorema anterior es falso pues \(\sum_{n \geq 1} \frac{1}{n} \) diverge.
   \begin{proof}
     \begin{align*}
       S_{2^n} & = 1 + 1/2 + (1/3 + 1/4) + (1/5 + 1/6 + 1/7 + 1/8) + \cdots + (\frac{1}{2^{n-1}+1} + \cdots + \frac{1}{2^n}) \\
@@ -129,23 +129,23 @@ Dada una sucesión \((a_n)_{n \in \N} \subset \R\) formamos una nueva sucesión 
 \end{eg}
 
 \begin{theorem}
-  \(a_n \geq 0, \forall n > 0 \Rightarrow\) \begin{align*}
+  \(a_n \geq 0, \forall n > 0 \Rightarrow \) \begin{align*}
     \sum_{n \geq 1} a_n \text{ converge } \iff S_n \text{ forman una sucesión acotada.}
   \end{align*}
   \begin{proof}
-    Por ser \(a_n \geq 0\), \((S_n)_{n \in \N}\) es monótona creciente, luego converge \(\iff\) es acotada.
+    Por ser \(a_n \geq 0\), \((S_n)_{n \in \N} \) es monótona creciente, luego converge \(\iff \) es acotada.
   \end{proof}
 \end{theorem}
 
 \begin{theorem}[Criterio de Cauchy]
-  \(\sum a_n\) converge \(\iff \forall \e > 0, \exists n_0 \in \N : | a_{n+1} + \cdots + a_{n+p} | < \e, \forall n > n_0, p \in \N\).
+  \(\sum a_n\) converge \(\iff \forall \e > 0, \exists n_0 \in \N : | a_{n+1} + \cdots + a_{n+p} | < \e, \forall n > n_0, p \in \N \).
   \begin{proof}
-    \(|s_{n+p} - s_n| = |a_{n+1} + \cdots + a_{n+p}| < \e, \forall n > n_0 \in \N \Rightarrow (s_n)_{n \in \N}\) es de Cauchy y por lo tanto convergente.
+    \(|s_{n+p} - s_n| = |a_{n+1} + \cdots + a_{n+p}| < \e, \forall n > n_0 \in \N \Rightarrow (s_n)_{n \in \N} \) es de Cauchy y por lo tanto convergente.
   \end{proof}
 \end{theorem}
 
 \begin{theorem}[Criterio de comparación]
-  Sean \(a_n, b_n \geq 0, \forall n \in \N\), dadas \(\sum_{n \geq 1} a_n\), \(\sum_{n \geq 1} b_n \Rightarrow\) Si \begin{align*}
+  Sean \(a_n, b_n \geq 0, \forall n \in \N \), dadas \(\sum_{n \geq 1} a_n\), \(\sum_{n \geq 1} b_n \Rightarrow \) Si \begin{align*}
     \exists c > 0, n_0 \in \N : a_n \leq c \cdot b_n, \forall n > n_0 \Rightarrow
   \end{align*}
   \begin{enumerate}
@@ -153,9 +153,9 @@ Dada una sucesión \((a_n)_{n \in \N} \subset \R\) formamos una nueva sucesión 
     \item[(b)] Si \(\sum a_n\) diverge entonces \(\sum b_n\) diverge.
   \end{enumerate}
 
-  Notemos que \(\sum a_n\) converge \(\iff\) Dado \(n_0 \in \N, \sum_{n \geq n_0} a_n\) converge, por lo que solo nos interesa la cola de la sucesión.
+  Notemos que \(\sum a_n\) converge \(\iff \) Dado \(n_0 \in \N, \sum_{n \geq n_0} a_n\) converge, por lo que solo nos interesa la cola de la sucesión.
   \begin{proof}
-    Si \(\sum b_n\) es convergente entonces es de Cauchy y dado \(\e > 0\), existe \(n_0 \in \N\) tal que \(\forall n \geq n_0\) se cumple: \begin{align*}
+    Si \(\sum b_n\) es convergente entonces es de Cauchy y dado \(\e > 0\), existe \(n_0 \in \N \) tal que \(\forall n \geq n_0\) se cumple: \begin{align*}
       \sum_{m = n}^{n + p} b_m < \e
     \end{align*}
     Luego, \begin{align*}
@@ -173,7 +173,7 @@ Dada una sucesión \((a_n)_{n \in \N} \subset \R\) formamos una nueva sucesión 
 \begin{theorem}
   Toda serie absolutamente convergente es convergente.
   \begin{proof}
-    Como \(\sum |a_n|\) converge \(\Rightarrow \forall \e > 0, \exists n_0 \in \N : \left| |a_{n+1}| + \cdots + |a_{n+p}| \right| < \e, \forall n > n_0, p \in \N \Rightarrow\) \\
+    Como \(\sum |a_n|\) converge \(\Rightarrow \forall \e > 0, \exists n_0 \in \N : \left| |a_{n+1}| + \cdots + |a_{n+p}| \right| < \e, \forall n > n_0, p \in \N \Rightarrow \) \\
     \(|a_{n+1} + \cdots + a_{n+p}| \leq |a_{n+1}| + \cdots + |a_{n+p}| < \e, \forall n > n_0, p \in \N \therefore \sum a_n\) converge.
   \end{proof}
 \end{theorem}

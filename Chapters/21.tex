@@ -1,22 +1,22 @@
 \section{Diferenciación de sucesiones de funciones}
 
 \begin{theorem}
-  Sea \((f_n)_{n \in \N}\) una sucesión de funciones derivables en \([a, b]\). Si \(\exists c \in [a, b] : (f_n(c))_{n \in \N}\) es convergente y si las derivadas \(f_n^{\prime}\) convergen uniformemente en \([a, b]\), digamos \(f_n^{\prime} \rightrightarrows g_n \Rightarrow f_n \rightrightarrows f\) en \([a, b]\) y \(f^{\prime} = g\).
-  Es decir que \((\lim_{n \to +\infty} f_n)^{\prime} = (\lim_{n \to +\infty} f_n^{\prime})\) siempre que las derivadas converjan uniformemente.
+  Sea \((f_n)_{n \in \N} \) una sucesión de funciones derivables en \([a, b]\). Si \(\exists c \in [a, b] : {(f_n(c))}_{n \in \N} \) es convergente y si las derivadas \(f_n^{\prime} \) convergen uniformemente en \([a, b]\), digamos \(f_n^{\prime} \rightrightarrows g_n \Rightarrow f_n \rightrightarrows f\) en \([a, b]\) y \(f^{\prime} = g\).
+  Es decir que \({(\lim_{n \to +\infty} f_n)}^{\prime} = (\lim_{n \to +\infty} f_n^{\prime})\) siempre que las derivadas converjan uniformemente.
   \begin{proof}
-    Veamos que \((f_n)_{n \in \N}\) es de Cauchy. Vamos a usar Teorema de Valor Medio aplicado en \(f_m - f_n\). \begin{align*}
+    Veamos que \((f_n)_{n \in \N} \) es de Cauchy. Vamos a usar Teorema de Valor Medio aplicado en \(f_m - f_n\). \begin{align*}
       (f_m(x) - f_n(x)) - (f_m(c) - f_n(c)) = (x-c)(f_m^{\prime}(d) - f_n^{\prime}(d)) \text{  } (\forall x \in [a, b])(d \in (x, c))
     \end{align*}
     \begin{align*}
       f_m(x) - f_n(x) = f_m(c) - f_m(c) + (x-c) (f_m^{\prime}(d) - f_n^{\prime}(d)) \Rightarrow
-    \end{align*} Como \(f_n^{\prime}\), \(f_m^{\prime}\) convergen uniformemente y \(f_n(c)\), \(f_m(c)\) convergen \(\therefore (f_n)_{n \in \N}\) es de Cauchy. Entonces \(f_n\) converge uniformemente, digamos \(f_n \rightrightarrows f\). Reescribo la igualdad anterior con \(x_0\) en vez de \(c\).
+    \end{align*} Como \(f_n^{\prime} \), \(f_m^{\prime} \) convergen uniformemente y \(f_n(c)\), \(f_m(c)\) convergen \(\therefore {(f_n)}_{n \in \N} \) es de Cauchy. Entonces \(f_n\) converge uniformemente, digamos \(f_n \rightrightarrows f\). Reescribo la igualdad anterior con \(x_0\) en vez de \(c\).
     \begin{align*}
       \dfrac{f_m(x_0) - f_n(x) - (f_m(x_0) - f_n(x_0))}{x - x_0} = f_m^{\prime}(d) - f_n^{\prime} \text{  } d \in (x, x_0)
     \end{align*}
     \begin{align*}
       \dfrac{f_m(x) - f_m(c)}{x - c} - \dfrac{f_n(x) - f_n(c)}{x - c} = f_m^{\prime}(d) - f_n^{\prime}(d)
     \end{align*}
-    Sea \(q_n(x) = \dfrac{f_n(x)-f_n(x_0)}{x-x_0}\) y \(q(x) = \dfrac{f(x)-f(x_0)}{x - x_0}\) con \(x \neq x_0\). Por la igualdad anterior \((q_n)_{n \in \N}\) es de Cauchy \(\therefore q_n \rightrightarrows q\). Así que \begin{align*}
+    Sea \(q_n(x) = \dfrac{f_n(x)-f_n(x_0)}{x-x_0} \) y \(q(x) = \dfrac{f(x)-f(x_0)}{x - x_0} \) con \(x \neq x_0\). Por la igualdad anterior \((q_n)_{n \in \N} \) es de Cauchy \(\therefore q_n \rightrightarrows q\). Así que \begin{align*}
       \lim_{x \to x_0} (\lim_{n \to +\infty} q_n(x)) = \lim_{n \to +\infty}(\lim_{x \to x_0} q_n(x)) = q(x)
     \end{align*} O sea, \begin{align*}
       \lim_{x \to x_0} \dfrac{f(x) - f(x_0)}{x-x_0} = \lim_{n \to +\infty} q_n(x_0) = g(x_0) \Rightarrow f^{\prime} = g
@@ -33,11 +33,11 @@
 Una serie de la forma \(\sum_{n \geq 0} a_n(x - x_0)^n\) se llama serie de potencias. Por simplicidad consideramos \(\sum_{n \geq 0} a_n x^n\) y el caso general se reduce a éste por un cambio de variables.
 
 \begin{theorem}
-  Sea \(\sum_{n \geq 0} a_n x^n\), o bien converge solo en \(x = 0\) o bien \(\exists r > 0\) (puede ser \(+\infty\)) tal que converge absolutamente en el intervalo \((-r, r)\) y diverge en \((-r, r)^c\). Además \(\frac{1}{r} = \limsup \sqrt[n]{|a_n|}\).
+  Sea \(\sum_{n \geq 0} a_n x^n\), o bien converge solo en \(x = 0\) o bien \(\exists r > 0\) (puede ser \(+\infty \)) tal que converge absolutamente en el intervalo \((-r, r)\) y diverge en \({(-r, r)}^c\). Además \(\frac{1}{r} = \limsup \sqrt[n]{|a_n|} \).
   \begin{proof}
-    Si \(\limsup \sqrt[n]{|a_n|} = +\infty \Rightarrow (\sqrt[n]{|a_n|})_{n \in \N}\) es no acotada, así que tampoco lo es \((|x| \cdot \sqrt[n]{|a_n|})_{n \in \N}\), \(x \neq 0 \Rightarrow |a_n x|^n \not \to 0 \Rightarrow\) diverge salvo en x = 0.
-    Si \(\limsup \sqrt[n]{|a_n|} = 0 \Rightarrow \lim_{n \to +\infty} \sqrt[n]{|a_n|} = 0 \Rightarrow \lim_{n \to +\infty} \sqrt[n]{a_n} |x| = 0\) \((\forall x \in \R) \Rightarrow \sum a_n x^n\) converge absolutamente en \(\R\).
-    Si \(\limsup \sqrt[n]{|a_n|} = \frac{1}{r} \in (0, +\infty) \Rightarrow \limsup \sqrt[n]{|a_n| x^n} = |x| \lim_{n \to +\infty} \sqrt[n]{|a_n|} = \frac{1}{r}\). Luego si \(\frac{|x|}{r} < 1\) Por el criterio la serie converge absolutamente \(\Rightarrow -r < x < r \Rightarrow \sum a_n x^n\) converge \(\forall x \in (-r , r)\).
+    Si \(\limsup \sqrt[n]{|a_n|} = +\infty \Rightarrow {(\sqrt[n]{|a_n|})}_{n \in \N} \) es no acotada, así que tampoco lo es \({(|x| \cdot \sqrt[n]{|a_n|})}_{n \in \N} \), \(x \neq 0 \Rightarrow |a_n x|^n \not \to 0 \Rightarrow \) diverge salvo en x = 0.
+    Si \(\limsup \sqrt[n]{|a_n|} = 0 \Rightarrow \lim_{n \to +\infty} \sqrt[n]{|a_n|} = 0 \Rightarrow \lim_{n \to +\infty} \sqrt[n]{a_n} |x| = 0\) \((\forall x \in \R) \Rightarrow \sum a_n x^n\) converge absolutamente en \(\R \).
+    Si \(\limsup \sqrt[n]{|a_n|} = \frac{1}{r} \in (0, +\infty) \Rightarrow \limsup \sqrt[n]{|a_n| x^n} = |x| \lim_{n \to +\infty} \sqrt[n]{|a_n|} = \frac{1}{r} \). Luego si \(\frac{|x|}{r} < 1\) Por el criterio la serie converge absolutamente \(\Rightarrow -r < x < r \Rightarrow \sum a_n x^n\) converge \(\forall x \in (-r , r)\).
   \end{proof}
 \end{theorem}
 
@@ -49,7 +49,7 @@ Una serie de la forma \(\sum_{n \geq 0} a_n(x - x_0)^n\) se llama serie de poten
 \end{theorem}
 
 \begin{corollary}
-  La función \(f: (-r, r) \to \R\), \(f(x) = \sum a_n x^n\) es continua en el intervalo de convergencia \((-r, r)\).
+  La función \(f: (-r, r) \to \R \), \(f(x) = \sum a_n x^n\) es continua en el intervalo de convergencia \((-r, r)\).
 \end{corollary}
 
 Notemos que una serie de potencias puede no converger uniformemente en \((-r, r)\). En efecto si una serie de funciones continuas converge uniformemente en un conjunto, también converge uniformemente en su clasura. La demostración queda como ejercicio.
@@ -62,7 +62,7 @@ Notemos que una serie de potencias puede no converger uniformemente en \((-r, r)
 
 \begin{lemma}
   Sea \(\sum_p \alpha_p\) una serie no necesariamente convergente, con sumas parciales acotadas. Es decir que si \(S_p = \alpha_1 + \cdots + \alpha_p\) \(\exists k > 0 : |S_p| \leq k\) \((\forall p \in \N)\).
-  Si además \(b_1 \geq b_2 \geq \cdots \geq b_p \geq 0\) es decreciente \(\Rightarrow \forall p \in \N\) vale que \(|\alpha_1 b_1 + \cdots + \alpha_p b_p| \leq k b_1\).
+  Si además \(b_1 \geq b_2 \geq \cdots \geq b_p \geq 0\) es decreciente \(\Rightarrow \forall p \in \N \) vale que \(|\alpha_1 b_1 + \cdots + \alpha_p b_p| \leq k b_1\).
   \begin{proof}
     \begin{align*}
       |\alpha_1 b_1 + \cdots + \alpha_p b_p| = |S_1 b_1 + (S_2 - S_1) b_2 + \cdots (S_p - S_{p-1}) b_p|
@@ -76,12 +76,12 @@ Notemos que una serie de potencias puede no converger uniformemente en \((-r, r)
 \begin{theorem}[Abel]
   Sea \(\sum a_n x^n\) con radio de convergencia \(0 < r < +\infty\). Si \(\sum a_n r^n\) converge \(\Rightarrow \sum a_n x^n\) converge en \([0, r]\). En particular \(\lim_{x \to r^-} (\sum a_n x^n) = \sum a_n r^n\).
   \begin{proof}
-    Dado \(\e > 0\), \(\exists n_0 \in \N : |a_{n+1} r^{n+1} + \cdots + a_{n+p} r^{n+p}| < \e\) \((\forall p \in \N) (\forall n > n_0)\). Si llamo \(\alpha_p = a_{n+p} r^{n+p}\) \((\forall p \in \N)(n > n_0) \Rightarrow \alpha_p\)
-    cumplen las hipótesis del lema anterior con \(k = \e\), \((\forall x \in [0, r])\) tenemos que \begin{align*}
+    Dado \(\e > 0\), \(\exists n_0 \in \N : |a_{n+1} r^{n+1} + \cdots + a_{n+p} r^{n+p}| < \e \) \((\forall p \in \N) (\forall n > n_0)\). Si llamo \(\alpha_p = a_{n+p} r^{n+p} \) \((\forall p \in \N)(n > n_0) \Rightarrow \alpha_p\)
+    cumplen las hipótesis del lema anterior con \(k = \e \), \((\forall x \in [0, r])\) tenemos que \begin{align*}
       |a_{n+1} r^{n+1} + \cdots + a_{n+p} r^{n+p}| = |\alpha_1 \frac{x}{r} + \cdots + \alpha_p (\frac{x}{r})^p| (\frac{x}{r})^n
     \end{align*} Así que usando el lema para \(b_p = (\frac{x}{r})^p\), vale que \(\forall n > n_0\), \(\forall x \in [0, r]\)
     \begin{align*}
-      |a_{n+1} x^{n+1} + \cdots + a_{n + p} x^{n+p}| < \e \cdot (\frac{x}{r} \cdot (\frac{x}{r})^n) \leq \e
+      |a_{n+1} x^{n+1} + \cdots + a_{n + p} x^{n+p}| < \e \cdot (\frac{x}{r} \cdot {(\frac{x}{r})}^n) \leq \e
     \end{align*} \(\therefore \sum a_n x^n\) converge uniformemente en \([0, r] \Rightarrow \sum a_n x^n = f(x)\) es continua en \([0, r] \Rightarrow \sum a_n r^n = f(r) = \lim_{x \to r^-} f(x) = \lim_{x \to r^-} (\sum a_n x^n)\).
   \end{proof}
 \end{theorem}
@@ -96,55 +96,55 @@ Notemos que una serie de potencias puede no converger uniformemente en \((-r, r)
 \begin{theorem}
   Si \(\sum a_n x^n\) converge en \([\alpha, \beta] \Rightarrow \int_{\alpha}^{\beta} \sum a_n x^n dx = \sum \frac{a_n}{n+1} (\beta^{n+1} - \alpha^{n+1})\).
   \begin{proof}
-    Debe ser \([\alpha, \beta] \subset [-r, r] \Rightarrow\) por el Teorema de Abel la convergencia es uniforme.
+    Debe ser \([\alpha, \beta] \subset [-r, r] \Rightarrow \) por el Teorema de Abel la convergencia es uniforme.
   \end{proof}
 \end{theorem}
 
-Notemos que si \(\sum a_n x^n\) no converge en el extremo \(r\) de su intervalo de convergencia igual se puede integrar término a término la integral impropia. \(\int_0^r \sum a_n x^n dx\) si \(\sum \frac{a_n \cdot r^{n+1}}{n+1}\) converja.
-Esto es porque \(\int_0^r \sum a_n x^n dx = \lim_{t \to r^-} \int_0^t (\sum a_n x^n) dx = \\lim_{t \to r^-} \sum \frac{a_n}{n+1} t^{n+1} = \sum \frac{a_n \cdot r^{n+1}}{n+1}\).
+Notemos que si \(\sum a_n x^n\) no converge en el extremo \(r\) de su intervalo de convergencia igual se puede integrar término a término la integral impropia.\( \int_0^r \sum a_n x^n dx\) si \(\sum \frac{a_n \cdot r^{n+1}}{n+1} \) converja.
+Esto es porque \(\int_0^r \sum a_n x^n dx = \lim_{t \to r^-} \int_0^t (\sum a_n x^n) dx = \\lim_{t \to r^-} \sum \frac{a_n}{n+1} t^{n+1} = \sum \frac{a_n \cdot r^{n+1}}{n+1} \).
 
 \begin{theorem}
-  \(f(x) = \sum a_n x^n\) es derivable en todo el intervalo de convergencia \((-r, r)\) y \(f^{\prime}(x) = \sum a_n \cdot n \cdot x^{n-1}\) con mismo radio.
+  \(f(x) = \sum a_n x^n\) es derivable en todo el intervalo de convergencia \((-r, r)\) y \(f^{\prime}(x) = \sum a_n \cdot n \cdot x^{n-1} \) con mismo radio.
   \begin{proof}
     Sabemos que la serie converge uniformemente en todo intervalo compacto contenido en \((-r, r)\) y que podemos derivar término a término la serie original si la serie de derivadas converge uniformemente.
-    Basta ver que \(\sum a_n \cdot n \cdot x^{n-1}\) tienen el mismo intervalo de convergencia. \(\sum a_n \cdot n \cdot x^{n-1}\) converge \(\iff x \sum a_n x^{n-1} = \sum a_n x^n\) converge. Esta serie tiene \(\frac{1}{r} = \limsup \sqrt[n]{|a_n| \cdot n} = \limsup \sqrt[n]{|a_n|}\).
+    Basta ver que \(\sum a_n \cdot n \cdot x^{n-1} \) tienen el mismo intervalo de convergencia. \(\sum a_n \cdot n \cdot x^{n-1} \) converge \(\iff x \sum a_n x^{n-1} = \sum a_n x^n\) converge. Esta serie tiene \(\frac{1}{r} = \limsup \sqrt[n]{|a_n| \cdot n} = \limsup \sqrt[n]{|a_n|} \).
   \end{proof}
 \end{theorem}
 
 \begin{corollary}
-  \(f(x) = \sum a_n x^n\) tiene derivadas de cualquier orden en todo su intervalo de convergencia y sus derivadas sucesivas se pueden calcular derivando término a término. Entonces \(\forall x \in (-r, r)(\forall k \in \N) \Rightarrow f^k(x) = \sum n \cdot (n-1) \cdots (n-k+1) \cdot a_n \cdot x^{n-k}\).
-  En particular \(a_k = \dfrac{f^k(0)}{k!}\). Así que la serie de potencias que converge a \(f\) en \((-r, r)\) es su serie de Taylor alrededor de \(x = 0\).
+  \(f(x) = \sum a_n x^n\) tiene derivadas de cualquier orden en todo su intervalo de convergencia y sus derivadas sucesivas se pueden calcular derivando término a término. Entonces \(\forall x \in (-r, r)(\forall k \in \N) \Rightarrow f^k(x) = \sum n \cdot (n-1) \cdots (n-k+1) \cdot a_n \cdot x^{n-k} \).
+  En particular \(a_k = \dfrac{f^k(0)}{k!} \). Así que la serie de potencias que converge a \(f\) en \((-r, r)\) es su serie de Taylor alrededor de \(x = 0\).
 \end{corollary}
 
 \section{Familias equicontinuas}
 
-Dada una familia \(E\) de funciones continuas con dominio común queremos ver cuando podemos garantizar que toda sucesión \((f_n)_{n \in \N}\) contenida en \(E\) tiene una subsucesión uniformemente convergente.
+Dada una familia \(E\) de funciones continuas con dominio común queremos ver cuando podemos garantizar que toda sucesión \({(f_n)}_{n \in \N} \) contenida en \(E\) tiene una subsucesión uniformemente convergente.
 
-A diferencia de lo que ocurre con sucesiones numéricas no basta con que la sucesión sea acotada. Por ejemplo si \(f_n: [0, 1] \to \R\), \(f(x) = x^n(1 - x^n) \Rightarrow f_n \to 0\), pero \(f_n(\sqrt[n]{\frac{1}{2}}) = \frac{1}{4}\) \((\forall n \in \N)\).
+A diferencia de lo que ocurre con sucesiones numéricas no basta con que la sucesión sea acotada. Por ejemplo si \(f_n: [0, 1] \to \R \), \(f(x) = x^n(1 - x^n) \Rightarrow f_n \to 0\), pero \(f_n(\sqrt[n]{\frac{1}{2}}) = \frac{1}{4} \) \((\forall n \in \N)\).
 Así que ninguna subsucesión puede converger uniformemente a \(0\).
 
 \begin{definition}[Equicontinuidad]
-  Sea \(X \subset \R\) y \(E\) una familia de funciones \(f: X \to \R\) dado \(x_0 \in X\), decimos que la familia \(E\) es equicontinua en \(x_0\) si dado \(\e > 0\), \(\exists \delta > 0 : |x - x_0| < \delta \Rightarrow |f(x) - f(x_0)| < \e\) (\(\forall f \in E)\) con el mismo \(\delta\) \((\forall f)\).
+  Sea \(X \subset \R \) y \(E\) una familia de funciones \(f: X \to \R \) dado \(x_0 \in X\), decimos que la familia \(E\) es equicontinua en \(x_0\) si dado \(\e > 0\), \(\exists \delta > 0 : |x - x_0| < \delta \Rightarrow |f(x) - f(x_0)| < \e \) (\(\forall f \in E)\) con el mismo \(\delta \) \((\forall f)\).
 \end{definition}
 
 Una familia (o sucesión) es equicontinua si es equicontinua en todo punto del dominio.
 
 \begin{theorem}
-  Sea \(f_n: X \to \R\) continuas, \(f: X \to \R\) y \(f_n \rightrightarrows f \Rightarrow (f_n)_{n \in \N}\) es equicontinua.
+  Sea \(f_n: X \to \R \) continuas, \(f: X \to \R \) y \(f_n \rightrightarrows f \Rightarrow (f_n)_{n \in \N} \) es equicontinua.
   \begin{proof}
-    Sea \(\e > 0\), \(x_0 \in X\), \(\exists n_0 \in \N : |f_n(x) - f(x)| < \frac{\e}{3}\) \((\forall x \in X)\) \((\forall n > n_0)\) por la convergencia uniforme.
-    Como \(f\) y \(f_n\) son continuas \(\exists \delta > 0 : |x - x_0| < \delta_i \Rightarrow |f(x) - f(x_0)| < \frac{\e}{3}\) y \(|f_i(x) - f_i(x_0)| < \frac{\e}{3}\) \((\forall i \in \{1, \cdots, n_0\})\).
-    Sea \(\delta = min(\delta_1, \delta_2, \cdots, \delta_{n_0}) \Rightarrow\) Si \(n > n_0\) y \(|x - x_0| < \delta \Rightarrow\) \begin{align*}
+    Sea \(\e > 0\), \(x_0 \in X\), \(\exists n_0 \in \N : |f_n(x) - f(x)| < \frac{\e}{3} \) \((\forall x \in X)\) \((\forall n > n_0)\) por la convergencia uniforme.
+    Como \(f\) y \(f_n\) son continuas \(\exists \delta > 0 : |x - x_0| < \delta_i \Rightarrow |f(x) - f(x_0)| < \frac{\e}{3} \) y \(|f_i(x) - f_i(x_0)| < \frac{\e}{3} \) \((\forall i \in \{1, \ldots, n_0\})\).
+    Sea \(\delta = \min(\delta_1, \delta_2, \ldots, \delta_{n_0}) \Rightarrow \) Si \(n > n_0\) y \(|x - x_0| < \delta \Rightarrow \) \begin{align*}
       |f_n(x) - f_n(x_0)| \leq |f_n(x) - f(x)| + |f(x) - f(x_0)| + |f(x_0) - f_n(x_0)| < \e
     \end{align*}
   \end{proof}
 \end{theorem}
 
 \begin{eg}
-  \(f_n(x) = \dfrac{sen(nx)}{n}\) es equicontinua en todo \(\R\).
+  \(f_n(x) = \dfrac{sen(nx)}{n} \) es equicontinua en todo \(\R \).
 \end{eg}
 
 \begin{eg}
-  \(f_n(x) = nx\) no es equicontinua en ningún \(x_0 \in \R\). Sea \(\e = \frac{1}{2}\). \(\forall \delta > 0\), \(\exists n \in \N : \frac{1}{n} < \delta \Rightarrow x = x_0 + \frac{1}{n}\) cumple que
-  \(|x - x_0| = \frac{1}{n} < \delta\), pero \(|f_n(x) - f_n(x_0)| = |nx - nx_0| = |n x_0 + 1 - n x_0| = 1 > \e = \frac{1}{2}\).
+  \(f_n(x) = nx\) no es equicontinua en ningún \(x_0 \in \R \). Sea \(\e = \frac{1}{2} \). \(\forall \delta > 0\), \(\exists n \in \N : \frac{1}{n} < \delta \Rightarrow x = x_0 + \frac{1}{n} \) cumple que
+  \(|x - x_0| = \frac{1}{n} < \delta \), pero \(|f_n(x) - f_n(x_0)| = |nx - nx_0| = |n x_0 + 1 - n x_0| = 1 > \e = \frac{1}{2} \).
 \end{eg}

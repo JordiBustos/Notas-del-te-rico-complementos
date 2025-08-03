@@ -1,7 +1,7 @@
 \section{Conjuntos numerables}
 
 \begin{definition}[Conjunto numerable]
-    Un conjunto \(X\) es numerable si \(X \sim \N\). Cada biyección se llama una enumeración de los elementos de \(X\).
+    Un conjunto \(X\) es numerable si \(X \sim \N \). Cada biyección se llama una enumeración de los elementos de \(X\).
 \end{definition}
 
 \begin{definition}[Conjunto a lo sumo numerable]
@@ -9,19 +9,19 @@
 \end{definition}
 
 \begin{eg}
-    Los números pares, \(P = \{ 2n:n \in \N \}\).
+    Los números pares, \(P = \{ 2n:n \in \N \} \).
     \begin{proof}
-        \(f(n) = 2n\), \(f: \N \to P\) es biyectiva \(\therefore\) es numerable.
+        \(f(n) = 2n\), \(f: \N \to P\) es biyectiva \(\therefore \) es numerable.
     \end{proof}
 \end{eg}
 
 \begin{eg}
     \(\Z\) es numerable.
     \begin{proof}
-        Definimos \(f: \Z \to \N\) como \(f(n) = \begin{cases}
+        Definimos \(f: \Z \to \N \) como \(f(n) = \begin{cases}
                 2n    & \text{si } n >0,     \\
                 -2n+1 & \text{si } n \leq 0.
-            \end{cases}\) y \(f^{-1}\) es una enumeración.
+            \end{cases} \) y \(f^{-1} \) es una enumeración.
     \end{proof}
 \end{eg}
 
@@ -32,7 +32,7 @@
         Dado \(x \in X\), puede pasar que \(x \in f(X)\) o \(x \notin f(X)\). Definimos \(B = \{ x \in X: x \notin f(X) \} \subset X\).Como \(f\) es suryectiva se tiene que \(\exists y \in Y: f(y) = B\). \\
         Si \(y \notin B=f(y) \Rightarrow y \notin f(y) \Rightarrow y \in B\). \\
         Si \(y \in B = f(y) \Rightarrow y \in f(y) \Rightarrow y \notin B\). \\
-        Absurdo en ambos casos, luego \(\Rightarrow \nexists f\) biyectiva \(\therefore\) \(card(X) \neq card(P)\).
+        Absurdo en ambos casos, luego \(\Rightarrow \nexists f\) biyectiva \(\therefore \) \(card(X) \neq card(P)\).
     \end{proof}
 \end{theorem}
 
@@ -52,9 +52,9 @@
     \end{proof}
 \end{prop}
 
-\section{Cantor - Schröder - Bernstein}
+\section{Cantor, Schröder, Bernstein}
 
-\begin{theorem}[Cantor - Schröder - Bernstein]
+\begin{theorem}[Cantor, Schröder, Bernstein]
     Si \(\exists f: X \to Y\) y \(g: Y \to X\) inyectivas \(\Rightarrow \exists h:X \to Y\) biyectiva.
 
     \begin{proof}
@@ -68,18 +68,18 @@
             \(A \subseteq B \iff f(A) \subseteq f(B) \iff y - f(B) \subseteq y - f(A) \iff g(y-f(B)) \subseteq g(y-f(A)) \iff X - \phi(A) \subseteq X - \phi(B)\)
         \end{proof}
 
-        Sea \(\mathscr{C} = \{ C \subset X: \phi(C) \subset C \} \neq \varnothing\) pues \(X \in \mathscr{C}\) y \(A = \bigcap_{C \in \mathscr{C}} C \neq \varnothing\), \(A \subset C, \forall C \in \mathscr{C}\) y \(\phi\) es creciente y tenemos que \(\phi(C) \subset C \Rightarrow \phi(A) \subset \phi(C) \subset C \Rightarrow \phi(C) \in A\). Además, usando otra vez que \(\phi\) es creciente, \(\phi(\phi(A)) \subset \phi(A) \Rightarrow \phi(A) \in \mathscr{C} \Rightarrow A \subset \phi(A) \Rightarrow A = \phi(A)\).
+        Sea \(\mathscr{C} = \{ C \subset X: \phi(C) \subset C \} \neq \varnothing \) pues \(X \in \mathscr{C} \) y \(A = \bigcap_{C \in \mathscr{C}} C \neq\varnothing \), \(A \subset C, \forall C \in \mathscr{C} \) y \(\phi\) es creciente y tenemos que \(\phi(C) \subset C \Rightarrow \phi(A) \subset \phi(C) \subset C \Rightarrow \phi(C) \in A\). Además, usando otra vez que \(\phi\) es creciente, \(\phi(\phi(A)) \subset \phi(A) \Rightarrow \phi(A) \in \mathscr{C} \Rightarrow A \subset \phi(A) \Rightarrow A = \phi(A) \).
         Sean \(X_1 = A\), \(X-X_1=X_2=g_2(Y_2)\) \\
-        \(Y_1 = f(A)\), \(Y_2 = Y - f(A) \Rightarrow\) \\
+        \(Y_1 = f(A)\), \(Y_2 = Y - f(A) \Rightarrow \) \\
         \(A = \phi(A) = X-g(Y-f(A)) \iff X-A = g(Y-f(A)) \iff X-X_1=g(Y_2) = X_2 \therefore f:X_1 \to Y_1\) y \(g: X_2 \to Y_2\) son biyectivas.
     \end{proof}
 \end{theorem}
 
 \begin{eg}
-    \(\N \sim \Z \sim \Q\).
+    \(\N \sim \Z \sim \Q \).
     \begin{proof}
         \(f:\Z \to \Q, f(x) = x\) es inyectiva. \\
-        Sea \(a \in \Z, b \in \N\), \(f: \Q \to \Z, f\left(\dfrac{a}{b}\right)=sign(a) \cdot 2^a \cdot 3^b\) es inyectiva por Teorema Fundamental de la Aritmética. Luego por el teorema anterior \(\Z \sim \Q\).
+        Sea \(a \in \Z, b \in \N \), \(f: \Q \to \Z, f\left(\dfrac{a}{b}\right)=sign(a) \cdot 2^a \cdot 3^b\) es inyectiva por Teorema Fundamental de la Aritmética. Luego por el teorema anterior \(\Z \sim \Q \).
     \end{proof}
 \end{eg}
 
@@ -87,109 +87,109 @@
     \((\N \times \N)\) es numerable.
     \begin{proof}
         \(f: \N \to \N\times \N, f(n)=(1, n)\) es inyectiva.
-        \(f: \N\times \N \to \N , f((n, m))= 2^n \cdot 3^m\) es inyectiva por Teorema Fundamental de la Aritmética \(\therefore\) es numerable.
+        \(f: \N\times \N \to \N , f((n, m))= 2^n \cdot 3^m\) es inyectiva por Teorema Fundamental de la Aritmética \(\therefore \) es numerable.
     \end{proof}
 \end{eg}
 
 \section{Los Reales son no numerables}
 
 \begin{theorem}
-    \(\R\)  no es numerable.
+    \(\R \)  no es numerable.
     \begin{proof}
-        Supongamos que es numerable \(\Rightarrow\)
-        \(\exists f: \N \to \R\) biyectiva. A cada número real \(x_n\) le asignamos un intervalo centrado en ese punto de longitud \(2^{-n}\). La unión de todos esos intervalos tiene longitud menor o igual a la suma de las longitudes (se pueden superponer).
+        Supongamos que es numerable \(\Rightarrow \)
+        \(\exists f: \N \to \R \) biyectiva. A cada número real \(x_n\) le asignamos un intervalo centrado en ese punto de longitud \(2^{-n} \). La unión de todos esos intervalos tiene longitud menor o igual a la suma de las longitudes (se pueden superponer).
         \begin{align*}
             \left|\bigcup_{n \in \N} I_{x_n}\right| \leq \sum_{n \geq 1} |I_{x_n}| = \sum_{n \in \N}\dfrac{1}{2^n} = 1
         \end{align*}
-        Se cubrió un intervalo de longitud \(1\) de toda la recta real, por lo tanto quedan reales afuera y eso es un absurdo \(\therefore \R\) no es numerable.
+        Se cubrió un intervalo de longitud \(1\) de toda la recta real, por lo tanto quedan reales afuera y eso es un absurdo \(\therefore \R \) no es numerable.
     \end{proof}
 \end{theorem}
 
 \begin{eg}
-    \(A = \{ (a_n)_{n \geq 1} : a_n \in \{0, 1\}\} = \{0, 1\}^{\N}\). Es decir las sucesiones de ceros y unos no es un conjunto numerable.
+    \(A = \{ (a_n)_{n \geq 1} : a_n \in \{0, 1\}\} = \{0, 1\}^{\N} \). Es decir las sucesiones de ceros y unos no es un conjunto numerable.
     \begin{proof}
-        Supongamos que si es numerable \(\Rightarrow\) podemos escribir \\ \(A = \{ (a_n^1)_{n\geq1}, \cdots, (a_n^j)_{n\geq1}, \cdots \}\), todas las sucesiones de ceros y unos están contenidas en \(A\). La sucesión donde \(a_i=1-a_n^n\) (en el i-ésimo lugar tiene lo contrario de lo que la n-ésima sucesión tiene en el lugar n) debería ser una de ellas, pero eso es absurdo \(\therefore\) es no numerable.
+        Supongamos que si es numerable \(\Rightarrow \) podemos escribir \\ \(A = \{ (a_n^1)_{n\geq1}, \ldots, (a_n^j)_{n\geq1}, \cdots \} \), todas las sucesiones de ceros y unos están contenidas en \(A\). La sucesión donde \(a_i=1-a_n^n\) (en el i-ésimo lugar tiene lo contrario de lo que la n-ésima sucesión tiene en el lugar n) debería ser una de ellas, pero eso es absurdo \(\therefore \) es no numerable.
     \end{proof}
 \end{eg}
 
-La idea del último ejemplo (argumento diagonal), se puede adaptar para probar que \((0, 1]\) es no numerable.
+La idea del último ejemplo (argumento diagonal), se puede adaptar para probar que \((0, 1] \) es no numerable.
 
 \subsection{Principio de encaje de Intervalos}
 
 \begin{theorem}
-    Sea \(I_1 \supset I_2 \supset I_3 \supset \cdots\) una sucesión de intervalos cerrados y acotados \(I_n = [a_n, b_n] \Rightarrow\)
-    La intersección de todos es no vacía y \(\bigcap_{n=1}^{\infty} I_n = [a,b]\) con \(a = sup(a_n), b=inf(b_n)\).
+    Sea \(I_1 \supset I_2 \supset I_3 \supset \cdots \) una sucesión de intervalos cerrados y acotados \(I_n = [a_n, b_n] \Rightarrow \)
+    La intersección de todos es no vacía y \(\bigcap_{n=1}^{\infty} I_n = [a,b]\) con \(a = \sup(a_n), b=\inf(b_n)\).
     \begin{proof}
-        Sea \(n \in \N\), tenemos que \(I_{n+1} \subseteq I_n\) con \(I_n = [a_n\text{, } b_n] \, \forall n \in \N\). Entonces, \begin{align*}
+        Sea \(n \in \N \), tenemos que \(I_{n+1} \subseteq I_n\) con \(I_n = [a_n\text{, } b_n] \, \forall n \in \N \). Entonces, \begin{align*}
             a_n \leq a_{n+1} \leq b_{n+1} \leq b_n
         \end{align*}
-        Sea \(A = \{ a_n : n \in \N \}\) y \(B = \{ b_n : n \in \N \}\). Claramente \begin{align*}
+        Sea \(A = \{ a_n : n \in \N \} \) y \(B = \{ b_n : n \in \N \} \). Claramente \begin{align*}
             a_1 \leq a_n \leq b_n \leq b_1 \, \forall n \in \N
         \end{align*}
-        Luego \(A\) y \(B\) están acotados y podemos llamar \(\alpha = \sup(A)\), \(\beta = \inf(B)\) con \(\alpha \leq \beta\). Luego, \begin{align*}
+        Luego \(A\) y \(B\) están acotados y podemos llamar \(\alpha = \sup(A)\), \(\beta = \inf(B)\) con \(\alpha \leq \beta \). Luego, \begin{align*}
              & a_1 \leq \cdots \leq a_n \leq \alpha \leq \beta \leq b_n \leq \cdots \leq b_1 \quad \forall n \in \N \\
              & \Rightarrow [\alpha\text{, }\beta] \subseteq I_n \quad \forall n \in \N                              \\
              & \Rightarrow [\alpha\text{, }\beta] \subseteq \bigcap_{n \geq 1} I_n                                  \\
              & \Rightarrow \bigcap_{n \geq 1} I_n \neq \varnothing
         \end{align*}
-        Notemos que si \(x < \alpha\) entonces \(\exists a_i \in A\) tal que \(x < a_i \Rightarrow x \notin I_i \Rightarrow x \notin \bigcap_{n \geq 1} I_n\).
+        Notemos que si \(x < \alpha \) entonces \(\exists a_i \in A\) tal que \(x < a_i \Rightarrow x \notin I_i \Rightarrow x \notin \bigcap_{n \geq 1} I_n\).
         Análogamente si \(x < \beta \therefore \bigcap_{n \geq 1} I_n = [\alpha\text{, }\beta]\).
     \end{proof}
 \end{theorem}
 
 \begin{theorem}
-    \(\R\)  no es numerable.
+    \(\R \)  no es numerable.
     \begin{proof}
         Supongamos que \(\exists f:\N \to \R : f(n) = x_n\). \\
         Definimos la sucesión de \(\mathbb{I}_n\) de la siguiente forma: \\
-        Tomamos \([0, 1]\) y divido en \(3\) cerrados iguales, luego, al menos uno no contiene a \(x_1\), lo elijo como \(\mathbb{I}_1\) (si  hay dos que no lo contienen elijo alguno). Inductivamente lo divido en \(3\) intervalos iguales y al menos \(1\) de ellos no contiene a \(x_{n+1}\) y lo elijo como \(\mathbb{I}_{n+1}\). Por el principio anterior la \(\mathbb{I} = \bigcap_{n=1}^\infty \mathbb{I}_n \neq \varnothing\) (tiene un único elemento y la longitud de los intervalos tiende a cero). \\
-        Si \(x \in \mathbb{I}\) no puede ser igual o mayor que \(x_1\) (por construcción se los excluye en algún paso) \(\Rightarrow \R\) es no numerable, pues ese \(x\) queda afuera.
+        Tomamos \([0, 1]\) y divido en \(3\) cerrados iguales, luego, al menos uno no contiene a \(x_1\), lo elijo como \(\mathbb{I}_1\) (si  hay dos que no lo contienen elijo alguno). Inductivamente lo divido en \(3\) intervalos iguales y al menos \(1\) de ellos no contiene a \(x_{n+1} \) y lo elijo como \(\mathbb{I}_{n+1} \). Por el principio anterior la \(\mathbb{I} = \bigcap_{n=1}^\infty \mathbb{I}_n \neq \varnothing \) (tiene un único elemento y la longitud de los intervalos tiende a cero). \\
+        Si \(x \in \mathbb{I} \) no puede ser igual o mayor que \(x_1\) (por construcción se los excluye en algún paso) \(\Rightarrow \R \) es no numerable, pues ese \(x\) queda afuera.
     \end{proof}
 \end{theorem}
 
 \section{Propiedades}
 
 \begin{theorem}
-    Sea \(X\) numerable, \(Y \subset X \Rightarrow\) \(Y\) es a lo sumo numerable.
+    Sea \(X\) numerable, \(Y \subset X \Rightarrow \) \(Y\) es a lo sumo numerable.
     \begin{proof}
-        Supongamos que \(Y\) no es finito. Como \(X \sim Y\) puedo pensar \(X = (x_n)_{n\geq1}\) y defino
+        Supongamos que \(Y\) no es finito. Como \(X \sim Y\) puedo pensar \(X = {(x_n)}_{n\geq1} \) y defino
         \begin{align*}
-            n_1=min\{ n \in \N: x_n \in Y \}
+            n_1= \min\{ n \in \N: x_n \in Y \}
         \end{align*}
-        E inductivamente elegimos \(n_1, n_2, \cdots , n_k, \cdots\). Definimos \(n_k = min\{ n \in \N : n > n_k, x_n \in Y \} \Rightarrow\) Tenemos la sucesión estrictamente creciente de naturales y podemos definir \(g: \N \to Y, g(K) = x_{n_k}\). \(g\) es inyectiva si \(K\neq Y, n_k \neq n_j\) por ser estrictamente creciente y es suryectiva, si \(y \in Y \Rightarrow y = x_j\). Para ningún \(j \Rightarrow \exists k :n_k\leq j \leq n_k+1\). Como \(j \leq n_{k+1}=\{ n>n_k:x_n \in Y \}\) debe ser \(j = n_k\).
+        E inductivamente elegimos \(n_1, n_2, \ldots , n_k, \cdots \). Definimos \(n_k = \min\{ n \in \N : n > n_k, x_n \in Y \} \Rightarrow \) Tenemos la sucesión estrictamente creciente de naturales y podemos definir \(g: \N \to Y, g(K) = x_{n_k} \text{. } g\) es inyectiva si \(K\neq Y, n_k \neq n_j\) por ser estrictamente creciente y es suryectiva, si \(y \in Y \Rightarrow y = x_j\). Para ningún \(j \Rightarrow \exists k :n_k\leq j \leq n_k+1\). Como \(j \leq n_{k+1}=\{ n>n_k:x_n \in Y \} \) debe ser \(j = n_k\).
     \end{proof}
 \end{theorem}
 
 \begin{corollary}
-    \(f: X \to Y\) inyectiva e \(Y\) numerable \(\Rightarrow\) \(X\) es a lo sumo numerable.
+    \(f: X \to Y\) inyectiva e \(Y\) numerable \(\Rightarrow \) \(X\) es a lo sumo numerable.
     \begin{proof}
-        \(f\) es inyectiva \(\Rightarrow X \sim f(X)\) y como \(f(X) \subset Y \Rightarrow\) es a lo sumo numerable por el teorema anterior.
+        \(f\) es inyectiva \(\Rightarrow X \sim f(X)\) y como \(f(X) \subset Y \Rightarrow \) es a lo sumo numerable por el teorema anterior.
     \end{proof}
 \end{corollary}
 
 \begin{theorem}
     \(f: X \to Y\) suryectiva, \(X\) a lo sumo numerable \(\Rightarrow Y\) es a lo sumo numerable.
     \begin{proof}
-        \(f: X \to Y\) es suryectiva \(\exists g: Y \to X\) inversa a derecha tal que \(f \circ g = id_Y \Rightarrow f\) es inversa a izquierda de \(g \Rightarrow g\) es inyectiva \(\therefore\) por el corolario anterior \(Y\) es a lo sumo numerable.
+        \(f: X \to Y\) es suryectiva \(\exists g: Y \to X\) inversa a derecha tal que \(f \circ g = id_Y \Rightarrow f\) es inversa a izquierda de \(g \Rightarrow g\) es inyectiva \(\therefore \) por el corolario anterior \(Y\) es a lo sumo numerable.
     \end{proof}
 \end{theorem}
 
 \begin{theorem}
-    Para cada \(m \in \N\). Sea \(x_n\) un conjunto numerable \(\Rightarrow \bigcup_{n \in \N}x_n = X\) es numerable.
+    Para cada \(m \in \N \). Sea \(x_n\) un conjunto numerable \(\Rightarrow \bigcup_{n \in \N}x_n = X\) es numerable.
     \begin{proof}
-        \(x_n\) es numerable \(\Rightarrow \exists f:\N \to x_n\) biyectiva. Sea \(f:\N \times \N \to \bigcup_{n \in \N} x_n\) definida como \(f(n, n) = f_n(n)\). Veamos que es suryectiva, dado \(x \in X\), \(\exists n \in \N:x \in x_n \Rightarrow \exists m:x=f_n(m)\) luego \(X=f_n(m) = f(n, m)\). Como \(\N \times \N\) es numerable y \(f: \N \times \N \to \bigcup_{n \geq 1}{x_n}\) es suryectiva \(\Rightarrow \bigcup_{n \geq 1}x_n\) es a lo sumo numerable \(\therefore\) como es infinito, es numerable.
+        \(x_n\) es numerable \(\Rightarrow \exists f:\N \to x_n\) biyectiva. Sea \(f:\N \times \N \to \bigcup_{n \in \N} x_n\) definida como \(f(n, n) = f_n(n)\). Veamos que es suryectiva, dado \(x \in X\), \(\exists n \in \N:x \in x_n \Rightarrow \exists m:x=f_n(m)\) luego \(X=f_n(m) = f(n, m)\). Como \(\N \times \N \) es numerable y \(f: \N \times \N \to \bigcup_{n \geq 1}{x_n} \) es suryectiva \(\Rightarrow \bigcup_{n \geq 1}x_n\) es a lo sumo numerable \(\therefore \) como es infinito, es numerable.
     \end{proof}
 \end{theorem}
 
 \begin{eg}
-    \(\Q(x) \sim \N\).
+    \(\Q(x) \sim \N \).
     \begin{proof}
-        \(\Q_k[x] = \{ p \in \Q(x) : gr(p) \leq k \}\) tenemos \(f_n : \Q^{n+1} \to \Q_n[x]\), \(f(a_0, \cdots, a_{n+1}) = a_0 + \cdots + a_nx^n\), cada \(f_n\) es biyectiva \(\Rightarrow \Q^{n+1}\) es numerable y como la unión numerable de conjuntos numerables es numerable \(\therefore \Q(x)\) es numerable.
+        \(\Q_k[x] = \{ p \in \Q(x) : gr(p) \leq k \} \) tenemos \(f_n : \Q^{n+1} \to \Q_n[x]\), \(f(a_0, \ldots, a_{n+1}) = a_0 + \cdots + a_n \cdot x^n\), cada \(f_n\) es biyectiva \(\Rightarrow \Q^{n+1} \) es numerable y como la unión numerable de conjuntos numerables es numerable \(\therefore \Q(x)\) es numerable.
     \end{proof}
 \end{eg}
 
 \begin{definition}
-    Un número se dice algebraico si es raíz de algún polinomio con coeficientes enteros, por ejemplo \(\sqrt{2}\) es raíz de \(x² = 2\).
+    Un número se dice algebraico si es raíz de algún polinomio con coeficientes enteros, por ejemplo \(\sqrt{2} \) es raíz de \(x² = 2\).
 \end{definition}
 
 \begin{definition}

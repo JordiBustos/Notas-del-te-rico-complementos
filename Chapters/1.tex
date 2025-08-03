@@ -178,13 +178,12 @@ La suma se define como \(m+1 = S(m)\), \(m+S(n) = S(m+n)\).
 \begin{theorem}[Principio de buena ordenación]
     Todo subconjunto no vacío \(A \subset \N \) tiene un elemento mínimo.
     \begin{proof}
-        Llamemos \(\mathbb{I}_m = \{ p \in \N : 1 \leq p \leq n \} = [[ 1, m ]]\) y \(X = \{ m \in \N : \mathbb{I}_m \subset \N - A \} \). \\
+        Llamemos \(\mathbb{I}_m = \{ p \in \N : 1 \leq p \leq n \} = \left[ {\left[ 1, m \right]} \right]\) y \(X = \{ m \in \N : \mathbb{I}_m \subset \N - A \} \). \\
         Si \(1 \in A \Rightarrow 1\) es primer elemento.
         Si \(1 \notin A \Rightarrow 1 \in X\) como \(X \neq \N \) pues \(X \subseteq \N - A\) y \(A \neq \varnothing \).
         Por el principio de inducción \(\exists m \in X\) tal que \(m+1 \notin X\), si no tendríamos que \(X = \N \). Luego todos los elementos entre \(1\) y \(m\) están en \(\N - A\) y \(m+1 \in A\), se sigue que \(a = m+1\) es primer elemento de A.
     \end{proof}
 \end{theorem}
-
 
 \section{Cuerpo}
 

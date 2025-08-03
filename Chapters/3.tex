@@ -16,7 +16,7 @@
 \end{eg}
 
 \begin{eg}
-    \(\Z\) es numerable.
+    \(\Z \) es numerable.
     \begin{proof}
         Definimos \(f: \Z \to \N \) como \(f(n) = \begin{cases}
                 2n    & \text{si } n >0,     \\
@@ -28,10 +28,10 @@
 \begin{theorem}
     Sea \(X\) un conjunto y \(P(X) = \{ A : A \subset X \} \Rightarrow card(X) \neq card(P)\)
     \begin{proof}
-        Supongamos que \(\exists f:X \to P(X)\) biyectiva, en particular, \(f\) es suryectiva. \\
-        Dado \(x \in X\), puede pasar que \(x \in f(X)\) o \(x \notin f(X)\). Definimos \(B = \{ x \in X: x \notin f(X) \} \subset X\).Como \(f\) es suryectiva se tiene que \(\exists y \in Y: f(y) = B\). \\
-        Si \(y \notin B=f(y) \Rightarrow y \notin f(y) \Rightarrow y \in B\). \\
-        Si \(y \in B = f(y) \Rightarrow y \in f(y) \Rightarrow y \notin B\). \\
+        Supongamos que \(\exists f:X \to P(X)\) biyectiva, en particular, \(f\) es suryectiva y dado \(x \in X \) puede ocurrir que \(x \in f(x)\) o \(x \notin f(x)\). Definimos \(B = \{ x \in X: x \notin f(x) \} \subset X\). Como \(f\) es suryectiva se tiene que \(\exists y \in P(X): f(y) = B\).\begin{itemize}
+            \item Si \(y \notin B=f(y) \Rightarrow y \notin f(y) \Rightarrow y \in B\).
+            \item Si \(y \in B = f(y) \Rightarrow y \in f(y) \Rightarrow y \notin B\).
+        \end{itemize}
         Absurdo en ambos casos, luego \(\Rightarrow \nexists f\) biyectiva \(\therefore \) \(card(X) \neq card(P)\).
     \end{proof}
 \end{theorem}
@@ -154,9 +154,9 @@ La idea del último ejemplo (argumento diagonal), se puede adaptar para probar q
     \begin{proof}
         Supongamos que \(Y\) no es finito. Como \(X \sim Y\) puedo pensar \(X = {(x_n)}_{n\geq1} \) y defino
         \begin{align*}
-            n_1= \min\{ n \in \N: x_n \in Y \}
+            n_1= \min \{ n \in \N: x_n \in Y \}
         \end{align*}
-        E inductivamente elegimos \(n_1, n_2, \ldots , n_k, \cdots \). Definimos \(n_k = \min\{ n \in \N : n > n_k, x_n \in Y \} \Rightarrow \) Tenemos la sucesión estrictamente creciente de naturales y podemos definir \(g: \N \to Y, g(K) = x_{n_k} \text{. } g\) es inyectiva si \(K\neq Y, n_k \neq n_j\) por ser estrictamente creciente y es suryectiva, si \(y \in Y \Rightarrow y = x_j\). Para ningún \(j \Rightarrow \exists k :n_k\leq j \leq n_k+1\). Como \(j \leq n_{k+1}=\{ n>n_k:x_n \in Y \} \) debe ser \(j = n_k\).
+        E inductivamente elegimos \(n_1, n_2, \ldots , n_k, \cdots \). Definimos \(n_k = \min \{ n \in \N : n > n_k, x_n \in Y \} \Rightarrow \) Tenemos la sucesión estrictamente creciente de naturales y podemos definir \(g: \N \to Y, g(K) = x_{n_k} \text{. } g\) es inyectiva si \(K\neq Y, n_k \neq n_j\) por ser estrictamente creciente y es suryectiva, si \(y \in Y \Rightarrow y = x_j\). Para ningún \(j \Rightarrow \exists k :n_k\leq j \leq n_k+1\). Como \(j \leq n_{k+1}=\{ n>n_k:x_n \in Y \} \) debe ser \(j = n_k\).
     \end{proof}
 \end{theorem}
 
@@ -193,7 +193,5 @@ La idea del último ejemplo (argumento diagonal), se puede adaptar para probar q
 \end{definition}
 
 \begin{definition}
-    Si un número real no es algebraico se lo llama trascendente.
+    Si un número real no es algebraico se lo llama trascendente. Queda como ejercicio demostrar que el conjunto de números algebraicos es numerable.
 \end{definition}
-
-Ejercicio: demostrar que el conjunto de números algebraicos es numerable.

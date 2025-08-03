@@ -7,7 +7,7 @@
 \begin{prop}
   Si \(f\) es continua, \(G_f\) es cerrado en \(A \times \R^k\).
   \begin{proof}
-    Si \((p_n)_{n \in \N} \subset G_f\) y \(p_n \to p \in A \times \R^k\). Para cada \(n \in \N \) podemos poner \(p_n = (x_n, y_n)\) con \(y_n = f(x_n)\). Si \(p = (x, y)\) tiene que ser \(x_n \to x, y_n \to y\). Como \(f\) es continua \(f(x_n) \to f(x)\), pero como \(y_n = f(x_n) \to y = f(x) \Rightarrow p = (x, y) \in G_f\).
+    Si \({(p_n)}_{n \in \N} \subset G_f\) y \(p_n \to p \in A \times \R^k\). Para cada \(n \in \N \) podemos poner \(p_n = (x_n, y_n)\) con \(y_n = f(x_n)\). Si \(p = (x, y)\) tiene que ser \(x_n \to x, y_n \to y\). Como \(f\) es continua \(f(x_n) \to f(x)\), pero como \(y_n = f(x_n) \to y = f(x) \Rightarrow p = (x, y) \in G_f\).
   \end{proof}
 \end{prop}
 
@@ -15,7 +15,7 @@
   Si \(G_f\) es cerrado en \(A \times \R^k\) y \(f\) es acotada \(\Rightarrow f\) es continua.
   \begin{proof}
     Como \(f\) es acotada \(\exists k : f(x) \in B_k(0) \subset \R^k, \forall x \in A\). Sea \(x_0 \in A\) queremos ver que \(f\) es continua en \(x_0\). Sea \({(x_n)}_{n \in \N} \subset A\) tal que \(x_n \to x_0\) y supongamos que \(f(x_n) \not \to f(x_0) \Rightarrow (\exists \e > 0), h: \N \to \N \) estrictamente creciente tal que \( \|f(x_{h(n)} - f(x_0)) \geq \e, \forall n \in \N \). \\
-    Para cada \(n \in \N \) consideremos \(p_n = (x_{h(n)}, f(x_{h(n)})) \in G_f\). Como \(x_{h(n)} \) converge, es acotada, \(\exists L > 0 : x_{h(n)} \in B_L(0), \forall n \in \N \). Luego \((p_n)_{n \in \N} \) es acotada pues toma valores en \(B_L(0)\) o \(B_k(0)\), por lo que existe \(\phi \) estrictamente creciente tal que \((p_{\phi_{h(n)}})_{n \in \N} \) converge a \(p \in R^n \times \R^k\).
+    Para cada \(n \in \N \) consideremos \(p_n = (x_{h(n)}, f(x_{h(n)})) \in G_f\). Como \(x_{h(n)} \) converge, es acotada, \(\exists L > 0 : x_{h(n)} \in B_L(0), \forall n \in \N \). Luego \({(p_n)}_{n \in \N} \) es acotada pues toma valores en \(B_L(0)\) o \(B_k(0)\), por lo que existe \(\phi \) estrictamente creciente tal que \({(p_{\phi_{h(n)}})}_{n \in \N} \) converge a \(p \in R^n \times \R^k\).
     Supongamos que \(p = (x_0^{\prime}, y) \Rightarrow x_{\phi_{h(n)}} \to x_0^{\prime} \) y \(f(x_{\phi_{h(n)}}) \to y\). Como \(x_{\phi_{h(n)}} \) es subsubsucesión de \(x_n \to x_0^{\prime} = x_0 \in A\). Se tiene que \(\lim_{n \to +\infty} p_{\phi_{h(n)}} \in A \times \R^k\). Como estamos suponiendo que \(G_f\) es cerrado entonces \(x_0, y \in G_f\), es decir \(y = f(x_0)\), pero entonces \(f(x_{\phi_{h(n)}}) \to f(x_0)\). Absurdo!
   \end{proof}
 \end{prop}
@@ -45,7 +45,7 @@
 \begin{theorem}
   Sea \(K \subset \R^n\) compacto y \(f\) una función continua \(\Rightarrow f(K)\) es compacto.
   \begin{proof}
-    Sea \((y_n)_{n \in \N} \) que toma valores en la imagen \(f(K)\). Para cada \(n \in \N \exists x_n \in K : y_n = f(x_n)\). Como \({(x_n)}_{n \in \N} \subset K\) y \(K\) es compacto, \(\exists \phi : \N \to \N \) estrictamente creciente tal que \(x_{\phi(n)} \to x \in K\). Como \(f\) es continua en \(x \Rightarrow f(x_{\phi(n)}) \to f(x)\). Como \(f(x_{\phi(n)}) = f(y_n)\), probamos que toda sucesión contenida en \(f(K)\) tiene una subsucesión convergente con límite contenido en \(f(K) \therefore f(K)\) es compacto.
+    Sea \({(y_n)}_{n \in \N} \) que toma valores en la imagen \(f(K)\). Para cada \(n \in \N \exists x_n \in K : y_n = f(x_n)\). Como \({(x_n)}_{n \in \N} \subset K\) y \(K\) es compacto, \(\exists \phi : \N \to \N \) estrictamente creciente tal que \(x_{\phi(n)} \to x \in K\). Como \(f\) es continua en \(x \Rightarrow f(x_{\phi(n)}) \to f(x)\). Como \(f(x_{\phi(n)}) = f(y_n)\), probamos que toda sucesión contenida en \(f(K)\) tiene una subsucesión convergente con límite contenido en \(f(K) \therefore f(K)\) es compacto.
   \end{proof}
 \end{theorem}
 
@@ -98,7 +98,7 @@
 \end{prop}
 
 \begin{note}
-  Supongamos que \(A \subset \R^n\) y que \(f: A \to \R^n\) es una función continua para la que no vale el Teorema de valor intermedio. \(\exists a, b \in A\) e \(y\) entre \(f(a)\) y \(f(b) : \nexists \alpha \in A : f(\alpha) = y \Rightarrow \exists U = \{ x \in A : f(x) = y \}, V = \{ x \in A : f(x) > y \} \). Son abiertos en \(A\), no vacíos, disjuntos y \(A = U \cup V\).
+  Supongamos que \(A \subset \R^n\) y que \(f: A \to \R^n\) es una función continua para la que no vale el Teorema de valor intermedio.\(\exists a, b \in A\) e \(y\) entre \(f(a)\) y \(f(b) : \nexists \alpha \in A : f(\alpha) = y \Rightarrow \exists U = \{ x \in A : f(x) = y \}, V = \{ x \in A : f(x) > y \} \). Son abiertos en \(A\), no vacíos, disjuntos y \(A = U \cup V\).
 \end{note}
 
 \begin{definition}[Conexo]

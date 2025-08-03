@@ -159,7 +159,7 @@ Decimos que una sucesión \({(x_n)}_{n \in \N} \subset \R^n\) converge a un punt
             \]
             Sea \(n_0 = \max \{n_1, \ldots, n_n\} \). Entonces, para todo \(n > n_0\),
             \[
-              \|x_n - L\| = {\left( \sum_{i=1}^n |x_{n_i} - L_i|^2 \right)}^{1/2} < {\left( n \cdot \left( \frac{\varepsilon^2}{n} \right) \right)}^{1/2} = \varepsilon.
+              \|x_n - L\| = \sqrt{ \sum_{i=1}^n |x_{n_i} - L_i|^2 } < \sqrt{ n \cdot \frac{\varepsilon^2}{n} } = \varepsilon.
             \]
             Por lo tanto, \(\lim_{n \to \infty} x_n = L\).
     \end{enumerate}
@@ -286,7 +286,7 @@ Esta última parte pertenece a la clase siguiente, pero se coloca aquí para que
     En particular si \(m \in \N, V_m = \{ f(1), \ldots, f(m) \} \in V\) no es subcubrimiento de \(F\), por ser finito
     \begin{align*}
       \Rightarrow \exists x_m \in F - \bigcup_{i = 1}^m f(i)
-    \end{align*} 
+    \end{align*}
     De esta forma tenemos una sucesión de elementos de \(F, {(x_m)}_{m \in \N} \). \\
     Como \(F\) es compacto \(\exists h: \N \to \N \) estrictamente creciente tal que \({(x_{h(m)})}_{m \in \N} \to L \in F\). \\
     Como \(V\) es un cubrimiento de \(F\) y \(f\) es sobreyectiva \(\Rightarrow \exists s \in \N : L \in f(s)\).

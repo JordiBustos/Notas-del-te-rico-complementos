@@ -14,7 +14,11 @@
     \left| \sum_{i = 1}^n x_i \cdot y_i \right| \leq \|x\| \cdot \|y\|
   \end{align*}
   \begin{proof}
-    Ejercicio
+    Tenemos que \begin{align*}
+      & \left(\sum_{k = 1}^{n+1} a^2_k\right) \cdot \left(\sum_{k = 1}^{n+1} b^2_k \right) - \sum_{1 \leq k \leq j \leq n+1} (a_k b_j - a_j b_k) = \left(\sum_{k = 1}^{n+1} a_k b_k \right)^2 \\
+      & \text{Como } \sum_{1 \leq k \leq j \leq n+1} (a_k b_j + a_j b_k)^2 \geq 0 \quad \forall n \in \N \\
+      & \Rightarrow \left(\sum_{k = 1}^{n+1} a_k b_k \right)^2 \leq \left(\sum_{k = 1}^{n+1} a^2_k\right) \cdot \left(\sum_{k = 1}^{n+1} b^2_k \right) 
+    \end{align*}
   \end{proof}
 \end{prop}
 
@@ -71,7 +75,7 @@
 \begin{prop}
   Propiedades de conjuntos abiertos:
   \begin{enumerate}
-    \item $\varnothing, \R^n$ son abiertos.
+    \item $\varnothing$, $\R^n$ son abiertos.
     \item Intersección de una familia finita y no vacía de $\R^n$ de subconjuntos abiertos es un conjunto abierto.
     \item La unión de una familia cualquiera de subconjuntos abiertos de $\R^n$ es abierto.
   \end{enumerate}
@@ -84,13 +88,11 @@
   \end{proof}
 \end{prop}
 
-Notemos que la hipotesis de que la familia sea finita en la intersección es necesaria pues si definimos $U_n = (1 - \dfrac{1}{n}, 1 + \dfrac{1}{n}), \forall n \in \N \Rightarrow \bigcap_{n \geq 1} U_n = \{1\}$ que no es abierto.
+Notemos que la hipotesis de que la familia sea finita en la intersección es necesaria pues si definimos $U_n = \left(1 - \dfrac{1}{n}, 1 + \dfrac{1}{n}\right) \quad \forall n \in \N \Rightarrow \bigcap_{n \geq 1} U_n = \{1\}$ que no es abierto.
 
 \begin{definition}
   La topología Euclídea es el conjunto de todos los abiertos de $\R^n$.
 \end{definition}
-
-\clearpage
 
 \begin{corollary}
   Un subconjunto de $\R^n$ es abierto $\iff$ es la unión de una familia de bolas abiertas.

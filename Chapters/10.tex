@@ -1,7 +1,7 @@
 \section{Punto de acumulación}
 
 \begin{definition}[Punto de acumulación]
-  $X \subset \R^n$. Un punto $x \in X$ es de acumulación si pertenece a $\overline{X - \{ x \}}$. \\
+  $X \subset \R^n$. Un punto $x \in X$ es de acumulación si pertenece a $\overline{X - \{ x \}}$.
 \end{definition}
 
 \begin{definition}[Conjunto derivado]
@@ -83,15 +83,18 @@
 
 \section{Sucesiones en varias dimensiones}
 
-Decimos que una sucesión $(x_n)_{n \in \N} \subset \R^n$ converge a un punto $L \in \R^n$ si $(\forall \e > 0)(\exists n_0 \in \N) : \forall n > n_0, d(x_n, L) < \e$.
+Decimos que una sucesión $(x_n)_{n \in \N} \subset \R^n$ converge a un punto $L \in \R^n$ si \begin{align*}
+  (\forall \e > 0)(\exists n_0 \in \N) : (\forall n > n_0) \quad d(x_n, L) < \e.
+\end{align*}
 
 \begin{lemma}
   Si una sucesión tiene límite en $\R^n$ es único.
   \begin{proof}
-    Supongamos que converge a $L$ y a $L^{\prime}$ con $L \neq L^{\prime} \Rightarrow$ \\
-    $(\forall \e > 0)(\exists n_0 \in \N) : (\forall n > n_0), d(x_n, L) < \e$ \\
-    $(\forall \e > 0)(\exists n_1 \in \N) : (\forall n > n_1), d(x_n, L^{\prime}) < \e$ \\
-    $d(L, L^{\prime}) \leq d(L, x_n) + d(x_n, L^{\prime}) \leq 2 \cdot \e, \forall n > max(n_0, n_1)$. \\
+    Supongamos que converge a $L$ y a $L^{\prime}$ con $L \neq L^{\prime} \Rightarrow$ \begin{align*}
+       & (\forall \e > 0)(\exists n_0 \in \N) : (\forall n > n_0), d(x_n, L) < \e                                      \\
+       & (\forall \e > 0)(\exists n_1 \in \N) : (\forall n > n_1), d(x_n, L^{\prime}) < \e                             \\
+       & d(L, L^{\prime}) \leq d(L, x_n) + d(x_n, L^{\prime}) \leq 2 \cdot \e \quad \forall n > \max(n_0\text{, } n_1)
+    \end{align*}
     Sea $\e = d(L, L^{\prime})/2 \Rightarrow d(L, L^{\prime}) < d(L, L^{\prime})$ Absurdo!
   \end{proof}
 \end{lemma}
@@ -101,15 +104,16 @@ Decimos que una sucesión $(x_n)_{n \in \N} \subset \R^n$ converge a un punto $L
 
   \begin{enumerate}
     \item $L = \lim_{n \to \infty} x_n$
-    \item $\forall r > 0, \exists n_0 \in \N : \forall n > n_0, x_n \in B_r(L)$
-    \item $\forall$ entorno abierto $N$ de $L, \exists n_0 \in \N : \forall n > n_0, x_n \in N$
-    \item $\forall$ entorno $N$ de $L, \exists n_0 \in \N : \forall n > n_0, x_n \in N$
+    \item $\forall r > 0, \exists n_0 \in \N : \forall n > n_0 \quad x_n \in B_r(L)$
+    \item $\forall$ entorno abierto $N$ de $L, \exists n_0 \in \N : \forall n > n_0 \quad x_n \in N$
+    \item $\forall$ entorno $N$ de $L, \exists n_0 \in \N : \forall n > n_0 \quad x_n \in N$
   \end{enumerate}
-
   \begin{proof}
-    4) $\Rightarrow$ 3) $\Rightarrow$ 2) $\Rightarrow$ 1) son inmediatos de la definición de límite. \\
-    1) $\Rightarrow$ 4) Sea $N$ un entorno de $L$. Como $L \in N^{\circ}, \exists r > 0 : B_r(L) \subset N^{\circ}$ y como $\lim_{n \to \infty} x_n = L \Rightarrow \exists n_0 \in \N : \forall n > n_0, d(L, x_n) < r \Rightarrow$ \\
-    $x_n \in B_r(x), \forall n > n_0 \therefore x_n \in N, \forall n > n_0$.
+    Sean $(x_n)_{n \in \N} \subset \R^n$ y $L \in \R^n$ \begin{enumerate}
+      \item[4) $\Rightarrow$ 3) $\Rightarrow$ 2) $\Rightarrow$ 1)] Inmediato de la definición de límite.
+      \item [1) $\Rightarrow$ 4)] Sea $N$ un entorno de $L$. Como $L \in N^{\circ}, \exists r > 0 : B_r(L) \subset N^{\circ}$ y como $\lim_{n \to \infty} x_n = L \Rightarrow \exists n_0 \in \N : \forall n > n_0, d(L, x_n) < r \Rightarrow$ \\
+            $x_n \in B_r(x), \forall n > n_0 \therefore x_n \in N, \forall n > n_0$.
+    \end{enumerate}
   \end{proof}
 \end{prop}
 
@@ -123,29 +127,70 @@ Decimos que una sucesión $(x_n)_{n \in \N} \subset \R^n$ converge a un punto $L
 \end{prop}
 
 \begin{prop}
-  Sea $(x_n)_{n \in \N} \subset \R^n, x_i = (x_{i_1}, x_{i_2}, \cdots, x_{i_n}) \in \R^n$. Son equivalentes:
+  Sea $(x_n)_{n \in \mathbb{N}} \subset \mathbb{R}^n$, donde cada $x_n = (x_{n_1}, x_{n_2}, \ldots, x_{n_n}) \in \mathbb{R}^n$. Son equivalentes:
   \begin{enumerate}
-    \item La sucesión converge en $\R^n$.
-    \item $\forall i \in \{1, \cdots, n\}, (x_{n_i})_{n \in \N}$ converge en $\R$.
+    \item La sucesión $(x_n)$ converge en $\mathbb{R}^n$.
+    \item Para todo $i \in \{1, \ldots, n\}$, la sucesión $(x_{n_i})_{n \in \mathbb{N}}$ converge en $\mathbb{R}$.
   \end{enumerate}
-  Si se cumplen y además $\lim_{n \to \infty} = L$ y $\lim_{n \to \infty} x_{n_i} = L_i, \forall i \in \{1, \cdots, n\} \Rightarrow L = (L_1, \cdots, L_n)$.
+  Además, si se cumplen y:
+  \[
+    \lim_{n \to \infty} x_n = L \quad \text{y} \quad \lim_{n \to \infty} x_{n_i} = L_i \quad \forall i \in \{1, \ldots, n\},
+  \]
+  entonces:
+  \[
+    L = (L_1, \ldots, L_n).
+  \]
   \begin{proof}
-    1) $\Rightarrow$ 2) Sea $L = \lim_{n \to \infty} x_n$ y $L = (L_1, \cdots, L_n)$, si $i \in \{1, \cdots, n\}$ y $\e > 0, \exists n_0 : \forall n > n_0, d(x_n, L) < \e \Rightarrow$ \\
-    $\forall n > n_0, d(x_{n_i}, L_i) < \e \therefore \lim_{n \to \infty} x_{n_i} = L_i$. \\
-    2) $\Rightarrow$ 1) Si $\lim_{n \to \infty} x_{n_i} = L_i, \forall i \in \{1, \cdots, m\}$. Llamo $L = (L_1, \cdots, L_m)$. \\
-    Dado $\e > 0, \exists n_i \in \N : \forall n > n_i, d(x_{n_i}, L_i) < \dfrac{\e}{\sqrt{n}} \Rightarrow n_0 = max(n_1, \cdots, n_m)$ y $n > n_0$, $d(x_n, L) = (d(x_{n_1}, L_1)^2 + \cdots + d(x_{n_m}, L_m)^2) < (\dfrac{\e^2}{n} + \cdots + \dfrac{\e^2}{n})^{\frac{1}{2}} = \e$. \\
-    $\therefore \lim_{n \to \infty} x_n = L$.
+    Sea $(x_n)_{n \in \mathbb{N}} \subset \mathbb{R}^n$ y $L = (L_1, \ldots, L_n) \in \mathbb{R}^n$.
+    \begin{enumerate}
+      \item[$(1) \Rightarrow (2)$:] Supongamos que $\lim_{n \to \infty} x_n = L$. Sea $\varepsilon > 0$. Entonces, existe $n_0 \in \mathbb{N}$ tal que para todo $n > n_0$, se tiene que:
+            \[
+              \|x_n - L\| < \varepsilon.
+            \]
+            En particular, esto implica que para cada $i \in \{1, \ldots, n\}$:
+            \[
+              |x_{n_i} - L_i| < \varepsilon,
+            \]
+            lo que demuestra que $\lim_{n \to \infty} x_{n_i} = L_i$.
+
+      \item[$(2) \Rightarrow (1)$:] Supongamos que para cada $i \in \{1, \ldots, n\}$, $\lim_{n \to \infty} x_{n_i} = L_i$. Sea $\varepsilon > 0$. Como cada coordenada converge, existe $n_i \in \mathbb{N}$ tal que:
+            \[
+              |x_{n_i} - L_i| < \frac{\varepsilon}{\sqrt{n}} \quad \text{para todo } n > n_i.
+            \]
+            Sea $n_0 = \max\{n_1, \ldots, n_n\}$. Entonces, para todo $n > n_0$,
+            \[
+              \|x_n - L\| = \left( \sum_{i=1}^n |x_{n_i} - L_i|^2 \right)^{1/2} < \left( n \cdot \left( \frac{\varepsilon^2}{n} \right) \right)^{1/2} = \varepsilon.
+            \]
+            Por lo tanto, $\lim_{n \to \infty} x_n = L$.
+    \end{enumerate}
   \end{proof}
 \end{prop}
 
+\clearpage
 \section{Conjuntos compactos}
 
 \begin{theorem}
-  Un subconjunto $F \subset \R^n$ es cerrado $\iff$ si $(x_n)_{n \in \N} \subset F$ y $x_n \to x, x \in F$.
+  Un subconjunto $F \subset \mathbb{R}^n$ es cerrado si y sólo si:
+  $$\text{Si } (x_n)_{n \in \mathbb{N}} \subset F \text{ y } x_n \to x, \text{ entonces } x \in F.$$
   \begin{proof}
-    $\Rightarrow$) Sea $F \subset \R^n$ cerrado y supongamos que $\exists (x_n)_{n \in \N} \subset F$, $x_n \to L \in F^c$. Como $F^c$ es abierto, entonces $\exists r > 0 : B_r(X) \subset F^c \Rightarrow \exists n_0 \in \N : x_n \subset F^c, \forall n > n_0$. Absurdo pues $(x_n)_{n \in \N} \subset F$.
+    $(\Rightarrow)$ Supongamos que $F \subset \mathbb{R}^n$ es cerrado.
+    Sean $(x_n)_{n \in \mathbb{N}} \subset F$ y $x_n \to x$.
+    Supongamos por el absurdo que $x \notin F$. Entonces $x \in F^c$.
+    Como $F^c$ es abierto, existe $r > 0$ tal que $B_r(x) \subset F^c$.
+    Pero como $x_n \to x$, existe $n_0 \in \mathbb{N}$ tal que
+    $$x_n \in B_r(x) \subset F^c \quad \text{para todo } n > n_0.$$
+    Esto contradice el hecho de que $x_n \in F$ para todo $n$.
+    Por lo tanto, $x \in F$ y se cumple la implicación.
 
-    $\Leftarrow$) Si $F \subset \R^n$ no es cerrado $\exists x \in F^{\prime}$ y $x \notin F$. Como $x$ es punto de acumulación $\forall n > n_0 \in \N, B_{\frac{1}{n}}(x) \cap X \neq \varnothing$ y elijamos un punto $x_n$ allí. $(x_n)_{n \in \N} \subset F$ y $d(x_n, n) < \dfrac{1}{n}, \forall n > n_0 \therefore x_n \to x \notin F$.
+    \medskip
+
+    $(\Leftarrow)$ Supongamos ahora que la propiedad se cumple, y veamos que $F$ es cerrado.
+    Supongamos por el contrario que $F$ no es cerrado. Entonces existe $x \in \overline{F} \setminus F$,
+    es decir, $x$ es punto de adherencia de $F$ pero $x \notin F$.
+    Por ser punto de adherencia, para todo $n \in \mathbb{N}$ existe $x_n \in F$ tal que
+    $$\|x_n - x\| < \frac{1}{n}.$$
+    Entonces, $(x_n)_{n \in \mathbb{N}} \subset F$ y $x_n \to x$, pero $x \notin F$,
+    lo que contradice la hipótesis. Por lo tanto, $F$ es cerrado.
   \end{proof}
 \end{theorem}
 
@@ -161,26 +206,119 @@ Decimos que una sucesión $(x_n)_{n \in \N} \subset \R^n$ converge a un punto $L
   Un conjunto se dice compacto si además de ser relativamente compacto cumple que está acotado.
 \end{definition}
 
-\begin{prop}
-  Un subconjunto de $\R^n$ es relativamente compacto $\iff$ es acotado.
-  \begin{proof}
-    Sea $F \subset \R^n$ no acotado $\Rightarrow$
-    \begin{align*}
-      \forall  n \in \N \quad \exists y_n \in F : \|y_n\| > n
-    \end{align*}
-    Si $f : \N \to \N$ es una función estrictamente creciente cualquiera entonces la sucesión $(y_{f(n)})_{n \in \N}$ de $(y_n)_{n \in \N}$ no es acotada, pues $\|y_{f(n)}\| > f(n) \geq n$ y $\therefore$ no converge. Luego $F$ no es relativamente compacto. \\
+\clearpage
 
-    Supongamos ahora que $F$ es acotado, digamos que $\exists k > 0 : F \subset B_k(0)$ y sea $(x_n)_{n \in N}$ una sucesión en $F$. \\
-    Para cada $m \in \N$, $x_m = (x_{m_1}, x_{m_2}, \cdots, x_{m_n})$. Si $L = \{1, \cdots, n\} \Rightarrow \forall m \in \N, \|x_{m_i}\| \leq \|x_m\| < k$, es decir que las sucesiones $(x_{m_1})_{m \in \N}, \cdots, (x_{m_n})_{m \in \N} \subset \R$ son acotadas. \\
-    En particular $\exists f: \N \to \N$ estrictamente creciente tal que la subsucesión $(x_{f(m)_1})_{m \in \N}$ converge. Es decir que $1$ es un elemento del conjunto $D$ de todos los $f \in \{1, \cdots, n\}$ con la propiedad: "Hay una función estrictamente creciente $f: \N \to \N : \forall i \in \{1, \cdots, f\}$ la sucesión $(x_{f(m)_i})_{m \in \N}$ converge". \\
-    Sea $k = maxD$ y $k < n$. Como $k \in D, \exists f: \N \to \N$ estrictamente creciente tal que $\forall i \in \{1, \cdots, k\}$ la sucesión $(x_{f(m)_i})_{m \in \N}$ converge. \\
-    Por otro lado $(x_{f(m)_{k+1}})_{m \in \N}$ es acotada $\Rightarrow$ Hay una función $g: \N \to \N$ estrictamente creciente tal que $(x_{g(f(m))_{k+1}})_{m \in \N}$ converge. \\
-    Entonces las $k+1$ sucesiones convergen y $g(f(m))$ generan subsucesiones que convergen a lo mismo. \\
-    Sea $h = g \circ f$ estrictamente creciente, entonces $k+1 \in D$ absurdo pues $k = maxD$. Luego $k = n \Rightarrow \exists f: \N \to \N$ estrictamente creciente tal que \\
-    $(x_{f(m)_1})_{m \in \N}, \cdots, (x_{f(m)_n})_{n \in \N}$ convergen $\therefore F$ es relativamente compacto.
+\begin{prop}
+  Un subconjunto $F \subset \mathbb{R}^n$ es relativamente compacto si y sólo si es acotado.
+  \begin{proof}
+    $(\Rightarrow)$ Supongamos que $F$ no es acotado. Entonces,
+    \[
+      \forall n \in \mathbb{N},\ \exists y_n \in F : \|y_n\| > n.
+    \]
+    Si $f : \mathbb{N} \to \mathbb{N}$ es una función estrictamente creciente, entonces la subsucesión $(y_{f(n)})_{n \in \mathbb{N}}$ satisface
+    \[
+      \|y_{f(n)}\| > f(n) \geq n \quad \Rightarrow \quad (y_{f(n)}) \text{ no es acotada, y por tanto no converge}.
+    \]
+    Luego, ninguna subsucesión de $(y_n)$ converge, y por tanto $F$ no es relativamente compacto.
+
+    \medskip
+
+    $(\Leftarrow)$ Supongamos ahora que $F$ es acotado. Entonces existe $k > 0$ tal que $F \subset B_k(0)$.
+    Sea $(x_m)_{m \in \mathbb{N}} \subset F$ una sucesión cualquiera.
+    Escribamos cada $x_m = (x_{m}^{(1)}, x_{m}^{(2)}, \dots, x_{m}^{(n)}) \in \mathbb{R}^n$.
+
+    Como $\|x_m\| < k$ para todo $m$, se sigue que cada sucesión de coordenadas $(x_m^{(i)})_{m \in \mathbb{N}}$ está acotada en $\mathbb{R}$.
+    Por el teorema de Bolzano-Weierstrass, toda sucesión acotada en $\mathbb{R}$ tiene una subsucesión convergente.
+
+    Aplicamos el argumento diagonal:
+    - Primero, extraemos una subsucesión $(x_{f_1(m)})_{m \in \mathbb{N}}$ tal que $(x_{f_1(m)}^{(1)})$ converge.
+    - Luego, de esta subsucesión extraemos otra $(x_{f_2(m)})$ tal que $(x_{f_2(m)}^{(2)})$ converge.
+    - Repetimos el proceso hasta obtener una subsucesión $(x_{f_n(m)})$ tal que todas las coordenadas $(x_{f_n(m)}^{(i)})$ convergen para $i = 1, \dots, n$.
+
+    Definimos $h := f_n \circ \cdots \circ f_1$, que es una función estrictamente creciente, y la sucesión $(x_{h(m)})_{m \in \mathbb{N}}$ es una subsucesión de $(x_m)$ cuyas coordenadas convergen.
+
+    Entonces, $(x_{h(m)})$ converge en $\mathbb{R}^n$.
+    Por tanto, toda sucesión en $F$ tiene una subsucesión convergente en $\mathbb{R}^n$, es decir, $F$ es relativamente compacto.
   \end{proof}
 \end{prop}
-
+h
 \begin{corollary}
   $F \subset \R^n$ es compacto $\iff$ es cerrado y acotado.
 \end{corollary}
+
+Esta última parte pertenece a la clase siguiente, pero se coloca aquí para que quede la sección de compactos toda junta.
+
+\begin{definition}[Cubrimiento]
+  Sea $X \subset R^n$. Una familia $U$ de subconjuntos de $\R^n$ es un cubrimiento de $X$ si $X \subset \bigcup_{u \in U} u$ y es un cubrimiento abierto si todo subconjunto de $U$ es abierto.
+\end{definition}
+
+\begin{definition}[Subcubrimiento]
+  Un subcubrimiento de $U$ es un cubrimiento $V$ de $X$ tal que $V \subset U$.
+\end{definition}
+
+\begin{theorem}[Lindelöf]
+  Todo cubrimiento abierto de algún subconjunto de $\R^n$ admite a lo sumo un subcubrimiento a lo sumo numerable.
+  \begin{proof}
+    Sea $X \subset \R^n$ y $U$ un cubrimiento abierto de $X$.
+    \begin{itemize}
+      \item Si $X = \varnothing \Rightarrow \varnothing$ es un subcubrimiento de $U$ a lo
+            sumo numerable.
+      \item Si $X \neq \varnothing \Rightarrow U \neq \varnothing \Rightarrow$ Podemos
+            fijar $U_0 \in U$.
+    \end{itemize}
+    Para cada $q \in \Q^n$ y sea $s \in \Q > 0$. Elegimos un elemento $U(q, s)$ de $U$ de la siguiente forma:
+    \begin{enumerate}
+      \item Si hay elementos de $U$ que contienen a $B_s(q)$ elegimos cualquiera de ellos y
+            lo llamamos $u(q, s)$.
+      \item Si no hay ninguno ponemos $U(q, s) = U_0$.
+    \end{enumerate}
+    Sea $x \in X$ como $U$ es un cubrimiento abierto de $X$, $\exists u \in U$ abierto tal que $x \in u \Rightarrow \exists r > 0 : B_r(x) \subset u$. \\
+    Si tomamos $q \in \Q^n : q \in B_{\frac{r}{2}}(x)$ y $s \in Q : d(x, q) < s < \dfrac{r}{2} \Rightarrow x \in B_s(q)$ y $B_s(q) \subset B_r(x) \subset u$. \\
+    Así que hay elementos de $U$ que contienen a $B_s(q)$ y por lo tanto $x \in B_s(q) \subset U(q, s)$. Esto prueba que $V = \{ U(q, s) : q \in \Q^n, s \in Q > 0 \}$ es un subcubrimiento de $U$ y es numerable pues $\Q^n \times \Q^n$ es numerable y la función $Q^n \times \Q > 0 \to V$, $(q, s) \mapsto U(q, s)$, es suryectiva $\therefore V$ es a lo sumo numerable.
+  \end{proof}
+\end{theorem}
+
+\begin{corollary}
+  Un subconjunto $F \subset \R^n$ es compacto $\iff \forall$ cubrimiento abierto de $F$ admite un subcubrimiento finito.
+  \begin{proof}
+    Para la ida sea $F \subset \R^n$ compacto, $U$ un cubrimiento abierto de $F$. Por Lindelöf hay un subcubrimiento a lo sumo numerable $V$ de $U$ y $\exists f: \N \to V$ suryectiva.
+    Por el absurdo supongamos que $U$ no contiene subcubrimiento finito de $F$.
+    En particular si $m \in \N, V_m = \{ f(1), \cdots, f(m) \} \in V$ no es subcubrimiento de $F$, por ser finito
+    \begin{align*}
+      \Rightarrow \exists x_m \in F - \bigcup_{i = 1}^m f(i)
+    \end{align*} De esta forma tenemos una sucesión de elementos de $F, (x_m)_{m \in \N}$. \\
+    Como $F$ es compacto $\exists h: \N \to \N$ estrictamente creciente tal que $(x_{h(m)})_{m \in \N} \to L \in F$. \\
+    Como $V$ es un cubrimiento de $F$ y $f$ es sobreyectiva $\Rightarrow \exists s \in \N : L \in f(s)$.
+    Por otro lado como $\lim_{n \to \infty} x_m = L$ y $f(s)$ es un entorno de $L, \exists m_0 \in \N : x_{h(m)} \in f(s), \forall m > m_0$. \\
+    Como $m < h(s + m_0) \Rightarrow x_{h(s+m_0)} \in f(s)$ Absurdo! \\
+    $x_{h(m_0 + s)} \in F - \bigcup_{i=1}^{h(s+m_0)} f(i)$ que es disjunto con $f(s)$ pues $s < h(s + m_0)$. \\
+    $\therefore V$ y, por lo tanto, $U$ contienen un subcubrimiento finito. \\
+
+    Para la vuelta supongamos que todo cubrimiento abierto de $F$ admite un
+    subcubrimiento finito, pero que $F$ no es compacto. \\ Hay una sucesión
+    $(x_m)_{m \in \N} \subset F$ que no tiene ninguna subsucesión convergente. Si
+    $x \in F$, no hay ningua subsucesión de $(x_m)_{m \in \N}$ que converge a $x$
+    y, por lo tanto, $\exists r_x > 0 : S_x = \{ m \in \N : x_m \in B_r(x) \}$ es
+    finito. \\ El conjunto $U = \{ B_{r_x}(x) : x \in F \}$ es un cubrimiento
+    abierto de $F$. \\ Por hipotesis hay un subconjunto finito $\{ y_1, \cdots,
+      y_k\}$ tal que $\{ B_{r_{y_1}}(y_1), \cdots, B_{r_{y_k}}(y_k) \}$ es
+    subcubrimiento de $F$. \\ En particular $\forall m \in \N, \exists i \in \{ 1,
+      \cdots, k \} : x_m \in B_{r_{y_i}}(y_i) \Rightarrow$ \\ $m \in S_y \therefore
+      \N \subset S_{y_1} \cup \cdots \cup S_{y_k}$ Absurdo! pues los $S_{y_i}$ son
+    finitos.
+  \end{proof}
+\end{corollary}
+
+\begin{prop}
+  Sea $K \subset \R^n$ compacto. Si $U$ es un cubrimiento abierto de $K$ entonces $\exists \delta > 0 :$ si $x, y \in K, d(x, y) < \delta \Rightarrow \exists u \in U$ abierto tal que $x, y \in u$. \\
+  $\delta$ se llama número de Lebesgue del cubrimiento $U$.
+  \begin{proof}
+    Sea $U$ un cubrimiento abierto de $K$. Para cada $x \in K, \exists U_x \in U : x \in U_x$. Como $U_x$ es abierto $\exists r_x > 0 : B_{r_k}(x) \subset U_x$. \\
+    El conjunto $U^{\prime} = \{ B_{\frac{r_x}{2}} : x \in K \}$ es un cubrimiento abierto de $K$. $U^{\prime}$ posee un subcubrimiento finito. \\
+    $\exists x_1, \cdots, x_k : K \subset \bigcup_{i = 1}^{k} B_{\frac{r_{x_i}}{2}}(x_i)$. \\
+    Veamos que $\delta = \dfrac{1}{2} \cdot min(r_{x_1}, \cdots, r_{x_k})$ es un número de Lebesgue: \\
+    Sean $x, y \in K : d(x,y) < \delta \Rightarrow$ \\
+    $\exists i \in \{1, \cdots, m\} : x \in B_{\frac{r_{x_i}}{2}}(x_i) \Rightarrow \|x_i - y\| \leq \|x_i - x\| + \|x+y\| \leq \dfrac{r_{x_i}}{2} + \delta < \dfrac{r_{x_i}}{2} + \dfrac{r_{x_i}}{2} = r_{x_i} \Rightarrow$ \\
+    $x, y \in B_{r_{x_i}}(x_i) \subset U_{x_i}$ que es abierto de $U$.
+  \end{proof}
+\end{prop}

@@ -1,84 +1,3 @@
-\section{(Continuación) Conjuntos Compactos}
-
-\begin{definition}[Cubrimiento]
-  Sea $X \subset R^n$. Una familia $U$ de subconjuntos de $\R^n$ es un cubrimiento de $X$ si $X \subset \bigcup_{u \in U} u$ y es un cubrimiento abierto si todo subconjunto de $U$ es abierto.
-\end{definition}
-
-\begin{definition}[Subcubrimiento]
-  Un subcubrimiento de $U$ es un cubrimiento $V$ de $X$ tal que $V \subset U$.
-\end{definition}
-
-\begin{theorem}[Lindelöf]
-  Todo cubrimiento abierto de algún subconjunto de $\R^n$ admite a lo sumo un subcubrimiento a lo sumo numerable.
-  \begin{proof}
-    Sea $X \subset \R^n$ y $U$ un cubrimiento abierto de $X$.
-    \begin{itemize}
-      \item Si $X = \varnothing \Rightarrow \varnothing$ es un subcubrimiento de $U$ a lo
-            sumo numerable.
-      \item Si $X \neq \varnothing \Rightarrow U \neq \varnothing \Rightarrow$ Podemos
-            fijar $U_0 \in U$.
-    \end{itemize}
-    Para cada $q \in \Q^n$ y sea $s \in \Q > 0$. Elegimos un elemento $U(q, s)$ de $U$ de la siguiente forma:
-    \begin{enumerate}
-      \item Si hay elementos de $U$ que contienen a $B_s(q)$ elegimos cualquiera de ellos y
-            lo llamamos $u(q, s)$.
-      \item Si no hay ninguno ponemos $U(q, s) = U_0$.
-    \end{enumerate}
-    Sea $x \in X$ como $U$ es un cubrimiento abierto de $X$, $\exists u \in U$ abierto tal que $x \in u \Rightarrow \exists r > 0 : B_r(x) \subset u$. \\
-    Si tomamos $q \in \Q^n : q \in B_{\frac{r}{2}}(x)$ y $s \in Q : d(x, q) < s < \dfrac{r}{2} \Rightarrow x \in B_s(q)$ y $B_s(q) \subset B_r(x) \subset u$. \\
-    Así que hay elementos de $U$ que contienen a $B_s(q)$ y por lo tanto $x \in B_s(q) \subset U(q, s)$. Esto prueba que $V = \{ U(q, s) : q \in \Q^n, s \in Q > 0 \}$ es un subcubrimiento de $U$ y es numerable pues $\Q^n \times \Q^n$ es numerable y la función $Q^n \times \Q > 0 \to V$, $(q, s) \mapsto U(q, s)$, es suryectiva $\therefore V$ es a lo sumo numerable.
-  \end{proof}
-\end{theorem}
-
-\clearpage
-
-\begin{corollary}
-  Un subconjunto $F \subset \R^n$ es compacto $\iff \forall$ cubrimiento abierto de $F$ admite un subcubrimiento finito.
-  \begin{proof}
-    Para la ida sea $F \subset \R^n$ compacto, $U$ un cubrimiento abierto de $F$. Por Lindelöf hay un subcubrimiento a lo sumo numerable $V$ de $U$ y $\exists f: \N \to V$ suryectiva.
-    Por el absurdo supongamos que $U$ no contiene subcubrimiento finito de $F$.
-    En particular si $m \in \N, V_m = \{ f(1), \cdots, f(m) \} \in V$ no es subcubrimiento de $F$, por ser finito
-    \begin{align*}
-      \Rightarrow \exists x_m \in F - \bigcup_{i = 1}^m f(i)
-    \end{align*} De esta forma tenemos una sucesión de elementos de $F, (x_m)_{m \in \N}$. \\
-    Como $F$ es compacto $\exists h: \N \to \N$ estrictamente creciente tal que $(x_{h(m)})_{m \in \N} \to L \in F$. \\
-    Como $V$ es un cubrimiento de $F$ y $f$ es sobreyectiva $\Rightarrow \exists s \in \N : L \in f(s)$.
-    Por otro lado como $\lim_{n \to \infty} x_m = L$ y $f(s)$ es un entorno de $L, \exists m_0 \in \N : x_{h(m)} \in f(s), \forall m > m_0$. \\
-    Como $m < h(s + m_0) \Rightarrow x_{h(s+m_0)} \in f(s)$ Absurdo! \\
-    $x_{h(m_0 + s)} \in F - \bigcup_{i=1}^{h(s+m_0)} f(i)$ que es disjunto con $f(s)$ pues $s < h(s + m_0)$. \\
-    $\therefore V$ y, por lo tanto, $U$ contienen un subcubrimiento finito. \\
-
-    Para la vuelta supongamos que todo cubrimiento abierto de $F$ admite un
-    subcubrimiento finito, pero que $F$ no es compacto. \\ Hay una sucesión
-    $(x_m)_{m \in \N} \subset F$ que no tiene ninguna subsucesión convergente. Si
-    $x \in F$, no hay ningua subsucesión de $(x_m)_{m \in \N}$ que converge a $x$
-    y, por lo tanto, $\exists r_x > 0 : S_x = \{ m \in \N : x_m \in B_r(x) \}$ es
-    finito. \\ El conjunto $U = \{ B_{r_x}(x) : x \in F \}$ es un cubrimiento
-    abierto de $F$. \\ Por hipotesis hay un subconjunto finito $\{ y_1, \cdots,
-      y_k\}$ tal que $\{ B_{r_{y_1}}(y_1), \cdots, B_{r_{y_k}}(y_k) \}$ es
-    subcubrimiento de $F$. \\ En particular $\forall m \in \N, \exists i \in \{ 1,
-      \cdots, k \} : x_m \in B_{r_{y_i}}(y_i) \Rightarrow$ \\ $m \in S_y \therefore
-      \N \subset S_{y_1} \cup \cdots \cup S_{y_k}$ Absurdo! pues los $S_{y_i}$ son
-    finitos.
-  \end{proof}
-\end{corollary}
-
-\clearpage
-
-\begin{prop}
-  Sea $K \subset \R^n$ compacto. Si $U$ es un cubrimiento abierto de $K$ entonces $\exists \delta > 0 :$ si $x, y \in K, d(x, y) < \delta \Rightarrow \exists u \in U$ abierto tal que $x, y \in u$. \\
-  $\delta$ se llama número de Lebesgue del cubrimiento $U$.
-  \begin{proof}
-    Sea $U$ un cubrimiento abierto de $K$. Para cada $x \in K, \exists U_x \in U : x \in U_x$. Como $U_x$ es abierto $\exists r_x > 0 : B_{r_k}(x) \subset U_x$. \\
-    El conjunto $U^{\prime} = \{ B_{\frac{r_x}{2}} : x \in K \}$ es un cubrimiento abierto de $K$. $U^{\prime}$ posee un subcubrimiento finito. \\
-    $\exists x_1, \cdots, x_k : K \subset \bigcup_{i = 1}^{k} B_{\frac{r_{x_i}}{2}}(x_i)$. \\
-    Veamos que $\delta = \dfrac{1}{2} \cdot min(r_{x_1}, \cdots, r_{x_k})$ es un número de Lebesgue: \\
-    Sean $x, y \in K : d(x,y) < \delta \Rightarrow$ \\
-    $\exists i \in \{1, \cdots, m\} : x \in B_{\frac{r_{x_i}}{2}}(x_i) \Rightarrow \|x_i - y\| \leq \|x_i - x\| + \|x+y\| \leq \dfrac{r_{x_i}}{2} + \delta < \dfrac{r_{x_i}}{2} + \dfrac{r_{x_i}}{2} = r_{x_i} \Rightarrow$ \\
-    $x, y \in B_{r_{x_i}}(x_i) \subset U_{x_i}$ que es abierto de $U$.
-  \end{proof}
-\end{prop}
-
 \section{Propiedades de límites}
 
 \begin{definition}[Límite]
@@ -98,8 +17,6 @@
     $\therefore$ el límite es único.
   \end{proof}
 \end{lemma}
-
-\clearpage
 
 \begin{prop}
   Sea $A \subset \R^n, x_0 \in A^{\prime}, f: A \to \R^k, y \in \R^k$ son equivalentes:

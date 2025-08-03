@@ -58,8 +58,8 @@
       \item Si $\limsup_{n \to \infty} \sqrt[n]{|a_n|} > 1 \Rightarrow \sum a_n$ diverge, pues existen infinitos índices tales que $\sqrt[n]{|a_n|} > 1$ y entonces $a_n \not \to 0$.
       \item Si $\limsup_{n \to \infty} \sqrt[n]{|a_n|} = 1$ el criterio no concluye ($\sum \frac{1}{n}$, $\sum \frac{1}{n^2})$.
       \item Si $\alpha = \limsup_{n \to \infty} \sqrt[n]{ |a_n| } < 1 \Rightarrow \exists \beta \in (0\text{, }1) : \alpha < \beta < 1$ y $N \in \N$ tal que \begin{align*}
-        \sqrt[n]{|a_n|} < \beta, \forall n > N \Rightarrow |a_n| < \beta^n, \forall n > N
-      \end{align*} Como $0 < \beta < 1$ la serie $\sum \beta^n$ converge, por el criterio de comparación $\sum a_n$ converge absolutamente.
+              \sqrt[n]{|a_n|} < \beta, \forall n > N \Rightarrow |a_n| < \beta^n, \forall n > N
+            \end{align*} Como $0 < \beta < 1$ la serie $\sum \beta^n$ converge, por el criterio de comparación $\sum a_n$ converge absolutamente.
     \end{enumerate}
   \end{note}
 \end{corollary}
@@ -135,32 +135,21 @@
   \end{proof}
 \end{eg}
 
-\subsection{Criterio de Dirichlet - Abel}
-
-\begin{theorem}
-  Sea $\sum_{n \geq 1} a_n$ no necesariamente convergente cuyas sumas parciales forman una sucesión acotada. \\
-  Sea $(b_n)_{n \in \N}$ una sucesión decreciente de números positivos con $\lim_{n \to \infty} b_n = 0 \Rightarrow \sum_{n \geq 1} a_n \cdot b_n$ es convergente.
+\begin{theorem}[Dirichlet]
+  Sea $\sum_{n \geq 1} a_n$ no necesariamente convergente cuyas sumas parciales forman una sucesión acotada y $(b_n)_{n \in \N}$ una sucesión decreciente de números positivos con $\lim_{n \to \infty} b_n = 0 \Rightarrow \sum_{n \geq 1} a_n \cdot b_n$ es convergente.
 
   \begin{proof}
     \begin{align*}
-      a_1 \cdot b_1 + \cdots a_n \cdot b_n =
-    \end{align*}
-    \begin{align*}
-      a_1 \cdot (b_1 - b_2) + (a_1 + a_2) \cdot (b_2 - b_3) + \cdots + (a_1 + \cdots + a_{n-1}) \cdot (b_{n-1} - b_n) + (a_1 + \cdots + a_n) \cdot b_n
-    \end{align*}
-    \begin{align*}
-      = S_1 \cdot (b_1 - b_2) + S_2 \cdot (b_2 - b_3) + S_3 \cdot (b_3 - b_2) + \cdots + S_{n-1} (b_{n-1} - b_n) + S_n \cdot b_n
-    \end{align*}
-    \begin{align*}
-      = \sum_{i = 2}^n S_{i-1} \cdot (b_{i-1} - b_i) + S_n \cdot b_n
+       & a_1 \cdot b_1 + \cdots a_n \cdot b_n                                                                                \\
+       & = a_1 \cdot (b_1 - b_2) +  \cdots + (a_1 + \cdots + a_{n-1}) \cdot (b_{n-1} - b_n) + (a_1 + \cdots + a_n) \cdot b_n \\
+       & = S_1 \cdot (b_1 - b_2) + S_2 \cdot (b_2 - b_3) + \cdots + S_{n-1} (b_{n-1} - b_n) + S_n \cdot b_n                  \\
+       & = \sum_{i = 2}^n S_{i-1} \cdot (b_{i-1} - b_i) + S_n \cdot b_n
     \end{align*}
     Por hipotesis $\exists k > 0 : |S_n| \leq k, \forall n \in \N$ (son acotadas). Además $\sum_{n \geq 2} b_{n-1} \cdot b_n$ es una telescópica de números positivos. \\
-    Luego $\sum_{n \geq 2} S_{n-1} \cdot (b_{n-1} - b_n)$ es absolutamente converge y en particular convergente.
+    Luego $\sum_{n \geq 2} S_{n-1} \cdot (b_{n-1} - b_n)$ es absolutamente convergente y en particular convergente.
     Como $S_n \cdot b_n \to 0 \Rightarrow \exists \lim_{n \to \infty} \sum_{i \geq 2}^n S_{i-1} \cdot (b_{i-1} - b_i) + S_n \cdot b_n = \lim_{n \to \infty} \sum_{i \geq 1}^n a_n \cdot b_n \therefore$ converge.
   \end{proof}
 \end{theorem}
-
-\clearpage
 
 \begin{corollary}[Abel]
   Si $\sum a_n$ es convergente y $(b_n)_{n \in \N}$ es decreciente de términos positivos $\Rightarrow \sum a_n \cdot b_n$ es convergente.
@@ -173,7 +162,7 @@
 \begin{corollary}[Criterio de Leibniz]
   Si $(b_n)_{n \in \N}$ es decreciente y $ b_n \to 0 \Rightarrow \sum (-1)^n b_n$ converge.
   \begin{proof}
-    Aplicamos el criterio de Dirichlet pues $\sum (-1)^n$ no converge y $S_n = 0, -1$ son acotadas.
+    Aplicamos el criterio de Dirichlet pues $\sum (-1)^n$ no converge, pero $S_n = 0, -1$ son acotadas.
   \end{proof}
 \end{corollary}
 
@@ -192,23 +181,17 @@
 
 \begin{note}
   Si $\sum_{n \geq 1} a_n$ converge absolutamente $\Rightarrow \forall k \in \N$ vale que \begin{align*}
-    \sum_{n \geq 1} |a_n| \geq \sum_{n = 1}^k |a_n| = \sum_{n = 1}^k p_n + \sum_{n = 1}^k q_n \Rightarrow
-  \end{align*} \begin{align*}
-    \sum_{n \geq 1} p_n, \sum_{n \geq 1} q_n
-  \end{align*} convergen, pues son crecientes y están acotadas por $\sum_{n \geq 1} |a_n|$. Además si $\sum_{n \geq 1} p_n$ y $\sum_{n \geq 1} q_n$ convergen $\Rightarrow \sum a_n$ converge absolutamente.
+    & \sum_{n \geq 1} |a_n| \geq \sum_{n = 1}^k |a_n| = \sum_{n = 1}^k p_n + \sum_{n = 1}^k q_n \Rightarrow \sum_{n \geq 1} p_n, \sum_{n \geq 1} q_n \text{ son convergentes.}
+  \end{align*} Por ser crecientes y estar acotadas por $\sum_{n \geq 1} |a_n|$. Además si $\sum_{n \geq 1} p_n$ y $\sum_{n \geq 1} q_n$ convergen $\Rightarrow \sum a_n$ converge absolutamente.
 \end{note}
-
-\clearpage
 
 \begin{theorem}
   Si $\sum a_n$ converge condicionalmente $\Rightarrow \sum_{n \geq 1} p_n$ y $\sum_{n \geq 1} q_n$ son divergentes.
 
   \begin{proof}
     Supongamos que \begin{align*}
-      \sum q_n = c \Rightarrow |a_n| = a_n + 2 \cdot q_n
-    \end{align*}
-    \begin{align*}
-      \sum_{n = 1}^k |a_n| = \sum_{n = 1}^k a_n + 2 \cdot \sum_{n = 1}^k q_n
+      & \sum q_n = c \Rightarrow |a_n| = a_n + 2 \cdot q_n \\
+      & \sum_{n = 1}^k |a_n| = \sum_{n = 1}^k a_n + 2 \cdot \sum_{n = 1}^k q_n
     \end{align*}
     Si $k \to +\infty$ luego $\sum_{n \geq 1} |a_n| = \sum_{n \geq 1} a_n + 2 \cdot c$ Absurdo! pues no converge absolutamente $\therefore \sum_{n \geq 1} q_n$ diverge.
   \end{proof}
@@ -231,8 +214,6 @@
 \end{theorem}
 
 El caso general, $\sum_{n \geq 1} a_n = \sum_{n \geq 1} p_n - \sum_{n \geq 1} q_n \Rightarrow$ todo reordenamiento $(b_n)_{n \in N}$ de los términos de $(a_n)_{n \in \N}$ produce un reordenamiento de $(p_n)_{n \in \N}$ y $(q_n)_{n \in \N}$ que llamo $(u_n)_{n \in \N}$, $(v_n)_{n \in \N}$. De modo que son la parte positiva y negativa de $(b_n)_{n \in \N}$ y usamos el caso anterior pues son términos de valores positivos.
-
-\clearpage
 
 \begin{theorem}
   Si $\sum_{n \geq 1} a_n$ converge condicionalmente. Dado $c \in \R, \exists$ reordenamiento $(b_n)_{n \in \N}$ de los términos de $\sum_{n \geq 1} a_n$ tal que $\sum_{n \geq 1} b_n = c$.

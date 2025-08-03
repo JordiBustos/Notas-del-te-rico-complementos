@@ -1,24 +1,24 @@
 \section{Cuerpo Arquimediano}
 
-Si $\mathbb{K}$ es un cuerpo ordenado, $\N \subset \Z \subset \Q \subset \mathbb{K}$, pero esto no necesariamente implica que $\N$ es no acotado.
+Si \(\mathbb{K}\) es un cuerpo ordenado, \(\N \subset \Z \subset \Q \subset \mathbb{K}\), pero esto no necesariamente implica que \(\N\) es no acotado.
 
 \begin{eg}
-    $\Q(t):$ cuerpo de funciones racionales con coeficientes en $\Q$, $r(t) = p(t)/q(t)$, $p, q \in \Q, q \neq 0$. Este cuerpo puede ser ordenado diciendo que $r(t)$ es positivo si y sólo si el coeficiente de mayor grado del polinomio $pq$ es positivo.
-    En este cuerpo observemos que $p(t)=t=t/1$ cumple que $\forall n \in \N, p(t)=t-n \in P \Rightarrow t>n, \forall n \in \N$. Es decir que en $\Q(t)$, $\N$ es un conjunto acotado, por ejemplo por $t$.
+    \(\Q(t):\) cuerpo de funciones racionales con coeficientes en \(\Q\), \(r(t) = p(t)/q(t)\), \(p, q \in \Q, q \neq 0\). Este cuerpo puede ser ordenado diciendo que \(r(t)\) es positivo si y sólo si el coeficiente de mayor grado del polinomio \(pq\) es positivo.
+    En este cuerpo observemos que \(p(t)=t=t/1\) cumple que \(\forall n \in \N, p(t)=t-n \in P \Rightarrow t>n, \forall n \in \N\). Es decir que en \(\Q(t)\), \(\N\) es un conjunto acotado, por ejemplo por \(t\).
 \end{eg}
 
 \begin{theorem}
-    En un cuerpo ordenado $\mathbb{K}$ son equivalentes: \begin{enumerate}
-        \item $\N \subset \mathbb{K}$ no es acotado superiormente.
-        \item Dados $a, b \in \mathbb{K}$ con $a>0, \exists n \in \N:m \cdot a>b$.
-        \item Dado cualquier $0<a \in \mathbb{K}, \exists n \in \N : 0 < \dfrac{1}{n} < a$.
-        \item $\mathbb{K}$ es arquimediano.
+    En un cuerpo ordenado \(\mathbb{K}\) son equivalentes: \begin{enumerate}
+        \item \(\N \subset \mathbb{K}\) no es acotado superiormente.
+        \item Dados \(a, b \in \mathbb{K}\) con \(a>0, \exists n \in \N:m \cdot a>b\).
+        \item Dado cualquier \(0<a \in \mathbb{K}, \exists n \in \N : 0 < \dfrac{1}{n} < a\).
+        \item \(\mathbb{K}\) es arquimediano.
     \end{enumerate}
     \begin{proof}
-        Sea $\mathbb{K}$ un cuerpo ordenado. \begin{enumerate}
-            \item[1) $\Rightarrow$ 2)] Como $\N$ es no acotado, dados $a,b \in \mathbb{K}$, $a>0$, $\exists m \in \N : m > \dfrac ba$, caso contrario $\dfrac ba$ sería cota de $\N \Rightarrow ma>b$
-            \item[2) $\Rightarrow$ 3)] Dado $a>0$, tomamos $b=1$ y por 2) $\exists n \in \N : ma > 1 \Rightarrow a > \dfrac{1}{m} > 0$.
-            \item[3) $\Rightarrow$ 1)] Dado $0<a \in \mathbb{K} \Rightarrow \forall n \in \N, 0<\dfrac 1n<\dfrac 1a$, pues 3. vale para todo $\mathbb{K} \Rightarrow b<n \Rightarrow$ es no acotado (pues ningún $b>0$ puede ser cota superior).
+        Sea \(\mathbb{K}\) un cuerpo ordenado. \begin{enumerate}
+            \item[1) \(\Rightarrow\) 2)] Como \(\N\) es no acotado, dados \(a,b \in \mathbb{K}\), \(a>0\), \(\exists m \in \N : m > \dfrac ba\), caso contrario \(\dfrac ba\) sería cota de \(\N \Rightarrow ma>b\)
+            \item[2) \(\Rightarrow\) 3)] Dado \(a>0\), tomamos \(b=1\) y por 2) \(\exists n \in \N : ma > 1 \Rightarrow a > \dfrac{1}{m} > 0\).
+            \item[3) \(\Rightarrow\) 1)] Dado \(0<a \in \mathbb{K} \Rightarrow \forall n \in \N, 0<\dfrac 1n<\dfrac 1a\), pues 3. vale para todo \(\mathbb{K} \Rightarrow b<n \Rightarrow\) es no acotado (pues ningún \(b>0\) puede ser cota superior).
         \end{enumerate}
     \end{proof}
 \end{theorem}
@@ -26,118 +26,118 @@ Si $\mathbb{K}$ es un cuerpo ordenado, $\N \subset \Z \subset \Q \subset \mathbb
 \section{Supremo e ínfimo}
 
 \begin{definition}[Supremo]
-    Dados un cuerpo ordenado $\mathbb{K}$ y un subconjunto $X \subset \mathbb{K}$ acotado superiormente, decimos que $b \in \mathbb{K}$ es supremo de $X$ si es la menor de las cotas superiores de $X$ en $\mathbb{K}$.
+    Dados un cuerpo ordenado \(\mathbb{K}\) y un subconjunto \(X \subset \mathbb{K}\) acotado superiormente, decimos que \(b \in \mathbb{K}\) es supremo de \(X\) si es la menor de las cotas superiores de \(X\) en \(\mathbb{K}\).
 \end{definition}
 
 Es decir, se cumple:
 
 \begin{enumerate}
-    \item $\forall x \in X, x \leq b$
-    \item Si $c \in \mathbb{K}$ y $x \leq c$, $\forall x \in X \Rightarrow b \leq c$.
-    \item Dado $c < b$ en $\mathbb{K}, \exists x \in X : c<x$
+    \item \(\forall x \in X, x \leq b\)
+    \item Si \(c \in \mathbb{K}\) y \(x \leq c\), \(\forall x \in X \Rightarrow b \leq c\).
+    \item Dado \(c < b\) en \(\mathbb{K}, \exists x \in X : c<x\)
 \end{enumerate}
 
 \begin{note}
     \begin{enumerate}
         \item El supremo de un conjunto, si existe es único.
         \item Si un conjunto tiene máximo, es el supremo.
-        \item Si $X = \varnothing$, todo $b \in \mathbb{K}$ es cota superior, como $\mathbb{K}$ no tiene último elemento, se sigue que $\varnothing$ no tiene supremo en $\mathbb{K}$.
+        \item Si \(X = \varnothing\), todo \(b \in \mathbb{K}\) es cota superior, como \(\mathbb{K}\) no tiene último elemento, se sigue que \(\varnothing\) no tiene supremo en \(\mathbb{K}\).
     \end{enumerate}
 \end{note}
 
 \begin{definition}[Ínfimo]
-    Dados un cuerpo ordenado $\mathbb{K}$ y un subconjunto $X \subset \mathbb{K}$ acotado inferiormente, decimos que $b \in \mathbb{K}$ es ínfimo de $X$ si es la mayor de las cotas inferiores de $X$ en $\mathbb{K}$.
+    Dados un cuerpo ordenado \(\mathbb{K}\) y un subconjunto \(X \subset \mathbb{K}\) acotado inferiormente, decimos que \(b \in \mathbb{K}\) es ínfimo de \(X\) si es la mayor de las cotas inferiores de \(X\) en \(\mathbb{K}\).
 \end{definition}
 
 Es decir, se cumple:
 
 \begin{enumerate}
-    \item $\forall x \in X, x \geq b$
-    \item Si $c \in \mathbb{K}$ y $x \geq c$, $\forall x \in X \Rightarrow b \geq c$.
-    \item Dado $c > b$ en $\mathbb{K}, \exists x \in X : b < x < c$.
+    \item \(\forall x \in X, x \geq b\)
+    \item Si \(c \in \mathbb{K}\) y \(x \geq c\), \(\forall x \in X \Rightarrow b \geq c\).
+    \item Dado \(c > b\) en \(\mathbb{K}, \exists x \in X : b < x < c\).
 \end{enumerate}
 
 \begin{eg}
-    Dados $a<b$ en $\mathbb{K}$. Si $X=(a,b) \Rightarrow inf(X)=a$, $sup(X)=b$.
+    Dados \(a<b\) en \(\mathbb{K}\). Si \(X=(a,b) \Rightarrow inf(X)=a\), \(sup(X)=b\).
     \begin{enumerate}
-        \item Por definición $a$ es cota inferior y $b$ superior.
-        \item $a < c \in \mathbb{K}$, no es cota inferior. En efecto, si $c \geq b$ trivial. Si $c < b \Rightarrow \frac{a+c}{2} \in X$,
-              $a < \frac{a+c}{2} < c \Rightarrow a < c \therefore c$ no es cota inferior.
+        \item Por definición \(a\) es cota inferior y \(b\) superior.
+        \item \(a < c \in \mathbb{K}\), no es cota inferior. En efecto, si \(c \geq b\) trivial. Si \(c < b \Rightarrow \frac{a+c}{2} \in X\),
+              \(a < \frac{a+c}{2} < c \Rightarrow a < c \therefore c\) no es cota inferior.
     \end{enumerate}
-    Luego por 1) y por 2) $a$ es ínfimo de $X$.
+    Luego por 1) y por 2) \(a\) es ínfimo de \(X\).
 \end{eg}
 
 \begin{eg}
-    Sea $Y = \{ y \in \Q : y=\dfrac{1}{2^n}, n\in \N \}$. Veamos que $inf(Y) =0, sup(Y) = \dfrac{1}{2}$.
+    Sea \(Y = \{ y \in \Q : y=\dfrac{1}{2^n}, n\in \N \}\). Veamos que \(inf(Y) =0, sup(Y) = \dfrac{1}{2}\).
     \begin{align*}
         \dfrac{1}{2} \in Y \text{, } \dfrac{1}{2^n} \leq \dfrac{1}{2} \quad (\forall n \in \N) \Rightarrow \dfrac{1}{2} = sup(Y)
     \end{align*}
 
-    Como $0 < \dfrac{1}{2^n} (\forall n \in \N) \Rightarrow 0$ es cota inferior.
+    Como \(0 < \dfrac{1}{2^n} (\forall n \in \N) \Rightarrow 0\) es cota inferior.
     Sea \begin{align*}
         0 & < c \in \mathbb{K}, 2^n = (1+1)^n \leq 1+n \leq \dfrac{1}{c}       \\
           & \Rightarrow n \leq \dfrac{1}{c} - 1 \Rightarrow \dfrac{1}{2^n} < c
     \end{align*}
-    $\Rightarrow c$ no puede ser cota inferior por la propiedad 3 de la arquimedianidad $\therefore 0$ es el ínfimo de $Y$.
+    \(\Rightarrow c\) no puede ser cota inferior por la propiedad 3 de la arquimedianidad \(\therefore 0\) es el ínfimo de \(Y\).
 \end{eg}
 
-El problema más serio de los racionales desde el punto de vista del análisis es que algunos conjuntos acotados de números racionales no tienen súpremo (o ínfimo) en $\Q$.
+El problema más serio de los racionales desde el punto de vista del análisis es que algunos conjuntos acotados de números racionales no tienen súpremo (o ínfimo) en \(\Q\).
 
 \begin{eg}
-    Sean $X = \{ x \in \Q : x \geq 0, x² < 2 \}\text{, } Y = \{ y \in \Q : y>0, y² > 2 \}$. Notemos que si $z>2 \Rightarrow z² > 4 \Rightarrow z \notin X \Rightarrow X \subset [0, 2]$ y $X$ es un conjunto acotado. Además $Y \subset (0, +\infty)$ por lo que es un conjunto acotado inferiormente. Veamos que $\nexists$ supremo e ínfimo en $\Q$. \begin{enumerate}
-        \item Quiero ver que $X$ no tiene máximo. Dado $x \in X$ quiero encontrar $r \in \Q$ tal que $0<r<1$ y $x+r \in X \iff (x+r)² =x^2+2xr+r² < 2$. Como $r<1 \Rightarrow (x+r)²<x²+2xr+r=x²+r(2x+1)<2 \therefore x+r \in X$.
-        \item Quiero ver que $Y$ no tiene elemento mínimo, dado $y \in Y$ tomo $r \in \Q : 0 < r < \dfrac{y²-2}{2y}$.
+    Sean \(X = \{ x \in \Q : x \geq 0, x² < 2 \}\text{, } Y = \{ y \in \Q : y>0, y² > 2 \}\). Notemos que si \(z>2 \Rightarrow z² > 4 \Rightarrow z \notin X \Rightarrow X \subset [0, 2]\) y \(X\) es un conjunto acotado. Además \(Y \subset (0, +\infty)\) por lo que es un conjunto acotado inferiormente. Veamos que \(\nexists\) supremo e ínfimo en \(\Q\). \begin{enumerate}
+        \item Quiero ver que \(X\) no tiene máximo. Dado \(x \in X\) quiero encontrar \(r \in \Q\) tal que \(0<r<1\) y \(x+r \in X \iff (x+r)² =x^2+2xr+r² < 2\). Como \(r<1 \Rightarrow (x+r)²<x²+2xr+r=x²+r(2x+1)<2 \therefore x+r \in X\).
+        \item Quiero ver que \(Y\) no tiene elemento mínimo, dado \(y \in Y\) tomo \(r \in \Q : 0 < r < \dfrac{y²-2}{2y}\).
               \begin{align*}
                   (y - r)²          = y² - 2yr + r² > y² - 2yr & > 2   \\
                   y² - 2                                       & > 2yr \\
                   \dfrac{y²-2}{2y}                             & > r
               \end{align*}
-              Es decir que $y-r \in Y$ e $y-r < y$.
-        \item Si $x \in X, y \in Y \Rightarrow x < y \Rightarrow x² < 2 < y² \Rightarrow x² < y²$.
+              Es decir que \(y-r \in Y\) e \(y-r < y\).
+        \item Si \(x \in X, y \in Y \Rightarrow x < y \Rightarrow x² < 2 < y² \Rightarrow x² < y²\).
     \end{enumerate}
 
-    Veamos que por 1, 2, 3 $\nexists sup(X), inf(Y)$. Supongamos $0< \alpha = sup(X)$, no puede ser $\alpha²<2$ porque si no $\alpha \in X$ y $X$ no tiene máximo. Tampoco puede ser $\alpha² > 2$ pues estaría en $Y$ e $Y$ no tiene mínimo, pues habría un $\beta \in Y$ con $\beta < \alpha$ y por 3) sería $x < \beta < \alpha, \forall x \in X$ lo que contradice que $sup(X) = \alpha$, pues sería $\beta$ el supremo.
-    En definitiva si existiese $sup(X) = \alpha$, debe ser $\alpha² = 2 \notin \Q$. Luego $X$ no tiene supremo en $\Q$.
+    Veamos que por 1, 2, 3 \(\nexists sup(X), inf(Y)\). Supongamos \(0< \alpha = sup(X)\), no puede ser \(\alpha²<2\) porque si no \(\alpha \in X\) y \(X\) no tiene máximo. Tampoco puede ser \(\alpha² > 2\) pues estaría en \(Y\) e \(Y\) no tiene mínimo, pues habría un \(\beta \in Y\) con \(\beta < \alpha\) y por 3) sería \(x < \beta < \alpha, \forall x \in X\) lo que contradice que \(sup(X) = \alpha\), pues sería \(\beta\) el supremo.
+    En definitiva si existiese \(sup(X) = \alpha\), debe ser \(\alpha² = 2 \notin \Q\). Luego \(X\) no tiene supremo en \(\Q\).
     Ínfimo, ejercicio (análogo).
 \end{eg}
 
 \section{Cuerpo completo}
 
 \begin{definition}
-    Si $\mathbb{K}$ es un cuerpo ordenado no Arquimediano, $\N \subset \mathbb{K}$ es acotado superiormente.
+    Si \(\mathbb{K}\) es un cuerpo ordenado no Arquimediano, \(\N \subset \mathbb{K}\) es acotado superiormente.
 \end{definition}
 
-Si $b \in \mathbb{K}$ es una cota superior de $\N \Rightarrow n+1 \in \N<b, \forall n \in \N \Rightarrow n < b-1$ o sea $b-1$ es cota superior de $\N \therefore \nexists sup(\N)$ en $\mathbb{K}$.
+Si \(b \in \mathbb{K}\) es una cota superior de \(\N \Rightarrow n+1 \in \N<b, \forall n \in \N \Rightarrow n < b-1\) o sea \(b-1\) es cota superior de \(\N \therefore \nexists sup(\N)\) en \(\mathbb{K}\).
 
 \begin{definition}[Cuerpo Completo]
-    Un cuerpo ordenado $\mathbb{K}$ se dice completo cuando dado un subconjunto no vacío y acotado superiormente tiene supremo en $\mathbb{K}$.
+    Un cuerpo ordenado \(\mathbb{K}\) se dice completo cuando dado un subconjunto no vacío y acotado superiormente tiene supremo en \(\mathbb{K}\).
 \end{definition}
 
 \begin{note}
-    Sea $\mathbb{K}$ un cuerpo ordenado completo. Entonces:
+    Sea \(\mathbb{K}\) un cuerpo ordenado completo. Entonces:
     \begin{enumerate}
         \item Es arquimediano.
-        \item Dado un subconjunto no vacío y acotado inferiormente tiene ínfimo en $\mathbb{K}$.
+        \item Dado un subconjunto no vacío y acotado inferiormente tiene ínfimo en \(\mathbb{K}\).
     \end{enumerate}
     \begin{proof}
-        Sea $Y \subset \mathbb{K}$, no vacío y acotado inferiormente. Sea $X = -Y = \{ -y:y \in Y \} \Rightarrow X$ es no vacío y acotado superiormente $\Rightarrow \exists sup(X)=a \Rightarrow -a=inf(Y)$.
+        Sea \(Y \subset \mathbb{K}\), no vacío y acotado inferiormente. Sea \(X = -Y = \{ -y:y \in Y \} \Rightarrow X\) es no vacío y acotado superiormente \(\Rightarrow \exists sup(X)=a \Rightarrow -a=inf(Y)\).
     \end{proof}
 \end{note}
 
-Axioma: Existe un cuerpo ordenado llamado $\R$.
+Axioma: Existe un cuerpo ordenado llamado \(\R\).
 
 
-Ejercicio: Dados $0<a \in \R, m \in \N \Rightarrow \exists! 0<b\in \R : b^m =a$. Sugerencia Definir $X = \{ x \in \R : x\geq0, x^n<a \}$, $Y = \{ y \in \R : y>0, y^n >a \}$ e imitar la demostración anterior. Probar y usar que dado $x>0$ $\exists$ para cada $m \in \N$ un número real positivo que depende de $x$ tal que $(x+d)^m \leq A_nd+x^n, \forall 0<d<1.$.
+Ejercicio: Dados \(0<a \in \R, m \in \N \Rightarrow \exists! 0<b\in \R : b^m =a\). Sugerencia Definir \(X = \{ x \in \R : x\geq0, x^n<a \}\), \(Y = \{ y \in \R : y>0, y^n >a \}\) e imitar la demostración anterior. Probar y usar que dado \(x>0\) \(\exists\) para cada \(m \in \N\) un número real positivo que depende de \(x\) tal que \((x+d)^m \leq A_nd+x^n, \forall 0<d<1.\).
 
 \begin{definition}[Conjunto Denso]
-    Un conjunto $X \subset \R$ se dice denso en $\R$ si todo intervalo abierto $(a, b)$ contiene algún punto de $X$.
+    Un conjunto \(X \subset \R\) se dice denso en \(\R\) si todo intervalo abierto \((a, b)\) contiene algún punto de \(X\).
 \end{definition}
 
 \begin{eg}
-    $\Q$ es denso en $\R$.
+    \(\Q\) es denso en \(\R\).
     \begin{proof}
-        Como $b-a>0, \exists p\in \N: 0 < \dfrac{1}{p}<b-a$. \\
-        Sea $A = \{ m \in \Z: \dfrac{m}{p} \geq b \}$. Como $\R$ es Arquimediano, $A$ es un conjunto de números enteros no vacío y acotado por $bp$. Sea $m_0$ el menor elemento de A entonces $b\leq \dfrac{m_0}{p}$ y $\dfrac{m_0-1}{p} <b$. También $\dfrac{m_0-1}{p} > a$, si no tendríamos que
+        Como \(b-a>0, \exists p\in \N: 0 < \dfrac{1}{p}<b-a\). \\
+        Sea \(A = \{ m \in \Z: \dfrac{m}{p} \geq b \}\). Como \(\R\) es Arquimediano, \(A\) es un conjunto de números enteros no vacío y acotado por \(bp\). Sea \(m_0\) el menor elemento de A entonces \(b\leq \dfrac{m_0}{p}\) y \(\dfrac{m_0-1}{p} <b\). También \(\dfrac{m_0-1}{p} > a\), si no tendríamos que
         \begin{equation*}
             \dfrac{m_0-1}{p} \leq a \leq b \leq \dfrac{m_0}{p}
         \end{equation*}
@@ -145,28 +145,28 @@ Ejercicio: Dados $0<a \in \R, m \in \N \Rightarrow \exists! 0<b\in \R : b^m =a$.
         \begin{equation*}
             b-a \leq \dfrac{m_0}{p} - \dfrac{m_0-1}{p} = \dfrac1p
         \end{equation*}
-        Absurdo! $\therefore \Q$ es denso en $\R$.
+        Absurdo! \(\therefore \Q\) es denso en \(\R\).
     \end{proof}
 \end{eg}
 
 \begin{eg}
-    $\R \setminus \Q$ es denso en $\R$. \\
-    Para ver que $\mathbb{R-Q}$ es denso usamos la misma idea tomando $p \in \N :0<\dfrac1p<\dfrac{b-a}{\sqrt2}$ por Arquimedianidad y $\dfrac{\sqrt2}{p} < b-a$ por longitud del intervalo.
+    \(\R \setminus \Q\) es denso en \(\R\). \\
+    Para ver que \(\mathbb{R-Q}\) es denso usamos la misma idea tomando \(p \in \N :0<\dfrac1p<\dfrac{b-a}{\sqrt2}\) por Arquimedianidad y \(\dfrac{\sqrt2}{p} < b-a\) por longitud del intervalo.
     Ejercicio terminar la demostración.
 \end{eg}
 
 \section{Cardinalidad - introducción}
 
 \begin{definition}
-    Decimos que dos conjuntos $X, Y$ tienen el mismo cardinal (coordinables o equipotentes) si $\exists f: X \to Y$ biyectiva. Notamos $X \sim Y$ o $card(X) = card(Y)$ o $\#X=\#Y$ y $\sim$ es una relación de equivalencia.
+    Decimos que dos conjuntos \(X, Y\) tienen el mismo cardinal (coordinables o equipotentes) si \(\exists f: X \to Y\) biyectiva. Notamos \(X \sim Y\) o \(card(X) = card(Y)\) o \(\#X=\#Y\) y \(\sim\) es una relación de equivalencia.
 \end{definition}
 
-Dado $n \in \N$ definimos $\mathbb{I}_n = \{1, 2, 3,\cdots, n\}$.
+Dado \(n \in \N\) definimos \(\mathbb{I}_n = \{1, 2, 3,\cdots, n\}\).
 
 \begin{theorem}
-    Sean $n, m \in \N$. Entonces, $\mathbb{I}_n \sim \mathbb{I}_m \iff n = m$.
+    Sean \(n, m \in \N\). Entonces, \(\mathbb{I}_n \sim \mathbb{I}_m \iff n = m\).
     \begin{proof}
-        Sabemos que si $\mathbb{I}_n \sim \mathbb{I}_m$, entonces $\exists f: \mathbb{I}_n \to \mathbb{I}_m$ biyectiva. Supongamos que $n < m$. Esto implica que puedo definir $g: \mathbb{I}_m \to \mathbb{I}_{n+1}$ suryectiva como:
+        Sabemos que si \(\mathbb{I}_n \sim \mathbb{I}_m\), entonces \(\exists f: \mathbb{I}_n \to \mathbb{I}_m\) biyectiva. Supongamos que \(n < m\). Esto implica que puedo definir \(g: \mathbb{I}_m \to \mathbb{I}_{n+1}\) suryectiva como:
         \begin{align*}
             g(k) =
             \begin{cases}
@@ -175,19 +175,19 @@ Dado $n \in \N$ definimos $\mathbb{I}_n = \{1, 2, 3,\cdots, n\}$.
             \end{cases}
         \end{align*}
 
-        Dada $g \circ f: \mathbb{I}_n \to \mathbb{I}_{n+1}$ basta probar que $\nexists$ funciones $h: \mathbb{I}_n \to \mathbb{I}_{n+1}$ suryectivas para probar el absurdo. Por inducción
-        Si $m = 1$, $h$ no puede ser suryectiva. Supongamos que vale para $1 \leq k \leq n-1$. Si $\exists h: \mathbb{I}_n \to \mathbb{I}_{n+1}$ suryectiva, entonces $\exists k : f(n) = k$.
+        Dada \(g \circ f: \mathbb{I}_n \to \mathbb{I}_{n+1}\) basta probar que \(\nexists\) funciones \(h: \mathbb{I}_n \to \mathbb{I}_{n+1}\) suryectivas para probar el absurdo. Por inducción
+        Si \(m = 1\), \(h\) no puede ser suryectiva. Supongamos que vale para \(1 \leq k \leq n-1\). Si \(\exists h: \mathbb{I}_n \to \mathbb{I}_{n+1}\) suryectiva, entonces \(\exists k : f(n) = k\).
 
-        Definimos una permutación $r$ de $\mathbb{I}_{n+1}$ tal que $r(k) = n+1$. Por lo tanto, $r \circ h: \mathbb{I}_n \to \mathbb{I}_{n+1}$ es suryectiva y $(r \circ f)(n) = r(k) = n+1$. Esto implica que la restricción
+        Definimos una permutación \(r\) de \(\mathbb{I}_{n+1}\) tal que \(r(k) = n+1\). Por lo tanto, \(r \circ h: \mathbb{I}_n \to \mathbb{I}_{n+1}\) es suryectiva y \((r \circ f)(n) = r(k) = n+1\). Esto implica que la restricción
         \[
             r \circ f|_{\mathbb{I}_{n-1}} : \mathbb{I}_{n-1} \to \mathbb{I}_n
         \]
-        es suryectiva. Esto es un absurdo, ya que por la hipótesis inductiva no existen funciones suryectivas de $\mathbb{I}_{n-1} \to \mathbb{I}_n$.
+        es suryectiva. Esto es un absurdo, ya que por la hipótesis inductiva no existen funciones suryectivas de \(\mathbb{I}_{n-1} \to \mathbb{I}_n\).
 
-        El caso $\Leftarrow$ es trivial.
+        El caso \(\Leftarrow\) es trivial.
     \end{proof}
 \end{theorem}
 
 \begin{definition}
-    $X$ es finito si $\exists n: X$ es coordinable con $\mathbb{I}_n$ y escribimos $card(X)=n$. Decimos que $X$ es infinito si no existe tal $n$.
+    \(X\) es finito si \(\exists n: X\) es coordinable con \(\mathbb{I}_n\) y escribimos \(card(X)=n\). Decimos que \(X\) es infinito si no existe tal \(n\).
 \end{definition}

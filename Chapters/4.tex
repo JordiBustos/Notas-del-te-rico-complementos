@@ -1,21 +1,21 @@
 \section{Operaciones con cardinales}
 
-Dados dos cardinales $n,m$ (no necesariamente finitos) y $X, Y$ conjuntos disjuntos tales que $card(X) = n$, $card(Y) = m$, podemos definir:
+Dados dos cardinales \(n,m\) (no necesariamente finitos) y \(X, Y\) conjuntos disjuntos tales que \(card(X) = n\), \(card(Y) = m\), podemos definir:
 
 \begin{enumerate}
-  \item \textbf{Suma:} $n+m = card(X \cup Y)$.
-  \item \textbf{Producto:} $n \cdot m = card(X \times Y)$.
-  \item \textbf{Potencia:} $n^m = card(\{ f: Y \to X \}) = card(X^Y)$.
+  \item \textbf{Suma:} \(n+m = card(X \cup Y)\).
+  \item \textbf{Producto:} \(n \cdot m = card(X \times Y)\).
+  \item \textbf{Potencia:} \(n^m = card(\{ f: Y \to X \}) = card(X^Y)\).
 \end{enumerate}
 
 \begin{note}
-  Suponer que $X \cap Y = \varnothing$ no es restrictivo porque $X \sim (X \times \{1\})$ e $Y \sim (Y \times \{ 2\})$, y $(X \times \{1\}) \sim (Y \times \{ 2\})$ y son disjuntos.
+  Suponer que \(X \cap Y = \varnothing\) no es restrictivo porque \(X \sim (X \times \{1\})\) e \(Y \sim (Y \times \{ 2\})\), y \((X \times \{1\}) \sim (Y \times \{ 2\})\) y son disjuntos.
 \end{note}
 
 \begin{note}
-  Hay que probar que la definición es independiente de los conjuntos $X, Y$ que elegimos.
-  Si $n = card(\tilde{X})$ y $m = card(\tilde{Y})$, $\tilde{X} \cap \tilde{Y} = \varnothing \Rightarrow n+m=card(\tilde{X} \cup \tilde{Y})$. Vale porque existen biyecciones entre $\tilde{X}$ y $X$ y entre $Y$ y $\tilde{Y}$.
-  Sea $f: X \to \tilde{X}$, $g:Y \to \tilde{Y}$ con lo cual $h: X \cup Y \to \tilde{X} \cup \tilde{Y}$ dada por
+  Hay que probar que la definición es independiente de los conjuntos \(X, Y\) que elegimos.
+  Si \(n = card(\tilde{X})\) y \(m = card(\tilde{Y})\), \(\tilde{X} \cap \tilde{Y} = \varnothing \Rightarrow n+m=card(\tilde{X} \cup \tilde{Y})\). Vale porque existen biyecciones entre \(\tilde{X}\) y \(X\) y entre \(Y\) y \(\tilde{Y}\).
+  Sea \(f: X \to \tilde{X}\), \(g:Y \to \tilde{Y}\) con lo cual \(h: X \cup Y \to \tilde{X} \cup \tilde{Y}\) dada por
   \[
     h(z) = \begin{cases}
       f(z) & \text{si } z \in X, \\
@@ -26,15 +26,15 @@ Dados dos cardinales $n,m$ (no necesariamente finitos) y $X, Y$ conjuntos disjun
   Similar para el producto y la potencia.
 \end{note}
 
-Supongamos $card(X) = n$, $card(Y) = m$, $card(Z) = p$, no necesariamente
-finitos con $X, Y, Z$ disjuntos dos a dos.
+Supongamos \(card(X) = n\), \(card(Y) = m\), \(card(Z) = p\), no necesariamente
+finitos con \(X, Y, Z\) disjuntos dos a dos.
 
 \begin{prop}
   La suma cumple las siguientes propiedades:
   \begin{enumerate}
-    \item Conmutatividad: $n+m=m+n$, pues $X \cup Y = Y \cup X$.
-    \item Asociatividad: $(n+m)+p=n+(m+p)$.
-    \item Existencia del neutro: $0+n=n$, $\varnothing \cup X=X$.
+    \item Conmutatividad: \(n+m=m+n\), pues \(X \cup Y = Y \cup X\).
+    \item Asociatividad: \((n+m)+p=n+(m+p)\).
+    \item Existencia del neutro: \(0+n=n\), \(\varnothing \cup X=X\).
   \end{enumerate}
 \end{prop}
 
@@ -42,14 +42,14 @@ finitos con $X, Y, Z$ disjuntos dos a dos.
 \begin{prop}
   El producto cumple las siguientes propiedades:
   \begin{enumerate}
-    \item Conmutatividad: $n \cdot m = m \cdot n$, pues $X \times Y \sim Y \times X$.
-    \item $0 \cdot n = 0$, pues $\varnothing \times X = \varnothing$.
-    \item $1 \cdot n = n$, pues $\{ 1 \} \times X \sim X$. Aquí, $f: \{ 1 \} \times X \to X$ saca el $1$ y $g: X \to \{ 1 \} \times X$ agrega el $1$. Ambas funciones son biyectivas.
+    \item Conmutatividad: \(n \cdot m = m \cdot n\), pues \(X \times Y \sim Y \times X\).
+    \item \(0 \cdot n = 0\), pues \(\varnothing \times X = \varnothing\).
+    \item \(1 \cdot n = n\), pues \(\{ 1 \} \times X \sim X\). Aquí, \(f: \{ 1 \} \times X \to X\) saca el \(1\) y \(g: X \to \{ 1 \} \times X\) agrega el \(1\). Ambas funciones son biyectivas.
   \end{enumerate}
 \end{prop}
 
 \begin{prop}
-  Distributiva del producto en la suma: $n \cdot (m+p) = n \cdot m + n \cdot p$ porque $X \times (Y \cup Z) \sim (X \times Y) \cup (X \times Z)$.
+  Distributiva del producto en la suma: \(n \cdot (m+p) = n \cdot m + n \cdot p\) porque \(X \times (Y \cup Z) \sim (X \times Y) \cup (X \times Z)\).
 \end{prop}
 
 \begin{note}
@@ -61,104 +61,104 @@ finitos con $X, Y, Z$ disjuntos dos a dos.
 \end{note}
 
 \begin{eg}
-  Si $n = card(\N) = \aleph_0$ y $card(\R) = c$, tenemos que:
+  Si \(n = card(\N) = \aleph_0\) y \(card(\R) = c\), tenemos que:
   \begin{enumerate}
     \item \begin{enumerate}
-            \item $n+n = \aleph_0 + \aleph_0 = \aleph_0$.
-            \item $n \cdot n = \aleph_0 \cdot \aleph_0 = \aleph_0$.
+            \item \(n+n = \aleph_0 + \aleph_0 = \aleph_0\).
+            \item \(n \cdot n = \aleph_0 \cdot \aleph_0 = \aleph_0\).
           \end{enumerate}
     \item \begin{enumerate}
-            \item $c \cdot c = c$.
-            \item $c+c = c$.
+            \item \(c \cdot c = c\).
+            \item \(c+c = c\).
           \end{enumerate}
   \end{enumerate}
 
   \begin{proof}
     \begin{enumerate}
-      \item Vimos que \begin{align*} card(\{ 2n : n \in \N \}) = \aleph_0, card(\{ 2n+1 : n \in \N \}) = \aleph_0 \end{align*} La unión de ambos conjuntos es $\N$. Además $\N \times \N = \aleph_0$, así $\aleph_0 \cdot \aleph_0 = \aleph_0$.
+      \item Vimos que \begin{align*} card(\{ 2n : n \in \N \}) = \aleph_0, card(\{ 2n+1 : n \in \N \}) = \aleph_0 \end{align*} La unión de ambos conjuntos es \(\N\). Además \(\N \times \N = \aleph_0\), así \(\aleph_0 \cdot \aleph_0 = \aleph_0\).
 
-      \item Si pruebo que el cardinal de cualquier intervalo no degenerado (sin extremos iguales) de la recta es $c$, puedo probar que $c+c=c$ observando que $(0,1) = (0, \dfrac{1}{2}) \cup (\dfrac{1}{2}, 1)$. \\
-            En efecto, $\arctan(x)$ es una biyección entre $\R$ y el intervalo $(-\dfrac{\pi}{2}, \dfrac{\pi}{2})$, y hay una biyección entre este intervalo y cualquier $(a, b)$ dada por $y = \dfrac{b}{\pi} \cdot (x + \dfrac{\pi}{2}) + a$. \\
-            Además, $(0, 1)$ y $[0, 1]$ son coordinables. Si $f: [0, 1] \to (0, 1)$ es inyectiva y por el Teorema de Cantor-Bernstein $[0, 1] \sim (0, 1)$. \\
-            Para probar $c \cdot c = c$, uso que $(0, 1] \times (0, 1] \sim (0, 1]$. \\
-            Sea $g: (0, 1] \to (0, 1] \times (0, 1]$, $g(x) = (x, 1)$ es inyectiva. \\
-            $f: (0, 1] \times (0, 1] \to (0, 1]$, $f(x, y) = 0.x_1y_1x_2y_2\cdots$ (primeros decimales). \\
-            Si $x, y \in (0, 1]$, los pensamos con desarrollo decimal infinito. Como $f$ es inyectiva, por el Teorema de Cantor-Bernstein, existe una biyección entre ellos, por lo que $c \cdot c = c$.
+      \item Si pruebo que el cardinal de cualquier intervalo no degenerado (sin extremos iguales) de la recta es \(c\), puedo probar que \(c+c=c\) observando que \((0,1) = (0, \dfrac{1}{2}) \cup (\dfrac{1}{2}, 1)\). \\
+            En efecto, \(\arctan(x)\) es una biyección entre \(\R\) y el intervalo \((-\dfrac{\pi}{2}, \dfrac{\pi}{2})\), y hay una biyección entre este intervalo y cualquier \((a, b)\) dada por \(y = \dfrac{b}{\pi} \cdot (x + \dfrac{\pi}{2}) + a\). \\
+            Además, \((0, 1)\) y \([0, 1]\) son coordinables. Si \(f: [0, 1] \to (0, 1)\) es inyectiva y por el Teorema de Cantor-Bernstein \([0, 1] \sim (0, 1)\). \\
+            Para probar \(c \cdot c = c\), uso que \((0, 1] \times (0, 1] \sim (0, 1]\). \\
+            Sea \(g: (0, 1] \to (0, 1] \times (0, 1]\), \(g(x) = (x, 1)\) es inyectiva. \\
+            \(f: (0, 1] \times (0, 1] \to (0, 1]\), \(f(x, y) = 0.x_1y_1x_2y_2\cdots\) (primeros decimales). \\
+            Si \(x, y \in (0, 1]\), los pensamos con desarrollo decimal infinito. Como \(f\) es inyectiva, por el Teorema de Cantor-Bernstein, existe una biyección entre ellos, por lo que \(c \cdot c = c\).
     \end{enumerate}
   \end{proof}
 \end{eg}
 
-Sean $n = card(X)$, $m = card(Y)$, $p = card(Z)$, no necesariamente finitos, con $X, Y, Z$ disjuntos dos a dos.
+Sean \(n = card(X)\), \(m = card(Y)\), \(p = card(Z)\), no necesariamente finitos, con \(X, Y, Z\) disjuntos dos a dos.
 
 \begin{prop}
-  $n^m \cdot n^p = n^{m+p}$ \\
+  \(n^m \cdot n^p = n^{m+p}\) \\
   \begin{proof}
-    $X^Y \times X^Z \sim X^{Y \cup Z}$. \\
-    $X^Y \times X^Z = \{ (f, g) : f: Y \to X, g: Z \to X \}$. \\
-    $f \in X^{Y \cup Z}, f: Y \cup Z \to X \Rightarrow (f|_Y, f|_Z) \in X^Y \times X^Z$ inyectiva. \\
-    Dadas $f: Y \to X, g: Z \to X, h: Y \cup Z \to X$ tal que $h(x) = \begin{cases}
+    \(X^Y \times X^Z \sim X^{Y \cup Z}\). \\
+    \(X^Y \times X^Z = \{ (f, g) : f: Y \to X, g: Z \to X \}\). \\
+    \(f \in X^{Y \cup Z}, f: Y \cup Z \to X \Rightarrow (f|_Y, f|_Z) \in X^Y \times X^Z\) inyectiva. \\
+    Dadas \(f: Y \to X, g: Z \to X, h: Y \cup Z \to X\) tal que \(h(x) = \begin{cases}
         f(x) & \text{si } x \in X, \\
         g(x) & \text{si } x \in Z
-      \end{cases}$ \\
-    Como $Y, Z$ son disjuntos por hipótesis h es inyectiva y vale por Teorema CSB. \\
+      \end{cases}\) \\
+    Como \(Y, Z\) son disjuntos por hipótesis h es inyectiva y vale por Teorema CSB. \\
   \end{proof}
 \end{prop}
 
 \begin{prop}
-  $(n^m)^p = n^{mp}$
+  \((n^m)^p = n^{mp}\)
   \begin{proof}
-    $f \in (X^Y)^Z, f: Z \to X^Y$, $Z \mapsto (f_Z: Y \to X)$. \\
-    $(\forall z \in Z)(\exists f_Z: Y \to X)$, si $y \in Y$, $f_Z(y)$ es $g(z, y) = f_Z(y)$
+    \(f \in (X^Y)^Z, f: Z \to X^Y\), \(Z \mapsto (f_Z: Y \to X)\). \\
+    \((\forall z \in Z)(\exists f_Z: Y \to X)\), si \(y \in Y\), \(f_Z(y)\) es \(g(z, y) = f_Z(y)\)
   \end{proof}
 \end{prop}
 
 \begin{theorem}
-  Sea $n = \aleph_0$ o $c$ y sea $m$ otro cardinal tal que $2 \leq m \leq 2^n \Rightarrow m^n = 2^n$. $(2^{\aleph_0}) = (2^{\aleph_0})^{\aleph_0}$.
+  Sea \(n = \aleph_0\) o \(c\) y sea \(m\) otro cardinal tal que \(2 \leq m \leq 2^n \Rightarrow m^n = 2^n\). \((2^{\aleph_0}) = (2^{\aleph_0})^{\aleph_0}\).
   \begin{proof}
-    En general si $m \leq p \Rightarrow m^m \leq p^n$ con $card(X) = m$, $card(Y) = m$, $card(Z) = p$, $X,Y,Z$ disjuntos dos a dos. \\
-    $f: Y \to Z$ es inyectiva $\Rightarrow \forall g: X \to Y$ tenemos que $f \circ g: X \to Z$ de manera inyectiva (si $g_1 \neq g_2 \to f = g_1 \neq f \circ g_2$ porque $f$ es inyectiva).
+    En general si \(m \leq p \Rightarrow m^m \leq p^n\) con \(card(X) = m\), \(card(Y) = m\), \(card(Z) = p\), \(X,Y,Z\) disjuntos dos a dos. \\
+    \(f: Y \to Z\) es inyectiva \(\Rightarrow \forall g: X \to Y\) tenemos que \(f \circ g: X \to Z\) de manera inyectiva (si \(g_1 \neq g_2 \to f = g_1 \neq f \circ g_2\) porque \(f\) es inyectiva).
   \end{proof}
 \end{theorem}
 
 \begin{note}
-  $\{ 0, 1 \}^\N \sim P(\N)$ pues a cada $f: \N \to \{0, 1\}$ le asigno el subconjunto $A \subset \N$ definido por $n \in A \iff f(n) = 1$
+  \(\{ 0, 1 \}^\N \sim P(\N)\) pues a cada \(f: \N \to \{0, 1\}\) le asigno el subconjunto \(A \subset \N\) definido por \(n \in A \iff f(n) = 1\)
 \end{note}
 
 \begin{theorem}
-  $\R \sim \{ 0, 1 \}^\N$ es decir $2^{\aleph_0} = c$.
+  \(\R \sim \{ 0, 1 \}^\N\) es decir \(2^{\aleph_0} = c\).
   \begin{proof}
-    $f: [0, 1] \to \{ 0, 1 \}^\N, f(x) = (x_n)_{n \in \N}$. Siendo $x_n$ las cifras del desarrollo en base dos de $x$. \\
-    Tenemos que $x = \sum_{n=1}^\infty \dfrac{x_n}{2^n} \Rightarrow f$ es inyectiva xq el desarrollo es único. \\
-    Ahora si $g: \{ 0, 1 \}^\N \to [0, 1], g((x_n)_{n \in \N}) = \sum_{n \geq 1} \dfrac{x_n}{2^n}$, $x_n \in \{0, 1\}$. No es inyectiva pues $0,11 = 0,10\overline{1}$.
-    Una forma simple es pensar el desarrollo en base $3$ de cada tira de $0$ y $1$ que no tiene ningún dos. Es decir $g((x_n)_{n \in \N}) = \sum_{n \geq 1} \dfrac{x_n}{3^n}$ y $(0,11)_3 \neq (0,10\overline{1})_3 \therefore$
-    es inyectiva y por Teorema CSB: $\R \sim \{0,1\}^{\aleph_0}$. \\
+    \(f: [0, 1] \to \{ 0, 1 \}^\N, f(x) = (x_n)_{n \in \N}\). Siendo \(x_n\) las cifras del desarrollo en base dos de \(x\). \\
+    Tenemos que \(x = \sum_{n=1}^\infty \dfrac{x_n}{2^n} \Rightarrow f\) es inyectiva xq el desarrollo es único. \\
+    Ahora si \(g: \{ 0, 1 \}^\N \to [0, 1], g((x_n)_{n \in \N}) = \sum_{n \geq 1} \dfrac{x_n}{2^n}\), \(x_n \in \{0, 1\}\). No es inyectiva pues \(0,11 = 0,10\overline{1}\).
+    Una forma simple es pensar el desarrollo en base \(3\) de cada tira de \(0\) y \(1\) que no tiene ningún dos. Es decir \(g((x_n)_{n \in \N}) = \sum_{n \geq 1} \dfrac{x_n}{3^n}\) y \((0,11)_3 \neq (0,10\overline{1})_3 \therefore\)
+    es inyectiva y por Teorema CSB: \(\R \sim \{0,1\}^{\aleph_0}\). \\
     Otra forma es la siguiente:
-    $S = \{0, 1\}^\N - \bigcup_{i=1}^n S_i$ con $S_i = \{ (x_n)_{n \in \N} \in \{0, 1\}^\N : x_m = 0, \forall m > i \}$. O sea $0,11000\cdots$ se saca y queda solo $0,10\overline{1}$.
-    Cada $S_i$ es un conjunto finito (tiene $2^i$ elementos) luego $\bigcup_{i \geq 1} S_i$ es numerable $\therefore$ $S$ y $\{0,1\}^\N$ tienen el mismo cardinal. \\
-    $g((x_n)_{n \in \N}) = \sum_{n \geq 1} \dfrac{x_n}{2^n}$ si es inyectiva y $g: S \to [0, 1]$.
+    \(S = \{0, 1\}^\N - \bigcup_{i=1}^n S_i\) con \(S_i = \{ (x_n)_{n \in \N} \in \{0, 1\}^\N : x_m = 0, \forall m > i \}\). O sea \(0,11000\cdots\) se saca y queda solo \(0,10\overline{1}\).
+    Cada \(S_i\) es un conjunto finito (tiene \(2^i\) elementos) luego \(\bigcup_{i \geq 1} S_i\) es numerable \(\therefore\) \(S\) y \(\{0,1\}^\N\) tienen el mismo cardinal. \\
+    \(g((x_n)_{n \in \N}) = \sum_{n \geq 1} \dfrac{x_n}{2^n}\) si es inyectiva y \(g: S \to [0, 1]\).
   \end{proof}
 \end{theorem}
 
 \section{Hipótesis del continuo}
 
-$\nexists$ cardinal entre $\aleph_0$ y $c = 2^{\aleph_0}$. No se puede demostrar ni refutar. \\
+\(\nexists\) cardinal entre \(\aleph_0\) y \(c = 2^{\aleph_0}\). No se puede demostrar ni refutar. \\
 Es independiente de la teoría de conjuntos más el axioma de elección.
 Gödel 1940 probó que no se puede demostrar, Cohen en 1963 que no se puede refutar.
 
 \section{Construcción de los Reales}
 
-Sucesiones de números racionales $(a_n)_{n \in \N} \subset \Q$. Decimos que $(a_n)_{n \in \N}$ tiende a 0 si dado \begin{align*}
+Sucesiones de números racionales \((a_n)_{n \in \N} \subset \Q\). Decimos que \((a_n)_{n \in \N}\) tiende a 0 si dado \begin{align*}
   \e > 0\text{, } \exists n_0 \in \N : |a_n| < \e \quad \forall n > n_0
-\end{align*} Notamos $a_n \to 0$.
+\end{align*} Notamos \(a_n \to 0\).
 
 \begin{definition}[Sucesión de Cauchy]
-  Sea $(a_n)_{n \in \N} \subset \Q$. Decimos que la sucesión es de Cauchy $\iff$ dado $\e > 0, \exists n_0 : \forall n\text{, }m > n_0\text{, } |a_n - a_m| < \e$.
+  Sea \((a_n)_{n \in \N} \subset \Q\). Decimos que la sucesión es de Cauchy \(\iff\) dado \(\e > 0, \exists n_0 : \forall n\text{, }m > n_0\text{, } |a_n - a_m| < \e\).
 \end{definition}
 
 \begin{theorem}
-  $(a_n)_{n \in \N} \subset \Q$ es convergente (es decir $a_n - q \to 0, q \in \Q$) $\Rightarrow$ es de Cauchy.
+  \((a_n)_{n \in \N} \subset \Q\) es convergente (es decir \(a_n - q \to 0, q \in \Q\)) \(\Rightarrow\) es de Cauchy.
   \begin{proof}
-    Sea $\e > 0$,
+    Sea \(\e > 0\),
     \begin{align*}
        & \exists n_0 \in \N : |a_n - q| < \dfrac{\e}{2}, \forall n > n_0                                 \\
        & | a_n - a_m| = |(a_n - q) + (q - a_m)|                                                          \\
@@ -170,33 +170,33 @@ Sucesiones de números racionales $(a_n)_{n \in \N} \subset \Q$. Decimos que $(a
 \begin{theorem}
   Toda sucesión de Cauchy es acotada.
   \begin{proof}
-    Como $(a_n)_{n \in \N} \subset \Q$ es de Cauchy, eligiendo $\e = 1$ \begin{align*}
+    Como \((a_n)_{n \in \N} \subset \Q\) es de Cauchy, eligiendo \(\e = 1\) \begin{align*}
       \exists n_0 \in \N : |a_n - a_m| < 1, \forall n\text{, }m > n_0
     \end{align*}
-    En particular $|a_n - a_{n_0+1}| < 1$
+    En particular \(|a_n - a_{n_0+1}| < 1\)
     \begin{align*}
        & a_{n_0+1} - 1 < a_n < 1 + a_{n_0+1}, \forall n > n_0                                    \\
        & \Rightarrow |a_n| < max(|a_{n_0+1} + 1|\text{, } |a_{n_0+1} - 1|) \quad \forall n > n_0
     \end{align*}
-    Tomo $M = max(|a_0|, \cdots, |a_{n_0}|, |a_{n_0+1} + 1|, |a_{n_0+1} - 1|)$ y vale $\forall n \in \N$.
+    Tomo \(M = max(|a_0|, \cdots, |a_{n_0}|, |a_{n_0+1} + 1|, |a_{n_0+1} - 1|)\) y vale \(\forall n \in \N\).
   \end{proof}
 \end{theorem}
 
 \begin{definition}
-  Sea $\mathscr{C}_{\Q}$ el conjunto de todas las sucesiones de Cauchy de números racionales. Dados $(a_n)_{n \in \N}$, $(b_n)_{n \in \N} \in \mathscr{C}_{\Q}$. Decimos que son equivalentes $\iff a_n - b_n \to 0$.
+  Sea \(\mathscr{C}_{\Q}\) el conjunto de todas las sucesiones de Cauchy de números racionales. Dados \((a_n)_{n \in \N}\), \((b_n)_{n \in \N} \in \mathscr{C}_{\Q}\). Decimos que son equivalentes \(\iff a_n - b_n \to 0\).
 \end{definition}
 
 \clearpage
 
 \begin{prop}
   La relación anterior es de equivalencia. \begin{itemize}
-    \item Reflexiva: $a_n - a_n = 0 \to 0$.
-    \item Simétrica: $a_n - b_n \to 0 \Rightarrow b_n - a_n = -(a_n-b_n) \to 0$.
-    \item Transitiva: $\e > 0, \exists n_0 : |a_n - b_n| < \dfrac{\e}{2}, \forall n > n_0$
-          y $\exists n_1 : |b_n - c_n| < \dfrac{\e}{2}, \forall n > n_1$. Tomando $n > max(n_0, n_1), |a_n - c_n| \leq |a_n - b_n| + |b_n - c_n| < \dfrac{\e}{2} + \dfrac{\e}{2} < \e$.
+    \item Reflexiva: \(a_n - a_n = 0 \to 0\).
+    \item Simétrica: \(a_n - b_n \to 0 \Rightarrow b_n - a_n = -(a_n-b_n) \to 0\).
+    \item Transitiva: \(\e > 0, \exists n_0 : |a_n - b_n| < \dfrac{\e}{2}, \forall n > n_0\)
+          y \(\exists n_1 : |b_n - c_n| < \dfrac{\e}{2}, \forall n > n_1\). Tomando \(n > max(n_0, n_1), |a_n - c_n| \leq |a_n - b_n| + |b_n - c_n| < \dfrac{\e}{2} + \dfrac{\e}{2} < \e\).
   \end{itemize}
 \end{prop}
 
 \begin{definition}
-  Los números reales $\R$ son las clases de equivalencia $[(a_n)]$ de las sucesiones $\mathscr{C}_{\Q}$ por la relación anterior.
+  Los números reales \(\R\) son las clases de equivalencia \([(a_n)]\) de las sucesiones \(\mathscr{C}_{\Q}\) por la relación anterior.
 \end{definition}

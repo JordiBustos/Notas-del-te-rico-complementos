@@ -1,40 +1,40 @@
 \section{Gráficas continuas}
 
 \begin{definition}
-  Sea $A \subset \R, f: A \to \R^k$ el gráfico de $f$ es el subconjunto de $A \times \R^k$ dado por $G_f = \{ (x, f(x)) : x \in A \}$.
+  Sea \(A \subset \R, f: A \to \R^k\) el gráfico de \(f\) es el subconjunto de \(A \times \R^k\) dado por \(G_f = \{ (x, f(x)) : x \in A \}\).
 \end{definition}
 
 \begin{prop}
-  Si $f$ es continua, $G_f$ es cerrado en $A \times \R^k$.
+  Si \(f\) es continua, \(G_f\) es cerrado en \(A \times \R^k\).
   \begin{proof}
-    Si $(p_n)_{n \in \N} \subset G_f$ y $p_n \to p \in A \times \R^k$. Para cada $n \in \N$ podemos poner $p_n = (x_n, y_n)$ con $y_n = f(x_n)$. Si $p = (x, y)$ tiene que ser $x_n \to x, y_n \to y$. Como $f$ es continua $f(x_n) \to f(x)$, pero como $y_n = f(x_n) \to y = f(x) \Rightarrow p = (x, y) \in G_f$.
+    Si \((p_n)_{n \in \N} \subset G_f\) y \(p_n \to p \in A \times \R^k\). Para cada \(n \in \N\) podemos poner \(p_n = (x_n, y_n)\) con \(y_n = f(x_n)\). Si \(p = (x, y)\) tiene que ser \(x_n \to x, y_n \to y\). Como \(f\) es continua \(f(x_n) \to f(x)\), pero como \(y_n = f(x_n) \to y = f(x) \Rightarrow p = (x, y) \in G_f\).
   \end{proof}
 \end{prop}
 
 \begin{prop}
-  Si $G_f$ es cerrado en $A \times \R^k$ y $f$ es acotada $\Rightarrow f$ es continua.
+  Si \(G_f\) es cerrado en \(A \times \R^k\) y \(f\) es acotada \(\Rightarrow f\) es continua.
   \begin{proof}
-    Como $f$ es acotada $\exists k : f(x) \in B_k(0) \subset \R^k, \forall x \in A$. Sea $x_0 \in A$ queremos ver que $f$ es continua en $x_0$. Sea $(x_n)_{n \in \N} \subset A$ tal que $x_n \to x_0$ y supongamos que $f(x_n) \not \to f(x_0) \Rightarrow (\exists \e > 0), h: \N \to \N$ estrictamente creciente tal que $\|f(x_{h(n)} - f(x_0)) \geq \e, \forall n \in \N$. \\
-    Para cada $n \in \N$ consideremos $p_n = (x_{h(n)}, f(x_{h(n)})) \in G_f$. Como $x_{h(n)}$ converge, es acotada, $\exists L > 0 : x_{h(n)} \in B_L(0), \forall n \in \N$. Luego $(p_n)_{n \in \N}$ es acotada pues toma valores en $B_L(0)$ o $B_k(0)$, por lo que existe $\phi$ estrictamente creciente tal que $(p_{\phi_{h(n)}})_{n \in \N}$ converge a $p \in R^n \times \R^k$.
-    Supongamos que $p = (x_0^{\prime}, y) \Rightarrow x_{\phi_{h(n)}} \to x_0^{\prime}$ y $f(x_{\phi_{h(n)}}) \to y$. Como $x_{\phi_{h(n)}}$ es subsubsucesión de $x_n \to x_0^{\prime} = x_0 \in A$. Se tiene que $\lim_{n \to +\infty} p_{\phi_{h(n)}} \in A \times \R^k$. Como estamos suponiendo que $G_f$ es cerrado entonces $x_0, y \in G_f$, es decir $y = f(x_0)$, pero entonces $f(x_{\phi_{h(n)}}) \to f(x_0)$. Absurdo!
+    Como \(f\) es acotada \(\exists k : f(x) \in B_k(0) \subset \R^k, \forall x \in A\). Sea \(x_0 \in A\) queremos ver que \(f\) es continua en \(x_0\). Sea \((x_n)_{n \in \N} \subset A\) tal que \(x_n \to x_0\) y supongamos que \(f(x_n) \not \to f(x_0) \Rightarrow (\exists \e > 0), h: \N \to \N\) estrictamente creciente tal que \(\|f(x_{h(n)} - f(x_0)) \geq \e, \forall n \in \N\). \\
+    Para cada \(n \in \N\) consideremos \(p_n = (x_{h(n)}, f(x_{h(n)})) \in G_f\). Como \(x_{h(n)}\) converge, es acotada, \(\exists L > 0 : x_{h(n)} \in B_L(0), \forall n \in \N\). Luego \((p_n)_{n \in \N}\) es acotada pues toma valores en \(B_L(0)\) o \(B_k(0)\), por lo que existe \(\phi\) estrictamente creciente tal que \((p_{\phi_{h(n)}})_{n \in \N}\) converge a \(p \in R^n \times \R^k\).
+    Supongamos que \(p = (x_0^{\prime}, y) \Rightarrow x_{\phi_{h(n)}} \to x_0^{\prime}\) y \(f(x_{\phi_{h(n)}}) \to y\). Como \(x_{\phi_{h(n)}}\) es subsubsucesión de \(x_n \to x_0^{\prime} = x_0 \in A\). Se tiene que \(\lim_{n \to +\infty} p_{\phi_{h(n)}} \in A \times \R^k\). Como estamos suponiendo que \(G_f\) es cerrado entonces \(x_0, y \in G_f\), es decir \(y = f(x_0)\), pero entonces \(f(x_{\phi_{h(n)}}) \to f(x_0)\). Absurdo!
   \end{proof}
 \end{prop}
 
 \clearpage
 
 \begin{prop}
-  Sea $A \subset \R^n, D \subset A : A \subset \overline{D}$ ($D$ es denso en $A$) y sean $f, g : A \to \R^k$ continuas si $f|_D = g|_D \Rightarrow f=g$.
+  Sea \(A \subset \R^n, D \subset A : A \subset \overline{D}\) (\(D\) es denso en \(A\)) y sean \(f, g : A \to \R^k\) continuas si \(f|_D = g|_D \Rightarrow f=g\).
 
   \begin{proof}
-    Sea $x \in A$, como $A \subset \overline{D} (\exists (x_n)_{n \in \N}) \subset D : x_n \to x$. Como $f, g$ son continuas en $x$, $f(x_n) \to f(x)$, $g(x_n) \to g(x)$. Como $f|_D = g|_D \Rightarrow f(x_n) = g(x_n), \forall n \in N \therefore f(x) = g(x)$.
+    Sea \(x \in A\), como \(A \subset \overline{D} (\exists (x_n)_{n \in \N}) \subset D : x_n \to x\). Como \(f, g\) son continuas en \(x\), \(f(x_n) \to f(x)\), \(g(x_n) \to g(x)\). Como \(f|_D = g|_D \Rightarrow f(x_n) = g(x_n), \forall n \in N \therefore f(x) = g(x)\).
   \end{proof}
 \end{prop}
 
 \begin{theorem}[Weiertrass]
-  Sea $K \subset \R^n$ compacto y no vacío. Una función continua $f: K \to \R$ es acotada superiormente y más aún $\exists y \in K : f(x) \leq f(y) (\forall x \in K)$.
+  Sea \(K \subset \R^n\) compacto y no vacío. Una función continua \(f: K \to \R\) es acotada superiormente y más aún \(\exists y \in K : f(x) \leq f(y) (\forall x \in K)\).
   \begin{proof}
-    Si $f$ no es acotada superiormente para cada $n \in \N, \exists x_n \in K : f(x_n) \geq n$. Como $(x_n)_{n \in \N} \subset K$ que es compacto $\exists \phi: \N \to \N$ estrictamente creciente tal que $\lim_{n \to +\infty} x_{\phi(n)} = \alpha \in K$. Como $f$ es continua en $\alpha, f(x_n) \to f(\alpha)$ y como es convergente, tiene que ser acotada. Absurdo, pues $f(x_{\phi(n)}) \geq h(n) \geq n (\forall n \in \N) \therefore f$ es acotada superiormente. \\
-    Sea ahora $F = \{ f(x) : x \in K\}$ este conjunto está acotado superiormente y es no vacío, $\exists s = sup(F) \Rightarrow \exists (y_n)_{n \in \N} \subset K : f(y_n) \to s$. Como $K$ es compacto $\exists \phi : \N \to \N$ estrictamente creciente tal que $y_{\phi(n)} \to y \in K$. Como $f$ es continua en $y \Rightarrow f(y_{\phi(n)}) \to f(y) \Rightarrow f(y) = s$. Luego $f(y)$ es cota superior de $F$ y $f(y) \in F \therefore$ alcanza valor máximo.
+    Si \(f\) no es acotada superiormente para cada \(n \in \N, \exists x_n \in K : f(x_n) \geq n\). Como \((x_n)_{n \in \N} \subset K\) que es compacto \(\exists \phi: \N \to \N\) estrictamente creciente tal que \(\lim_{n \to +\infty} x_{\phi(n)} = \alpha \in K\). Como \(f\) es continua en \(\alpha, f(x_n) \to f(\alpha)\) y como es convergente, tiene que ser acotada. Absurdo, pues \(f(x_{\phi(n)}) \geq h(n) \geq n (\forall n \in \N) \therefore f\) es acotada superiormente. \\
+    Sea ahora \(F = \{ f(x) : x \in K\}\) este conjunto está acotado superiormente y es no vacío, \(\exists s = sup(F) \Rightarrow \exists (y_n)_{n \in \N} \subset K : f(y_n) \to s\). Como \(K\) es compacto \(\exists \phi : \N \to \N\) estrictamente creciente tal que \(y_{\phi(n)} \to y \in K\). Como \(f\) es continua en \(y \Rightarrow f(y_{\phi(n)}) \to f(y) \Rightarrow f(y) = s\). Luego \(f(y)\) es cota superior de \(F\) y \(f(y) \in F \therefore\) alcanza valor máximo.
   \end{proof}
 \end{theorem}
 
@@ -43,82 +43,82 @@
 \end{note}
 
 \begin{theorem}
-  Sea $K \subset \R^n$ compacto y $f$ una función continua $\Rightarrow f(K)$ es compacto.
+  Sea \(K \subset \R^n\) compacto y \(f\) una función continua \(\Rightarrow f(K)\) es compacto.
   \begin{proof}
-    Sea $(y_n)_{n \in \N}$ que toma valores en la imagen $f(K)$. Para cada $n \in \N \exists x_n \in K : y_n = f(x_n)$. Como $(x_n)_{n \in \N} \subset K$ y $K$ es compacto, $\exists \phi : \N \to \N$ estrictamente creciente tal que $x_{\phi(n)} \to x \in K$. Como $f$ es continua en $x \Rightarrow f(x_{\phi(n)}) \to f(x)$. Como $f(x_{\phi(n)}) = f(y_n)$, probamos que toda sucesión contenida en $f(K)$ tiene una subsucesión convergente con límite contenido en $f(K) \therefore f(K)$ es compacto.
+    Sea \((y_n)_{n \in \N}\) que toma valores en la imagen \(f(K)\). Para cada \(n \in \N \exists x_n \in K : y_n = f(x_n)\). Como \((x_n)_{n \in \N} \subset K\) y \(K\) es compacto, \(\exists \phi : \N \to \N\) estrictamente creciente tal que \(x_{\phi(n)} \to x \in K\). Como \(f\) es continua en \(x \Rightarrow f(x_{\phi(n)}) \to f(x)\). Como \(f(x_{\phi(n)}) = f(y_n)\), probamos que toda sucesión contenida en \(f(K)\) tiene una subsucesión convergente con límite contenido en \(f(K) \therefore f(K)\) es compacto.
   \end{proof}
 \end{theorem}
 
 \begin{theorem}[Valor intermedio]
-  Sea $f: [a, b] \to \R$ continua entonces $\forall y$ entre $f(a)$ y $f(b), \exists x \in [a, b] : f(x) = y$.
+  Sea \(f: [a, b] \to \R\) continua entonces \(\forall y\) entre \(f(a)\) y \(f(b), \exists x \in [a, b] : f(x) = y\).
 
   \begin{proof}
-    Si $f(a) = f(b)$ no hay nada que probar. \\
-    Supongamos que $f(a) < f(b) \Rightarrow$ Sea $y \in (f(a), f(b))$ y consideremos a $U = \{ x \in [a, b] : f(x) < y \} \neq \varnothing$. Luego $U$ es acotado y entonces $\exists \alpha = sup(U)$ y $\alpha \in [a, b] \Rightarrow \exists (x_n)_{n \in \N} \subset U : x_n \to \alpha \Rightarrow f(x_n) \to f(\alpha)$ pues $f$ es continua. Como $(\forall n \in \N)(x_n \in U)(f(x_n) < y) \Rightarrow \lim_{n \to +\infty} f(x_n) \leq y$. Quiero ver que $f(\alpha) = y$. Si fuese $f(\alpha) < y \Rightarrow \alpha \in U$. Además, como $y < f(b)$ y $\alpha \in [a, b]$ tiene que ser $\alpha < b$. Como $f$ es continua, $U$ es abierto relativo a $[a, b]$ así que $\exists r > 0 : B_r(\alpha) \cap [a, b] \subset U$. Si $s = \dfrac{1}{2} min(r, b-\alpha) \Rightarrow \alpha + s \in B_r(\alpha)$ y $a \leq \alpha + s \leq b \Rightarrow \alpha + s \in U \Rightarrow f(\alpha + s) < y$ Absurdo pues $\alpha = sup(U) \therefore f(\alpha) = y$.
+    Si \(f(a) = f(b)\) no hay nada que probar. \\
+    Supongamos que \(f(a) < f(b) \Rightarrow\) Sea \(y \in (f(a), f(b))\) y consideremos a \(U = \{ x \in [a, b] : f(x) < y \} \neq \varnothing\). Luego \(U\) es acotado y entonces \(\exists \alpha = sup(U)\) y \(\alpha \in [a, b] \Rightarrow \exists (x_n)_{n \in \N} \subset U : x_n \to \alpha \Rightarrow f(x_n) \to f(\alpha)\) pues \(f\) es continua. Como \((\forall n \in \N)(x_n \in U)(f(x_n) < y) \Rightarrow \lim_{n \to +\infty} f(x_n) \leq y\). Quiero ver que \(f(\alpha) = y\). Si fuese \(f(\alpha) < y \Rightarrow \alpha \in U\). Además, como \(y < f(b)\) y \(\alpha \in [a, b]\) tiene que ser \(\alpha < b\). Como \(f\) es continua, \(U\) es abierto relativo a \([a, b]\) así que \(\exists r > 0 : B_r(\alpha) \cap [a, b] \subset U\). Si \(s = \dfrac{1}{2} min(r, b-\alpha) \Rightarrow \alpha + s \in B_r(\alpha)\) y \(a \leq \alpha + s \leq b \Rightarrow \alpha + s \in U \Rightarrow f(\alpha + s) < y\) Absurdo pues \(\alpha = sup(U) \therefore f(\alpha) = y\).
   \end{proof}
 \end{theorem}
 
 \section{Convexidad}
 
 \begin{definition}[Convexidad]
-  Decimos que $C \subset \R^n$ es convexo si siempre que $x, y \in C$ y $t \in [0, 1]$ se tiene que $(1-t)x+ty \in C$. Geométricamente, $C$ es convexo si dados dos puntos cualquiera en $C$, el segmento que los une también está contenido en $C$.
+  Decimos que \(C \subset \R^n\) es convexo si siempre que \(x, y \in C\) y \(t \in [0, 1]\) se tiene que \((1-t)x+ty \in C\). Geométricamente, \(C\) es convexo si dados dos puntos cualquiera en \(C\), el segmento que los une también está contenido en \(C\).
 \end{definition}
 
 \begin{eg}
-  Si $x \in \R^n, r > 0, B_r(x)$ es convexo.
+  Si \(x \in \R^n, r > 0, B_r(x)\) es convexo.
   \begin{proof}
-    $y, z \in B_r(x), t \in [0,1] \Rightarrow$ \begin{align*}
+    \(y, z \in B_r(x), t \in [0,1] \Rightarrow\) \begin{align*}
       \|(1-t)y+tz - x\| & = \| (1-t)y + tz - (1-t)x - tx \|                \\
                         & \leq \|(1 -t) (y-x) \| + \|t(z-x)\|              \\
                         & \leq (1-t) \|y-x\| + t \|z-x\| < (1-t)r + tr = r
-    \end{align*} $\therefore (1-t)y + tz \in B_r(x) (\forall t \in [0, 1])$.
+    \end{align*} \(\therefore (1-t)y + tz \in B_r(x) (\forall t \in [0, 1])\).
   \end{proof}
 \end{eg}
 
 \begin{prop}
-  Sea $C \subset \R^n$ y sea $f : C \to \R$ continua $\Rightarrow$ si $a, b \in C$ e $y$ está entre $f(a)$ y $f(b) \Rightarrow \exists \alpha \in C : f(\alpha) = y$.
+  Sea \(C \subset \R^n\) y sea \(f : C \to \R\) continua \(\Rightarrow\) si \(a, b \in C\) e \(y\) está entre \(f(a)\) y \(f(b) \Rightarrow \exists \alpha \in C : f(\alpha) = y\).
   \begin{proof}
-    Sea $\sigma: [0, 1] \to \R^n, \sigma(t) = (1-t)a+tb \Rightarrow \sigma$ es continua y $\sigma([0, 1]) \subset C \Rightarrow g = f \circ \sigma: [0, 1] \to \R$ es continua y $g(0) = f(a), g(1) = f(b) \Rightarrow y$ está entre $g(a)$ y $g(b)$ así que $\exists \beta \in [0, 1] : g(\beta) = y$. Si llamo $\alpha = \sigma(\beta) \Rightarrow f(\alpha) = f(\sigma(\beta)) = g(\beta) = y$.
+    Sea \(\sigma: [0, 1] \to \R^n, \sigma(t) = (1-t)a+tb \Rightarrow \sigma\) es continua y \(\sigma([0, 1]) \subset C \Rightarrow g = f \circ \sigma: [0, 1] \to \R\) es continua y \(g(0) = f(a), g(1) = f(b) \Rightarrow y\) está entre \(g(a)\) y \(g(b)\) así que \(\exists \beta \in [0, 1] : g(\beta) = y\). Si llamo \(\alpha = \sigma(\beta) \Rightarrow f(\alpha) = f(\sigma(\beta)) = g(\beta) = y\).
   \end{proof}
 \end{prop}
 
 \begin{definition}
-  Decimos que $C \subset \R^n$ es arco-conexo si $\forall x, y \in \C, \exists \sigma: [0, 1] \to \R^n$ continua tal que $Im(\sigma) \subset C$ y $\sigma(0) = x, \sigma(1) = y$. Geométricamente, puedo unir dos puntos del conjunto por una curva continua contenida en él.
+  Decimos que \(C \subset \R^n\) es arco-conexo si \(\forall x, y \in \C, \exists \sigma: [0, 1] \to \R^n\) continua tal que \(Im(\sigma) \subset C\) y \(\sigma(0) = x, \sigma(1) = y\). Geométricamente, puedo unir dos puntos del conjunto por una curva continua contenida en él.
 \end{definition}
 
 \begin{note}
-  Todo conjunto convexo es arco-conexo en $\R^n$.
+  Todo conjunto convexo es arco-conexo en \(\R^n\).
 \end{note}
 
 \begin{prop}
-  Sea $A \subset \R^n$ arco-conexo y sea $f: A \to \R$ continua, si $a, b \in A$ e $y$ está entre $f(a)$ y $f(b) \Rightarrow \exists \alpha \in A : f(\alpha) = y$.
+  Sea \(A \subset \R^n\) arco-conexo y sea \(f: A \to \R\) continua, si \(a, b \in A\) e \(y\) está entre \(f(a)\) y \(f(b) \Rightarrow \exists \alpha \in A : f(\alpha) = y\).
   \begin{proof}
-    Como $A$ es arco-conexo $\exists \sigma: [0, 1] \to \R^n$ continua tal que $\sigma(0) = a, \sigma(1) = b$. Si $g = f \circ \sigma: [0, 1] \to \R \Rightarrow g$ es continua y $g(0) = f(a), g(1) = f(b)$. Así que $\exists \beta \in [0, 1] : g(\beta) = y \Rightarrow \alpha = \sigma(\beta) \Rightarrow f(\alpha) = f(\sigma(\beta)) = g(\beta) = y$.
+    Como \(A\) es arco-conexo \(\exists \sigma: [0, 1] \to \R^n\) continua tal que \(\sigma(0) = a, \sigma(1) = b\). Si \(g = f \circ \sigma: [0, 1] \to \R \Rightarrow g\) es continua y \(g(0) = f(a), g(1) = f(b)\). Así que \(\exists \beta \in [0, 1] : g(\beta) = y \Rightarrow \alpha = \sigma(\beta) \Rightarrow f(\alpha) = f(\sigma(\beta)) = g(\beta) = y\).
   \end{proof}
 \end{prop}
 
 \begin{note}
-  Supongamos que $A \subset \R^n$ y que $f: A \to \R^n$ es una función continua para la que no vale el Teorema de valor intermedio. $\exists a, b \in A$ e $y$ entre $f(a)$ y $f(b) : \nexists \alpha \in A : f(\alpha) = y \Rightarrow \exists U = \{ x \in A : f(x) = y \}, V = \{ x \in A : f(x) > y \}$. Son abiertos en $A$, no vacíos, disjuntos y $A = U \cup V$.
+  Supongamos que \(A \subset \R^n\) y que \(f: A \to \R^n\) es una función continua para la que no vale el Teorema de valor intermedio. \(\exists a, b \in A\) e \(y\) entre \(f(a)\) y \(f(b) : \nexists \alpha \in A : f(\alpha) = y \Rightarrow \exists U = \{ x \in A : f(x) = y \}, V = \{ x \in A : f(x) > y \}\). Son abiertos en \(A\), no vacíos, disjuntos y \(A = U \cup V\).
 \end{note}
 
 \begin{definition}[Conexo]
-  $A \subset \R^n$ es conexo si $\nexists U, V$ abiertos en $A$, no vacíos tales que $U \cap V = \varnothing$ y $U \cup V = A$.
+  \(A \subset \R^n\) es conexo si \(\nexists U, V\) abiertos en \(A\), no vacíos tales que \(U \cap V = \varnothing\) y \(U \cup V = A\).
 \end{definition}
 
 \begin{prop}
-  $A \subset \R^n, A \neq \varnothing$ es conexo $\iff$ el único subconjunto no vacío $U$ de $A$ que es simultáneamente abierto y cerrado en $A$ es $A$ mismo.
+  \(A \subset \R^n, A \neq \varnothing\) es conexo \(\iff\) el único subconjunto no vacío \(U\) de \(A\) que es simultáneamente abierto y cerrado en \(A\) es \(A\) mismo.
   \begin{proof}
-    Si $A$ no es conexo $\exists U, V$ abiertos, no vacíos en $A$ tales que $U \cap V = \varnothing$ y $U \cup V = A$. Luego $U \neq \varnothing, U \neq A$ y $U$ es abierto y cerrado en $A$. Por otro lado si $A$ es conexo y $U$ es un subconjunto $U \neq \varnothing$ de $A$ abierto y cerrado en $A \Rightarrow V = A - U$ es abierto en $A$ y cumple que $U \cap V = \varnothing, U \cup V = A, V = \varnothing \Rightarrow U = A$.
+    Si \(A\) no es conexo \(\exists U, V\) abiertos, no vacíos en \(A\) tales que \(U \cap V = \varnothing\) y \(U \cup V = A\). Luego \(U \neq \varnothing, U \neq A\) y \(U\) es abierto y cerrado en \(A\). Por otro lado si \(A\) es conexo y \(U\) es un subconjunto \(U \neq \varnothing\) de \(A\) abierto y cerrado en \(A \Rightarrow V = A - U\) es abierto en \(A\) y cumple que \(U \cap V = \varnothing, U \cup V = A, V = \varnothing \Rightarrow U = A\).
   \end{proof}
 \end{prop}
 
 \begin{theorem}
-  $A \subset \R^n$ conexo y $f: A \to \R^k$ continua entonces $f(A)$ es conexo.
+  \(A \subset \R^n\) conexo y \(f: A \to \R^k\) continua entonces \(f(A)\) es conexo.
   \begin{proof}
-    $U, V$ dos abiertos de $f(A) : f(A) = U \cup V, U \cap V = \varnothing \Rightarrow \exists U_0, V_0 \subset \R^k$ abiertos tales que $U = U_0 \cap f(A), V = V_0 \cap f(A)$. Como $f$ es continua, $f^{-1}(V_0), f^{-1}(U_0)$ son abiertos relativos en $A$. $U_0 \cap V_0 = \varnothing$. Además $f^{-1}(U) \cap f^{-1}(V) = \varnothing$ y $f^{-1}(U) \cup f^{-1}(V) = A$. Pero como $A$ es conexo o $ U = \varnothing$ o $V = \varnothing \therefore f(A)$ es conexo.
+    \(U, V\) dos abiertos de \(f(A) : f(A) = U \cup V, U \cap V = \varnothing \Rightarrow \exists U_0, V_0 \subset \R^k\) abiertos tales que \(U = U_0 \cap f(A), V = V_0 \cap f(A)\). Como \(f\) es continua, \(f^{-1}(V_0), f^{-1}(U_0)\) son abiertos relativos en \(A\). \(U_0 \cap V_0 = \varnothing\). Además \(f^{-1}(U) \cap f^{-1}(V) = \varnothing\) y \(f^{-1}(U) \cup f^{-1}(V) = A\). Pero como \(A\) es conexo o \(U = \varnothing\) o \(V = \varnothing \therefore f(A)\) es conexo.
   \end{proof}
 \end{theorem}
 
 \begin{prop}
-  $A$ una familia de subconjuntos conexos de $\R^n$. Si cada vez que $B, C \in A$ vale que son no disjuntos $\Rightarrow \bigcup_{a \in A} a$ es conexo.
+  \(A\) una familia de subconjuntos conexos de \(\R^n\). Si cada vez que \(B, C \in A\) vale que son no disjuntos \(\Rightarrow \bigcup_{a \in A} a\) es conexo.
 \end{prop}

@@ -63,12 +63,12 @@
                        g^{-1}(x) & \text{si } x \in X_2.
                    \end{cases}
         \end{align*}
-        Que es biyectiva. Definimos \(\phi(x):P(X) \to P(X)\), \(\phi(A) = X-g(Y-f(A))\). Veamos primero que \(\phi\) es creciente i.e \(A \subseteq B \Rightarrow \phi(A) \subseteq \phi(B)\).
+        Que es biyectiva. Definimos \(\phi(x):P(X) \to P(X)\), \(\phi(A) = X-g(Y-f(A))\). Veamos primero que \(\phi \) es creciente i.e \(A \subseteq B \Rightarrow \phi(A) \subseteq \phi(B)\).
         \begin{proof}
             \(A \subseteq B \iff f(A) \subseteq f(B) \iff y - f(B) \subseteq y - f(A) \iff g(y-f(B)) \subseteq g(y-f(A)) \iff X - \phi(A) \subseteq X - \phi(B)\)
         \end{proof}
 
-        Sea \(\mathscr{C} = \{ C \subset X: \phi(C) \subset C \} \neq \varnothing \) pues \(X \in \mathscr{C} \) y \(A = \bigcap_{C \in \mathscr{C}} C \neq\varnothing \), \(A \subset C, \forall C \in \mathscr{C} \) y \(\phi\) es creciente y tenemos que \(\phi(C) \subset C \Rightarrow \phi(A) \subset \phi(C) \subset C \Rightarrow \phi(C) \in A\). Además, usando otra vez que \(\phi\) es creciente, \(\phi(\phi(A)) \subset \phi(A) \Rightarrow \phi(A) \in \mathscr{C} \Rightarrow A \subset \phi(A) \Rightarrow A = \phi(A) \).
+        Sea \(\mathscr{C} = \{ C \subset X: \phi(C) \subset C \} \neq \varnothing \) pues \(X \in \mathscr{C} \) y \(A = \bigcap_{C \in \mathscr{C}} C \neq\varnothing \), \(A \subset C, \forall C \in \mathscr{C} \) y \(\phi \) es creciente y tenemos que \(\phi(C) \subset C \Rightarrow \phi(A) \subset \phi(C) \subset C \Rightarrow \phi(C) \in A\). Además, usando otra vez que \(\phi \) es creciente, \(\phi(\phi(A)) \subset \phi(A) \Rightarrow \phi(A) \in \mathscr{C} \Rightarrow A \subset \phi(A) \Rightarrow A = \phi(A) \).
         Sean \(X_1 = A\), \(X-X_1=X_2=g_2(Y_2)\) \\
         \(Y_1 = f(A)\), \(Y_2 = Y - f(A) \Rightarrow \) \\
         \(A = \phi(A) = X-g(Y-f(A)) \iff X-A = g(Y-f(A)) \iff X-X_1=g(Y_2) = X_2 \therefore f:X_1 \to Y_1\) y \(g: X_2 \to Y_2\) son biyectivas.

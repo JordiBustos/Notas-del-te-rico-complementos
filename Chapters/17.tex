@@ -1,6 +1,6 @@
 \section{Integral de Riemann}
 
-Consideremos \(f: [a, b] \subset \R \to \R \) acotada. Digamos \(m = \inf\{ f(x) : x \in [a,b] \} \) y \(M = \sup \{ f(x) : x \in [a, b] \} \).
+Consideremos \(f: [a, b] \subset \R \to \R \) acotada. Digamos \(m = \inf \{ f(x) : x \in [a,b] \} \) y \(M = \sup \{ f(x) : x \in [a, b] \} \).
 Una partición de \([a, b]\) es un subconjunto finito \(P \subset [a, b]\) tal que \(a \in P\) y \(b \in P\).
 Escribimos \(P = \{ t_0, \ldots, t_n \} \) y por convención \(t_0 = a\), \(t_n = b\) y \(t_0 < t_1 < \cdots < t_n\).
 Notamos \(m_i\), \(M_i\) al ínfimo y al supremo de \(f\) en \([t_{i-1}, t_i]\) \(i \in \{ 1, \ldots, n \} \) de la partición.
@@ -126,8 +126,6 @@ Vale que \(m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)\)
   \end{align*}
 \end{definition}
 
-\clearpage
-
 \begin{eg}
   \(f: [a, b] \to \R \), \(f(x) = \begin{cases}
       1 & \text{si } x \in \Q,   \\
@@ -140,7 +138,7 @@ Vale que \(m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)\)
 \end{eg}
 
 \begin{note}
-  Si dada \(f: [a, b] \to \R \) acotada llamamos \(\sigma \) al conjunto de sumas inferiores y \(\sum \) al de las superiores, decir que \(f\) es integrable signifca que \( \sup \sigma = \inf \sum\).
+  Si dada \(f: [a, b] \to \R \) acotada llamamos \(\sigma \) al conjunto de sumas inferiores y \(\sum \) al de las superiores, decir que \(f\) es integrable signifca que \( \sup \sigma = \inf \sum \).
   En particular esto pasa \(\iff (\forall \e > 0) \quad \exists s \in \sigma \), \(S \in \sum : S - s < \e \).
   \begin{proof}
     Ejercicio
@@ -157,8 +155,6 @@ Vale que \(m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)\)
     Ejercicio
   \end{proof}
 \end{note}
-
-\clearpage
 
 \begin{theorem}
   Sea \(f: [a, b] \to \R \) acotada. Son equivalentes \begin{enumerate}
@@ -181,8 +177,6 @@ Vale que \(m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)\)
     \end{enumerate}
   \end{proof}
 \end{theorem}
-
-\clearpage
 
 \section{Continuidad e integración}
 \begin{theorem}
@@ -210,8 +204,6 @@ Vale que \(m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)\)
   \end{proof}
 \end{theorem}
 
-\clearpage
-
 \begin{theorem}
   Toda función \(f : [a, b] \to \R \) continua es integrable.
   \begin{proof}
@@ -237,8 +229,6 @@ Vale que \(m (b-a) \leq s(f, P) \leq S(f, P) \leq M (b-a)\)
     Sea \(t_0\), \(\cdots \), \(t_n\) los puntos donde \(f\) es discontinua \(\Rightarrow f\) es integrable en \([t_{i-1}, t_i]\) por ser continua en \([c, d]\) con \(t_{i-1} < c < d < t_i\).
   \end{proof}
 \end{corollary}
-
-\clearpage
 
 \begin{eg}
   Sea \(f: [a, b] \to \R \) \begin{align*}

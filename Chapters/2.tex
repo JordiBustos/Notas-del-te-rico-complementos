@@ -96,7 +96,7 @@ El problema más serio de los racionales desde el punto de vista del análisis e
         \item Si \(x \in X, y \in Y \Rightarrow x < y \Rightarrow x² < 2 < y² \Rightarrow x² < y²\).
     \end{enumerate}
 
-    Veamos que por 1, 2, 3 \(\nexists \sup(X), \inf(Y)\). Supongamos \(0< \alpha = \sup(X)\), no puede ser \(\alpha²<2\) porque si no \(\alpha \in X\) y \(X\) no tiene máximo. Tampoco puede ser \(\alpha² > 2\) pues estaría en \(Y\) e \(Y\) no tiene mínimo, pues habría un \(\beta \in Y\) con \(\beta < \alpha\) y por (3) sería \(x < \beta < \alpha, \forall x \in X\) lo que contradice que \(\sup(X) = \alpha \), pues sería \(\beta \) el supremo.
+    Veamos que por 1, 2, 3 \(\nexists \sup(X), \inf(Y)\). Supongamos \(0< \alpha = \sup(X)\), no puede ser \(\alpha²<2\) porque si no \(\alpha \in X\) y \(X\) no tiene máximo. Tampoco puede ser \(\alpha² > 2\) pues estaría en \(Y\) e \(Y\) no tiene mínimo, pues habría un \(\beta \in Y\) con \(\beta < \alpha \) y por (3) sería \(x < \beta < \alpha, \forall x \in X\) lo que contradice que \(\sup(X) = \alpha \), pues sería \(\beta \) el supremo.
     En definitiva si existiese \(\sup(X) = \alpha \), debe ser \(\alpha² = 2 \notin \Q \). Luego \(X\) no tiene supremo en \(\Q \).
     Ínfimo, ejercicio (análogo).
 \end{eg}
@@ -175,16 +175,16 @@ Dado \(n \in \N \) definimos \(\mathbb{I}_n = \{1, 2, 3,\ldots, n\} \).
             \end{cases}
         \end{align*}
 
-        Dada \(g \circ f: \mathbb{I}_n \to \mathbb{I}_{n+1} \) basta probar que \(\nexists\) funciones \(h: \mathbb{I}_n \to \mathbb{I}_{n+1} \) suryectivas para probar el absurdo. Por inducción
+        Dada \(g \circ f: \mathbb{I}_n \to \mathbb{I}_{n+1} \) basta probar que \(\nexists \) funciones \(h: \mathbb{I}_n \to \mathbb{I}_{n+1} \) suryectivas para probar el absurdo. Por inducción
         Si \(m = 1\), \(h\) no puede ser suryectiva. Supongamos que vale para \(1 \leq k \leq n-1\). Si \(\exists h: \mathbb{I}_n \to \mathbb{I}_{n+1} \) suryectiva, entonces \(\exists k : f(n) = k\).
 
         Definimos una permutación \(r\) de \(\mathbb{I}_{n+1} \) tal que \(r(k) = n+1\). Por lo tanto, \(r \circ h: \mathbb{I}_n \to \mathbb{I}_{n+1} \) es suryectiva y \((r \circ f)(n) = r(k) = n+1\). Esto implica que la restricción
         \[
             r \circ f|_{\mathbb{I}_{n-1}} : \mathbb{I}_{n-1} \to \mathbb{I}_n
         \]
-        es suryectiva. Esto es un absurdo, ya que por la hipótesis inductiva no existen funciones suryectivas de \(\mathbb{I}_{n-1} \to \mathbb{I}_n\).
+        es suryectiva. Esto es un absurdo, ya que por la hipótesis inductiva no existen funciones suryectivas de \(\mathbb{I}_{n-1} \to \mathbb{I}_n \).
 
-        El caso \(\Leftarrow\) es trivial.
+        El caso \(\Leftarrow \) es trivial.
     \end{proof}
 \end{theorem}
 

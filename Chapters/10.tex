@@ -118,12 +118,39 @@ Decimos que una sucesión \({(x_n)}_{n \in \N} \subset \R^n\) converge a un punt
 \end{prop}
 
 \begin{prop}
-  Ejercicio: Demostrar las siguientes propiedades en \(\R^n\).
-  \begin{enumerate}
-    \item Toda sucesión convergente es acotada.
-    \item Suma de sucesiones convergentes es convergente y el límite de la suma es la suma de los límites.
-    \item Si \({(x_n)}_{n \in \N} \subset \R^n\) y \({(\lambda_n)}_{n \in \N} \subset \R \) convergen \(\Rightarrow {(x_n \cdot \lambda_n)}_{n \in \N} \to \lim_{n \to \infty} x_n \cdot \lim_{n \to \infty} \lambda_n\).
-  \end{enumerate}
+  Toda sucesión convergente es acotada en \( \R^m \)
+  \begin{proof}
+    Sea \( {(x_n)}_{n \in \N} \subset \R^m \) tal que \( x_n \to x \in \R^m \), veamos que \( \exists M \in \R^m : \|x_n\| \leq M \quad \forall n \in \N \).
+    En efecto, como \( {(x_n)}_{n \in \N} \) es convergente se cumple que:\begin{align*}
+       & \exists n_0 \in \N : \forall n > n_0 \quad d(x_n\text{, }x) < 1                                              \\
+       & \iff \sum_{i = 1}^m |x_{n_i} - x_i| < 1 \quad \forall n > n_0                                                \\
+       & \iff |x_{n_i} - x_i| < 1 \quad \forall i = 1\text{, } \ldots\text{, }m \quad \forall n > n_0                 \\
+       & \Rightarrow ||x_n|| < \max \{ ||x_1||\text{, }\ldots\text{, }||x_{n_0}||\text{, }||1+x||\text{, } ||x-1|| \}
+    \end{align*}
+  \end{proof}
+\end{prop}
+
+\begin{prop}
+  Sean \( {(a_n)}_{n \in \N}\text{, } {(b_n)}_{n \in \N} \subset \R^m \) tales que \( a_n \to a \in \R^m \) y \( b_n \to b \in \R^m \) entonces\begin{align*}
+    a_n + b_n \to a+b
+  \end{align*}
+  \begin{proof}
+    Sean \( {(a_n)}_{n \in \N}\text{, } {(b_n)}_{n \in \N} \subset \R^m \) tales que \( a_n \to a \in \R^m \) y \( b_n \to b \in \R^m \), vale que:\begin{align*}
+      \forall \e > 0 \exists & n_0 \in \N : (\forall n > n_0) \quad d(a_n \text{, }a) < \frac{\e}{2} \\
+                             & n_1 \in \N : (\forall n > n_1) \quad d(b_n\text{, }b) < \frac{\e}{2}
+    \end{align*}
+    Entonces, \( \forall n > \max \{ n_0\text{, }n_1 \} \)\begin{align*}
+       & d(a_n\text{, }a) + d(b_n\text{, }b) < \e \\
+       & d(a_n + b_n\text{, }a+b) < \e            \\
+       & \therefore a_n + b_n \to a+b
+    \end{align*}
+  \end{proof}
+\end{prop}
+
+\begin{prop}
+  Ejercicio: Si \({(x_n)}_{n \in \N} \subset \R^n\) y \({(\lambda_n)}_{n \in \N} \subset \R \) convergen entonces:\begin{align*}
+    (x_n \cdot \lambda_n) \to \lim_{n \to \infty} x_n \cdot \lim_{n \to \infty} \lambda_n
+  \end{align*}
 \end{prop}
 
 \begin{prop}

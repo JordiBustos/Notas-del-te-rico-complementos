@@ -75,15 +75,19 @@ finitos con \(X, Y, Z\) disjuntos dos a dos.
 
   \begin{proof}
     \begin{enumerate}
-      \item Vimos que \begin{align*} card(\{ 2n : n \in \N \}) = \aleph_0, card(\{ 2n+1 : n \in \N \}) = \aleph_0 \end{align*} La unión de ambos conjuntos es \(\N \). Además \(\N \times \N = \aleph_0\), así \(\aleph_0 \cdot \aleph_0 = \aleph_0\).
+      \item Vimos que \begin{align*}
+               & card(\{ 2n : n \in \N \}) = \aleph_0   \\
+               & card(\{ 2n+1 : n \in \N \}) = \aleph_0
+            \end{align*} 
+      La unión de ambos conjuntos es \(\N \). Además \(\N \times \N = \aleph_0\), así \(\aleph_0 \cdot \aleph_0 = \aleph_0\).
 
-      \item Si pruebo que el cardinal de cualquier intervalo no degenerado (sin extremos iguales) de la recta es \(c\), puedo probar que \(c+c=c\) observando que \((0,1) = (0, \dfrac{1}{2}) \cup (\dfrac{1}{2}, 1)\). \\
-            En efecto, \(\arctan(x)\) es una biyección entre \(\R \) y el intervalo \((-\dfrac{\pi}{2}, \dfrac{\pi}{2})\), y hay una biyección entre este intervalo y cualquier \((a, b)\) dada por \(y = \dfrac{b}{\pi} \cdot (x + \dfrac{\pi}{2}) + a\). \\
+      \item Si pruebo que el cardinal de cualquier intervalo no degenerado (sin extremos iguales) de la recta es \(c\), puedo probar que \(c+c=c\) observando que \((0,1) = \interval[open left]{0}{\frac{1}{2}} \cup (\frac{1}{2}, 1)\). \\
+            En efecto, \(\arctan(x)\) es una biyección entre \(\R \) y el intervalo \((-\frac{\pi}{2}, \frac{\pi}{2})\), y hay una biyección entre este intervalo y cualquier \((a, b)\) dada por \(y = \dfrac{b}{\pi} \cdot (x + \dfrac{\pi}{2}) + a\). \\
             Además, \((0, 1)\) y \([0, 1]\) son coordinables. Si \(f: [0, 1] \to (0, 1)\) es inyectiva y por el Teorema de Cantor-Bernstein \([0, 1] \sim (0, 1)\). \\
-            Para probar \(c \cdot c = c\), uso que \((0, 1] \times (0, 1] \sim (0, 1]\). \\
-            Sea \(g: (0, 1] \to (0, 1] \times (0, 1]\), \(g(x) = (x, 1)\) es inyectiva. \\
-            \(f: (0, 1] \times (0, 1] \to (0, 1]\), \(f(x, y) = 0.x_1y_1x_2y_2\cdots \) (primeros decimales). \\
-            Si \(x, y \in (0, 1]\), los pensamos con desarrollo decimal infinito. Como \(f\) es inyectiva, por el Teorema de Cantor-Bernstein, existe una biyección entre ellos, por lo que \(c \cdot c = c\).
+            Para probar \(c \cdot c = c\), uso que \(\interval[open left]{0}{1} \times \interval[open left]{0}{1} \sim \interval[open left]{0}{1} \). \\
+            Sea \(g: \interval[open left]{0}{1} \to \interval[open left]{0}{1} \times \interval[open left]{0}{1} \), \(g(x) = (x, 1)\) es inyectiva. \\
+            \(f: \interval[open left]{0}{1} \to \interval[open left]{0}{1} \times \interval[open left]{0}{1} \), \(f(x, y) = 0.x_1y_1x_2y_2\cdots \) (primeros decimales). \\
+            Si \(x, y \in \interval[open left]{0}{1} \), los pensamos con desarrollo decimal infinito. Como \(f\) es inyectiva, por el Teorema de Cantor-Bernstein, existe una biyección entre ellos, por lo que \(c \cdot c = c\).
     \end{enumerate}
   \end{proof}
 \end{eg}
@@ -97,9 +101,9 @@ Sean \(n = card(X)\), \(m = card(Y)\), \(p = card(Z)\), no necesariamente finito
     \(X^Y \times X^Z = \{ (f, g) : f: Y \to X, g: Z \to X \} \). \\
     \(f \in X^{Y \cup Z}, f: Y \cup Z \to X \Rightarrow (f|_Y, f|_Z) \in X^Y \times X^Z\) inyectiva. \\
     Dadas \(f: Y \to X, g: Z \to X, h: Y \cup Z \to X\) tal que \(h(x) = \begin{cases}
-        f(x) & \text{si } x \in X, \\
-        g(x) & \text{si } x \in Z
-      \end{cases} \) \\
+      f(x) & \text{si } x \in X, \\
+      g(x) & \text{si } x \in Z
+    \end{cases} \) \\
     Como \(Y, Z\) son disjuntos por hipótesis h es inyectiva y vale por Teorema CSB. \\
   \end{proof}
 \end{prop}
@@ -175,7 +179,7 @@ Sucesiones de números racionales \((a_n)_{n \in \N} \subset \Q \). Decimos que 
     \end{align*}
     En particular \(|a_n - a_{n_0+1}| < 1\)
     \begin{align*}
-       & a_{n_0+1} - 1 < a_n < 1 + a_{n_0+1}, \forall n > n_0                                    \\
+       & a_{n_0+1} - 1 < a_n < 1 + a_{n_0+1}, \forall n > n_0                                     \\
        & \Rightarrow |a_n| < \max(|a_{n_0+1} + 1|\text{, } |a_{n_0+1} - 1|) \quad \forall n > n_0
     \end{align*}
     Tomo \(M = \max(|a_0|, \ldots, |a_{n_0}|, |a_{n_0+1} + 1|, |a_{n_0+1} - 1|)\) y vale \(\forall n \in \N \).

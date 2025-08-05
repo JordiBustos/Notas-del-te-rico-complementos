@@ -148,9 +148,23 @@ Decimos que una sucesión \({(x_n)}_{n \in \N} \subset \R^n\) converge a un punt
 \end{prop}
 
 \begin{prop}
-  Ejercicio: Si \({(x_n)}_{n \in \N} \subset \R^n\) y \({(\lambda_n)}_{n \in \N} \subset \R \) convergen entonces:\begin{align*}
+  Si \({(x_n)}_{n \in \N} \subset \R^n\) y \({(\lambda_n)}_{n \in \N} \subset \R \) convergen entonces:\begin{align*}
     (x_n \cdot \lambda_n) \to \lim_{n \to \infty} x_n \cdot \lim_{n \to \infty} \lambda_n
   \end{align*}
+  \begin{proof}
+    Sean \({(x_n)}_{n \in \N} \subset \R^n\) y \({(\lambda_n)}_{n \in \N} \subset \R \) tales que \( x_n \to x \in \R^n \) y \( \lambda_n \to \lambda \in \R \).
+    Como ambas convergen \( \exists M \in \R : \|x_n\| \leq M \) y \( |\lambda_n| \leq M \quad \forall n \in \N \). 
+    Entonces, \begin{align*}
+      \forall \e > 0 \quad \exists & n_0 \in \N : (\forall n > n_0) \quad d(x_n\text{, }x) < \frac{\e}{2M} \\
+                             & n_1 \in \N : (\forall n > n_1) \quad |\lambda_n - \lambda| < \frac{\e}{2M}
+    \end{align*} 
+    Luego,\begin{align*}
+      & \| x_n \lambda_n - x \lambda \| = \| x_n \lambda_n - x_n \lambda + x_n \lambda - x \lambda \| \\
+      & \leq \| x_n \| \cdot |\lambda_n - \lambda| + \| x_n - x \| \cdot |\lambda| \\
+      & < M \cdot \frac{\e}{2M} + M \cdot \frac{\e}{2M} = \frac{\e}{2} + \frac{\e}{2} = \e \quad \forall n > \max \{ n_0\text{, }n_1 \} \\
+      & \therefore x_n \lambda_n \to x \lambda
+    \end{align*}
+  \end{proof}
 \end{prop}
 
 \begin{prop}

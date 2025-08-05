@@ -109,9 +109,9 @@ Sean \(n = card(X)\), \(m = card(Y)\), \(p = card(Z)\), no necesariamente finito
 \end{prop}
 
 \begin{prop}
-  \((n^m)^p = n^{mp} \)
+  \({(n^m)}^p = n^{mp} \)
   \begin{proof}
-    \(f \in (X^Y)^Z, f: Z \to X^Y\), \(Z \mapsto (f_Z: Y \to X)\). \\
+    \(f \in {(X^Y)}^Z, f: Z \to X^Y\), \(Z \mapsto (f_Z: Y \to X)\). \\
     \((\forall z \in Z)(\exists f_Z: Y \to X)\), si \(y \in Y\), \(f_Z(y)\) es \(g(z, y) = f_Z(y)\)
   \end{proof}
 \end{prop}
@@ -125,33 +125,33 @@ Sean \(n = card(X)\), \(m = card(Y)\), \(p = card(Z)\), no necesariamente finito
 \end{theorem}
 
 \begin{note}
-  \(\{ 0, 1 \}^\N \sim P(\N)\) pues a cada \(f: \N \to \{0, 1\} \) le asigno el subconjunto \(A \subset \N \) definido por \(n \in A \iff f(n) = 1\)
+  \( {\{ 0, 1 \}}^\N \sim P(\N)\) pues a cada \(f: \N \to \{0, 1\} \) le asigno el subconjunto \(A \subset \N \) definido por \(n \in A \iff f(n) = 1\)
 \end{note}
 
 \begin{theorem}
-  \(\R \sim \{ 0, 1 \}^\N \) es decir \(2^{\aleph_0} = c\).
+  \(\R \sim {\{ 0, 1 \}}^\N \) es decir \(2^{\aleph_0} = c\).
   \begin{proof}
-    \(f: [0, 1] \to \{ 0, 1 \}^\N, f(x) = {(x_n)}_{n \in \N} \). Siendo \(x_n\) las cifras del desarrollo en base dos de \(x\). \\
+    \(f: [0, 1] \to {\{ 0, 1 \}}^\N, f(x) = {(x_n)}_{n \in \N} \). Siendo \(x_n\) las cifras del desarrollo en base dos de \(x\). \\
     Tenemos que \(x = \sum_{n=1}^\infty \dfrac{x_n}{2^n} \Rightarrow f\) es inyectiva xq el desarrollo es único. \\
-    Ahora si \(g: \{ 0, 1 \}^\N \to [0, 1], g({(x_n)}_{n \in \N}) = \sum_{n \geq 1} \dfrac{x_n}{2^n} \), \(x_n \in \{0, 1\} \). No es inyectiva pues \(0,11 = 0,10\overline{1} \).
-    Una forma simple es pensar el desarrollo en base \(3\) de cada tira de \(0\) y \(1\) que no tiene ningún dos. Es decir \(g({(x_n)}_{n \in \N}) = \sum_{n \geq 1} \dfrac{x_n}{3^n} \) y \((0,11)_3 \neq (0,10\overline{1})_3 \therefore \)
-    es inyectiva y por Teorema CSB: \(\R \sim \{0,1\}^{\aleph_0} \). \\
+    Ahora si \(g: {\{ 0, 1 \}}^\N \to [0, 1], g({(x_n)}_{n \in \N}) = \sum_{n \geq 1} \dfrac{x_n}{2^n} \), \(x_n \in \{0, 1\} \). No es inyectiva pues \(0,11 = 0,10\overline{1} \).
+    Una forma simple es pensar el desarrollo en base \(3\) de cada tira de \(0\) y \(1\) que no tiene ningún dos. Es decir \(g({(x_n)}_{n \in \N}) = \sum_{n \geq 1} \dfrac{x_n}{3^n} \) y \({(0,11)}_3 \neq (0,10\overline{1})_3 \therefore \)
+    es inyectiva y por Teorema CSB: \(\R \sim {\{0,1\}}^{\aleph_0} \). \\
     Otra forma es la siguiente:
-    \(S = \{0, 1\}^\N - \bigcup_{i=1}^n S_i\) con \(S_i = \{ {(x_n)}_{n \in \N} \in \{0, 1\}^\N : x_m = 0, \forall m > i \} \). O sea \(0,11000\cdots \) se saca y queda solo \(0,10\overline{1} \).
-    Cada \(S_i\) es un conjunto finito (tiene \(2^i\) elementos) luego \(\bigcup_{i \geq 1} S_i\) es numerable \(\therefore \) \(S\) y \(\{0,1\}^\N \) tienen el mismo cardinal. \\
+    \(S = {\{0, 1\}}^\N - \bigcup_{i=1}^n S_i\) con \(S_i = \{ {(x_n)}_{n \in \N} \in {\{0, 1\}}^\N : x_m = 0, \forall m > i \} \). O sea \(0,11000\cdots \) se saca y queda solo \(0,10\overline{1} \).
+    Cada \(S_i\) es un conjunto finito (tiene \(2^i\) elementos) luego \(\bigcup_{i \geq 1} S_i\) es numerable \(\therefore \) \(S\) y \({\{0, 1\}}^\N \) tienen el mismo cardinal. \\
     \(g({(x_n)}_{n \in \N}) = \sum_{n \geq 1} \dfrac{x_n}{2^n} \) si es inyectiva y \(g: S \to [0, 1]\).
   \end{proof}
 \end{theorem}
 
 \section{Hipótesis del continuo}
 
-\(\nexists\) cardinal entre \(\aleph_0\) y \(c = 2^{\aleph_0} \). No se puede demostrar ni refutar. \\
+\( \nexists \) cardinal entre \(\aleph_0\) y \(c = 2^{\aleph_0} \). No se puede demostrar ni refutar. \\
 Es independiente de la teoría de conjuntos más el axioma de elección.
 Gödel 1940 probó que no se puede demostrar, Cohen en 1963 que no se puede refutar.
 
 \section{Construcción de los Reales}
 
-Sucesiones de números racionales \((a_n)_{n \in \N} \subset \Q \). Decimos que \((a_n)_{n \in \N} \) tiende a 0 si dado \begin{align*}
+Sucesiones de números racionales \({(a_n)}_{n \in \N} \subset \Q \). Decimos que \((a_n)_{n \in \N} \) tiende a 0 si dado \begin{align*}
   \e > 0\text{, } \exists n_0 \in \N : |a_n| < \e \quad \forall n > n_0
 \end{align*} Notamos \(a_n \to 0\).
 

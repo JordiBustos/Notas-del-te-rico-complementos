@@ -14,21 +14,23 @@
 \begin{prop}
   Si \(G_f\) es cerrado en \(A \times \R^k\) y \(f\) es acotada \(\Rightarrow f\) es continua.
   \begin{proof}
-    Como \(f\) es acotada \(\exists k : f(x) \in B_k(0) \subset \R^k, \forall x \in A\). Sea \(x_0 \in A\) queremos ver que \(f\) es continua en \(x_0\). Sea \({(x_n)}_{n \in \N} \subset A\) tal que \(x_n \to x_0\) y supongamos que \(f(x_n) \not \to f(x_0) \Rightarrow (\exists \e > 0), h: \N \to \N \) estrictamente creciente tal que \( \|f(x_{h(n)} - f(x_0)) \geq \e, \forall n \in \N \). \\
-    Para cada \(n \in \N \) consideremos \(p_n = (x_{h(n)}, f(x_{h(n)})) \in G_f\). Como \(x_{h(n)} \) converge, es acotada, \(\exists L > 0 : x_{h(n)} \in B_L(0), \forall n \in \N \). Luego \({(p_n)}_{n \in \N} \) es acotada pues toma valores en \(B_L(0)\) o \(B_k(0)\), por lo que existe \(\phi \) estrictamente creciente tal que \({(p_{\phi_{h(n)}})}_{n \in \N} \) converge a \(p \in R^n \times \R^k\).
+    Como \(f\) es acotada \(\exists k : f(x) \in B_k(0) \subset \R^k, \forall x \in A\). Sea \(x_0 \in A\) queremos ver que \(f\) es continua en \(x_0\).
+    Sea \({(x_n)}_{n \in \N} \subset A\) tal que \(x_n \to x_0\) y supongamos que \(f(x_n) \not \to f(x_0) \Rightarrow (\exists \e > 0), h: \N \to \N \) estrictamente creciente tal que
+    \( \|f(x_{h(n)}) - f(x_0) \| \geq \e, \forall n \in \N \). \\
+    Para cada \(n \in \N \) consideremos \(p_n = (x_{h(n)}, f(x_{h(n)})) \in G_f\). Como \(x_{h(n)} \) converge, es acotada, \(\exists L > 0 : x_{h(n)} \in B_L(0), \forall n \in \N \). Luego \({(p_n)}_{n \in \N} \) es acotada pues toma valores en \(B_L(0)\) o \(B_k(0)\), por lo que existe \(\phi \) estrictamente creciente tal que \({(p_{\phi_{h(n)}})}_{n \in \N} \) converge a \(p \in \R^n \times \R^k\).
     Supongamos que \(p = (x_0^{\prime}, y) \Rightarrow x_{\phi_{h(n)}} \to x_0^{\prime} \) y \(f(x_{\phi_{h(n)}}) \to y\). Como \(x_{\phi_{h(n)}} \) es subsubsucesión de \(x_n \to x_0^{\prime} = x_0 \in A\). Se tiene que \(\lim_{n \to +\infty} p_{\phi_{h(n)}} \in A \times \R^k\). Como estamos suponiendo que \(G_f\) es cerrado entonces \(x_0, y \in G_f\), es decir \(y = f(x_0)\), pero entonces \(f(x_{\phi_{h(n)}}) \to f(x_0)\). Absurdo!
   \end{proof}
 \end{prop}
-
-\clearpage
 
 \begin{prop}
   Sea \(A \subset \R^n, D \subset A : A \subset \overline{D} \) (\(D\) es denso en \(A\)) y sean \(f, g : A \to \R^k\) continuas si \(f|_D = g|_D \Rightarrow f=g\).
 
   \begin{proof}
-    Sea \(x \in A\), como \(A \subset \overline{D} (\exists {(x_n)}_{n \in \N}) \subset D : x_n \to x\). Como \(f, g\) son continuas en \(x\), \(f(x_n) \to f(x)\), \(g(x_n) \to g(x)\). Como \(f|_D = g|_D \Rightarrow f(x_n) = g(x_n), \forall n \in N \therefore f(x) = g(x)\).
+    Sea \(x \in A\), como \(A \subset \overline{D} (\exists {(x_n)}_{n \in \N}) \subset D : x_n \to x\). Como \(f, g\) son continuas en \(x\), \(f(x_n) \to f(x)\), \(g(x_n) \to g(x)\). Como \(f|_D = g|_D \Rightarrow f(x_n) = g(x_n), \forall n \in \N \therefore f(x) = g(x)\).
   \end{proof}
 \end{prop}
+
+\clearpage
 
 \begin{theorem}[Weiertrass]
   Sea \(K \subset \R^n\) compacto y no vacío. Una función continua \(f: K \to \R \) es acotada superiormente y más aún \(\exists y \in K : f(x) \leq f(y) (\forall x \in K)\).
@@ -76,7 +78,7 @@
 \end{eg}
 
 \begin{prop}
-  Sea \(C \subset \R^n\) y sea \(f : C \to \R \) continua \(\Rightarrow \) si \(a, b \in C\) e \(y\) está entre \(f(a)\) y \(f(b) \Rightarrow \exists \alpha \in C : f(\alpha) = y\).
+  Sea \(C \subset \R^n\) convexo y sea \(f : C \to \R \) continua \(\Rightarrow \) si \(a, b \in C\) e \(y\) está entre \(f(a)\) y \(f(b) \Rightarrow \exists \alpha \in C : f(\alpha) = y\).
   \begin{proof}
     Sea \(\sigma: [0, 1] \to \R^n, \sigma(t) = (1-t)a+tb \Rightarrow \sigma \) es continua y \(\sigma([0, 1]) \subset C \Rightarrow g = f \circ \sigma: [0, 1] \to \R \) es continua y \(g(0) = f(a), g(1) = f(b) \Rightarrow y\) está entre \(g(a)\) y \(g(b)\) así que \(\exists \beta \in [0, 1] : g(\beta) = y\). Si llamo \(\alpha = \sigma(\beta) \Rightarrow f(\alpha) = f(\sigma(\beta)) = g(\beta) = y\).
   \end{proof}

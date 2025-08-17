@@ -3,7 +3,7 @@
 \begin{eg}
   \(\sum_{n \geq 1} \dfrac{(-1)^{n+1}}{n} \) converge, pero no lo hace absolutamente.
   \begin{proof}
-    i) Las sumas parciales pares son:
+    (i) Las sumas parciales pares son:
 
     \begin{itemize}
       \item \(S_2 = 1 - 1/2\)
@@ -13,7 +13,7 @@
 
     En general \(S_2 < S_4 < S_6 < \cdots < S_{2n} < \cdots < 1\), es creciente y acotada, luego converge.
 
-    ii) Las sumas parciales impares son:
+    (ii) Las sumas parciales impares son:
 
     \begin{itemize}
       \item \(S_1 = 1\)
@@ -23,7 +23,7 @@
 
     En general \(S_1 > S_2 > \cdots > S_{2n+1} > \cdots > 0\). Es decreciente y acotada, luego converge.
 
-    Por i) e ii) \(\exists \tilde{s} = \lim_{n \to \infty} S_{2n} \) y \(\exists s^{\prime} = \lim_{n \to \infty} S_{2n+1} \), como \(S_{2n+1} - S_{2n} = \dfrac{1}{2n+1} \to 0 \Rightarrow \tilde{s} = s^{\prime} \therefore \) la serie converge.
+    Por (i) e (ii) \(\exists \tilde{s} = \lim_{n \to \infty} S_{2n} \) y \(\exists s^{\prime} = \lim_{n \to \infty} S_{2n+1} \), como \(S_{2n+1} - S_{2n} = \dfrac{1}{2n+1} \to 0 \Rightarrow \tilde{s} = s^{\prime} \therefore \) la serie converge.
   \end{proof}
 \end{eg}
 
@@ -145,7 +145,7 @@
        & = S_1 \cdot (b_1 - b_2) + S_2 \cdot (b_2 - b_3) + \cdots + S_{n-1} (b_{n-1} - b_n) + S_n \cdot b_n                  \\
        & = \sum_{i = 2}^n S_{i-1} \cdot (b_{i-1} - b_i) + S_n \cdot b_n
     \end{align*}
-    Por hipotesis \(\exists k > 0 : |S_n| \leq k, \forall n \in \N \) (son acotadas). Además \(\sum_{n \geq 2} b_{n-1} \cdot b_n\) es una telescópica de números positivos. \\
+    Por hipotesis \(\exists k > 0 : |S_n| \leq k, \forall n \in \N \) (son acotadas). Además \(\sum_{n \geq 2} b_{n-1} - b_n\) es una telescópica de números positivos. \\
     Luego \(\sum_{n \geq 2} S_{n-1} \cdot (b_{n-1} - b_n)\) es absolutamente convergente y en particular convergente.
     Como \(S_n \cdot b_n \to 0 \Rightarrow \exists \lim_{n \to \infty} \sum_{i \geq 2}^n S_{i-1} \cdot (b_{i-1} - b_i) + S_n \cdot b_n = \lim_{n \to \infty} \sum_{i \geq 1}^n a_n \cdot b_n \therefore \) converge.
   \end{proof}
@@ -208,7 +208,7 @@
   \begin{proof}
     Sea \(\sum a_n, a_n > 0 \forall n \in \N \). Sea \(\phi: \N \to \N \) una biyección y \(b_n = a_{\phi(n)} \) quiero ver que \(\sum b_n = \sum a_n\). \\
     Sea \(S_n\) las sumas parciales de \(a_n\) y \(T_n\) las de \(b_n\). Para cada \(n \in \N \) llamo \(m = \max(\phi(1), \cdots \phi(n))\). Donde \(\{ \phi(1), \ldots, \phi(n) \} \subseteq [ [ 1, m ] ] \). \\
-    Luego \(T_n = \sum_{i \geq 1} a_{\phi(i)} \leq \sum_{j \geq 1} a_j = S_m\). Luego \(T_n \leq S_m\). \\
+    Luego \(T_n = \sum_{i = 1}^n a_{\phi(i)} \leq \sum_{j = 1}^m a_j = S_m\). Luego \(T_n \leq S_m\). \\
     Análogamente con \(\phi^{-1} \Rightarrow S_m \leq T_n\) luego \(\lim_{n \to \infty} S_n = \lim_{n \to \infty} T_n \therefore \sum_{n \geq 1} a_n = \sum_{n \geq 1} b_n\).
   \end{proof}
 \end{theorem}
@@ -220,11 +220,11 @@ El caso general, \(\sum_{n \geq 1} a_n = \sum_{n \geq 1} p_n - \sum_{n \geq 1} q
   \begin{proof}
     Como \(a_n\) converge condicionalmente entonces \(a_n \to 0 \Rightarrow p_n, q_n \to 0\), pero \(\sum_{n \geq 1} p_n = \sum_{n \geq 1} q_n = +\infty\). \\
     Reordenemos la serie tomando \(p_1, p_2, \ldots, p_{n_1} \) donde \(n_1\) es el menor índice tal que \(p_1 + \cdots + p_{n_1} > c, (T_1)\). \\
-    Similarmente \(-q_1, -q_2, \ldots, q_{n_2} \) donde \(n_2\) es el menor índice tales que \(\sum_{i = 1}^{n_1} p_i + \sum_{i = 1}^{n_2} q_i < c, (T_2)\). \\
-    Seguimos con el menor \(n_3\) tal que \(\sum_{i = 1}^{n_1} p_i + \sum_{i = 1}^{n_2} q_i + \sum_{i = 1}^{n_3} p_i > c, (T_3)\), etc. \\
+    Similarmente \(q_1, q_2, \ldots, q_{n_2} \) donde \(n_2\) es el menor índice tales que \(\sum_{i = 1}^{n_1} p_i - \sum_{i = 1}^{n_2} q_i < c, (T_2)\). \\
+    Seguimos con el menor \(n_3\) tal que \(\sum_{i = 1}^{n_1} p_i - \sum_{i = 1}^{n_2} q_i + \sum_{i = n_1}^{n_3} p_i > c, (T_3)\), etc. \\
     Veamos que las sumas parciales \(T_n\) de este reordenamiento tienden a 0. \\
-    \(\forall i\) impar tenemos que \(T_{n_i +1} < c < T_i \Rightarrow \) \\
-    \(0 < T_{n_i} - c \leq p_{n_i} \Rightarrow 0 < c - T_{n_i} < q_{n_i} \) y como \(\lim_{i \to \infty} p_{n_i} = 0 = \lim_{i \to \infty} q_{n_i} \Rightarrow \lim_{i \to \infty} T_{n_i} = c\). \\
+    \(\forall n_i\) impar tenemos que \(T_{n_i +1} < c < T_{n_i} \Rightarrow \) \\
+    \(0 < T_{n_i} - c \leq p_{n_i} \Rightarrow 0 < c - T_{n_i} \leq q_{n_i} \) y como \(\lim_{i \to \infty} p_{n_i} = 0 = \lim_{i \to \infty} q_{n_i} \Rightarrow \lim_{i \to \infty} T_{n_i} = c\). \\
     Además para \(i\) impar si \(n_i < n < n_{i+1} \Rightarrow T_{n_i+1} \leq T_n \leq T_{n_i} \) y para \(i\) par, si \(n_i < n < n_{i+1} \Rightarrow T_{n_i+1} \leq T_n \leq T_{n_i} \) \\
     \(\therefore \lim_{n \to \infty} T_n = c\).
   \end{proof}

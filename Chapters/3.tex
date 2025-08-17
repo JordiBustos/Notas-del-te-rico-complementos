@@ -26,7 +26,7 @@
 \end{eg}
 
 \begin{theorem}
-	Sea \(X\) un conjunto y \(P(X) = \{ A : A \subset X \} \Rightarrow card(X) \neq card(P)\)
+	Sea \(X\) un conjunto y \(P(X) = \{ A : A \subset X \} \Rightarrow card(X) \neq card(P(X))\)
 	\begin{proof}
 		Supongamos que \(\exists f:X \to P(X)\) biyectiva, en particular, \(f\) es suryectiva y dado \(x \in X \) puede ocurrir que \(x \in f(x)\) o \(x \notin f(x)\). Definimos \(B = \{ x \in X: x \notin f(x) \} \subset X\). Como \(f\) es suryectiva se tiene que \(\exists y \in P(X): f(y) = B\).\begin{itemize}
 			\item Si \(y \notin B=f(y) \Rightarrow y \notin f(y) \Rightarrow y \in B\).
@@ -51,8 +51,6 @@
 		\end{itemize}
 	\end{proof}
 \end{prop}
-
-\section{Cantor, Schröder, Bernstein}
 
 \begin{theorem}[Cantor, Schröder, Bernstein]
 	Si \(\exists f: X \to Y\) y \(g: Y \to X\) inyectivas \(\Rightarrow \exists h:X \to Y\) biyectiva.
@@ -91,8 +89,6 @@
 	\end{proof}
 \end{eg}
 
-\section{Los Reales son no numerables}
-
 \begin{theorem}
 	\(\R \)  no es numerable.
 	\begin{proof}
@@ -114,9 +110,7 @@
 
 La idea del último ejemplo (argumento diagonal), se puede adaptar para probar que \( \interval[open left]{0}{1} \) es no numerable.
 
-\subsection{Principio de encaje de Intervalos}
-
-\begin{theorem}
+\begin{theorem}[Principio de encaje de intervalos]
 	Sea \(I_1 \supset I_2 \supset I_3 \supset \cdots \) una sucesión de intervalos cerrados y acotados \(I_n = [a_n, b_n] \Rightarrow \)
 	La intersección de todos es no vacía y \(\bigcap_{n=1}^{\infty} I_n = [a,b]\) con \(a = \sup(a_n), b=\inf(b_n)\).
 	\begin{proof}

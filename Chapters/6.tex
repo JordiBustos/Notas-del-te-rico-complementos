@@ -1,8 +1,11 @@
 \section{Sucesiones}
 
-Una sucesión de números reales es una función \(x: \N \to \R \). Notamos \(x(n) = x_n\) y lo llamamos el n-ésimo término de la sucesión. Indicamos la sucesión como \({(x_n)}_{n \in \N} \) o \((x_1, x_2, \cdots)\).
+Una sucesión de números reales es una función \(x: \N \to \R \).
+Notamos \(x(n) = x_n\) y lo llamamos el n-ésimo término de la sucesión.
+Indicamos la sucesión como \({(x_n)}_{n \in \N} \) o \((x_1, x_2, \ldots)\).
 
-Una subsucesión de \(x\) es la restricción de \(x\) a un subconjunto infinito \(A = \{ n_1 < n_2 < \cdots \} \subset \N \). Escribimos \({(x_n)}_{n \in A} \) para indicar la subsucesión.
+Una subsucesión de \(x\) es la restricción de \(x\) a un subconjunto infinito \(A = \{ n_1 < n_2 < \cdots \} \subset \N \).
+Escribimos \({(x_n)}_{n \in A} \) para indicar la subsucesión.
 
 \begin{note}
   Estrictamente la subsucesión no tiene dominio \(\N \), pero es trivial considerarla como una función definida en \(\N \) componiendo con \(1 \mapsto x_1, 2 \mapsto x_2, \cdots \) \\
@@ -117,7 +120,7 @@ Sea \(\lim_{n \to \infty} x_n = a\) y \(\lim_{n \to \infty} y_n = b\).
       \dfrac{x_n}{y_n} - \dfrac{a}{b} = \dfrac{x_n \cdot b - a \cdot y_n}{y_n \cdot b}
     \end{align*} Quiero ver que \(\dfrac{1}{y_n \cdot b} \) es acotada. Como
     \begin{align*}
-       & y_n \cdot b \to b² \text{ si } \e = \dfrac{b²}{2} \, \exists n_0 : y_n \cdot b > \dfrac{b²}{2}, \forall n > n_0 \Rightarrow                   \\
+       & y_n \cdot b \to b² \text{ si } \e = \dfrac{b²}{2} \, \exists n_0 : y_n \cdot b > \dfrac{b²}{2}, \forall n > n_0 \Rightarrow                     \\
        & 0 < \dfrac{1}{y_n \cdot b} < \dfrac{2}{b²} \quad \forall n > n_0 \Rightarrow \left(\dfrac{1}{y_n \cdot b}\right)_{n \in \N} \text{ es acotada}.
     \end{align*}
   \end{proof}
@@ -130,7 +133,7 @@ Sea \(\lim_{n \to \infty} x_n = a\) y \(\lim_{n \to \infty} y_n = b\).
   \({(x_n)}_{n \in \N} \) es monótona (decreciente si \(a > 1\), creciente si \(0 < a < 1\)) y acotada \(0 < l = \lim_{n \to \infty} \sqrt[n]{a} \). \\
   Para ver que \(l = 1\), considero la subsucesión \((a^{\frac{1}{n(n+1)}})_{n \in \N} \) convergente a \(l\). \\
   \(l = \lim_{n \to \infty} a^{\frac{1}{n(n+1)}} = \lim_{n \to \infty} a^{\frac{1}{n} - \frac{1}{n+1}} =
-    \frac{\lim_{n \to \infty} a^{\frac{1}{n}}}{\lim_{n \to \infty} a^{\frac{1}{n+1}}} = \frac{l}{l} = 1.\) \\
+  \frac{\lim_{n \to \infty} a^{\frac{1}{n}}}{\lim_{n \to \infty} a^{\frac{1}{n+1}}} = \frac{l}{l} = 1.\) \\
   \(\therefore l = 1\).
 \end{eg}
 
@@ -139,28 +142,26 @@ Sea \(\lim_{n \to \infty} x_n = a\) y \(\lim_{n \to \infty} y_n = b\).
   Veamos si es monótona. \(\sqrt[n]{n} > \sqrt[n+1]{n+1} \iff n^{n+1} > (n+1)^{n+1} \iff n > (\dfrac{n+1}{n})^{n+1} \). \\
   Esto pasa para \(\forall n \geq 3\) porque \((1+\frac{1}{n})^n < 3, \forall n \in \N \). Se puede demostrar por inducción. \\
   Luego, es decreciente a partir del tercer término. \\
-  Además está acotada inferiormente por \(0, (\sqrt[n]{n} > 0) \therefore \exists \lim_{n \to \infty} \sqrt[n]{n} = l = \inf\{ \sqrt[n]{n} \}_{n \in \N} \). \\
+  Además está acotada inferiormente por \(0, (\sqrt[n]{n} > 0) \therefore \exists \lim_{n \to \infty} \sqrt[n]{n} = l = \inf {\{ \sqrt[n]{n} \}}_{n \in \N} \). \\
   Como \(\sqrt[n]{n} > 1 \Rightarrow l \geq 1\) y \(l \neq 0\). \\
-  Considero la subsucesión \((2n)^{\frac{1}{2n}} \Rightarrow l^2 = (\lim_{n \to \infty} (2n)^{\frac{1}{2n}})^2 = \lim_{n \to \infty} 2^{\frac{1}{n}} \cdot \lim_{n \to \infty} n^{\frac{1}{n}} = 1 \cdot l\). \\
+  Considero la subsucesión \((2n)^{\frac{1}{2n}} \Rightarrow l^2 = (\lim_{n \to \infty} {(2n)}^{\frac{1}{2n}})^2 = \lim_{n \to \infty} 2^{\frac{1}{n}} \cdot \lim_{n \to \infty} n^{\frac{1}{n}} = 1 \cdot l\). \\
   Luego \(l^2 = l\) y \(l \neq 0 \therefore l = 1\).
 \end{eg}
 
 \begin{note}
   La definición de límite puede ser reformulada de la siguiente forma: \\
-  Dado \(a \in \R \) es el límite de \({(x_n)}_{n \in \N} \iff \forall \e > 0\) el conjunto \(\{ n \in \N : x_n \in (a - \e, a + \e) \} \) tiene complemento finito (o vacío) en \(\N \).
+  Dado \(a \in \R \) es el límite de \({(x_n)}_{n \in \N} \iff \forall \e > 0\) el conjunto \( \{ n \in \N : x_n \in (a - \e, a + \e) \} \) tiene complemento finito (o vacío) en \(\N \).
 \end{note}
 
-Vamos a ver que \(a \in \R \) es el límite de alguna subsucesión de \({(x_n)}_{n \in \N} \iff \forall \e > 0\) el conjunto \( \{ n \in \N : x_n \in (a - \e, a + \e) \} \) es subconjunto infinito de \(\N \)
 \begin{theorem}
   \(a \in \R \) es el límite de alguna subsucesión de \({(x_n)}_{n \in \N} \iff \forall \e > 0, \exists \) infinitos índices \(n : x_n \in (a-\e, a+\e)\).
   \begin{proof}
     Para la ida tenemos que \(a = \lim_{n \in A} x_n\), con \(A = \{ n_1 < n_2 < \cdots \} \). \\
     \(\forall \e > 0, \exists i_0 : x_{n_i} \in (a - \e, a + \e), \forall i > i_0\). \\
     Como existen infinitos \(i > i_0 : n_i \in A \Rightarrow \exists \) infinitos \(n_i \in \N \) tales que \(x_{n_i} \in (a - \e, a + \e)\). \\
-
-    Recíprocamente si tomamos sucesivamente \(\e = 1, 1/2, 1/3, \cdots \). Puedo obtener \(A = \{ n_1, n_2, \cdots \} : \lim_{n \in A} x_n = a\) pues: \\
-    Sea \(n_1 \in \N : x_{n_1} \in (a-1, a+1)\). Supongamos por inducción que \(n_1 < n_2 < \cdots < n_i\) fueron definidos tales que \(x_{n_2} \in (a - 1/2, a + 1/2), \cdots x_{n_i} \in (a - 1/i, a + 1/i)\). \\
-    Como el conjunto \(\{ n \in \N : x_n \in (a - \frac{1}{1+i}, a + \frac{1}{1+i}) \} \) es infinito, contiene algún \(x_n\) con \(n > n_i\) y lo tomo como \(x_{n_i + 1} \). \\
+    Recíprocamente si tomamos sucesivamente \(\e = 1, 1/2, 1/3, \ldots \). Puedo obtener \(A = \{ n_1, n_2, \ldots \} : \lim_{n \in A} x_n = a\) pues: \\
+    Sea \(n_1 \in \N : x_{n_1} \in (a-1, a+1)\). Supongamos por inducción que \(n_1 < n_2 < \cdots < n_i\) fueron definidos tales que \(x_{n_2} \in (a - 1/2, a + 1/2), \ldots, x_{n_i} \in (a - 1/i, a + 1/i)\). \\
+    Como el conjunto \( \{ n \in \N : x_n \in (a - \frac{1}{1+i}, a + \frac{1}{1+i}) \} \) es infinito, contiene algún \(x_n\) con \(n > n_i\) y lo tomo como \(x_{n_i + 1} \). \\
     Como \(| x_{n_i} - a | < \frac{1}{i}, \forall i \in \N \Rightarrow \lim_{i \to \infty} x_{n_i} = a\).
   \end{proof}
 \end{theorem}
@@ -172,28 +173,26 @@ Vamos a ver que \(a \in \R \) es el límite de alguna subsucesión de \({(x_n)}_
 \end{definition}
 
 \begin{definition}
-  Sea \({(x_n)}_{n \in \N} \) una sucesión acotada, digamos \(\alpha \leq x_n \leq \beta, \forall n \in \N \).
-  Si llamamos \(X_n = \{ x_n, x_{n+1}, \cdots \} \) tenemos que \([\alpha, \beta] \supset X_1 \supset X_2 \supset \cdots \). \\
-  Así que llamando \(a_n = \inf(X_n)\), \(b_n = \sup(X_n)\) tenemos que \\
-  \(\alpha \leq a_1 \leq a_2 \leq \cdots \leq a_n \leq \cdots \leq b_n \leq \cdots \leq \cdots \leq b_2 \leq b_1 \leq \beta \Rightarrow \). \\
-  \(\exists a = \lim_{n \to \infty} a_n = \sup(a_n)_{n \in \N} = \sup(\inf{(x_n)}_{n \in \N})\). \\
-  \(b = \lim_{n \to \infty} b_n = \inf(b_n)_{n \in \N} = \inf(\sup{(x_n)}_{n \in \N})\). \\
-
-  \(a\) se llama el límite inferior de la sucesión \({(x_n)}_{n \in \N} \). \\
-  \(a = \liminf_{n \to \infty} x_n\). \\
-
-  \(b\) se llama el límite superior de la sucesión \({(x_n)}_{n \in \N} \). \\
-  \(b = \limsup_{n \to \infty} x_n\).
+  Sea \({(x_n)}_{n \in \N} \) una sucesión acotada, digamos\begin{align*}
+    \alpha \leq x_n \leq \beta \quad \forall n \in \N
+  \end{align*}
+  Si llamamos \(X_n = \{ x_n, x_{n+1}, \ldots \} \) tenemos que \([\alpha, \beta] \supset X_1 \supset X_2 \supset \cdots \). \\
+  Así que llamando \(a_n = \inf(X_n)\), \(b_n = \sup(X_n)\) tenemos que \begin{align*}
+     & \alpha \leq a_1 \leq a_2 \leq \cdots \leq a_n \leq \cdots \leq b_n \leq \cdots \leq \cdots \leq b_2 \leq b_1 \leq \beta \Rightarrow \\
+     & \exists a = \lim_{n \to \infty} a_n = \sup{(a_n)}_{n \in \N} = \sup(\inf{(x_n)}_{n \in \N})                                         \\
+     & b = \lim_{n \to \infty} b_n = \inf{(b_n)}_{n \in \N} = \inf(\sup{(x_n)}_{n \in \N})
+  \end{align*}
+  \begin{itemize}
+    \item \( a \) se llama el límite inferior de la sucesión \({(x_n)}_{n \in \N} \) y \(a = \liminf_{n \to \infty} x_n\).
+    \item  \(b\) se llama el límite superior de la sucesión \({(x_n)}_{n \in \N} \) y \(b = \limsup_{n \to \infty} x_n\).
+  \end{itemize}
 \end{definition}
-
-\clearpage
 
 \begin{eg}
   \begin{align*}
-     & {(x_n)}_{n \in \N} = (-1, 2, -1/2, 3/2, -1/3, 4/3, \cdots),                      \\
-     & (x_{2n+1})_{n \in \N} = -\frac{1}{n}, \ (x_{2n})_{n \in \N} = 1 + \frac{1}{n}, \\
-     & \text{Luego, } \inf(X_{2n-2}) = \inf(X_{2n-1}) = -\frac{1}{n},                 \\
-     & \sup(X_{2n-2}) = \sup(X_{2n-1}) = 1 + \frac{1}{n} \Rightarrow                  \\
-     & \liminf_{n \to \infty} x_n = 0, \ \limsup_{n \to \infty} x_n = 1.
+     & {(x_n)}_{n \in \N} = (-1, 2, -1/2, 3/2, -1/3, 4/3, \cdots),                                                                             \\
+     & {(x_{2n+1})}_{n \in \N} = -\frac{1}{n}, \, {(x_{2n})}_{n \in \N} = 1 + \frac{1}{n},                                                     \\
+     & \text{Luego, } \inf(X_{2n-2}) = \inf(X_{2n-1}) = -\frac{1}{n},                                                                          \\
+     & \sup(X_{2n-2}) = \sup(X_{2n-1}) = 1 + \frac{1}{n} \Rightarrow \liminf_{n \to \infty} x_n = 0 \text{ y } \limsup_{n \to \infty} x_n = 1.
   \end{align*}
 \end{eg}

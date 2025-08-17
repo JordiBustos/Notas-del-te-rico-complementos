@@ -45,7 +45,7 @@
     \(\Leftarrow \) Si todo entorno abierto de \(x\) contiene infinitos elementos de \(X\) entonces hay alguno distinto de \(x\) y \(x \in X^{\prime} \). \\
     \(\Rightarrow \) Sea \(x \in X^{\prime} \) y \(N\) un entorno abierto de \(x \Rightarrow \exists r > 0 : B_r(x) \subset N\). \\
     Construyamos una sucesión de puntos \({(x_n)}_{n \in N} \) pertenecientes a \(N \cap X\) y tales que \(d(x_n, x) > d(x_{n+1}, x) > 0, \forall n \in \N \). \\
-    \(x_1 \neq x\), si \(n > 0\) y ya elegimos \(x_1, \cdots x_n : d(x_1, x) > \cdots > 0, \forall i \in \{1, \ldots, n-1\} \). Como \(B_{d(x_n, x)}(x)\) es un entorno abierto de \(x\) y \(x \in X^{\prime} \) contiene algún punto distinto de \(x\), lo llamo \(x_{n+1} \). \\
+    \(x_1 \neq x\), si \(n > 0\) y ya elegimos \(x_1, \ldots, x_n : d(x_1, x) > \cdots > 0, \forall i \in \{1, \ldots, n-1\} \). Como \(B_{d(x_n, x)}(x)\) es un entorno abierto de \(x\) y \(x \in X^{\prime} \) contiene algún punto distinto de \(x\), lo llamo \(x_{n+1} \). \\
     Tenemos entonces que \(d(x_n, x) > d(x_{n+1}, x) > 0 \Rightarrow \) los términos de la sucesión \({(x_n)}_{n \in N} \) son todos diferentes de \(x\), distintos dos a dos y pertenecen a \(B_r(x)\). \\
     \(\therefore {(x_n)}_{n \in \N} \subset N \cap X\) es infinito.
   \end{proof}
@@ -310,12 +310,13 @@ Esta última parte pertenece a la clase siguiente, pero se coloca aquí para que
     Para cada \(q \in \Q^n\) y sea \(s \in \Q > 0\). Elegimos un elemento \(U(q, s)\) de \(U\) de la siguiente forma:
     \begin{enumerate}
       \item Si hay elementos de \(U\) que contienen a \(B_s(q)\) elegimos cualquiera de ellos y
-            lo llamamos \(u(q, s)\).
+            lo llamamos \(U(q, s)\).
       \item Si no hay ninguno ponemos \(U(q, s) = U_0\).
     \end{enumerate}
     Sea \(x \in X\) como \(U\) es un cubrimiento abierto de \(X\), \(\exists u \in U\) abierto tal que \(x \in u \Rightarrow \exists r > 0 : B_r(x) \subset u\). \\
-    Si tomamos \(q \in \Q^n : q \in B_{\frac{r}{2}}(x)\) y \(s \in Q : d(x, q) < s < \dfrac{r}{2} \Rightarrow x \in B_s(q)\) y \(B_s(q) \subset B_r(x) \subset u\). \\
-    Así que hay elementos de \(U\) que contienen a \(B_s(q)\) y por lo tanto \(x \in B_s(q) \subset U(q, s)\). Esto prueba que \(V = \{ U(q, s) : q \in \Q^n, s \in Q > 0 \} \) es un subcubrimiento de \(U\) y es numerable pues \(\Q^n \times \Q^n\) es numerable y la función \(Q^n \times \Q > 0 \to V\), \((q, s) \mapsto U(q, s)\), es suryectiva \(\therefore V\) es a lo sumo numerable.
+    Si tomamos \(q \in \Q^n : q \in B_{\frac{r}{2}}(x)\) y \(s \in \Q : d(x, q) < s < \dfrac{r}{2} \Rightarrow x \in B_s(q)\) y \(B_s(q) \subset B_r(x) \subset u\). \\
+    Así que hay elementos de \(U\) que contienen a \(B_s(q)\) y por lo tanto \(x \in B_s(q) \subset U(q, s)\). Esto prueba que \(V = \{ U(q, s) : q \in \Q^n, s \in \Q > 0 \} \) es un subcubrimiento de \(U\)
+    y es numerable pues \(\Q^n \times \Q \) es numerable y la función \( \Q^n \times \Q > 0 \to V\), \((q, s) \mapsto U(q, s)\), es suryectiva \(\therefore V\) es a lo sumo numerable.
   \end{proof}
 \end{theorem}
 
@@ -324,18 +325,14 @@ Esta última parte pertenece a la clase siguiente, pero se coloca aquí para que
   \begin{proof}
     Para la ida sea \(F \subset \R^n\) compacto, \(U\) un cubrimiento abierto de \(F\). Por Lindelöf hay un subcubrimiento a lo sumo numerable \(V\) de \(U\) y \(\exists f: \N \to V\) suryectiva.
     Por el absurdo supongamos que \(U\) no contiene subcubrimiento finito de \(F\).
-    En particular si \(m \in \N, V_m = \{ f(1), \ldots, f(m) \} \in V\) no es subcubrimiento de \(F\), por ser finito
-    \begin{align*}
-      \Rightarrow \exists x_m \in F - \bigcup_{i = 1}^m f(i)
-    \end{align*}
-    De esta forma tenemos una sucesión de elementos de \(F, {(x_m)}_{m \in \N} \). \\
+    En particular si \(m \in \N, V_m = \{ f(1), \ldots, f(m) \} \in V\) no es subcubrimiento de \(F\), por ser finito entonces existe \( x_m \in F \setminus \bigcup_{i = 1}^m f(i) \)
+    De esta forma tenemos una sucesión \( {(x_m)}_{m \in \N} \subset F \). \\
     Como \(F\) es compacto \(\exists h: \N \to \N \) estrictamente creciente tal que \({(x_{h(m)})}_{m \in \N} \to L \in F\). \\
     Como \(V\) es un cubrimiento de \(F\) y \(f\) es sobreyectiva \(\Rightarrow \exists s \in \N : L \in f(s)\).
     Por otro lado como \(\lim_{n \to \infty} x_m = L\) y \(f(s)\) es un entorno de \(L, \exists m_0 \in \N : x_{h(m)} \in f(s), \forall m > m_0\). \\
     Como \(m < h(s + m_0) \Rightarrow x_{h(s+m_0)} \in f(s)\) Absurdo! \\
-    \(x_{h(m_0 + s)} \in F - \bigcup_{i=1}^{h(s+m_0)} f(i)\) que es disjunto con \(f(s)\) pues \(s < h(s + m_0)\). \\
-    \(\therefore V\) y, por lo tanto, \(U\) contienen un subcubrimiento finito. \\
-
+    \(x_{h(m_0 + s)} \in F \setminus \bigcup_{i=1}^{h(s+m_0)} f(i)\) que es disjunto con \(f(s)\) pues \(s < h(s + m_0)\). \\
+    \(\therefore V\) y, por lo tanto, \(U\) contiene un subcubrimiento finito. \\
     Para la vuelta supongamos que todo cubrimiento abierto de \(F\) admite un
     subcubrimiento finito, pero que \(F\) no es compacto. \\ Hay una sucesión
     \({(x_m)}_{m \in \N} \subset F\) que no tiene ninguna subsucesión convergente. Si

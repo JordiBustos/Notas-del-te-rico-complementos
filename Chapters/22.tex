@@ -50,12 +50,10 @@ Más en general, con el mismo argumento, se ve que si \(\forall x \in I\), \(\ex
   Se dice uniformemente acotada si \(\exists c > 0 : |f(x)| < c\) \((\forall f \in E)(\forall x \in X)\).
 \end{definition}
 
-\clearpage
-
 \begin{theorem}[Cantor, Tijonov]
   Sea \(X \subset \R \) numerable. Toda sucesión puntualmente acotada de funciones \(f: X \to \R \) posee una subsucesión puntualmente convergente.
   \begin{proof}
-    Sea \(X = \{x_1, \cdots \} \) como \({(f_n)}_{n \in \N} \) es acotada, tiene una subsucesión convergente \(\Rightarrow \N_1 \subset \N \) infinito tal que \(a_1 = \lim_{n \in \N_1} f_n(x_1)\). \\
+    Sea \(X = \{x_1, \ldots \} \) como \({(f_n(x_1))}_{n \in \N} \) es acotada, tiene una subsucesión convergente \(\Rightarrow \N_1 \subset \N \) infinito tal que \(a_1 = \lim_{n \in \N_1} f_n(x_1)\). \\
     Como \({(f_n(x_2))}_{n \in \N_1} \) es acotada, \(\exists \N_2 \subset \N_1\) infinito tal que \(\exists a_2 = \lim_{n \in \N_2} f_n(x_2)\). Así siguiendo para cada \(i \in \N \) tenemos \(\N_1 \supset \N_2 \supset \cdots \supset \N_i \supset \cdots \), tales que \(\lim_{n \in \N_i} f_n(x_i) = a_i\). \\
     Definimos a \(\N^* \subset \N \) tomando como i-ésimo elemento de \(\N^*\) al i-ésimo elemento de \(\N_i \Rightarrow (\forall i \in \N) {(f_n(x_i))}_{n \in \N^*} \) es a partir del i-ésimo elemento una subsucesión de \({(f_n(x_i))}_{n \in \N_i} \) converge \(\therefore \) Esto prueba que \({(f_n)}_{n \in \N^*} \) converge \(\forall x_i \in X\).
   \end{proof}

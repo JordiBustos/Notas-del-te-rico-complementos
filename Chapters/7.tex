@@ -57,34 +57,34 @@ Dada una sucesión \({(x_n)}_{n \in \N} \subset \R \), decimos que es de Cauchy 
 \section{Límites infinitos}
 
 \begin{definition}
-  Decimos que \(\lim_{n \to \infty} x_n = + \infty \) si dado \(a > 0, \exists n_0 \in \N : x_n > a \forall n > n_0\).
+  Decimos que \(\lim_{n \to \infty} x_n = + \infty \) si dado \(a > 0\text{, } \exists n_0 \in \N : x_n > a \quad \forall n > n_0\).
 \end{definition}
 
 \begin{definition}
-  Decimos que \(\lim_{n \to \infty} x_n = - \infty \) si dado \(a > 0, \exists n_0 \in \N : x_n < -a \forall n > n_0\).
+  Decimos que \(\lim_{n \to \infty} x_n = - \infty \) si dado \(a > 0\text{, } \exists n_0 \in \N : x_n < -a \quad \forall n > n_0\).
 \end{definition}
 
 \begin{prop}
-  \(\lim_{n \to \infty} x_n = + \infty \) e \({(y_n)}_{n \in \N} \) es acotada inferiormente \(\Rightarrow \lim_{n \to \infty} (x_n + y_n) = +\infty\).
+  \(\lim_{n \to \infty} x_n = + \infty \) e \({(y_n)}_{n \in \N} \) es acotada inferiormente \(\Rightarrow \lim_{n \to \infty} (x_n + y_n) = +\infty \).
   \begin{proof}
-    Sea \(A > 0, \exists c \in \R : c < y_n, \forall n \in \N \).
-    Como \(\lim_{n \to \infty} x_n = + \infty, \exists n_0 \in \N : x_n > A - c, \forall n > n_0 \Rightarrow \)
-    Si \(n > n_0, x_n + y_n > A - c + c = A \therefore \lim_{n \to \infty} (x_n + y_n) = +\infty\).
+    Dado \(A > 0 \) existe \( c \in \R : c < y_n \quad \forall n \in \N \).
+    Como \(\lim_{n \to \infty} x_n = + \infty \Rightarrow \exists n_0 \in \N : x_n > A - c, \forall n > n_0 \Rightarrow \)
+    Si \(n > n_0, x_n + y_n > A - c + c = A \therefore \lim_{n \to \infty} (x_n + y_n) = +\infty \).
   \end{proof}
 \end{prop}
 
 \begin{prop}
-  \(\lim_{n \to \infty} x_n = +\infty\) y \(\exists c > 0 : y_n > c, \forall n \in \N \Rightarrow \lim_{n \to \infty} (x_n \cdot y_n) = + \infty\).
+  \(\lim_{n \to \infty} x_n = +\infty \) y \(\exists c > 0 : y_n > c, \forall n \in \N \Rightarrow \lim_{n \to \infty} (x_n \cdot y_n) = + \infty \).
   \begin{proof}
     Dado \(A > 0, \exists n_0 \in \N : x_n > A/c, \forall n > n_0 \Rightarrow \) si \(n > n_0, x_n \cdot y_n > (A/c) \cdot c = A \therefore \lim_{n \to \infty} x_n \cdot y_n = + \infty\).
   \end{proof}
 \end{prop}
 
 \begin{prop}
-  \(x_n > 0 \forall n \in \N \Rightarrow \lim_{n \to \infty} x_n = 0 \iff \lim_{n \to \infty} = \frac{1}{x_n} = +\infty\).
+  \(x_n > 0 \quad \forall n \in \N \Rightarrow \lim_{n \to \infty} x_n = 0 \iff \lim_{n \to \infty} = \frac{1}{x_n} = +\infty\).
   \begin{proof}
     Para la ida, \(\lim_{n \to \infty} x_n = 0\). Dado \(A > 0, \exists n_0 \in \N : 0 < x_n < 1/A, \forall n > n_0 \Rightarrow \frac{1}{x_n} > A, \forall n > n_0 \therefore \lim_{n \to \infty} \frac{1}{x_n} = +\infty\). \\
-    Para la vuelta \(\lim_{n \to \infty} \frac{1}{x_n} = +\infty\). Dado \(\e > 0, \exists n_0 \in \N : \frac{1}{x_n} > \frac{1}{\e}, \forall n > n_0 \Rightarrow \) \\
+    Para la vuelta \(\lim_{n \to \infty} \frac{1}{x_n} = +\infty \). Dado \(\e > 0, \exists n_0 \in \N : \frac{1}{x_n} > \frac{1}{\e}, \forall n > n_0 \Rightarrow \) \\
     \(0 < x_n < \e, \forall n > n_0 \therefore \lim_{n \to \infty} x_n = 0\).
   \end{proof}
 \end{prop}
@@ -175,5 +175,32 @@ Dada una sucesión \((a_n)_{n \in \N} \subset \R \) formamos una nueva sucesión
   \begin{proof}
     Como \(\sum |a_n|\) converge \(\Rightarrow \forall \e > 0, \exists n_0 \in \N : \left| |a_{n+1}| + \cdots + |a_{n+p}| \right| < \e, \forall n > n_0, p \in \N \Rightarrow \) \\
     \(|a_{n+1} + \cdots + a_{n+p}| \leq |a_{n+1}| + \cdots + |a_{n+p}| < \e, \forall n > n_0, p \in \N \therefore \sum a_n\) converge.
+  \end{proof}
+\end{theorem}
+
+\begin{theorem}[Criterio de Condensación de Cauchy]
+  Sea \( {(a_n)}_{n \in \N} \) tal que\begin{align*}
+    a_1 \geq a_2 \geq \cdots \geq 0
+  \end{align*}
+  Entonces, \( \sum a_n \) converge si, y solo si\begin{align*}
+    \sum_{k \geq 0} 2^k \cdot a_{2^k}
+  \end{align*}
+  converge.
+  \begin{proof}
+    Sean\begin{align*}
+      s_n & = a_1 + \cdots + a_n                \\
+      t_k & = a_1 + 2a_2 + \cdots + 2^k a_{2^k}
+    \end{align*}
+    Si \( n < 2^k \):\begin{align*}
+      s_n & \leq a_1 + (a_2 + a_3) + \cdots + (a_{2^k} + \cdots + a_{2^{k+1}-1})              \\
+          & \leq a_1 + 2a_2 + \cdots + 2^{k} a_{2^k} \text{ por ser una sucesión decreciente} \\
+          & \leq t_k
+    \end{align*}
+    Por otro lado, si \( n > 2^k \):\begin{align*}
+      s_n & \geq a_1 + a_2 + (a_3 + a_4) + \cdots + (a_{2^{k-1}+1} + \cdots + a_{2^k}) \\
+          & \geq \frac{1}{2} a_1 + a_2 + 2 a_4 + \cdots + 2^{k-1} a_{2^k}              \\
+          & \geq \frac{1}{2} t_k
+    \end{align*}
+    Luego, las sucesiones \( {(s_n)}_{n \in \N} \) y \( {(t_k)}_{k \in \N} \) son, o ambas acotadas o ambas no acotadas.
   \end{proof}
 \end{theorem}

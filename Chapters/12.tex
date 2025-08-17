@@ -33,7 +33,7 @@
 \begin{lemma}
   Sea \(A \subset \R^n, x_0 \in A \Rightarrow f: A \to \R^k\) es continua en \(x_0 \iff \) o bien \(x_0\) es aislado en \(A\) o bien \(\lim_{x \to x_0} f(x) = f(x_0)\).
   \begin{proof}
-    Si \(f\) es continua en \(x_0\) y \(x_0\) no es aislado en \(A\) quiero ver que entonces \(\lim_{x \to x_0} f(x) = f(x_0)\). Como \(\forall x \in A\) vale que \(d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e \). Entonces \(0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e \). Si \(x_0\) es punto asilado de \(A \Rightarrow \exists \delta>0, B_{\delta}(x_0) \cap A =  \{x_0\} \) y vale que \(\forall x \in A : d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e \), pues \(d(f(x_0), f(x_0)) = 0 < \e \). Si \(x_0\) no es punto aislado de \(A\). Como \(\lim_{x \to x_0} f(x) = f(x_0)\), dado \(\e > 0, \exists \delta > 0 : \forall x \in A, 0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e \) y si \(x = x_0\) claramente \(d(f(x), f(x_0)) = 0 < \e \).
+    Si \(f\) es continua en \(x_0\) y \(x_0\) no es aislado en \(A\) quiero ver que entonces \(\lim_{x \to x_0} f(x) = f(x_0)\). Como \(\forall x \in A\) vale que \(d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e \). Entonces \(0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e \). Si \(x_0\) es punto aislado de \(A \Rightarrow \exists \delta>0, B_{\delta}(x_0) \cap A =  \{x_0\} \) y vale que \(\forall x \in A : d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e \), pues \(d(f(x_0), f(x_0)) = 0 < \e \). Si \(x_0\) no es punto aislado de \(A\). Como \(\lim_{x \to x_0} f(x) = f(x_0)\), dado \(\e > 0, \exists \delta > 0 : \forall x \in A, 0 < d(x, x_0) < \delta \Rightarrow d(f(x), f(x_0)) < \e \) y si \(x = x_0\) claramente \(d(f(x), f(x_0)) = 0 < \e \).
   \end{proof}
 \end{lemma}
 
@@ -53,7 +53,7 @@
   Sea \(A \subset \R^n, x_0 \in A, f: A \to \R^k\) son equivalentes:
   \begin{enumerate}
     \item \(f\) es continua en \(x_0\).
-    \item Para todo entorno \(V\) de \(x_0, \exists \) un entorno \(U\) de \(x_0\) relativo a \(A\) tal que \(f(U) \subset V\).
+    \item Para todo entorno \(V\) de \(f(x_0)\text{, }\exists \) un entorno \(U\) de \(x_0\) relativo a \(A\) tal que \(f(U) \subset V\).
     \item Para todo entorno \(V\) de \(f(x_0)\), el conjunto \(f^{-1}(V)\) es un entorno de \(x_0\) relativo a \(A\).
   \end{enumerate}
 
@@ -122,14 +122,16 @@
 \begin{prop}
   Sea \(A \subset \R^n, x_0 \in A \Rightarrow f: A \to \R^k\) es continua en \(x_0 \iff \) cada una de sus componentes \(f_1, \ldots, f_k: A \to \R \) son continuas en \(x_0\).
   \begin{proof}
-    Ejercicio
+    La proposición se deduce de que\begin{align*}
+      |f_i(x) - f_i(x_0)| \leq \| f(x) - f(x_0) \| = \sqrt{ \sum_{i = 1}^k |f_i(x) - f_i(x_0)| } < \e \quad \forall i = 1\text{, }\ldots\text{, }k
+    \end{align*}
   \end{proof}
 \end{prop}
 
 \section{Continuidad global}
 
 \begin{definition}[Continuidad global]
-  \(A \subset \R^n, f: A \to \R^k\) es continua globalmente is es continua \(\forall x \in A\).
+  \(A \subset \R^n, f: A \to \R^k\) es continua globalmente si es continua \(\forall x \in A\).
 \end{definition}
 
 \begin{prop}
@@ -139,21 +141,23 @@
   \end{proof}
 \end{prop}
 
+\clearpage
+
 \begin{prop}
-  \(A \subset \R^n, f: A \to \R^k\) son equivalentes:
+  \(A \subset \R^n \), \(f: A \to \R^k\) son equivalentes:
   \begin{enumerate}
     \item \(f\) es continua.
     \item \(\forall V \subset \R^k\) abierto, \(f^{-1}(V)\) es abierto relativo a \(A\).
     \item \(\forall F \subset \R^k\) cerrado, \(f^{-1}(V)\) es cerrado relativo a \(A\).
   \end{enumerate}
-  \begin{proof}
-    (1) \(\Rightarrow \) (2)  Si \(x \in f^{-1}(V)\), \(f\) es continua en \(x\) y \(V\) es un entorno de \(f(x)\). Por lo que \(\exists U\) entorno de \(x\) relativo a \(A : f(U) \subset V\). Luego \(U \subset f^{-1}(V)\). Entonces \(f^{-1}(V)\) es un entorno de \(x\) relativo a A y \(f^{-1}(V)\) es abierto relativo a A. \\
-    (2) \(\Rightarrow \) (3) Si \(F \subset \R^k\) es cerrado, entonces \(F^c\) es abierto y \(f^{-1}(F^c)\) es abierto relativo a \(A\) por hipótesis, pero \(f^{-1}(F) = A - f^{-1}(F^c)\). Luego \(f^{-1}(F)\) es cerrado relativo a A. \\
-    (3) \(\Rightarrow \) (1) Sea \(x \in A\). \(V\) entorno de \(f(x) \Rightarrow f^{-1}(\R^k - V^{\circ})\) es un cerrado relativo a \(A \Rightarrow f^{-1}(V^{\circ}) = A - f^{-1}(\R^k - V^{\circ})\) es abierto relativo a A y \(f(f^{-1}(V^{\circ})) \subset V\). Luego \(f\) es continua en \(x\), pues dado un entorno de \(x\), \(f^{-1}(V^{\circ})\) encontramos un conjunto donde la imagen ``se mete adentro``.
+  \begin{proof} Sea \( A \subseteq \R^n \), \(f : A \to \R^k \)\begin{enumerate}
+      \item[(1) \(\Rightarrow \) (2)] Sea \( p \in A \) y \( f(p) \in V \). Como \( V \) es abierto, existe \( \e > 0 \), tal que \( y \in V \) si \( d(f(p)\text{, }y) < \e \).
+            Como \( f \) es continua en \( p \) existe un \( \delta > 0 \) tal que \( d(f(x)\text{, }f(p)) < \e \) si \( d(x\text{, }p) < \delta \). Así, pues \( x \in f^{-1}(V) \) en cuanto \( d(x\text{, }p) < \delta \).
+      \item[(2) \(\Rightarrow \) (3)] Si \(F \subset \R^k\) es cerrado, entonces \(F^c\) es abierto y \(f^{-1}(F^c)\) es abierto relativo a \(A\) por hipótesis, pero \(f^{-1}(F) = A - f^{-1}(F^c)\). Luego \(f^{-1}(F)\) es cerrado relativo a A.
+      \item[(3) \(\Rightarrow \) (1)] Sea \(x \in A\). \(V\) entorno de \(f(x) \Rightarrow f^{-1}(\R^k - V^{\circ})\) es un cerrado relativo a \(A \Rightarrow f^{-1}(V^{\circ}) = A - f^{-1}(\R^k - V^{\circ})\) es abierto relativo a A y \(f(f^{-1}(V^{\circ})) \subset V\). Luego \(f\) es continua en \(x\), pues dado un entorno de \(x\), \(f^{-1}(V^{\circ})\) encontramos un conjunto donde la imagen ``se mete adentro``.
+    \end{enumerate}
   \end{proof}
 \end{prop}
-
-\clearpage
 
 \begin{corollary}
   Sean \(f, g: A \to \R^k\) continuas.

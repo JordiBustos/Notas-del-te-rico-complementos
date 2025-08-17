@@ -132,10 +132,10 @@ Sean \(n = card(X)\), \(m = card(Y)\), \(p = card(Z)\), no necesariamente finito
   \(\R \sim {\{ 0, 1 \}}^\N \) es decir \(2^{\aleph_0} = c\).
   \begin{proof}
     \(f: [0, 1] \to {\{ 0, 1 \}}^\N, f(x) = {(x_n)}_{n \in \N} \). Siendo \(x_n\) las cifras del desarrollo en base dos de \(x\). \\
-    Tenemos que \(x = \sum_{n=1}^\infty \dfrac{x_n}{2^n} \Rightarrow f\) es inyectiva xq el desarrollo es único. \\
+    Tenemos que \(x = \sum_{n=1}^\infty \dfrac{x_n}{2^n} \Rightarrow f\) es inyectiva porque el desarrollo es único. \\
     Ahora si \(g: {\{ 0, 1 \}}^\N \to [0, 1], g({(x_n)}_{n \in \N}) = \sum_{n \geq 1} \dfrac{x_n}{2^n} \), \(x_n \in \{0, 1\} \). No es inyectiva pues \(0,11 = 0,10\overline{1} \).
     Una forma simple es pensar el desarrollo en base \(3\) de cada tira de \(0\) y \(1\) que no tiene ningún dos. Es decir \(g({(x_n)}_{n \in \N}) = \sum_{n \geq 1} \dfrac{x_n}{3^n} \) y \({(0,11)}_3 \neq (0,10\overline{1})_3 \therefore \)
-    es inyectiva y por Teorema CSB: \(\R \sim {\{0,1\}}^{\aleph_0} \). \\
+    es inyectiva y por Teorema CSB:\(\, \R \sim {\{0,1\}}^{\aleph_0} \). \\
     Otra forma es la siguiente:
     \(S = {\{0, 1\}}^\N - \bigcup_{i=1}^n S_i\) con \(S_i = \{ {(x_n)}_{n \in \N} \in {\{0, 1\}}^\N : x_m = 0, \forall m > i \} \). O sea \(0,11000\cdots \) se saca y queda solo \(0,10\overline{1} \).
     Cada \(S_i\) es un conjunto finito (tiene \(2^i\) elementos) luego \(\bigcup_{i \geq 1} S_i\) es numerable \(\therefore \) \(S\) y \({\{0, 1\}}^\N \) tienen el mismo cardinal. \\

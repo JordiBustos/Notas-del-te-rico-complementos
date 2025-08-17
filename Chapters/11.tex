@@ -24,7 +24,7 @@
   Sea \(A \subset \R^n, x_0 \in A^{\prime}, f: A \to \R^k, y \in \R^k\) son equivalentes:
   \begin{enumerate}
     \item \(\lim_{x \to x_0} f(x) = y\)
-    \item \((\forall \e > 0)(\exists \delta > 0) : f(B_{\delta}(x_0)) \cap (A - \{x_0\}) \subset B_{\e}(y)\)
+    \item \((\forall \e > 0)(\exists \delta > 0) : f(B_{\delta}(x_0) \cap (A - \{x_0\})) \subset B_{\e}(y)\)
     \item \(\forall \) entorno \(V\) de \(y\), \(\exists \) un entorno \(U\) de \(x_0\) tal que \(f(U \cap (A - \{x_0\})) \subset V\).
   \end{enumerate}
 
@@ -32,7 +32,7 @@
     (1) \(\Rightarrow \) (2) Dado \begin{align*}
        & \e > 0 \, \exists \delta > 0 : \|x - x_0 \| < \delta \Rightarrow \|f(x) - y\| < \e                                              \\
        & \text{Si } x \in B_{\delta}(x_0) \cap (A - \{x_0\}) \Rightarrow x \in A, \|x - x_0\| < \delta                                   \\
-       & \Rightarrow \|f(x) - y\| < \e \Rightarrow f(x) \in B_{\e}(y) \therefore f(B_{\delta}(x_0)) \cap (A - \{x_0\}) \subset B_{\e}(y)
+       & \Rightarrow \|f(x) - y\| < \e \Rightarrow f(x) \in B_{\e}(y) \therefore f(B_{\delta}(x_0) \cap (A - \{x_0\})) \subset B_{\e}(y)
     \end{align*}
     (2) \(\Rightarrow \) (3) Si \(V\) es un entorno de \(y \Rightarrow \exists \e > 0 : B_{\e}(y) \subset V\). Por hipótesis \begin{align*}
       \exists \delta > 0 : f(B_{\delta}(x_0) \cap (A - \{x_0\})) \subset B_{\e}(y)
@@ -46,8 +46,8 @@
 \begin{prop}
   \(A \subset \R^n, x_0 \in A^{\prime}, f: A \to \R^k, \lim_{x \to x_0} f(x) = y \iff \forall {(x_n)}_{n \in \N} \subset A - \{x_0\}, x_n \to x_0, {(f(x_n))}_{n \in \N} \) converge a \(y\).
   \begin{proof}
-    (\(\Rightarrow \)) Supongamos que \(\lim_{x \to x_0} f(x) = y\). Sea \({(x_n)}_{n \in \N} \subset A - \{x_0\}, x_n \to x_0\). Dado \begin{align*}
-      \e > 0, \exists \delta > 0 : d(x, x_0) < \delta \Rightarrow d(f(x), y) < \e
+    (\(\Rightarrow \)) Supongamos que \(\lim_{x \to x_0} f(x) = y\). Sea \({(x_n)}_{n \in \N} \subset A - \{x_0\}, x_n \to x_0\). Dado \( \e > 0 \) \begin{align*}
+     \exists \delta > 0 : d(x, x_0) < \delta \Rightarrow d(f(x), y) < \e
     \end{align*} Además \begin{align*}
        & \exists n_0 \in \N : d(x_n, x_0) < \delta, \forall n > n_0                          \\
        & \Rightarrow d(f(x_n), y) < \e, \forall n > n_0 \therefore {(f(x_n))}_{n \in \N} \to y
@@ -75,8 +75,8 @@
 \begin{prop}
   Sea \(A \subset \R^n, x_0 \in A^{\prime}, f: A \to \R^k, \lim_{x \to x_0} f(x) = y\).
   \begin{enumerate}
-    \item Si \(z \neq y, \exists r > 0 : z \in f(B_r(x_0) - (A -\{x_0\}))\).
-    \item Si \(y > 0 \Rightarrow \exists r > 0 : f(x) > 0, \forall x \in (B_r(x_0) - (A -
+    \item Si \(z \neq y, \exists r > 0 : z \in f(B_r(x_0) \cap (A -\{x_0\}))\).
+    \item Si \(y > 0 \Rightarrow \exists r > 0 : f(x) > 0, \forall x \in (B_r(x_0) \cap (A -
             \{x_0\}))\).
     \item \(\exists r > 0 : f\) es acotada sobre \(B_r(x_0) \cap A\), o sea, \( \{f(x) : x \in B_r(x_0) \cap A\} \) está acotado superiormente.
   \end{enumerate}

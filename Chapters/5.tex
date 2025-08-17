@@ -104,7 +104,7 @@ Veamos un ejemplo de como se prueban los axiomas de orden.
 		Es decir si \(s = [(a_n)]\), \(t = [(b_n)]\) quiero ver que \([(m \cdot a_n)] > [(b_n)]\). O sea que \(m \cdot a_n - b_n \not \to 0\) y que \(\exists n_0 : m \cdot a_n - b_n > 0, \forall n> n_0\). \\
 		Supongamos que \(\forall m, n_0, \exists n>n_0 : m \cdot a_n \leq b_n\).
 		Como \({(b_n)}_{n \in \N} \) es de Cauchy\begin{align*}
-			 & \exists M \in \Q : b_n < M \quad \forall n \in \N                                                           \\
+			 & \exists M \in \Q : b_n < M \quad \forall n \in \N                                                          \\
 			 & \Rightarrow a_n \leq \dfrac{b_n}{m} \leq \dfrac{M}{m}\text{, para algún } n > n_0 \quad \forall n_0 \in \N
 		\end{align*}
 		Como \(\Q \) es arquimediano, dado \(\e > 0, \exists m : \dfrac{M}{m} < \dfrac{\e}{2} \), elijo \(m\) así y tengo que \(a_n \leq \dfrac{b_n}{m} < \dfrac{M}{m} < \dfrac{\e}{2}, n > n_0, \forall n_0\). \\
@@ -117,7 +117,7 @@ Veamos un ejemplo de como se prueban los axiomas de orden.
 \end{theorem}
 
 \begin{theorem}
-	\(\Q \) es denso en \(\R \). Es decir dado \(r \in \R \) y \(\e > 0, \exists q \in \Q : |r-q| < \e \).\(r = [(a_n)]\), con \({(a_n)}_{n \in \N} \subset \Q \) es de Cauchy.
+	\(\Q \) es denso en \(\R \). Es decir dado \(r \in \R \) y \(\e > 0, \exists q \in \Q : |r-q| < \e \).\( \, r = [(a_n)]\), con \({(a_n)}_{n \in \N} \subset \Q \) es de Cauchy.
 
 	\begin{proof}
 		Dado \( \e > 0 \)\begin{align*}
@@ -163,18 +163,24 @@ Como \(s_0 < M\) es fácil ver que \({(u_n)}_{n \in \N} \) es decreciente y que 
 	\end{proof}
 \end{lemma}
 
+\clearpage
+
 \begin{lemma}
 	\(\exists u \in \R : u_n \to u\).
 	\begin{proof}
-		Sea \(u_n\) un termino de \({(u_n)}_{n \in \N} \Rightarrow \exists q_n \in \Q : |u_n - q_n| < \dfrac{1}{n} \) \\
-		Consideremos \((q_1, q_2, \cdots) \subset \Q \). \\
-		Afirmo que \((q_n)_{n \in \N} \) es de Cauchy. Dado \(\e > 0\), como \({(u_n)}_{n \in \N} \) es de Cauchy \(\Rightarrow \) \\
-		\(\exists n_0 : \forall n, m > n_0, |u_n - u_m| < \dfrac{\e}{3} \). \\
-		Por arquimedianidad \(\exists n_1 : \dfrac{1}{m}, \forall n > n_1 \Rightarrow \) si \(n > \max(n_0, n_1) \Rightarrow \) \\
-		\(|q_n - q_m| \leq |q_n - u_n| + |u_n - u_m| + |u_m - q_m| < \e \Rightarrow \) \\
-		\(u = [(q_n)] \in \R \), falta ver que \(u_n \to u\). \\
-		Si \(\tilde{q}_n = [(q_n, q_n, \cdots)] \in \R \Rightarrow \tilde{q}_n - u \to 0\) pues \(q_n\) es de Cauchy y por construcción \(u_n - q_n < \dfrac{1}{n} \Rightarrow u_n - \tilde{q}_n \to 0\) y como \(\tilde{q}_n - u \to 0 \Rightarrow \) \\
-		\(u_n \to u\).
+		Sea \(u_n\) un termino de \({(u_n)}_{n \in \N} \) entonces,\begin{align*}
+			\exists q_n \in \Q : |u_n - q_n| < \dfrac{1}{n}
+		\end{align*}
+		Consideremos \((q_1, q_2, \ldots) \subset \Q \). Afirmo que \({(q_n)}_{n \in \N} \) es de Cauchy. Dado \(\e > 0\), como \({(u_n)}_{n \in \N} \) es de Cauchy \(\Rightarrow \)\begin{align*}
+			\exists n_0 : \forall n, m > n_0 \quad |u_n - u_m| < \dfrac{\e}{3}
+		\end{align*}
+		Por arquimedianidad\begin{align*}
+			 & \exists n_1 : \dfrac{1}{n} < \dfrac{\e}{3} \quad \forall n > n_1                                              \\
+			 & \Rightarrow \text{Si } n > \max(n_0, n_1) \quad |q_n - q_m| \leq |q_n - u_n| + |u_n - u_m| + |u_m - q_m| < \e \\
+			 & \Rightarrow u = [(q_n)] \in \R
+		\end{align*}
+		Veamos que \(u_n \to u\). \\
+		Si \(\tilde{q}_n = [(q_n, q_n, \ldots)] \in \R \Rightarrow \tilde{q}_n - u \to 0\) pues \(q_n\) es de Cauchy y por construcción \(u_n - q_n < \dfrac{1}{n} \Rightarrow u_n - \tilde{q}_n \to 0\) y como \(\tilde{q}_n - u \to 0 \Rightarrow u_n \to u\).
 	\end{proof}
 \end{lemma}
 
@@ -185,12 +191,12 @@ Como \(s_0 < M\) es fácil ver que \({(u_n)}_{n \in \N} \) es decreciente y que 
 			 & u_{n+1} - l_{n+1} = m_n - l_n = \dfrac{u_n+l_n}{2} - l_n = \dfrac{u_n-l_n}{2} \text{ o bien }     \\
 			 & u_{n+1} - l_{n+1} = u_{n+1} - m_n = u_n - \dfrac{u_n - l_n}{2} = \dfrac{u_n - l_n}{2} \Rightarrow \\
 			 & u_1 - l_1 = \dfrac{1}{2} (M-s)                                                                    \\
-			 & u_2 - l_2 = \dfrac{1}{2} (u_1 - l_1) = (\dfrac{1}{2})² (u - s)                                    \\
+			 & u_2 - l_2 = \dfrac{1}{2} (u_1 - l_1) = {\left(\dfrac{1}{2}\right)}^2 (M - s)                        \\
 			 & \vdots                                                                                            \\
-			 & u_n - l_n = (\dfrac{1}{2})^n (M - s)
+			 & u_n - l_n = {\left(\dfrac{1}{2}\right)}^n (M - s)
 		\end{align*}
 		Por arquimedianidad de \(\R \) \begin{align*}
-			\forall \epsilon > 0\text{, } \dfrac{1}{2^n} (M - s) < \e \quad \forall n > n_0 \Rightarrow
+			\forall \e > 0\text{, } \dfrac{1}{2^n} (M - s) < \e \quad \forall n > n_0 \Rightarrow
 		\end{align*}
 		\(u_n - l_n \to 0 \therefore \) \(l_n \to u\), pues \(u_n \to u\).
 	\end{proof}
@@ -199,10 +205,9 @@ Como \(s_0 < M\) es fácil ver que \({(u_n)}_{n \in \N} \) es decreciente y que 
 \begin{theorem}
 	\(\R \) tiene la propiedad del supremo.
 	\begin{proof}
-		(1) Veamos que \(u\) es cota superior, si no \(u < s, s \in S \Rightarrow \e = s - u > 0\), como \(u_n \to u\) y es decreciente \(\exists n : u_n - u < \e \Rightarrow u_n < u + \e = u + s - u = s\) Absurdo, por construcción \(u_n\) era cota superior de \(S, \forall n\). \\
 
-		(2) Veamos que es la menor de las cotas superiores. \\
-		Sabemos que \(l_n\) no es cota superior de \(S\), así que \((\forall n \in \N)(\exists s_n \in S) : l_n \leq s_n\). Como \(l_n \to u\) y \(l_n\) es creciente \(\Rightarrow \) \\
+		(1) Veamos que \(u\) es cota superior, si no \(u < s, s \in S \Rightarrow \e = s - u > 0\), como \(u_n \to u\) y es decreciente \(\exists n : u_n - u < \e \Rightarrow u_n < u + \e = u + s - u = s\) Absurdo, por construcción \(u_n\) era cota superior de \(S \), \( \forall n\). \\
+		(2) Veamos que es la menor de las cotas superiores. Sabemos que \(l_n\) no es cota superior de \(S\), así que \((\forall n \in \N)(\exists s_n \in S) : l_n \leq s_n\). Como \(l_n \to u\) y \(l_n\) es creciente \(\Rightarrow \) \\
 		\(\forall \e > 0, \exists n_0 : l_n > u - \e, \forall n>n_0 \Rightarrow s_n \geq l_n > u - \e, \forall n > n_0\). Es decir que para todo \(\e > 0\) tengo un \(s_n\) más grande en \(S \therefore u\) es la menor de las cotas superiores.
 	\end{proof}
 \end{theorem}

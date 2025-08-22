@@ -122,5 +122,11 @@
 \end{theorem}
 
 \begin{prop}
-  \(A\) una familia de subconjuntos conexos de \(\R^n\). Si cada vez que \(B, C \in A\) vale que son no disjuntos \(\Rightarrow \bigcup_{a \in A} a\) es conexo.
+  \(A\) una familia de subconjuntos conexos de \(\R^n\). Si cada vez que \(B\text{, } C \in A\) vale que son no disjuntos \(\Rightarrow \bigcup_{a \in A} a\) es conexo.
+  \begin{proof}
+    Consideremos \( \mathcal{A} = \bigcup_{a \in A} a \).
+    Si \( U\text{, } V \) son dos abiertos, disjuntos no vacíos tales que \( A \subseteq U \cup V \) quiero ver que \( A = U \) y \( V = \varnothing \).
+    Dado \(a \in A\) como \( a \subseteq \mathcal{A} \subseteq U \cup V \) debe ser (s.p.d.g) \( a = U \), pues \( a \) es conexo. 
+    Si \( a = U \) tenemos que \( a = U \quad \forall a \in A \) pues \( a \) era genérico \( \therefore \mathcal{A} \) es conexo, pues \( \mathcal{A} = U \).
+  \end{proof}
 \end{prop}

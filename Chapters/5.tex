@@ -24,7 +24,7 @@
 		                  & = b_n (a_n - c_n) + c_n (b_n - d_n)                                                     \\
 		                  & \Rightarrow |a_n \cdot b_n - c_n \cdot b_n| \leq |b_n| |a_n - c_n| + |c_n| |b_n - d_n|. \\
 	\end{align*}
-	Como \((b_n)_{n \in \N} \) y \((c_n)_{n \in \N} \) están acotadas \(\exists M : |b_n| < M\), \(|c_n| < M, \forall n \in \N \). \\
+	Como \({(b_n)}_{n \in \N} \) y \({(c_n)}_{n \in \N} \) están acotadas \(\exists M : |b_n| < M\), \(|c_n| < M, \forall n \in \N \). \\
 	\(|a_n b_n - c_n b_n| \leq M (|a_n - c_n| + |b_n - d_n|) < \e, \forall n > n_0\). \\
 	Porque \(a_n - c_n \to 0\), \(b_n - d_n \to 0\).
 \end{definition}
@@ -39,10 +39,10 @@
 \clearpage
 
 \begin{theorem}
-	Dado \(s \in \R - \{0\}, \exists t \in \R : s \cdot t = 1\).
+	Dado \(s \in \R \setminus \{0\}, \exists t \in \R : s \cdot t = 1\).
 	\begin{proof}
 		\(s = [(a_n)]\) sabemos que \(s \notin \tilde{0} \), o sea \(a_n \not \to 0\).
-		Podría pasar que algunos de los terminos de \((a_n)_{n \in \N} \) si sean \(0 \), lo que pasa es que \(a_n \neq 0.\) para \(n\) lo suficiente grande.
+		Podría pasar que algunos de los terminos de \({(a_n)}_{n \in \N} \) si sean \(0 \), lo que pasa es que \(a_n \neq 0\) para \(n\) lo suficiente grande.
 		Como:
 		\begin{align*}
 			 & a_n \not \to 0 \Rightarrow \exists \e_1 > 0, \exists \text{ infinitos valores de } M: |a_M - 0| > \e_1                                                       \\
